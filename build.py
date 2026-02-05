@@ -334,6 +334,7 @@ def generate_html_with_correct_paths(base_dir, data):
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PIRATAFLIX</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect fill=%22%23e50914%22 width=%22100%22 height=%22100%22 rx=%2220%22/><text x=%2250%25%22 y=%2255%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22white%22 font-size=%2240%22 font-weight=%22bold%22>P</text></svg>">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { 
@@ -958,4 +959,5 @@ def generate_html_with_correct_paths(base_dir, data):
     print(f"✅ HTML gerado em: {html_path}")
     
 if __name__ == "__main__":
+
     build_vod_with_direct_capas()
