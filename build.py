@@ -508,7 +508,7 @@ def generate_m3u_with_grouping(data, output_dir):
 # =========================
 
 def generate_epg(data, output_dir):
-    """Gera EPG XML para o VOD"""
+    """Gera EPG XML para o VOD com IDs compatíveis com M3U"""
     
     EPG_FILE = os.path.join(output_dir, "epg.xml")
     now = datetime.utcnow()
@@ -516,94 +516,198 @@ def generate_epg(data, output_dir):
     epg = '<?xml version="1.0" encoding="UTF-8"?>\n'
     epg += '<tv generator-info-name="Pirataflix">\n'
     
-    def add_epg(programme_id, title, desc="", category=""):
+    # Primeiro, criar canais
+    created_channels = set()
+    
+    # Coletar todos os canais primeiro
+    all_channels = []
+    
+    for category in ["filmes", "series", "novelas", "animes", "infantil"]:
+        for item in data.get(category, []):
+            base_id = item.get("id", slugify(item["title"]))
+            base_id_upper = base_id.upper().replace('_', '')
+            
+            if category == "filmes":
+                # Filmes: ID simples
+                channel_id = f"FILME.{base_id_upper}"
+                all_channels.append({
+                    'id': channel_id,
+                    'name': item["title"],
+                    'poster': item.get("poster", "")
+                })
+            
+            elif category == "series":
+                if item.get("seasons"):
+                    for season in item.get("seasons", []):
+                        season_num = season.get("season", 1)
+                        # IMPORTANTE: Formato igual ao M3U - BRIDGERTON.T01
+                        channel_id = f"{base_id_upper}.T{season_num:02d}"
+                        all_channels.append({
+                            'id': channel_id,
+                            'name': f"{item['title']} - Temporada {season_num}",
+                            'poster': item.get("poster", "")
+                        })
+                elif item.get("episodes"):
+                    # Séries sem temporadas
+                    channel_id = f"{base_id_upper}"
+                    all_channels.append({
+                        'id': channel_id,
+                        'name': item["title"],
+                        'poster': item.get("poster", "")
+                    })
+            
+            elif category == "novelas":
+                if item.get("seasons"):
+                    for season in item.get("seasons", []):
+                        season_num = season.get("season", 1)
+                        # Formato: NOME.T01
+                        channel_id = f"{base_id_upper}.T{season_num:02d}"
+                        all_channels.append({
+                            'id': channel_id,
+                            'name': f"{item['title']} - Temporada {season_num}",
+                            'poster': item.get("poster", "")
+                        })
+            
+            elif category == "animes":
+                if item.get("seasons"):
+                    for season in item.get("seasons", []):
+                        season_num = season.get("season", 1)
+                        channel_id = f"{base_id_upper}.T{season_num:02d}"
+                        all_channels.append({
+                            'id': channel_id,
+                            'name': f"{item['title']} - Temporada {season_num}",
+                            'poster': item.get("poster", "")
+                        })
+            
+            elif category == "infantil":
+                if item.get("seasons"):
+                    for season in item.get("seasons", []):
+                        season_num = season.get("season", 1)
+                        channel_id = f"{base_id_upper}.T{season_num:02d}"
+                        all_channels.append({
+                            'id': channel_id,
+                            'name': f"{item['title']} - Temporada {season_num}",
+                            'poster': item.get("poster", "")
+                        })
+    
+    # Adicionar canais ao EPG
+    for channel in all_channels:
+        epg += f'  <channel id="{channel["id"]}">\n'
+        epg += f'    <display-name>{channel["name"]}</display-name>\n'
+        if channel.get("poster"):
+            # Corrigir URL do poster se necessário
+            poster_url = channel["poster"]
+            if poster_url.startswith("/Pirataflix"):
+                poster_url = f"https://alberttartas.github.io{poster_url}"
+            elif not poster_url.startswith("http"):
+                poster_url = f"https://alberttartas.github.io/Pirataflix/{poster_url}"
+            epg += f'    <icon src="{poster_url}"/>\n'
+        epg += '  </channel>\n'
+    
+    # Agora adicionar programas
+    now = datetime.utcnow()
+    
+    def add_epg(programme_id, title, desc="", category="", episode_num=""):
         nonlocal epg, now
         start = now.strftime("%Y%m%d%H%M%S +0000")
         end = (now + timedelta(hours=2)).strftime("%Y%m%d%H%M%S +0000")
         
-        # Descrição baseada na categoria
-        if not desc:
-            desc = f"VOD Pirataflix - {category}"
-        
         epg += f'  <programme channel="{programme_id}" start="{start}" stop="{end}">\n'
         epg += f'    <title>{title}</title>\n'
         epg += f'    <desc>{desc}</desc>\n'
-        epg += f'  </programme>\n'
-        now += timedelta(minutes=1)
+        if category:
+            epg += f'    <category>{category}</category>\n'
+        if episode_num:
+            epg += f'    <episode-num system="onscreen">{episode_num}</episode-num>\n'
+        epg += '  </programme>\n'
+        now += timedelta(minutes=30)  # Intervalo maior entre programas
     
-    # Gerar EPG agrupado para todas as categorias
-    categories = ["filmes", "series", "novelas", "animes", "infantil"]
-    
-    for category in categories:
+    # Gerar programas
+    for category in ["filmes", "series", "novelas", "animes", "infantil"]:
+        category_name = {
+            "filmes": "Filme",
+            "series": "Série",
+            "novelas": "Novela",
+            "animes": "Anime",
+            "infantil": "Infantil"
+        }.get(category, "VOD")
+        
         for item in data.get(category, []):
-            base_id = item.get("id", "")
-            base_title = item["title"]
+            base_id = item.get("id", slugify(item["title"]))
+            base_id_upper = base_id.upper().replace('_', '')
             
             if category == "filmes":
                 # Filmes
+                channel_id = f"FILME.{base_id_upper}"
                 for ep in item.get("episodes", []):
-                    channel_id = f"MOVIE.{base_id}"
-                    add_epg(channel_id, ep["title"], f"Filme: {base_title}", "Filme")
+                    add_epg(channel_id, item["title"], 
+                           f"{category_name}: {item['title']}", 
+                           category_name)
             
             elif category == "series":
-                # Séries agrupadas por temporada
-                for season in item.get("seasons", []):
-                    season_num = season.get("season", 1)
-                    for ep in season.get("episodes", []):
-                        channel_id = f"SERIE.{base_id}.S{season_num:02d}"
-                        episode_num = ep.get("episode", "N/A")
-                        add_epg(channel_id, ep["title"], 
-                               f"Série: {base_title} - Temporada {season_num} - Episódio {episode_num}", 
-                               "Série")
+                # Séries
+                if item.get("seasons"):
+                    for season in item.get("seasons", []):
+                        season_num = season.get("season", 1)
+                        channel_id = f"{base_id_upper}.T{season_num:02d}"
+                        for ep in season.get("episodes", []):
+                            episode_num = ep.get("episode", 0)
+                            episode_title = f"S{season_num:02d}E{episode_num:02d}"
+                            if ep.get("title"):
+                                episode_title += f": {ep['title']}"
+                            
+                            add_epg(channel_id, episode_title,
+                                   f"{category_name}: {item['title']} - Temporada {season_num} - Episódio {episode_num}",
+                                   category_name,
+                                   f"S{season_num:02d}E{episode_num:02d}")
             
             elif category == "novelas":
-                # Novelas agrupadas por temporada
-                for season in item.get("seasons", []):
-                    season_num = season.get("season", 1)
-                    for ep in season.get("episodes", []):
-                        channel_id = f"NOVELA.{base_id}.S{season_num:02d}"
-                        episode_num = ep.get("episode", "N/A")
-                        add_epg(channel_id, ep["title"], 
-                               f"Novela: {base_title} - Temporada {season_num} - Capítulo {episode_num}", 
-                               "Novela")
+                # Novelas
+                if item.get("seasons"):
+                    for season in item.get("seasons", []):
+                        season_num = season.get("season", 1)
+                        channel_id = f"{base_id_upper}.T{season_num:02d}"
+                        for ep in season.get("episodes", []):
+                            episode_num = ep.get("episode", 0)
+                            episode_title = f"Capítulo {episode_num:02d}"
+                            if ep.get("title"):
+                                episode_title += f": {ep['title']}"
+                            
+                            add_epg(channel_id, episode_title,
+                                   f"{category_name}: {item['title']} - Temporada {season_num}",
+                                   category_name)
             
             elif category == "animes":
-                # Animes agrupados por temporada
+                # Animes
                 if item.get("seasons"):
                     for season in item.get("seasons", []):
                         season_num = season.get("season", 1)
+                        channel_id = f"{base_id_upper}.T{season_num:02d}"
                         for ep in season.get("episodes", []):
-                            channel_id = f"ANIME.{base_id}.S{season_num:02d}"
-                            episode_num = ep.get("episode", "N/A")
-                            add_epg(channel_id, ep["title"], 
-                                   f"Anime: {base_title} - Temporada {season_num} - Episódio {episode_num}", 
-                                   "Anime")
-                elif item.get("episodes"):
-                    for ep in item.get("episodes", []):
-                        channel_id = f"ANIME.{base_id}"
-                        episode_num = ep.get("episode", "N/A")
-                        add_epg(channel_id, ep["title"], 
-                               f"Anime: {base_title} - Episódio {episode_num}", 
-                               "Anime")
+                            episode_num = ep.get("episode", 0)
+                            episode_title = f"Episódio {episode_num:02d}"
+                            if ep.get("title"):
+                                episode_title += f": {ep['title']}"
+                            
+                            add_epg(channel_id, episode_title,
+                                   f"{category_name}: {item['title']} - Temporada {season_num}",
+                                   category_name)
             
             elif category == "infantil":
-                # Infantil agrupados por temporada
+                # Infantil
                 if item.get("seasons"):
                     for season in item.get("seasons", []):
                         season_num = season.get("season", 1)
+                        channel_id = f"{base_id_upper}.T{season_num:02d}"
                         for ep in season.get("episodes", []):
-                            channel_id = f"INFANTIL.{base_id}.S{season_num:02d}"
-                            episode_num = ep.get("episode", "N/A")
-                            add_epg(channel_id, ep["title"], 
-                                   f"Infantil: {base_title} - Temporada {season_num} - Episódio {episode_num}", 
-                                   "Infantil")
-                elif item.get("episodes"):
-                    for ep in item.get("episodes", []):
-                        channel_id = f"INFANTIL.{base_id}"
-                        episode_num = ep.get("episode", "N/A")
-                        add_epg(channel_id, ep["title"], 
-                               f"Infantil: {base_title} - Episódio {episode_num}", 
-                               "Infantil")
+                            episode_num = ep.get("episode", 0)
+                            episode_title = f"Episódio {episode_num:02d}"
+                            if ep.get("title"):
+                                episode_title += f": {ep['title']}"
+                            
+                            add_epg(channel_id, episode_title,
+                                   f"{category_name}: {item['title']} - Temporada {season_num}",
+                                   category_name)
     
     epg += "</tv>"
     
@@ -611,6 +715,8 @@ def generate_epg(data, output_dir):
         f.write(epg)
     
     print(f"✅ EPG gerado: {EPG_FILE}")
+    print(f"📡 IDs compatíveis com M3U: FILME.NOME para filmes, NOME.T01 para séries")
+    
 # =========================
 # FUNÇÃO PRINCIPAL
 # =========================
@@ -1338,6 +1444,7 @@ def generate_html_with_correct_paths(base_dir, data):
 if __name__ == "__main__":
 
     build_vod_with_direct_capas()
+
 
 
 
