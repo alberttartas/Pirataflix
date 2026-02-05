@@ -95,52 +95,78 @@ if not os.path.exists(DATA_FILE):
 with open(DATA_FILE, "r", encoding="utf-8") as f:
     data = json.load(f)
 
-# =========================
-# GERAR M3U
-# =========================
-m3u = "#EXTM3U\n\n"
-
-def add_item(title, url, group, logo=""):
-    global m3u
-    m3u += f'#EXTINF:-1 tvg-logo="{logo}" group-title="{group}",{title}\n'
-    m3u += f"{url}\n\n"
-
-# FILMES
-for movie in data.get("filmes", []):
-    for ep in movie.get("episodes", []):
-        add_item(
-            title=movie["title"],
-            url=ep["url"],
-            group="🎬 Filmes",
-            logo=movie.get("poster", "")
-        )
-
-# SÉRIES
-for serie in data.get("series", []):
-    for season in serie.get("seasons", []):
-        for ep in season.get("episodes", []):
+def generate_m3u_with_grouping():
+    """Gera M3U com agrupamento por ID para séries e novelas"""
+    
+    M3U_FILE = os.path.join(OUTPUT_DIR, "vod_grouped.m3u")
+    m3u = "#EXTM3U x-tvg-url=\"epg.xml\"\n\n"
+    
+    def add_item(title, url, group, logo="", tvg_id="", tvg_name=""):
+        nonlocal m3u
+        m3u += f'#EXTINF:-1 tvg-id="{tvg_id}" tvg-name="{tvg_name}" tvg-logo="{logo}" group-title="{group}",{title}\n'
+        m3u += f"{url}\n\n"
+    
+    # FILMES - um ID por filme
+    for movie in data.get("filmes", []):
+        movie_id = movie.get("id", slugify(movie["title"]))
+        for ep in movie.get("episodes", []):
             add_item(
-                title=ep["title"],
+                title=movie["title"],
                 url=ep["url"],
-                group="📺 Séries",
-                logo=serie.get("poster", "")
+                group="🎬 Filmes",
+                logo=movie.get("poster", ""),
+                tvg_id=f"MOVIE.{movie_id}",
+                tvg_name=movie["title"]
             )
+    
+    # SÉRIES - IDs por temporada
+    for serie in data.get("series", []):
+        serie_id = serie.get("id", slugify(serie["title"]))
+        for season in serie.get("seasons", []):
+            season_num = season.get("season", 1)
+            season_id = f"SERIE.{serie_id}.S{season_num:02d}"
+            
+            for ep in season.get("episodes", []):
+                episode_num = ep.get("episode", 0)
+                episode_title = f"{serie['title']} S{season_num:02d}E{episode_num:02d}"
+                
+                add_item(
+                    title=episode_title,
+                    url=ep["url"],
+                    group="📺 Séries",
+                    logo=serie.get("poster", ""),
+                    tvg_id=season_id,
+                    tvg_name=f"{serie['title']} - Temp {season_num}"
+                )
+    
+    # NOVELAS - IDs por temporada
+    for novela in data.get("novelas", []):
+        novela_id = novela.get("id", slugify(novela["title"]))
+        for season in novela.get("seasons", []):
+            season_num = season.get("season", 1)
+            season_id = f"NOVELA.{novela_id}.S{season_num:02d}"
+            
+            for ep in season.get("episodes", []):
+                episode_num = ep.get("episode", 0)
+                episode_title = f"{novela['title']} Cap {episode_num}"
+                
+                add_item(
+                    title=episode_title,
+                    url=ep["url"],
+                    group="📖 Novelas",
+                    logo=novela.get("poster", ""),
+                    tvg_id=season_id,
+                    tvg_name=f"{novela['title']} - Temp {season_num}"
+                )
+    
+    with open(M3U_FILE, "w", encoding="utf-8") as f:
+        f.write(m3u)
+    
+    print(f"✅ M3U com agrupamento gerado: {M3U_FILE}")
+    print("   • Filmes agrupados individualmente")
+    print("   • Séries agrupadas por temporada")
+    print("   • Novelas agrupadas por temporada")
 
-# NOVELAS
-for novela in data.get("novelas", []):
-    for season in novela.get("seasons", []):
-        for ep in season.get("episodes", []):
-            add_item(
-                title=ep["title"],
-                url=ep["url"],
-                group="📖 Novelas",
-                logo=novela.get("poster", "")
-            )
-
-with open(M3U_FILE, "w", encoding="utf-8") as f:
-    f.write(m3u)
-
-print("✅ vod.m3u gerado")
 
 # =========================
 # GERAR EPG (VOD SIMPLES)
@@ -150,29 +176,54 @@ now = datetime.utcnow()
 epg = '<?xml version="1.0" encoding="UTF-8"?>\n'
 epg += '<tv generator-info-name="Pirataflix">\n'
 
-def add_epg(programme_id, title, desc="VOD Pirataflix"):
+def add_epg(programme_id, title, desc="", category=""):
     global epg, now
     start = now.strftime("%Y%m%d%H%M%S +0000")
     end = (now + timedelta(hours=2)).strftime("%Y%m%d%H%M%S +0000")
+    
+    # Descrição baseada na categoria
+    if not desc:
+        desc = f"VOD Pirataflix - {category}"
+    
     epg += f'  <programme channel="{programme_id}" start="{start}" stop="{end}">\n'
     epg += f'    <title>{title}</title>\n'
     epg += f'    <desc>{desc}</desc>\n'
     epg += f'  </programme>\n'
     now += timedelta(minutes=1)
 
-# criar EPG para todos os itens
+# Gerar EPG agrupado
 for category in ["filmes", "series", "novelas"]:
     for item in data.get(category, []):
+        base_id = item.get("id", "")
         base_title = item["title"]
-        if "episodes" in item:
-            for ep in item["episodes"]:
-                add_epg(base_title, ep["title"])
-        if "seasons" in item:
-            for s in item["seasons"]:
-                for ep in s["episodes"]:
-                    add_epg(base_title, ep["title"])
-
-epg += "</tv>"
+        
+        if category == "filmes":
+            # Filmes
+            for ep in item.get("episodes", []):
+                channel_id = f"FILME_{base_id}"
+                add_epg(channel_id, ep["title"], f"Filme: {base_title}", "Filme")
+        
+        elif category == "series":
+            # Séries agrupadas por temporada
+            for season in item.get("seasons", []):
+                season_num = season.get("season", 1)
+                for ep in season.get("episodes", []):
+                    channel_id = f"SERIE_{base_id}_S{season_num:02d}"
+                    episode_num = ep.get("episode", "N/A")
+                    add_epg(channel_id, ep["title"], 
+                           f"Série: {base_title} - Temporada {season_num} - Episódio {episode_num}", 
+                           "Série")
+        
+        elif category == "novelas":
+            # Novelas agrupadas por temporada
+            for season in item.get("seasons", []):
+                season_num = season.get("season", 1)
+                for ep in season.get("episodes", []):
+                    channel_id = f"NOVELA_{base_id}_S{season_num:02d}"
+                    episode_num = ep.get("episode", "N/A")
+                    add_epg(channel_id, ep["title"], 
+                           f"Novela: {base_title} - Temporada {season_num} - Capítulo {episode_num}", 
+                           "Novela")
 
 with open(EPG_FILE, "w", encoding="utf-8") as f:
     f.write(epg)
@@ -183,9 +234,19 @@ import unicodedata
 from pathlib import Path
 
 def slugify(text):
-    text = unicodedata.normalize("NFD", text)
-    text = text.encode("ascii", "ignore").decode("utf-8")
-    return text.lower().replace(" ", "_")
+    """Converte texto para slug (ID compatível)"""
+    if not text:
+        return "unknown"
+    
+    # Remove acentos
+    text = unicodedata.normalize('NFKD', text)
+    text = text.encode('ASCII', 'ignore').decode('ASCII')
+    
+    # Substitui caracteres especiais
+    text = re.sub(r'[^\w\s-]', '', text.lower())
+    text = re.sub(r'[-\s]+', '_', text)
+    
+    return text.strip('-_')
 
 def get_poster_path_direct(item_name, category=""):
     """
@@ -242,11 +303,11 @@ def process_movie(m3u_file, output_list, category):
             # Usar caminho direto para a capa
             poster_path = get_poster_path_direct(movie_name, "filme")
             
-            # CORREÇÃO: Criar ID único
+            # Criar ID único
             item_id = movie_name.lower().replace(' ', '_').replace('-', '_').replace('(', '').replace(')', '')
             
             movie_data = {
-                'id': item_id,  # Usar ID único
+                'id': item_id,
                 'title': movie_name,
                 'poster': poster_path,
                 'episodes': episodes,
@@ -411,7 +472,7 @@ def extract_season_number(filename):
     return 1
 
 def parse_m3u(m3u_file):
-    """Faz parse de arquivo M3U"""
+    """Faz parse de arquivo M3U e extrai números de episódios"""
     episodes = []
     
     try:
@@ -425,11 +486,15 @@ def parse_m3u(m3u_file):
                 if i + 1 < len(lines) and not lines[i + 1].startswith('#'):
                     # Extrair título
                     parts = lines[i].split(',', 1)
-                    title = parts[1] if len(parts) > 1 else f"Episódio {episode_num}"
+                    raw_title = parts[1] if len(parts) > 1 else f"Episódio {episode_num}"
+                    
+                    # Tentar extrair número do episódio do título
+                    ep_number = extract_episode_number(raw_title)
                     
                     episodes.append({
-                        'title': title.strip(),
-                        'url': lines[i + 1].strip()
+                        'title': raw_title.strip(),
+                        'url': lines[i + 1].strip(),
+                        'episode': ep_number or episode_num
                     })
                     episode_num += 1
         
@@ -439,6 +504,36 @@ def parse_m3u(m3u_file):
         print(f"      ⚠️  Parse error: {m3u_file.name} - {e}")
         return []
 
+def extract_episode_number(title):
+    """Extrai número do episódio do título"""
+    patterns = [
+        r'EP?\s*(\d+)',  # EP 01, EP01, E01
+        r'Episódio\s*(\d+)',
+        r'Capítulo\s*(\d+)',
+        r'(\d+)\s*-\s*',  # 01 - Título
+        r'^\s*(\d+)\s*$',  # Apenas número
+        r'E(\d+)',  # E01
+        r'Ep\.\s*(\d+)',  # Ep. 01
+        r'#(\d+)'  # #01
+    ]
+    
+    for pattern in patterns:
+        match = re.search(pattern, title, re.IGNORECASE)
+        if match:
+            try:
+                return int(match.group(1))
+            except:
+                continue
+    
+    # Tentar encontrar último número no título
+    numbers = re.findall(r'\d+', title)
+    if numbers:
+        try:
+            return int(numbers[-1])
+        except:
+            pass
+    
+    return None
 def generate_html_with_correct_paths(base_dir, data):
     """Gera HTML estilo Netflix"""
     html_template = '''<!DOCTYPE html>
@@ -1077,6 +1172,7 @@ def generate_html_with_correct_paths(base_dir, data):
 if __name__ == "__main__":
 
     build_vod_with_direct_capas()
+
 
 
 
