@@ -182,8 +182,7 @@ print("✅ epg.xml gerado")
 import unicodedata
 from pathlib import Path
 
-def slugify(text: str) -> str:
-    """Remove acentos e gera slug seguro para URL"""
+def slugify(text):
     text = unicodedata.normalize("NFD", text)
     text = text.encode("ascii", "ignore").decode("utf-8")
     return text.lower().replace(" ", "_")
@@ -194,12 +193,11 @@ def get_poster_path_direct(item_name, category=""):
     Compatível com GitHub Pages (/Pirataflix)
     Compatível com Vercel (/)
     """
+
     base_dir = Path(__file__).parent
     capas_dir = base_dir / "assets" / "Capas"
 
-    # BASE URL automática
-    # GitHub Pages → /Pirataflix
-    # Vercel → /
+    # Detecta se está rodando no GitHub Pages
     BASE_URL = "/Pirataflix" if (base_dir / ".github").exists() else ""
 
     DEFAULT_POSTER = f"{BASE_URL}/assets/Capas/default.jpg"
@@ -232,29 +230,6 @@ def get_poster_path_direct(item_name, category=""):
 
     # 3️⃣ Fallback
     return DEFAULT_POSTER
-
-
-def slugify(text):
-    text = unicodedata.normalize('NFD', text)
-    text = text.encode('ascii', 'ignore').decode('utf-8')
-    return text.lower().replace(' ', '_')
-
-item_name_clean = slugify(item_name)
-
-    for ext in ['.jpg', '.jpeg', '.png', '.webp']:
-        candidates = [
-            f"{item_name_clean}{ext}",
-            f"{item_name}{ext}",
-            f"{item_name_clean}_{category}{ext}" if category else None
-        ]
-
-        for name in candidates:
-            if not name:
-                continue
-            if (capas_dir / name).exists():
-                return BASE_URL + name
-
-    return BASE_URL + "default.jpg"
 
 
 def process_movie(m3u_file, output_list, category):
@@ -1099,6 +1074,7 @@ def generate_html_with_correct_paths(base_dir, data):
 if __name__ == "__main__":
 
     build_vod_with_direct_capas()
+
 
 
 
