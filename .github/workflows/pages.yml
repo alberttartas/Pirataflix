@@ -25,6 +25,14 @@ jobs:
       - name: Run build.py
         run: python build.py
 
+      - name: Commit IPTV files
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "actions@github.com"
+          git add web/iptv_playlists/*.m3u web/iptv_playlists/*.xml
+          git commit -m "Auto-generate IPTV playlists"
+          git push
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -41,11 +49,3 @@ jobs:
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
-        - name: Commit IPTV files
-  run: |
-    git config --global user.name "github-actions"
-    git config --global user.email "actions@github.com"
-    git add web/iptv_playlists/*.m3u web/iptv_playlists/*.xml
-    git commit -m "Auto-generate IPTV playlists"
-    git push
-
