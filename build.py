@@ -76,6 +76,106 @@ def build_vod_with_direct_capas():
     print(f"\n🌐 Interface web atualizada")
     print(f"📍 Acesse: http://localhost:8000/web/")
 
+import json
+import os
+from datetime import datetime, timedelta
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DATA_FILE = os.path.join(BASE_DIR, "data.json")
+OUTPUT_DIR = os.path.join(BASE_DIR, "iptv_playlists")
+
+M3U_FILE = os.path.join(OUTPUT_DIR, "vod.m3u")
+EPG_FILE = os.path.join(OUTPUT_DIR, "epg.xml")
+
+os.makedirs(OUTPUT_DIR, exist_ok=True)
+
+with open(DATA_FILE, "r", encoding="utf-8") as f:
+    data = json.load(f)
+
+# =========================
+# GERAR M3U
+# =========================
+m3u = "#EXTM3U\n\n"
+
+def add_item(title, url, group, logo=""):
+    global m3u
+    m3u += f'#EXTINF:-1 tvg-logo="{logo}" group-title="{group}",{title}\n'
+    m3u += f"{url}\n\n"
+
+# FILMES
+for movie in data.get("filmes", []):
+    for ep in movie.get("episodes", []):
+        add_item(
+            title=movie["title"],
+            url=ep["url"],
+            group="🎬 Filmes",
+            logo=movie.get("poster", "")
+        )
+
+# SÉRIES
+for serie in data.get("series", []):
+    for season in serie.get("seasons", []):
+        for ep in season.get("episodes", []):
+            add_item(
+                title=ep["title"],
+                url=ep["url"],
+                group="📺 Séries",
+                logo=serie.get("poster", "")
+            )
+
+# NOVELAS
+for novela in data.get("novelas", []):
+    for season in novela.get("seasons", []):
+        for ep in season.get("episodes", []):
+            add_item(
+                title=ep["title"],
+                url=ep["url"],
+                group="📖 Novelas",
+                logo=novela.get("poster", "")
+            )
+
+with open(M3U_FILE, "w", encoding="utf-8") as f:
+    f.write(m3u)
+
+print("✅ vod.m3u gerado")
+
+# =========================
+# GERAR EPG (VOD SIMPLES)
+# =========================
+now = datetime.utcnow()
+
+epg = '<?xml version="1.0" encoding="UTF-8"?>\n'
+epg += '<tv generator-info-name="Pirataflix">\n'
+
+def add_epg(programme_id, title, desc="VOD Pirataflix"):
+    global epg, now
+    start = now.strftime("%Y%m%d%H%M%S +0000")
+    end = (now + timedelta(hours=2)).strftime("%Y%m%d%H%M%S +0000")
+    epg += f'  <programme channel="{programme_id}" start="{start}" stop="{end}">\n'
+    epg += f'    <title>{title}</title>\n'
+    epg += f'    <desc>{desc}</desc>\n'
+    epg += f'  </programme>\n'
+    now += timedelta(minutes=1)
+
+# criar EPG para todos os itens
+for category in ["filmes", "series", "novelas"]:
+    for item in data.get(category, []):
+        base_title = item["title"]
+        if "episodes" in item:
+            for ep in item["episodes"]:
+                add_epg(base_title, ep["title"])
+        if "seasons" in item:
+            for s in item["seasons"]:
+                for ep in s["episodes"]:
+                    add_epg(base_title, ep["title"])
+
+epg += "</tv>"
+
+with open(EPG_FILE, "w", encoding="utf-8") as f:
+    f.write(epg)
+
+print("✅ epg.xml gerado")
+
 def get_poster_path_direct(item_name, category=""):
     """Procura a capa diretamente na pasta assets/Capas/"""
     base_dir = Path(__file__).parent
