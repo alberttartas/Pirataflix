@@ -1715,7 +1715,7 @@
     {
       "id": "três_graças",
       "title": "Três Graças",
-      "poster": "../assets/Capas/três_graças.jpg",
+      "poster": "../assets/Capas/tres_gracas.jpg",
       "seasons": [
         {
           "season": 1,
@@ -2451,4 +2451,5 @@
   ],
   "animes": [],
   "infantil": []
+
 }
