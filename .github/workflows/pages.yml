@@ -28,7 +28,7 @@ jobs:
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: web   # ou "." se quiser IPTV também
+          path: .
 
   deploy:
     needs: build
