@@ -180,47 +180,31 @@ with open(EPG_FILE, "w", encoding="utf-8") as f:
 print("✅ epg.xml gerado")
 
 def get_poster_path_direct(item_name, category=""):
-    """Procura a capa diretamente na pasta assets/Capas/"""
     base_dir = Path(__file__).parent
     capas_dir = base_dir / "assets" / "Capas"
-    
+
+    BASE_URL = "/Pirataflix/assets/Capas/"
+
     if not capas_dir.exists():
-        return f"assets/capas/default.jpg"
-    
-    # Normalizar nome
+        return BASE_URL + "default.jpg"
+
     item_name_clean = item_name.lower().replace(' ', '_')
-    
-    # Lista de possíveis nomes
-    possible_files = []
-    
-    # Procurar por arquivos existentes
+
     for ext in ['.jpg', '.jpeg', '.png', '.webp']:
-        # Tentar nomes exatos
-        possible_files.append(f"{item_name_clean}{ext}")
-        possible_files.append(f"{item_name}{ext}")
-        
-        # Tentar com categoria
-        if category:
-            possible_files.append(f"{item_name_clean}_{category}{ext}")
-    
-    # Verificar se algum existe
-    for possible_file in possible_files:
-        possible_path = capas_dir / possible_file
-        if possible_path.exists():
-            return f"../assets/Capas/{possible_file}"
-    
-    # Se não encontrar, procurar por similaridade
-    for file in capas_dir.glob("*.*"):
-        if file.suffix.lower() in ['.jpg', '.jpeg', '.png', '.webp']:
-            file_lower = file.name.lower()
-            item_lower = item_name.lower()
-            
-            # Verificar se o nome do arquivo contém o nome do item
-            if item_lower in file_lower or item_lower.replace(' ', '_') in file_lower:
-                return f"../assets/Capas/{file.name}"
-    
-    # Último recurso: usar default
-    return f"assets/capas/default.jpg"
+        candidates = [
+            f"{item_name_clean}{ext}",
+            f"{item_name}{ext}",
+            f"{item_name_clean}_{category}{ext}" if category else None
+        ]
+
+        for name in candidates:
+            if not name:
+                continue
+            if (capas_dir / name).exists():
+                return BASE_URL + name
+
+    return BASE_URL + "default.jpg"
+
 
 def process_movie(m3u_file, output_list, category):
     """Processa um arquivo M3U de filme"""
@@ -1064,4 +1048,5 @@ def generate_html_with_correct_paths(base_dir, data):
 if __name__ == "__main__":
 
     build_vod_with_direct_capas()
+
 
