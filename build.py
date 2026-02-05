@@ -81,7 +81,7 @@ import os
 from datetime import datetime, timedelta
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-DATA_FILE = os.path.join(BASE_DIR, "data.json")
+DATA_FILE = os.path.join(BASE_DIR, "web", "data.json")
 OUTPUT_DIR = os.path.join(BASE_DIR, "iptv_playlists")
 
 M3U_FILE = os.path.join(OUTPUT_DIR, "vod.m3u")
@@ -89,6 +89,9 @@ EPG_FILE = os.path.join(OUTPUT_DIR, "epg.xml")
 
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
+if not os.path.exists(DATA_FILE):
+    raise FileNotFoundError(f"data.json não encontrado em {DATA_FILE}")
+    
 with open(DATA_FILE, "r", encoding="utf-8") as f:
     data = json.load(f)
 
@@ -1061,3 +1064,4 @@ def generate_html_with_correct_paths(base_dir, data):
 if __name__ == "__main__":
 
     build_vod_with_direct_capas()
+
