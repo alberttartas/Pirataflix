@@ -316,7 +316,7 @@ def process_series_folder(folder, output_list, folder_name, category):
 # GERADOR M3U COM AGRUPAMENTO
 # =========================
 
-def generate_m3u_with_grouping(data, output_dir):
+def generate_m3u_with_grouping(data, output_dir, base_url="https://alberttartas.github.io"):
     """Gera M3U com agrupamento por ID para séries e novelas"""
     
     M3U_FILE = os.path.join(output_dir, "vod_grouped.m3u")
@@ -324,6 +324,12 @@ def generate_m3u_with_grouping(data, output_dir):
     
     def add_item(title, url, group, logo="", tvg_id="", tvg_name=""):
         nonlocal m3u
+        # Corrige o caminho da logo para URL absoluta
+        if logo and logo.startswith("/Pirataflix"):
+            logo = f"{base_url}{logo}"
+        elif logo and not logo.startswith("http"):
+            logo = f"{base_url}/assets/Capas/{os.path.basename(logo)}"
+        
         m3u += f'#EXTINF:-1 tvg-id="{tvg_id}" tvg-name="{tvg_name}" tvg-logo="{logo}" group-title="{group}",{title}\n'
         m3u += f"{url}\n\n"
     
@@ -1293,6 +1299,7 @@ def generate_html_with_correct_paths(base_dir, data):
 if __name__ == "__main__":
 
     build_vod_with_direct_capas()
+
 
 
 
