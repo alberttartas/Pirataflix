@@ -188,7 +188,14 @@ def get_poster_path_direct(item_name, category=""):
     if not capas_dir.exists():
         return BASE_URL + "default.jpg"
 
-    item_name_clean = item_name.lower().replace(' ', '_')
+    import unicodedata
+
+def slugify(text):
+    text = unicodedata.normalize('NFD', text)
+    text = text.encode('ascii', 'ignore').decode('utf-8')
+    return text.lower().replace(' ', '_')
+
+item_name_clean = slugify(item_name)
 
     for ext in ['.jpg', '.jpeg', '.png', '.webp']:
         candidates = [
@@ -1048,5 +1055,6 @@ def generate_html_with_correct_paths(base_dir, data):
 if __name__ == "__main__":
 
     build_vod_with_direct_capas()
+
 
 
