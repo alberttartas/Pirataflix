@@ -6,16 +6,21 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write  # ← ADICIONE ESTA LINHA!
   pages: write
   id-token: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write  # ← E TAMBÉM AQUI!
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Important for git operations
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -25,60 +30,16 @@ jobs:
       - name: Run build.py
         run: python build.py
 
-      - name: Check generated IPTV files
-        run: |
-          echo "Checking directory structure..."
-          ls -la
-          echo "---"
-          if [ -d "iptv_playlists" ]; then
-            echo "iptv_playlists directory exists:"
-            ls -la iptv_playlists/
-            echo "Files found:"
-            find iptv_playlists -type f -name "*.m3u" -o -name "*.xml"
-          else
-            echo "iptv_playlists directory does not exist"
-            # Cria o diretório se necessário
-            mkdir -p iptv_playlists
-          fi
-
-      - name: Commit IPTV files
-        run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "actions@github.com"
-          
-          # Primeiro, verifica se o diretório existe e tem arquivos
-          if [ -d "iptv_playlists" ]; then
-            echo "Checking for files in iptv_playlists..."
-            
-            # Conta arquivos .m3u e .xml
-            m3u_count=$(find iptv_playlists -name "*.m3u" | wc -l)
-            xml_count=$(find iptv_playlists -name "*.xml" | wc -l)
-            
-            echo "Found $m3u_count .m3u files and $xml_count .xml files"
-            
-            if [ $m3u_count -gt 0 ] || [ $xml_count -gt 0 ]; then
-              # Adiciona arquivos específicos que existem
-              if [ $m3u_count -gt 0 ]; then
-                git add iptv_playlists/*.m3u
-              fi
-              if [ $xml_count -gt 0 ]; then
-                git add iptv_playlists/*.xml
-              fi
-              
-              # Verifica se há alterações para commitar
-              if ! git diff --cached --quiet; then
-                git commit -m "Auto-generate IPTV playlists"
-                git push
-                echo "IPTV files committed successfully"
-              else
-                echo "No changes to commit"
-              fi
-            else
-              echo "No .m3u or .xml files found in iptv_playlists/"
-            fi
-          else
-            echo "iptv_playlists directory not found"
-          fi
+      - name: Auto-commit IPTV files
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          repository: .
+          commit_message: "Auto-generate IPTV playlists"
+          commit_options: '--no-verify'
+          file_pattern: 'iptv_playlists/*.m3u iptv_playlists/*.xml'
+          commit_user_name: 'github-actions[bot]'
+          commit_user_email: 'github-actions[bot]@users.noreply.github.com'
+          commit_author: 'github-actions[bot] <github-actions[bot]@users.noreply.github.com>'
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
