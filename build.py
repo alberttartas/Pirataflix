@@ -331,34 +331,34 @@ def generate_m3u_with_grouping(data, output_dir):
 #TELEVIZO-COMPATIBLE:YES
 
 '''
+  
+   def add_item(title, url, group, logo="", tvg_id="", tvg_name=""):
+    nonlocal m3u, BASE_URL
     
-    def add_item(title, url, group, logo="", tvg_id="", tvg_name=""):
-        nonlocal m3u, BASE_URL
-        
-        # ✅ CORREÇÃO DAS LOGOS - URLs absolutas
-if logo:
-    if logo.startswith("/Pirataflix"):
-        # logo pode vir como "/Pirataflix/assets/Capas/xxx.jpg"
-        # remover o prefixo "/Pirataflix" antes de juntar com o BASE_URL completo
-        logo = f"{BASE_URL}{logo[len('/Pirataflix'): ]}"
-    elif logo.startswith("assets/Capas/"):
-        logo = f"{BASE_URL}/{logo}"
-    elif logo.startswith("/assets/Capas/"):
-        # já começa com /assets, só prefixar BASE_URL
-        logo = f"{BASE_URL}{logo}"
-    elif logo.startswith(BASE_URL):
-        # já é uma URL completa com BASE_URL, não alterar
-        logo = logo
-    elif not logo.startswith("http"):
-        # Se for apenas nome do arquivo
-        filename = os.path.basename(logo)
-        logo = f"{BASE_URL}/assets/Capas/{filename}"
-
-        # ✅ FORMATO TELEVIZO: group-title PRIMEIRO, tvg-id simplificado, SEM tvg-name
-        # O Televizo para VOD funciona melhor sem tvg-name
-        m3u += f'#EXTINF:-1 group-title="{group}" tvg-id="{tvg_id}" tvg-logo="{logo}",{title}\n'
-        m3u += f"{url}\n\n"
+    # ✅ CORREÇÃO DAS LOGOS - URLs absolutas
+    if logo:
+        if logo.startswith("/Pirataflix"):
+            # logo pode vir como "/Pirataflix/assets/Capas/xxx.jpg"
+            # remover o prefixo "/Pirataflix" antes de juntar com o BASE_URL completo
+            logo = f"{BASE_URL}{logo[len('/Pirataflix'):]}"
+        elif logo.startswith("assets/Capas/"):
+            logo = f"{BASE_URL}/{logo}"
+        elif logo.startswith("/assets/Capas/"):
+            # já começa com /assets, só prefixar BASE_URL
+            logo = f"{BASE_URL}{logo}"
+        elif logo.startswith(BASE_URL):
+            # já é uma URL completa com BASE_URL, não alterar
+            logo = logo
+        elif not logo.startswith("http"):
+            # Se for apenas nome do arquivo
+            filename = os.path.basename(logo)
+            logo = f"{BASE_URL}/assets/Capas/{filename}"
     
+    # ✅ FORMATO TELEVIZO: group-title PRIMEIRO, tvg-id simplificado, SEM tvg-name
+    # O Televizo para VOD funciona melhor sem tvg-name
+    m3u += f'#EXTINF:-1 group-title="{group}" tvg-id="{tvg_id}" tvg-logo="{logo}",{title}\n'
+    m3u += f"{url}\n\n"
+ 
     # ✅ FILMES - Agrupados individualmente
     for movie in data.get("filmes", []):
         movie_id = movie.get("id", slugify(movie["title"]))
