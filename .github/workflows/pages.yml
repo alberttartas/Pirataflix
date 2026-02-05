@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write  # ← ADICIONE ESTA LINHA!
+  contents: write
   pages: write
   id-token: write
 
@@ -14,7 +14,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      contents: write  # ← E TAMBÉM AQUI!
+      contents: write
 
     steps:
       - name: Checkout repository
@@ -26,6 +26,25 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+
+      - name: Install ImageMagick for favicon (if needed)
+        run: sudo apt-get update && sudo apt-get install -y imagemagick
+
+      - name: Verify favicon exists
+        run: |
+          echo "Checking for favicon..."
+          if [ -f "favicon.ico" ]; then
+            echo "✓ favicon.ico found"
+            ls -la favicon.ico
+          elif [ -f "public/favicon.ico" ]; then
+            echo "✓ favicon.ico found in public/"
+            cp public/favicon.ico .
+          else
+            echo "⚠️ No favicon found, creating placeholder..."
+            # Cria um favicon simples usando ImageMagick
+            convert -size 64x64 xc:#E50914 favicon.ico
+            echo "✅ favicon.ico created"
+          fi
 
       - name: Run build.py
         run: python build.py
