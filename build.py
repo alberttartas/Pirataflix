@@ -179,16 +179,60 @@ with open(EPG_FILE, "w", encoding="utf-8") as f:
 
 print("✅ epg.xml gerado")
 
+import unicodedata
+from pathlib import Path
+
+def slugify(text: str) -> str:
+    """Remove acentos e gera slug seguro para URL"""
+    text = unicodedata.normalize("NFD", text)
+    text = text.encode("ascii", "ignore").decode("utf-8")
+    return text.lower().replace(" ", "_")
+
 def get_poster_path_direct(item_name, category=""):
+    """
+    Retorna path ABSOLUTO da capa
+    Compatível com GitHub Pages (/Pirataflix)
+    Compatível com Vercel (/)
+    """
     base_dir = Path(__file__).parent
     capas_dir = base_dir / "assets" / "Capas"
 
-    BASE_URL = "/Pirataflix/assets/Capas/"
+    # BASE URL automática
+    # GitHub Pages → /Pirataflix
+    # Vercel → /
+    BASE_URL = "/Pirataflix" if (base_dir / ".github").exists() else ""
+
+    DEFAULT_POSTER = f"{BASE_URL}/assets/Capas/default.jpg"
 
     if not capas_dir.exists():
-        return BASE_URL + "default.jpg"
+        return DEFAULT_POSTER
 
-    import unicodedata
+    name_slug = slugify(item_name)
+
+    extensions = [".jpg", ".jpeg", ".png", ".webp"]
+    candidates = []
+
+    for ext in extensions:
+        candidates.append(f"{name_slug}{ext}")
+        if category:
+            candidates.append(f"{name_slug}_{slugify(category)}{ext}")
+
+    # 1️⃣ Busca exata
+    for filename in candidates:
+        file_path = capas_dir / filename
+        if file_path.exists():
+            return f"{BASE_URL}/assets/Capas/{filename}"
+
+    # 2️⃣ Busca por similaridade
+    for file in capas_dir.iterdir():
+        if file.suffix.lower() in extensions:
+            file_slug = slugify(file.stem)
+            if name_slug in file_slug or file_slug in name_slug:
+                return f"{BASE_URL}/assets/Capas/{file.name}"
+
+    # 3️⃣ Fallback
+    return DEFAULT_POSTER
+
 
 def slugify(text):
     text = unicodedata.normalize('NFD', text)
@@ -1055,6 +1099,7 @@ def generate_html_with_correct_paths(base_dir, data):
 if __name__ == "__main__":
 
     build_vod_with_direct_capas()
+
 
 
 
