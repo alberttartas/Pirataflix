@@ -695,41 +695,57 @@ def build_vod_with_direct_capas():
     # Gerar HTML atualizado
     generate_html_with_correct_paths(base_dir, output)
     
-    # Copiar integrate-player.js para web/ - VERSÃO ROBUSTA
-print("\n📋 VERIFICANDO CÓPIA DO INTEGRATE-PLAYER.JS:")
-print(f"   Diretório atual: {base_dir}")
-print(f"   Procurando arquivo fonte em: {base_dir / 'integrate-player.js'}")
-
-integrate_js_path = base_dir / "integrate-player.js"
-web_integrate_path = web_dir / "integrate-player.js"
-
-# Verificar se arquivo fonte existe
-if integrate_js_path.exists():
-    tamanho = integrate_js_path.stat().st_size
-    print(f"   ✅ Arquivo fonte ENCONTRADO!")
-    print(f"   📏 Tamanho: {tamanho} bytes")
+    # ============================================
+    # CÓPIA DO INTEGRATE-PLAYER.JS (CORRIGIDO)
+    # ============================================
+    print("\n📋 VERIFICANDO CÓPIA DO INTEGRATE-PLAYER.JS:")
+    print(f"   Diretório atual: {base_dir}")
+    print(f"   Procurando arquivo fonte em: {base_dir / 'integrate-player.js'}")
     
-    # Ler e copiar
-    with open(integrate_js_path, 'r', encoding='utf-8') as src:
-        conteudo = src.read()
-        print(f"   📝 Primeiras 100 caracteres: {conteudo[:100]}")
+    integrate_js_path = base_dir / "integrate-player.js"
+    web_integrate_path = web_dir / "integrate-player.js"
+    
+    # Verificar se arquivo fonte existe
+    if integrate_js_path.exists():
+        tamanho = integrate_js_path.stat().st_size
+        print(f"   ✅ Arquivo fonte ENCONTRADO!")
+        print(f"   📏 Tamanho: {tamanho} bytes")
         
-        with open(web_integrate_path, 'w', encoding='utf-8') as dst:
-            dst.write(conteudo)
-    
-    # Verificar se copiou
-    if web_integrate_path.exists():
-        tamanho_copia = web_integrate_path.stat().st_size
-        print(f"   ✅ Arquivo COPIADO com sucesso!")
-        print(f"   📏 Tamanho original: {tamanho} bytes, Cópia: {tamanho_copia} bytes")
-        print(f"   📍 Destino: {web_integrate_path}")
+        # Mostrar primeiras linhas para confirmar
+        with open(integrate_js_path, 'r', encoding='utf-8') as f:
+            primeiras_linhas = f.readlines()[:3]
+            print("   📝 Primeiras linhas:")
+            for linha in primeiras_linhas:
+                print(f"      {linha.strip()}")
+        
+        # Copiar arquivo
+        with open(integrate_js_path, 'r', encoding='utf-8') as src:
+            conteudo = src.read()
+            with open(web_integrate_path, 'w', encoding='utf-8') as dst:
+                dst.write(conteudo)
+        
+        # Verificar se copiou
+        if web_integrate_path.exists():
+            tamanho_copia = web_integrate_path.stat().st_size
+            print(f"   ✅ Arquivo COPIADO com sucesso!")
+            print(f"   📏 Tamanho original: {tamanho} bytes, Cópia: {tamanho_copia} bytes")
+            print(f"   📍 Destino: {web_integrate_path}")
+        else:
+            print(f"   ❌ FALHA NA CÓPIA! Arquivo não aparece no destino")
     else:
-        print(f"   ❌ FALHA NA CÓPIA! Arquivo não aparece no destino")
-else:
-    print(f"   ❌ Arquivo fonte NÃO ENCONTRADO em: {integrate_js_path}")
-    print(f"   📋 Listando arquivos na raiz:")
-    for arquivo in base_dir.glob("*.js"):
-        print(f"      - {arquivo.name}")
+        print(f"   ❌ Arquivo fonte NÃO ENCONTRADO em: {integrate_js_path}")
+        print(f"   📋 Listando arquivos .js na raiz:")
+        for arquivo in base_dir.glob("*.js"):
+            print(f"      - {arquivo.name}")
+        print(f"   📋 Listando TODOS os arquivos na raiz:")
+        for arquivo in base_dir.glob("*"):
+            if arquivo.is_file():
+                print(f"      - {arquivo.name}")
+    
+    # ============================================
+    # CONTINUAÇÃO NORMAL
+    # ============================================
+    
     # Criar diretório para playlists
     output_dir = base_dir / "iptv_playlists"
     output_dir.mkdir(exist_ok=True)
@@ -737,7 +753,7 @@ else:
     # Gerar M3U com agrupamento
     generate_m3u_with_grouping(output, output_dir)
     
-    # Gerar EPG (AGORA USANDO A FUNÇÃO CORRETA)
+    # Gerar EPG
     generate_epg(output, output_dir)
     
     print(f"\n🌐 Interface web atualizada")
@@ -1382,6 +1398,7 @@ def generate_html_with_correct_paths(base_dir, data):
 
 if __name__ == "__main__":
     build_vod_with_direct_capas()
+
 
 
 
