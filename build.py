@@ -695,18 +695,41 @@ def build_vod_with_direct_capas():
     # Gerar HTML atualizado
     generate_html_with_correct_paths(base_dir, output)
     
-    # Copiar integrate-player.js para web/
-    integrate_js_path = base_dir / "integrate-player.js"
-    web_integrate_path = web_dir / "integrate-player.js"
+    # Copiar integrate-player.js para web/ - VERSÃO ROBUSTA
+print("\n📋 VERIFICANDO CÓPIA DO INTEGRATE-PLAYER.JS:")
+print(f"   Diretório atual: {base_dir}")
+print(f"   Procurando arquivo fonte em: {base_dir / 'integrate-player.js'}")
+
+integrate_js_path = base_dir / "integrate-player.js"
+web_integrate_path = web_dir / "integrate-player.js"
+
+# Verificar se arquivo fonte existe
+if integrate_js_path.exists():
+    tamanho = integrate_js_path.stat().st_size
+    print(f"   ✅ Arquivo fonte ENCONTRADO!")
+    print(f"   📏 Tamanho: {tamanho} bytes")
     
-    if integrate_js_path.exists():
-        with open(integrate_js_path, 'r', encoding='utf-8') as src:
-            with open(web_integrate_path, 'w', encoding='utf-8') as dst:
-                dst.write(src.read())
-        print(f"✅ integrate-player.js copiado para: {web_integrate_path}")
+    # Ler e copiar
+    with open(integrate_js_path, 'r', encoding='utf-8') as src:
+        conteudo = src.read()
+        print(f"   📝 Primeiras 100 caracteres: {conteudo[:100]}")
+        
+        with open(web_integrate_path, 'w', encoding='utf-8') as dst:
+            dst.write(conteudo)
+    
+    # Verificar se copiou
+    if web_integrate_path.exists():
+        tamanho_copia = web_integrate_path.stat().st_size
+        print(f"   ✅ Arquivo COPIADO com sucesso!")
+        print(f"   📏 Tamanho original: {tamanho} bytes, Cópia: {tamanho_copia} bytes")
+        print(f"   📍 Destino: {web_integrate_path}")
     else:
-        print(f"⚠️  integrate-player.js não encontrado em {integrate_js_path}")
-    
+        print(f"   ❌ FALHA NA CÓPIA! Arquivo não aparece no destino")
+else:
+    print(f"   ❌ Arquivo fonte NÃO ENCONTRADO em: {integrate_js_path}")
+    print(f"   📋 Listando arquivos na raiz:")
+    for arquivo in base_dir.glob("*.js"):
+        print(f"      - {arquivo.name}")
     # Criar diretório para playlists
     output_dir = base_dir / "iptv_playlists"
     output_dir.mkdir(exist_ok=True)
@@ -723,9 +746,7 @@ def build_vod_with_direct_capas():
     
 def generate_html_with_correct_paths(base_dir, data):
     """Gera HTML estilo Netflix"""
-    # Seu código existente da função generate_html_with_correct_paths aqui
-    # (mantenha exatamente como você já tem)
-    html_template = '''<!DOCTYPE html>
+        html_template = '''<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -1361,6 +1382,7 @@ def generate_html_with_correct_paths(base_dir, data):
 
 if __name__ == "__main__":
     build_vod_with_direct_capas()
+
 
 
 
