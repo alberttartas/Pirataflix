@@ -1005,3 +1005,67 @@ if (typeof window.addNextEpisodeButton !== 'function') {
 }
 
 console.log('✅ Todas as funções do player foram garantidas!');
+// ============================================
+// SOLUÇÃO FINAL - FORÇAR SEÇÃO A APARECER
+// ============================================
+
+// Função para forçar a seção a aparecer
+function forceShowContinueWatching() {
+    console.log('🔧 Forçando seção aparecer...');
+    
+    // Tentar várias vezes
+    let attempts = 0;
+    const maxAttempts = 10;
+    
+    const interval = setInterval(() => {
+        attempts++;
+        
+        const contentDiv = document.getElementById('content');
+        if (!contentDiv) {
+            console.log(`⏳ Tentativa ${attempts}: Aguardando contentDiv...`);
+            return;
+        }
+        
+        // Verificar se já tem a seção
+        if (document.getElementById('continue-watching')) {
+            console.log('✅ Seção já existe');
+            clearInterval(interval);
+            return;
+        }
+        
+        // Tentar renderizar
+        const html = renderContinueWatching();
+        if (html) {
+            contentDiv.insertAdjacentHTML('afterbegin', html);
+            console.log(`✅ Seção adicionada na tentativa ${attempts}!`);
+            clearInterval(interval);
+        } else {
+            console.log(`⏳ Tentativa ${attempts}: Nenhum vídeo em andamento`);
+        }
+        
+        if (attempts >= maxAttempts) {
+            console.log('⏰ Máximo de tentativas atingido');
+            clearInterval(interval);
+        }
+    }, 1000); // Tenta a cada 1 segundo
+}
+
+// Executar quando a página carregar
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => {
+        setTimeout(forceShowContinueWatching, 2000);
+    });
+} else {
+    setTimeout(forceShowContinueWatching, 2000);
+}
+
+// Também executar quando o vodData for carregado
+const originalLoadData = window.loadData;
+if (originalLoadData) {
+    window.loadData = function() {
+        originalLoadData();
+        setTimeout(forceShowContinueWatching, 1000);
+    };
+}
+
+console.log('🚀 Forçador de seção ativado!');
