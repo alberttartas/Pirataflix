@@ -1,4 +1,194 @@
-// integrate-player.js - Integração completa do player com suporte a episódios
+// ============================================
+// SISTEMA DE CONTINUAR ASSISTINDO
+// ============================================
+
+const ContinueWatching = {
+    STORAGE_KEY: 'pirataflix_progressos',
+    
+    getAll() {
+        try {
+            const saved = localStorage.getItem(this.STORAGE_KEY);
+            return saved ? JSON.parse(saved) : {};
+        } catch (e) {
+            console.error('Erro ao carregar progressos:', e);
+            return {};
+        }
+    },
+    
+    save(videoData) {
+        if (!videoData.videoId || !videoData.itemId || videoData.currentTime < 10) return;
+        
+        const progressos = this.getAll();
+        const now = Date.now();
+        
+        progressos[videoData.videoId] = {
+            ...videoData,
+            timestamp: now,
+            progress: videoData.duration > 0 
+                ? Math.round((videoData.currentTime / videoData.duration) * 100) 
+                : 0
+        };
+        
+        // Limpar antigos (30 dias)
+        const trintaDias = 30 * 24 * 60 * 60 * 1000;
+        Object.keys(progressos).forEach(key => {
+            if (now - progressos[key].timestamp > trintaDias) {
+                delete progressos[key];
+            }
+        });
+        
+        localStorage.setItem(this.STORAGE_KEY, JSON.stringify(progressos));
+        console.log('💾 Progresso salvo:', videoData.videoId, Math.floor(videoData.currentTime) + 's');
+    },
+    
+    get(videoId) {
+        const progressos = this.getAll();
+        return progressos[videoId] || null;
+    },
+    
+    remove(videoId) {
+        const progressos = this.getAll();
+        if (progressos[videoId]) {
+            delete progressos[videoId];
+            localStorage.setItem(this.STORAGE_KEY, JSON.stringify(progressos));
+            console.log('🗑️ Progresso removido:', videoId);
+        }
+    },
+    
+    getWatchingList() {
+        const progressos = this.getAll();
+        return Object.values(progressos)
+            .sort((a, b) => b.timestamp - a.timestamp)
+            .slice(0, 20);
+    }
+};
+
+// ============================================
+// FUNÇÃO PARA RENDERIZAR SEÇÃO NA PÁGINA INICIAL
+// ============================================
+
+function renderContinueWatching() {
+    const watchingList = ContinueWatching.getWatchingList();
+    if (watchingList.length === 0) return '';
+    
+    let html = `
+    <section class="category-section" id="continue-watching">
+        <h2 class="category-title" style="display: flex; align-items: center; gap: 10px;">
+            <span style="color: #e50914; font-size: 1.8rem;">▶️</span> Continuar Assistindo
+        </h2>
+        <div class="items-grid">`;
+    
+    watchingList.forEach(item => {
+        const remaining = item.duration - item.currentTime;
+        const remainingFormatted = remaining > 3600 
+            ? `${Math.floor(remaining / 3600)}h ${Math.floor((remaining % 3600) / 60)}min`
+            : `${Math.floor(remaining / 60)}min`;
+        
+        const progressPercent = item.progress || 0;
+        
+        html += `
+        <div class="item-card continue-card" onclick="resumeFromContinueWatching('${item.itemId}', '${item.category}', ${item.episodeIndex})">
+            <img src="${item.poster || 'assets/capas/default.jpg'}" 
+                 alt="${item.seriesTitle || item.title}" 
+                 class="item-poster"
+                 onerror="this.onerror=null; this.src='assets/capas/default.jpg';">
+            <div class="item-info">
+                <div class="item-title">${item.seriesTitle || item.title}</div>
+                <div class="item-meta" style="display: flex; flex-direction: column; gap: 5px;">
+                    <span>${item.season ? `T${item.season} ` : ''}E${item.episode} • ${remainingFormatted} restantes</span>
+                    <div class="progress-bar" style="width: 100%; height: 4px; background: #333; border-radius: 2px; margin-top: 5px;">
+                        <div style="width: ${progressPercent}%; height: 100%; background: #e50914; border-radius: 2px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>`;
+    });
+    
+    html += `</div></section>`;
+    return html;
+}
+
+// Função para retomar da seção "Continuar Assistindo"
+function resumeFromContinueWatching(itemId, category, episodeIndex) {
+    if (!window.vodData) {
+        console.error('❌ vodData não disponível');
+        return;
+    }
+    
+    const items = window.vodData[category];
+    if (!items) return;
+    
+    const item = items.find(i => i.id === itemId);
+    if (!item) return;
+    
+    // Encontrar URL do episódio
+    let url = '';
+    let title = '';
+    
+    if (item.episodes && item.episodes[episodeIndex]) {
+        url = item.episodes[episodeIndex].url;
+        title = item.episodes[episodeIndex].title;
+    } else if (item.seasons) {
+        // Procurar em temporadas
+        let episodeCounter = 0;
+        for (const season of item.seasons) {
+            for (const ep of season.episodes) {
+                if (episodeCounter === episodeIndex) {
+                    url = ep.url;
+                    title = ep.title;
+                    break;
+                }
+                episodeCounter++;
+            }
+            if (url) break;
+        }
+    }
+    
+    if (url && window.playWithModernPlayer) {
+        window.playWithModernPlayer(
+            url, 
+            `${item.title} - ${title}`, 
+            `${category} • Episódio ${episodeIndex + 1}`,
+            itemId,
+            category,
+            episodeIndex
+        );
+    }
+}
+
+// ============================================
+// INJEÇÃO DA SEÇÃO NO HTML PRINCIPAL
+// ============================================
+
+// Guardar referência à função displayContent original
+const originalDisplayContent = window.displayContent;
+
+// Substituir displayContent para incluir "Continuar Assistindo"
+window.displayContent = function() {
+    if (originalDisplayContent) {
+        originalDisplayContent();
+        setTimeout(() => {
+            const contentDiv = document.getElementById('content');
+            if (!contentDiv) return;
+            
+            const continueHtml = renderContinueWatching();
+            if (continueHtml) {
+                // Inserir após o header ou no início
+                const firstSection = contentDiv.querySelector('.category-section');
+                if (firstSection) {
+                    firstSection.insertAdjacentHTML('beforebegin', continueHtml);
+                } else {
+                    contentDiv.insertAdjacentHTML('afterbegin', continueHtml);
+                }
+            }
+        }, 200);
+    }
+};
+
+// ============================================
+// INTEGRAÇÃO DO PLAYER (CÓDIGO ORIGINAL MODIFICADO)
+// ============================================
+
 function integrateModernPlayer() {
     console.log('🚀 Iniciando integração do player...');
     
@@ -59,7 +249,7 @@ function setupPlayerModal() {
     const modalHTML = `
         <div id="modernPlayerModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); z-index: 9999; justify-content: center; align-items: center;">
             <div style="width: 90%; max-width: 1200px; max-height: 90vh; background: #000; border-radius: 10px; overflow: hidden; position: relative;">
-                <button id="closeModernPlayer" style="position: absolute; top: 15px; right: 15px; background: rgba(255,255,255,0.1); border: none; color: white; width: 40px; height: 40px; border-radius: 50%; font-size: 20px; cursor: pointer; z-index: 10000;">&times;</button>
+                <button id="closeModernPlayer" style="position: absolute; top: 15px; right: 15px; background: rgba(255,255,255,0.1); border: none; color: white; width: 40px; height: 40px; border-radius: 50%; font-size: 20px; cursor: pointer; z-index: 10000; display: flex; align-items: center; justify-content: center;">&times;</button>
                 <div id="modern-player-container" style="width: 100%; height: 70vh;"></div>
                 <div style="padding: 20px; color: white;">
                     <h3 id="modern-player-title" style="margin: 0 0 10px 0;"></h3>
@@ -75,27 +265,37 @@ function setupPlayerModal() {
         const modal = document.getElementById('modernPlayerModal');
         modal.style.display = 'flex';
         
+        // Gerar ID único para este vídeo
+        const videoId = `${itemId}_${episodeIndex}`;
+        
+        // VERIFICAR SE EXISTE PROGRESSO SALVO
+        const savedProgress = ContinueWatching.get(videoId);
+        if (savedProgress && savedProgress.currentTime > 5) {
+            modal.dataset.resumeTime = savedProgress.currentTime;
+            console.log('⏯️ Progresso encontrado:', Math.floor(savedProgress.currentTime) + 's');
+        } else {
+            modal.dataset.resumeTime = '0';
+        }
+        
         // Salvar identificação do item
         modal.dataset.itemId = itemId || '';
         modal.dataset.category = category || '';
         modal.dataset.currentEpisodeIndex = episodeIndex;
         modal.dataset.currentVideoUrl = url;
         modal.dataset.currentVideoTitle = title;
+        modal.dataset.currentVideoId = videoId;
         
-        console.log('🎬 Reproduzindo:', { url, title, itemId, category, episodeIndex });
+        console.log('🎬 Reproduzindo:', { url, title, itemId, category, episodeIndex, videoId });
         
         // Buscar lista de episódios do vodData global
         let episodeList = [];
         if (itemId && category && window.vodData && window.vodData[category]) {
             const items = window.vodData[category];
             console.log('📁 Procurando item:', itemId, 'em categoria:', category);
-            console.log('📁 Itens disponíveis:', items.map(i => i.id));
             
             const item = items.find(i => i.id === itemId);
             if (item) {
                 console.log('✅ Item encontrado:', item.title);
-                console.log('📺 Episódios do item:', item.episodes);
-                console.log('📺 Temporadas do item:', item.seasons);
                 
                 // Tentar pegar episódios da propriedade episodes
                 episodeList = item.episodes || [];
@@ -103,8 +303,6 @@ function setupPlayerModal() {
                 // Se não tiver episódios diretos, verificar temporadas
                 if (!episodeList.length && item.seasons && item.seasons.length > 0) {
                     console.log('📚 Procurando episódios nas temporadas');
-                    // Para séries com temporadas, usar episódios da primeira temporada
-                    // ou juntar todos os episódios de todas as temporadas
                     episodeList = [];
                     item.seasons.forEach(season => {
                         if (season.episodes && season.episodes.length > 0) {
@@ -114,11 +312,7 @@ function setupPlayerModal() {
                 }
                 
                 console.log('🎯 Lista de episódios encontrada:', episodeList.length, 'episódios');
-            } else {
-                console.warn('⚠️ Item não encontrado:', itemId);
             }
-        } else {
-            console.warn('⚠️ Dados insuficientes para buscar episódios');
         }
         
         modal.dataset.episodeList = JSON.stringify(episodeList);
@@ -130,10 +324,78 @@ function setupPlayerModal() {
                 containerId: 'modern-player-container',
                 autoPlay: true,
                 skipSeconds: 10,
-                showNextEpisode: true
+                showNextEpisode: true,
+                resumeTime: parseFloat(modal.dataset.resumeTime) || 0,
+                // Callbacks para salvar progresso
+                onTimeUpdate: function(currentTime, duration) {
+                    const videoId = modal.dataset.currentVideoId;
+                    const itemId = modal.dataset.itemId;
+                    const category = modal.dataset.category;
+                    const episodeIndex = parseInt(modal.dataset.currentEpisodeIndex || 0);
+                    
+                    if (videoId && itemId && currentTime > 10) {
+                        ContinueWatching.save({
+                            videoId: videoId,
+                            itemId: itemId,
+                            category: category,
+                            episodeIndex: episodeIndex,
+                            title: title,
+                            seriesTitle: title.split(' - ')[0],
+                            season: 1, // Você pode extrair da temporada atual se necessário
+                            episode: episodeIndex + 1,
+                            currentTime: currentTime,
+                            duration: duration,
+                            url: url,
+                            poster: item?.poster || ''
+                        });
+                    }
+                },
+                onEnded: function() {
+                    const videoId = modal.dataset.currentVideoId;
+                    if (videoId) {
+                        ContinueWatching.remove(videoId);
+                        console.log('✅ Vídeo concluído, progresso removido');
+                    }
+                    
+                    // Avançar para próximo episódio automaticamente
+                    const episodeList = JSON.parse(modal.dataset.episodeList || '[]');
+                    const currentIndex = parseInt(modal.dataset.currentEpisodeIndex || 0);
+                    
+                    if (currentIndex < episodeList.length - 1) {
+                        setTimeout(() => {
+                            playNextEpisode();
+                        }, 2000);
+                    }
+                }
             });
         } else {
             console.log('🎮 Usando player existente');
+            // Atualizar callbacks
+            if (modernPlayer.setOnTimeUpdate) {
+                modernPlayer.setOnTimeUpdate(function(currentTime, duration) {
+                    const videoId = modal.dataset.currentVideoId;
+                    const itemId = modal.dataset.itemId;
+                    const category = modal.dataset.category;
+                    const episodeIndex = parseInt(modal.dataset.currentEpisodeIndex || 0);
+                    
+                    if (videoId && itemId && currentTime > 10) {
+                        ContinueWatching.save({
+                            videoId: videoId,
+                            itemId: itemId,
+                            category: category,
+                            episodeIndex: episodeIndex,
+                            title: title,
+                            seriesTitle: title.split(' - ')[0],
+                            season: 1,
+                            episode: episodeIndex + 1,
+                            currentTime: currentTime,
+                            duration: duration,
+                            url: url,
+                            poster: item?.poster || ''
+                        });
+                    }
+                });
+            }
         }
         
         // Carregar vídeo
@@ -147,34 +409,34 @@ function setupPlayerModal() {
         if (episodeList && episodeList.length > 1 && episodeIndex < episodeList.length - 1) {
             console.log('➕ Adicionando botão de próximo episódio');
             addNextEpisodeButton();
-        } else {
-            console.log('➖ Sem botão de próximo (último episódio ou sem lista)');
         }
     };
     
     // Eventos de fechamento
     document.getElementById('closeModernPlayer').addEventListener('click', () => {
         console.log('❌ Fechando player');
-        document.getElementById('modernPlayerModal').style.display = 'none';
+        const modal = document.getElementById('modernPlayerModal');
+        modal.style.display = 'none';
+        
         if (modernPlayer && modernPlayer.video) {
             modernPlayer.video.pause();
         }
+        
         // Remover botão de próximo episódio
         const nextBtn = document.getElementById('nextEpisodeBtn');
-        if (nextBtn) {
-            console.log('🗑️ Removendo botão de próximo episódio');
-            nextBtn.remove();
-        }
+        if (nextBtn) nextBtn.remove();
     });
     
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') {
             console.log('⎋ Fechando player com ESC');
-            document.getElementById('modernPlayerModal').style.display = 'none';
+            const modal = document.getElementById('modernPlayerModal');
+            modal.style.display = 'none';
+            
             if (modernPlayer && modernPlayer.video) {
                 modernPlayer.video.pause();
             }
-            // Remover botão de próximo episódio
+            
             const nextBtn = document.getElementById('nextEpisodeBtn');
             if (nextBtn) nextBtn.remove();
         }
@@ -197,14 +459,10 @@ function addNextEpisodeButton() {
     
     // Remover botão anterior se existir
     const existingBtn = document.getElementById('nextEpisodeBtn');
-    if (existingBtn) {
-        console.log('🗑️ Removendo botão anterior');
-        existingBtn.remove();
-    }
+    if (existingBtn) existingBtn.remove();
     
     if (currentIndex < episodeList.length - 1) {
         const nextEpisode = episodeList[currentIndex + 1];
-        console.log('▶️ Próximo episódio:', nextEpisode.title);
         
         const nextBtn = document.createElement('button');
         nextBtn.id = 'nextEpisodeBtn';
@@ -232,22 +490,17 @@ function addNextEpisodeButton() {
         nextBtn.onmouseover = () => {
             nextBtn.style.background = 'rgba(229, 9, 20, 1)';
             nextBtn.style.transform = 'scale(1.05)';
-            nextBtn.style.boxShadow = '0 6px 16px rgba(0,0,0,0.4)';
         };
         nextBtn.onmouseout = () => {
             nextBtn.style.background = 'rgba(229, 9, 20, 0.9)';
             nextBtn.style.transform = 'scale(1)';
-            nextBtn.style.boxShadow = '0 4px 12px rgba(0,0,0,0.3)';
         };
         nextBtn.onclick = playNextEpisode;
         
         const modalContent = modal.querySelector('div > div');
         if (modalContent) {
             modalContent.appendChild(nextBtn);
-            console.log('✅ Botão de próximo episódio adicionado');
         }
-    } else {
-        console.log('❌ Não há próximo episódio');
     }
 }
 
@@ -258,34 +511,25 @@ function playNextEpisode() {
     const episodeList = JSON.parse(modal.dataset.episodeList || '[]');
     const currentIndex = parseInt(modal.dataset.currentEpisodeIndex || 0);
     
-    console.log('📊 Estado atual:', { 
-        total: episodeList.length, 
-        atual: currentIndex,
-        proximoDisponivel: currentIndex < episodeList.length - 1 
-    });
-    
     if (currentIndex < episodeList.length - 1) {
         const nextEpisode = episodeList[currentIndex + 1];
-        console.log('🎬 Carregando próximo episódio:', nextEpisode.title);
+        const itemId = modal.dataset.itemId;
+        const category = modal.dataset.category;
         
         // Atualizar dados no modal
         modal.dataset.currentEpisodeIndex = currentIndex + 1;
         modal.dataset.currentVideoUrl = nextEpisode.url;
         modal.dataset.currentVideoTitle = nextEpisode.title;
+        modal.dataset.currentVideoId = `${itemId}_${currentIndex + 1}`;
         
         // Carregar próximo episódio
         if (modernPlayer) {
-            modernPlayer.load(nextEpisode.url, nextEpisode.title, episodeList, currentIndex + 1);
-        } else {
-            console.error('❌ Player não inicializado');
-            // Recriar player se necessário
-            modernPlayer = new ModernVideoPlayer({
-                containerId: 'modern-player-container',
-                autoPlay: true,
-                skipSeconds: 10,
-                showNextEpisode: true
-            });
-            modernPlayer.load(nextEpisode.url, nextEpisode.title, episodeList, currentIndex + 1);
+            modernPlayer.load(
+                nextEpisode.url, 
+                nextEpisode.title, 
+                episodeList, 
+                currentIndex + 1
+            );
         }
         
         // Atualizar título
@@ -294,16 +538,6 @@ function playNextEpisode() {
         
         // Atualizar botão
         updateNextEpisodeButton();
-        
-        console.log('✅ Próximo episódio carregado');
-    } else {
-        console.warn('⚠️ Não há próximo episódio disponível');
-        // Remover botão se for o último
-        const nextBtn = document.getElementById('nextEpisodeBtn');
-        if (nextBtn) {
-            nextBtn.style.display = 'none';
-            console.log('🗑️ Botão removido (último episódio)');
-        }
     }
 }
 
@@ -312,24 +546,14 @@ function updateNextEpisodeButton() {
     const episodeList = JSON.parse(modal.dataset.episodeList || '[]');
     const currentIndex = parseInt(modal.dataset.currentEpisodeIndex || 0);
     
-    console.log('🔄 Atualizando botão próximo:', { 
-        total: episodeList.length, 
-        atual: currentIndex 
-    });
-    
     // Remover botão atual
     const nextBtn = document.getElementById('nextEpisodeBtn');
-    if (nextBtn) {
-        nextBtn.remove();
-        console.log('🗑️ Botão anterior removido');
-    }
+    if (nextBtn) nextBtn.remove();
     
     // Adicionar novo botão se ainda houver episódios
     if (currentIndex < episodeList.length - 1) {
-        console.log('➕ Adicionando novo botão');
         addNextEpisodeButton();
     } else {
-        console.log('🎉 Último episódio da lista');
         // Mostrar mensagem de conclusão
         const modalBody = modal.querySelector('div > div > div:last-child');
         if (modalBody) {
@@ -342,7 +566,15 @@ function updateNextEpisodeButton() {
                 display: flex;
                 align-items: center;
             `;
+            
+            // Remover mensagem anterior se existir
+            const oldMsg = modalBody.querySelector('.completion-msg');
+            if (oldMsg) oldMsg.remove();
+            
+            completionMsg.className = 'completion-msg';
             modalBody.appendChild(completionMsg);
+            
+            setTimeout(() => completionMsg.remove(), 5000);
         }
     }
 }
@@ -355,6 +587,11 @@ function setupFallbackPlayer() {
         constructor(options) {
             this.containerId = options.containerId;
             this.options = options;
+            this.resumeTime = options.resumeTime || 0;
+            this.onTimeUpdate = options.onTimeUpdate || function() {};
+            this.onEnded = options.onEnded || function() {};
+            this.container = document.getElementById(this.containerId);
+            this.video = null;
         }
         
         load(url, title, episodeList = null, episodeIndex = 0) {
@@ -370,23 +607,44 @@ function setupFallbackPlayer() {
                 </video>
             `;
             
-            // Adicionar título
-            const video = container.querySelector('video');
-            video.title = title;
+            this.video = container.querySelector('video');
+            this.video.title = title;
             
-            // Adicionar evento de término
-            video.addEventListener('ended', () => {
-                console.log('⏹️ Vídeo finalizado (fallback)');
-                if (episodeList && episodeIndex < episodeList.length - 1) {
-                    setTimeout(() => {
-                        if (confirm('Deseja reproduzir o próximo episódio?')) {
-                            const nextEpisode = episodeList[episodeIndex + 1];
-                            this.load(nextEpisode.url, nextEpisode.title, episodeList, episodeIndex + 1);
-                            // Atualizar título na interface
-                            document.getElementById('modern-player-title').textContent = nextEpisode.title;
-                        }
-                    }, 1000);
+            // Retomar se houver tempo salvo
+            if (this.resumeTime > 5) {
+                this.video.addEventListener('loadedmetadata', () => {
+                    this.video.currentTime = this.resumeTime;
+                    
+                    // Mostrar mensagem
+                    const msg = document.createElement('div');
+                    msg.style.cssText = `
+                        position: absolute;
+                        top: 20px;
+                        left: 20px;
+                        background: rgba(229,9,20,0.9);
+                        color: white;
+                        padding: 8px 16px;
+                        border-radius: 4px;
+                        z-index: 10000;
+                        animation: fadeOut 3s forwards;
+                    `;
+                    msg.textContent = `⏯️ Retomando de ${Math.floor(this.resumeTime/60)}:${Math.floor(this.resumeTime%60).toString().padStart(2,'0')}`;
+                    container.appendChild(msg);
+                    setTimeout(() => msg.remove(), 3000);
+                });
+            }
+            
+            // Salvar progresso
+            let saveInterval = setInterval(() => {
+                if (this.video && this.video.duration && this.video.currentTime > 0) {
+                    this.onTimeUpdate(this.video.currentTime, this.video.duration);
                 }
+            }, 5000);
+            
+            // Evento de término
+            this.video.addEventListener('ended', () => {
+                clearInterval(saveInterval);
+                this.onEnded();
             });
         }
     };
@@ -396,11 +654,9 @@ function setupFallbackPlayer() {
 
 // Inicializar com timeout para garantir que tudo carregou
 function initializePlayer() {
-    // Esperar um pouco mais para garantir que a página carregou completamente
     setTimeout(() => {
         if (!window.vodData) {
             console.warn('⚠️ vodData ainda não carregado, tentando novamente...');
-            // Tentar pegar vodData do escopo global
             if (typeof vodData !== 'undefined') {
                 window.vodData = vodData;
                 console.log('✅ vodData encontrado no escopo global');
@@ -433,5 +689,7 @@ window.debugPlayer = {
         };
     },
     forceNextEpisode: playNextEpisode,
-    showNextButton: addNextEpisodeButton
+    showNextButton: addNextEpisodeButton,
+    ContinueWatching: ContinueWatching,
+    watchingList: ContinueWatching.getWatchingList()
 };
