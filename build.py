@@ -746,7 +746,7 @@ else:
     
 def generate_html_with_correct_paths(base_dir, data):
     """Gera HTML estilo Netflix"""
-        html_template = '''<!DOCTYPE html>
+    html_template = '''<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -1382,6 +1382,7 @@ def generate_html_with_correct_paths(base_dir, data):
 
 if __name__ == "__main__":
     build_vod_with_direct_capas()
+
 
 
 
