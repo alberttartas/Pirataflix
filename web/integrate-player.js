@@ -160,8 +160,10 @@ function resumeFromContinueWatching(itemId, category, episodeIndex) {
 // INJEÇÃO DA SEÇÃO NO HTML PRINCIPAL
 // ============================================
 
-// Guardar referência à função displayContent original
-const originalDisplayContent = window.displayContent;
+// Guardar referência à função displayContent original (SOMENTE se não existir)
+if (typeof window.originalDisplayContent === 'undefined') {
+    window.originalDisplayContent = window.displayContent;
+}
 
 // Substituir displayContent para incluir "Continuar Assistindo"
 window.displayContent = function() {
@@ -765,48 +767,7 @@ window.debugPlayer = {
     ContinueWatching: ContinueWatching,
     watchingList: ContinueWatching.getWatchingList()
 };
-// ============================================
-// SUBSTITUIÇÃO CORRETA DA FUNÇÃO DISPLAYCONTENT
-// ============================================
 
-// Guardar referência à função original
-const originalDisplayContent = window.displayContent;
-
-// Substituir por nossa versão
-window.displayContent = function() {
-    console.log('🎯 NOVA DISPLAYCONTENT EXECUTANDO');
-    
-    // Chamar função original primeiro para mostrar as categorias
-    if (originalDisplayContent) {
-        originalDisplayContent();
-    }
-    
-    // Adicionar Continue Watching após um pequeno delay
-    setTimeout(() => {
-        const contentDiv = document.getElementById('content');
-        if (!contentDiv) {
-            console.warn('❌ contentDiv não encontrado');
-            return;
-        }
-        
-        const continueHtml = renderContinueWatching();
-        if (continueHtml) {
-            // Remover se já existir
-            const existing = document.getElementById('continue-watching');
-            if (existing) {
-                existing.remove();
-            }
-            
-            // Inserir no início
-            contentDiv.insertAdjacentHTML('afterbegin', continueHtml);
-            console.log('✅ Seção Continue Watching adicionada!');
-        } else {
-            console.log('ℹ️ Nenhum vídeo em andamento');
-        }
-    }, 300);
-};
-
-console.log('✅ Função displayContent substituída com sucesso!');
 // ============================================
 // GARANTIR QUE O PLAYER ESTEJA DISPONÍVEL
 // ============================================
