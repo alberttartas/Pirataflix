@@ -733,7 +733,107 @@ function initializePlayer() {
         integrateModernPlayer();
     }, 1000);
 }
+// ============================================
+// GARANTIR QUE A SEÇÃO APAREÇA
+// ============================================
 
+// Forçar substituição da função displayContent
+const originalDisplayContent = window.displayContent;
+
+window.displayContent = function() {
+    console.log('🎯 Nova displayContent executando');
+    
+    // Chamar a função original primeiro
+    if (originalDisplayContent) {
+        originalDisplayContent();
+    } else {
+        console.warn('⚠️ originalDisplayContent não existe');
+        // Fallback: carregar dados manualmente
+        if (window.vodData) {
+            renderOriginalContent();
+        }
+    }
+    
+    // Depois de um tempo, adicionar a seção
+    setTimeout(() => {
+        console.log('⏰ Tentando adicionar seção Continue Watching');
+        const contentDiv = document.getElementById('content');
+        if (!contentDiv) {
+            console.warn('❌ contentDiv não encontrado');
+            return;
+        }
+        
+        const continueHtml = renderContinueWatching();
+        console.log('📝 HTML gerado:', continueHtml ? 'tem conteúdo' : 'vazio');
+        
+        if (continueHtml) {
+            // Verificar se já existe
+            if (document.getElementById('continue-watching')) {
+                console.log('⚠️ Seção já existe, removendo antiga');
+                document.getElementById('continue-watching').remove();
+            }
+            
+            // Inserir no início
+            contentDiv.insertAdjacentHTML('afterbegin', continueHtml);
+            console.log('✅ Seção Continue Watching adicionada!');
+        } else {
+            console.log('ℹ️ Nenhum vídeo em andamento');
+        }
+    }, 500);
+};
+
+// Função de fallback para renderizar conteúdo original
+function renderOriginalContent() {
+    console.log('📋 Renderizando conteúdo original (fallback)');
+    const contentDiv = document.getElementById('content');
+    if (!contentDiv || !window.vodData) return;
+    
+    // Código simplificado para renderizar categorias
+    let html = '';
+    const categoryOrder = ['filmes', 'series', 'novelas', 'animes', 'infantil'];
+    const categoryNames = {
+        'filmes': '🎬 Filmes',
+        'series': '📺 Séries', 
+        'novelas': '💖 Novelas',
+        'animes': '👻 Animes',
+        'infantil': '🧸 Infantil'
+    };
+    
+    categoryOrder.forEach(category => {
+        const items = window.vodData[category];
+        if (!items || items.length === 0) return;
+        
+        html += `<section class="category-section" id="${category}"><h2 class="category-title">${categoryNames[category]}</h2><div class="items-grid">`;
+        
+        items.forEach(item => {
+            const poster = item.poster || 'assets/capas/default.jpg';
+            html += `<div class="item-card" onclick="openModal('${category}', '${item.id}')"><img src="${poster}" alt="${item.title}" class="item-poster" onerror="this.onerror=null; this.src='assets/capas/default.jpg';"><div class="item-info"><div class="item-title">${item.title}</div></div></div>`;
+        });
+        
+        html += `</div></section>`;
+    });
+    
+    contentDiv.innerHTML = html || '<div class="loading">Nenhum conteúdo encontrado</div>';
+}
+
+// Também adicionar um observer para quando a página carregar
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => {
+        setTimeout(() => {
+            if (!document.getElementById('continue-watching') && ContinueWatching.getWatchingList().length > 0) {
+                console.log('🔄 DOM carregado, verificando seção...');
+                const contentDiv = document.getElementById('content');
+                if (contentDiv) {
+                    const html = renderContinueWatching();
+                    if (html) {
+                        contentDiv.insertAdjacentHTML('afterbegin', html);
+                        console.log('✅ Seção adicionada via DOMContentLoaded');
+                    }
+                }
+            }
+        }, 1000);
+    });
+}
 // Inicializar quando a página carregar
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initializePlayer);
@@ -760,3 +860,4 @@ window.debugPlayer = {
     ContinueWatching: ContinueWatching,
     watchingList: ContinueWatching.getWatchingList()
 };
+
