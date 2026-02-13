@@ -157,7 +157,7 @@ function resumeFromContinueWatching(itemId, category, episodeIndex) {
 }
 
 // ============================================
-// INJEÇÃO DA SEÇÃO NO HTML PRINCIPAL
+// INJEÇÃO DA SEÇÃO NO HTML PRINCIPAL - VERSÃO FINAL
 // ============================================
 
 // Guardar referência à função displayContent original (SOMENTE se não existir)
@@ -167,31 +167,45 @@ if (typeof window.originalDisplayContent === 'undefined') {
 
 // Substituir displayContent para incluir "Continuar Assistindo"
 window.displayContent = function() {
-    if (originalDisplayContent) {
-        originalDisplayContent();
-        setTimeout(() => {
-            const contentDiv = document.getElementById('content');
-            if (!contentDiv) return;
-            
+    console.log('🎯 NOVA DISPLAYCONTENT EXECUTANDO');
+    
+    // Chamar função original primeiro para mostrar as categorias
+    if (window.originalDisplayContent) {
+        window.originalDisplayContent();
+    }
+    
+    // Adicionar Continue Watching após um pequeno delay
+    setTimeout(() => {
+        const contentDiv = document.getElementById('content');
+        if (!contentDiv) {
+            console.warn('❌ contentDiv não encontrado');
+            return;
+        }
+        
+        // Verificar se tem progressos
+        const watchingList = ContinueWatching.getWatchingList();
+        console.log('📋 Vídeos em andamento:', watchingList.length);
+        
+        if (watchingList.length > 0) {
             const continueHtml = renderContinueWatching();
             if (continueHtml) {
-                // Verificar se já existe
-                if (document.getElementById('continue-watching')) {
-                    document.getElementById('continue-watching').remove();
+                // Remover se já existir
+                const existing = document.getElementById('continue-watching');
+                if (existing) {
+                    existing.remove();
                 }
-                // Inserir após o header ou no início
-                const firstSection = contentDiv.querySelector('.category-section');
-                if (firstSection) {
-                    firstSection.insertAdjacentHTML('beforebegin', continueHtml);
-                } else {
-                    contentDiv.insertAdjacentHTML('afterbegin', continueHtml);
-                }
+                
+                // Inserir no início
+                contentDiv.insertAdjacentHTML('afterbegin', continueHtml);
                 console.log('✅ Seção Continue Watching adicionada!');
             }
-        }, 200);
-    }
+        } else {
+            console.log('ℹ️ Nenhum vídeo em andamento');
+        }
+    }, 300);
 };
 
+console.log('✅ Função displayContent substituída com sucesso!');
 // ============================================
 // INTEGRAÇÃO DO PLAYER COM MODERNVIDEOPLAYER
 // ============================================
