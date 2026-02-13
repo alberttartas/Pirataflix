@@ -504,235 +504,137 @@ def generate_m3u_with_grouping(data, output_dir):
     return M3U_FILE
     
 # =========================
-# GERADOR EPG
+# GERADOR EPG (VERSÃO SEM REQUESTS)
 # =========================
 
-import requests
-import time
-
-def get_imdb_info(title, year=None, media_type="movie"):
-    """Busca informações do IMDb usando API não oficial"""
-    try:
-        # URL da API do IMDb (não oficial)
-        base_url = "https://v3.sg.media-imdb.com/suggestion"
-        
-        # Limpar e preparar título para busca
-        search_title = title.lower().replace(":", "").replace("  ", " ")
-        
-        # Fazer requisição
-        url = f"{base_url}/titles/x/{search_title}.json"
-        headers = {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
-        }
-        
-        response = requests.get(url, headers=headers, timeout=10)
-        if response.status_code == 200:
-            data = response.json()
-            
-            if data.get("titles"):
-                # Encontrar o melhor match
-                for item in data["titles"]:
-                    item_title = item.get("title", "").lower()
-                    item_year = item.get("year")
-                    
-                    # Verificar correspondência
-                    if search_title in item_title or item_title in search_title:
-                        return {
-                            'id': item.get("id", ""),  # Ex: tt1234567
-                            'title': item.get("title", title),
-                            'year': item_year,
-                            'plot': item.get("plot", ""),
-                            'rating': item.get("rating", {}).get("rating", ""),
-                            'genres': item.get("genres", []),
-                            'poster': item.get("poster", {}).get("url", ""),
-                            'actors': item.get("credits", [])[:5]  # 5 primeiros atores
-                        }
-        
-        return None
-        
-    except Exception as e:
-        print(f"⚠️  Erro ao buscar IMDb para '{title}': {e}")
-        return None
-
-def generate_epg_with_imdb(data, output_dir):
-    """Gera EPG XML com informações do IMDb"""
+def generate_epg(data, output_dir):
+    """Gera EPG XML sem depender de requests/IMDb"""
     
     EPG_FILE = os.path.join(output_dir, "epg.xml")
     
     epg = '<?xml version="1.0" encoding="UTF-8"?>\n'
-    epg += '<tv generator-info-name="Pirataflix VOD" source-info-url="https://www.imdb.com/">\n'
+    epg += '<tv generator-info-name="Pirataflix VOD">\n'
     
-    print("🔍 Buscando informações do IMDb...")
+    print("📺 Gerando EPG básico...")
     
-    # Primeiro, criar canais com informações do IMDb
-    all_channels = {}
+    # Mapeamento de categorias
+    category_map = {
+        "filmes": "🎬 Filmes",
+        "series": "📺 Séries", 
+        "novelas": "💖 Novelas",
+        "animes": "👻 Animes",
+        "infantil": "🧸 Infantil"
+    }
     
-    for category in ["filmes", "series", "novelas", "animes", "infantil"]:
-        category_name = {
-            "filmes": "Filme",
-            "series": "Série",
-            "novelas": "Novela",
-            "animes": "Anime",
-            "infantil": "Infantil"
-        }.get(category, "VOD")
-        
-        for idx, item in enumerate(data.get(category, [])):
+    # URL base para imagens
+    BASE_URL = "https://alberttartas.github.io/Pirataflix"
+    
+    # Criar canais
+    for category, cat_name in category_map.items():
+        items = data.get(category, [])
+        for item in items:
             base_id = item.get("id", slugify(item["title"]))
             base_id_upper = base_id.upper().replace('_', '')
             
-            # Buscar informações do IMDb (com rate limiting)
-            if idx % 5 == 0:  # Buscar apenas alguns para não sobrecarregar
-                time.sleep(0.5)  # Delay para não sobrecarregar
-            
-            imdb_info = None
-            if category == "filmes":
-                # Buscar informações do filme
-                imdb_info = get_imdb_info(item["title"], media_type="movie")
-            elif category == "series":
-                # Buscar informações da série
-                imdb_info = get_imdb_info(item["title"], media_type="series")
-            
+            # Processar filmes
             if category == "filmes":
                 channel_id = f"FILME.{base_id_upper}"
-                if channel_id not in all_channels:
-                    all_channels[channel_id] = {
-                        'name': item["title"],
-                        'poster': item.get("poster", ""),
-                        'imdb': imdb_info,
-                        'category': category_name
-                    }
-            
-            elif category == "series":
-                if item.get("seasons"):
-                    for season in item.get("seasons", []):
-                        season_num = season.get("season", 1)
-                        channel_id = f"{base_id_upper}.T{season_num:02d}"
-                        if channel_id not in all_channels:
-                            season_name = f"{item['title']} - Temporada {season_num}"
-                            all_channels[channel_id] = {
-                                'name': season_name,
-                                'poster': item.get("poster", ""),
-                                'imdb': imdb_info,
-                                'category': category_name
-                            }
-    
-    # Adicionar canais ao EPG com informações do IMDb
-    for channel_id, channel_info in all_channels.items():
-        epg += f'  <channel id="{channel_id}">\n'
-        epg += f'    <display-name>{channel_info["name"]}</display-name>\n'
-        
-        if channel_info.get("poster"):
-            # Corrigir URL do poster
-            poster_url = channel_info["poster"]
-            if poster_url.startswith("/Pirataflix"):
-                poster_url = f"https://alberttartas.github.io{poster_url}"
-            elif not poster_url.startswith("http"):
-                poster_url = f"https://alberttartas.github.io/Pirataflix/{poster_url}"
-            epg += f'    <icon src="{poster_url}"/>\n'
-        
-        # Adicionar URL do IMDb se disponível
-        if channel_info.get("imdb") and channel_info["imdb"].get("id"):
-            imdb_id = channel_info["imdb"]["id"]
-            epg += f'    <url>https://www.imdb.com/title/{imdb_id}/</url>\n'
-        
-        epg += '  </channel>\n'
-    
-    # Agora adicionar programas com descrições enriquecidas
-    now = datetime.utcnow()
-    
-    for category in ["filmes", "series"]:
-        category_name = {
-            "filmes": "Filme",
-            "series": "Série"
-        }.get(category, "VOD")
-        
-        for item in data.get(category, []):
-            base_id = item.get("id", slugify(item["title"]))
-            base_id_upper = base_id.upper().replace('_', '')
-            
-            # Obter informações do IMDb para este item
-            imdb_info = None
-            for channel_id, channel_info in all_channels.items():
-                if channel_info["name"].startswith(item["title"]):
-                    imdb_info = channel_info.get("imdb")
-                    break
-            
-            if category == "filmes":
-                channel_id = f"FILME.{base_id_upper}"
+                epg += f'  <channel id="{channel_id}">\n'
+                epg += f'    <display-name>{item["title"]}</display-name>\n'
                 
-                for ep in item.get("episodes", []):
-                    # Criar descrição enriquecida
-                    desc = f"🎬 {item['title']}"
-                    
-                    if imdb_info:
-                        if imdb_info.get("plot"):
-                            desc += f"\n\n📖 Sinopse: {imdb_info['plot']}"
-                        if imdb_info.get("rating"):
-                            desc += f"\n\n⭐ Classificação IMDb: {imdb_info['rating']}/10"
-                        if imdb_info.get("year"):
-                            desc += f"\n\n📅 Ano: {imdb_info['year']}"
-                        if imdb_info.get("genres"):
-                            desc += f"\n\n🎭 Gêneros: {', '.join(imdb_info['genres'][:3])}"
-                    
-                    start = now.strftime("%Y%m%d%H%M%S +0000")
-                    end = (now + timedelta(hours=2)).strftime("%Y%m%d%H%M%S +0000")
-                    
-                    epg += f'  <programme channel="{channel_id}" start="{start}" stop="{end}">\n'
-                    epg += f'    <title>{item["title"]}</title>\n'
-                    epg += f'    <desc>{desc}</desc>\n'
-                    epg += f'    <category>{category_name}</category>\n'
-                    
-                    if imdb_info and imdb_info.get("id"):
-                        epg += f'    <imdb>{imdb_info["id"]}</imdb>\n'
-                    
-                    epg += '  </programme>\n'
-                    now += timedelta(minutes=30)
+                # Adicionar poster se existir
+                if item.get("poster"):
+                    poster_url = item["poster"]
+                    if poster_url.startswith("/"):
+                        poster_url = f"{BASE_URL}{poster_url}"
+                    elif not poster_url.startswith("http"):
+                        poster_url = f"{BASE_URL}/{poster_url}"
+                    epg += f'    <icon src="{poster_url}"/>\n'
+                
+                epg += f'    <url>https://pirataflix-seven.vercel.app/</url>\n'
+                epg += '  </channel>\n'
             
-            elif category == "series":
+            # Processar séries/novelas/animes/infantil
+            elif category in ["series", "novelas", "animes", "infantil"]:
                 if item.get("seasons"):
-                    for season in item.get("seasons", []):
+                    for season in item["seasons"]:
                         season_num = season.get("season", 1)
                         channel_id = f"{base_id_upper}.T{season_num:02d}"
                         
-                        for ep in season.get("episodes", []):
-                            episode_num = ep.get("episode", 0)
+                        epg += f'  <channel id="{channel_id}">\n'
+                        epg += f'    <display-name>{item["title"]} - Temporada {season_num}</display-name>\n'
+                        
+                        if item.get("poster"):
+                            poster_url = item["poster"]
+                            if poster_url.startswith("/"):
+                                poster_url = f"{BASE_URL}{poster_url}"
+                            elif not poster_url.startswith("http"):
+                                poster_url = f"{BASE_URL}/{poster_url}"
+                            epg += f'    <icon src="{poster_url}"/>\n'
+                        
+                        epg += f'    <url>https://pirataflix-seven.vercel.app/</url>\n'
+                        epg += '  </channel>\n'
+    
+    # Adicionar programas (próximas 24 horas)
+    now = datetime.utcnow()
+    
+    for hour in range(24):
+        current_time = now + timedelta(hours=hour)
+        time_str = current_time.strftime("%Y%m%d%H%M%S +0000")
+        
+        for category, cat_name in category_map.items():
+            items = data.get(category, [])
+            for item in items:
+                base_id = item.get("id", slugify(item["title"]))
+                base_id_upper = base_id.upper().replace('_', '')
+                
+                # Programas para filmes
+                if category == "filmes":
+                    channel_id = f"FILME.{base_id_upper}"
+                    for ep in item.get("episodes", [])[:1]:  # Primeiro episódio apenas
+                        start = time_str
+                        end = (current_time + timedelta(hours=2)).strftime("%Y%m%d%H%M%S +0000")
+                        
+                        epg += f'  <programme channel="{channel_id}" start="{start}" stop="{end}">\n'
+                        epg += f'    <title>{item["title"]}</title>\n'
+                        epg += f'    <desc>🎬 {item["title"]}</desc>\n'
+                        epg += f'    <category>{cat_name}</category>\n'
+                        epg += '  </programme>\n'
+                
+                # Programas para séries
+                elif category in ["series", "novelas", "animes", "infantil"]:
+                    if item.get("seasons"):
+                        for season in item["seasons"]:
+                            season_num = season.get("season", 1)
+                            channel_id = f"{base_id_upper}.T{season_num:02d}"
                             
-                            # Criar descrição enriquecida
-                            desc = f"📺 {item['title']} - Temporada {season_num}, Episódio {episode_num}"
-                            
-                            if imdb_info:
-                                if imdb_info.get("plot"):
-                                    desc += f"\n\n📖 Sinopse: {imdb_info['plot']}"
-                                if imdb_info.get("rating"):
-                                    desc += f"\n\n⭐ Classificação IMDb: {imdb_info['rating']}/10"
-                                if imdb_info.get("year"):
-                                    desc += f"\n\n📅 Ano: {imdb_info['year']}"
-                            
-                            start = now.strftime("%Y%m%d%H%M%S +0000")
-                            end = (now + timedelta(hours=2)).strftime("%Y%m%d%H%M%S +0000")
-                            
-                            epg += f'  <programme channel="{channel_id}" start="{start}" stop="{end}">\n'
-                            epg += f'    <title>Episódio {episode_num}: {ep.get("title", "")}</title>\n'
-                            epg += f'    <desc>{desc}</desc>\n'
-                            epg += f'    <category>{category_name}</category>\n'
-                            epg += f'    <episode-num system="onscreen">S{season_num:02d}E{episode_num:02d}</episode-num>\n'
-                            
-                            if imdb_info and imdb_info.get("id"):
-                                epg += f'    <imdb>{imdb_info["id"]}</imdb>\n'
-                            
-                            epg += '  </programme>\n'
-                            now += timedelta(minutes=30)
+                            for ep in season.get("episodes", [])[:1]:  # Primeiro episódio de cada temporada
+                                episode_num = ep.get("episode", 1)
+                                start = time_str
+                                end = (current_time + timedelta(hours=1)).strftime("%Y%m%d%H%M%S +0000")
+                                
+                                epg += f'  <programme channel="{channel_id}" start="{start}" stop="{end}">\n'
+                                epg += f'    <title>{item["title"]} - Episódio {episode_num}</title>\n'
+                                epg += f'    <desc>{cat_name} - {item["title"]} Temporada {season_num}</desc>\n'
+                                epg += f'    <category>{cat_name}</category>\n'
+                                epg += f'    <episode-num system="onscreen">S{season_num:02d}E{episode_num:02d}</episode-num>\n'
+                                epg += '  </programme>\n'
     
     epg += "</tv>"
     
+    # Garantir que o diretório existe
+    os.makedirs(output_dir, exist_ok=True)
+    
+    # Salvar arquivo
     with open(EPG_FILE, "w", encoding="utf-8") as f:
         f.write(epg)
     
-    print(f"✅ EPG com IMDb gerado: {EPG_FILE}")
+    print(f"✅ EPG gerado: {EPG_FILE}")
     return EPG_FILE
-    
+
+
 # =========================
-# FUNÇÃO PRINCIPAL
+# FUNÇÃO PRINCIPAL ATUALIZADA
 # =========================
 
 def build_vod_with_direct_capas():
@@ -812,16 +714,17 @@ def build_vod_with_direct_capas():
     # Gerar M3U com agrupamento
     generate_m3u_with_grouping(output, output_dir)
     
-    # Gerar EPG
+    # Gerar EPG (AGORA USANDO A FUNÇÃO CORRETA)
     generate_epg(output, output_dir)
     
     print(f"\n🌐 Interface web atualizada")
     print(f"📍 Acesse: http://localhost:8000/web/")
-
-
-
+    
+    
 def generate_html_with_correct_paths(base_dir, data):
     """Gera HTML estilo Netflix"""
+    # Seu código existente da função generate_html_with_correct_paths aqui
+    # (mantenha exatamente como você já tem)
     html_template = '''<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -1455,19 +1358,9 @@ def generate_html_with_correct_paths(base_dir, data):
     
     print(f"✅ HTML gerado em: {html_path}")
     
+
 if __name__ == "__main__":
-
     build_vod_with_direct_capas()
-
-
-
-
-
-
-
-
-
-
 
 
 
