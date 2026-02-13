@@ -1,1595 +1,1022 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tv generator-info-name="Pirataflix">
+<tv generator-info-name="Pirataflix VOD">
   <channel id="FILME.2COELHOS">
     <display-name>2 Coelhos</display-name>
-    <icon src="https://alberttartas.github.io/Pirataflix/assets/Capas/2_coelhos.jpg"/>
+    <icon src="https://alberttartas.github.io/Pirataflix/Pirataflix/assets/Capas/2_coelhos.jpg"/>
+    <url>https://pirataflix-seven.vercel.app/</url>
   </channel>
   <channel id="BRIDGERTON.T01">
     <display-name>Bridgerton - Temporada 1</display-name>
-    <icon src="https://alberttartas.github.io/Pirataflix/assets/Capas/bridgerton.jpg"/>
+    <icon src="https://alberttartas.github.io/Pirataflix/Pirataflix/assets/Capas/bridgerton.jpg"/>
+    <url>https://pirataflix-seven.vercel.app/</url>
   </channel>
   <channel id="BRIDGERTON.T02">
     <display-name>Bridgerton - Temporada 2</display-name>
-    <icon src="https://alberttartas.github.io/Pirataflix/assets/Capas/bridgerton.jpg"/>
+    <icon src="https://alberttartas.github.io/Pirataflix/Pirataflix/assets/Capas/bridgerton.jpg"/>
+    <url>https://pirataflix-seven.vercel.app/</url>
   </channel>
   <channel id="BRIDGERTON.T03">
     <display-name>Bridgerton - Temporada 3</display-name>
-    <icon src="https://alberttartas.github.io/Pirataflix/assets/Capas/bridgerton.jpg"/>
+    <icon src="https://alberttartas.github.io/Pirataflix/Pirataflix/assets/Capas/bridgerton.jpg"/>
+    <url>https://pirataflix-seven.vercel.app/</url>
   </channel>
   <channel id="OSDONOSDOJOGO.T01">
     <display-name>Os Donos Do Jogo - Temporada 1</display-name>
-    <icon src="https://alberttartas.github.io/Pirataflix/assets/Capas/os_donos_do_jogo.jpg"/>
-  </channel>
-  <channel id="MARIADOBAIRRO.T01">
-    <display-name>Maria Do Bairro - Temporada 1</display-name>
-    <icon src="https://alberttartas.github.io/Pirataflix/assets/Capas/maria_do_bairro.jpg"/>
+    <icon src="https://alberttartas.github.io/Pirataflix/Pirataflix/assets/Capas/os_donos_do_jogo.jpg"/>
+    <url>https://pirataflix-seven.vercel.app/</url>
   </channel>
   <channel id="TRESGRACAS.T01">
     <display-name>Três Graças - Temporada 1</display-name>
-    <icon src="https://alberttartas.github.io/Pirataflix/assets/Capas/tres_gracas.jpg"/>
+    <icon src="https://alberttartas.github.io/Pirataflix/Pirataflix/assets/Capas/tres_gracas.jpg"/>
+    <url>https://pirataflix-seven.vercel.app/</url>
   </channel>
-  <programme channel="FILME.2COELHOS" start="20260205224834 +0000" stop="20260206004834 +0000">
+  <channel id="MARIADOBAIRRO.T01">
+    <display-name>Maria Do Bairro - Temporada 1</display-name>
+    <icon src="https://alberttartas.github.io/Pirataflix/Pirataflix/assets/Capas/maria_do_bairro.jpg"/>
+    <url>https://pirataflix-seven.vercel.app/</url>
+  </channel>
+  <programme channel="FILME.2COELHOS" start="20260213221219 +0000" stop="20260214001219 +0000">
     <title>2 Coelhos</title>
-    <desc>Filme: 2 Coelhos</desc>
-    <category>Filme</category>
+    <desc>🎬 2 Coelhos</desc>
+    <category>🎬 Filmes</category>
   </programme>
-  <programme channel="BRIDGERTON.T01" start="20260205231834 +0000" stop="20260206011834 +0000">
-    <title>S01E01: Bridgerton - Temporada 1 Episódio 1</title>
-    <desc>Série: Bridgerton - Temporada 1 - Episódio 1</desc>
-    <category>Série</category>
+  <programme channel="BRIDGERTON.T01" start="20260213221219 +0000" stop="20260213231219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 1</desc>
+    <category>📺 Séries</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="BRIDGERTON.T01" start="20260205234834 +0000" stop="20260206014834 +0000">
-    <title>S01E02: Bridgerton - Temporada 1 Episódio 2</title>
-    <desc>Série: Bridgerton - Temporada 1 - Episódio 2</desc>
-    <category>Série</category>
-    <episode-num system="onscreen">S01E02</episode-num>
-  </programme>
-  <programme channel="BRIDGERTON.T01" start="20260206001834 +0000" stop="20260206021834 +0000">
-    <title>S01E03: Bridgerton - Temporada 1 Episódio 3</title>
-    <desc>Série: Bridgerton - Temporada 1 - Episódio 3</desc>
-    <category>Série</category>
-    <episode-num system="onscreen">S01E03</episode-num>
-  </programme>
-  <programme channel="BRIDGERTON.T01" start="20260206004834 +0000" stop="20260206024834 +0000">
-    <title>S01E04: Bridgerton - Temporada 1 Episódio 4</title>
-    <desc>Série: Bridgerton - Temporada 1 - Episódio 4</desc>
-    <category>Série</category>
-    <episode-num system="onscreen">S01E04</episode-num>
-  </programme>
-  <programme channel="BRIDGERTON.T01" start="20260206011834 +0000" stop="20260206031834 +0000">
-    <title>S01E05: Bridgerton - Temporada 1 Episódio 5</title>
-    <desc>Série: Bridgerton - Temporada 1 - Episódio 5</desc>
-    <category>Série</category>
-    <episode-num system="onscreen">S01E05</episode-num>
-  </programme>
-  <programme channel="BRIDGERTON.T01" start="20260206014834 +0000" stop="20260206034834 +0000">
-    <title>S01E06: Bridgerton - Temporada 1 Episódio 6</title>
-    <desc>Série: Bridgerton - Temporada 1 - Episódio 6</desc>
-    <category>Série</category>
-    <episode-num system="onscreen">S01E06</episode-num>
-  </programme>
-  <programme channel="BRIDGERTON.T01" start="20260206021834 +0000" stop="20260206041834 +0000">
-    <title>S01E07: Bridgerton - Temporada 1 Episódio 7</title>
-    <desc>Série: Bridgerton - Temporada 1 - Episódio 7</desc>
-    <category>Série</category>
-    <episode-num system="onscreen">S01E07</episode-num>
-  </programme>
-  <programme channel="BRIDGERTON.T01" start="20260206024834 +0000" stop="20260206044834 +0000">
-    <title>S01E08: Bridgerton - Temporada 1 Episódio 8</title>
-    <desc>Série: Bridgerton - Temporada 1 - Episódio 8</desc>
-    <category>Série</category>
-    <episode-num system="onscreen">S01E08</episode-num>
-  </programme>
-  <programme channel="BRIDGERTON.T02" start="20260206031834 +0000" stop="20260206051834 +0000">
-    <title>S02E01: Bridgerton - Temporada 2 Episódio 1</title>
-    <desc>Série: Bridgerton - Temporada 2 - Episódio 1</desc>
-    <category>Série</category>
+  <programme channel="BRIDGERTON.T02" start="20260213221219 +0000" stop="20260213231219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 2</desc>
+    <category>📺 Séries</category>
     <episode-num system="onscreen">S02E01</episode-num>
   </programme>
-  <programme channel="BRIDGERTON.T02" start="20260206034834 +0000" stop="20260206054834 +0000">
-    <title>S02E02: Bridgerton - Temporada 2 Episódio 2</title>
-    <desc>Série: Bridgerton - Temporada 2 - Episódio 2</desc>
-    <category>Série</category>
-    <episode-num system="onscreen">S02E02</episode-num>
-  </programme>
-  <programme channel="BRIDGERTON.T02" start="20260206041834 +0000" stop="20260206061834 +0000">
-    <title>S02E03: Bridgerton - Temporada 2 Episódio 3</title>
-    <desc>Série: Bridgerton - Temporada 2 - Episódio 3</desc>
-    <category>Série</category>
-    <episode-num system="onscreen">S02E03</episode-num>
-  </programme>
-  <programme channel="BRIDGERTON.T02" start="20260206044834 +0000" stop="20260206064834 +0000">
-    <title>S02E04: Bridgerton - Temporada 2 Episódio 4</title>
-    <desc>Série: Bridgerton - Temporada 2 - Episódio 4</desc>
-    <category>Série</category>
-    <episode-num system="onscreen">S02E04</episode-num>
-  </programme>
-  <programme channel="BRIDGERTON.T02" start="20260206051834 +0000" stop="20260206071834 +0000">
-    <title>S02E05: Bridgerton - Temporada 2 Episódio 5</title>
-    <desc>Série: Bridgerton - Temporada 2 - Episódio 5</desc>
-    <category>Série</category>
-    <episode-num system="onscreen">S02E05</episode-num>
-  </programme>
-  <programme channel="BRIDGERTON.T02" start="20260206054834 +0000" stop="20260206074834 +0000">
-    <title>S02E06: Bridgerton - Temporada 2 Episódio 6</title>
-    <desc>Série: Bridgerton - Temporada 2 - Episódio 6</desc>
-    <category>Série</category>
-    <episode-num system="onscreen">S02E06</episode-num>
-  </programme>
-  <programme channel="BRIDGERTON.T02" start="20260206061834 +0000" stop="20260206081834 +0000">
-    <title>S02E07: Bridgerton - Temporada 2 Episódio 7</title>
-    <desc>Série: Bridgerton - Temporada 2 - Episódio 7</desc>
-    <category>Série</category>
-    <episode-num system="onscreen">S02E07</episode-num>
-  </programme>
-  <programme channel="BRIDGERTON.T02" start="20260206064834 +0000" stop="20260206084834 +0000">
-    <title>S02E08: Bridgerton - Temporada 2 Episódio 8</title>
-    <desc>Série: Bridgerton - Temporada 2 - Episódio 8</desc>
-    <category>Série</category>
-    <episode-num system="onscreen">S02E08</episode-num>
-  </programme>
-  <programme channel="BRIDGERTON.T03" start="20260206071834 +0000" stop="20260206091834 +0000">
-    <title>S03E01: Bridgerton - Temporada 3 Episódio 1</title>
-    <desc>Série: Bridgerton - Temporada 3 - Episódio 1</desc>
-    <category>Série</category>
+  <programme channel="BRIDGERTON.T03" start="20260213221219 +0000" stop="20260213231219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 3</desc>
+    <category>📺 Séries</category>
     <episode-num system="onscreen">S03E01</episode-num>
   </programme>
-  <programme channel="BRIDGERTON.T03" start="20260206074834 +0000" stop="20260206094834 +0000">
-    <title>S03E02: Bridgerton - Temporada 3 Episódio 2</title>
-    <desc>Série: Bridgerton - Temporada 3 - Episódio 2</desc>
-    <category>Série</category>
-    <episode-num system="onscreen">S03E02</episode-num>
-  </programme>
-  <programme channel="BRIDGERTON.T03" start="20260206081834 +0000" stop="20260206101834 +0000">
-    <title>S03E03: Bridgerton - Temporada 3 Episódio 3</title>
-    <desc>Série: Bridgerton - Temporada 3 - Episódio 3</desc>
-    <category>Série</category>
-    <episode-num system="onscreen">S03E03</episode-num>
-  </programme>
-  <programme channel="BRIDGERTON.T03" start="20260206084834 +0000" stop="20260206104834 +0000">
-    <title>S03E04: Bridgerton - Temporada 3 Episódio 4</title>
-    <desc>Série: Bridgerton - Temporada 3 - Episódio 4</desc>
-    <category>Série</category>
-    <episode-num system="onscreen">S03E04</episode-num>
-  </programme>
-  <programme channel="BRIDGERTON.T03" start="20260206091834 +0000" stop="20260206111834 +0000">
-    <title>S03E05: Bridgerton - Temporada 3 Episódio 5</title>
-    <desc>Série: Bridgerton - Temporada 3 - Episódio 5</desc>
-    <category>Série</category>
-    <episode-num system="onscreen">S03E05</episode-num>
-  </programme>
-  <programme channel="BRIDGERTON.T03" start="20260206094834 +0000" stop="20260206114834 +0000">
-    <title>S03E06: Bridgerton - Temporada 3 Episódio 6</title>
-    <desc>Série: Bridgerton - Temporada 3 - Episódio 6</desc>
-    <category>Série</category>
-    <episode-num system="onscreen">S03E06</episode-num>
-  </programme>
-  <programme channel="BRIDGERTON.T03" start="20260206101834 +0000" stop="20260206121834 +0000">
-    <title>S03E07: Bridgerton - Temporada 3 Episódio 7</title>
-    <desc>Série: Bridgerton - Temporada 3 - Episódio 7</desc>
-    <category>Série</category>
-    <episode-num system="onscreen">S03E07</episode-num>
-  </programme>
-  <programme channel="BRIDGERTON.T03" start="20260206104834 +0000" stop="20260206124834 +0000">
-    <title>S03E08: Bridgerton - Temporada 3 Episódio 8</title>
-    <desc>Série: Bridgerton - Temporada 3 - Episódio 8</desc>
-    <category>Série</category>
-    <episode-num system="onscreen">S03E08</episode-num>
-  </programme>
-  <programme channel="OSDONOSDOJOGO.T01" start="20260206111834 +0000" stop="20260206131834 +0000">
-    <title>Capítulo 01: Os Donos do Jogo - Episódio 1</title>
-    <desc>Novela: Os Donos Do Jogo - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="OSDONOSDOJOGO.T01" start="20260206114834 +0000" stop="20260206134834 +0000">
-    <title>Capítulo 02: Os Donos do Jogo - Episódio 2</title>
-    <desc>Novela: Os Donos Do Jogo - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="OSDONOSDOJOGO.T01" start="20260206121834 +0000" stop="20260206141834 +0000">
-    <title>Capítulo 03: Os Donos do Jogo - Episódio 3</title>
-    <desc>Novela: Os Donos Do Jogo - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="OSDONOSDOJOGO.T01" start="20260206124834 +0000" stop="20260206144834 +0000">
-    <title>Capítulo 04: Os Donos do Jogo - Episódio 4</title>
-    <desc>Novela: Os Donos Do Jogo - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="OSDONOSDOJOGO.T01" start="20260206131834 +0000" stop="20260206151834 +0000">
-    <title>Capítulo 05: Os Donos do Jogo - Episódio 5</title>
-    <desc>Novela: Os Donos Do Jogo - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="OSDONOSDOJOGO.T01" start="20260206134834 +0000" stop="20260206154834 +0000">
-    <title>Capítulo 06: Os Donos do Jogo - Episódio 6</title>
-    <desc>Novela: Os Donos Do Jogo - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="OSDONOSDOJOGO.T01" start="20260206141834 +0000" stop="20260206161834 +0000">
-    <title>Capítulo 07: Os Donos do Jogo - Episódio 7</title>
-    <desc>Novela: Os Donos Do Jogo - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="OSDONOSDOJOGO.T01" start="20260206144834 +0000" stop="20260206164834 +0000">
-    <title>Capítulo 08: Os Donos do Jogo - Episódio 8</title>
-    <desc>Novela: Os Donos Do Jogo - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260206151834 +0000" stop="20260206171834 +0000">
-    <title>Capítulo 01: MDB 001</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260206154834 +0000" stop="20260206174834 +0000">
-    <title>Capítulo 02: MDB 002</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260206161834 +0000" stop="20260206181834 +0000">
-    <title>Capítulo 03: MDB 003</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260206164834 +0000" stop="20260206184834 +0000">
-    <title>Capítulo 04: MDB 004</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260206171834 +0000" stop="20260206191834 +0000">
-    <title>Capítulo 05: MDB 005</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260206174834 +0000" stop="20260206194834 +0000">
-    <title>Capítulo 06: MDB 006</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260206181834 +0000" stop="20260206201834 +0000">
-    <title>Capítulo 07: MDB 007</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260206184834 +0000" stop="20260206204834 +0000">
-    <title>Capítulo 08: MDB 008</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260206191834 +0000" stop="20260206211834 +0000">
-    <title>Capítulo 09: MDB 009</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260206194834 +0000" stop="20260206214834 +0000">
-    <title>Capítulo 10: MDB 010</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260206201834 +0000" stop="20260206221834 +0000">
-    <title>Capítulo 11: MDB 011</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260206204834 +0000" stop="20260206224834 +0000">
-    <title>Capítulo 12: MDB 012</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260206211834 +0000" stop="20260206231834 +0000">
-    <title>Capítulo 13: MDB 013</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260206214834 +0000" stop="20260206234834 +0000">
-    <title>Capítulo 14: MDB 014</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260206221834 +0000" stop="20260207001834 +0000">
-    <title>Capítulo 15: MDB 015</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260206224834 +0000" stop="20260207004834 +0000">
-    <title>Capítulo 16: MDB 016</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260206231834 +0000" stop="20260207011834 +0000">
-    <title>Capítulo 17: MDB 017</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260206234834 +0000" stop="20260207014834 +0000">
-    <title>Capítulo 18: MDB 018</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260207001834 +0000" stop="20260207021834 +0000">
-    <title>Capítulo 19: MDB 019</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260207004834 +0000" stop="20260207024834 +0000">
-    <title>Capítulo 20: MDB 020</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260207011834 +0000" stop="20260207031834 +0000">
-    <title>Capítulo 21: MDB 021</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260207014834 +0000" stop="20260207034834 +0000">
-    <title>Capítulo 22: MDB 022</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260207021834 +0000" stop="20260207041834 +0000">
-    <title>Capítulo 23: MDB 023</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260207024834 +0000" stop="20260207044834 +0000">
-    <title>Capítulo 24: MDB 024</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260207031834 +0000" stop="20260207051834 +0000">
-    <title>Capítulo 25: MDB 025</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260207034834 +0000" stop="20260207054834 +0000">
-    <title>Capítulo 26: MDB 026</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260207041834 +0000" stop="20260207061834 +0000">
-    <title>Capítulo 27: MDB 027</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260207044834 +0000" stop="20260207064834 +0000">
-    <title>Capítulo 28: MDB 028</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260207051834 +0000" stop="20260207071834 +0000">
-    <title>Capítulo 29: MDB 029</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260207054834 +0000" stop="20260207074834 +0000">
-    <title>Capítulo 30: MDB 030</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260207061834 +0000" stop="20260207081834 +0000">
-    <title>Capítulo 31: MDB 031</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260207064834 +0000" stop="20260207084834 +0000">
-    <title>Capítulo 32: MDB 032</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260207071834 +0000" stop="20260207091834 +0000">
-    <title>Capítulo 33: MDB 033</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260207074834 +0000" stop="20260207094834 +0000">
-    <title>Capítulo 34: MDB 034</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260207081834 +0000" stop="20260207101834 +0000">
-    <title>Capítulo 35: MDB 035</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260207084834 +0000" stop="20260207104834 +0000">
-    <title>Capítulo 36: MDB 036</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260207091834 +0000" stop="20260207111834 +0000">
-    <title>Capítulo 37: MDB 037</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260207094834 +0000" stop="20260207114834 +0000">
-    <title>Capítulo 38: MDB 038</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260207101834 +0000" stop="20260207121834 +0000">
-    <title>Capítulo 39: MDB 039</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260207104834 +0000" stop="20260207124834 +0000">
-    <title>Capítulo 40: MDB 040</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260207111834 +0000" stop="20260207131834 +0000">
-    <title>Capítulo 41: MDB 041</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260207114834 +0000" stop="20260207134834 +0000">
-    <title>Capítulo 42: MDB 042</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260207121834 +0000" stop="20260207141834 +0000">
-    <title>Capítulo 43: MDB 043</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260207124834 +0000" stop="20260207144834 +0000">
-    <title>Capítulo 44: MDB 044</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260207131834 +0000" stop="20260207151834 +0000">
-    <title>Capítulo 45: MDB 045</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260207134834 +0000" stop="20260207154834 +0000">
-    <title>Capítulo 46: MDB 046</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260207141834 +0000" stop="20260207161834 +0000">
-    <title>Capítulo 47: MDB 047</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260207144834 +0000" stop="20260207164834 +0000">
-    <title>Capítulo 48: MDB 048</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260207151834 +0000" stop="20260207171834 +0000">
-    <title>Capítulo 49: MDB 049</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260207154834 +0000" stop="20260207174834 +0000">
-    <title>Capítulo 50: MDB 050</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260207161834 +0000" stop="20260207181834 +0000">
-    <title>Capítulo 51: MDB 051</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260207164834 +0000" stop="20260207184834 +0000">
-    <title>Capítulo 52: MDB 052</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260207171834 +0000" stop="20260207191834 +0000">
-    <title>Capítulo 53: MDB 053</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260207174834 +0000" stop="20260207194834 +0000">
-    <title>Capítulo 54: MDB 054</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260207181834 +0000" stop="20260207201834 +0000">
-    <title>Capítulo 55: MDB 055</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260207184834 +0000" stop="20260207204834 +0000">
-    <title>Capítulo 56: MDB 056</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260207191834 +0000" stop="20260207211834 +0000">
-    <title>Capítulo 57: MDB 057</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260207194834 +0000" stop="20260207214834 +0000">
-    <title>Capítulo 58: MDB 058</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260207201834 +0000" stop="20260207221834 +0000">
-    <title>Capítulo 59: MDB 059</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260207204834 +0000" stop="20260207224834 +0000">
-    <title>Capítulo 60: MDB 060</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260207211834 +0000" stop="20260207231834 +0000">
-    <title>Capítulo 61: MDB 061</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260207214834 +0000" stop="20260207234834 +0000">
-    <title>Capítulo 62: MDB 062</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260207221834 +0000" stop="20260208001834 +0000">
-    <title>Capítulo 63: MDB 063</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260207224834 +0000" stop="20260208004834 +0000">
-    <title>Capítulo 64: MDB 064</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260207231834 +0000" stop="20260208011834 +0000">
-    <title>Capítulo 65: MDB 065</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260207234834 +0000" stop="20260208014834 +0000">
-    <title>Capítulo 66: MDB 066</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260208001834 +0000" stop="20260208021834 +0000">
-    <title>Capítulo 67: MDB 067</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260208004834 +0000" stop="20260208024834 +0000">
-    <title>Capítulo 68: MDB 068</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260208011834 +0000" stop="20260208031834 +0000">
-    <title>Capítulo 69: MDB 069</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260208014834 +0000" stop="20260208034834 +0000">
-    <title>Capítulo 70: MDB 070</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260208021834 +0000" stop="20260208041834 +0000">
-    <title>Capítulo 71: MDB 071</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260208024834 +0000" stop="20260208044834 +0000">
-    <title>Capítulo 72: MDB 072</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260208031834 +0000" stop="20260208051834 +0000">
-    <title>Capítulo 73: MDB 073</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260208034834 +0000" stop="20260208054834 +0000">
-    <title>Capítulo 74: MDB 074</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260208041834 +0000" stop="20260208061834 +0000">
-    <title>Capítulo 75: MDB 075</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260208044834 +0000" stop="20260208064834 +0000">
-    <title>Capítulo 76: MDB 076</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260208051834 +0000" stop="20260208071834 +0000">
-    <title>Capítulo 77: MDB 077</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260208054834 +0000" stop="20260208074834 +0000">
-    <title>Capítulo 78: MDB 078</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260208061834 +0000" stop="20260208081834 +0000">
-    <title>Capítulo 79: MDB 079</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260208064834 +0000" stop="20260208084834 +0000">
-    <title>Capítulo 80: MDB 080</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260208071834 +0000" stop="20260208091834 +0000">
-    <title>Capítulo 81: MDB 081</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260208074834 +0000" stop="20260208094834 +0000">
-    <title>Capítulo 82: MDB 082</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260208081834 +0000" stop="20260208101834 +0000">
-    <title>Capítulo 83: MDB 083</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260208084834 +0000" stop="20260208104834 +0000">
-    <title>Capítulo 84: MDB 084</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260208091834 +0000" stop="20260208111834 +0000">
-    <title>Capítulo 85: MDB 085</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260208094834 +0000" stop="20260208114834 +0000">
-    <title>Capítulo 86: MDB 086</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260208101834 +0000" stop="20260208121834 +0000">
-    <title>Capítulo 87: MDB 087</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260208104834 +0000" stop="20260208124834 +0000">
-    <title>Capítulo 88: MDB 088</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260208111834 +0000" stop="20260208131834 +0000">
-    <title>Capítulo 89: MDB 089</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260208114834 +0000" stop="20260208134834 +0000">
-    <title>Capítulo 90: MDB 090</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260208121834 +0000" stop="20260208141834 +0000">
-    <title>Capítulo 91: MDB 091</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260208124834 +0000" stop="20260208144834 +0000">
-    <title>Capítulo 92: MDB 092</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260208131834 +0000" stop="20260208151834 +0000">
-    <title>Capítulo 93: MDB 093</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260208134834 +0000" stop="20260208154834 +0000">
-    <title>Capítulo 94: MDB 094</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260208141834 +0000" stop="20260208161834 +0000">
-    <title>Capítulo 95: MDB 095</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260208144834 +0000" stop="20260208164834 +0000">
-    <title>Capítulo 96: MDB 096</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260208151834 +0000" stop="20260208171834 +0000">
-    <title>Capítulo 97: MDB 097</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260208154834 +0000" stop="20260208174834 +0000">
-    <title>Capítulo 98: MDB 098</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260208161834 +0000" stop="20260208181834 +0000">
-    <title>Capítulo 99: MDB 099</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260208164834 +0000" stop="20260208184834 +0000">
-    <title>Capítulo 100: MDB 100</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260208171834 +0000" stop="20260208191834 +0000">
-    <title>Capítulo 101: MDB 101</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260208174834 +0000" stop="20260208194834 +0000">
-    <title>Capítulo 102: MDB 102</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260208181834 +0000" stop="20260208201834 +0000">
-    <title>Capítulo 103: MDB 103</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260208184834 +0000" stop="20260208204834 +0000">
-    <title>Capítulo 104: MDB 104</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260208191834 +0000" stop="20260208211834 +0000">
-    <title>Capítulo 105: MDB 105</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260208194834 +0000" stop="20260208214834 +0000">
-    <title>Capítulo 106: MDB 106</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260208201834 +0000" stop="20260208221834 +0000">
-    <title>Capítulo 107: MDB 107</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260208204834 +0000" stop="20260208224834 +0000">
-    <title>Capítulo 108: MDB 108</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260208211834 +0000" stop="20260208231834 +0000">
-    <title>Capítulo 109: MDB 109</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260208214834 +0000" stop="20260208234834 +0000">
-    <title>Capítulo 110: MDB 110</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260208221834 +0000" stop="20260209001834 +0000">
-    <title>Capítulo 111: MDB 111</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260208224834 +0000" stop="20260209004834 +0000">
-    <title>Capítulo 112: MDB 112</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260208231834 +0000" stop="20260209011834 +0000">
-    <title>Capítulo 113: MDB 113</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260208234834 +0000" stop="20260209014834 +0000">
-    <title>Capítulo 114: MDB 114</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260209001834 +0000" stop="20260209021834 +0000">
-    <title>Capítulo 115: MDB 115</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260209004834 +0000" stop="20260209024834 +0000">
-    <title>Capítulo 116: MDB 116</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260209011834 +0000" stop="20260209031834 +0000">
-    <title>Capítulo 117: MDB 117</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260209014834 +0000" stop="20260209034834 +0000">
-    <title>Capítulo 118: MDB 118</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260209021834 +0000" stop="20260209041834 +0000">
-    <title>Capítulo 119: MDB 119</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260209024834 +0000" stop="20260209044834 +0000">
-    <title>Capítulo 120: MDB 120</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260209031834 +0000" stop="20260209051834 +0000">
-    <title>Capítulo 121: MDB 121</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260209034834 +0000" stop="20260209054834 +0000">
-    <title>Capítulo 122: MDB 122</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260209041834 +0000" stop="20260209061834 +0000">
-    <title>Capítulo 123: MDB 123</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260209044834 +0000" stop="20260209064834 +0000">
-    <title>Capítulo 124: MDB 124</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260209051834 +0000" stop="20260209071834 +0000">
-    <title>Capítulo 125: MDB 125</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260209054834 +0000" stop="20260209074834 +0000">
-    <title>Capítulo 126: MDB 126</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260209061834 +0000" stop="20260209081834 +0000">
-    <title>Capítulo 127: MDB 127</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260209064834 +0000" stop="20260209084834 +0000">
-    <title>Capítulo 128: MDB 128</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260209071834 +0000" stop="20260209091834 +0000">
-    <title>Capítulo 129: MDB 129</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260209074834 +0000" stop="20260209094834 +0000">
-    <title>Capítulo 130: MDB 130</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260209081834 +0000" stop="20260209101834 +0000">
-    <title>Capítulo 131: MDB 131</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260209084834 +0000" stop="20260209104834 +0000">
-    <title>Capítulo 132: MDB 132</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260209091834 +0000" stop="20260209111834 +0000">
-    <title>Capítulo 133: MDB 133</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260209094834 +0000" stop="20260209114834 +0000">
-    <title>Capítulo 134: MDB 134</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260209101834 +0000" stop="20260209121834 +0000">
-    <title>Capítulo 135: MDB 135</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260209104834 +0000" stop="20260209124834 +0000">
-    <title>Capítulo 136: MDB 136</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260209111834 +0000" stop="20260209131834 +0000">
-    <title>Capítulo 137: MDB 137</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260209114834 +0000" stop="20260209134834 +0000">
-    <title>Capítulo 138: MDB 138</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260209121834 +0000" stop="20260209141834 +0000">
-    <title>Capítulo 139: MDB 139</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260209124834 +0000" stop="20260209144834 +0000">
-    <title>Capítulo 140: MDB 140</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260209131834 +0000" stop="20260209151834 +0000">
-    <title>Capítulo 141: MDB 141</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260209134834 +0000" stop="20260209154834 +0000">
-    <title>Capítulo 142: MDB 142</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260209141834 +0000" stop="20260209161834 +0000">
-    <title>Capítulo 143: MDB 143</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260209144834 +0000" stop="20260209164834 +0000">
-    <title>Capítulo 144: MDB 144</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260209151834 +0000" stop="20260209171834 +0000">
-    <title>Capítulo 145: MDB 145</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260209154834 +0000" stop="20260209174834 +0000">
-    <title>Capítulo 146: MDB 146</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260209161834 +0000" stop="20260209181834 +0000">
-    <title>Capítulo 147: MDB 147</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260209164834 +0000" stop="20260209184834 +0000">
-    <title>Capítulo 148: MDB 148</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260209171834 +0000" stop="20260209191834 +0000">
-    <title>Capítulo 149: MDB 149</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260209174834 +0000" stop="20260209194834 +0000">
-    <title>Capítulo 150: MDB 150</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260209181834 +0000" stop="20260209201834 +0000">
-    <title>Capítulo 151: MDB 151</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260209184834 +0000" stop="20260209204834 +0000">
-    <title>Capítulo 152: MDB 152</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260209191834 +0000" stop="20260209211834 +0000">
-    <title>Capítulo 153: MDB 153</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260209194834 +0000" stop="20260209214834 +0000">
-    <title>Capítulo 154: MDB 154</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260209201834 +0000" stop="20260209221834 +0000">
-    <title>Capítulo 155: MDB 155</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260209204834 +0000" stop="20260209224834 +0000">
-    <title>Capítulo 156: MDB 156</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260209211834 +0000" stop="20260209231834 +0000">
-    <title>Capítulo 157: MDB 157</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260209214834 +0000" stop="20260209234834 +0000">
-    <title>Capítulo 158: MDB 158</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260209221834 +0000" stop="20260210001834 +0000">
-    <title>Capítulo 159: MDB 159</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260209224834 +0000" stop="20260210004834 +0000">
-    <title>Capítulo 160: MDB 160</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260209231834 +0000" stop="20260210011834 +0000">
-    <title>Capítulo 161: MDB 161</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260209234834 +0000" stop="20260210014834 +0000">
-    <title>Capítulo 162: MDB 162</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260210001834 +0000" stop="20260210021834 +0000">
-    <title>Capítulo 163: MDB 163</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260210004834 +0000" stop="20260210024834 +0000">
-    <title>Capítulo 164: MDB 164</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260210011834 +0000" stop="20260210031834 +0000">
-    <title>Capítulo 165: MDB 165</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260210014834 +0000" stop="20260210034834 +0000">
-    <title>Capítulo 166: MDB 166</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260210021834 +0000" stop="20260210041834 +0000">
-    <title>Capítulo 167: MDB 167</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260210024834 +0000" stop="20260210044834 +0000">
-    <title>Capítulo 168: MDB 168</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260210031834 +0000" stop="20260210051834 +0000">
-    <title>Capítulo 169: MDB 169</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260210034834 +0000" stop="20260210054834 +0000">
-    <title>Capítulo 170: MDB 170</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260210041834 +0000" stop="20260210061834 +0000">
-    <title>Capítulo 171: MDB 171</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260210044834 +0000" stop="20260210064834 +0000">
-    <title>Capítulo 172: MDB 172</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260210051834 +0000" stop="20260210071834 +0000">
-    <title>Capítulo 173: MDB 173</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260210054834 +0000" stop="20260210074834 +0000">
-    <title>Capítulo 174: MDB 174</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260210061834 +0000" stop="20260210081834 +0000">
-    <title>Capítulo 175: MDB 175</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260210064834 +0000" stop="20260210084834 +0000">
-    <title>Capítulo 176: MDB 176</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260210071834 +0000" stop="20260210091834 +0000">
-    <title>Capítulo 177: MDB 177</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260210074834 +0000" stop="20260210094834 +0000">
-    <title>Capítulo 178: MDB 178</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260210081834 +0000" stop="20260210101834 +0000">
-    <title>Capítulo 179: MDB 179</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260210084834 +0000" stop="20260210104834 +0000">
-    <title>Capítulo 180: MDB 180</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260210091834 +0000" stop="20260210111834 +0000">
-    <title>Capítulo 181: MDB 181</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260210094834 +0000" stop="20260210114834 +0000">
-    <title>Capítulo 182: MDB 182</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260210101834 +0000" stop="20260210121834 +0000">
-    <title>Capítulo 183: MDB 183</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260210104834 +0000" stop="20260210124834 +0000">
-    <title>Capítulo 184: MDB 184</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260210111834 +0000" stop="20260210131834 +0000">
-    <title>Capítulo 185: MDB 185</title>
-    <desc>Novela: Maria Do Bairro - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260210114834 +0000" stop="20260210134834 +0000">
-    <title>Capítulo 01: TGRACAS-001</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260210121834 +0000" stop="20260210141834 +0000">
-    <title>Capítulo 02: TGRACAS-002</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260210124834 +0000" stop="20260210144834 +0000">
-    <title>Capítulo 03: TGRACAS-003</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260210131834 +0000" stop="20260210151834 +0000">
-    <title>Capítulo 04: TGRACAS-004</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260210134834 +0000" stop="20260210154834 +0000">
-    <title>Capítulo 05: TGRACAS-005</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260210141834 +0000" stop="20260210161834 +0000">
-    <title>Capítulo 06: TGRACAS-006</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260210144834 +0000" stop="20260210164834 +0000">
-    <title>Capítulo 07: TGRACAS-007</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260210151834 +0000" stop="20260210171834 +0000">
-    <title>Capítulo 08: TGRACAS-008</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260210154834 +0000" stop="20260210174834 +0000">
-    <title>Capítulo 09: TGRACAS-009</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260210161834 +0000" stop="20260210181834 +0000">
-    <title>Capítulo 10: TGRACAS-010</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260210164834 +0000" stop="20260210184834 +0000">
-    <title>Capítulo 11: TGRACAS-011</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260210171834 +0000" stop="20260210191834 +0000">
-    <title>Capítulo 12: TGRACAS-012</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260210174834 +0000" stop="20260210194834 +0000">
-    <title>Capítulo 13: TGRACAS-013</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260210181834 +0000" stop="20260210201834 +0000">
-    <title>Capítulo 14: TGRACAS-014</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260210184834 +0000" stop="20260210204834 +0000">
-    <title>Capítulo 15: TGRACAS-015</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260210191834 +0000" stop="20260210211834 +0000">
-    <title>Capítulo 16: TGRACAS-016</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260210194834 +0000" stop="20260210214834 +0000">
-    <title>Capítulo 17: TGRACAS-017</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260210201834 +0000" stop="20260210221834 +0000">
-    <title>Capítulo 18: TGRACAS-018</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260210204834 +0000" stop="20260210224834 +0000">
-    <title>Capítulo 19: TGRACAS-019</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260210211834 +0000" stop="20260210231834 +0000">
-    <title>Capítulo 20: TGRACAS-020</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260210214834 +0000" stop="20260210234834 +0000">
-    <title>Capítulo 21: TGRACAS-021</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260210221834 +0000" stop="20260211001834 +0000">
-    <title>Capítulo 22: TGRACAS-022</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260210224834 +0000" stop="20260211004834 +0000">
-    <title>Capítulo 23: TGRACAS-023</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260210231834 +0000" stop="20260211011834 +0000">
-    <title>Capítulo 24: TGRACAS-024</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260210234834 +0000" stop="20260211014834 +0000">
-    <title>Capítulo 25: TGRACAS-025</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260211001834 +0000" stop="20260211021834 +0000">
-    <title>Capítulo 26: TGRACAS-026</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260211004834 +0000" stop="20260211024834 +0000">
-    <title>Capítulo 27: TGRACAS-027</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260211011834 +0000" stop="20260211031834 +0000">
-    <title>Capítulo 28: TGRACAS-028</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260211014834 +0000" stop="20260211034834 +0000">
-    <title>Capítulo 29: TGRACAS-029</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260211021834 +0000" stop="20260211041834 +0000">
-    <title>Capítulo 30: TGRACAS-030</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260211024834 +0000" stop="20260211044834 +0000">
-    <title>Capítulo 31: TGRACAS-031</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260211031834 +0000" stop="20260211051834 +0000">
-    <title>Capítulo 32: TGRACAS-032</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260211034834 +0000" stop="20260211054834 +0000">
-    <title>Capítulo 33: TGRACAS-033</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260211041834 +0000" stop="20260211061834 +0000">
-    <title>Capítulo 34: TGRACAS-034</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260211044834 +0000" stop="20260211064834 +0000">
-    <title>Capítulo 35: TGRACAS-035</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260211051834 +0000" stop="20260211071834 +0000">
-    <title>Capítulo 36: TGRACAS-036</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260211054834 +0000" stop="20260211074834 +0000">
-    <title>Capítulo 37: TGRACAS-037</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260211061834 +0000" stop="20260211081834 +0000">
-    <title>Capítulo 38: TGRACAS-038</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260211064834 +0000" stop="20260211084834 +0000">
-    <title>Capítulo 39: TGRACAS-039</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260211071834 +0000" stop="20260211091834 +0000">
-    <title>Capítulo 40: TGRACAS-040</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260211074834 +0000" stop="20260211094834 +0000">
-    <title>Capítulo 41: TGRACAS-041</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260211081834 +0000" stop="20260211101834 +0000">
-    <title>Capítulo 42: TGRACAS-042</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260211084834 +0000" stop="20260211104834 +0000">
-    <title>Capítulo 43: TGRACAS-043</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260211091834 +0000" stop="20260211111834 +0000">
-    <title>Capítulo 44: TGRACAS-044</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260211094834 +0000" stop="20260211114834 +0000">
-    <title>Capítulo 45: TGRACAS-045</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260211101834 +0000" stop="20260211121834 +0000">
-    <title>Capítulo 46: TGRACAS-046</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260211104834 +0000" stop="20260211124834 +0000">
-    <title>Capítulo 47: TGRACAS-047</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260211111834 +0000" stop="20260211131834 +0000">
-    <title>Capítulo 48: TGRACAS-048</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260211114834 +0000" stop="20260211134834 +0000">
-    <title>Capítulo 49: TGRACAS-049</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260211121834 +0000" stop="20260211141834 +0000">
-    <title>Capítulo 50: TGRACAS-050</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260211124834 +0000" stop="20260211144834 +0000">
-    <title>Capítulo 51: TGRACAS-051</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260211131834 +0000" stop="20260211151834 +0000">
-    <title>Capítulo 52: TGRACAS-052</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260211134834 +0000" stop="20260211154834 +0000">
-    <title>Capítulo 53: TGRACAS-053</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260211141834 +0000" stop="20260211161834 +0000">
-    <title>Capítulo 54: TGRACAS-054</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260211144834 +0000" stop="20260211164834 +0000">
-    <title>Capítulo 55: TGRACAS-055</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260211151834 +0000" stop="20260211171834 +0000">
-    <title>Capítulo 56: TGRACAS-056</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260211154834 +0000" stop="20260211174834 +0000">
-    <title>Capítulo 57: TGRACAS-057</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260211161834 +0000" stop="20260211181834 +0000">
-    <title>Capítulo 58: TGRACAS-058</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260211164834 +0000" stop="20260211184834 +0000">
-    <title>Capítulo 59: TGRACAS-059</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260211171834 +0000" stop="20260211191834 +0000">
-    <title>Capítulo 60: TGRACAS-060</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260211174834 +0000" stop="20260211194834 +0000">
-    <title>Capítulo 61: TGRACAS-061</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260211181834 +0000" stop="20260211201834 +0000">
-    <title>Capítulo 62: TGRACAS-062</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260211184834 +0000" stop="20260211204834 +0000">
-    <title>Capítulo 63: TGRACAS-063</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260211191834 +0000" stop="20260211211834 +0000">
-    <title>Capítulo 64: TGRACAS-064</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260211194834 +0000" stop="20260211214834 +0000">
-    <title>Capítulo 65: TGRACAS-065</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260211201834 +0000" stop="20260211221834 +0000">
-    <title>Capítulo 66: TGRACAS-066</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260211204834 +0000" stop="20260211224834 +0000">
-    <title>Capítulo 67: TGRACAS-067</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260211211834 +0000" stop="20260211231834 +0000">
-    <title>Capítulo 68: TGRACAS-068</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260211214834 +0000" stop="20260211234834 +0000">
-    <title>Capítulo 69: TGRACAS-069</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260211221834 +0000" stop="20260212001834 +0000">
-    <title>Capítulo 70: TGRACAS-070</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260211224834 +0000" stop="20260212004834 +0000">
-    <title>Capítulo 71: TGRACAS-071</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260211231834 +0000" stop="20260212011834 +0000">
-    <title>Capítulo 72: TGRACAS-072</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260211234834 +0000" stop="20260212014834 +0000">
-    <title>Capítulo 73: TGRACAS-073</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260212001834 +0000" stop="20260212021834 +0000">
-    <title>Capítulo 74: TGRACAS-074</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260212004834 +0000" stop="20260212024834 +0000">
-    <title>Capítulo 75: TGRACAS-075</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260212011834 +0000" stop="20260212031834 +0000">
-    <title>Capítulo 76: TGRACAS-076</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260212014834 +0000" stop="20260212034834 +0000">
-    <title>Capítulo 77: TGRACAS-077</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260212021834 +0000" stop="20260212041834 +0000">
-    <title>Capítulo 78: TGRACAS-078</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260212024834 +0000" stop="20260212044834 +0000">
-    <title>Capítulo 79: TGRACAS-079</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260212031834 +0000" stop="20260212051834 +0000">
-    <title>Capítulo 80: TGRACAS-080</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260212034834 +0000" stop="20260212054834 +0000">
-    <title>Capítulo 81: TGRACAS-081</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260212041834 +0000" stop="20260212061834 +0000">
-    <title>Capítulo 82: TGRACAS-082</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260212044834 +0000" stop="20260212064834 +0000">
-    <title>Capítulo 83: TGRACAS-083</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260212051834 +0000" stop="20260212071834 +0000">
-    <title>Capítulo 84: TGRACAS-084</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260212054834 +0000" stop="20260212074834 +0000">
-    <title>Capítulo 85: TGRACAS-085</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260212061834 +0000" stop="20260212081834 +0000">
-    <title>Capítulo 86: TGRACAS-086</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260212064834 +0000" stop="20260212084834 +0000">
-    <title>Capítulo 87: TGRACAS-087</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260212071834 +0000" stop="20260212091834 +0000">
-    <title>Capítulo 88: TGRACAS-088</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260212074834 +0000" stop="20260212094834 +0000">
-    <title>Capítulo 89: TGRACAS-089</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
-  </programme>
-  <programme channel="TRESGRACAS.T01" start="20260212081834 +0000" stop="20260212101834 +0000">
-    <title>Capítulo 90: TGRACAS-090</title>
-    <desc>Novela: Três Graças - Temporada 1</desc>
-    <category>Novela</category>
+  <programme channel="OSDONOSDOJOGO.T01" start="20260213221219 +0000" stop="20260213231219 +0000">
+    <title>Os Donos Do Jogo - Episódio 1</title>
+    <desc>💖 Novelas - Os Donos Do Jogo Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="TRESGRACAS.T01" start="20260213221219 +0000" stop="20260213231219 +0000">
+    <title>Três Graças - Episódio 1</title>
+    <desc>💖 Novelas - Três Graças Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="MARIADOBAIRRO.T01" start="20260213221219 +0000" stop="20260213231219 +0000">
+    <title>Maria Do Bairro - Episódio 1</title>
+    <desc>💖 Novelas - Maria Do Bairro Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="FILME.2COELHOS" start="20260213231219 +0000" stop="20260214011219 +0000">
+    <title>2 Coelhos</title>
+    <desc>🎬 2 Coelhos</desc>
+    <category>🎬 Filmes</category>
+  </programme>
+  <programme channel="BRIDGERTON.T01" start="20260213231219 +0000" stop="20260214001219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 1</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="BRIDGERTON.T02" start="20260213231219 +0000" stop="20260214001219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 2</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S02E01</episode-num>
+  </programme>
+  <programme channel="BRIDGERTON.T03" start="20260213231219 +0000" stop="20260214001219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 3</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S03E01</episode-num>
+  </programme>
+  <programme channel="OSDONOSDOJOGO.T01" start="20260213231219 +0000" stop="20260214001219 +0000">
+    <title>Os Donos Do Jogo - Episódio 1</title>
+    <desc>💖 Novelas - Os Donos Do Jogo Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="TRESGRACAS.T01" start="20260213231219 +0000" stop="20260214001219 +0000">
+    <title>Três Graças - Episódio 1</title>
+    <desc>💖 Novelas - Três Graças Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="MARIADOBAIRRO.T01" start="20260213231219 +0000" stop="20260214001219 +0000">
+    <title>Maria Do Bairro - Episódio 1</title>
+    <desc>💖 Novelas - Maria Do Bairro Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="FILME.2COELHOS" start="20260214001219 +0000" stop="20260214021219 +0000">
+    <title>2 Coelhos</title>
+    <desc>🎬 2 Coelhos</desc>
+    <category>🎬 Filmes</category>
+  </programme>
+  <programme channel="BRIDGERTON.T01" start="20260214001219 +0000" stop="20260214011219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 1</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="BRIDGERTON.T02" start="20260214001219 +0000" stop="20260214011219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 2</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S02E01</episode-num>
+  </programme>
+  <programme channel="BRIDGERTON.T03" start="20260214001219 +0000" stop="20260214011219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 3</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S03E01</episode-num>
+  </programme>
+  <programme channel="OSDONOSDOJOGO.T01" start="20260214001219 +0000" stop="20260214011219 +0000">
+    <title>Os Donos Do Jogo - Episódio 1</title>
+    <desc>💖 Novelas - Os Donos Do Jogo Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="TRESGRACAS.T01" start="20260214001219 +0000" stop="20260214011219 +0000">
+    <title>Três Graças - Episódio 1</title>
+    <desc>💖 Novelas - Três Graças Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="MARIADOBAIRRO.T01" start="20260214001219 +0000" stop="20260214011219 +0000">
+    <title>Maria Do Bairro - Episódio 1</title>
+    <desc>💖 Novelas - Maria Do Bairro Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="FILME.2COELHOS" start="20260214011219 +0000" stop="20260214031219 +0000">
+    <title>2 Coelhos</title>
+    <desc>🎬 2 Coelhos</desc>
+    <category>🎬 Filmes</category>
+  </programme>
+  <programme channel="BRIDGERTON.T01" start="20260214011219 +0000" stop="20260214021219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 1</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="BRIDGERTON.T02" start="20260214011219 +0000" stop="20260214021219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 2</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S02E01</episode-num>
+  </programme>
+  <programme channel="BRIDGERTON.T03" start="20260214011219 +0000" stop="20260214021219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 3</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S03E01</episode-num>
+  </programme>
+  <programme channel="OSDONOSDOJOGO.T01" start="20260214011219 +0000" stop="20260214021219 +0000">
+    <title>Os Donos Do Jogo - Episódio 1</title>
+    <desc>💖 Novelas - Os Donos Do Jogo Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="TRESGRACAS.T01" start="20260214011219 +0000" stop="20260214021219 +0000">
+    <title>Três Graças - Episódio 1</title>
+    <desc>💖 Novelas - Três Graças Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="MARIADOBAIRRO.T01" start="20260214011219 +0000" stop="20260214021219 +0000">
+    <title>Maria Do Bairro - Episódio 1</title>
+    <desc>💖 Novelas - Maria Do Bairro Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="FILME.2COELHOS" start="20260214021219 +0000" stop="20260214041219 +0000">
+    <title>2 Coelhos</title>
+    <desc>🎬 2 Coelhos</desc>
+    <category>🎬 Filmes</category>
+  </programme>
+  <programme channel="BRIDGERTON.T01" start="20260214021219 +0000" stop="20260214031219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 1</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="BRIDGERTON.T02" start="20260214021219 +0000" stop="20260214031219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 2</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S02E01</episode-num>
+  </programme>
+  <programme channel="BRIDGERTON.T03" start="20260214021219 +0000" stop="20260214031219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 3</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S03E01</episode-num>
+  </programme>
+  <programme channel="OSDONOSDOJOGO.T01" start="20260214021219 +0000" stop="20260214031219 +0000">
+    <title>Os Donos Do Jogo - Episódio 1</title>
+    <desc>💖 Novelas - Os Donos Do Jogo Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="TRESGRACAS.T01" start="20260214021219 +0000" stop="20260214031219 +0000">
+    <title>Três Graças - Episódio 1</title>
+    <desc>💖 Novelas - Três Graças Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="MARIADOBAIRRO.T01" start="20260214021219 +0000" stop="20260214031219 +0000">
+    <title>Maria Do Bairro - Episódio 1</title>
+    <desc>💖 Novelas - Maria Do Bairro Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="FILME.2COELHOS" start="20260214031219 +0000" stop="20260214051219 +0000">
+    <title>2 Coelhos</title>
+    <desc>🎬 2 Coelhos</desc>
+    <category>🎬 Filmes</category>
+  </programme>
+  <programme channel="BRIDGERTON.T01" start="20260214031219 +0000" stop="20260214041219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 1</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="BRIDGERTON.T02" start="20260214031219 +0000" stop="20260214041219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 2</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S02E01</episode-num>
+  </programme>
+  <programme channel="BRIDGERTON.T03" start="20260214031219 +0000" stop="20260214041219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 3</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S03E01</episode-num>
+  </programme>
+  <programme channel="OSDONOSDOJOGO.T01" start="20260214031219 +0000" stop="20260214041219 +0000">
+    <title>Os Donos Do Jogo - Episódio 1</title>
+    <desc>💖 Novelas - Os Donos Do Jogo Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="TRESGRACAS.T01" start="20260214031219 +0000" stop="20260214041219 +0000">
+    <title>Três Graças - Episódio 1</title>
+    <desc>💖 Novelas - Três Graças Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="MARIADOBAIRRO.T01" start="20260214031219 +0000" stop="20260214041219 +0000">
+    <title>Maria Do Bairro - Episódio 1</title>
+    <desc>💖 Novelas - Maria Do Bairro Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="FILME.2COELHOS" start="20260214041219 +0000" stop="20260214061219 +0000">
+    <title>2 Coelhos</title>
+    <desc>🎬 2 Coelhos</desc>
+    <category>🎬 Filmes</category>
+  </programme>
+  <programme channel="BRIDGERTON.T01" start="20260214041219 +0000" stop="20260214051219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 1</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="BRIDGERTON.T02" start="20260214041219 +0000" stop="20260214051219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 2</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S02E01</episode-num>
+  </programme>
+  <programme channel="BRIDGERTON.T03" start="20260214041219 +0000" stop="20260214051219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 3</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S03E01</episode-num>
+  </programme>
+  <programme channel="OSDONOSDOJOGO.T01" start="20260214041219 +0000" stop="20260214051219 +0000">
+    <title>Os Donos Do Jogo - Episódio 1</title>
+    <desc>💖 Novelas - Os Donos Do Jogo Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="TRESGRACAS.T01" start="20260214041219 +0000" stop="20260214051219 +0000">
+    <title>Três Graças - Episódio 1</title>
+    <desc>💖 Novelas - Três Graças Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="MARIADOBAIRRO.T01" start="20260214041219 +0000" stop="20260214051219 +0000">
+    <title>Maria Do Bairro - Episódio 1</title>
+    <desc>💖 Novelas - Maria Do Bairro Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="FILME.2COELHOS" start="20260214051219 +0000" stop="20260214071219 +0000">
+    <title>2 Coelhos</title>
+    <desc>🎬 2 Coelhos</desc>
+    <category>🎬 Filmes</category>
+  </programme>
+  <programme channel="BRIDGERTON.T01" start="20260214051219 +0000" stop="20260214061219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 1</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="BRIDGERTON.T02" start="20260214051219 +0000" stop="20260214061219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 2</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S02E01</episode-num>
+  </programme>
+  <programme channel="BRIDGERTON.T03" start="20260214051219 +0000" stop="20260214061219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 3</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S03E01</episode-num>
+  </programme>
+  <programme channel="OSDONOSDOJOGO.T01" start="20260214051219 +0000" stop="20260214061219 +0000">
+    <title>Os Donos Do Jogo - Episódio 1</title>
+    <desc>💖 Novelas - Os Donos Do Jogo Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="TRESGRACAS.T01" start="20260214051219 +0000" stop="20260214061219 +0000">
+    <title>Três Graças - Episódio 1</title>
+    <desc>💖 Novelas - Três Graças Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="MARIADOBAIRRO.T01" start="20260214051219 +0000" stop="20260214061219 +0000">
+    <title>Maria Do Bairro - Episódio 1</title>
+    <desc>💖 Novelas - Maria Do Bairro Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="FILME.2COELHOS" start="20260214061219 +0000" stop="20260214081219 +0000">
+    <title>2 Coelhos</title>
+    <desc>🎬 2 Coelhos</desc>
+    <category>🎬 Filmes</category>
+  </programme>
+  <programme channel="BRIDGERTON.T01" start="20260214061219 +0000" stop="20260214071219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 1</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="BRIDGERTON.T02" start="20260214061219 +0000" stop="20260214071219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 2</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S02E01</episode-num>
+  </programme>
+  <programme channel="BRIDGERTON.T03" start="20260214061219 +0000" stop="20260214071219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 3</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S03E01</episode-num>
+  </programme>
+  <programme channel="OSDONOSDOJOGO.T01" start="20260214061219 +0000" stop="20260214071219 +0000">
+    <title>Os Donos Do Jogo - Episódio 1</title>
+    <desc>💖 Novelas - Os Donos Do Jogo Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="TRESGRACAS.T01" start="20260214061219 +0000" stop="20260214071219 +0000">
+    <title>Três Graças - Episódio 1</title>
+    <desc>💖 Novelas - Três Graças Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="MARIADOBAIRRO.T01" start="20260214061219 +0000" stop="20260214071219 +0000">
+    <title>Maria Do Bairro - Episódio 1</title>
+    <desc>💖 Novelas - Maria Do Bairro Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="FILME.2COELHOS" start="20260214071219 +0000" stop="20260214091219 +0000">
+    <title>2 Coelhos</title>
+    <desc>🎬 2 Coelhos</desc>
+    <category>🎬 Filmes</category>
+  </programme>
+  <programme channel="BRIDGERTON.T01" start="20260214071219 +0000" stop="20260214081219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 1</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="BRIDGERTON.T02" start="20260214071219 +0000" stop="20260214081219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 2</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S02E01</episode-num>
+  </programme>
+  <programme channel="BRIDGERTON.T03" start="20260214071219 +0000" stop="20260214081219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 3</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S03E01</episode-num>
+  </programme>
+  <programme channel="OSDONOSDOJOGO.T01" start="20260214071219 +0000" stop="20260214081219 +0000">
+    <title>Os Donos Do Jogo - Episódio 1</title>
+    <desc>💖 Novelas - Os Donos Do Jogo Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="TRESGRACAS.T01" start="20260214071219 +0000" stop="20260214081219 +0000">
+    <title>Três Graças - Episódio 1</title>
+    <desc>💖 Novelas - Três Graças Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="MARIADOBAIRRO.T01" start="20260214071219 +0000" stop="20260214081219 +0000">
+    <title>Maria Do Bairro - Episódio 1</title>
+    <desc>💖 Novelas - Maria Do Bairro Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="FILME.2COELHOS" start="20260214081219 +0000" stop="20260214101219 +0000">
+    <title>2 Coelhos</title>
+    <desc>🎬 2 Coelhos</desc>
+    <category>🎬 Filmes</category>
+  </programme>
+  <programme channel="BRIDGERTON.T01" start="20260214081219 +0000" stop="20260214091219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 1</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="BRIDGERTON.T02" start="20260214081219 +0000" stop="20260214091219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 2</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S02E01</episode-num>
+  </programme>
+  <programme channel="BRIDGERTON.T03" start="20260214081219 +0000" stop="20260214091219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 3</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S03E01</episode-num>
+  </programme>
+  <programme channel="OSDONOSDOJOGO.T01" start="20260214081219 +0000" stop="20260214091219 +0000">
+    <title>Os Donos Do Jogo - Episódio 1</title>
+    <desc>💖 Novelas - Os Donos Do Jogo Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="TRESGRACAS.T01" start="20260214081219 +0000" stop="20260214091219 +0000">
+    <title>Três Graças - Episódio 1</title>
+    <desc>💖 Novelas - Três Graças Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="MARIADOBAIRRO.T01" start="20260214081219 +0000" stop="20260214091219 +0000">
+    <title>Maria Do Bairro - Episódio 1</title>
+    <desc>💖 Novelas - Maria Do Bairro Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="FILME.2COELHOS" start="20260214091219 +0000" stop="20260214111219 +0000">
+    <title>2 Coelhos</title>
+    <desc>🎬 2 Coelhos</desc>
+    <category>🎬 Filmes</category>
+  </programme>
+  <programme channel="BRIDGERTON.T01" start="20260214091219 +0000" stop="20260214101219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 1</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="BRIDGERTON.T02" start="20260214091219 +0000" stop="20260214101219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 2</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S02E01</episode-num>
+  </programme>
+  <programme channel="BRIDGERTON.T03" start="20260214091219 +0000" stop="20260214101219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 3</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S03E01</episode-num>
+  </programme>
+  <programme channel="OSDONOSDOJOGO.T01" start="20260214091219 +0000" stop="20260214101219 +0000">
+    <title>Os Donos Do Jogo - Episódio 1</title>
+    <desc>💖 Novelas - Os Donos Do Jogo Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="TRESGRACAS.T01" start="20260214091219 +0000" stop="20260214101219 +0000">
+    <title>Três Graças - Episódio 1</title>
+    <desc>💖 Novelas - Três Graças Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="MARIADOBAIRRO.T01" start="20260214091219 +0000" stop="20260214101219 +0000">
+    <title>Maria Do Bairro - Episódio 1</title>
+    <desc>💖 Novelas - Maria Do Bairro Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="FILME.2COELHOS" start="20260214101219 +0000" stop="20260214121219 +0000">
+    <title>2 Coelhos</title>
+    <desc>🎬 2 Coelhos</desc>
+    <category>🎬 Filmes</category>
+  </programme>
+  <programme channel="BRIDGERTON.T01" start="20260214101219 +0000" stop="20260214111219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 1</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="BRIDGERTON.T02" start="20260214101219 +0000" stop="20260214111219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 2</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S02E01</episode-num>
+  </programme>
+  <programme channel="BRIDGERTON.T03" start="20260214101219 +0000" stop="20260214111219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 3</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S03E01</episode-num>
+  </programme>
+  <programme channel="OSDONOSDOJOGO.T01" start="20260214101219 +0000" stop="20260214111219 +0000">
+    <title>Os Donos Do Jogo - Episódio 1</title>
+    <desc>💖 Novelas - Os Donos Do Jogo Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="TRESGRACAS.T01" start="20260214101219 +0000" stop="20260214111219 +0000">
+    <title>Três Graças - Episódio 1</title>
+    <desc>💖 Novelas - Três Graças Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="MARIADOBAIRRO.T01" start="20260214101219 +0000" stop="20260214111219 +0000">
+    <title>Maria Do Bairro - Episódio 1</title>
+    <desc>💖 Novelas - Maria Do Bairro Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="FILME.2COELHOS" start="20260214111219 +0000" stop="20260214131219 +0000">
+    <title>2 Coelhos</title>
+    <desc>🎬 2 Coelhos</desc>
+    <category>🎬 Filmes</category>
+  </programme>
+  <programme channel="BRIDGERTON.T01" start="20260214111219 +0000" stop="20260214121219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 1</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="BRIDGERTON.T02" start="20260214111219 +0000" stop="20260214121219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 2</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S02E01</episode-num>
+  </programme>
+  <programme channel="BRIDGERTON.T03" start="20260214111219 +0000" stop="20260214121219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 3</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S03E01</episode-num>
+  </programme>
+  <programme channel="OSDONOSDOJOGO.T01" start="20260214111219 +0000" stop="20260214121219 +0000">
+    <title>Os Donos Do Jogo - Episódio 1</title>
+    <desc>💖 Novelas - Os Donos Do Jogo Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="TRESGRACAS.T01" start="20260214111219 +0000" stop="20260214121219 +0000">
+    <title>Três Graças - Episódio 1</title>
+    <desc>💖 Novelas - Três Graças Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="MARIADOBAIRRO.T01" start="20260214111219 +0000" stop="20260214121219 +0000">
+    <title>Maria Do Bairro - Episódio 1</title>
+    <desc>💖 Novelas - Maria Do Bairro Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="FILME.2COELHOS" start="20260214121219 +0000" stop="20260214141219 +0000">
+    <title>2 Coelhos</title>
+    <desc>🎬 2 Coelhos</desc>
+    <category>🎬 Filmes</category>
+  </programme>
+  <programme channel="BRIDGERTON.T01" start="20260214121219 +0000" stop="20260214131219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 1</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="BRIDGERTON.T02" start="20260214121219 +0000" stop="20260214131219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 2</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S02E01</episode-num>
+  </programme>
+  <programme channel="BRIDGERTON.T03" start="20260214121219 +0000" stop="20260214131219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 3</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S03E01</episode-num>
+  </programme>
+  <programme channel="OSDONOSDOJOGO.T01" start="20260214121219 +0000" stop="20260214131219 +0000">
+    <title>Os Donos Do Jogo - Episódio 1</title>
+    <desc>💖 Novelas - Os Donos Do Jogo Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="TRESGRACAS.T01" start="20260214121219 +0000" stop="20260214131219 +0000">
+    <title>Três Graças - Episódio 1</title>
+    <desc>💖 Novelas - Três Graças Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="MARIADOBAIRRO.T01" start="20260214121219 +0000" stop="20260214131219 +0000">
+    <title>Maria Do Bairro - Episódio 1</title>
+    <desc>💖 Novelas - Maria Do Bairro Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="FILME.2COELHOS" start="20260214131219 +0000" stop="20260214151219 +0000">
+    <title>2 Coelhos</title>
+    <desc>🎬 2 Coelhos</desc>
+    <category>🎬 Filmes</category>
+  </programme>
+  <programme channel="BRIDGERTON.T01" start="20260214131219 +0000" stop="20260214141219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 1</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="BRIDGERTON.T02" start="20260214131219 +0000" stop="20260214141219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 2</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S02E01</episode-num>
+  </programme>
+  <programme channel="BRIDGERTON.T03" start="20260214131219 +0000" stop="20260214141219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 3</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S03E01</episode-num>
+  </programme>
+  <programme channel="OSDONOSDOJOGO.T01" start="20260214131219 +0000" stop="20260214141219 +0000">
+    <title>Os Donos Do Jogo - Episódio 1</title>
+    <desc>💖 Novelas - Os Donos Do Jogo Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="TRESGRACAS.T01" start="20260214131219 +0000" stop="20260214141219 +0000">
+    <title>Três Graças - Episódio 1</title>
+    <desc>💖 Novelas - Três Graças Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="MARIADOBAIRRO.T01" start="20260214131219 +0000" stop="20260214141219 +0000">
+    <title>Maria Do Bairro - Episódio 1</title>
+    <desc>💖 Novelas - Maria Do Bairro Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="FILME.2COELHOS" start="20260214141219 +0000" stop="20260214161219 +0000">
+    <title>2 Coelhos</title>
+    <desc>🎬 2 Coelhos</desc>
+    <category>🎬 Filmes</category>
+  </programme>
+  <programme channel="BRIDGERTON.T01" start="20260214141219 +0000" stop="20260214151219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 1</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="BRIDGERTON.T02" start="20260214141219 +0000" stop="20260214151219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 2</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S02E01</episode-num>
+  </programme>
+  <programme channel="BRIDGERTON.T03" start="20260214141219 +0000" stop="20260214151219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 3</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S03E01</episode-num>
+  </programme>
+  <programme channel="OSDONOSDOJOGO.T01" start="20260214141219 +0000" stop="20260214151219 +0000">
+    <title>Os Donos Do Jogo - Episódio 1</title>
+    <desc>💖 Novelas - Os Donos Do Jogo Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="TRESGRACAS.T01" start="20260214141219 +0000" stop="20260214151219 +0000">
+    <title>Três Graças - Episódio 1</title>
+    <desc>💖 Novelas - Três Graças Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="MARIADOBAIRRO.T01" start="20260214141219 +0000" stop="20260214151219 +0000">
+    <title>Maria Do Bairro - Episódio 1</title>
+    <desc>💖 Novelas - Maria Do Bairro Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="FILME.2COELHOS" start="20260214151219 +0000" stop="20260214171219 +0000">
+    <title>2 Coelhos</title>
+    <desc>🎬 2 Coelhos</desc>
+    <category>🎬 Filmes</category>
+  </programme>
+  <programme channel="BRIDGERTON.T01" start="20260214151219 +0000" stop="20260214161219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 1</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="BRIDGERTON.T02" start="20260214151219 +0000" stop="20260214161219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 2</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S02E01</episode-num>
+  </programme>
+  <programme channel="BRIDGERTON.T03" start="20260214151219 +0000" stop="20260214161219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 3</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S03E01</episode-num>
+  </programme>
+  <programme channel="OSDONOSDOJOGO.T01" start="20260214151219 +0000" stop="20260214161219 +0000">
+    <title>Os Donos Do Jogo - Episódio 1</title>
+    <desc>💖 Novelas - Os Donos Do Jogo Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="TRESGRACAS.T01" start="20260214151219 +0000" stop="20260214161219 +0000">
+    <title>Três Graças - Episódio 1</title>
+    <desc>💖 Novelas - Três Graças Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="MARIADOBAIRRO.T01" start="20260214151219 +0000" stop="20260214161219 +0000">
+    <title>Maria Do Bairro - Episódio 1</title>
+    <desc>💖 Novelas - Maria Do Bairro Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="FILME.2COELHOS" start="20260214161219 +0000" stop="20260214181219 +0000">
+    <title>2 Coelhos</title>
+    <desc>🎬 2 Coelhos</desc>
+    <category>🎬 Filmes</category>
+  </programme>
+  <programme channel="BRIDGERTON.T01" start="20260214161219 +0000" stop="20260214171219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 1</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="BRIDGERTON.T02" start="20260214161219 +0000" stop="20260214171219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 2</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S02E01</episode-num>
+  </programme>
+  <programme channel="BRIDGERTON.T03" start="20260214161219 +0000" stop="20260214171219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 3</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S03E01</episode-num>
+  </programme>
+  <programme channel="OSDONOSDOJOGO.T01" start="20260214161219 +0000" stop="20260214171219 +0000">
+    <title>Os Donos Do Jogo - Episódio 1</title>
+    <desc>💖 Novelas - Os Donos Do Jogo Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="TRESGRACAS.T01" start="20260214161219 +0000" stop="20260214171219 +0000">
+    <title>Três Graças - Episódio 1</title>
+    <desc>💖 Novelas - Três Graças Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="MARIADOBAIRRO.T01" start="20260214161219 +0000" stop="20260214171219 +0000">
+    <title>Maria Do Bairro - Episódio 1</title>
+    <desc>💖 Novelas - Maria Do Bairro Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="FILME.2COELHOS" start="20260214171219 +0000" stop="20260214191219 +0000">
+    <title>2 Coelhos</title>
+    <desc>🎬 2 Coelhos</desc>
+    <category>🎬 Filmes</category>
+  </programme>
+  <programme channel="BRIDGERTON.T01" start="20260214171219 +0000" stop="20260214181219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 1</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="BRIDGERTON.T02" start="20260214171219 +0000" stop="20260214181219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 2</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S02E01</episode-num>
+  </programme>
+  <programme channel="BRIDGERTON.T03" start="20260214171219 +0000" stop="20260214181219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 3</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S03E01</episode-num>
+  </programme>
+  <programme channel="OSDONOSDOJOGO.T01" start="20260214171219 +0000" stop="20260214181219 +0000">
+    <title>Os Donos Do Jogo - Episódio 1</title>
+    <desc>💖 Novelas - Os Donos Do Jogo Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="TRESGRACAS.T01" start="20260214171219 +0000" stop="20260214181219 +0000">
+    <title>Três Graças - Episódio 1</title>
+    <desc>💖 Novelas - Três Graças Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="MARIADOBAIRRO.T01" start="20260214171219 +0000" stop="20260214181219 +0000">
+    <title>Maria Do Bairro - Episódio 1</title>
+    <desc>💖 Novelas - Maria Do Bairro Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="FILME.2COELHOS" start="20260214181219 +0000" stop="20260214201219 +0000">
+    <title>2 Coelhos</title>
+    <desc>🎬 2 Coelhos</desc>
+    <category>🎬 Filmes</category>
+  </programme>
+  <programme channel="BRIDGERTON.T01" start="20260214181219 +0000" stop="20260214191219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 1</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="BRIDGERTON.T02" start="20260214181219 +0000" stop="20260214191219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 2</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S02E01</episode-num>
+  </programme>
+  <programme channel="BRIDGERTON.T03" start="20260214181219 +0000" stop="20260214191219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 3</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S03E01</episode-num>
+  </programme>
+  <programme channel="OSDONOSDOJOGO.T01" start="20260214181219 +0000" stop="20260214191219 +0000">
+    <title>Os Donos Do Jogo - Episódio 1</title>
+    <desc>💖 Novelas - Os Donos Do Jogo Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="TRESGRACAS.T01" start="20260214181219 +0000" stop="20260214191219 +0000">
+    <title>Três Graças - Episódio 1</title>
+    <desc>💖 Novelas - Três Graças Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="MARIADOBAIRRO.T01" start="20260214181219 +0000" stop="20260214191219 +0000">
+    <title>Maria Do Bairro - Episódio 1</title>
+    <desc>💖 Novelas - Maria Do Bairro Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="FILME.2COELHOS" start="20260214191219 +0000" stop="20260214211219 +0000">
+    <title>2 Coelhos</title>
+    <desc>🎬 2 Coelhos</desc>
+    <category>🎬 Filmes</category>
+  </programme>
+  <programme channel="BRIDGERTON.T01" start="20260214191219 +0000" stop="20260214201219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 1</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="BRIDGERTON.T02" start="20260214191219 +0000" stop="20260214201219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 2</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S02E01</episode-num>
+  </programme>
+  <programme channel="BRIDGERTON.T03" start="20260214191219 +0000" stop="20260214201219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 3</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S03E01</episode-num>
+  </programme>
+  <programme channel="OSDONOSDOJOGO.T01" start="20260214191219 +0000" stop="20260214201219 +0000">
+    <title>Os Donos Do Jogo - Episódio 1</title>
+    <desc>💖 Novelas - Os Donos Do Jogo Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="TRESGRACAS.T01" start="20260214191219 +0000" stop="20260214201219 +0000">
+    <title>Três Graças - Episódio 1</title>
+    <desc>💖 Novelas - Três Graças Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="MARIADOBAIRRO.T01" start="20260214191219 +0000" stop="20260214201219 +0000">
+    <title>Maria Do Bairro - Episódio 1</title>
+    <desc>💖 Novelas - Maria Do Bairro Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="FILME.2COELHOS" start="20260214201219 +0000" stop="20260214221219 +0000">
+    <title>2 Coelhos</title>
+    <desc>🎬 2 Coelhos</desc>
+    <category>🎬 Filmes</category>
+  </programme>
+  <programme channel="BRIDGERTON.T01" start="20260214201219 +0000" stop="20260214211219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 1</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="BRIDGERTON.T02" start="20260214201219 +0000" stop="20260214211219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 2</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S02E01</episode-num>
+  </programme>
+  <programme channel="BRIDGERTON.T03" start="20260214201219 +0000" stop="20260214211219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 3</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S03E01</episode-num>
+  </programme>
+  <programme channel="OSDONOSDOJOGO.T01" start="20260214201219 +0000" stop="20260214211219 +0000">
+    <title>Os Donos Do Jogo - Episódio 1</title>
+    <desc>💖 Novelas - Os Donos Do Jogo Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="TRESGRACAS.T01" start="20260214201219 +0000" stop="20260214211219 +0000">
+    <title>Três Graças - Episódio 1</title>
+    <desc>💖 Novelas - Três Graças Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="MARIADOBAIRRO.T01" start="20260214201219 +0000" stop="20260214211219 +0000">
+    <title>Maria Do Bairro - Episódio 1</title>
+    <desc>💖 Novelas - Maria Do Bairro Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="FILME.2COELHOS" start="20260214211219 +0000" stop="20260214231219 +0000">
+    <title>2 Coelhos</title>
+    <desc>🎬 2 Coelhos</desc>
+    <category>🎬 Filmes</category>
+  </programme>
+  <programme channel="BRIDGERTON.T01" start="20260214211219 +0000" stop="20260214221219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 1</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="BRIDGERTON.T02" start="20260214211219 +0000" stop="20260214221219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 2</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S02E01</episode-num>
+  </programme>
+  <programme channel="BRIDGERTON.T03" start="20260214211219 +0000" stop="20260214221219 +0000">
+    <title>Bridgerton - Episódio 1</title>
+    <desc>📺 Séries - Bridgerton Temporada 3</desc>
+    <category>📺 Séries</category>
+    <episode-num system="onscreen">S03E01</episode-num>
+  </programme>
+  <programme channel="OSDONOSDOJOGO.T01" start="20260214211219 +0000" stop="20260214221219 +0000">
+    <title>Os Donos Do Jogo - Episódio 1</title>
+    <desc>💖 Novelas - Os Donos Do Jogo Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="TRESGRACAS.T01" start="20260214211219 +0000" stop="20260214221219 +0000">
+    <title>Três Graças - Episódio 1</title>
+    <desc>💖 Novelas - Três Graças Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
+  </programme>
+  <programme channel="MARIADOBAIRRO.T01" start="20260214211219 +0000" stop="20260214221219 +0000">
+    <title>Maria Do Bairro - Episódio 1</title>
+    <desc>💖 Novelas - Maria Do Bairro Temporada 1</desc>
+    <category>💖 Novelas</category>
+    <episode-num system="onscreen">S01E01</episode-num>
   </programme>
 </tv>
