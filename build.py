@@ -640,6 +640,26 @@ def generate_epg(data, output_dir):
 def build_vod_with_direct_capas():
     base_dir = Path(__file__).parent
     
+    # ===== NOVO: Incluir pasta auto se existir =====
+    auto_dir = base_dir / "input_auto"
+    if auto_dir.exists():
+        print("\n📁 Pasta input_auto encontrada! Incluindo no processamento...")
+        
+        # Copiar arquivos da input_auto para as pastas correspondentes
+        for subpasta in auto_dir.iterdir():
+            if subpasta.is_dir():
+                destino = base_dir / "input" / subpasta.name
+                destino.mkdir(exist_ok=True)
+                
+                # Copiar todos os .m3u
+                for m3u in subpasta.glob("*.m3u"):
+                    novo_arquivo = destino / m3u.name
+                    if not novo_arquivo.exists():  # Só copia se não existir
+                        import shutil
+                        shutil.copy2(m3u, novo_arquivo)
+                        print(f"   ✅ Copiado: {subpasta.name}/{m3u.name}")
+    # ===============================================
+    
     categories = {
         'Filmes': 'filmes',
         'Series': 'series',
@@ -647,8 +667,6 @@ def build_vod_with_direct_capas():
         'Animes': 'animes',
         'Infantil': 'infantil'
     }
-    
-    output = {cat_id: [] for cat_id in categories.values()}
     
     print("============================================================")
     print("🎬 SISTEMA VOD - CAPAS DIRETAS DA PASTA")
@@ -1398,6 +1416,7 @@ def generate_html_with_correct_paths(base_dir, data):
 
 if __name__ == "__main__":
     build_vod_with_direct_capas()
+
 
 
 
