@@ -81,18 +81,11 @@ jobs:
           git status
         fi
     
-    - name: Commit e push
-  if: steps.git-check.outputs.changed == 'true'
-  run: |
-    git config pull.rebase true
-    git pull origin main
-    git push origin main
-
-    
-    - name: Upload de logs
-      if: always()
-      uses: actions/upload-artifact@v4
+       - name: Commit automático
+      if: steps.git-check.outputs.changed == 'true'
+      uses: stefanzweifel/git-auto-commit-action@v4
       with:
-        name: update-logs
-        path: logs/
-        retention-days: 7
+        commit_message: "Auto-update catálogo IPTV"
+        branch: main
+        file_pattern: iptv_playlists/* web/* input_auto/*
+
