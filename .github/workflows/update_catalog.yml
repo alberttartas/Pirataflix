@@ -2,15 +2,13 @@ name: Atualizar Catálogo Automático
 
 on:
   schedule:
-    # Roda todo dia às 03:00 UTC (00:00 BRT)
     - cron: '0 3 * * *'
-  workflow_dispatch:  # Permite executar manualmente
+  workflow_dispatch:
   push:
     branches: [ main ]
     paths:
       - 'download_iptv.py'
       - 'build.py'
-      - 'input_auto/**'
 
 jobs:
   update-catalog:
@@ -20,10 +18,10 @@ jobs:
     - name: Checkout do repositório
       uses: actions/checkout@v3
       with:
-        fetch-depth: 0  # Pega todo o histórico para commit
+        fetch-depth: 0
     
     - name: Configurar Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v3
       with:
         python-version: '3.10'
     
@@ -32,18 +30,41 @@ jobs:
         python -m pip install --upgrade pip
         pip install requests
     
+    - name: Verificar arquivos
+      run: |
+        echo "📂 Listando arquivos na raiz:"
+        ls -la
+        echo ""
+        echo "📂 Verificando download_iptv.py:"
+        if [ -f "download_iptv.py" ]; then
+          echo "✅ Arquivo encontrado!"
+          echo "📝 Primeiras linhas:"
+          head -5 download_iptv.py
+        else
+          echo "❌ Arquivo NÃO encontrado!"
+          exit 1
+        fi
+    
     - name: Baixar fontes IPTV
       run: |
-        echo "📡 Baixando fontes do iptv-org..."
+        echo "📡 Executando download_iptv.py..."
         python download_iptv.py
-      continue-on-error: true  # Não para se falhar
+      continue-on-error: false
+    
+    - name: Listar pastas após download
+      run: |
+        echo "📂 Pastas criadas:"
+        ls -la input_auto/ || echo "input_auto/ não existe"
+        echo ""
+        echo "📂 Conteúdo de input_auto/:"
+        find input_auto -type f -name "*.m3u" 2>/dev/null || echo "Nenhum arquivo .m3u encontrado"
     
     - name: Executar build do site
       run: |
         echo "🏗️ Gerando site..."
         python build.py
     
-       - name: Verificar mudanças
+    - name: Verificar mudanças
       id: git-check
       run: |
         git status --porcelain
@@ -62,26 +83,13 @@ jobs:
       run: |
         git config --global user.name 'GitHub Action'
         git config --global user.email 'action@github.com'
-        echo "📂 Arquivos para commit:"
+        echo "📂 Adicionando arquivos..."
         git add input_auto/ web/ iptv_playlists/
         git status
         git commit -m "🤖 Atualização automática do catálogo [skip ci]"
         git push
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    
-    - name: Criar arquivo de log
-      run: |
-        LOG_DIR="logs"
-        mkdir -p $LOG_DIR
-        LOG_FILE="$LOG_DIR/update_$(date +'%Y%m%d_%H%M%S').log"
-        echo "📝 Criando log: $LOG_FILE"
-        {
-          echo "=== ATUALIZAÇÃO $(date) ==="
-          echo "Status do download: ${{ job.status }}"
-          echo "Mudanças detectadas: ${{ steps.git-check.outputs.changed }}"
-          echo "================================"
-        } > $LOG_FILE
     
     - name: Upload de logs
       if: always()
