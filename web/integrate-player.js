@@ -1,3 +1,9 @@
+document.addEventListener("DOMContentLoaded", () => {
+    console.log("✅ DOM completamente carregado");
+    iniciarPirataflixPlayer();
+});
+
+function iniciarPirataflixPlayer(){
 // ============================================
 // SISTEMA DE CONTINUAR ASSISTINDO
 // ============================================
@@ -880,4 +886,5 @@ function setupProgressSaving(player, videoId, itemId, category, episodeIndex, ti
 }
 
 console.log('✅ Correções aplicadas!');
-
+    
+}
