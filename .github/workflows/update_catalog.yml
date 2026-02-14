@@ -79,6 +79,11 @@ jobs:
             git status
           fi
 
+       - name: Sincronizar com remoto
+  run: |
+    git fetch origin
+    git reset --hard origin/main
+
       - name: Commit automático
         if: steps.git-check.outputs.changed == 'true'
         uses: stefanzweifel/git-auto-commit-action@v4
