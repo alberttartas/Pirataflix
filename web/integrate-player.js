@@ -882,126 +882,82 @@ function setupProgressSaving(player, videoId, itemId, category, episodeIndex, ti
 console.log('✅ Correções aplicadas!');
 
 // ============================================
-// CORREÇÃO: GARANTIR QUE PLAYER.JS CARREGUE
+// SISTEMA DE INICIALIZAÇÃO CORRIGIDO
 // ============================================
 
-// Função para carregar script com promise
+console.log('🚀 Inicializando sistema PIRATAFLIX...');
+
+// Variável de controle
+let sistemaPronto = false;
+let filaEspera = [];
+
+// Função para garantir que tudo está pronto
+async function garantirSistemaPronto() {
+    if (sistemaPronto) return true;
+    
+    console.log('🔧 Verificando componentes do sistema...');
+    
+    // 1. CRIAR MODAL se não existir
+    if (!document.getElementById('modernPlayerModal')) {
+        console.log('📦 Criando modal...');
+        if (typeof setupPlayerModal === 'function') {
+            setupPlayerModal();
+        } else {
+            criarModalFallback();
+        }
+        // Aguardar modal ser criado
+        await new Promise(r => setTimeout(r, 300));
+    }
+    
+    // 2. VERIFICAR PLAYER
+    if (typeof ModernVideoPlayer === 'undefined') {
+        console.log('📥 Carregando player.js...');
+        await carregarScript('player.js');
+        await new Promise(r => setTimeout(r, 500));
+    }
+    
+    // 3. VERIFICAR se player foi carregado
+    if (typeof ModernVideoPlayer === 'undefined') {
+        console.log('⚠️ Player não carregado, usando fallback');
+        window.ModernVideoPlayer = class FallbackPlayer {
+            constructor(options) { this.options = options; }
+            load(url) { 
+                const container = document.getElementById(this.options.containerId);
+                if (container) {
+                    container.innerHTML = `<video controls autoplay style="width:100%;height:100%"><source src="${url}"></video>`;
+                }
+            }
+        };
+    }
+    
+    sistemaPronto = true;
+    console.log('✅ Sistema pronto!');
+    
+    // Processar fila de espera
+    while (filaEspera.length > 0) {
+        const args = filaEspera.shift();
+        executarPlay(...args);
+    }
+    
+    return true;
+}
+
+// Função para carregar script
 function carregarScript(src) {
     return new Promise((resolve, reject) => {
         if (document.querySelector(`script[src="${src}"]`)) {
             resolve();
             return;
         }
-        
         const script = document.createElement('script');
         script.src = src;
-        script.onload = () => {
-            console.log(`✅ Script carregado: ${src}`);
-            resolve();
-        };
-        script.onerror = () => reject(new Error(`Falha ao carregar ${src}`));
+        script.onload = resolve;
+        script.onerror = reject;
         document.head.appendChild(script);
     });
 }
 
-// Garantir que ModernVideoPlayer existe ANTES de usar
-async function garantirPlayer() {
-    console.log('🔧 Verificando ModernVideoPlayer...');
-    
-    // Se já existe, ótimo
-    if (typeof ModernVideoPlayer !== 'undefined') {
-        console.log('✅ ModernVideoPlayer já está disponível');
-        return true;
-    }
-    
-    // Tentar carregar player.js
-    console.log('📥 Tentando carregar player.js...');
-    try {
-        await carregarScript('player.js');
-        
-        // Aguardar um pouco para inicializar
-        await new Promise(r => setTimeout(r, 500));
-        
-        if (typeof ModernVideoPlayer !== 'undefined') {
-            console.log('✅ ModernVideoPlayer carregado com sucesso!');
-            return true;
-        } else {
-            console.log('❌ ModernVideoPlayer ainda não definido após carregar');
-            return false;
-        }
-    } catch (error) {
-        console.error('❌ Erro ao carregar player.js:', error);
-        return false;
-    }
-}
-
-// Modificar playWithModernPlayer para garantir player
-const originalPlayFunction = window.playWithModernPlayer;
-
-window.playWithModernPlayer = async function(url, title, info = '', itemId = null, category = null, episodeIndex = 0) {
-    console.log('🎬 playWithModernPlayer chamado (versão garantida)');
-    
-    // 1. GARANTIR MODAL
-    if (!document.getElementById('modernPlayerModal')) {
-        console.log('⚠️ Modal não existe! Criando...');
-        if (typeof setupPlayerModal === 'function') {
-            setupPlayerModal();
-        } else {
-            criarModalFallback();
-        }
-    }
-    
-    // 2. GARANTIR PLAYER
-    const playerOk = await garantirPlayer();
-    if (!playerOk) {
-        console.log('⚠️ Player não disponível, usando fallback');
-        playFallback(url, title);
-        return;
-    }
-    
-    // 3. CHAMAR FUNÇÃO ORIGINAL
-    if (originalPlayFunction) {
-        // Aguardar modal ser criado
-        setTimeout(() => {
-            originalPlayFunction(url, title, info, itemId, category, episodeIndex);
-        }, 300);
-    } else {
-        console.log('⚠️ Função original não encontrada');
-        playFallback(url, title);
-    }
-};
-
-// Função fallback para reprodução
-function playFallback(url, title) {
-    console.log('🎬 Usando player fallback');
-    
-    const modal = document.getElementById('modernPlayerModal');
-    if (!modal) {
-        window.open(url, '_blank');
-        return;
-    }
-    
-    modal.style.display = 'flex';
-    
-    const container = document.getElementById('modern-player-container');
-    if (!container) {
-        window.open(url, '_blank');
-        return;
-    }
-    
-    container.innerHTML = `
-        <video controls autoplay style="width: 100%; height: 100%; background: #000;">
-            <source src="${url}" type="video/mp4">
-            <source src="${url}" type="application/x-mpegURL">
-            Seu navegador não suporta vídeo.
-        </video>
-    `;
-    
-    document.getElementById('modern-player-title').textContent = title;
-    document.getElementById('modern-player-info').textContent = 'Streaming ao vivo';
-}
-
-// Função para criar modal (fallback)
+// Função para criar modal fallback
 function criarModalFallback() {
     if (document.getElementById('modernPlayerModal')) return;
     
@@ -1020,10 +976,77 @@ function criarModalFallback() {
     
     document.body.insertAdjacentHTML('beforeend', modalHTML);
     
-    // Adicionar evento de fechar
     document.getElementById('closeModernPlayer').addEventListener('click', () => {
         document.getElementById('modernPlayerModal').style.display = 'none';
     });
 }
 
-console.log('🚀 Sistema de garantia do player ativado!');
+// Função principal de execução
+function executarPlay(url, title, info = '', itemId = null, category = null, episodeIndex = 0) {
+    console.log('🎬 Executando play:', { url, title });
+    
+    const modal = document.getElementById('modernPlayerModal');
+    if (!modal) {
+        console.error('❌ Modal ainda não existe!');
+        window.open(url, '_blank');
+        return;
+    }
+    
+    modal.style.display = 'flex';
+    
+    // Buscar dados do item
+    let episodeList = [];
+    let currentItem = null;
+    
+    if (itemId && category && window.vodData?.[category]) {
+        currentItem = window.vodData[category].find(i => i.id === itemId);
+        if (currentItem) {
+            episodeList = currentItem.episodes || [];
+            if (!episodeList.length && currentItem.seasons) {
+                currentItem.seasons.forEach(s => {
+                    if (s.episodes) episodeList = episodeList.concat(s.episodes);
+                });
+            }
+        }
+    }
+    
+    // Criar ou usar player existente
+    if (!window.modernPlayer) {
+        window.modernPlayer = new ModernVideoPlayer({
+            containerId: 'modern-player-container',
+            autoPlay: true,
+            skipSeconds: 10
+        });
+    }
+    
+    window.modernPlayer.load(url, title);
+    
+    document.getElementById('modern-player-title').textContent = title;
+    document.getElementById('modern-player-info').textContent = info || `Episódio ${episodeIndex + 1} de ${episodeList.length}`;
+}
+
+// Sobrescrever playWithModernPlayer
+window.playWithModernPlayer = async function(url, title, info = '', itemId = null, category = null, episodeIndex = 0) {
+    console.log('🎬 playWithModernPlayer chamado');
+    
+    if (!sistemaPronto) {
+        console.log('⏳ Sistema não pronto, colocando na fila...');
+        filaEspera.push([url, title, info, itemId, category, episodeIndex]);
+        await garantirSistemaPronto();
+    } else {
+        executarPlay(url, title, info, itemId, category, episodeIndex);
+    }
+};
+
+// Inicializar sistema
+(async () => {
+    await garantirSistemaPronto();
+    console.log('🚀 Sistema de reprodução pronto!');
+})();
+
+// Garantir que a função original não cause problemas
+if (window.originalPlayWithModernPlayer) {
+    window.originalPlayWithModernPlayer = window.playWithModernPlayer;
+}
+
+console.log('✅ Sistema de garantia ativado!');
