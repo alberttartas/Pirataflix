@@ -286,15 +286,18 @@ window.playWithModernPlayer = function(
     
     const container = document.getElementById('modern-player-container');
     container.innerHTML = `
-        <video controls autoplay style="width:100%;height:100%;background:#000;" id="mainVideo">
-            <source src="${url}" type="video/mp4">
-            <source src="${url}" type="application/x-mpegURL">
-        </video>
-    `;
-    
-    const video = document.getElementById('mainVideo');
-    document.getElementById('modern-player-title').textContent = title;
-    document.getElementById('modern-player-info').textContent = info || `Episódio ${episodeIndex + 1} de ${episodeList.length}`;
+    <video controls autoplay style="width:100%;height:100%;background:#000;" id="mainVideo"></video>
+`;
+
+const video = document.getElementById('mainVideo');
+
+if (url.endsWith('.m3u8') && typeof Hls !== 'undefined' && Hls.isSupported()) {
+    const hls = new Hls();
+    hls.loadSource(url);
+    hls.attachMedia(video);
+} else {
+    video.src = url;
+}
     
     // Botão próximo episódio
     const nextContainer = document.getElementById('next-episode-container');
