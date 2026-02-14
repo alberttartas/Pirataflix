@@ -1,0 +1,86 @@
+name: Atualizar Catálogo Automático
+
+on:
+  schedule:
+    # Roda todo dia às 03:00 UTC (00:00 BRT)
+    - cron: '0 3 * * *'
+  workflow_dispatch:  # Permite executar manualmente
+  push:
+    branches: [ main ]
+    paths:
+      - 'download_iptv.py'
+      - 'build.py'
+      - 'input_auto/**'
+
+jobs:
+  update-catalog:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout do repositório
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 0  # Pega todo o histórico para commit
+    
+    - name: Configurar Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+    
+    - name: Instalar dependências
+      run: |
+        python -m pip install --upgrade pip
+        pip install requests
+    
+    - name: Baixar fontes IPTV
+      run: |
+        echo "📡 Baixando fontes do iptv-org..."
+        python download_iptv.py
+      continue-on-error: true  # Não para se falhar
+    
+    - name: Executar build do site
+      run: |
+        echo "🏗️ Gerando site..."
+        python build.py
+    
+    - name: Verificar mudanças
+      id: git-check
+      run: |
+        git status --porcelain
+        if [ -n "$(git status --porcelain)" ]; then
+          echo "📦 Mudanças detectadas!"
+          echo "changed=true" >> $GITHUB_OUTPUT
+        else
+          echo "✅ Nenhuma mudança detectada"
+          echo "changed=false" >> $GITHUB_OUTPUT
+        fi
+    
+    - name: Commit e push das mudanças
+      if: steps.git-check.outputs.changed == 'true'
+      run: |
+        git config --global user.name 'GitHub Action'
+        git config --global user.email 'action@github.com'
+        git add input_auto/ web/ iptv_playlists/ data.json
+        git commit -m "🤖 Atualização automática do catálogo [skip ci]"
+        git push
+    
+    - name: Criar arquivo de log
+      run: |
+        LOG_DIR="logs"
+        mkdir -p $LOG_DIR
+        LOG_FILE="$LOG_DIR/update_$(date +'%Y%m%d_%H%M%S').log"
+        echo "📝 Criando log: $LOG_FILE"
+        {
+          echo "=== ATUALIZAÇÃO $(date) ==="
+          echo "Status do download: ${{ job.status }}"
+          echo "Mudanças detectadas: ${{ steps.git-check.outputs.changed }}"
+          echo "================================"
+        } > $LOG_FILE
+    
+    - name: Upload de logs
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: update-logs
+        path: logs/
+        retention-days: 7
