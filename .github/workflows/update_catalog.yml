@@ -64,32 +64,27 @@ jobs:
         echo "🏗️ Gerando site..."
         python build.py
     
-    - name: Verificar mudanças
+        - name: Verificar mudanças
       id: git-check
       run: |
-        git status --porcelain
-        if [ -n "$(git status --porcelain)" ]; then
+        git config --global user.name 'GitHub Action'
+        git config --global user.email 'action@github.com'
+        git add iptv_playlists/ web/ input_auto/
+        if git diff --staged --quiet; then
+          echo "✅ Nenhuma mudança para commit"
+          echo "changed=false" >> $GITHUB_OUTPUT
+        else
           echo "📦 Mudanças detectadas!"
           echo "changed=true" >> $GITHUB_OUTPUT
-          echo "Arquivos modificados:"
-          git status --porcelain
-        else
-          echo "✅ Nenhuma mudança detectada"
-          echo "changed=false" >> $GITHUB_OUTPUT
+          git status
         fi
     
     - name: Commit e push
       if: steps.git-check.outputs.changed == 'true'
       run: |
-        git config --global user.name 'GitHub Action'
-        git config --global user.email 'action@github.com'
-        echo "📂 Adicionando arquivos..."
-        git add input_auto/ web/ iptv_playlists/
-        git status
         git commit -m "🤖 Atualização automática do catálogo [skip ci]"
+        git pull --rebase origin main
         git push
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     
     - name: Upload de logs
       if: always()
