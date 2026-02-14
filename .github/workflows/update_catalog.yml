@@ -82,11 +82,12 @@ jobs:
         fi
     
     - name: Commit e push
-      if: steps.git-check.outputs.changed == 'true'
-      run: |
-        git commit -m "🤖 Atualização automática do catálogo [skip ci]"
-        git pull --rebase origin main
-        git push
+  if: steps.git-check.outputs.changed == 'true'
+  run: |
+    git config pull.rebase true
+    git pull origin main
+    git push origin main
+
     
     - name: Upload de logs
       if: always()
