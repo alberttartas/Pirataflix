@@ -672,3 +672,124 @@ function initialize() {
 initialize();
 
 console.log('✅ Sistema de player e continuar assistindo carregado!');
+
+// ============================================
+// CORREÇÃO DE URGÊNCIA - GARANTIR QUE O PLAYER FUNCIONA
+// ============================================
+
+// Sobrescrever a função playWithModernPlayer com uma versão mais robusta
+const originalPlayWithModernPlayer = window.playWithModernPlayer;
+
+window.playWithModernPlayer = function(url, title, info = '', itemId = null, category = null, episodeIndex = 0) {
+    console.log('🎬 Tentando reproduzir:', { url, title, itemId, category, episodeIndex });
+    
+    // Verificar se o modal existe
+    let modal = document.getElementById('modernPlayerModal');
+    
+    // Se não existe, criar na hora
+    if (!modal) {
+        console.log('🔄 Modal não encontrado, criando emergencialmente...');
+        
+        // Criar modal básico
+        const modalHTML = `
+            <div id="modernPlayerModal" style="display: flex; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); z-index: 9999; justify-content: center; align-items: center;">
+                <div style="width: 90%; max-width: 1200px; max-height: 90vh; background: #000; border-radius: 10px; overflow: hidden; position: relative;">
+                    <button id="closeModernPlayer" style="position: absolute; top: 15px; right: 15px; background: rgba(255,255,255,0.1); border: none; color: white; width: 40px; height: 40px; border-radius: 50%; font-size: 20px; cursor: pointer; z-index: 10000; display: flex; align-items: center; justify-content: center;">&times;</button>
+                    <div id="modern-player-container" style="width: 100%; height: 70vh;"></div>
+                    <div style="padding: 20px; color: white;">
+                        <h3 id="modern-player-title" style="margin: 0 0 10px 0;">${title}</h3>
+                        <p id="modern-player-info" style="margin: 0; opacity: 0.8;">${info}</p>
+                    </div>
+                </div>
+            </div>
+        `;
+        
+        document.body.insertAdjacentHTML('beforeend', modalHTML);
+        modal = document.getElementById('modernPlayerModal');
+        
+        // Configurar botão de fechar
+        document.getElementById('closeModernPlayer').addEventListener('click', function() {
+            modal.style.display = 'none';
+            if (window.modernPlayer && window.modernPlayer.video) {
+                window.modernPlayer.video.pause();
+            }
+        });
+    }
+    
+    // Garantir que o modal está visível
+    modal.style.display = 'flex';
+    
+    // Tentar usar o player original se existir
+    if (originalPlayWithModernPlayer && typeof originalPlayWithModernPlayer === 'function') {
+        try {
+            originalPlayWithModernPlayer(url, title, info, itemId, category, episodeIndex);
+            return;
+        } catch (e) {
+            console.error('❌ Erro no player original, usando fallback:', e);
+        }
+    }
+    
+    // FALLBACK: Player simples com vídeo nativo
+    console.log('🎬 Usando player de fallback');
+    
+    const container = document.getElementById('modern-player-container');
+    if (!container) return;
+    
+    container.innerHTML = `
+        <video controls autoplay playsinline style="width: 100%; height: 100%; background: #000;" id="fallback-video">
+            <source src="${url}" type="video/mp4">
+            Seu navegador não suporta o elemento de vídeo.
+        </video>
+    `;
+    
+    const video = document.getElementById('fallback-video');
+    
+    // Verificar se tem progresso salvo
+    const videoId = `${itemId}_${episodeIndex}`;
+    const savedProgress = ContinueWatching.get(videoId);
+    
+    if (savedProgress && savedProgress.currentTime > 5) {
+        video.addEventListener('loadedmetadata', function() {
+            video.currentTime = savedProgress.currentTime;
+            showResumeMessage(savedProgress.currentTime);
+        });
+    }
+    
+    // Salvar progresso
+    let saveInterval = setInterval(() => {
+        if (video.duration && video.currentTime > 10) {
+            ContinueWatching.save({
+                videoId: videoId,
+                itemId: itemId,
+                category: category,
+                episodeIndex: episodeIndex,
+                title: title,
+                seriesTitle: title.split(' - ')[0],
+                season: 1,
+                episode: episodeIndex + 1,
+                currentTime: video.currentTime,
+                duration: video.duration,
+                url: url
+            });
+        }
+    }, 5000);
+    
+    video.addEventListener('ended', function() {
+        ContinueWatching.remove(videoId);
+        clearInterval(saveInterval);
+    });
+    
+    // Atualizar título
+    document.getElementById('modern-player-title').textContent = title;
+    document.getElementById('modern-player-info').textContent = info;
+};
+
+// Garantir que a função existe no escopo global
+if (!window.playWithModernPlayer) {
+    window.playWithModernPlayer = function(url, title, info, itemId, category, episodeIndex) {
+        console.warn('⚠️ Função playWithModernPlayer não definida, abrindo direto:', url);
+        window.open(url, '_blank');
+    };
+}
+
+console.log('✅ Correção de emergência aplicada!');
