@@ -4,6 +4,10 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function iniciarPirataflixPlayer(){
+
+     if (window._pirataflixInitialized) return;
+    window._pirataflixInitialized = true;
+    
 // ============================================
 // SISTEMA DE CONTINUAR ASSISTINDO
 // ============================================
@@ -211,6 +215,12 @@ window.displayContent = function() {
 
 function integrateModernPlayer() {
     console.log('🚀 Iniciando integração do player...');
+
+    //  GARANTIR QUE O MODAL EXISTA SEMPRE
+    setupPlayerModal();
+
+    loadCSS('player.css');
+    loadFontAwesome();
     
     // Carregar CSS primeiro
     loadCSS('player.css');
@@ -271,6 +281,11 @@ function loadFontAwesome() {
 let modernPlayer = null;
 
 function setupPlayerModal() {
+
+    if (window.playWithModernPlayer) {
+        return; // Já configurado
+    }
+    
     // Criar modal
     const modalHTML = `
         <div id="modernPlayerModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); z-index: 9999; justify-content: center; align-items: center;">
@@ -285,11 +300,31 @@ function setupPlayerModal() {
         </div>
     `;
     
+    if (!document.getElementById('modernPlayerModal')) {
     document.body.insertAdjacentHTML('beforeend', modalHTML);
+    console.log('✅ Modal criado no DOM');
+}
+
+
     
     window.playWithModernPlayer = function(url, title, info = '', itemId = null, category = null, episodeIndex = 0) {
-        const modal = document.getElementById('modernPlayerModal');
-        modal.style.display = 'flex';
+    
+    let modal = document.getElementById('modernPlayerModal');
+
+    if (!modal) {
+        console.warn('⚠️ Modal não encontrado. Criando agora...');
+        setupPlayerModal();
+        modal = document.getElementById('modernPlayerModal');
+
+        if (!modal) {
+            console.error('❌ Falha ao criar modal.');
+            return;
+        }
+    }
+
+    modal.style.display = 'flex';
+
+
         
         // Gerar ID único para este vídeo
         const videoId = `${itemId}_${episodeIndex}`;
@@ -418,32 +453,29 @@ function setupProgressSaving(player, videoId, itemId, category, episodeIndex, ti
         }
     }, 5000);
     
-    // Quando o vídeo terminar, remover progresso e limpar intervalo
-    player.video.addEventListener('ended', function onEnded() {
-        ContinueWatching.remove(videoId);
-        clearInterval(saveInterval);
-        player.video.removeEventListener('ended', onEnded);
-        
-        // Avançar para próximo episódio automaticamente
-        const modal = document.getElementById('modernPlayerModal');
-        const episodeList = JSON.parse(modal.dataset.episodeList || '[]');
-        const currentIndex = parseInt(modal.dataset.currentEpisodeIndex || 0);
-        
-        if (currentIndex < episodeList.length - 1) {
-            setTimeout(() => {
-                playNextEpisode();
-            }, 2000);
-        }
-    });
-    
-    // Limpar intervalo ao fechar
-    const originalClose = closePlayer;
-    window.closePlayer = function() {
-        clearInterval(saveInterval);
-        originalClose();
-    };
-}
+    // Limpar intervalo ao pausar
+player.video.addEventListener('pause', () => {
+    clearInterval(saveInterval);
+});
 
+// Quando o vídeo terminar
+player.video.addEventListener('ended', () => {
+    ContinueWatching.remove(videoId);
+    clearInterval(saveInterval);
+
+    const modal = document.getElementById('modernPlayerModal');
+    const episodeList = JSON.parse(modal.dataset.episodeList || '[]');
+    const currentIndex = parseInt(modal.dataset.currentEpisodeIndex || 0);
+
+    if (currentIndex < episodeList.length - 1) {
+        setTimeout(() => {
+            playNextEpisode();
+        }, 2000);
+    }
+});
+
+    
+    
 // Função para fechar player
 function closePlayer() {
     const modal = document.getElementById('modernPlayerModal');
@@ -738,153 +770,21 @@ function addGlobalStyles() {
 
 // Inicializar com timeout para garantir que tudo carregou
 function initializePlayer() {
-    // Adicionar estilos globais
     addGlobalStyles();
-    
-    setTimeout(() => {
-        if (!window.vodData) {
-            console.warn('⚠️ vodData ainda não carregado, tentando novamente...');
-            if (typeof vodData !== 'undefined') {
-                window.vodData = vodData;
-                console.log('✅ vodData encontrado no escopo global');
-            }
-        }
-        
-        integrateModernPlayer();
-    }, 1000);
-}
-// ============================================
-// CORREÇÃO FINAL - SUBSTITUIR TUDO A PARTIR DAQUI
-// ============================================
 
-// Só declarar se não existir
-if (typeof window.originalDisplayContent === 'undefined') {
-    window.originalDisplayContent = window.displayContent;
-}
-
-// Substituir displayContent
-window.displayContent = function() {
-    console.log('🎯 NOVA DISPLAYCONTENT');
-    
-    // Chamar função original
-    if (window.originalDisplayContent) {
-        window.originalDisplayContent();
+    if (!window.vodData && typeof vodData !== 'undefined') {
+        window.vodData = vodData;
     }
-    
-    // Adicionar Continue Watching
-    setTimeout(() => {
-        const contentDiv = document.getElementById('content');
-        if (!contentDiv) return;
-        
-        const continueHtml = renderContinueWatching();
-        if (continueHtml) {
-            const existing = document.getElementById('continue-watching');
-            if (existing) existing.remove();
-            contentDiv.insertAdjacentHTML('afterbegin', continueHtml);
-            console.log('✅ Seção adicionada');
-        }
-    }, 300);
-};
 
-// Garantir que playWithModernPlayer existe
-if (typeof window.playWithModernPlayer !== 'function') {
-    console.log('🎬 Recriando playWithModernPlayer...');
-    
-    window.playWithModernPlayer = function(url, title, info = '', itemId = null, category = null, episodeIndex = 0) {
-        const modal = document.getElementById('modal');
-        if (!modal) {
-            console.error('❌ Modal não encontrado');
-            window.open(url, '_blank');
-            return;
-        }
-        
-        modal.style.display = 'flex';
-        
-        const videoId = `${itemId}_${episodeIndex}`;
-        const savedProgress = ContinueWatching.get(videoId);
-        
-        if (savedProgress && savedProgress.currentTime > 5) {
-            modal.dataset.resumeTime = savedProgress.currentTime;
-        }
-        
-        modal.dataset.itemId = itemId || '';
-        modal.dataset.category = category || '';
-        modal.dataset.currentEpisodeIndex = episodeIndex;
-        modal.dataset.currentVideoUrl = url;
-        modal.dataset.currentVideoTitle = title;
-        modal.dataset.currentVideoId = videoId;
-        
-        // Buscar episódios
-        let episodeList = [];
-        if (itemId && category && window.vodData?.[category]) {
-            const item = window.vodData[category].find(i => i.id === itemId);
-            if (item) {
-                episodeList = item.episodes || [];
-                if (!episodeList.length && item.seasons) {
-                    item.seasons.forEach(s => {
-                        if (s.episodes) episodeList = episodeList.concat(s.episodes);
-                    });
-                }
-            }
-        }
-        modal.dataset.episodeList = JSON.stringify(episodeList);
-        
-        // Player
-        if (!modernPlayer && typeof ModernVideoPlayer !== 'undefined') {
-            modernPlayer = new ModernVideoPlayer({
-                containerId: 'modern-player-container',
-                autoPlay: true,
-                skipSeconds: 10
-            });
-        }
-        
-        if (modernPlayer) {
-            modernPlayer.load(url, title);
-            
-            // Retomar
-            if (modal.dataset.resumeTime) {
-                const checkLoaded = setInterval(() => {
-                    if (modernPlayer.video?.readyState >= 1) {
-                        modernPlayer.video.currentTime = modal.dataset.resumeTime;
-                        clearInterval(checkLoaded);
-                    }
-                }, 100);
-            }
-            
-            // Salvar progresso
-            setupProgressSaving(modernPlayer, videoId, itemId, category, episodeIndex, title);
-        } else {
-            window.open(url, '_blank');
-        }
-        
-        document.getElementById('modern-player-title').textContent = title;
-        document.getElementById('modern-player-info').textContent = info || `Episódio ${episodeIndex + 1} de ${episodeList.length}`;
-    };
+    integrateModernPlayer(); 
+}
+    initializePlayer();
+
 }
 
-// Função para salvar progresso
-function setupProgressSaving(player, videoId, itemId, category, episodeIndex, title) {
-    if (!player?.video) return;
-    
-    let interval = setInterval(() => {
-        if (player.video.currentTime > 10) {
-            ContinueWatching.save({
-                videoId, itemId, category, episodeIndex,
-                title, seriesTitle: title.split(' - ')[0],
-                episode: episodeIndex + 1,
-                currentTime: player.video.currentTime,
-                duration: player.video.duration,
-                url: player.video.src
-            });
-        }
-    }, 5000);
-    
-    player.video.addEventListener('ended', () => {
-        ContinueWatching.remove(videoId);
-        clearInterval(interval);
-    });
-}
-
-console.log('✅ Correções aplicadas!');
-    
-}
+window.addEventListener('load', () => {
+    if (!window.playWithModernPlayer) {
+        console.log('🔁 Re-inicializando player no load');
+        iniciarPirataflixPlayer();
+    }
+});
