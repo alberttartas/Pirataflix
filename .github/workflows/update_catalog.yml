@@ -64,7 +64,7 @@ jobs:
           echo "🏗️ Gerando site..."
           python build.py
 
-            - name: Verificar mudanças
+      - name: Verificar mudanças
         id: git-check
         run: |
           git config --global user.name "GitHub Action"
