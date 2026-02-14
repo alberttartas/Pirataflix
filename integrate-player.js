@@ -57,7 +57,21 @@ const ContinueWatching = {
     
     getWatchingList() {
         const progressos = this.getAll();
-        return Object.values(progressos)
+        
+        // Agrupar por itemId e pegar apenas o mais recente de cada
+        const latestPerItem = {};
+        
+        Object.values(progressos).forEach(item => {
+            const itemId = item.itemId;
+            
+            // Se não existe para este item, ou se este é mais recente
+            if (!latestPerItem[itemId] || item.timestamp > latestPerItem[itemId].timestamp) {
+                latestPerItem[itemId] = item;
+            }
+        });
+        
+        // Converter para array, ordenar por timestamp (mais recente primeiro)
+        return Object.values(latestPerItem)
             .sort((a, b) => b.timestamp - a.timestamp)
             .slice(0, 20);
     }
@@ -866,3 +880,4 @@ function setupProgressSaving(player, videoId, itemId, category, episodeIndex, ti
 }
 
 console.log('✅ Correções aplicadas!');
+
