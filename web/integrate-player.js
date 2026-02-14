@@ -1,12 +1,24 @@
-document.addEventListener("DOMContentLoaded", () => {
-    console.log("✅ DOM completamente carregado");
-    iniciarPirataflixPlayer();
-});
+(function(){
+
+if (window.PirataflixApp) return;
+
+window.PirataflixApp = {
+    initialized: false,
+    player: null,
+    listeners: null,
+
+    init() {
+        if (this.initialized) return;
+        this.initialized = true;
+
+        console.log("✅ PirataflixApp iniciado");
+
+        iniciarPirataflixPlayer();
+    }
+};
 
 function iniciarPirataflixPlayer(){
 
-     if (window._pirataflixInitialized) return;
-    window._pirataflixInitialized = true;
     
 // ============================================
 // SISTEMA DE CONTINUAR ASSISTINDO
@@ -831,4 +843,11 @@ function initializePlayer() {
     initializePlayer();
 
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    PirataflixApp.init();
+});
+
+})();
+
 
