@@ -57,11 +57,25 @@ const ContinueWatching = {
     
     getWatchingList() {
         const progressos = this.getAll();
-        return Object.values(progressos)
+        
+        // Objeto para armazenar o mais recente de cada série
+        const latestPerSeries = {};
+        
+        Object.values(progressos).forEach(item => {
+            const seriesId = item.itemId; // Agrupa por itemId (série)
+            
+            // Se não tem desta série, ou se este episódio é mais recente
+            if (!latestPerSeries[seriesId] || item.timestamp > latestPerSeries[seriesId].timestamp) {
+                latestPerSeries[seriesId] = item;
+            }
+        });
+        
+        // Converter para array e ordenar por timestamp
+        return Object.values(latestPerSeries)
             .sort((a, b) => b.timestamp - a.timestamp)
             .slice(0, 20);
     }
-};
+}; 
 
 // ============================================
 // FUNÇÃO PARA RENDERIZAR SEÇÃO NA PÁGINA INICIAL
