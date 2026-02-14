@@ -785,7 +785,7 @@ if (typeof window.playWithModernPlayer !== 'function') {
     console.log('🎬 Recriando playWithModernPlayer...');
     
     window.playWithModernPlayer = function(url, title, info = '', itemId = null, category = null, episodeIndex = 0) {
-        const modal = document.getElementById('modernPlayerModal');
+        const modal = document.getElementById('modal');
         if (!modal) {
             console.error('❌ Modal não encontrado');
             window.open(url, '_blank');
