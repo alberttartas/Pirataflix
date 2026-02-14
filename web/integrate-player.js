@@ -245,8 +245,17 @@ function playVideo(itemId, category, episodeIndex = 0) {
     }
     
     // Reproduzir
-    playWithModernPlayer(url, `${item.title} - ${title}`, '', itemId, category, episodeIndex, episodeList);
-}
+    playWithModernPlayer(
+    url,
+    `${item.title} - ${title}`,
+    '',
+    itemId,
+    category,
+    episodeIndex,
+    episodeList,
+    item.poster || ''
+);
+
 
 window.playVideo = playVideo;
 
@@ -254,7 +263,17 @@ window.playVideo = playVideo;
 // PLAYER PRINCIPAL
 // ============================================
 
-window.playWithModernPlayer = function(url, title, info = '', itemId = null, category = null, episodeIndex = 0, episodeList = []) {
+window.playWithModernPlayer = function(
+    url,
+    title,
+    info = '',
+    itemId = null,
+    category = null,
+    episodeIndex = 0,
+    episodeList = [],
+    poster = ''
+)
+ {
     console.log('🎬 Reproduzindo:', title);
     
     const modal = document.getElementById('modernPlayerModal');
@@ -314,7 +333,7 @@ window.playWithModernPlayer = function(url, title, info = '', itemId = null, cat
                 episode: episodeIndex + 1,
                 currentTime: video.currentTime,
                 duration: video.duration,
-                url, poster: item?.poster || ''
+                url, poster: poster
             });
         }
     }, 5000);
