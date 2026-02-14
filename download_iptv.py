@@ -7,9 +7,9 @@ def download_iptv_sources():
     """Baixa fontes do iptv-org sem afetar arquivos existentes"""
     
     base_dir = Path(__file__).parent
-    auto_dir = base_dir / "input_auto"  # Pasta separada!
+    auto_dir = base_dir / "input_auto"
     
-    # Criar subpastas organizadas
+    # Criar subpastas
     pastas = {
         'filmes': auto_dir / 'Filmes',
         'series': auto_dir / 'Series',
@@ -19,7 +19,7 @@ def download_iptv_sources():
     for pasta in pastas.values():
         pasta.mkdir(parents=True, exist_ok=True)
     
-    # URLs atualizadas do iptv-org
+    # URLs do iptv-org
     fontes = {
         'filmes': 'https://iptv-org.github.io/iptv/categories/movies/br.m3u',
         'series': 'https://iptv-org.github.io/iptv/categories/series/br.m3u',
@@ -58,14 +58,6 @@ def download_iptv_sources():
                 
         except Exception as e:
             print(f"   ❌ Erro: {e}")
-    
-    # Salvar log do download
-    log_path = auto_dir / "download_log.json"
-    with open(log_path, 'w') as f:
-        json.dump({
-            'data': datetime.now().isoformat(),
-            'resultados': resultados
-        }, f, indent=2)
     
     print(f"\n📊 Resumo do download:")
     for nome, qtd in resultados.items():
