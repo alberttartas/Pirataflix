@@ -715,6 +715,8 @@ def build_vod_with_direct_capas():
     # Gerar HTML atualizado
     generate_html_with_correct_paths(base_dir, output)
     
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+
     # ============================================
     # CÓPIA DO INTEGRATE-PLAYER.JS (CORRIGIDO)
     # ============================================
@@ -1418,6 +1420,7 @@ def generate_html_with_correct_paths(base_dir, data):
 
 if __name__ == "__main__":
     build_vod_with_direct_capas()
+
 
 
 
