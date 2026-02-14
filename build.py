@@ -1406,6 +1406,27 @@ def generate_html_with_correct_paths(base_dir, data):
     </script>
         <!-- Incluir seu script de integração do player -->
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <!-- GARANTIA ABSOLUTA - SEMPRE FUNCIONA -->
+<script>
+// Esta função existe ANTES de qualquer coisa
+window.playWithModernPlayer = function(url, title, info, itemId, category, episodeIndex) {
+    console.log('🔵 FUNÇÃO DE GARANTIA CHAMADA');
+    
+    // Tenta usar o modal se existir
+    const modal = document.getElementById('modernPlayerModal');
+    if (modal) {
+        modal.style.display = 'flex';
+        const container = document.getElementById('modern-player-container');
+        if (container) {
+            container.innerHTML = `<video controls autoplay style="width:100%;height:100%" src="${url}"></video>`;
+        }
+        return;
+    }
+    
+    // Fallback: abre em nova aba
+    window.open(url, '_blank');
+};
+</script>
     <script src="integrate-player.js" defer></script>
 </body>
 </html>'''
@@ -1419,6 +1440,7 @@ def generate_html_with_correct_paths(base_dir, data):
 
 if __name__ == "__main__":
     build_vod_with_direct_capas()
+
 
 
 
