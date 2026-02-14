@@ -1,4 +1,11 @@
 // ============================================
+// PLAYER COMPLETO - TODAS AS FUNÇÕES
+// ============================================
+
+// GARANTIR QUE A FUNÇÃO DE GARANTIA NÃO BLOQUEIA
+window.playWithModernPlayer = null;
+
+// ============================================
 // SISTEMA DE CONTINUAR ASSISTINDO
 // ============================================
 
@@ -52,7 +59,7 @@ const ContinueWatching = {
 };
 
 // ============================================
-// FUNÇÕES DE RENDERIZAÇÃO
+// FUNÇÃO DE RENDERIZAÇÃO
 // ============================================
 
 function renderContinueWatching() {
@@ -121,7 +128,7 @@ function resumeFromContinueWatching(itemId, category, episodeIndex) {
 }
 
 // ============================================
-// CRIAÇÃO DO MODAL (IMEDIATA)
+// CRIAR MODAL
 // ============================================
 
 (function() {
@@ -140,21 +147,15 @@ function resumeFromContinueWatching(itemId, category, episodeIndex) {
             </div>
         `;
         document.body.appendChild(modal);
-        
-        document.getElementById('closeModernPlayer').onclick = function() {
-            modal.style.display = 'none';
-            const video = document.getElementById('current-video');
-            if (video) video.pause();
-        };
     }
 })();
 
 // ============================================
-// FUNÇÃO PRINCIPAL DO PLAYER
+// FUNÇÃO PRINCIPAL DO PLAYER (VERSÃO COMPLETA)
 // ============================================
 
 window.playWithModernPlayer = function(url, title, info = '', itemId = null, category = null, episodeIndex = 0) {
-    console.log('🎬 Abrindo:', title);
+    console.log('🎬 PLAYER COMPLETO:', title);
     
     const modal = document.getElementById('modernPlayerModal');
     if (!modal) {
@@ -171,6 +172,7 @@ window.playWithModernPlayer = function(url, title, info = '', itemId = null, cat
     container.innerHTML = `<video id="current-video" controls autoplay style="width:100%;height:100%;background:#000;" src="${url}"></video>`;
     
     const video = document.getElementById('current-video');
+    const closeBtn = document.getElementById('closeModernPlayer');
     
     if (savedProgress?.currentTime > 5) {
         video.addEventListener('loadedmetadata', () => {
@@ -197,13 +199,20 @@ window.playWithModernPlayer = function(url, title, info = '', itemId = null, cat
         clearInterval(saveInterval);
     });
     
-    // Limpar ao fechar
-    const closeBtn = document.getElementById('closeModernPlayer');
-    closeBtn.onclick = () => {
+    // Fechar
+    closeBtn.onclick = function() {
         clearInterval(saveInterval);
         modal.style.display = 'none';
         video.pause();
     };
+    
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            clearInterval(saveInterval);
+            modal.style.display = 'none';
+            video.pause();
+        }
+    });
     
     document.getElementById('modern-player-title').textContent = title;
     document.getElementById('modern-player-info').textContent = info;
@@ -236,19 +245,24 @@ window.displayContent = function() {
 };
 
 // ============================================
-// CSS ADICIONAL
+// CSS
 // ============================================
 
-const style = document.createElement('style');
-style.textContent = `
-    .continue-card { cursor: pointer; transition: all 0.3s; }
-    .continue-card:hover { transform: scale(1.05); border: 2px solid #e50914; }
-    #continue-watching { animation: slideIn 0.5s ease; }
-    @keyframes slideIn {
-        from { opacity: 0; transform: translateY(-20px); }
-        to { opacity: 1; transform: translateY(0); }
+(function() {
+    if (!document.querySelector('#player-styles')) {
+        const style = document.createElement('style');
+        style.id = 'player-styles';
+        style.textContent = `
+            .continue-card { cursor: pointer; transition: all 0.3s; }
+            .continue-card:hover { transform: scale(1.05); border: 2px solid #e50914; }
+            #continue-watching { animation: slideIn 0.5s ease; }
+            @keyframes slideIn {
+                from { opacity: 0; transform: translateY(-20px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+        `;
+        document.head.appendChild(style);
     }
-`;
-document.head.appendChild(style);
+})();
 
-console.log('✅ Sistema completo carregado!');
+console.log('✅ PLAYER COMPLETO CARREGADO!');
