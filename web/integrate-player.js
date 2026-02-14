@@ -12,7 +12,8 @@ function iniciarPirataflixPlayer(){
 // SISTEMA DE CONTINUAR ASSISTINDO
 // ============================================
 
-const ContinueWatching = {
+window.ContinueWatching = {
+
     STORAGE_KEY: 'pirataflix_progressos',
     
     getAll() {
@@ -222,12 +223,7 @@ function integrateModernPlayer() {
     loadCSS('player.css');
     loadFontAwesome();
     
-    // Carregar CSS primeiro
-    loadCSS('player.css');
-    
-    // Carregar Font Awesome
-    loadFontAwesome();
-    
+   
     // Verificar se ModernVideoPlayer já está disponível
     if (typeof ModernVideoPlayer !== 'undefined') {
         console.log('✅ ModernVideoPlayer já está disponível');
@@ -279,33 +275,32 @@ function loadFontAwesome() {
 
 // Variáveis globais
 let modernPlayer = null;
-
+    
 function setupPlayerModal() {
 
-    if (window.playWithModernPlayer) {
-        return; // Já configurado
-    }
-    
-    // Criar modal
     const modalHTML = `
         <div id="modernPlayerModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); z-index: 9999; justify-content: center; align-items: center;">
             <div style="width: 90%; max-width: 1200px; max-height: 90vh; background: #000; border-radius: 10px; overflow: hidden; position: relative;">
                 <button id="closeModernPlayer" style="position: absolute; top: 15px; right: 15px; background: rgba(255,255,255,0.1); border: none; color: white; width: 40px; height: 40px; border-radius: 50%; font-size: 20px; cursor: pointer; z-index: 10000; display: flex; align-items: center; justify-content: center;">&times;</button>
                 <div id="modern-player-container" style="width: 100%; height: 70vh;"></div>
                 <div style="padding: 20px; color: white;">
-                    <h3 id="modern-player-title" style="margin: 0 0 10px 0;"></h3>
-                    <p id="modern-player-info" style="margin: 0; opacity: 0.8;"></p>
+                    <h3 id="modern-player-title"></h3>
+                    <p id="modern-player-info"></p>
                 </div>
             </div>
         </div>
     `;
-    
+
     if (!document.getElementById('modernPlayerModal')) {
-    document.body.insertAdjacentHTML('beforeend', modalHTML);
-    console.log('✅ Modal criado no DOM');
-}
+        document.body.insertAdjacentHTML('beforeend', modalHTML);
+        console.log('✅ Modal criado no DOM');
+    }
 
+    if (window.playWithModernPlayer) {
+        return;
+    }
 
+   
     
     window.playWithModernPlayer = function(url, title, info = '', itemId = null, category = null, episodeIndex = 0) {
     
@@ -419,7 +414,11 @@ function setupPlayerModal() {
     };
     
     // Eventos de fechamento
-    document.getElementById('closeModernPlayer').addEventListener('click', closePlayer);
+   const closeBtn = document.getElementById('closeModernPlayer');
+if (closeBtn) {
+    closeBtn.addEventListener('click', closePlayer);
+}
+
     
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') {
@@ -430,66 +429,117 @@ function setupPlayerModal() {
     console.log('✅ Player integrado com sucesso!');
 }
 
-// Função para configurar salvamento de progresso
+let currentVideoListeners = null;
+
 function setupProgressSaving(player, videoId, itemId, category, episodeIndex, title, item) {
     if (!player || !player.video) return;
-    
-    let saveInterval = setInterval(() => {
-        if (player.video && player.video.duration && player.video.currentTime > 0) {
+
+    const video = player.video;
+
+    // 🔴 Remover listeners antigos se existirem
+    if (currentVideoListeners) {
+        video.removeEventListener('timeupdate', currentVideoListeners.timeupdate);
+        video.removeEventListener('pause', currentVideoListeners.pause);
+        video.removeEventListener('ended', currentVideoListeners.ended);
+    }
+
+    // Criar novos listeners
+    let lastSavedSecond = -1;
+
+const onTimeUpdate = () => {
+    if (!video.duration) return;
+
+    const currentSecond = Math.floor(video.currentTime);
+
+    if (currentSecond - lastSavedSecond >= 5) {
+    lastSavedSecond = currentSecond;
+
+
+        ContinueWatching.save({
+            videoId,
+            itemId,
+            category,
+            episodeIndex,
+            title,
+            seriesTitle: title.split(' - ')[0],
+            season: 1,
+            episode: episodeIndex + 1,
+            currentTime: video.currentTime,
+            duration: video.duration,
+            url: video.src,
+            poster: item?.poster || ''
+        });
+    }
+};
+
+    const onPause = () => {
+        if (video.currentTime > 5) {
             ContinueWatching.save({
-                videoId: videoId,
-                itemId: itemId,
-                category: category,
-                episodeIndex: episodeIndex,
-                title: title,
+                videoId,
+                itemId,
+                category,
+                episodeIndex,
+                title,
                 seriesTitle: title.split(' - ')[0],
                 season: 1,
                 episode: episodeIndex + 1,
-                currentTime: player.video.currentTime,
-                duration: player.video.duration,
-                url: player.video.src,
+                currentTime: video.currentTime,
+                duration: video.duration,
+                url: video.src,
                 poster: item?.poster || ''
             });
         }
-    }, 5000);
-    
-    // Limpar intervalo ao pausar
-player.video.addEventListener('pause', () => {
-    clearInterval(saveInterval);
-});
+    };
 
-// Quando o vídeo terminar
-player.video.addEventListener('ended', () => {
-    ContinueWatching.remove(videoId);
-    clearInterval(saveInterval);
+    const onEnded = () => {
+        ContinueWatching.remove(videoId);
 
-    const modal = document.getElementById('modernPlayerModal');
-    const episodeList = JSON.parse(modal.dataset.episodeList || '[]');
-    const currentIndex = parseInt(modal.dataset.currentEpisodeIndex || 0);
+        const modal = document.getElementById('modernPlayerModal');
+if (!modal) return;
 
-    if (currentIndex < episodeList.length - 1) {
-        setTimeout(() => {
-            playNextEpisode();
-        }, 2000);
-    }
-});
+const episodeList = JSON.parse(modal.dataset.episodeList || '[]');
+
+        const currentIndex = parseInt(modal.dataset.currentEpisodeIndex || 0);
+
+        if (currentIndex < episodeList.length - 1) {
+            setTimeout(() => {
+                playNextEpisode();
+            }, 2000);
+        }
+    };
+
+    // Adicionar listeners
+    video.addEventListener('timeupdate', onTimeUpdate);
+    video.addEventListener('pause', onPause);
+    video.addEventListener('ended', onEnded);
+
+    // Guardar referências para remover depois
+    currentVideoListeners = {
+        timeupdate: onTimeUpdate,
+        pause: onPause,
+        ended: onEnded
+    };
+}
+
 
     
     
 // Função para fechar player
 function closePlayer() {
     const modal = document.getElementById('modernPlayerModal');
+    if (!modal) return;
+
     modal.style.display = 'none';
-    
+
     if (modernPlayer && modernPlayer.video) {
         modernPlayer.video.pause();
     }
-    
-    // Remover botão de próximo episódio
+
     const nextBtn = document.getElementById('nextEpisodeBtn');
     if (nextBtn) nextBtn.remove();
 }
 
+    
 // Função para mostrar mensagem de retomada
 function showResumeMessage(resumeTime) {
     const minutes = Math.floor(resumeTime / 60);
@@ -782,9 +832,3 @@ function initializePlayer() {
 
 }
 
-window.addEventListener('load', () => {
-    if (!window.playWithModernPlayer) {
-        console.log('🔁 Re-inicializando player no load');
-        iniciarPirataflixPlayer();
-    }
-});
