@@ -43,26 +43,32 @@ jobs:
         echo "🏗️ Gerando site..."
         python build.py
     
-    - name: Verificar mudanças
+       - name: Verificar mudanças
       id: git-check
       run: |
         git status --porcelain
         if [ -n "$(git status --porcelain)" ]; then
           echo "📦 Mudanças detectadas!"
           echo "changed=true" >> $GITHUB_OUTPUT
+          echo "Arquivos modificados:"
+          git status --porcelain
         else
           echo "✅ Nenhuma mudança detectada"
           echo "changed=false" >> $GITHUB_OUTPUT
         fi
     
-    - name: Commit e push das mudanças
+    - name: Commit e push
       if: steps.git-check.outputs.changed == 'true'
       run: |
         git config --global user.name 'GitHub Action'
         git config --global user.email 'action@github.com'
-        git add input_auto/ web/ iptv_playlists/ data.json
+        echo "📂 Arquivos para commit:"
+        git add input_auto/ web/ iptv_playlists/
+        git status
         git commit -m "🤖 Atualização automática do catálogo [skip ci]"
         git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     
     - name: Criar arquivo de log
       run: |
