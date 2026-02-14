@@ -40,1129 +40,1129 @@
     <icon src="https://alberttartas.github.io/Pirataflix/Pirataflix/assets/Capas/maria_do_bairro.jpg"/>
     <url>https://pirataflix-seven.vercel.app/</url>
   </channel>
-  <programme channel="FILME.2COELHOS" start="20260214104637 +0000" stop="20260214124637 +0000">
+  <programme channel="FILME.2COELHOS" start="20260214111350 +0000" stop="20260214131350 +0000">
     <title>2 Coelhos</title>
     <desc>🎬 2 Coelhos</desc>
     <category>🎬 Filmes</category>
   </programme>
-  <programme channel="BRIDGERTON.T01" start="20260214104637 +0000" stop="20260214114637 +0000">
+  <programme channel="BRIDGERTON.T01" start="20260214111350 +0000" stop="20260214121350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 1</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="BRIDGERTON.T02" start="20260214104637 +0000" stop="20260214114637 +0000">
+  <programme channel="BRIDGERTON.T02" start="20260214111350 +0000" stop="20260214121350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 2</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S02E01</episode-num>
   </programme>
-  <programme channel="BRIDGERTON.T03" start="20260214104637 +0000" stop="20260214114637 +0000">
+  <programme channel="BRIDGERTON.T03" start="20260214111350 +0000" stop="20260214121350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 3</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S03E01</episode-num>
   </programme>
-  <programme channel="IPTVCANAISBR.T01" start="20260214104637 +0000" stop="20260214114637 +0000">
+  <programme channel="IPTVCANAISBR.T01" start="20260214111350 +0000" stop="20260214121350 +0000">
     <title>Iptv Canais Br - Episódio 7</title>
     <desc>💖 Novelas - Iptv Canais Br Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E07</episode-num>
   </programme>
-  <programme channel="OSDONOSDOJOGO.T01" start="20260214104637 +0000" stop="20260214114637 +0000">
+  <programme channel="OSDONOSDOJOGO.T01" start="20260214111350 +0000" stop="20260214121350 +0000">
     <title>Os Donos Do Jogo - Episódio 1</title>
     <desc>💖 Novelas - Os Donos Do Jogo Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="TRESGRACAS.T01" start="20260214104637 +0000" stop="20260214114637 +0000">
+  <programme channel="TRESGRACAS.T01" start="20260214111350 +0000" stop="20260214121350 +0000">
     <title>Três Graças - Episódio 1</title>
     <desc>💖 Novelas - Três Graças Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260214104637 +0000" stop="20260214114637 +0000">
+  <programme channel="MARIADOBAIRRO.T01" start="20260214111350 +0000" stop="20260214121350 +0000">
     <title>Maria Do Bairro - Episódio 1</title>
     <desc>💖 Novelas - Maria Do Bairro Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="FILME.2COELHOS" start="20260214114637 +0000" stop="20260214134637 +0000">
+  <programme channel="FILME.2COELHOS" start="20260214121350 +0000" stop="20260214141350 +0000">
     <title>2 Coelhos</title>
     <desc>🎬 2 Coelhos</desc>
     <category>🎬 Filmes</category>
   </programme>
-  <programme channel="BRIDGERTON.T01" start="20260214114637 +0000" stop="20260214124637 +0000">
+  <programme channel="BRIDGERTON.T01" start="20260214121350 +0000" stop="20260214131350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 1</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="BRIDGERTON.T02" start="20260214114637 +0000" stop="20260214124637 +0000">
+  <programme channel="BRIDGERTON.T02" start="20260214121350 +0000" stop="20260214131350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 2</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S02E01</episode-num>
   </programme>
-  <programme channel="BRIDGERTON.T03" start="20260214114637 +0000" stop="20260214124637 +0000">
+  <programme channel="BRIDGERTON.T03" start="20260214121350 +0000" stop="20260214131350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 3</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S03E01</episode-num>
   </programme>
-  <programme channel="IPTVCANAISBR.T01" start="20260214114637 +0000" stop="20260214124637 +0000">
+  <programme channel="IPTVCANAISBR.T01" start="20260214121350 +0000" stop="20260214131350 +0000">
     <title>Iptv Canais Br - Episódio 7</title>
     <desc>💖 Novelas - Iptv Canais Br Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E07</episode-num>
   </programme>
-  <programme channel="OSDONOSDOJOGO.T01" start="20260214114637 +0000" stop="20260214124637 +0000">
+  <programme channel="OSDONOSDOJOGO.T01" start="20260214121350 +0000" stop="20260214131350 +0000">
     <title>Os Donos Do Jogo - Episódio 1</title>
     <desc>💖 Novelas - Os Donos Do Jogo Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="TRESGRACAS.T01" start="20260214114637 +0000" stop="20260214124637 +0000">
+  <programme channel="TRESGRACAS.T01" start="20260214121350 +0000" stop="20260214131350 +0000">
     <title>Três Graças - Episódio 1</title>
     <desc>💖 Novelas - Três Graças Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260214114637 +0000" stop="20260214124637 +0000">
+  <programme channel="MARIADOBAIRRO.T01" start="20260214121350 +0000" stop="20260214131350 +0000">
     <title>Maria Do Bairro - Episódio 1</title>
     <desc>💖 Novelas - Maria Do Bairro Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="FILME.2COELHOS" start="20260214124637 +0000" stop="20260214144637 +0000">
+  <programme channel="FILME.2COELHOS" start="20260214131350 +0000" stop="20260214151350 +0000">
     <title>2 Coelhos</title>
     <desc>🎬 2 Coelhos</desc>
     <category>🎬 Filmes</category>
   </programme>
-  <programme channel="BRIDGERTON.T01" start="20260214124637 +0000" stop="20260214134637 +0000">
+  <programme channel="BRIDGERTON.T01" start="20260214131350 +0000" stop="20260214141350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 1</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="BRIDGERTON.T02" start="20260214124637 +0000" stop="20260214134637 +0000">
+  <programme channel="BRIDGERTON.T02" start="20260214131350 +0000" stop="20260214141350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 2</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S02E01</episode-num>
   </programme>
-  <programme channel="BRIDGERTON.T03" start="20260214124637 +0000" stop="20260214134637 +0000">
+  <programme channel="BRIDGERTON.T03" start="20260214131350 +0000" stop="20260214141350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 3</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S03E01</episode-num>
   </programme>
-  <programme channel="IPTVCANAISBR.T01" start="20260214124637 +0000" stop="20260214134637 +0000">
+  <programme channel="IPTVCANAISBR.T01" start="20260214131350 +0000" stop="20260214141350 +0000">
     <title>Iptv Canais Br - Episódio 7</title>
     <desc>💖 Novelas - Iptv Canais Br Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E07</episode-num>
   </programme>
-  <programme channel="OSDONOSDOJOGO.T01" start="20260214124637 +0000" stop="20260214134637 +0000">
+  <programme channel="OSDONOSDOJOGO.T01" start="20260214131350 +0000" stop="20260214141350 +0000">
     <title>Os Donos Do Jogo - Episódio 1</title>
     <desc>💖 Novelas - Os Donos Do Jogo Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="TRESGRACAS.T01" start="20260214124637 +0000" stop="20260214134637 +0000">
+  <programme channel="TRESGRACAS.T01" start="20260214131350 +0000" stop="20260214141350 +0000">
     <title>Três Graças - Episódio 1</title>
     <desc>💖 Novelas - Três Graças Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260214124637 +0000" stop="20260214134637 +0000">
+  <programme channel="MARIADOBAIRRO.T01" start="20260214131350 +0000" stop="20260214141350 +0000">
     <title>Maria Do Bairro - Episódio 1</title>
     <desc>💖 Novelas - Maria Do Bairro Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="FILME.2COELHOS" start="20260214134637 +0000" stop="20260214154637 +0000">
+  <programme channel="FILME.2COELHOS" start="20260214141350 +0000" stop="20260214161350 +0000">
     <title>2 Coelhos</title>
     <desc>🎬 2 Coelhos</desc>
     <category>🎬 Filmes</category>
   </programme>
-  <programme channel="BRIDGERTON.T01" start="20260214134637 +0000" stop="20260214144637 +0000">
+  <programme channel="BRIDGERTON.T01" start="20260214141350 +0000" stop="20260214151350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 1</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="BRIDGERTON.T02" start="20260214134637 +0000" stop="20260214144637 +0000">
+  <programme channel="BRIDGERTON.T02" start="20260214141350 +0000" stop="20260214151350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 2</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S02E01</episode-num>
   </programme>
-  <programme channel="BRIDGERTON.T03" start="20260214134637 +0000" stop="20260214144637 +0000">
+  <programme channel="BRIDGERTON.T03" start="20260214141350 +0000" stop="20260214151350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 3</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S03E01</episode-num>
   </programme>
-  <programme channel="IPTVCANAISBR.T01" start="20260214134637 +0000" stop="20260214144637 +0000">
+  <programme channel="IPTVCANAISBR.T01" start="20260214141350 +0000" stop="20260214151350 +0000">
     <title>Iptv Canais Br - Episódio 7</title>
     <desc>💖 Novelas - Iptv Canais Br Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E07</episode-num>
   </programme>
-  <programme channel="OSDONOSDOJOGO.T01" start="20260214134637 +0000" stop="20260214144637 +0000">
+  <programme channel="OSDONOSDOJOGO.T01" start="20260214141350 +0000" stop="20260214151350 +0000">
     <title>Os Donos Do Jogo - Episódio 1</title>
     <desc>💖 Novelas - Os Donos Do Jogo Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="TRESGRACAS.T01" start="20260214134637 +0000" stop="20260214144637 +0000">
+  <programme channel="TRESGRACAS.T01" start="20260214141350 +0000" stop="20260214151350 +0000">
     <title>Três Graças - Episódio 1</title>
     <desc>💖 Novelas - Três Graças Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260214134637 +0000" stop="20260214144637 +0000">
+  <programme channel="MARIADOBAIRRO.T01" start="20260214141350 +0000" stop="20260214151350 +0000">
     <title>Maria Do Bairro - Episódio 1</title>
     <desc>💖 Novelas - Maria Do Bairro Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="FILME.2COELHOS" start="20260214144637 +0000" stop="20260214164637 +0000">
+  <programme channel="FILME.2COELHOS" start="20260214151350 +0000" stop="20260214171350 +0000">
     <title>2 Coelhos</title>
     <desc>🎬 2 Coelhos</desc>
     <category>🎬 Filmes</category>
   </programme>
-  <programme channel="BRIDGERTON.T01" start="20260214144637 +0000" stop="20260214154637 +0000">
+  <programme channel="BRIDGERTON.T01" start="20260214151350 +0000" stop="20260214161350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 1</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="BRIDGERTON.T02" start="20260214144637 +0000" stop="20260214154637 +0000">
+  <programme channel="BRIDGERTON.T02" start="20260214151350 +0000" stop="20260214161350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 2</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S02E01</episode-num>
   </programme>
-  <programme channel="BRIDGERTON.T03" start="20260214144637 +0000" stop="20260214154637 +0000">
+  <programme channel="BRIDGERTON.T03" start="20260214151350 +0000" stop="20260214161350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 3</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S03E01</episode-num>
   </programme>
-  <programme channel="IPTVCANAISBR.T01" start="20260214144637 +0000" stop="20260214154637 +0000">
+  <programme channel="IPTVCANAISBR.T01" start="20260214151350 +0000" stop="20260214161350 +0000">
     <title>Iptv Canais Br - Episódio 7</title>
     <desc>💖 Novelas - Iptv Canais Br Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E07</episode-num>
   </programme>
-  <programme channel="OSDONOSDOJOGO.T01" start="20260214144637 +0000" stop="20260214154637 +0000">
+  <programme channel="OSDONOSDOJOGO.T01" start="20260214151350 +0000" stop="20260214161350 +0000">
     <title>Os Donos Do Jogo - Episódio 1</title>
     <desc>💖 Novelas - Os Donos Do Jogo Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="TRESGRACAS.T01" start="20260214144637 +0000" stop="20260214154637 +0000">
+  <programme channel="TRESGRACAS.T01" start="20260214151350 +0000" stop="20260214161350 +0000">
     <title>Três Graças - Episódio 1</title>
     <desc>💖 Novelas - Três Graças Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260214144637 +0000" stop="20260214154637 +0000">
+  <programme channel="MARIADOBAIRRO.T01" start="20260214151350 +0000" stop="20260214161350 +0000">
     <title>Maria Do Bairro - Episódio 1</title>
     <desc>💖 Novelas - Maria Do Bairro Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="FILME.2COELHOS" start="20260214154637 +0000" stop="20260214174637 +0000">
+  <programme channel="FILME.2COELHOS" start="20260214161350 +0000" stop="20260214181350 +0000">
     <title>2 Coelhos</title>
     <desc>🎬 2 Coelhos</desc>
     <category>🎬 Filmes</category>
   </programme>
-  <programme channel="BRIDGERTON.T01" start="20260214154637 +0000" stop="20260214164637 +0000">
+  <programme channel="BRIDGERTON.T01" start="20260214161350 +0000" stop="20260214171350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 1</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="BRIDGERTON.T02" start="20260214154637 +0000" stop="20260214164637 +0000">
+  <programme channel="BRIDGERTON.T02" start="20260214161350 +0000" stop="20260214171350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 2</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S02E01</episode-num>
   </programme>
-  <programme channel="BRIDGERTON.T03" start="20260214154637 +0000" stop="20260214164637 +0000">
+  <programme channel="BRIDGERTON.T03" start="20260214161350 +0000" stop="20260214171350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 3</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S03E01</episode-num>
   </programme>
-  <programme channel="IPTVCANAISBR.T01" start="20260214154637 +0000" stop="20260214164637 +0000">
+  <programme channel="IPTVCANAISBR.T01" start="20260214161350 +0000" stop="20260214171350 +0000">
     <title>Iptv Canais Br - Episódio 7</title>
     <desc>💖 Novelas - Iptv Canais Br Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E07</episode-num>
   </programme>
-  <programme channel="OSDONOSDOJOGO.T01" start="20260214154637 +0000" stop="20260214164637 +0000">
+  <programme channel="OSDONOSDOJOGO.T01" start="20260214161350 +0000" stop="20260214171350 +0000">
     <title>Os Donos Do Jogo - Episódio 1</title>
     <desc>💖 Novelas - Os Donos Do Jogo Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="TRESGRACAS.T01" start="20260214154637 +0000" stop="20260214164637 +0000">
+  <programme channel="TRESGRACAS.T01" start="20260214161350 +0000" stop="20260214171350 +0000">
     <title>Três Graças - Episódio 1</title>
     <desc>💖 Novelas - Três Graças Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260214154637 +0000" stop="20260214164637 +0000">
+  <programme channel="MARIADOBAIRRO.T01" start="20260214161350 +0000" stop="20260214171350 +0000">
     <title>Maria Do Bairro - Episódio 1</title>
     <desc>💖 Novelas - Maria Do Bairro Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="FILME.2COELHOS" start="20260214164637 +0000" stop="20260214184637 +0000">
+  <programme channel="FILME.2COELHOS" start="20260214171350 +0000" stop="20260214191350 +0000">
     <title>2 Coelhos</title>
     <desc>🎬 2 Coelhos</desc>
     <category>🎬 Filmes</category>
   </programme>
-  <programme channel="BRIDGERTON.T01" start="20260214164637 +0000" stop="20260214174637 +0000">
+  <programme channel="BRIDGERTON.T01" start="20260214171350 +0000" stop="20260214181350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 1</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="BRIDGERTON.T02" start="20260214164637 +0000" stop="20260214174637 +0000">
+  <programme channel="BRIDGERTON.T02" start="20260214171350 +0000" stop="20260214181350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 2</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S02E01</episode-num>
   </programme>
-  <programme channel="BRIDGERTON.T03" start="20260214164637 +0000" stop="20260214174637 +0000">
+  <programme channel="BRIDGERTON.T03" start="20260214171350 +0000" stop="20260214181350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 3</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S03E01</episode-num>
   </programme>
-  <programme channel="IPTVCANAISBR.T01" start="20260214164637 +0000" stop="20260214174637 +0000">
+  <programme channel="IPTVCANAISBR.T01" start="20260214171350 +0000" stop="20260214181350 +0000">
     <title>Iptv Canais Br - Episódio 7</title>
     <desc>💖 Novelas - Iptv Canais Br Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E07</episode-num>
   </programme>
-  <programme channel="OSDONOSDOJOGO.T01" start="20260214164637 +0000" stop="20260214174637 +0000">
+  <programme channel="OSDONOSDOJOGO.T01" start="20260214171350 +0000" stop="20260214181350 +0000">
     <title>Os Donos Do Jogo - Episódio 1</title>
     <desc>💖 Novelas - Os Donos Do Jogo Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="TRESGRACAS.T01" start="20260214164637 +0000" stop="20260214174637 +0000">
+  <programme channel="TRESGRACAS.T01" start="20260214171350 +0000" stop="20260214181350 +0000">
     <title>Três Graças - Episódio 1</title>
     <desc>💖 Novelas - Três Graças Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260214164637 +0000" stop="20260214174637 +0000">
+  <programme channel="MARIADOBAIRRO.T01" start="20260214171350 +0000" stop="20260214181350 +0000">
     <title>Maria Do Bairro - Episódio 1</title>
     <desc>💖 Novelas - Maria Do Bairro Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="FILME.2COELHOS" start="20260214174637 +0000" stop="20260214194637 +0000">
+  <programme channel="FILME.2COELHOS" start="20260214181350 +0000" stop="20260214201350 +0000">
     <title>2 Coelhos</title>
     <desc>🎬 2 Coelhos</desc>
     <category>🎬 Filmes</category>
   </programme>
-  <programme channel="BRIDGERTON.T01" start="20260214174637 +0000" stop="20260214184637 +0000">
+  <programme channel="BRIDGERTON.T01" start="20260214181350 +0000" stop="20260214191350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 1</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="BRIDGERTON.T02" start="20260214174637 +0000" stop="20260214184637 +0000">
+  <programme channel="BRIDGERTON.T02" start="20260214181350 +0000" stop="20260214191350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 2</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S02E01</episode-num>
   </programme>
-  <programme channel="BRIDGERTON.T03" start="20260214174637 +0000" stop="20260214184637 +0000">
+  <programme channel="BRIDGERTON.T03" start="20260214181350 +0000" stop="20260214191350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 3</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S03E01</episode-num>
   </programme>
-  <programme channel="IPTVCANAISBR.T01" start="20260214174637 +0000" stop="20260214184637 +0000">
+  <programme channel="IPTVCANAISBR.T01" start="20260214181350 +0000" stop="20260214191350 +0000">
     <title>Iptv Canais Br - Episódio 7</title>
     <desc>💖 Novelas - Iptv Canais Br Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E07</episode-num>
   </programme>
-  <programme channel="OSDONOSDOJOGO.T01" start="20260214174637 +0000" stop="20260214184637 +0000">
+  <programme channel="OSDONOSDOJOGO.T01" start="20260214181350 +0000" stop="20260214191350 +0000">
     <title>Os Donos Do Jogo - Episódio 1</title>
     <desc>💖 Novelas - Os Donos Do Jogo Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="TRESGRACAS.T01" start="20260214174637 +0000" stop="20260214184637 +0000">
+  <programme channel="TRESGRACAS.T01" start="20260214181350 +0000" stop="20260214191350 +0000">
     <title>Três Graças - Episódio 1</title>
     <desc>💖 Novelas - Três Graças Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260214174637 +0000" stop="20260214184637 +0000">
+  <programme channel="MARIADOBAIRRO.T01" start="20260214181350 +0000" stop="20260214191350 +0000">
     <title>Maria Do Bairro - Episódio 1</title>
     <desc>💖 Novelas - Maria Do Bairro Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="FILME.2COELHOS" start="20260214184637 +0000" stop="20260214204637 +0000">
+  <programme channel="FILME.2COELHOS" start="20260214191350 +0000" stop="20260214211350 +0000">
     <title>2 Coelhos</title>
     <desc>🎬 2 Coelhos</desc>
     <category>🎬 Filmes</category>
   </programme>
-  <programme channel="BRIDGERTON.T01" start="20260214184637 +0000" stop="20260214194637 +0000">
+  <programme channel="BRIDGERTON.T01" start="20260214191350 +0000" stop="20260214201350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 1</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="BRIDGERTON.T02" start="20260214184637 +0000" stop="20260214194637 +0000">
+  <programme channel="BRIDGERTON.T02" start="20260214191350 +0000" stop="20260214201350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 2</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S02E01</episode-num>
   </programme>
-  <programme channel="BRIDGERTON.T03" start="20260214184637 +0000" stop="20260214194637 +0000">
+  <programme channel="BRIDGERTON.T03" start="20260214191350 +0000" stop="20260214201350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 3</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S03E01</episode-num>
   </programme>
-  <programme channel="IPTVCANAISBR.T01" start="20260214184637 +0000" stop="20260214194637 +0000">
+  <programme channel="IPTVCANAISBR.T01" start="20260214191350 +0000" stop="20260214201350 +0000">
     <title>Iptv Canais Br - Episódio 7</title>
     <desc>💖 Novelas - Iptv Canais Br Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E07</episode-num>
   </programme>
-  <programme channel="OSDONOSDOJOGO.T01" start="20260214184637 +0000" stop="20260214194637 +0000">
+  <programme channel="OSDONOSDOJOGO.T01" start="20260214191350 +0000" stop="20260214201350 +0000">
     <title>Os Donos Do Jogo - Episódio 1</title>
     <desc>💖 Novelas - Os Donos Do Jogo Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="TRESGRACAS.T01" start="20260214184637 +0000" stop="20260214194637 +0000">
+  <programme channel="TRESGRACAS.T01" start="20260214191350 +0000" stop="20260214201350 +0000">
     <title>Três Graças - Episódio 1</title>
     <desc>💖 Novelas - Três Graças Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260214184637 +0000" stop="20260214194637 +0000">
+  <programme channel="MARIADOBAIRRO.T01" start="20260214191350 +0000" stop="20260214201350 +0000">
     <title>Maria Do Bairro - Episódio 1</title>
     <desc>💖 Novelas - Maria Do Bairro Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="FILME.2COELHOS" start="20260214194637 +0000" stop="20260214214637 +0000">
+  <programme channel="FILME.2COELHOS" start="20260214201350 +0000" stop="20260214221350 +0000">
     <title>2 Coelhos</title>
     <desc>🎬 2 Coelhos</desc>
     <category>🎬 Filmes</category>
   </programme>
-  <programme channel="BRIDGERTON.T01" start="20260214194637 +0000" stop="20260214204637 +0000">
+  <programme channel="BRIDGERTON.T01" start="20260214201350 +0000" stop="20260214211350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 1</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="BRIDGERTON.T02" start="20260214194637 +0000" stop="20260214204637 +0000">
+  <programme channel="BRIDGERTON.T02" start="20260214201350 +0000" stop="20260214211350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 2</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S02E01</episode-num>
   </programme>
-  <programme channel="BRIDGERTON.T03" start="20260214194637 +0000" stop="20260214204637 +0000">
+  <programme channel="BRIDGERTON.T03" start="20260214201350 +0000" stop="20260214211350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 3</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S03E01</episode-num>
   </programme>
-  <programme channel="IPTVCANAISBR.T01" start="20260214194637 +0000" stop="20260214204637 +0000">
+  <programme channel="IPTVCANAISBR.T01" start="20260214201350 +0000" stop="20260214211350 +0000">
     <title>Iptv Canais Br - Episódio 7</title>
     <desc>💖 Novelas - Iptv Canais Br Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E07</episode-num>
   </programme>
-  <programme channel="OSDONOSDOJOGO.T01" start="20260214194637 +0000" stop="20260214204637 +0000">
+  <programme channel="OSDONOSDOJOGO.T01" start="20260214201350 +0000" stop="20260214211350 +0000">
     <title>Os Donos Do Jogo - Episódio 1</title>
     <desc>💖 Novelas - Os Donos Do Jogo Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="TRESGRACAS.T01" start="20260214194637 +0000" stop="20260214204637 +0000">
+  <programme channel="TRESGRACAS.T01" start="20260214201350 +0000" stop="20260214211350 +0000">
     <title>Três Graças - Episódio 1</title>
     <desc>💖 Novelas - Três Graças Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260214194637 +0000" stop="20260214204637 +0000">
+  <programme channel="MARIADOBAIRRO.T01" start="20260214201350 +0000" stop="20260214211350 +0000">
     <title>Maria Do Bairro - Episódio 1</title>
     <desc>💖 Novelas - Maria Do Bairro Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="FILME.2COELHOS" start="20260214204637 +0000" stop="20260214224637 +0000">
+  <programme channel="FILME.2COELHOS" start="20260214211350 +0000" stop="20260214231350 +0000">
     <title>2 Coelhos</title>
     <desc>🎬 2 Coelhos</desc>
     <category>🎬 Filmes</category>
   </programme>
-  <programme channel="BRIDGERTON.T01" start="20260214204637 +0000" stop="20260214214637 +0000">
+  <programme channel="BRIDGERTON.T01" start="20260214211350 +0000" stop="20260214221350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 1</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="BRIDGERTON.T02" start="20260214204637 +0000" stop="20260214214637 +0000">
+  <programme channel="BRIDGERTON.T02" start="20260214211350 +0000" stop="20260214221350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 2</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S02E01</episode-num>
   </programme>
-  <programme channel="BRIDGERTON.T03" start="20260214204637 +0000" stop="20260214214637 +0000">
+  <programme channel="BRIDGERTON.T03" start="20260214211350 +0000" stop="20260214221350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 3</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S03E01</episode-num>
   </programme>
-  <programme channel="IPTVCANAISBR.T01" start="20260214204637 +0000" stop="20260214214637 +0000">
+  <programme channel="IPTVCANAISBR.T01" start="20260214211350 +0000" stop="20260214221350 +0000">
     <title>Iptv Canais Br - Episódio 7</title>
     <desc>💖 Novelas - Iptv Canais Br Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E07</episode-num>
   </programme>
-  <programme channel="OSDONOSDOJOGO.T01" start="20260214204637 +0000" stop="20260214214637 +0000">
+  <programme channel="OSDONOSDOJOGO.T01" start="20260214211350 +0000" stop="20260214221350 +0000">
     <title>Os Donos Do Jogo - Episódio 1</title>
     <desc>💖 Novelas - Os Donos Do Jogo Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="TRESGRACAS.T01" start="20260214204637 +0000" stop="20260214214637 +0000">
+  <programme channel="TRESGRACAS.T01" start="20260214211350 +0000" stop="20260214221350 +0000">
     <title>Três Graças - Episódio 1</title>
     <desc>💖 Novelas - Três Graças Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260214204637 +0000" stop="20260214214637 +0000">
+  <programme channel="MARIADOBAIRRO.T01" start="20260214211350 +0000" stop="20260214221350 +0000">
     <title>Maria Do Bairro - Episódio 1</title>
     <desc>💖 Novelas - Maria Do Bairro Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="FILME.2COELHOS" start="20260214214637 +0000" stop="20260214234637 +0000">
+  <programme channel="FILME.2COELHOS" start="20260214221350 +0000" stop="20260215001350 +0000">
     <title>2 Coelhos</title>
     <desc>🎬 2 Coelhos</desc>
     <category>🎬 Filmes</category>
   </programme>
-  <programme channel="BRIDGERTON.T01" start="20260214214637 +0000" stop="20260214224637 +0000">
+  <programme channel="BRIDGERTON.T01" start="20260214221350 +0000" stop="20260214231350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 1</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="BRIDGERTON.T02" start="20260214214637 +0000" stop="20260214224637 +0000">
+  <programme channel="BRIDGERTON.T02" start="20260214221350 +0000" stop="20260214231350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 2</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S02E01</episode-num>
   </programme>
-  <programme channel="BRIDGERTON.T03" start="20260214214637 +0000" stop="20260214224637 +0000">
+  <programme channel="BRIDGERTON.T03" start="20260214221350 +0000" stop="20260214231350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 3</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S03E01</episode-num>
   </programme>
-  <programme channel="IPTVCANAISBR.T01" start="20260214214637 +0000" stop="20260214224637 +0000">
+  <programme channel="IPTVCANAISBR.T01" start="20260214221350 +0000" stop="20260214231350 +0000">
     <title>Iptv Canais Br - Episódio 7</title>
     <desc>💖 Novelas - Iptv Canais Br Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E07</episode-num>
   </programme>
-  <programme channel="OSDONOSDOJOGO.T01" start="20260214214637 +0000" stop="20260214224637 +0000">
+  <programme channel="OSDONOSDOJOGO.T01" start="20260214221350 +0000" stop="20260214231350 +0000">
     <title>Os Donos Do Jogo - Episódio 1</title>
     <desc>💖 Novelas - Os Donos Do Jogo Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="TRESGRACAS.T01" start="20260214214637 +0000" stop="20260214224637 +0000">
+  <programme channel="TRESGRACAS.T01" start="20260214221350 +0000" stop="20260214231350 +0000">
     <title>Três Graças - Episódio 1</title>
     <desc>💖 Novelas - Três Graças Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260214214637 +0000" stop="20260214224637 +0000">
+  <programme channel="MARIADOBAIRRO.T01" start="20260214221350 +0000" stop="20260214231350 +0000">
     <title>Maria Do Bairro - Episódio 1</title>
     <desc>💖 Novelas - Maria Do Bairro Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="FILME.2COELHOS" start="20260214224637 +0000" stop="20260215004637 +0000">
+  <programme channel="FILME.2COELHOS" start="20260214231350 +0000" stop="20260215011350 +0000">
     <title>2 Coelhos</title>
     <desc>🎬 2 Coelhos</desc>
     <category>🎬 Filmes</category>
   </programme>
-  <programme channel="BRIDGERTON.T01" start="20260214224637 +0000" stop="20260214234637 +0000">
+  <programme channel="BRIDGERTON.T01" start="20260214231350 +0000" stop="20260215001350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 1</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="BRIDGERTON.T02" start="20260214224637 +0000" stop="20260214234637 +0000">
+  <programme channel="BRIDGERTON.T02" start="20260214231350 +0000" stop="20260215001350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 2</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S02E01</episode-num>
   </programme>
-  <programme channel="BRIDGERTON.T03" start="20260214224637 +0000" stop="20260214234637 +0000">
+  <programme channel="BRIDGERTON.T03" start="20260214231350 +0000" stop="20260215001350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 3</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S03E01</episode-num>
   </programme>
-  <programme channel="IPTVCANAISBR.T01" start="20260214224637 +0000" stop="20260214234637 +0000">
+  <programme channel="IPTVCANAISBR.T01" start="20260214231350 +0000" stop="20260215001350 +0000">
     <title>Iptv Canais Br - Episódio 7</title>
     <desc>💖 Novelas - Iptv Canais Br Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E07</episode-num>
   </programme>
-  <programme channel="OSDONOSDOJOGO.T01" start="20260214224637 +0000" stop="20260214234637 +0000">
+  <programme channel="OSDONOSDOJOGO.T01" start="20260214231350 +0000" stop="20260215001350 +0000">
     <title>Os Donos Do Jogo - Episódio 1</title>
     <desc>💖 Novelas - Os Donos Do Jogo Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="TRESGRACAS.T01" start="20260214224637 +0000" stop="20260214234637 +0000">
+  <programme channel="TRESGRACAS.T01" start="20260214231350 +0000" stop="20260215001350 +0000">
     <title>Três Graças - Episódio 1</title>
     <desc>💖 Novelas - Três Graças Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260214224637 +0000" stop="20260214234637 +0000">
+  <programme channel="MARIADOBAIRRO.T01" start="20260214231350 +0000" stop="20260215001350 +0000">
     <title>Maria Do Bairro - Episódio 1</title>
     <desc>💖 Novelas - Maria Do Bairro Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="FILME.2COELHOS" start="20260214234637 +0000" stop="20260215014637 +0000">
+  <programme channel="FILME.2COELHOS" start="20260215001350 +0000" stop="20260215021350 +0000">
     <title>2 Coelhos</title>
     <desc>🎬 2 Coelhos</desc>
     <category>🎬 Filmes</category>
   </programme>
-  <programme channel="BRIDGERTON.T01" start="20260214234637 +0000" stop="20260215004637 +0000">
+  <programme channel="BRIDGERTON.T01" start="20260215001350 +0000" stop="20260215011350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 1</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="BRIDGERTON.T02" start="20260214234637 +0000" stop="20260215004637 +0000">
+  <programme channel="BRIDGERTON.T02" start="20260215001350 +0000" stop="20260215011350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 2</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S02E01</episode-num>
   </programme>
-  <programme channel="BRIDGERTON.T03" start="20260214234637 +0000" stop="20260215004637 +0000">
+  <programme channel="BRIDGERTON.T03" start="20260215001350 +0000" stop="20260215011350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 3</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S03E01</episode-num>
   </programme>
-  <programme channel="IPTVCANAISBR.T01" start="20260214234637 +0000" stop="20260215004637 +0000">
+  <programme channel="IPTVCANAISBR.T01" start="20260215001350 +0000" stop="20260215011350 +0000">
     <title>Iptv Canais Br - Episódio 7</title>
     <desc>💖 Novelas - Iptv Canais Br Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E07</episode-num>
   </programme>
-  <programme channel="OSDONOSDOJOGO.T01" start="20260214234637 +0000" stop="20260215004637 +0000">
+  <programme channel="OSDONOSDOJOGO.T01" start="20260215001350 +0000" stop="20260215011350 +0000">
     <title>Os Donos Do Jogo - Episódio 1</title>
     <desc>💖 Novelas - Os Donos Do Jogo Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="TRESGRACAS.T01" start="20260214234637 +0000" stop="20260215004637 +0000">
+  <programme channel="TRESGRACAS.T01" start="20260215001350 +0000" stop="20260215011350 +0000">
     <title>Três Graças - Episódio 1</title>
     <desc>💖 Novelas - Três Graças Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260214234637 +0000" stop="20260215004637 +0000">
+  <programme channel="MARIADOBAIRRO.T01" start="20260215001350 +0000" stop="20260215011350 +0000">
     <title>Maria Do Bairro - Episódio 1</title>
     <desc>💖 Novelas - Maria Do Bairro Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="FILME.2COELHOS" start="20260215004637 +0000" stop="20260215024637 +0000">
+  <programme channel="FILME.2COELHOS" start="20260215011350 +0000" stop="20260215031350 +0000">
     <title>2 Coelhos</title>
     <desc>🎬 2 Coelhos</desc>
     <category>🎬 Filmes</category>
   </programme>
-  <programme channel="BRIDGERTON.T01" start="20260215004637 +0000" stop="20260215014637 +0000">
+  <programme channel="BRIDGERTON.T01" start="20260215011350 +0000" stop="20260215021350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 1</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="BRIDGERTON.T02" start="20260215004637 +0000" stop="20260215014637 +0000">
+  <programme channel="BRIDGERTON.T02" start="20260215011350 +0000" stop="20260215021350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 2</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S02E01</episode-num>
   </programme>
-  <programme channel="BRIDGERTON.T03" start="20260215004637 +0000" stop="20260215014637 +0000">
+  <programme channel="BRIDGERTON.T03" start="20260215011350 +0000" stop="20260215021350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 3</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S03E01</episode-num>
   </programme>
-  <programme channel="IPTVCANAISBR.T01" start="20260215004637 +0000" stop="20260215014637 +0000">
+  <programme channel="IPTVCANAISBR.T01" start="20260215011350 +0000" stop="20260215021350 +0000">
     <title>Iptv Canais Br - Episódio 7</title>
     <desc>💖 Novelas - Iptv Canais Br Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E07</episode-num>
   </programme>
-  <programme channel="OSDONOSDOJOGO.T01" start="20260215004637 +0000" stop="20260215014637 +0000">
+  <programme channel="OSDONOSDOJOGO.T01" start="20260215011350 +0000" stop="20260215021350 +0000">
     <title>Os Donos Do Jogo - Episódio 1</title>
     <desc>💖 Novelas - Os Donos Do Jogo Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="TRESGRACAS.T01" start="20260215004637 +0000" stop="20260215014637 +0000">
+  <programme channel="TRESGRACAS.T01" start="20260215011350 +0000" stop="20260215021350 +0000">
     <title>Três Graças - Episódio 1</title>
     <desc>💖 Novelas - Três Graças Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260215004637 +0000" stop="20260215014637 +0000">
+  <programme channel="MARIADOBAIRRO.T01" start="20260215011350 +0000" stop="20260215021350 +0000">
     <title>Maria Do Bairro - Episódio 1</title>
     <desc>💖 Novelas - Maria Do Bairro Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="FILME.2COELHOS" start="20260215014637 +0000" stop="20260215034637 +0000">
+  <programme channel="FILME.2COELHOS" start="20260215021350 +0000" stop="20260215041350 +0000">
     <title>2 Coelhos</title>
     <desc>🎬 2 Coelhos</desc>
     <category>🎬 Filmes</category>
   </programme>
-  <programme channel="BRIDGERTON.T01" start="20260215014637 +0000" stop="20260215024637 +0000">
+  <programme channel="BRIDGERTON.T01" start="20260215021350 +0000" stop="20260215031350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 1</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="BRIDGERTON.T02" start="20260215014637 +0000" stop="20260215024637 +0000">
+  <programme channel="BRIDGERTON.T02" start="20260215021350 +0000" stop="20260215031350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 2</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S02E01</episode-num>
   </programme>
-  <programme channel="BRIDGERTON.T03" start="20260215014637 +0000" stop="20260215024637 +0000">
+  <programme channel="BRIDGERTON.T03" start="20260215021350 +0000" stop="20260215031350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 3</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S03E01</episode-num>
   </programme>
-  <programme channel="IPTVCANAISBR.T01" start="20260215014637 +0000" stop="20260215024637 +0000">
+  <programme channel="IPTVCANAISBR.T01" start="20260215021350 +0000" stop="20260215031350 +0000">
     <title>Iptv Canais Br - Episódio 7</title>
     <desc>💖 Novelas - Iptv Canais Br Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E07</episode-num>
   </programme>
-  <programme channel="OSDONOSDOJOGO.T01" start="20260215014637 +0000" stop="20260215024637 +0000">
+  <programme channel="OSDONOSDOJOGO.T01" start="20260215021350 +0000" stop="20260215031350 +0000">
     <title>Os Donos Do Jogo - Episódio 1</title>
     <desc>💖 Novelas - Os Donos Do Jogo Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="TRESGRACAS.T01" start="20260215014637 +0000" stop="20260215024637 +0000">
+  <programme channel="TRESGRACAS.T01" start="20260215021350 +0000" stop="20260215031350 +0000">
     <title>Três Graças - Episódio 1</title>
     <desc>💖 Novelas - Três Graças Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260215014637 +0000" stop="20260215024637 +0000">
+  <programme channel="MARIADOBAIRRO.T01" start="20260215021350 +0000" stop="20260215031350 +0000">
     <title>Maria Do Bairro - Episódio 1</title>
     <desc>💖 Novelas - Maria Do Bairro Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="FILME.2COELHOS" start="20260215024637 +0000" stop="20260215044637 +0000">
+  <programme channel="FILME.2COELHOS" start="20260215031350 +0000" stop="20260215051350 +0000">
     <title>2 Coelhos</title>
     <desc>🎬 2 Coelhos</desc>
     <category>🎬 Filmes</category>
   </programme>
-  <programme channel="BRIDGERTON.T01" start="20260215024637 +0000" stop="20260215034637 +0000">
+  <programme channel="BRIDGERTON.T01" start="20260215031350 +0000" stop="20260215041350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 1</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="BRIDGERTON.T02" start="20260215024637 +0000" stop="20260215034637 +0000">
+  <programme channel="BRIDGERTON.T02" start="20260215031350 +0000" stop="20260215041350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 2</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S02E01</episode-num>
   </programme>
-  <programme channel="BRIDGERTON.T03" start="20260215024637 +0000" stop="20260215034637 +0000">
+  <programme channel="BRIDGERTON.T03" start="20260215031350 +0000" stop="20260215041350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 3</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S03E01</episode-num>
   </programme>
-  <programme channel="IPTVCANAISBR.T01" start="20260215024637 +0000" stop="20260215034637 +0000">
+  <programme channel="IPTVCANAISBR.T01" start="20260215031350 +0000" stop="20260215041350 +0000">
     <title>Iptv Canais Br - Episódio 7</title>
     <desc>💖 Novelas - Iptv Canais Br Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E07</episode-num>
   </programme>
-  <programme channel="OSDONOSDOJOGO.T01" start="20260215024637 +0000" stop="20260215034637 +0000">
+  <programme channel="OSDONOSDOJOGO.T01" start="20260215031350 +0000" stop="20260215041350 +0000">
     <title>Os Donos Do Jogo - Episódio 1</title>
     <desc>💖 Novelas - Os Donos Do Jogo Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="TRESGRACAS.T01" start="20260215024637 +0000" stop="20260215034637 +0000">
+  <programme channel="TRESGRACAS.T01" start="20260215031350 +0000" stop="20260215041350 +0000">
     <title>Três Graças - Episódio 1</title>
     <desc>💖 Novelas - Três Graças Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260215024637 +0000" stop="20260215034637 +0000">
+  <programme channel="MARIADOBAIRRO.T01" start="20260215031350 +0000" stop="20260215041350 +0000">
     <title>Maria Do Bairro - Episódio 1</title>
     <desc>💖 Novelas - Maria Do Bairro Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="FILME.2COELHOS" start="20260215034637 +0000" stop="20260215054637 +0000">
+  <programme channel="FILME.2COELHOS" start="20260215041350 +0000" stop="20260215061350 +0000">
     <title>2 Coelhos</title>
     <desc>🎬 2 Coelhos</desc>
     <category>🎬 Filmes</category>
   </programme>
-  <programme channel="BRIDGERTON.T01" start="20260215034637 +0000" stop="20260215044637 +0000">
+  <programme channel="BRIDGERTON.T01" start="20260215041350 +0000" stop="20260215051350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 1</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="BRIDGERTON.T02" start="20260215034637 +0000" stop="20260215044637 +0000">
+  <programme channel="BRIDGERTON.T02" start="20260215041350 +0000" stop="20260215051350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 2</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S02E01</episode-num>
   </programme>
-  <programme channel="BRIDGERTON.T03" start="20260215034637 +0000" stop="20260215044637 +0000">
+  <programme channel="BRIDGERTON.T03" start="20260215041350 +0000" stop="20260215051350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 3</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S03E01</episode-num>
   </programme>
-  <programme channel="IPTVCANAISBR.T01" start="20260215034637 +0000" stop="20260215044637 +0000">
+  <programme channel="IPTVCANAISBR.T01" start="20260215041350 +0000" stop="20260215051350 +0000">
     <title>Iptv Canais Br - Episódio 7</title>
     <desc>💖 Novelas - Iptv Canais Br Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E07</episode-num>
   </programme>
-  <programme channel="OSDONOSDOJOGO.T01" start="20260215034637 +0000" stop="20260215044637 +0000">
+  <programme channel="OSDONOSDOJOGO.T01" start="20260215041350 +0000" stop="20260215051350 +0000">
     <title>Os Donos Do Jogo - Episódio 1</title>
     <desc>💖 Novelas - Os Donos Do Jogo Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="TRESGRACAS.T01" start="20260215034637 +0000" stop="20260215044637 +0000">
+  <programme channel="TRESGRACAS.T01" start="20260215041350 +0000" stop="20260215051350 +0000">
     <title>Três Graças - Episódio 1</title>
     <desc>💖 Novelas - Três Graças Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260215034637 +0000" stop="20260215044637 +0000">
+  <programme channel="MARIADOBAIRRO.T01" start="20260215041350 +0000" stop="20260215051350 +0000">
     <title>Maria Do Bairro - Episódio 1</title>
     <desc>💖 Novelas - Maria Do Bairro Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="FILME.2COELHOS" start="20260215044637 +0000" stop="20260215064637 +0000">
+  <programme channel="FILME.2COELHOS" start="20260215051350 +0000" stop="20260215071350 +0000">
     <title>2 Coelhos</title>
     <desc>🎬 2 Coelhos</desc>
     <category>🎬 Filmes</category>
   </programme>
-  <programme channel="BRIDGERTON.T01" start="20260215044637 +0000" stop="20260215054637 +0000">
+  <programme channel="BRIDGERTON.T01" start="20260215051350 +0000" stop="20260215061350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 1</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="BRIDGERTON.T02" start="20260215044637 +0000" stop="20260215054637 +0000">
+  <programme channel="BRIDGERTON.T02" start="20260215051350 +0000" stop="20260215061350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 2</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S02E01</episode-num>
   </programme>
-  <programme channel="BRIDGERTON.T03" start="20260215044637 +0000" stop="20260215054637 +0000">
+  <programme channel="BRIDGERTON.T03" start="20260215051350 +0000" stop="20260215061350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 3</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S03E01</episode-num>
   </programme>
-  <programme channel="IPTVCANAISBR.T01" start="20260215044637 +0000" stop="20260215054637 +0000">
+  <programme channel="IPTVCANAISBR.T01" start="20260215051350 +0000" stop="20260215061350 +0000">
     <title>Iptv Canais Br - Episódio 7</title>
     <desc>💖 Novelas - Iptv Canais Br Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E07</episode-num>
   </programme>
-  <programme channel="OSDONOSDOJOGO.T01" start="20260215044637 +0000" stop="20260215054637 +0000">
+  <programme channel="OSDONOSDOJOGO.T01" start="20260215051350 +0000" stop="20260215061350 +0000">
     <title>Os Donos Do Jogo - Episódio 1</title>
     <desc>💖 Novelas - Os Donos Do Jogo Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="TRESGRACAS.T01" start="20260215044637 +0000" stop="20260215054637 +0000">
+  <programme channel="TRESGRACAS.T01" start="20260215051350 +0000" stop="20260215061350 +0000">
     <title>Três Graças - Episódio 1</title>
     <desc>💖 Novelas - Três Graças Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260215044637 +0000" stop="20260215054637 +0000">
+  <programme channel="MARIADOBAIRRO.T01" start="20260215051350 +0000" stop="20260215061350 +0000">
     <title>Maria Do Bairro - Episódio 1</title>
     <desc>💖 Novelas - Maria Do Bairro Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="FILME.2COELHOS" start="20260215054637 +0000" stop="20260215074637 +0000">
+  <programme channel="FILME.2COELHOS" start="20260215061350 +0000" stop="20260215081350 +0000">
     <title>2 Coelhos</title>
     <desc>🎬 2 Coelhos</desc>
     <category>🎬 Filmes</category>
   </programme>
-  <programme channel="BRIDGERTON.T01" start="20260215054637 +0000" stop="20260215064637 +0000">
+  <programme channel="BRIDGERTON.T01" start="20260215061350 +0000" stop="20260215071350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 1</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="BRIDGERTON.T02" start="20260215054637 +0000" stop="20260215064637 +0000">
+  <programme channel="BRIDGERTON.T02" start="20260215061350 +0000" stop="20260215071350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 2</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S02E01</episode-num>
   </programme>
-  <programme channel="BRIDGERTON.T03" start="20260215054637 +0000" stop="20260215064637 +0000">
+  <programme channel="BRIDGERTON.T03" start="20260215061350 +0000" stop="20260215071350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 3</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S03E01</episode-num>
   </programme>
-  <programme channel="IPTVCANAISBR.T01" start="20260215054637 +0000" stop="20260215064637 +0000">
+  <programme channel="IPTVCANAISBR.T01" start="20260215061350 +0000" stop="20260215071350 +0000">
     <title>Iptv Canais Br - Episódio 7</title>
     <desc>💖 Novelas - Iptv Canais Br Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E07</episode-num>
   </programme>
-  <programme channel="OSDONOSDOJOGO.T01" start="20260215054637 +0000" stop="20260215064637 +0000">
+  <programme channel="OSDONOSDOJOGO.T01" start="20260215061350 +0000" stop="20260215071350 +0000">
     <title>Os Donos Do Jogo - Episódio 1</title>
     <desc>💖 Novelas - Os Donos Do Jogo Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="TRESGRACAS.T01" start="20260215054637 +0000" stop="20260215064637 +0000">
+  <programme channel="TRESGRACAS.T01" start="20260215061350 +0000" stop="20260215071350 +0000">
     <title>Três Graças - Episódio 1</title>
     <desc>💖 Novelas - Três Graças Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260215054637 +0000" stop="20260215064637 +0000">
+  <programme channel="MARIADOBAIRRO.T01" start="20260215061350 +0000" stop="20260215071350 +0000">
     <title>Maria Do Bairro - Episódio 1</title>
     <desc>💖 Novelas - Maria Do Bairro Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="FILME.2COELHOS" start="20260215064637 +0000" stop="20260215084637 +0000">
+  <programme channel="FILME.2COELHOS" start="20260215071350 +0000" stop="20260215091350 +0000">
     <title>2 Coelhos</title>
     <desc>🎬 2 Coelhos</desc>
     <category>🎬 Filmes</category>
   </programme>
-  <programme channel="BRIDGERTON.T01" start="20260215064637 +0000" stop="20260215074637 +0000">
+  <programme channel="BRIDGERTON.T01" start="20260215071350 +0000" stop="20260215081350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 1</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="BRIDGERTON.T02" start="20260215064637 +0000" stop="20260215074637 +0000">
+  <programme channel="BRIDGERTON.T02" start="20260215071350 +0000" stop="20260215081350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 2</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S02E01</episode-num>
   </programme>
-  <programme channel="BRIDGERTON.T03" start="20260215064637 +0000" stop="20260215074637 +0000">
+  <programme channel="BRIDGERTON.T03" start="20260215071350 +0000" stop="20260215081350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 3</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S03E01</episode-num>
   </programme>
-  <programme channel="IPTVCANAISBR.T01" start="20260215064637 +0000" stop="20260215074637 +0000">
+  <programme channel="IPTVCANAISBR.T01" start="20260215071350 +0000" stop="20260215081350 +0000">
     <title>Iptv Canais Br - Episódio 7</title>
     <desc>💖 Novelas - Iptv Canais Br Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E07</episode-num>
   </programme>
-  <programme channel="OSDONOSDOJOGO.T01" start="20260215064637 +0000" stop="20260215074637 +0000">
+  <programme channel="OSDONOSDOJOGO.T01" start="20260215071350 +0000" stop="20260215081350 +0000">
     <title>Os Donos Do Jogo - Episódio 1</title>
     <desc>💖 Novelas - Os Donos Do Jogo Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="TRESGRACAS.T01" start="20260215064637 +0000" stop="20260215074637 +0000">
+  <programme channel="TRESGRACAS.T01" start="20260215071350 +0000" stop="20260215081350 +0000">
     <title>Três Graças - Episódio 1</title>
     <desc>💖 Novelas - Três Graças Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260215064637 +0000" stop="20260215074637 +0000">
+  <programme channel="MARIADOBAIRRO.T01" start="20260215071350 +0000" stop="20260215081350 +0000">
     <title>Maria Do Bairro - Episódio 1</title>
     <desc>💖 Novelas - Maria Do Bairro Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="FILME.2COELHOS" start="20260215074637 +0000" stop="20260215094637 +0000">
+  <programme channel="FILME.2COELHOS" start="20260215081350 +0000" stop="20260215101350 +0000">
     <title>2 Coelhos</title>
     <desc>🎬 2 Coelhos</desc>
     <category>🎬 Filmes</category>
   </programme>
-  <programme channel="BRIDGERTON.T01" start="20260215074637 +0000" stop="20260215084637 +0000">
+  <programme channel="BRIDGERTON.T01" start="20260215081350 +0000" stop="20260215091350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 1</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="BRIDGERTON.T02" start="20260215074637 +0000" stop="20260215084637 +0000">
+  <programme channel="BRIDGERTON.T02" start="20260215081350 +0000" stop="20260215091350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 2</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S02E01</episode-num>
   </programme>
-  <programme channel="BRIDGERTON.T03" start="20260215074637 +0000" stop="20260215084637 +0000">
+  <programme channel="BRIDGERTON.T03" start="20260215081350 +0000" stop="20260215091350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 3</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S03E01</episode-num>
   </programme>
-  <programme channel="IPTVCANAISBR.T01" start="20260215074637 +0000" stop="20260215084637 +0000">
+  <programme channel="IPTVCANAISBR.T01" start="20260215081350 +0000" stop="20260215091350 +0000">
     <title>Iptv Canais Br - Episódio 7</title>
     <desc>💖 Novelas - Iptv Canais Br Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E07</episode-num>
   </programme>
-  <programme channel="OSDONOSDOJOGO.T01" start="20260215074637 +0000" stop="20260215084637 +0000">
+  <programme channel="OSDONOSDOJOGO.T01" start="20260215081350 +0000" stop="20260215091350 +0000">
     <title>Os Donos Do Jogo - Episódio 1</title>
     <desc>💖 Novelas - Os Donos Do Jogo Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="TRESGRACAS.T01" start="20260215074637 +0000" stop="20260215084637 +0000">
+  <programme channel="TRESGRACAS.T01" start="20260215081350 +0000" stop="20260215091350 +0000">
     <title>Três Graças - Episódio 1</title>
     <desc>💖 Novelas - Três Graças Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260215074637 +0000" stop="20260215084637 +0000">
+  <programme channel="MARIADOBAIRRO.T01" start="20260215081350 +0000" stop="20260215091350 +0000">
     <title>Maria Do Bairro - Episódio 1</title>
     <desc>💖 Novelas - Maria Do Bairro Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="FILME.2COELHOS" start="20260215084637 +0000" stop="20260215104637 +0000">
+  <programme channel="FILME.2COELHOS" start="20260215091350 +0000" stop="20260215111350 +0000">
     <title>2 Coelhos</title>
     <desc>🎬 2 Coelhos</desc>
     <category>🎬 Filmes</category>
   </programme>
-  <programme channel="BRIDGERTON.T01" start="20260215084637 +0000" stop="20260215094637 +0000">
+  <programme channel="BRIDGERTON.T01" start="20260215091350 +0000" stop="20260215101350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 1</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="BRIDGERTON.T02" start="20260215084637 +0000" stop="20260215094637 +0000">
+  <programme channel="BRIDGERTON.T02" start="20260215091350 +0000" stop="20260215101350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 2</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S02E01</episode-num>
   </programme>
-  <programme channel="BRIDGERTON.T03" start="20260215084637 +0000" stop="20260215094637 +0000">
+  <programme channel="BRIDGERTON.T03" start="20260215091350 +0000" stop="20260215101350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 3</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S03E01</episode-num>
   </programme>
-  <programme channel="IPTVCANAISBR.T01" start="20260215084637 +0000" stop="20260215094637 +0000">
+  <programme channel="IPTVCANAISBR.T01" start="20260215091350 +0000" stop="20260215101350 +0000">
     <title>Iptv Canais Br - Episódio 7</title>
     <desc>💖 Novelas - Iptv Canais Br Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E07</episode-num>
   </programme>
-  <programme channel="OSDONOSDOJOGO.T01" start="20260215084637 +0000" stop="20260215094637 +0000">
+  <programme channel="OSDONOSDOJOGO.T01" start="20260215091350 +0000" stop="20260215101350 +0000">
     <title>Os Donos Do Jogo - Episódio 1</title>
     <desc>💖 Novelas - Os Donos Do Jogo Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="TRESGRACAS.T01" start="20260215084637 +0000" stop="20260215094637 +0000">
+  <programme channel="TRESGRACAS.T01" start="20260215091350 +0000" stop="20260215101350 +0000">
     <title>Três Graças - Episódio 1</title>
     <desc>💖 Novelas - Três Graças Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260215084637 +0000" stop="20260215094637 +0000">
+  <programme channel="MARIADOBAIRRO.T01" start="20260215091350 +0000" stop="20260215101350 +0000">
     <title>Maria Do Bairro - Episódio 1</title>
     <desc>💖 Novelas - Maria Do Bairro Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="FILME.2COELHOS" start="20260215094637 +0000" stop="20260215114637 +0000">
+  <programme channel="FILME.2COELHOS" start="20260215101350 +0000" stop="20260215121350 +0000">
     <title>2 Coelhos</title>
     <desc>🎬 2 Coelhos</desc>
     <category>🎬 Filmes</category>
   </programme>
-  <programme channel="BRIDGERTON.T01" start="20260215094637 +0000" stop="20260215104637 +0000">
+  <programme channel="BRIDGERTON.T01" start="20260215101350 +0000" stop="20260215111350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 1</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="BRIDGERTON.T02" start="20260215094637 +0000" stop="20260215104637 +0000">
+  <programme channel="BRIDGERTON.T02" start="20260215101350 +0000" stop="20260215111350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 2</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S02E01</episode-num>
   </programme>
-  <programme channel="BRIDGERTON.T03" start="20260215094637 +0000" stop="20260215104637 +0000">
+  <programme channel="BRIDGERTON.T03" start="20260215101350 +0000" stop="20260215111350 +0000">
     <title>Bridgerton - Episódio 1</title>
     <desc>📺 Séries - Bridgerton Temporada 3</desc>
     <category>📺 Séries</category>
     <episode-num system="onscreen">S03E01</episode-num>
   </programme>
-  <programme channel="IPTVCANAISBR.T01" start="20260215094637 +0000" stop="20260215104637 +0000">
+  <programme channel="IPTVCANAISBR.T01" start="20260215101350 +0000" stop="20260215111350 +0000">
     <title>Iptv Canais Br - Episódio 7</title>
     <desc>💖 Novelas - Iptv Canais Br Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E07</episode-num>
   </programme>
-  <programme channel="OSDONOSDOJOGO.T01" start="20260215094637 +0000" stop="20260215104637 +0000">
+  <programme channel="OSDONOSDOJOGO.T01" start="20260215101350 +0000" stop="20260215111350 +0000">
     <title>Os Donos Do Jogo - Episódio 1</title>
     <desc>💖 Novelas - Os Donos Do Jogo Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="TRESGRACAS.T01" start="20260215094637 +0000" stop="20260215104637 +0000">
+  <programme channel="TRESGRACAS.T01" start="20260215101350 +0000" stop="20260215111350 +0000">
     <title>Três Graças - Episódio 1</title>
     <desc>💖 Novelas - Três Graças Temporada 1</desc>
     <category>💖 Novelas</category>
     <episode-num system="onscreen">S01E01</episode-num>
   </programme>
-  <programme channel="MARIADOBAIRRO.T01" start="20260215094637 +0000" stop="20260215104637 +0000">
+  <programme channel="MARIADOBAIRRO.T01" start="20260215101350 +0000" stop="20260215111350 +0000">
     <title>Maria Do Bairro - Episódio 1</title>
     <desc>💖 Novelas - Maria Do Bairro Temporada 1</desc>
     <category>💖 Novelas</category>
