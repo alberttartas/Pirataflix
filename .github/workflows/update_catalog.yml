@@ -64,7 +64,7 @@ jobs:
           echo "🏗️ Gerando site..."
           python build.py
 
-      - name: Verificar mudanças
+            - name: Verificar mudanças
         id: git-check
         run: |
           git config --global user.name "GitHub Action"
@@ -72,22 +72,19 @@ jobs:
           git add iptv_playlists/ web/ input_auto/
           if git diff --staged --quiet; then
             echo "changed=false" >> $GITHUB_OUTPUT
-            echo "✅ Nenhuma mudança para commit"
           else
             echo "changed=true" >> $GITHUB_OUTPUT
-            echo "📦 Mudanças detectadas!"
-            git status
           fi
 
-       - name: Sincronizar com remoto
-  run: |
-    git fetch origin
-    git reset --hard origin/main
+      - name: Sincronizar com remoto
+        run: |
+          git fetch origin
+          git reset --hard origin/main
 
       - name: Commit automático
         if: steps.git-check.outputs.changed == 'true'
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: "Auto-update catálogo IPTV"
+          commit_message: "Auto-generate IPTV playlists"
           branch: main
-          file_pattern: iptv_playlists/* web/* input_auto/*
+          file_pattern: iptv_playlists/*.m3u iptv_playlists/*.xml
