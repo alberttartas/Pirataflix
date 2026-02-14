@@ -881,3 +881,149 @@ function setupProgressSaving(player, videoId, itemId, category, episodeIndex, ti
 
 console.log('✅ Correções aplicadas!');
 
+// ============================================
+// CORREÇÃO: GARANTIR QUE PLAYER.JS CARREGUE
+// ============================================
+
+// Função para carregar script com promise
+function carregarScript(src) {
+    return new Promise((resolve, reject) => {
+        if (document.querySelector(`script[src="${src}"]`)) {
+            resolve();
+            return;
+        }
+        
+        const script = document.createElement('script');
+        script.src = src;
+        script.onload = () => {
+            console.log(`✅ Script carregado: ${src}`);
+            resolve();
+        };
+        script.onerror = () => reject(new Error(`Falha ao carregar ${src}`));
+        document.head.appendChild(script);
+    });
+}
+
+// Garantir que ModernVideoPlayer existe ANTES de usar
+async function garantirPlayer() {
+    console.log('🔧 Verificando ModernVideoPlayer...');
+    
+    // Se já existe, ótimo
+    if (typeof ModernVideoPlayer !== 'undefined') {
+        console.log('✅ ModernVideoPlayer já está disponível');
+        return true;
+    }
+    
+    // Tentar carregar player.js
+    console.log('📥 Tentando carregar player.js...');
+    try {
+        await carregarScript('player.js');
+        
+        // Aguardar um pouco para inicializar
+        await new Promise(r => setTimeout(r, 500));
+        
+        if (typeof ModernVideoPlayer !== 'undefined') {
+            console.log('✅ ModernVideoPlayer carregado com sucesso!');
+            return true;
+        } else {
+            console.log('❌ ModernVideoPlayer ainda não definido após carregar');
+            return false;
+        }
+    } catch (error) {
+        console.error('❌ Erro ao carregar player.js:', error);
+        return false;
+    }
+}
+
+// Modificar playWithModernPlayer para garantir player
+const originalPlayFunction = window.playWithModernPlayer;
+
+window.playWithModernPlayer = async function(url, title, info = '', itemId = null, category = null, episodeIndex = 0) {
+    console.log('🎬 playWithModernPlayer chamado (versão garantida)');
+    
+    // 1. GARANTIR MODAL
+    if (!document.getElementById('modernPlayerModal')) {
+        console.log('⚠️ Modal não existe! Criando...');
+        if (typeof setupPlayerModal === 'function') {
+            setupPlayerModal();
+        } else {
+            criarModalFallback();
+        }
+    }
+    
+    // 2. GARANTIR PLAYER
+    const playerOk = await garantirPlayer();
+    if (!playerOk) {
+        console.log('⚠️ Player não disponível, usando fallback');
+        playFallback(url, title);
+        return;
+    }
+    
+    // 3. CHAMAR FUNÇÃO ORIGINAL
+    if (originalPlayFunction) {
+        // Aguardar modal ser criado
+        setTimeout(() => {
+            originalPlayFunction(url, title, info, itemId, category, episodeIndex);
+        }, 300);
+    } else {
+        console.log('⚠️ Função original não encontrada');
+        playFallback(url, title);
+    }
+};
+
+// Função fallback para reprodução
+function playFallback(url, title) {
+    console.log('🎬 Usando player fallback');
+    
+    const modal = document.getElementById('modernPlayerModal');
+    if (!modal) {
+        window.open(url, '_blank');
+        return;
+    }
+    
+    modal.style.display = 'flex';
+    
+    const container = document.getElementById('modern-player-container');
+    if (!container) {
+        window.open(url, '_blank');
+        return;
+    }
+    
+    container.innerHTML = `
+        <video controls autoplay style="width: 100%; height: 100%; background: #000;">
+            <source src="${url}" type="video/mp4">
+            <source src="${url}" type="application/x-mpegURL">
+            Seu navegador não suporta vídeo.
+        </video>
+    `;
+    
+    document.getElementById('modern-player-title').textContent = title;
+    document.getElementById('modern-player-info').textContent = 'Streaming ao vivo';
+}
+
+// Função para criar modal (fallback)
+function criarModalFallback() {
+    if (document.getElementById('modernPlayerModal')) return;
+    
+    const modalHTML = `
+        <div id="modernPlayerModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); z-index: 9999; justify-content: center; align-items: center;">
+            <div style="width: 90%; max-width: 1200px; max-height: 90vh; background: #000; border-radius: 10px; overflow: hidden; position: relative;">
+                <button id="closeModernPlayer" style="position: absolute; top: 15px; right: 15px; background: rgba(255,255,255,0.1); border: none; color: white; width: 40px; height: 40px; border-radius: 50%; font-size: 20px; cursor: pointer; z-index: 10000;">&times;</button>
+                <div id="modern-player-container" style="width: 100%; height: 70vh;"></div>
+                <div style="padding: 20px; color: white;">
+                    <h3 id="modern-player-title" style="margin: 0 0 10px 0;"></h3>
+                    <p id="modern-player-info" style="margin: 0; opacity: 0.8;"></p>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    document.body.insertAdjacentHTML('beforeend', modalHTML);
+    
+    // Adicionar evento de fechar
+    document.getElementById('closeModernPlayer').addEventListener('click', () => {
+        document.getElementById('modernPlayerModal').style.display = 'none';
+    });
+}
+
+console.log('🚀 Sistema de garantia do player ativado!');
