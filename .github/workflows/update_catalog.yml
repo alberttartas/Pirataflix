@@ -64,17 +64,7 @@ jobs:
           echo "🏗️ Gerando site..."
           python build.py
 
-      - name: Verificar mudanças
-        id: git-check
-        run: |
-          git config --global user.name "GitHub Action"
-          git config --global user.email "action@github.com"
-          git add iptv_playlists/ web/ input_auto/
-          if git diff --staged --quiet; then
-            echo "changed=false" >> $GITHUB_OUTPUT
-          else
-            echo "changed=true" >> $GITHUB_OUTPUT
-          fi
+       
 
       - name: Commit automático
         if: steps.git-check.outputs.changed == 'true'
