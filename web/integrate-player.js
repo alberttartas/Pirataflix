@@ -96,9 +96,9 @@ function renderContinueWatching() {
         
         html += `
         <div class="item-card continue-card" onclick="resumeItem('${item.itemId}', '${item.category}', ${item.episodeIndex})">
-            <img src="${posterPath}" 
-                 class="item-poster" 
-                 onerror="this.src='/assets/Capas/default.jpg';">
+            <img src="/assets/Capas/${item.poster ? item.poster.split('/').pop() : 'default.jpg'}" 
+     class="item-poster" 
+     onerror="this.src='/assets/Capas/default.jpg';">
             <div class="item-info">
                 <div class="item-title">${item.seriesTitle || item.title}</div>
                 <div class="item-meta">E${item.episode} • ${time}</div>
