@@ -1,5 +1,5 @@
 // ============================================
-// NOVO PLAYER - VERSÃO CORRIGIDA
+// NOVO PLAYER - VERSÃO FINAL CORRIGIDA
 // ============================================
 
 // CRIAR MODAL IMEDIATAMENTE
@@ -10,8 +10,8 @@
         modal.style.cssText = 'display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.95);z-index:9999;justify-content:center;align-items:center;';
         modal.innerHTML = `
             <div style="width:90%;max-width:1200px;background:#000;border-radius:10px;overflow:hidden;position:relative;">
-                <button id="closeModernPlayer" style="position:absolute;top:15px;right:15px;background:#e50914;border:none;color:white;width:40px;height:40px;border-radius:50%;font-size:20px;cursor:pointer;">&times;</button>
-                <div id="modern-player-container" style="width:100%;height:70vh;background:#000;"></div>
+                <button id="closeModernPlayerFix" style="position:absolute;top:15px;right:15px;background:#e50914;border:none;color:white;width:40px;height:40px;border-radius:50%;font-size:20px;cursor:pointer;z-index:10001;display:flex;align-items:center;justify-content:center;">&times;</button>
+                <div id="modern-player-container" style="width:100%;height:70vh;background:#000;position:relative;"></div>
                 <div style="padding:20px;color:white;">
                     <h3 id="modern-player-title"></h3>
                     <p id="modern-player-info"></p>
@@ -19,6 +19,17 @@
             </div>
         `;
         document.body.appendChild(modal);
+    }
+})();
+
+// CORRIGIR FAVICON
+(function() {
+    const links = document.querySelectorAll('link[rel*="icon"]');
+    if (links.length === 0) {
+        const link = document.createElement('link');
+        link.rel = 'icon';
+        link.href = 'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎬</text></svg>';
+        document.head.appendChild(link);
     }
 })();
 
@@ -35,7 +46,6 @@ window.ContinueWatching = {
         const all = this.getAll();
         all[videoData.videoId] = {...videoData, timestamp: Date.now(), progress: videoData.duration ? Math.round((videoData.currentTime / videoData.duration) * 100) : 0};
         localStorage.setItem(this.STORAGE_KEY, JSON.stringify(all));
-        console.log('💾 Progresso salvo');
     },
     
     get(videoId) { return this.getAll()[videoId] || null; },
@@ -73,7 +83,27 @@ window.playWithModernPlayer = function(url, title, info = '', itemId = null, cat
     
     container.innerHTML = `<video id="current-video" controls autoplay style="width:100%;height:100%;background:#000;" src="${url}"></video>`;
     const video = document.getElementById('current-video');
-    const closeBtn = document.getElementById('closeModernPlayer');
+    
+    // ===== BOTÃO FECHAR CORRIGIDO =====
+    const closeBtn = document.getElementById('closeModernPlayerFix');
+    if (closeBtn) {
+        closeBtn.onclick = function() {
+            modal.style.display = 'none';
+            video.pause();
+            container.innerHTML = '';
+        };
+    }
+    
+    // ===== FECHAR COM ESC =====
+    const escHandler = function(e) {
+        if (e.key === 'Escape') {
+            modal.style.display = 'none';
+            video.pause();
+            container.innerHTML = '';
+            document.removeEventListener('keydown', escHandler);
+        }
+    };
+    document.addEventListener('keydown', escHandler);
     
     // Retomar progresso
     if (saved?.currentTime > 5) {
@@ -103,25 +133,70 @@ window.playWithModernPlayer = function(url, title, info = '', itemId = null, cat
         }
     }, 5000);
     
-    // Botão fechar
-    closeBtn.onclick = () => {
-        clearInterval(interval);
-        modal.style.display = 'none';
-        video.pause();
-        container.innerHTML = '';
-    };
-    
-    // Fechar com ESC
-    const escHandler = (e) => {
-        if (e.key === 'Escape') {
-            clearInterval(interval);
-            modal.style.display = 'none';
-            video.pause();
-            container.innerHTML = '';
-            document.removeEventListener('keydown', escHandler);
+    // ===== BOTÃO PRÓXIMO EPISÓDIO (ESTILO NETFLIX) =====
+    function addNextButton() {
+        if (!itemId || !category) return;
+        
+        const item = window.vodData?.[category]?.find(i => i.id === itemId);
+        if (!item) return;
+        
+        let episodeList = item.episodes || [];
+        if (!episodeList.length && item.seasons) {
+            item.seasons.forEach(s => {
+                if (s.episodes) episodeList = episodeList.concat(s.episodes);
+            });
         }
-    };
-    document.addEventListener('keydown', escHandler);
+        
+        if (episodeIndex + 1 >= episodeList.length) return;
+        
+        const nextBtn = document.createElement('button');
+        nextBtn.id = 'nextEpisodeBtn';
+        nextBtn.innerHTML = 'Próximo Episódio <span style="font-size:20px;">▶</span>';
+        nextBtn.style.cssText = `
+            position: absolute;
+            bottom: 100px;
+            right: 20px;
+            background: rgba(229, 9, 20, 0.9);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 10001;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        `;
+        
+        nextBtn.onmouseover = () => {
+            nextBtn.style.background = '#e50914';
+            nextBtn.style.transform = 'scale(1.05)';
+        };
+        nextBtn.onmouseout = () => {
+            nextBtn.style.background = 'rgba(229, 9, 20, 0.9)';
+            nextBtn.style.transform = 'scale(1)';
+        };
+        
+        nextBtn.onclick = () => {
+            const next = episodeList[episodeIndex + 1];
+            window.playWithModernPlayer(
+                next.url,
+                `${item.title} - ${next.title}`,
+                `${category} • Ep ${episodeIndex + 2}`,
+                itemId,
+                category,
+                episodeIndex + 1
+            );
+        };
+        
+        container.appendChild(nextBtn);
+    }
+    
+    addNextButton();
     
     // Próximo episódio automático
     video.addEventListener('ended', () => {
@@ -230,4 +305,17 @@ window.displayContent = function() {
     }, 300);
 };
 
-console.log('✅ NOVO PLAYER CARREGADO COM SUCESSO!');
+// CSS ADICIONAL
+const style = document.createElement('style');
+style.textContent = `
+    .continue-card { cursor: pointer; transition: 0.3s; }
+    .continue-card:hover { transform: scale(1.05); border: 2px solid #e50914; }
+    #continue-watching { animation: slide 0.5s; }
+    @keyframes slide {
+        from { opacity: 0; transform: translateY(-20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+`;
+document.head.appendChild(style);
+
+console.log('✅ NOVO PLAYER CARREGADO - TODOS OS PROBLEMAS CORRIGIDOS!');
