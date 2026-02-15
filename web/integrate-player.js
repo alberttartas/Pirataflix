@@ -89,23 +89,23 @@ function renderContinueWatching() {
             ? `${Math.floor(remaining/3600)}h ${Math.floor((remaining%3600)/60)}min`
             : `${Math.floor(remaining/60)}min`;
         
-        // CORREÇÃO RADICAL - REMOVE QUALQUER "/Pirataflix" DO CAMINHO
+        // CORREÇÃO DO CAMINHO DA CAPA - VERSÃO FINAL
 let posterFile = 'default.jpg';
 
 if (item.poster) {
-    // Pega só o nome do arquivo, ignora tudo antes
+    // Pega só o nome do arquivo
     const partes = item.poster.split('/');
     posterFile = partes[partes.length - 1];
 }
 
-// Garantir que não tem /Pirataflix no caminho
-const posterUrl = `/assets/Capas/${posterFile}`;
+// URL ABSOLUTA (mais seguro)
+const posterUrl = `https://pirataflix-seven.vercel.app/assets/Capas/${posterFile}`;
 
 html += `
 <div class="item-card continue-card" onclick="resumeItem('${item.itemId}', '${item.category}', ${item.episodeIndex})">
     <img src="${posterUrl}" 
          class="item-poster" 
-         onerror="this.onerror=null; this.src='/assets/Capas/default.jpg';">
+         onerror="this.onerror=null; this.src='https://pirataflix-seven.vercel.app/assets/Capas/default.jpg';">
     <div class="item-info">
         <div class="item-title">${item.seriesTitle || item.title}</div>
         <div class="item-meta">E${item.episode} • ${time}</div>
