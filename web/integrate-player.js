@@ -89,50 +89,79 @@ function renderContinueWatching() {
             : `${Math.floor(remaining/60)}min`;
         
         // CORREÇÃO DAS CAPAS
-        let nomeArquivo = 'default.jpg';
-        if (item.poster) {
-            const partes = item.poster.split('/');
-            nomeArquivo = partes[partes.length - 1];
-        }
-        
-        const urlCapa = `https://pirataflix-seven.vercel.app/assets/Capas/${nomeArquivo}`;
-        
-        html += `
-        <div class="item-card continue-card" onclick="window.resumeFromContinue('${item.itemId}', '${item.category}', ${item.episodeIndex})">
-            <img src="${urlCapa}" 
-                 class="item-poster" 
-                 onerror="this.onerror=null; this.src='https://pirataflix-seven.vercel.app/assets/Capas/default.jpg';">
-            <div class="item-info">
-                <div class="item-title">${item.seriesTitle || item.title}</div>
-                <div class="item-meta">E${item.episode} • ${time}</div>
-                <div style="width:100%;height:3px;background:#333;margin-top:5px;">
-                    <div style="width:${item.progress}%;height:100%;background:#e50914;"></div>
-                </div>
-            </div>
-        </div>`;
+        // CORREÇÃO DEFINITIVA COM FALLBACK
+let nomeArquivo = 'default.jpg';
+if (item.poster) {
+    const partes = item.poster.split('/');
+    nomeArquivo = partes[partes.length - 1];
+}
+
+// Tentar GitHub primeiro
+const urlCapa = `https://raw.githubusercontent.com/alberttartas/Pirataflix/main/assets/Capas/${nomeArquivo}`;
+
+html += `
+<div class="item-card continue-card" onclick="window.resumeFromContinue('${item.itemId}', '${item.category}', ${item.episodeIndex})">
+    <img src="${urlCapa}" 
+         class="item-poster" 
+         onerror="this.onerror=null; this.src='https://via.placeholder.com/220x320/e50914/ffffff?text=${encodeURIComponent(item.seriesTitle || item.title)}';">
+    <div class="item-info">
+        <div class="item-title">${item.seriesTitle || item.title}</div>
+        <div class="item-meta">E${item.episode} • ${time}</div>
+        <div style="width:100%;height:3px;background:#333;margin-top:5px;">
+            <div style="width:${item.progress}%;height:100%;background:#e50914;"></div>
+        </div>
+    </div>
+</div>`;
     });
     
     html += `</div></section>`;
     return html;
 }
 
-// FUNÇÃO PARA RETOMAR DO CONTINUE WATCHING
+// FUNÇÃO PARA RETOMAR DO CONTINUE WATCHING - VERSÃO CORRIGIDA
 window.resumeFromContinue = function(itemId, category, episodeIndex) {
     console.log('▶️ Retomando:', itemId, category, episodeIndex);
     
-    if (!window.vodData?.[category]) {
-        console.error('❌ vodData não disponível');
+    // TENTAR DIFERENTES FORMAS DE ACESSAR O VODDATA
+    let dados = window.vodData;
+    
+    // Se não encontrou, tentar acessar diretamente
+    if (!dados && typeof vodData !== 'undefined') {
+        dados = vodData;
+        window.vodData = dados; // Sincronizar
+    }
+    
+    // Se ainda não tem dados, tentar buscar do localStorage ou sessionStorage
+    if (!dados) {
+        console.warn('⚠️ vodData não encontrado, tentando recuperar...');
+        try {
+            const savedData = localStorage.getItem('pirataflix_data');
+            if (savedData) {
+                dados = JSON.parse(savedData);
+                window.vodData = dados;
+                console.log('✅ vodData recuperado do localStorage');
+            }
+        } catch (e) {
+            console.error('Erro ao recuperar dados:', e);
+        }
+    }
+    
+    // Verificar se conseguiu os dados
+    if (!dados || !dados[category]) {
+        console.error('❌ vodData não disponível após todas tentativas');
+        alert('Erro: Dados não carregados. Recarregue a página.');
         return;
     }
     
-    const item = window.vodData[category].find(i => i.id === itemId);
+    const item = dados[category].find(i => i.id === itemId);
     if (!item) {
-        console.error('❌ Item não encontrado');
+        console.error('❌ Item não encontrado na categoria', category, 'ID:', itemId);
         return;
     }
     
     let url = '', title = '';
     
+    // Buscar episódio
     if (item.episodes && item.episodes[episodeIndex]) {
         url = item.episodes[episodeIndex].url;
         title = item.episodes[episodeIndex].title;
@@ -155,6 +184,7 @@ window.resumeFromContinue = function(itemId, category, episodeIndex) {
         window.playWithModernPlayer(url, `${item.title} - ${title}`, `${category} • Ep ${episodeIndex+1}`, itemId, category, episodeIndex);
     } else {
         console.error('❌ URL não encontrada');
+        if (url) window.open(url, '_blank');
     }
 };
 
@@ -281,6 +311,26 @@ window.displayContent = function() {
     }, 300);
 };
 
+// ============================================
+// GARANTIR QUE VODDATA ESTÁ GLOBAL
+// ============================================
+setTimeout(() => {
+    // Se existe mas não está em window, sincronizar
+    if (typeof vodData !== 'undefined' && !window.vodData) {
+        window.vodData = vodData;
+        console.log('✅ vodData sincronizado com window');
+    }
+    
+    // Salvar uma cópia no localStorage para recuperação
+    if (window.vodData) {
+        try {
+            localStorage.setItem('pirataflix_data', JSON.stringify(window.vodData));
+            console.log('💾 vodData salvo no localStorage');
+        } catch (e) {
+            console.warn('Não foi possível salvar no localStorage');
+        }
+    }
+}, 1000);
 // CSS
 (function() {
     if (!document.querySelector('#player-styles')) {
@@ -300,3 +350,23 @@ window.displayContent = function() {
 })();
 
 console.log('✅ PLAYER COMPLETO CARREGADO');
+// ============================================
+// GARANTIR QUE VODDATA ESTÁ GLOBAL
+// ============================================
+setTimeout(() => {
+    // Se existe mas não está em window, sincronizar
+    if (typeof vodData !== 'undefined' && !window.vodData) {
+        window.vodData = vodData;
+        console.log('✅ vodData sincronizado com window');
+    }
+    
+    // Salvar uma cópia no localStorage para recuperação
+    if (window.vodData) {
+        try {
+            localStorage.setItem('pirataflix_data', JSON.stringify(window.vodData));
+            console.log('💾 vodData salvo no localStorage');
+        } catch (e) {
+            console.warn('Não foi possível salvar no localStorage');
+        }
+    }
+}, 1000);
