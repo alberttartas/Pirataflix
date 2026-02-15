@@ -66,7 +66,7 @@ const ContinueWatching = {
     }
 };
 
-// RENDERIZAR SEÇÃO
+// RENDERIZAR SEÇÃO - VERSÃO CORRIGIDA
 function renderContinueWatching() {
     const list = ContinueWatching.getWatchingList();
     console.log('📋 Lista de continuar assistindo:', list.length, 'itens');
@@ -89,9 +89,14 @@ function renderContinueWatching() {
             ? `${Math.floor(remaining/3600)}h ${Math.floor((remaining%3600)/60)}min`
             : `${Math.floor(remaining/60)}min`;
         
+        // CORREÇÃO DO CAMINHO DA CAPA
+        let posterPath = item.poster || '/assets/Capas/default.jpg';
+        // Remove /Pirataflix do início se existir
+        posterPath = posterPath.replace('/Pirataflix', '');
+        
         html += `
         <div class="item-card continue-card" onclick="resumeItem('${item.itemId}', '${item.category}', ${item.episodeIndex})">
-            <img src="${item.poster || '/assets/Capas/default.jpg'}" 
+            <img src="${posterPath}" 
                  class="item-poster" 
                  onerror="this.src='/assets/Capas/default.jpg';">
             <div class="item-info">
@@ -107,7 +112,6 @@ function renderContinueWatching() {
     html += `</div></section>`;
     return html;
 }
-
 // RETOMAR ITEM
 window.resumeItem = function(itemId, category, episodeIndex) {
     if (!window.vodData?.[category]) return;
