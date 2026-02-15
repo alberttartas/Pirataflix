@@ -1375,7 +1375,7 @@ def generate_html_with_correct_paths(base_dir, data):
     </script>
         <!-- Incluir seu script de integração do player -->
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-    <script src="integrate-player.js" defer></script>
+    <script src="novo-player.js" defer></script>
 </body>
 </html>'''
     
@@ -1388,6 +1388,7 @@ def generate_html_with_correct_paths(base_dir, data):
 
 if __name__ == "__main__":
     build_vod_with_direct_capas()
+
 
 
 
