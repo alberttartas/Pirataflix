@@ -1219,7 +1219,14 @@ def generate_html_with_correct_paths(base_dir, data):
             <div class="item-meta">${meta}</div>
         </div>
     </div>`;
-});
+
+      }); 
+                
+                html += `</div></section>`;
+            }); 
+            
+            contentDiv.innerHTML = html || '<div class="loading">Nenhum conteúdo encontrado</div>';
+        } 
         
         // Abrir modal
         function openModal(category, itemId) {
@@ -1418,6 +1425,7 @@ def generate_html_with_correct_paths(base_dir, data):
 
 if __name__ == "__main__":
     build_vod_with_direct_capas()
+
 
 
 
