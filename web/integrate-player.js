@@ -1,5 +1,5 @@
 // ============================================
-// PLAYER COMPLETO - VERSÃO FINAL
+// PLAYER COMPLETO - VERSÃO FINAL CORRIGIDA
 // ============================================
 
 // CRIAR MODAL PRIMEIRO
@@ -66,30 +66,7 @@ const ContinueWatching = {
     }
 };
 
-// RENDERIZAR SEÇÃO - VERSÃO CORRIGIDA
-function renderContinueWatching() {
-    const list = ContinueWatching.getWatchingList();
-    console.log('📋 Lista de continuar assistindo:', list.length, 'itens');
-    
-    if (list.length === 0) {
-        console.log('ℹ️ Nenhum item para continuar assistindo');
-        return '';
-    }
-    
-    let html = `
-    <section class="category-section" id="continue-watching">
-        <h2 class="category-title" style="display: flex; align-items: center; gap: 10px;">
-            <span style="color: #e50914; font-size: 1.8rem;">▶️</span> Continuar Assistindo
-        </h2>
-        <div class="items-grid">`;
-    
-    list.forEach(item => {
-        const remaining = item.duration - item.currentTime;
-        const time = remaining > 3600 
-            ? `${Math.floor(remaining/3600)}h ${Math.floor((remaining%3600)/60)}min`
-            : `${Math.floor(remaining/60)}min`;
-        
-        // RENDERIZAR SEÇÃO - VERSÃO COM CORREÇÃO FORÇADA
+// RENDERIZAR SEÇÃO - ÚNICA E CORRETA
 function renderContinueWatching() {
     const list = ContinueWatching.getWatchingList();
     console.log('📋 Lista de continuar assistindo:', list.length, 'itens');
@@ -115,20 +92,19 @@ function renderContinueWatching() {
         // EXTRAIR APENAS O NOME DO ARQUIVO
         let nomeArquivo = 'default.jpg';
         if (item.poster) {
-            // Pega tudo depois da última barra
             const partes = item.poster.split('/');
             nomeArquivo = partes[partes.length - 1];
             console.log('📸 Poster original:', item.poster, '→ Nome:', nomeArquivo);
         }
         
-        // FORÇAR O CAMINHO CORRETO (SEM /Pirataflix e SEM /web)
+        // URL CORRETA - usando caminho absoluto
         const urlCapa = `https://pirataflix-seven.vercel.app/assets/Capas/${nomeArquivo}`;
         
         html += `
         <div class="item-card continue-card" onclick="resumeItem('${item.itemId}', '${item.category}', ${item.episodeIndex})">
             <img src="${urlCapa}" 
                  class="item-poster" 
-                 onerror="console.log('❌ Erro capa:', this.src); this.onerror=null; this.src='https://pirataflix-seven.vercel.app/assets/Capas/default.jpg';">
+                 onerror="this.onerror=null; this.src='https://pirataflix-seven.vercel.app/assets/Capas/default.jpg';">
             <div class="item-info">
                 <div class="item-title">${item.seriesTitle || item.title}</div>
                 <div class="item-meta">E${item.episode} • ${time}</div>
@@ -142,7 +118,7 @@ function renderContinueWatching() {
     html += `</div></section>`;
     return html;
 }
-    
+
 // RETOMAR ITEM
 window.resumeItem = function(itemId, category, episodeIndex) {
     if (!window.vodData?.[category]) return;
