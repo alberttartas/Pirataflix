@@ -89,9 +89,17 @@ function renderContinueWatching() {
             ? `${Math.floor(remaining/3600)}h ${Math.floor((remaining%3600)/60)}min`
             : `${Math.floor(remaining/60)}min`;
         
-        // CORREÇÃO DO CAMINHO DA CAPA - VERSÃO SIMPLIFICADA
-let posterFile = item.poster ? item.poster.split('/').pop() : 'default.jpg';
-let posterUrl = `/assets/Capas/${posterFile}`;
+        // CORREÇÃO RADICAL - REMOVE QUALQUER "/Pirataflix" DO CAMINHO
+let posterFile = 'default.jpg';
+
+if (item.poster) {
+    // Pega só o nome do arquivo, ignora tudo antes
+    const partes = item.poster.split('/');
+    posterFile = partes[partes.length - 1];
+}
+
+// Garantir que não tem /Pirataflix no caminho
+const posterUrl = `/assets/Capas/${posterFile}`;
 
 html += `
 <div class="item-card continue-card" onclick="resumeItem('${item.itemId}', '${item.category}', ${item.episodeIndex})">
