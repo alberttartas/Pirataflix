@@ -1192,37 +1192,34 @@ def generate_html_with_correct_paths(base_dir, data):
                     <h2 class="category-title">${categoryNames[category]}</h2>
                     <div class="items-grid">`;
                 
-                items.forEach(item => {
-                    const poster = item.poster || 'assets/capas/default.jpg';
-                    const type = category === 'filmes' ? 'Filme' : 'Série';
-                    const episodeCount = item.episodes ? item.episodes.length : 0;
-                    const seasonCount = item.seasons ? item.seasons.length : 0;
-                    
-                    let meta = '';
-                    if (category === 'filmes') {
-                        meta = `Filme • ${episodeCount} episódio(s)`;
-                    } else if (seasonCount > 1) {
-                        meta = `${seasonCount} temporadas`;
-                    } else {
-                        meta = `${episodeCount} episódios`;
-                    }
-                    
-                    html += `
-                    <div class="item-card" onclick="openModal('${category}', '${item.id}')">
-                        <img src="${poster}" alt="${item.title}" class="item-poster"
-                             onerror="this.onerror=null; this.src='assets/capas/default.jpg';">
-                        <div class="item-info">
-                            <div class="item-title">${item.title}</div>
-                            <div class="item-meta">${meta}</div>
-                        </div>
-                    </div>`;
-                });
-                
-                html += `</div></section>`;
-            });
-            
-            contentDiv.innerHTML = html || '<div class="loading">Nenhum conteúdo encontrado</div>';
-        }
+               items.forEach(item => {
+    // CORREÇÃO DAS CAPAS - Usando GitHub RAW
+    const nomeArquivo = item.poster ? item.poster.split('/').pop() : 'default.jpg';
+    const poster = `https://raw.githubusercontent.com/alberttartas/Pirataflix/main/assets/Capas/${nomeArquivo}`;
+    
+    const type = category === 'filmes' ? 'Filme' : 'Série';
+    const episodeCount = item.episodes ? item.episodes.length : 0;
+    const seasonCount = item.seasons ? item.seasons.length : 0;
+    
+    let meta = '';
+    if (category === 'filmes') {
+        meta = `Filme • ${episodeCount} episódio(s)`;
+    } else if (seasonCount > 1) {
+        meta = `${seasonCount} temporadas`;
+    } else {
+        meta = `${episodeCount} episódios`;
+    }
+    
+    html += `
+    <div class="item-card" onclick="openModal('${category}', '${item.id}')">
+        <img src="${poster}" alt="${item.title}" class="item-poster"
+             onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/alberttartas/Pirataflix/main/assets/Capas/default.jpg';">
+        <div class="item-info">
+            <div class="item-title">${item.title}</div>
+            <div class="item-meta">${meta}</div>
+        </div>
+    </div>`;
+});
         
         // Abrir modal
         function openModal(category, itemId) {
@@ -1237,15 +1234,17 @@ def generate_html_with_correct_paths(base_dir, data):
             let modalBodyHtml = '';
             let modalHeaderHtml = '';
             
-            // Header do modal (backdrop com poster)
             if (item.poster) {
-                modalHeaderHtml = `
-                    <div class="modal-backdrop" style="background-image: url('${item.poster}')"></div>
-                    <button class="play-button" onclick="playFirstEpisode('${category}', '${item.id}')" style="position: absolute; bottom: 30px; left: 30px;">
-                        <span>▶</span> Assistir
-                    </button>
-                `;
-            }
+    const nomeArquivo = item.poster.split('/').pop();
+    const posterUrl = `https://raw.githubusercontent.com/alberttartas/Pirataflix/main/assets/Capas/${nomeArquivo}`;
+    
+    modalHeaderHtml = `
+        <div class="modal-backdrop" style="background-image: url('${posterUrl}')"></div>
+        <button class="play-button" onclick="playFirstEpisode('${category}', '${item.id}')" style="position: absolute; bottom: 30px; left: 30px;">
+            <span>▶</span> Assistir
+        </button>
+    `;
+}
             
             // Corpo do modal
             modalBodyHtml = `
@@ -1419,6 +1418,7 @@ def generate_html_with_correct_paths(base_dir, data):
 
 if __name__ == "__main__":
     build_vod_with_direct_capas()
+
 
 
 
