@@ -790,8 +790,11 @@ def generate_html_with_correct_paths(base_dir, data):
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PIRATAFLIX</title>
     
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/favicon.png" type="image/png">
+    <link rel="icon" type="image/png" href="/Pirataflix/favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/Pirataflix/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/Pirataflix/favicon.png">
+    <link rel="apple-touch-icon" href="/Pirataflix/favicon.png">
+    <link rel="shortcut icon" href="/Pirataflix/favicon.png">
 
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -1388,6 +1391,7 @@ def generate_html_with_correct_paths(base_dir, data):
 
 if __name__ == "__main__":
     build_vod_with_direct_capas()
+
 
 
 
