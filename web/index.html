@@ -434,7 +434,14 @@
             <div class="item-meta">${meta}</div>
         </div>
     </div>`;
-});
+
+      }); 
+                
+                html += `</div></section>`;
+            }); 
+            
+            contentDiv.innerHTML = html || '<div class="loading">Nenhum conteúdo encontrado</div>';
+        } 
         
         // Abrir modal
         function openModal(category, itemId) {
