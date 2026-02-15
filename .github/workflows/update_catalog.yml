@@ -64,12 +64,26 @@ jobs:
           echo "🏗️ Gerando site..."
           python build.py
 
-       
-
       - name: Commit automático
-        if: steps.git-check.outputs.changed == 'true'
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: "Auto-generate IPTV playlists"
-          branch: main
-          file_pattern: iptv_playlists/*.m3u iptv_playlists/*.xml
+        id: git-check
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Não adicionar o integrate-player.js
+          git add iptv_playlists/ web/data.json web/index.html input_auto/
+          
+          # Restaurar integrate-player.js se foi adicionado
+          git restore --staged web/integrate-player.js 2>/dev/null || true
+          
+          if git diff --staged --quiet; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+            echo "✅ Sem mudanças para commit"
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+            git commit -m "Auto-generate IPTV playlists"
+            
+            # Tentar push com pull primeiro
+            git pull --rebase origin main || true
+            git push origin main
+          fi
