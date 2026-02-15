@@ -12,9 +12,415 @@
         }
       ],
       "type": "movie"
+    },
+    {
+      "id": "lilo",
+      "title": "Lilo",
+      "poster": "/Pirataflix/assets/Capas/lilo.jpg",
+      "episodes": [
+        {
+          "title": "Lilo & Stitch – Filme 2025",
+          "url": "https://cdn-novflix.com/storagePSN/FILMES/LILOSTITCH2025.mp4",
+          "episode": 2025
+        }
+      ],
+      "type": "movie"
+    },
+    {
+      "id": "ainda_estou_aqui",
+      "title": "Ainda Estou Aqui",
+      "poster": "/Pirataflix/assets/Capas/ainda_estou_aqui.jpg",
+      "episodes": [
+        {
+          "title": "Ainda Estou Aqui",
+          "url": "https://cdn-novflix.com/storagePSN/FILMES/AINDAESTOUAQUI.mp4",
+          "episode": 1
+        }
+      ],
+      "type": "movie"
+    },
+    {
+      "id": "homem_com_h",
+      "title": "Homem Com H",
+      "poster": "/Pirataflix/assets/Capas/homem_com_h.jpg",
+      "episodes": [
+        {
+          "title": "Homem com H",
+          "url": "https://cdn-novflix.com/storagePSN/FILMES/HOMEMCOMH.mp4",
+          "episode": 1
+        }
+      ],
+      "type": "movie"
+    },
+    {
+      "id": "familia_pero_no_mucho",
+      "title": "Familia Pero No Mucho",
+      "poster": "/Pirataflix/assets/Capas/familia_pero_no_mucho.jpg",
+      "episodes": [
+        {
+          "title": "Família, Pero no Mucho",
+          "url": "https://cdn-novflix.com/storagePSN/FILMES/FAMILIAPERONOMUCHO.mp4",
+          "episode": 1
+        }
+      ],
+      "type": "movie"
     }
   ],
   "series": [
+    {
+      "id": "todo_mundo_odeia_o_chris",
+      "title": "Todo Mundo Odeia O Chris",
+      "poster": "/Pirataflix/assets/Capas/todo_mundo_odeia_o_chris.jpg",
+      "seasons": [
+        {
+          "season": 1,
+          "episodes": [
+            {
+              "title": "CHRIS 1x01",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/CHRIS/CHRIS1x01.mp4",
+              "episode": 1
+            },
+            {
+              "title": "CHRIS 1x02",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/CHRIS/CHRIS1x02.mp4",
+              "episode": 2
+            },
+            {
+              "title": "CHRIS 1x03",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/CHRIS/CHRIS1x03.mp4",
+              "episode": 3
+            },
+            {
+              "title": "CHRIS 1x04",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/CHRIS/CHRIS1x04.mp4",
+              "episode": 4
+            },
+            {
+              "title": "CHRIS 1x05",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/CHRIS/CHRIS1x05.mp4",
+              "episode": 5
+            },
+            {
+              "title": "CHRIS 1x06",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/CHRIS/CHRIS1x06.mp4",
+              "episode": 6
+            },
+            {
+              "title": "CHRIS 1x07",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/CHRIS/CHRIS1x07.mp4",
+              "episode": 7
+            },
+            {
+              "title": "CHRIS 1x08",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/CHRIS/CHRIS1x08.mp4",
+              "episode": 8
+            },
+            {
+              "title": "CHRIS 1x09",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/CHRIS/CHRIS1x09.mp4",
+              "episode": 9
+            },
+            {
+              "title": "CHRIS 1x10",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/CHRIS/CHRIS1x10.mp4",
+              "episode": 10
+            },
+            {
+              "title": "CHRIS 1x11",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/CHRIS/CHRIS1x11.mp4",
+              "episode": 11
+            },
+            {
+              "title": "CHRIS 1x12",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/CHRIS/CHRIS1x12.mp4",
+              "episode": 12
+            },
+            {
+              "title": "CHRIS 1x13",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/CHRIS/CHRIS1x13.mp4",
+              "episode": 13
+            },
+            {
+              "title": "CHRIS 1x14",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/CHRIS/CHRIS1x14.mp4",
+              "episode": 14
+            },
+            {
+              "title": "CHRIS 1x15",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/CHRIS/CHRIS1x15.mp4",
+              "episode": 15
+            },
+            {
+              "title": "CHRIS 1x16",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/CHRIS/CHRIS1x16.mp4",
+              "episode": 16
+            },
+            {
+              "title": "CHRIS 1x17",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/CHRIS/CHRIS1x17.mp4",
+              "episode": 17
+            },
+            {
+              "title": "CHRIS 1x18",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/CHRIS/CHRIS1x18.mp4",
+              "episode": 18
+            },
+            {
+              "title": "CHRIS 1x19",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/CHRIS/CHRIS1x19.mp4",
+              "episode": 19
+            },
+            {
+              "title": "CHRIS 1x20",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/CHRIS/CHRIS1x20.mp4",
+              "episode": 20
+            },
+            {
+              "title": "CHRIS 1x21",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/CHRIS/CHRIS1x21.mp4",
+              "episode": 21
+            },
+            {
+              "title": "CHRIS 1x22",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/CHRIS/CHRIS1x22.mp4",
+              "episode": 22
+            }
+          ]
+        },
+        {
+          "season": 2,
+          "episodes": [
+            {
+              "title": "CHRIS 2x01",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/CHRIS/CHRIS2x01.mp4",
+              "episode": 1
+            },
+            {
+              "title": "CHRIS 2x02",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/CHRIS/CHRIS2x02.mp4",
+              "episode": 2
+            },
+            {
+              "title": "CHRIS 2x03",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/CHRIS/CHRIS2x03.mp4",
+              "episode": 3
+            },
+            {
+              "title": "CHRIS 2x04",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/CHRIS/CHRIS2x04.mp4",
+              "episode": 4
+            },
+            {
+              "title": "CHRIS 2x05",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/CHRIS/CHRIS2x05.mp4",
+              "episode": 5
+            },
+            {
+              "title": "CHRIS 2x06",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/CHRIS/CHRIS2x06.mp4",
+              "episode": 6
+            },
+            {
+              "title": "CHRIS 2x07",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/CHRIS/CHRIS2x07.mp4",
+              "episode": 7
+            },
+            {
+              "title": "CHRIS 2x08",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/CHRIS/CHRIS2x08.mp4",
+              "episode": 8
+            },
+            {
+              "title": "CHRIS 2x09",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/CHRIS/CHRIS2x09.mp4",
+              "episode": 9
+            },
+            {
+              "title": "CHRIS 2x10",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/CHRIS/CHRIS2x10.mp4",
+              "episode": 10
+            },
+            {
+              "title": "CHRIS 2x11",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/CHRIS/CHRIS2x11.mp4",
+              "episode": 11
+            },
+            {
+              "title": "CHRIS 2x12",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/CHRIS/CHRIS2x12.mp4",
+              "episode": 12
+            },
+            {
+              "title": "CHRIS 2x13",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/CHRIS/CHRIS2x13.mp4",
+              "episode": 13
+            },
+            {
+              "title": "CHRIS 2x14",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/CHRIS/CHRIS2x14.mp4",
+              "episode": 14
+            },
+            {
+              "title": "CHRIS 2x15",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/CHRIS/CHRIS2x15.mp4",
+              "episode": 15
+            },
+            {
+              "title": "CHRIS 2x16",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/CHRIS/CHRIS2x16.mp4",
+              "episode": 16
+            },
+            {
+              "title": "CHRIS 2x17",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/CHRIS/CHRIS2x17.mp4",
+              "episode": 17
+            },
+            {
+              "title": "CHRIS 2x18",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/CHRIS/CHRIS2x18.mp4",
+              "episode": 18
+            },
+            {
+              "title": "CHRIS 2x19",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/CHRIS/CHRIS2x19.mp4",
+              "episode": 19
+            },
+            {
+              "title": "CHRIS 2x20",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/CHRIS/CHRIS2x20.mp4",
+              "episode": 20
+            },
+            {
+              "title": "CHRIS 2x21",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/CHRIS/CHRIS2x21.mp4",
+              "episode": 21
+            },
+            {
+              "title": "CHRIS 2x22",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/CHRIS/CHRIS2x22.mp4",
+              "episode": 22
+            }
+          ]
+        },
+        {
+          "season": 3,
+          "episodes": [
+            {
+              "title": "CHRIS 3x01",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/CHRIS/CHRIS3x01.mp4",
+              "episode": 1
+            },
+            {
+              "title": "CHRIS 3x02",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/CHRIS/CHRIS3x02.mp4",
+              "episode": 2
+            },
+            {
+              "title": "CHRIS 3x03",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/CHRIS/CHRIS3x03.mp4",
+              "episode": 3
+            },
+            {
+              "title": "CHRIS 3x04",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/CHRIS/CHRIS3x04.mp4",
+              "episode": 4
+            },
+            {
+              "title": "CHRIS 3x05",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/CHRIS/CHRIS3x05.mp4",
+              "episode": 5
+            },
+            {
+              "title": "CHRIS 3x06",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/CHRIS/CHRIS3x06.mp4",
+              "episode": 6
+            },
+            {
+              "title": "CHRIS 3x07",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/CHRIS/CHRIS3x07.mp4",
+              "episode": 7
+            },
+            {
+              "title": "CHRIS 3x08",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/CHRIS/CHRIS3x08.mp4",
+              "episode": 8
+            },
+            {
+              "title": "CHRIS 3x09",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/CHRIS/CHRIS3x09.mp4",
+              "episode": 9
+            },
+            {
+              "title": "CHRIS 3x10",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/CHRIS/CHRIS3x10.mp4",
+              "episode": 10
+            },
+            {
+              "title": "CHRIS 3x11",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/CHRIS/CHRIS3x11.mp4",
+              "episode": 11
+            },
+            {
+              "title": "CHRIS 3x12",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/CHRIS/CHRIS3x12.mp4",
+              "episode": 12
+            },
+            {
+              "title": "CHRIS 3x13",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/CHRIS/CHRIS3x13.mp4",
+              "episode": 13
+            },
+            {
+              "title": "CHRIS 3x14",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/CHRIS/CHRIS3x14.mp4",
+              "episode": 14
+            },
+            {
+              "title": "CHRIS 3x15",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/CHRIS/CHRIS3x15.mp4",
+              "episode": 15
+            },
+            {
+              "title": "CHRIS 3x16",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/CHRIS/CHRIS3x16.mp4",
+              "episode": 16
+            },
+            {
+              "title": "CHRIS 3x17",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/CHRIS/CHRIS3x17.mp4",
+              "episode": 17
+            },
+            {
+              "title": "CHRIS 3x18",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/CHRIS/CHRIS3x18.mp4",
+              "episode": 18
+            },
+            {
+              "title": "CHRIS 3x19",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/CHRIS/CHRIS3x19.mp4",
+              "episode": 19
+            },
+            {
+              "title": "CHRIS 3x20",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/CHRIS/CHRIS3x20.mp4",
+              "episode": 20
+            },
+            {
+              "title": "CHRIS 3x21",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/CHRIS/CHRIS3x21.mp4",
+              "episode": 21
+            },
+            {
+              "title": "CHRIS 3x22",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/CHRIS/CHRIS3x22.mp4",
+              "episode": 22
+            }
+          ]
+        }
+      ],
+      "type": "series",
+      "category": "series"
+    },
     {
       "id": "bridgerton",
       "title": "Bridgerton",
@@ -154,6 +560,102 @@
               "episode": 8
             }
           ]
+        }
+      ],
+      "type": "series",
+      "category": "series"
+    },
+    {
+      "id": "rainhas_da_grana",
+      "title": "Rainhas Da Grana",
+      "poster": "/Pirataflix/assets/Capas/rainhas_da_grana.jpg",
+      "seasons": [
+        {
+          "season": 1,
+          "episodes": [
+            {
+              "title": "RAINHADAGRANA1x01",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/RAINHADAGRANA/RAINHADAGRANA1x01.mp4",
+              "episode": 1
+            },
+            {
+              "title": "RAINHADAGRANA1x02",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/RAINHADAGRANA/RAINHADAGRANA1x02.mp4",
+              "episode": 2
+            },
+            {
+              "title": "RAINHADAGRANA1x03",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/RAINHADAGRANA/RAINHADAGRANA1x03.mp4",
+              "episode": 3
+            },
+            {
+              "title": "RAINHADAGRANA1x04",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/RAINHADAGRANA/RAINHADAGRANA1x04.mp4",
+              "episode": 4
+            },
+            {
+              "title": "RAINHADAGRANA1x05",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/RAINHADAGRANA/RAINHADAGRANA1x05.mp4",
+              "episode": 5
+            },
+            {
+              "title": "RAINHADAGRANA1x06",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/RAINHADAGRANA/RAINHADAGRANA1x06.mp4",
+              "episode": 6
+            },
+            {
+              "title": "RAINHADAGRANA1x07",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/RAINHADAGRANA/RAINHADAGRANA1x07.mp4",
+              "episode": 7
+            },
+            {
+              "title": "RAINHADAGRANA1x08",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/RAINHADAGRANA/RAINHADAGRANA1x08.mp4",
+              "episode": 8
+            }
+          ]
+        }
+      ],
+      "episodes": [
+        {
+          "title": "RAINHADAGRANA1x01",
+          "url": "https://cdn-novflix.com/storagePSN/SERIES/RAINHADAGRANA/RAINHADAGRANA1x01.mp4",
+          "episode": 1
+        },
+        {
+          "title": "RAINHADAGRANA1x02",
+          "url": "https://cdn-novflix.com/storagePSN/SERIES/RAINHADAGRANA/RAINHADAGRANA1x02.mp4",
+          "episode": 2
+        },
+        {
+          "title": "RAINHADAGRANA1x03",
+          "url": "https://cdn-novflix.com/storagePSN/SERIES/RAINHADAGRANA/RAINHADAGRANA1x03.mp4",
+          "episode": 3
+        },
+        {
+          "title": "RAINHADAGRANA1x04",
+          "url": "https://cdn-novflix.com/storagePSN/SERIES/RAINHADAGRANA/RAINHADAGRANA1x04.mp4",
+          "episode": 4
+        },
+        {
+          "title": "RAINHADAGRANA1x05",
+          "url": "https://cdn-novflix.com/storagePSN/SERIES/RAINHADAGRANA/RAINHADAGRANA1x05.mp4",
+          "episode": 5
+        },
+        {
+          "title": "RAINHADAGRANA1x06",
+          "url": "https://cdn-novflix.com/storagePSN/SERIES/RAINHADAGRANA/RAINHADAGRANA1x06.mp4",
+          "episode": 6
+        },
+        {
+          "title": "RAINHADAGRANA1x07",
+          "url": "https://cdn-novflix.com/storagePSN/SERIES/RAINHADAGRANA/RAINHADAGRANA1x07.mp4",
+          "episode": 7
+        },
+        {
+          "title": "RAINHADAGRANA1x08",
+          "url": "https://cdn-novflix.com/storagePSN/SERIES/RAINHADAGRANA/RAINHADAGRANA1x08.mp4",
+          "episode": 8
         }
       ],
       "type": "series",
