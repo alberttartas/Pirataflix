@@ -1,0 +1,78 @@
+name: Build and Deploy Pirataflix
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Important for git operations
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install ImageMagick for favicon (if needed)
+        run: sudo apt-get update && sudo apt-get install -y imagemagick
+
+      - name: Verify favicon exists
+        run: |
+          echo "Checking for favicon..."
+          if [ -f "favicon.ico" ]; then
+            echo "✓ favicon.ico found"
+            ls -la favicon.ico
+          elif [ -f "public/favicon.ico" ]; then
+            echo "✓ favicon.ico found in public/"
+            cp public/favicon.ico .
+          else
+            echo "⚠️ No favicon found, creating placeholder..."
+            # Cria um favicon simples usando ImageMagick
+            convert -size 64x64 xc:#E50914 favicon.ico
+            echo "✅ favicon.ico created"
+          fi
+
+      - name: Run build.py
+        run: python build.py
+
+      - name: Auto-commit IPTV files
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          repository: .
+          commit_message: "Auto-generate IPTV playlists"
+          commit_options: '--no-verify'
+          file_pattern: 'iptv_playlists/*.m3u iptv_playlists/*.xml'
+          commit_user_name: 'github-actions[bot]'
+          commit_user_email: 'github-actions[bot]@users.noreply.github.com'
+          commit_author: 'github-actions[bot] <github-actions[bot]@users.noreply.github.com>'
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
