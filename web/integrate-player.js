@@ -89,24 +89,23 @@ function renderContinueWatching() {
             ? `${Math.floor(remaining/3600)}h ${Math.floor((remaining%3600)/60)}min`
             : `${Math.floor(remaining/60)}min`;
         
-        // CORREÇÃO DO CAMINHO DA CAPA
-        let posterPath = item.poster || '/assets/Capas/default.jpg';
-        // Remove /Pirataflix do início se existir
-        posterPath = posterPath.replace('/Pirataflix', '');
-        
-        html += `
-        <div class="item-card continue-card" onclick="resumeItem('${item.itemId}', '${item.category}', ${item.episodeIndex})">
-            <img src="/assets/Capas/${item.poster ? item.poster.split('/').pop() : 'default.jpg'}" 
-     class="item-poster" 
-     onerror="this.src='/assets/Capas/default.jpg';">
-            <div class="item-info">
-                <div class="item-title">${item.seriesTitle || item.title}</div>
-                <div class="item-meta">E${item.episode} • ${time}</div>
-                <div style="width:100%;height:3px;background:#333;margin-top:5px;">
-                    <div style="width:${item.progress}%;height:100%;background:#e50914;"></div>
-                </div>
-            </div>
-        </div>`;
+        // CORREÇÃO DO CAMINHO DA CAPA - VERSÃO SIMPLIFICADA
+let posterFile = item.poster ? item.poster.split('/').pop() : 'default.jpg';
+let posterUrl = `/assets/Capas/${posterFile}`;
+
+html += `
+<div class="item-card continue-card" onclick="resumeItem('${item.itemId}', '${item.category}', ${item.episodeIndex})">
+    <img src="${posterUrl}" 
+         class="item-poster" 
+         onerror="this.onerror=null; this.src='/assets/Capas/default.jpg';">
+    <div class="item-info">
+        <div class="item-title">${item.seriesTitle || item.title}</div>
+        <div class="item-meta">E${item.episode} • ${time}</div>
+        <div style="width:100%;height:3px;background:#333;margin-top:5px;">
+            <div style="width:${item.progress}%;height:100%;background:#e50914;"></div>
+        </div>
+    </div>
+</div>`;
     });
     
     html += `</div></section>`;
