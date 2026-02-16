@@ -81,54 +81,24 @@ jobs:
             if [ -f "web/data.json" ]; then
               echo "📊 Estatísticas do catálogo:"
               
-              # Contar filmes
               filmes=$(grep -o '"filmes":\[[^]]*\]' web/data.json | grep -o '"title"' | wc -l || echo "0")
-              echo "   🎬 Filmes: $filmes"
-              
-              # Contar séries
               series=$(grep -o '"series":\[[^]]*\]' web/data.json | grep -o '"title"' | wc -l || echo "0")
-              echo "   📺 Séries: $series"
-              
-              # Contar novelas
               novelas=$(grep -o '"novelas":\[[^]]*\]' web/data.json | grep -o '"title"' | wc -l || echo "0")
-              echo "   💖 Novelas: $novelas"
-              
-              # Contar animes
               animes=$(grep -o '"animes":\[[^]]*\]' web/data.json | grep -o '"title"' | wc -l || echo "0")
-              echo "   👻 Animes: $animes"
-              
-              # Contar infantil
               infantil=$(grep -o '"infantil":\[[^]]*\]' web/data.json | grep -o '"title"' | wc -l || echo "0")
-              echo "   🧸 Infantil: $infantil"
-              
-              # Contar TV
               tv=$(grep -o '"tv":\[[^]]*\]' web/data.json | grep -o '"title"' | wc -l || echo "0")
-              echo "   📡 TV: $tv"
               
-              total=$((filmes + series + novelas + animes + infantil + tv))
-              echo "   📊 TOTAL: $total itens"
+              echo "   🎬 Filmes: $filmes"
+              echo "   📺 Séries: $series"
+              echo "   💖 Novelas: $novelas"
+              echo "   👻 Animes: $animes"
+              echo "   🧸 Infantil: $infantil"
+              echo "   📡 TV: $tv"
+              echo "   📊 TOTAL: $((filmes + series + novelas + animes + infantil + tv)) itens"
             fi
           else
             echo "❌ consolidar_data.py não encontrado!"
             exit 1
-          fi
-
-      - name: Verificar conteúdo do input_auto
-        run: |
-          echo "============================================================"
-          echo "📁 VERIFICANDO INPUT_AUTO"
-          echo "============================================================"
-          if [ -d "input_auto" ]; then
-            echo "📂 Estrutura de pastas:"
-            ls -la input_auto/
-            echo ""
-            echo "📊 Arquivos M3U encontrados:"
-            find input_auto -name "*.m3u" | while read file; do
-              lines=$(grep -c "^http" "$file" 2>/dev/null || echo "0")
-              echo "   📄 $(basename "$file"): $lines streams"
-            done
-          else
-            echo "⚠️ Pasta input_auto não encontrada"
           fi
 
       - name: Executar build do site
@@ -155,15 +125,22 @@ jobs:
             exit 1
           fi
 
+      - name: Configurar Git e resolver divergências
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          
+          echo "🔄 Resolvendo divergências..."
+          git pull --rebase -X theirs origin main || true
+          git rebase --continue || true
+          echo "✅ Divergências resolvidas!"
+
       - name: Preparar arquivos para commit
         id: git-check
         run: |
           echo "============================================================"
           echo "📦 PREPARANDO COMMIT"
           echo "============================================================"
-          
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
           
           # Adicionar todos os arquivos gerados
           git add iptv_playlists/ web/ input_auto/ || true
@@ -219,88 +196,26 @@ jobs:
           while [ $retry_count -lt $max_retries ]; do
             echo "Tentativa $((retry_count+1)) de $max_retries..."
             
-            # Pull com rebase
-            git pull --rebase origin main
-            
-            # Push
+            # Push com force apenas se necessário
             if git push origin main; then
               echo "✅ Push realizado com sucesso!"
               break
             else
-              retry_count=$((retry_count+1))
-              if [ $retry_count -lt $max_retries ]; then
-                echo "⚠️ Push falhou, tentando novamente em 5 segundos..."
-                sleep 5
+              echo "⚠️ Push falhou, tentando pull + push..."
+              git pull --rebase -X theirs origin main
+              
+              if git push origin main; then
+                echo "✅ Push realizado com sucesso na segunda tentativa!"
+                break
               else
-                echo "❌ Push falhou após $max_retries tentativas"
-                exit 1
+                retry_count=$((retry_count+1))
+                if [ $retry_count -lt $max_retries ]; then
+                  echo "⚠️ Push falhou, tentando novamente em 5 segundos..."
+                  sleep 5
+                else
+                  echo "❌ Push falhou após $max_retries tentativas"
+                  exit 1
+                fi
               fi
             fi
           done
-
-      - name: Upload de artefatos (opcional)
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: playlists-geradas
-          path: |
-            iptv_playlists/
-            web/data.json
-            web/channels.json
-          retention-days: 7
-
-      - name: Resumo final
-        if: always()
-        run: |
-          echo "============================================================"
-          echo "📊 RESUMO FINAL DA EXECUÇÃO"
-          echo "============================================================"
-          
-          # Data e hora
-          echo "📅 Data: $(date)"
-          
-          # Estatísticas do data.json
-          if [ -f "web/data.json" ]; then
-            echo ""
-            echo "📊 CATÁLOGO:"
-            
-            filmes=$(grep -o '"filmes":\[[^]]*\]' web/data.json | grep -o '"title"' | wc -l || echo "0")
-            series=$(grep -o '"series":\[[^]]*\]' web/data.json | grep -o '"title"' | wc -l || echo "0")
-            novelas=$(grep -o '"novelas":\[[^]]*\]' web/data.json | grep -o '"title"' | wc -l || echo "0")
-            animes=$(grep -o '"animes":\[[^]]*\]' web/data.json | grep -o '"title"' | wc -l || echo "0")
-            infantil=$(grep -o '"infantil":\[[^]]*\]' web/data.json | grep -o '"title"' | wc -l || echo "0")
-            tv=$(grep -o '"tv":\[[^]]*\]' web/data.json | grep -o '"title"' | wc -l || echo "0")
-            
-            echo "   🎬 Filmes: $filmes"
-            echo "   📺 Séries: $series"
-            echo "   💖 Novelas: $novelas"
-            echo "   👻 Animes: $animes"
-            echo "   🧸 Infantil: $infantil"
-            echo "   📡 TV: $tv"
-            echo "   📊 TOTAL: $((filmes + series + novelas + animes + infantil + tv))"
-          fi
-          
-          # Estatísticas das playlists
-          if [ -d "iptv_playlists" ]; then
-            echo ""
-            echo "📡 PLAYLISTS:"
-            for playlist in iptv_playlists/*.m3u; do
-              if [ -f "$playlist" ]; then
-                name=$(basename "$playlist")
-                streams=$(grep -c "^http" "$playlist" 2>/dev/null || echo "0")
-                echo "   📄 $name: $streams streams"
-              fi
-            done
-          fi
-          
-          # Estatísticas do channels.json
-          if [ -f "web/channels.json" ]; then
-            echo ""
-            echo "📺 CANAIS DE TV:"
-            channels=$(grep -c '"title"' web/channels.json 2>/dev/null || echo "0")
-            echo "   Total: $channels canais únicos"
-          fi
-          
-          echo ""
-          echo "✅ Workflow concluído com sucesso!"
-          echo "============================================================"
