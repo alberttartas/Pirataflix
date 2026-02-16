@@ -714,7 +714,59 @@ def build_vod_with_direct_capas():
     
     # Gerar HTML atualizado
     generate_html_with_correct_paths(base_dir, output)
-     
+    
+
+    # ============================================
+    # CÓPIA DO INTEGRATE-PLAYER.JS (CORRIGIDO)
+    # ============================================
+    print("\n📋 VERIFICANDO CÓPIA DO INTEGRATE-PLAYER.JS:")
+    print(f"   Diretório atual: {base_dir}")
+    print(f"   Procurando arquivo fonte em: {base_dir / 'integrate-player.js'}")
+    
+    integrate_js_path = base_dir / "integrate-player.js"
+    web_integrate_path = web_dir / "integrate-player.js"
+    
+    # Verificar se arquivo fonte existe
+    if integrate_js_path.exists():
+        tamanho = integrate_js_path.stat().st_size
+        print(f"   ✅ Arquivo fonte ENCONTRADO!")
+        print(f"   📏 Tamanho: {tamanho} bytes")
+        
+        # Mostrar primeiras linhas para confirmar
+        with open(integrate_js_path, 'r', encoding='utf-8') as f:
+            primeiras_linhas = f.readlines()[:3]
+            print("   📝 Primeiras linhas:")
+            for linha in primeiras_linhas:
+                print(f"      {linha.strip()}")
+        
+        # Copiar arquivo
+        with open(integrate_js_path, 'r', encoding='utf-8') as src:
+            conteudo = src.read()
+            with open(web_integrate_path, 'w', encoding='utf-8') as dst:
+                dst.write(conteudo)
+        
+        # Verificar se copiou
+        if web_integrate_path.exists():
+            tamanho_copia = web_integrate_path.stat().st_size
+            print(f"   ✅ Arquivo COPIADO com sucesso!")
+            print(f"   📏 Tamanho original: {tamanho} bytes, Cópia: {tamanho_copia} bytes")
+            print(f"   📍 Destino: {web_integrate_path}")
+        else:
+            print(f"   ❌ FALHA NA CÓPIA! Arquivo não aparece no destino")
+    else:
+        print(f"   ❌ Arquivo fonte NÃO ENCONTRADO em: {integrate_js_path}")
+        print(f"   📋 Listando arquivos .js na raiz:")
+        for arquivo in base_dir.glob("*.js"):
+            print(f"      - {arquivo.name}")
+        print(f"   📋 Listando TODOS os arquivos na raiz:")
+        for arquivo in base_dir.glob("*"):
+            if arquivo.is_file():
+                print(f"      - {arquivo.name}")
+    
+    # ============================================
+    # CONTINUAÇÃO NORMAL
+    # ============================================
+    
     # Criar diretório para playlists
     output_dir = base_dir / "iptv_playlists"
     output_dir.mkdir(exist_ok=True)
@@ -730,10 +782,8 @@ def build_vod_with_direct_capas():
     
     
 def generate_html_with_correct_paths(base_dir, data):
-    ICON_URL = "https://raw.githubusercontent.com/alberttartas/Pirataflix/main/favicon.png"
-    
     """Gera HTML estilo Netflix"""
-    html_template = f'''<!DOCTYPE html>
+    html_template = '''<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -747,100 +797,16 @@ def generate_html_with_correct_paths(base_dir, data):
     <link rel="shortcut icon" href="favicon.png">
 
     <style>
-        /* Seu CSS existente - manter igual */
-        * {{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }}
-        
-        body {{ 
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
             font-family: 'Arial', sans-serif; 
             background: #141414; 
             color: white; 
             line-height: 1.4;
-        }}
+        }
         
-        /* Loading */
-        .loading-screen {{
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: #141414;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-            transition: opacity 0.5s ease;
-        }}
-        
-        .loading-screen.fade-out {{
-            opacity: 0;
-            pointer-events: none;
-        }}
-        
-        .loading-container {{
-            text-align: center;
-        }}
-        
-        .loading-icon {{
-            width: 120px;
-            height: 120px;
-            margin: 0 auto 20px;
-            animation: quickPulse 0.8s ease-in-out infinite;
-        }}
-        
-        .loading-icon img {{
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            filter: drop-shadow(0 0 15px rgba(229, 9, 20, 0.7));
-        }}
-        
-        .loading-dots {{
-            display: flex;
-            gap: 8px;
-            justify-content: center;
-            margin-top: 20px;
-        }}
-        
-        .dot {{
-            width: 12px;
-            height: 12px;
-            background: #e50914;
-            border-radius: 50%;
-            animation: quickDot 0.8s infinite;
-        }}
-        
-        .dot:nth-child(2) {{
-            animation-delay: 0.2s;
-        }}
-        
-        .dot:nth-child(3) {{
-            animation-delay: 0.4s;
-        }}
-        
-        .loading-text {{
-            color: #e50914;
-            font-size: 1.2rem;
-            margin-top: 20px;
-            letter-spacing: 2px;
-        }}
-        
-        @keyframes quickPulse {{
-            0%, 100% {{ transform: scale(1); }}
-            50% {{ transform: scale(1.1); }}
-        }}
-        
-        @keyframes quickDot {{
-            0%, 100% {{ opacity: 0.3; transform: scale(0.8); }}
-            50% {{ opacity: 1; transform: scale(1.2); }}
-        }}
-        
-        /* Header */
-        .header {{
+        /* Header Netflix-style */
+        .header {
             position: fixed;
             top: 0;
             left: 0;
@@ -851,60 +817,63 @@ def generate_html_with_correct_paths(base_dir, data):
             display: flex;
             justify-content: space-between;
             align-items: center;
-        }}
+        }
         
-        .logo {{
+        .logo {
             font-size: 2.5rem;
             color: #e50914;
             font-weight: bold;
             text-decoration: none;
-        }}
+        }
         
-        .nav-links {{
+        .nav-links {
             display: flex;
             gap: 20px;
-        }}
+        }
         
-        .nav-link {{
+        .nav-link {
             color: #e5e5e5;
             text-decoration: none;
             font-size: 0.9rem;
             transition: color 0.3s;
-        }}
+        }
         
-        .nav-link:hover {{
+        .nav-link:hover {
             color: #b3b3b3;
-        }}
+        }
         
-        .main-content {{
+        /* Main content */
+        .main-content {
             padding-top: 100px;
-        }}
+        }
         
-        .category-section {{
+        /* Category sections */
+        .category-section {
             margin-bottom: 40px;
             padding: 0 50px;
-        }}
+        }
         
-        .category-title {{
+        .category-title {
             font-size: 1.4rem;
             margin-bottom: 15px;
             color: #fff;
             font-weight: bold;
-        }}
+        }
         
-        .items-grid {{
+        /* Items grid - estilo Netflix */
+        .items-grid {
             display: flex;
             gap: 10px;
             overflow-x: auto;
             padding: 10px 0;
-            scrollbar-width: none;
-        }}
+            scrollbar-width: none; /* Firefox */
+        }
         
-        .items-grid::-webkit-scrollbar {{
-            display: none;
-        }}
+        .items-grid::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, Opera */
+        }
         
-        .item-card {{
+        .item-card {
             flex: 0 0 auto;
             width: 220px;
             border-radius: 4px;
@@ -912,30 +881,30 @@ def generate_html_with_correct_paths(base_dir, data):
             transition: transform 0.3s;
             cursor: pointer;
             position: relative;
-        }}
+        }
         
-        .item-card:hover {{
+        .item-card:hover {
             transform: scale(1.1);
             z-index: 10;
-        }}
+        }
         
-        .item-card:hover .item-poster {{
+        .item-card:hover .item-poster {
             opacity: 0.5;
-        }}
+        }
         
-        .item-card:hover .item-info {{
+        .item-card:hover .item-info {
             opacity: 1;
-        }}
+        }
         
-        .item-poster {{
+        .item-poster {
             width: 100%;
             height: 320px;
             object-fit: cover;
             display: block;
             transition: opacity 0.3s;
-        }}
+        }
         
-        .item-info {{
+        .item-info {
             position: absolute;
             bottom: 0;
             left: 0;
@@ -944,21 +913,35 @@ def generate_html_with_correct_paths(base_dir, data):
             padding: 20px;
             opacity: 0;
             transition: opacity 0.3s;
-        }}
+        }
         
-        .item-title {{
+        .item-title {
             font-size: 1.1rem;
             margin-bottom: 5px;
             font-weight: bold;
-        }}
+        }
         
-        .item-meta {{
+        .item-meta {
             font-size: 0.85rem;
             color: #b3b3b3;
-        }}
+        }
         
-        /* Modal */
-        .modal {{
+        /* Loading state */
+        .loading {
+            text-align: center;
+            padding: 100px 20px;
+            color: #e50914;
+            font-size: 1.2rem;
+        }
+        
+        .error {
+            text-align: center;
+            padding: 100px 20px;
+            color: #e50914;
+        }
+        
+        /* Modal Netflix-style */
+        .modal {
             display: none;
             position: fixed;
             top: 0;
@@ -968,24 +951,24 @@ def generate_html_with_correct_paths(base_dir, data):
             background: rgba(0,0,0,0.9);
             z-index: 1000;
             overflow-y: auto;
-        }}
+        }
         
-        .modal-content {{
+        .modal-content {
             background: #181818;
             border-radius: 8px;
             max-width: 850px;
             margin: 50px auto;
             position: relative;
             overflow: hidden;
-        }}
+        }
         
-        .modal-header {{
+        .modal-header {
             position: relative;
             height: 450px;
             overflow: hidden;
-        }}
+        }
         
-        .modal-backdrop {{
+        .modal-backdrop {
             position: absolute;
             top: 0;
             left: 0;
@@ -994,9 +977,9 @@ def generate_html_with_correct_paths(base_dir, data):
             background-size: cover;
             background-position: center;
             opacity: 0.4;
-        }}
+        }
         
-        .modal-close {{
+        .modal-close {
             position: absolute;
             top: 20px;
             right: 20px;
@@ -1009,37 +992,45 @@ def generate_html_with_correct_paths(base_dir, data):
             font-size: 24px;
             cursor: pointer;
             z-index: 1001;
-        }}
+        }
         
-        .modal-body {{
+        .modal-body {
             padding: 30px;
             position: relative;
             z-index: 1;
-        }}
+        }
         
-        .modal-title {{
+        .modal-title {
             font-size: 2rem;
             margin-bottom: 20px;
             color: #fff;
-        }}
+        }
         
-        .modal-meta {{
+        .modal-meta {
             display: flex;
             gap: 20px;
             margin-bottom: 20px;
             color: #b3b3b3;
-        }}
+        }
         
-        .episodes-section {{
+        .modal-description {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            color: #fff;
+        }
+        
+        /* Episode list */
+        .episodes-section {
             margin-top: 30px;
-        }}
+        }
         
-        .episode-list {{
+        .episode-list {
             display: grid;
             gap: 10px;
-        }}
+        }
         
-        .episode-item {{
+        .episode-item {
             background: #2d2d2d;
             border-radius: 4px;
             padding: 15px;
@@ -1048,13 +1039,13 @@ def generate_html_with_correct_paths(base_dir, data):
             display: flex;
             align-items: center;
             gap: 15px;
-        }}
+        }
         
-        .episode-item:hover {{
+        .episode-item:hover {
             background: #3d3d3d;
-        }}
+        }
         
-        .episode-number {{
+        .episode-number {
             background: #e50914;
             color: white;
             width: 35px;
@@ -1065,18 +1056,24 @@ def generate_html_with_correct_paths(base_dir, data):
             justify-content: center;
             font-weight: bold;
             flex-shrink: 0;
-        }}
+        }
         
-        .episode-info {{
+        .episode-info {
             flex: 1;
-        }}
+        }
         
-        .episode-title {{
+        .episode-title {
             font-weight: bold;
             margin-bottom: 5px;
-        }}
+        }
         
-        .play-button {{
+        .episode-duration {
+            font-size: 0.85rem;
+            color: #b3b3b3;
+        }
+        
+        /* Play button */
+        .play-button {
             background: #e50914;
             color: white;
             border: none;
@@ -1090,66 +1087,45 @@ def generate_html_with_correct_paths(base_dir, data):
             gap: 10px;
             margin-top: 20px;
             transition: background 0.3s;
-        }}
+        }
         
-        .play-button:hover {{
+        .play-button:hover {
             background: #f40612;
-        }}
+        }
         
-        .error {{
-            text-align: center;
-            padding: 100px 20px;
-            color: #e50914;
-            font-size: 1.2rem;
-        }}
-        
-        @media (max-width: 768px) {{
-            .header {{
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header {
                 padding: 20px;
-            }}
+            }
             
-            .logo {{
+            .logo {
                 font-size: 2rem;
-            }}
+            }
             
-            .category-section {{
+            .category-section {
                 padding: 0 20px;
-            }}
+            }
             
-            .item-card {{
+            .item-card {
                 width: 180px;
-            }}
+            }
             
-            .item-poster {{
+            .item-poster {
                 height: 260px;
-            }}
+            }
             
-            .modal-content {{
+            .modal-content {
                 margin: 20px;
-            }}
+            }
             
-            .modal-header {{
+            .modal-header {
                 height: 300px;
-            }}
-        }}
+            }
+        }
     </style>
 </head>
 <body>
-    <!-- Loading -->
-    <div class="loading-screen" id="loadingScreen">
-        <div class="loading-container">
-            <div class="loading-icon">
-                <img src="{ICON_URL}" alt="PIRATAFLIX">
-            </div>
-            <div class="loading-dots">
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-            </div>
-            <div class="loading-text">CARREGANDO</div>
-        </div>
-    </div>
-
     <!-- Header -->
     <header class="header">
         <a href="#" class="logo">PIRATAFLIX</a>
@@ -1162,7 +1138,7 @@ def generate_html_with_correct_paths(base_dir, data):
     </header>
 
     <!-- Main Content -->
-    <main class="main-content" id="content" style="display: none;">
+    <main class="main-content" id="content">
         <div class="loading">Carregando catálogo...</div>
     </main>
 
@@ -1173,173 +1149,234 @@ def generate_html_with_correct_paths(base_dir, data):
                 <button class="modal-close" id="closeModal">&times;</button>
             </div>
             <div class="modal-body" id="modalBody">
-                <!-- Conteúdo do modal -->
+                <!-- Conteúdo será carregado aqui -->
             </div>
         </div>
     </div>
 
-    <script>
-        // Debug - verificar caminho do data.json
-        console.log('📍 Localização atual:', window.location.href);
-        
-        window.vodData = {{}};
+        <script>
+        // Dados carregados
+        window.vodData = {};
         let currentItem = null;
-    
-    function hideLoading() {
-    const loadingScreen = document.getElementById('loadingScreen');
-    const content = document.getElementById('content');
-    
-    if (loadingScreen && content) {
-        // Forçar remoção do loading
-        loadingScreen.style.opacity = '0';
-        loadingScreen.style.pointerEvents = 'none';
         
-        // Mostrar conteúdo imediatamente
-        content.style.display = 'block';
+        // Carregar dados
+        async function loadData() {
+          try {
+          const response = await fetch('data.json');
+          window.vodData = await response.json();  // <-- ADICIONE window.
+          displayContent();
+           } catch (error) {
+          document.getElementById('content').innerHTML = 
+            '<div class="error">Erro ao carregar dados: ' + error.message + '</div>';
+           }
+         }
         
-        // Remover loading após animação
-        setTimeout(() => {
-            loadingScreen.style.display = 'none';
-        }, 500);
-    }
-}
-        
-        async function loadData() {{
-            try {{
-                console.log('📡 Tentando carregar data.json...');
-                
-                // Tentar diferentes caminhos
-                let response;
-                const paths = [
-                    'data.json',
-                    './data.json',
-                    '/data.json',
-                    'web/data.json',
-                    '../data.json'
-                ];
-                
-                for (const path of paths) {{
-                    try {{
-                        console.log(`Tentando: ${{path}}`);
-                        response = await fetch(path);
-                        if (response.ok) {{
-                            console.log(`✅ Sucesso com: ${{path}}`);
-                            break;
-                        }}
-                    }} catch (e) {{
-                        console.log(`❌ Falha com: ${{path}}`);
-                    }}
-                }}
-                
-                if (!response || !response.ok) {{
-                    throw new Error('Não foi possível encontrar data.json');
-                }}
-                
-                const data = await response.json();
-                console.log('✅ Dados carregados:', data);
-                console.log('📊 Categorias:', Object.keys(data));
-                
-                window.vodData = data;
-                hideLoading();
-                displayContent();
-                
-            }} catch (error) {{
-                console.error('❌ Erro:', error);
-                document.getElementById('content').innerHTML = 
-                    '<div class="error">' +
-                    '<h2>Erro ao carregar dados</h2>' +
-                    '<p>' + error.message + '</p>' +
-                    '<p>Verifique se o arquivo data.json existe na pasta web/</p>' +
-                    '</div>';
-                hideLoading();
-            }}
-        }}
-        
-        function displayContent() {{
+        // Exibir conteúdo
+        function displayContent() {
             const contentDiv = document.getElementById('content');
             let html = '';
             
+            // Ordem das categorias
             const categoryOrder = ['filmes', 'series', 'novelas', 'animes', 'infantil'];
-            const categoryNames = {{
+            const categoryNames = {
                 'filmes': '🎬 Filmes',
                 'series': '📺 Séries', 
                 'novelas': '💖 Novelas',
                 'animes': '👻 Animes',
                 'infantil': '🧸 Infantil'
-            }};
+            };
             
-            let totalItems = 0;
-            categoryOrder.forEach(category => {{
+            categoryOrder.forEach(category => {
                 const items = vodData[category];
                 if (!items || items.length === 0) return;
                 
-                totalItems += items.length;
-                console.log(`${{category}}: ${{items.length}} itens`);
-                
                 html += `
-                <section class="category-section" id="${{category}}">
-                    <h2 class="category-title">${{categoryNames[category]}}</h2>
+                <section class="category-section" id="${category}">
+                    <h2 class="category-title">${categoryNames[category]}</h2>
                     <div class="items-grid">`;
                 
-                items.forEach(item => {{
+                items.forEach(item => {
+                    // CORREÇÃO DAS CAPAS - Usando GitHub RAW
                     const nomeArquivo = item.poster ? item.poster.split('/').pop() : 'default.jpg';
-                    const poster = `https://raw.githubusercontent.com/alberttartas/Pirataflix/main/assets/Capas/${{nomeArquivo}}`;
+                    const poster = `https://raw.githubusercontent.com/alberttartas/Pirataflix/main/assets/Capas/${nomeArquivo}`;
                     
+                    const type = category === 'filmes' ? 'Filme' : 'Série';
                     const episodeCount = item.episodes ? item.episodes.length : 0;
                     const seasonCount = item.seasons ? item.seasons.length : 0;
                     
                     let meta = '';
-                    if (category === 'filmes') {{
-                        meta = `Filme • ${{episodeCount}} episódio(s)`;
-                    }} else if (seasonCount > 1) {{
-                        meta = `${{seasonCount}} temporadas`;
-                    }} else {{
-                        meta = `${{episodeCount}} episódios`;
-                    }}
+                    if (category === 'filmes') {
+                        meta = `Filme • ${episodeCount} episódio(s)`;
+                    } else if (seasonCount > 1) {
+                        meta = `${seasonCount} temporadas`;
+                    } else {
+                        meta = `${episodeCount} episódios`;
+                    }
                     
                     html += `
-                    <div class="item-card" onclick="openModal('${{category}}', '${{item.id}}')">
-                        <img src="${{poster}}" alt="${{item.title}}" class="item-poster"
+                    <div class="item-card" onclick="openModal('${category}', '${item.id}')">
+                        <img src="${poster}" alt="${item.title}" class="item-poster"
                              onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/alberttartas/Pirataflix/main/assets/Capas/default.jpg';">
                         <div class="item-info">
-                            <div class="item-title">${{item.title}}</div>
-                            <div class="item-meta">${{meta}}</div>
+                            <div class="item-title">${item.title}</div>
+                            <div class="item-meta">${meta}</div>
                         </div>
                     </div>`;
-                }});
-              
-          html += `</div></section>`;
-         });
-
-        console.log(`📊 Total de itens: ${totalItems}`);
-
-         contentDiv.innerHTML = html || '<div class="loading">Nenhum conteúdo encontrado</div>';
-         contentDiv.style.display = 'block';
-
+                });
+                
+                html += `</div></section>`;
+            });
+            
+            contentDiv.innerHTML = html || '<div class="loading">Nenhum conteúdo encontrado</div>';
         }
-               
-        // Fechar modal
-        document.getElementById('closeModal').onclick = function() {{
-            document.getElementById('modal').style.display = 'none';
-        }};
         
-        window.onclick = function(event) {{
-            const modal = document.getElementById('modal');
-            if (event.target === modal) {{
-                modal.style.display = 'none';
-            }}
-        }};
+        // Abrir modal
+        function openModal(category, itemId) {
+            const items = vodData[category];
+            if (!items) return;
+            
+            const item = items.find(i => i.id === itemId);
+            if (!item) return;
+            
+            currentItem = item;
+            
+            let modalBodyHtml = '';
+            let modalHeaderHtml = '';
+            
+            // Header do modal com backdrop
+            if (item.poster) {
+                const nomeArquivo = item.poster.split('/').pop();
+                const posterUrl = `https://raw.githubusercontent.com/alberttartas/Pirataflix/main/assets/Capas/${nomeArquivo}`;
+                
+                modalHeaderHtml = `
+                    <div class="modal-backdrop" style="background-image: url('${posterUrl}')"></div>
+                    <button class="play-button" onclick="playFirstEpisode('${category}', '${item.id}')" style="position: absolute; bottom: 30px; left: 30px;">
+                        <span>▶</span> Assistir
+                    </button>
+                `;
+            }
+            
+            // Corpo do modal
+            modalBodyHtml = `
+                <h2 class="modal-title">${item.title}</h2>
+                <div class="modal-meta">
+                    <span>${item.type === 'movie' ? 'Filme' : 'Série'}</span>
+                    ${item.episodes ? `<span>${item.episodes.length} episódios</span>` : ''}
+                    ${item.seasons ? `<span>${item.seasons.length} temporadas</span>` : ''}
+                </div>
+                <button class="play-button" onclick="playFirstEpisode('${category}', '${item.id}')">
+                    <span>▶</span> Assistir
+                </button>
+            `;
+            
+            // Listar episódios
+            if (item.episodes && item.episodes.length > 0) {
+                modalBodyHtml += `
+                <div class="episodes-section">
+                    <h3 style="margin-bottom: 20px; font-size: 1.3rem;">Episódios</h3>
+                    <div class="episode-list">`;
+                
+                item.episodes.forEach((ep, index) => {
+                    modalBodyHtml += `
+                    <div class="episode-item" onclick="playEpisode('${ep.url}', '${item.title} - ${ep.title}', '${item.id}', '${category}', ${index})">
+                        <div class="episode-number">${index + 1}</div>
+                        <div class="episode-info">
+                            <div class="episode-title">${ep.title}</div>
+                        </div>
+                    </div>`;
+                });
+                
+                modalBodyHtml += `</div></div>`;
+            } else if (item.seasons && item.seasons.length > 0) {
+                modalBodyHtml += `<div class="episodes-section">`;
+                
+                item.seasons.forEach(season => {
+                    modalBodyHtml += `
+                    <div style="margin-bottom: 30px;">
+                        <h3 style="margin-bottom: 15px; font-size: 1.2rem;">Temporada ${season.season}</h3>
+                        <div class="episode-list">`;
+                    
+                    if (season.episodes && season.episodes.length > 0) {
+                        season.episodes.forEach((ep, index) => {
+                            modalBodyHtml += `
+                            <div class="episode-item" onclick="playEpisode('${ep.url}', '${item.title} - Temp ${season.season} - ${ep.title}', '${item.id}', '${category}', ${index})">
+                                <div class="episode-number">${index + 1}</div>
+                                <div class="episode-info">
+                                    <div class="episode-title">${ep.title}</div>
+                                </div>
+                            </div>`;
+                        });
+                    }
+                    
+                    modalBodyHtml += `</div></div>`;
+                });
+                
+                modalBodyHtml += `</div>`;
+            }
+            
+            // Atualizar modal
+            document.getElementById('modalHeader').innerHTML = modalHeaderHtml;
+            document.getElementById('modalBody').innerHTML = modalBodyHtml;
+            document.getElementById('modal').style.display = 'block';
+            
+            // Rolar para o topo do modal
+            document.getElementById('modal').scrollTop = 0;
+        }
         
-        document.addEventListener('keydown', function(event) {{
-            if (event.key === 'Escape') {{
+        // Reproduzir primeiro episódio
+        function playFirstEpisode(category, itemId) {
+            const items = vodData[category];
+            if (!items) return;
+            
+            const item = items.find(i => i.id === itemId);
+            if (!item) return;
+            
+            let url = '';
+            let title = '';
+            
+            if (item.episodes && item.episodes.length > 0) {
+                url = item.episodes[0].url;
+                title = `${item.title} - ${item.episodes[0].title}`;
+                playEpisode(url, title, item.id, category, 0);
+            } else if (item.seasons && item.seasons.length > 0 && item.seasons[0].episodes.length > 0) {
+                url = item.seasons[0].episodes[0].url;
+                title = `${item.title} - Temp 1 - ${item.seasons[0].episodes[0].title}`;
+                playEpisode(url, title, item.id, category, 0);
+            }
+        }
+        
+        // Reproduzir episódio usando seu player moderno
+        function playEpisode(url, title, itemId, category, episodeIndex) {
+            if (typeof window.playWithModernPlayer === 'function') {
+                window.playWithModernPlayer(url, title, '', itemId, category, episodeIndex);
                 document.getElementById('modal').style.display = 'none';
-            }}
-        }});
+            } else {
+                window.open(url, '_blank');
+            }
+        }
         
-        // Carregar dados
+        // Fechar modal
+        document.getElementById('closeModal').onclick = function() {
+            document.getElementById('modal').style.display = 'none';
+        };
+        
+        window.onclick = function(event) {
+            const modal = document.getElementById('modal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        };
+        
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                document.getElementById('modal').style.display = 'none';
+            }
+        });
+        
+        // Carregar dados ao iniciar
         loadData();
     </script>
-    
+        <!-- Incluir seu script de integração do player -->
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
     <script src="novo-player.js" defer></script>
 </body>
@@ -1354,6 +1391,3 @@ def generate_html_with_correct_paths(base_dir, data):
 
 if __name__ == "__main__":
     build_vod_with_direct_capas()
-
-
-
