@@ -26,7 +26,7 @@ jobs:
       - name: Configurar Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.10'
+          python-version: '3.11'
 
       - name: Instalar dependências
         run: |
@@ -43,32 +43,36 @@ jobs:
             if [ -f "$script" ]; then
               echo "✅ $script encontrado!"
             else
-              echo "⚠️ $script NÃO encontrado!"
+              echo "❌ $script NÃO encontrado!"
+              exit 1
             fi
           done
 
       - name: Baixar fontes IPTV
         run: |
-          echo "="*60
+          echo "============================================================"
           echo "📡 EXECUTANDO DOWNLOAD IPTV"
-          echo "="*60
+          echo "============================================================"
           if [ -f "download_iptv.py" ]; then
             python download_iptv.py
             echo "✅ Download concluído!"
             
             # Verificar resultados
             if [ -f "web/channels.json" ]; then
-              echo "📺 Canais baixados: $(cat web/channels.json | grep -c '"title"')"
+              echo "📺 Canais baixados: $(grep -c '"title"' web/channels.json || echo "0")"
+            else
+              echo "⚠️ channels.json não foi criado"
             fi
           else
-            echo "⚠️ download_iptv.py não encontrado - pulando etapa"
+            echo "❌ download_iptv.py não encontrado!"
+            exit 1
           fi
 
       - name: Consolidar dados no data.json
         run: |
-          echo "="*60
-          echo "🔄 CONSOLIDANDO DADOS"
-          echo "="*60
+          echo "============================================================"
+          echo "🔄 CONSOLIDANDO DADOS NO DATA.JSON"
+          echo "============================================================"
           if [ -f "consolidar_data.py" ]; then
             python consolidar_data.py
             echo "✅ Consolidação concluída!"
@@ -76,22 +80,44 @@ jobs:
             # Estatísticas do data.json
             if [ -f "web/data.json" ]; then
               echo "📊 Estatísticas do catálogo:"
-              total_filmes=$(grep -o '"filmes":\[[^]]*\]' web/data.json | grep -o '"title"' | wc -l || echo "0")
-              total_series=$(grep -o '"series":\[[^]]*\]' web/data.json | grep -o '"title"' | wc -l || echo "0")
-              total_tv=$(grep -o '"tv":\[[^]]*\]' web/data.json | grep -o '"title"' | wc -l || echo "0")
-              echo "   🎬 Filmes: $total_filmes"
-              echo "   📺 Séries: $total_series"
-              echo "   📡 TV: $total_tv"
+              
+              # Contar filmes
+              filmes=$(grep -o '"filmes":\[[^]]*\]' web/data.json | grep -o '"title"' | wc -l || echo "0")
+              echo "   🎬 Filmes: $filmes"
+              
+              # Contar séries
+              series=$(grep -o '"series":\[[^]]*\]' web/data.json | grep -o '"title"' | wc -l || echo "0")
+              echo "   📺 Séries: $series"
+              
+              # Contar novelas
+              novelas=$(grep -o '"novelas":\[[^]]*\]' web/data.json | grep -o '"title"' | wc -l || echo "0")
+              echo "   💖 Novelas: $novelas"
+              
+              # Contar animes
+              animes=$(grep -o '"animes":\[[^]]*\]' web/data.json | grep -o '"title"' | wc -l || echo "0")
+              echo "   👻 Animes: $animes"
+              
+              # Contar infantil
+              infantil=$(grep -o '"infantil":\[[^]]*\]' web/data.json | grep -o '"title"' | wc -l || echo "0")
+              echo "   🧸 Infantil: $infantil"
+              
+              # Contar TV
+              tv=$(grep -o '"tv":\[[^]]*\]' web/data.json | grep -o '"title"' | wc -l || echo "0")
+              echo "   📡 TV: $tv"
+              
+              total=$((filmes + series + novelas + animes + infantil + tv))
+              echo "   📊 TOTAL: $total itens"
             fi
           else
-            echo "⚠️ consolidar_data.py não encontrado - pulando etapa"
+            echo "❌ consolidar_data.py não encontrado!"
+            exit 1
           fi
 
       - name: Verificar conteúdo do input_auto
         run: |
-          echo "="*60
+          echo "============================================================"
           echo "📁 VERIFICANDO INPUT_AUTO"
-          echo "="*60
+          echo "============================================================"
           if [ -d "input_auto" ]; then
             echo "📂 Estrutura de pastas:"
             ls -la input_auto/
@@ -99,7 +125,7 @@ jobs:
             echo "📊 Arquivos M3U encontrados:"
             find input_auto -name "*.m3u" | while read file; do
               lines=$(grep -c "^http" "$file" 2>/dev/null || echo "0")
-              echo "   📄 $(basename $file): $lines streams"
+              echo "   📄 $(basename "$file"): $lines streams"
             done
           else
             echo "⚠️ Pasta input_auto não encontrada"
@@ -107,9 +133,9 @@ jobs:
 
       - name: Executar build do site
         run: |
-          echo "="*60
+          echo "============================================================"
           echo "🏗️ EXECUTANDO BUILD"
-          echo "="*60
+          echo "============================================================"
           if [ -f "build.py" ]; then
             python build.py
             echo "✅ Build concluído!"
@@ -120,7 +146,7 @@ jobs:
               ls -la iptv_playlists/
               echo ""
               if [ -f "iptv_playlists/pirataflix_completo.m3u" ]; then
-                total_streams=$(grep -c "^http" iptv_playlists/pirataflix_completo.m3u)
+                total_streams=$(grep -c "^http" iptv_playlists/pirataflix_completo.m3u || echo "0")
                 echo "📡 Total de streams na playlist completa: $total_streams"
               fi
             fi
@@ -132,9 +158,9 @@ jobs:
       - name: Preparar arquivos para commit
         id: git-check
         run: |
-          echo "="*60
+          echo "============================================================"
           echo "📦 PREPARANDO COMMIT"
-          echo "="*60
+          echo "============================================================"
           
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
@@ -145,6 +171,7 @@ jobs:
           # Remover arquivos que não devem ser commitados
           git restore --staged web/integrate-player.js 2>/dev/null || true
           git restore --staged web/*.bak 2>/dev/null || true
+          git restore --staged web/*.tmp 2>/dev/null || true
           
           # Mostrar o que será commitado
           echo "📋 Arquivos staged:"
@@ -161,13 +188,17 @@ jobs:
             echo "📊 Estatísticas das mudanças:"
             git diff --staged --shortstat
             
-            # Commit
-            COMMIT_MSG="🤖 Atualização automática: $(date +'%Y-%m-%d %H:%M')"
-            
-            # Adicionar estatísticas na mensagem do commit
+            # Criar mensagem de commit com estatísticas
             if [ -f "iptv_playlists/pirataflix_completo.m3u" ]; then
-              total=$(grep -c "^http" iptv_playlists/pirataflix_completo.m3u)
-              COMMIT_MSG="$COMMIT_MSG - Total: $total streams"
+              total=$(grep -c "^http" iptv_playlists/pirataflix_completo.m3u || echo "0")
+              if [ -f "web/data.json" ]; then
+                tv=$(grep -o '"tv":\[[^]]*\]' web/data.json | grep -o '"title"' | wc -l || echo "0")
+                COMMIT_MSG="🤖 Atualização automática: $(date +'%d/%m/%Y') - Total: $total streams | TV: $tv canais"
+              else
+                COMMIT_MSG="🤖 Atualização automática: $(date +'%d/%m/%Y') - Total: $total streams"
+              fi
+            else
+              COMMIT_MSG="🤖 Atualização automática: $(date +'%d/%m/%Y')"
             fi
             
             git commit -m "$COMMIT_MSG"
@@ -177,9 +208,9 @@ jobs:
       - name: Push das mudanças
         if: steps.git-check.outputs.changed == 'true'
         run: |
-          echo "="*60
+          echo "============================================================"
           echo "📤 FAZENDO PUSH DAS MUDANÇAS"
-          echo "="*60
+          echo "============================================================"
           
           # Tentar push com retry
           max_retries=3
@@ -221,9 +252,9 @@ jobs:
       - name: Resumo final
         if: always()
         run: |
-          echo "="*60
+          echo "============================================================"
           echo "📊 RESUMO FINAL DA EXECUÇÃO"
-          echo "="*60
+          echo "============================================================"
           
           # Data e hora
           echo "📅 Data: $(date)"
@@ -232,10 +263,21 @@ jobs:
           if [ -f "web/data.json" ]; then
             echo ""
             echo "📊 CATÁLOGO:"
-            for cat in filmes series novelas animes infantil tv; do
-              count=$(grep -o "\"$cat\":\[[^]]*\]" web/data.json | grep -o '"title"' | wc -l || echo "0")
-              echo "   $cat: $count"
-            done
+            
+            filmes=$(grep -o '"filmes":\[[^]]*\]' web/data.json | grep -o '"title"' | wc -l || echo "0")
+            series=$(grep -o '"series":\[[^]]*\]' web/data.json | grep -o '"title"' | wc -l || echo "0")
+            novelas=$(grep -o '"novelas":\[[^]]*\]' web/data.json | grep -o '"title"' | wc -l || echo "0")
+            animes=$(grep -o '"animes":\[[^]]*\]' web/data.json | grep -o '"title"' | wc -l || echo "0")
+            infantil=$(grep -o '"infantil":\[[^]]*\]' web/data.json | grep -o '"title"' | wc -l || echo "0")
+            tv=$(grep -o '"tv":\[[^]]*\]' web/data.json | grep -o '"title"' | wc -l || echo "0")
+            
+            echo "   🎬 Filmes: $filmes"
+            echo "   📺 Séries: $series"
+            echo "   💖 Novelas: $novelas"
+            echo "   👻 Animes: $animes"
+            echo "   🧸 Infantil: $infantil"
+            echo "   📡 TV: $tv"
+            echo "   📊 TOTAL: $((filmes + series + novelas + animes + infantil + tv))"
           fi
           
           # Estatísticas das playlists
@@ -246,7 +288,7 @@ jobs:
               if [ -f "$playlist" ]; then
                 name=$(basename "$playlist")
                 streams=$(grep -c "^http" "$playlist" 2>/dev/null || echo "0")
-                echo "   $name: $streams streams"
+                echo "   📄 $name: $streams streams"
               fi
             done
           fi
@@ -256,9 +298,9 @@ jobs:
             echo ""
             echo "📺 CANAIS DE TV:"
             channels=$(grep -c '"title"' web/channels.json 2>/dev/null || echo "0")
-            echo "   Total: $channels canais"
+            echo "   Total: $channels canais únicos"
           fi
           
           echo ""
           echo "✅ Workflow concluído com sucesso!"
-          echo "="*60
+          echo "============================================================"
