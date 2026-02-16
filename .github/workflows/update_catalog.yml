@@ -57,7 +57,6 @@ jobs:
             python download_iptv.py
             echo "✅ Download concluído!"
             
-            # Verificar resultados
             if [ -f "web/channels.json" ]; then
               echo "📺 Canais baixados: $(grep -c '"title"' web/channels.json || echo "0")"
             else
@@ -77,10 +76,8 @@ jobs:
             python consolidar_data.py
             echo "✅ Consolidação concluída!"
             
-            # Estatísticas do data.json
             if [ -f "web/data.json" ]; then
               echo "📊 Estatísticas do catálogo:"
-              
               filmes=$(grep -o '"filmes":\[[^]]*\]' web/data.json | grep -o '"title"' | wc -l || echo "0")
               series=$(grep -o '"series":\[[^]]*\]' web/data.json | grep -o '"title"' | wc -l || echo "0")
               novelas=$(grep -o '"novelas":\[[^]]*\]' web/data.json | grep -o '"title"' | wc -l || echo "0")
@@ -110,11 +107,9 @@ jobs:
             python build.py
             echo "✅ Build concluído!"
             
-            # Verificar resultados do build
             if [ -d "iptv_playlists" ]; then
               echo "📊 Playlists geradas:"
               ls -la iptv_playlists/
-              echo ""
               if [ -f "iptv_playlists/pirataflix_completo.m3u" ]; then
                 total_streams=$(grep -c "^http" iptv_playlists/pirataflix_completo.m3u || echo "0")
                 echo "📡 Total de streams na playlist completa: $total_streams"
@@ -130,68 +125,25 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Resolver divergências e preparar commit
+      - name: Preparar arquivos para commit
         id: git-check
         run: |
-          echo "============================================================"
-          echo "🔄 RESOLVENDO DIVERGÊNCIAS"
-          echo "============================================================"
-          
-          # Buscar últimas mudanças do remote
-          git fetch origin main
-          
-          # Tentar rebase automático (usando a estratégia 'ours' para manter nossas mudanças)
-          if git rebase origin/main; then
-            echo "✅ Rebase realizado com sucesso!"
-          else
-            echo "⚠️ Rebase falhou, resolvendo conflitos automaticamente..."
-            # Em caso de conflito, manter nossas mudanças
-            git rebase --abort || true
-            git merge -X ours origin/main --no-edit || true
-          fi
-          
           echo "============================================================"
           echo "📦 PREPARANDO COMMIT"
           echo "============================================================"
           
-          # Adicionar todos os arquivos gerados
           git add iptv_playlists/ web/ input_auto/ || true
           
           # Remover arquivos que não devem ser commitados
           git restore --staged web/integrate-player.js 2>/dev/null || true
-          git restore --staged web/*.bak 2>/dev/null || true
-          git restore --staged web/*.tmp 2>/dev/null || true
           
-          # Mostrar o que será commitado
-          echo "📋 Arquivos staged:"
-          git diff --staged --name-status
-          
-          # Verificar se há mudanças
           if git diff --staged --quiet; then
             echo "changed=false" >> $GITHUB_OUTPUT
             echo "✅ Sem mudanças para commit"
           else
             echo "changed=true" >> $GITHUB_OUTPUT
-            
-            # Estatísticas das mudanças
-            echo "📊 Estatísticas das mudanças:"
-            git diff --staged --shortstat
-            
-            # Criar mensagem de commit com estatísticas
-            if [ -f "iptv_playlists/pirataflix_completo.m3u" ]; then
-              total=$(grep -c "^http" iptv_playlists/pirataflix_completo.m3u || echo "0")
-              if [ -f "web/data.json" ]; then
-                tv=$(grep -o '"tv":\[[^]]*\]' web/data.json | grep -o '"title"' | wc -l || echo "0")
-                COMMIT_MSG="🤖 Atualização automática: $(date +'%d/%m/%Y') - Total: $total streams | TV: $tv canais"
-              else
-                COMMIT_MSG="🤖 Atualização automática: $(date +'%d/%m/%Y') - Total: $total streams"
-              fi
-            else
-              COMMIT_MSG="🤖 Atualização automática: $(date +'%d/%m/%Y')"
-            fi
-            
-            git commit -m "$COMMIT_MSG"
-            echo "✅ Commit criado: $COMMIT_MSG"
+            git commit -m "🤖 Atualização automática: $(date +'%d/%m/%Y')"
+            echo "✅ Commit criado!"
           fi
 
       - name: Push das mudanças
@@ -201,12 +153,9 @@ jobs:
           echo "📤 FAZENDO PUSH DAS MUDANÇAS"
           echo "============================================================"
           
-          # Tentar push normal
-          if git push origin main; then
-            echo "✅ Push realizado com sucesso!"
-          else
-            echo "⚠️ Push falhou, tentando com force lease..."
-            # Segunda tentativa com force-with-lease (mais seguro que force)
-            git push --force-with-lease origin main
-            echo "✅ Push com --force-with-lease realizado!"
-          fi
+          # Pull com rebase antes do push
+          git pull --rebase origin main
+          
+          # Push
+          git push origin main
+          echo "✅ Push realizado!"
