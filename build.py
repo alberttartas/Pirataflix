@@ -730,7 +730,6 @@ def build_vod_with_direct_capas():
     
     
 def generate_html_with_correct_paths(base_dir, data):
-    # URL do ícone na raiz do GitHub (identado com 4 espaços)
     ICON_URL = "https://raw.githubusercontent.com/alberttartas/Pirataflix/main/favicon.png"
     
     """Gera HTML estilo Netflix"""
@@ -748,6 +747,7 @@ def generate_html_with_correct_paths(base_dir, data):
     <link rel="shortcut icon" href="favicon.png">
 
     <style>
+        /* Seu CSS existente - manter igual */
         * {{
             margin: 0;
             padding: 0;
@@ -761,7 +761,7 @@ def generate_html_with_correct_paths(base_dir, data):
             line-height: 1.4;
         }}
         
-        /* ===== LOADING SCREEN ===== */
+        /* Loading */
         .loading-screen {{
             position: fixed;
             top: 0;
@@ -876,12 +876,10 @@ def generate_html_with_correct_paths(base_dir, data):
             color: #b3b3b3;
         }}
         
-        /* Main content */
         .main-content {{
             padding-top: 100px;
         }}
         
-        /* Category sections */
         .category-section {{
             margin-bottom: 40px;
             padding: 0 50px;
@@ -1098,6 +1096,13 @@ def generate_html_with_correct_paths(base_dir, data):
             background: #f40612;
         }}
         
+        .error {{
+            text-align: center;
+            padding: 100px 20px;
+            color: #e50914;
+            font-size: 1.2rem;
+        }}
+        
         @media (max-width: 768px) {{
             .header {{
                 padding: 20px;
@@ -1130,7 +1135,7 @@ def generate_html_with_correct_paths(base_dir, data):
     </style>
 </head>
 <body>
-    <!-- TELA DE LOADING -->
+    <!-- Loading -->
     <div class="loading-screen" id="loadingScreen">
         <div class="loading-container">
             <div class="loading-icon">
@@ -1168,13 +1173,15 @@ def generate_html_with_correct_paths(base_dir, data):
                 <button class="modal-close" id="closeModal">&times;</button>
             </div>
             <div class="modal-body" id="modalBody">
-                <!-- Conteúdo será carregado aqui -->
+                <!-- Conteúdo do modal -->
             </div>
         </div>
     </div>
 
     <script>
-        // Dados carregados
+        // Debug - verificar caminho do data.json
+        console.log('📍 Localização atual:', window.location.href);
+        
         window.vodData = {{}};
         let currentItem = null;
         
@@ -1190,14 +1197,51 @@ def generate_html_with_correct_paths(base_dir, data):
         
         async function loadData() {{
             try {{
-                const response = await fetch('data.json');
-                window.vodData = await response.json();
+                console.log('📡 Tentando carregar data.json...');
+                
+                // Tentar diferentes caminhos
+                let response;
+                const paths = [
+                    'data.json',
+                    './data.json',
+                    '/data.json',
+                    'web/data.json',
+                    '../data.json'
+                ];
+                
+                for (const path of paths) {{
+                    try {{
+                        console.log(`Tentando: ${{path}}`);
+                        response = await fetch(path);
+                        if (response.ok) {{
+                            console.log(`✅ Sucesso com: ${{path}}`);
+                            break;
+                        }}
+                    }} catch (e) {{
+                        console.log(`❌ Falha com: ${{path}}`);
+                    }}
+                }}
+                
+                if (!response || !response.ok) {{
+                    throw new Error('Não foi possível encontrar data.json');
+                }}
+                
+                const data = await response.json();
+                console.log('✅ Dados carregados:', data);
+                console.log('📊 Categorias:', Object.keys(data));
+                
+                window.vodData = data;
                 hideLoading();
                 displayContent();
+                
             }} catch (error) {{
-                console.error('Erro:', error);
+                console.error('❌ Erro:', error);
                 document.getElementById('content').innerHTML = 
-                    '<div class="error">Erro ao carregar dados: ' + error.message + '</div>';
+                    '<div class="error">' +
+                    '<h2>Erro ao carregar dados</h2>' +
+                    '<p>' + error.message + '</p>' +
+                    '<p>Verifique se o arquivo data.json existe na pasta web/</p>' +
+                    '</div>';
                 hideLoading();
             }}
         }}
@@ -1215,9 +1259,13 @@ def generate_html_with_correct_paths(base_dir, data):
                 'infantil': '🧸 Infantil'
             }};
             
+            let totalItems = 0;
             categoryOrder.forEach(category => {{
                 const items = vodData[category];
                 if (!items || items.length === 0) return;
+                
+                totalItems += items.length;
+                console.log(`${{category}}: ${{items.length}} itens`);
                 
                 html += `
                 <section class="category-section" id="${{category}}">
@@ -1254,125 +1302,19 @@ def generate_html_with_correct_paths(base_dir, data):
                 html += `</div></section>`;
             }});
             
-            contentDiv.innerHTML = html || '<div class="loading">Nenhum conteúdo encontrado</div>';
-        }}
-        
-        function openModal(category, itemId) {{
-            const items = vodData[category];
-            if (!items) return;
+            console.log(`📊 Total de itens: ${{totalItems}}`);
             
-            const item = items.find(i => i.id === itemId);
-            if (!item) return;
-            
-            currentItem = item;
-            
-            let modalBodyHtml = '';
-            let modalHeaderHtml = '';
-            
-            if (item.poster) {{
-                const nomeArquivo = item.poster.split('/').pop();
-                const posterUrl = `https://raw.githubusercontent.com/alberttartas/Pirataflix/main/assets/Capas/${{nomeArquivo}}`;
-                
-                modalHeaderHtml = `
-                    <div class="modal-backdrop" style="background-image: url('${{posterUrl}}')"></div>
-                    <button class="play-button" onclick="playFirstEpisode('${{category}}', '${{item.id}}')" style="position: absolute; bottom: 30px; left: 30px;">
-                        <span>▶</span> Assistir
-                    </button>
-                `;
-            }}
-            
-            modalBodyHtml = `
-                <h2 class="modal-title">${{item.title}}</h2>
-                <div class="modal-meta">
-                    <span>${{item.type === 'movie' ? 'Filme' : 'Série'}}</span>
-                    ${{item.episodes ? `<span>${{item.episodes.length}} episódios</span>` : ''}}
-                    ${{item.seasons ? `<span>${{item.seasons.length}} temporadas</span>` : ''}}
-                </div>
-                <button class="play-button" onclick="playFirstEpisode('${{category}}', '${{item.id}}')">
-                    <span>▶</span> Assistir
-                </button>
-            `;
-            
-            if (item.episodes && item.episodes.length > 0) {{
-                modalBodyHtml += `
-                <div class="episodes-section">
-                    <h3 style="margin-bottom: 20px; font-size: 1.3rem;">Episódios</h3>
-                    <div class="episode-list">`;
-                
-                item.episodes.forEach((ep, index) => {{
-                    modalBodyHtml += `
-                    <div class="episode-item" onclick="playEpisode('${{ep.url}}', '${{item.title}} - ${{ep.title}}', '${{item.id}}', '${{category}}', ${{index}})">
-                        <div class="episode-number">${{index + 1}}</div>
-                        <div class="episode-info">
-                            <div class="episode-title">${{ep.title}}</div>
-                        </div>
-                    </div>`;
-                }});
-                
-                modalBodyHtml += `</div></div>`;
-            }} else if (item.seasons && item.seasons.length > 0) {{
-                modalBodyHtml += `<div class="episodes-section">`;
-                
-                item.seasons.forEach(season => {{
-                    modalBodyHtml += `
-                    <div style="margin-bottom: 30px;">
-                        <h3 style="margin-bottom: 15px; font-size: 1.2rem;">Temporada ${{season.season}}</h3>
-                        <div class="episode-list">`;
-                    
-                    if (season.episodes && season.episodes.length > 0) {{
-                        season.episodes.forEach((ep, index) => {{
-                            modalBodyHtml += `
-                            <div class="episode-item" onclick="playEpisode('${{ep.url}}', '${{item.title}} - Temp ${{season.season}} - ${{ep.title}}', '${{item.id}}', '${{category}}', ${{index}})">
-                                <div class="episode-number">${{index + 1}}</div>
-                                <div class="episode-info">
-                                    <div class="episode-title">${{ep.title}}</div>
-                                </div>
-                            </div>`;
-                        }});
-                    }}
-                    
-                    modalBodyHtml += `</div></div>`;
-                }});
-                
-                modalBodyHtml += `</div>`;
-            }}
-            
-            document.getElementById('modalHeader').innerHTML = modalHeaderHtml;
-            document.getElementById('modalBody').innerHTML = modalBodyHtml;
-            document.getElementById('modal').style.display = 'block';
-            document.getElementById('modal').scrollTop = 0;
-        }}
-        
-        function playFirstEpisode(category, itemId) {{
-            const items = vodData[category];
-            if (!items) return;
-            
-            const item = items.find(i => i.id === itemId);
-            if (!item) return;
-            
-            let url = '';
-            let title = '';
-            
-            if (item.episodes && item.episodes.length > 0) {{
-                url = item.episodes[0].url;
-                title = `${{item.title}} - ${{item.episodes[0].title}}`;
-                playEpisode(url, title, item.id, category, 0);
-            }} else if (item.seasons && item.seasons.length > 0 && item.seasons[0].episodes.length > 0) {{
-                url = item.seasons[0].episodes[0].url;
-                title = `${{item.title}} - Temp 1 - ${{item.seasons[0].episodes[0].title}}`;
-                playEpisode(url, title, item.id, category, 0);
-            }}
-        }}
-        
-        function playEpisode(url, title, itemId, category, episodeIndex) {{
-            if (typeof window.playWithModernPlayer === 'function') {{
-                window.playWithModernPlayer(url, title, '', itemId, category, episodeIndex);
-                document.getElementById('modal').style.display = 'none';
+            if (totalItems === 0) {{
+                contentDiv.innerHTML = '<div class="error">Nenhum conteúdo encontrado no catálogo</div>';
             }} else {{
-                window.open(url, '_blank');
+                contentDiv.innerHTML = html;
             }}
         }}
         
+        // [Resto das funções openModal, playFirstEpisode, playEpisode...]
+        // (manter iguais ao seu código original)
+        
+        // Fechar modal
         document.getElementById('closeModal').onclick = function() {{
             document.getElementById('modal').style.display = 'none';
         }};
@@ -1390,6 +1332,7 @@ def generate_html_with_correct_paths(base_dir, data):
             }}
         }});
         
+        // Carregar dados
         loadData();
     </script>
     
@@ -1407,3 +1350,4 @@ def generate_html_with_correct_paths(base_dir, data):
 
 if __name__ == "__main__":
     build_vod_with_direct_capas()
+
