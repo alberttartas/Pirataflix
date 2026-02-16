@@ -125,19 +125,31 @@ jobs:
             exit 1
           fi
 
-      - name: Configurar Git e resolver divergências
+      - name: Configurar Git
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          
-          echo "🔄 Resolvendo divergências..."
-          git pull --rebase -X theirs origin main || true
-          git rebase --continue || true
-          echo "✅ Divergências resolvidas!"
 
-      - name: Preparar arquivos para commit
+      - name: Resolver divergências e preparar commit
         id: git-check
         run: |
+          echo "============================================================"
+          echo "🔄 RESOLVENDO DIVERGÊNCIAS"
+          echo "============================================================"
+          
+          # Buscar últimas mudanças do remote
+          git fetch origin main
+          
+          # Tentar rebase automático (usando a estratégia 'ours' para manter nossas mudanças)
+          if git rebase origin/main; then
+            echo "✅ Rebase realizado com sucesso!"
+          else
+            echo "⚠️ Rebase falhou, resolvendo conflitos automaticamente..."
+            # Em caso de conflito, manter nossas mudanças
+            git rebase --abort || true
+            git merge -X ours origin/main --no-edit || true
+          fi
+          
           echo "============================================================"
           echo "📦 PREPARANDO COMMIT"
           echo "============================================================"
@@ -189,33 +201,12 @@ jobs:
           echo "📤 FAZENDO PUSH DAS MUDANÇAS"
           echo "============================================================"
           
-          # Tentar push com retry
-          max_retries=3
-          retry_count=0
-          
-          while [ $retry_count -lt $max_retries ]; do
-            echo "Tentativa $((retry_count+1)) de $max_retries..."
-            
-            # Push com force apenas se necessário
-            if git push origin main; then
-              echo "✅ Push realizado com sucesso!"
-              break
-            else
-              echo "⚠️ Push falhou, tentando pull + push..."
-              git pull --rebase -X theirs origin main
-              
-              if git push origin main; then
-                echo "✅ Push realizado com sucesso na segunda tentativa!"
-                break
-              else
-                retry_count=$((retry_count+1))
-                if [ $retry_count -lt $max_retries ]; then
-                  echo "⚠️ Push falhou, tentando novamente em 5 segundos..."
-                  sleep 5
-                else
-                  echo "❌ Push falhou após $max_retries tentativas"
-                  exit 1
-                fi
-              fi
-            fi
-          done
+          # Tentar push normal
+          if git push origin main; then
+            echo "✅ Push realizado com sucesso!"
+          else
+            echo "⚠️ Push falhou, tentando com force lease..."
+            # Segunda tentativa com force-with-lease (mais seguro que force)
+            git push --force-with-lease origin main
+            echo "✅ Push com --force-with-lease realizado!"
+          fi
