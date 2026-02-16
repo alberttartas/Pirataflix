@@ -166,12 +166,27 @@ video.addEventListener('ended', () => {
     }
     
 
-    // ===== BOTÃO PRÓXIMO EPISÓDIO (ESTILO NETFLIX) =====
- function addNextButton() {
-    if (!itemId || !category) return;
+    // ===== BARRA DE CONTROLES COMPLETA + BOTÃO PRÓXIMO =====
+function addNextButton() {
+    console.log('🔵 addNextButton iniciada');
     
-    const item = window.vodData?.[category]?.find(i => i.id === itemId);
-    if (!item) return;
+    if (!itemId || !category) {
+        console.log('🔴 Saindo: sem itemId ou category');
+        return;
+    }
+    
+    // Verificar se vodData existe
+    if (!window.vodData) {
+        console.log('⏳ Aguardando vodData carregar...');
+        setTimeout(addNextButton, 1000);
+        return;
+    }
+    
+    const item = window.vodData[category]?.find(i => i.id === itemId);
+    if (!item) {
+        console.log('🔴 Saindo: item não encontrado');
+        return;
+    }
     
     let episodeList = item.episodes || [];
     if (!episodeList.length && item.seasons) {
@@ -180,18 +195,17 @@ video.addEventListener('ended', () => {
         });
     }
     
-    if (episodeIndex + 1 >= episodeList.length) return;
-    
-    // Verificar se o vídeo já tem controles nativos
     const video = document.getElementById('current-video');
     
-    // Criar container para os controles customizados (se não existir)
+    // ===== CRIAR BARRA DE CONTROLES COMPLETA =====
     let controlsContainer = document.getElementById('custom-controls');
     if (!controlsContainer) {
+        console.log('🟢 Criando barra de controles completa');
+        
         // Esconder controles nativos
         video.controls = false;
         
-        // Criar barra de controles customizada
+        // Container principal da barra
         controlsContainer = document.createElement('div');
         controlsContainer.id = 'custom-controls';
         controlsContainer.style.cssText = `
@@ -199,8 +213,8 @@ video.addEventListener('ended', () => {
             bottom: 0;
             left: 0;
             right: 0;
-            background: linear-gradient(transparent, rgba(0,0,0,0.8));
-            padding: 10px 20px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.9));
+            padding: 15px 20px;
             display: flex;
             align-items: center;
             gap: 15px;
@@ -209,7 +223,7 @@ video.addEventListener('ended', () => {
             transition: opacity 0.3s;
         `;
         
-        // Mostrar controles quando mouse mover
+        // Mostrar barra ao mover o mouse
         container.addEventListener('mousemove', () => {
             controlsContainer.style.opacity = '1';
             clearTimeout(window.controlsTimeout);
@@ -220,23 +234,19 @@ video.addEventListener('ended', () => {
             }, 3000);
         });
         
-        container.addEventListener('mouseleave', () => {
-            if (!video.paused) {
-                controlsContainer.style.opacity = '0';
-            }
-        });
-        
-        // Botão Play/Pause
+        // ===== BOTÃO PLAY/PAUSE =====
         const playPauseBtn = document.createElement('button');
         playPauseBtn.innerHTML = '⏸️';
         playPauseBtn.style.cssText = `
             background: none;
             border: none;
             color: white;
-            font-size: 24px;
+            font-size: 28px;
             cursor: pointer;
             padding: 5px;
+            width: 40px;
         `;
+        
         playPauseBtn.onclick = () => {
             if (video.paused) {
                 video.play();
@@ -250,7 +260,7 @@ video.addEventListener('ended', () => {
         video.addEventListener('play', () => playPauseBtn.innerHTML = '⏸️');
         video.addEventListener('pause', () => playPauseBtn.innerHTML = '▶️');
         
-        // Barra de progresso
+        // ===== BARRA DE PROGRESSO =====
         const progressContainer = document.createElement('div');
         progressContainer.style.cssText = `
             flex: 1;
@@ -283,9 +293,9 @@ video.addEventListener('ended', () => {
             video.currentTime = pos * video.duration;
         });
         
-        // Tempo
+        // ===== TEMPO =====
         const timeDisplay = document.createElement('span');
-        timeDisplay.style.cssText = 'color: white; font-size: 14px;';
+        timeDisplay.style.cssText = 'color: white; font-size: 14px; min-width: 100px;';
         
         function formatTime(seconds) {
             if (!seconds) return '0:00';
@@ -298,70 +308,75 @@ video.addEventListener('ended', () => {
             timeDisplay.textContent = `${formatTime(video.currentTime)} / ${formatTime(video.duration)}`;
         });
         
-        // Adicionar elementos à barra de controles
+        // Adicionar elementos à barra
         controlsContainer.appendChild(playPauseBtn);
         controlsContainer.appendChild(progressContainer);
         controlsContainer.appendChild(timeDisplay);
+        
         container.appendChild(controlsContainer);
+        console.log('✅ Barra de controles criada');
     }
     
-    // CRIAR BOTÃO DE PRÓXIMO EPISÓDIO (PEQUENO)
-    const nextBtn = document.createElement('button');
-    nextBtn.id = 'nextEpisodeBtn';
-    nextBtn.innerHTML = 'PRÓXIMO ▶';
-    nextBtn.style.cssText = `
-        background: rgba(229, 9, 20, 0.9);
-        color: white;
-        border: none;
-        padding: 6px 12px;
-        border-radius: 4px;
-        font-size: 12px;
-        font-weight: bold;
-        cursor: pointer;
-        margin-left: auto;
-        transition: 0.2s;
-        letter-spacing: 0.5px;
-    `;
-    
-    nextBtn.onmouseover = () => {
-        nextBtn.style.background = '#e50914';
-        nextBtn.style.transform = 'scale(1.05)';
-    };
-    nextBtn.onmouseout = () => {
-        nextBtn.style.background = 'rgba(229, 9, 20, 0.9)';
-        nextBtn.style.transform = 'scale(1)';
-    };
-    
-    nextBtn.onclick = () => {
-        const next = episodeList[episodeIndex + 1];
-        window.playWithModernPlayer(
-            next.url,
-            `${item.title} - ${next.title}`,
-            `${category} • Ep ${episodeIndex + 2}`,
-            itemId,
-            category,
-            episodeIndex + 1
-        );
-    };
-    
-    // Adicionar botão à barra de controles
-    controlsContainer.appendChild(nextBtn);
-    
-    // Mostrar botão nos últimos 10 segundos
-    video.addEventListener('timeupdate', () => {
-        if (video.duration - video.currentTime <= 10) {
-            nextBtn.style.opacity = '1';
-            nextBtn.style.transform = 'scale(1.1)';
-        } else {
-            nextBtn.style.opacity = '0.7';
+    // ===== BOTÃO PRÓXIMO EPISÓDIO (se houver) =====
+    if (episodeIndex + 1 < episodeList.length) {
+        // Remover botão antigo se existir
+        const oldBtn = document.getElementById('nextEpisodeBtn');
+        if (oldBtn) oldBtn.remove();
+        
+        const nextBtn = document.createElement('button');
+        nextBtn.id = 'nextEpisodeBtn';
+        nextBtn.innerHTML = 'PRÓXIMO ▶';
+        nextBtn.style.cssText = `
+            background: #e50914;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-left: 10px;
+            transition: 0.2s;
+            white-space: nowrap;
+        `;
+        
+        nextBtn.onmouseover = () => {
+            nextBtn.style.background = '#f40612';
+            nextBtn.style.transform = 'scale(1.05)';
+        };
+        nextBtn.onmouseout = () => {
+            nextBtn.style.background = '#e50914';
             nextBtn.style.transform = 'scale(1)';
-        }
-    });
-}    
-    document.getElementById('modern-player-title').textContent = title;
-    document.getElementById('modern-player-info').textContent = info;
-};
-
+        };
+        
+        nextBtn.onclick = () => {
+            const next = episodeList[episodeIndex + 1];
+            window.playWithModernPlayer(
+                next.url,
+                `${item.title} - ${next.title}`,
+                `${category} • Ep ${episodeIndex + 2}`,
+                itemId,
+                category,
+                episodeIndex + 1
+            );
+        };
+        
+        controlsContainer.appendChild(nextBtn);
+        console.log('✅ Botão PRÓXIMO adicionado à barra');
+        
+        // Efeito nos últimos 10 segundos
+        video.addEventListener('timeupdate', function onTimeUpdate() {
+            if (video.duration - video.currentTime <= 10) {
+                nextBtn.style.opacity = '1';
+                nextBtn.style.transform = 'scale(1.1)';
+            } else {
+                nextBtn.style.opacity = '0.7';
+                nextBtn.style.transform = 'scale(1)';
+            }
+        });
+    }
+}
+    
 // RENDERIZAR CONTINUAR ASSISTINDO
 window.renderContinueWatching = function() {
     const list = window.ContinueWatching.getWatchingList();
@@ -677,4 +692,4 @@ netflixStyle.textContent = `
 `;
 document.head.appendChild(netflixStyle);
 
-console.log('✅ NOVO PLAYER CARREGADO - TODOS OS PROBLEMAS CORRIGIDOS!');
+console.log('✅ NOVO PLAYER AVANÇADO!');
