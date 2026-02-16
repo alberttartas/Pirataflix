@@ -166,36 +166,15 @@ video.addEventListener('ended', () => {
     }
     
 
-    // ===== BARRA DE CONTROLES COMPLETA + BOTÃO PRÓXIMO =====
+   // ===== BARRA DE CONTROLES COMPLETA (MESMO SEM vodData) =====
 function addNextButton() {
     console.log('🔵 addNextButton iniciada');
     
-    if (!itemId || !category) {
-        console.log('🔴 Saindo: sem itemId ou category');
-        return;
-    }
-    
-    // Verificar se vodData existe
-    if (!window.vodData) {
-        console.log('⏳ Aguardando vodData carregar...');
-        setTimeout(addNextButton, 1000);
-        return;
-    }
-    
-    const item = window.vodData[category]?.find(i => i.id === itemId);
-    if (!item) {
-        console.log('🔴 Saindo: item não encontrado');
-        return;
-    }
-    
-    let episodeList = item.episodes || [];
-    if (!episodeList.length && item.seasons) {
-        item.seasons.forEach(s => {
-            if (s.episodes) episodeList = episodeList.concat(s.episodes);
-        });
-    }
-    
     const video = document.getElementById('current-video');
+    if (!video) {
+        console.log('🔴 Vídeo não encontrado');
+        return;
+    }
     
     // ===== CRIAR BARRA DE CONTROLES COMPLETA =====
     let controlsContainer = document.getElementById('custom-controls');
@@ -317,63 +296,77 @@ function addNextButton() {
         console.log('✅ Barra de controles criada');
     }
     
-    // ===== BOTÃO PRÓXIMO EPISÓDIO (se houver) =====
-    if (episodeIndex + 1 < episodeList.length) {
-        // Remover botão antigo se existir
-        const oldBtn = document.getElementById('nextEpisodeBtn');
-        if (oldBtn) oldBtn.remove();
-        
-        const nextBtn = document.createElement('button');
-        nextBtn.id = 'nextEpisodeBtn';
-        nextBtn.innerHTML = 'PRÓXIMO ▶';
-        nextBtn.style.cssText = `
-            background: #e50914;
-            color: white;
-            border: none;
-            padding: 8px 16px;
-            border-radius: 4px;
-            font-size: 14px;
-            font-weight: bold;
-            cursor: pointer;
-            margin-left: 10px;
-            transition: 0.2s;
-            white-space: nowrap;
-        `;
-        
-        nextBtn.onmouseover = () => {
-            nextBtn.style.background = '#f40612';
-            nextBtn.style.transform = 'scale(1.05)';
-        };
-        nextBtn.onmouseout = () => {
-            nextBtn.style.background = '#e50914';
-            nextBtn.style.transform = 'scale(1)';
-        };
-        
-        nextBtn.onclick = () => {
-            const next = episodeList[episodeIndex + 1];
-            window.playWithModernPlayer(
-                next.url,
-                `${item.title} - ${next.title}`,
-                `${category} • Ep ${episodeIndex + 2}`,
-                itemId,
-                category,
-                episodeIndex + 1
-            );
-        };
-        
-        controlsContainer.appendChild(nextBtn);
-        console.log('✅ Botão PRÓXIMO adicionado à barra');
-        
-        // Efeito nos últimos 10 segundos
-        video.addEventListener('timeupdate', function onTimeUpdate() {
-            if (video.duration - video.currentTime <= 10) {
-                nextBtn.style.opacity = '1';
-                nextBtn.style.transform = 'scale(1.1)';
-            } else {
-                nextBtn.style.opacity = '0.7';
-                nextBtn.style.transform = 'scale(1)';
+    // ===== TENTAR ADICIONAR BOTÃO PRÓXIMO (se houver dados) =====
+    if (itemId && category && window.vodData) {
+        const item = window.vodData[category]?.find(i => i.id === itemId);
+        if (item) {
+            let episodeList = item.episodes || [];
+            if (!episodeList.length && item.seasons) {
+                item.seasons.forEach(s => {
+                    if (s.episodes) episodeList = episodeList.concat(s.episodes);
+                });
             }
-        });
+            
+            if (episodeIndex + 1 < episodeList.length) {
+                // Remover botão antigo se existir
+                const oldBtn = document.getElementById('nextEpisodeBtn');
+                if (oldBtn) oldBtn.remove();
+                
+                const nextBtn = document.createElement('button');
+                nextBtn.id = 'nextEpisodeBtn';
+                nextBtn.innerHTML = 'PRÓXIMO ▶';
+                nextBtn.style.cssText = `
+                    background: #e50914;
+                    color: white;
+                    border: none;
+                    padding: 8px 16px;
+                    border-radius: 4px;
+                    font-size: 14px;
+                    font-weight: bold;
+                    cursor: pointer;
+                    margin-left: 10px;
+                    transition: 0.2s;
+                    white-space: nowrap;
+                `;
+                
+                nextBtn.onmouseover = () => {
+                    nextBtn.style.background = '#f40612';
+                    nextBtn.style.transform = 'scale(1.05)';
+                };
+                nextBtn.onmouseout = () => {
+                    nextBtn.style.background = '#e50914';
+                    nextBtn.style.transform = 'scale(1)';
+                };
+                
+                nextBtn.onclick = () => {
+                    const next = episodeList[episodeIndex + 1];
+                    window.playWithModernPlayer(
+                        next.url,
+                        `${item.title} - ${next.title}`,
+                        `${category} • Ep ${episodeIndex + 2}`,
+                        itemId,
+                        category,
+                        episodeIndex + 1
+                    );
+                };
+                
+                controlsContainer.appendChild(nextBtn);
+                console.log('✅ Botão PRÓXIMO adicionado à barra');
+                
+                // Efeito nos últimos 10 segundos
+                video.addEventListener('timeupdate', function onTimeUpdate() {
+                    if (video.duration - video.currentTime <= 10) {
+                        nextBtn.style.opacity = '1';
+                        nextBtn.style.transform = 'scale(1.1)';
+                    } else {
+                        nextBtn.style.opacity = '0.7';
+                        nextBtn.style.transform = 'scale(1)';
+                    }
+                });
+            }
+        }
+    } else {
+        console.log('⏳ vodData ainda não carregado, barra criada sem botão próximo');
     }
 }
       addNextButton();
