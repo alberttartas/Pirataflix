@@ -8,6 +8,7 @@ on:
     branches: [ main ]
     paths:
       - 'download_iptv.py'
+      - 'consolidar_data.py'
       - 'build.py'
 
 jobs:
@@ -19,6 +20,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Configurar Python
         uses: actions/setup-python@v3
@@ -35,14 +37,15 @@ jobs:
           echo "📂 Listando arquivos na raiz:"
           ls -la
           echo ""
-          echo "📂 Verificando download_iptv.py:"
-          if [ -f "download_iptv.py" ]; then
-            echo "✅ Arquivo encontrado!"
-            head -5 download_iptv.py
-          else
-            echo "❌ Arquivo NÃO encontrado!"
-            exit 1
-          fi
+          echo "📂 Verificando scripts:"
+          for script in download_iptv.py consolidar_data.py build.py; do
+            if [ -f "$script" ]; then
+              echo "✅ $script encontrado!"
+            else
+              echo "❌ $script NÃO encontrado!"
+              exit 1
+            fi
+          done
 
       - name: Baixar fontes IPTV
         run: |
@@ -58,32 +61,83 @@ jobs:
           echo ""
           echo "📂 Conteúdo de input_auto/:"
           find input_auto -type f -name "*.m3u" 2>/dev/null || echo "Nenhum arquivo .m3u encontrado"
+          echo ""
+          echo "📂 Verificando channels.json:"
+          if [ -f "web/channels.json" ]; then
+            echo "✅ channels.json encontrado!"
+            echo "📊 Total de canais: $(cat web/channels.json | grep -c '"type": "tv"')"
+          else
+            echo "⚠️ channels.json não encontrado"
+          fi
+
+      - name: Consolidar dados no data.json
+        run: |
+          echo "🔄 Consolidando dados no data.json..."
+          python consolidar_data.py
+          echo ""
+          echo "📊 Estatísticas do data.json:"
+          if [ -f "web/data.json" ]; then
+            total_filmes=$(cat web/data.json | grep -o '"filmes":\[[^]]*\]' | grep -o '"title"' | wc -l)
+            total_series=$(cat web/data.json | grep -o '"series":\[[^]]*\]' | grep -o '"title"' | wc -l)
+            total_tv=$(cat web/data.json | grep -o '"tv":\[[^]]*\]' | grep -o '"title"' | wc -l)
+            echo "   🎬 Filmes: $total_filmes"
+            echo "   📺 Séries: $total_series"
+            echo "   📡 TV: $total_tv"
+          fi
 
       - name: Executar build do site
         run: |
           echo "🏗️ Gerando site..."
           python build.py
+          echo "✅ Build concluído!"
 
-      - name: Commit automático
+      - name: Verificar mudanças
         id: git-check
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           
-          # Não adicionar o integrate-player.js
-          git add iptv_playlists/ web/data.json web/index.html input_auto/
+          # Adicionar arquivos gerados
+          git add iptv_playlists/ web/data.json web/index.html input_auto/ web/channels.json
           
-          # Restaurar integrate-player.js se foi adicionado
+          # Remover arquivos que não devem ser commitados (se existirem no staging)
           git restore --staged web/integrate-player.js 2>/dev/null || true
           
+          # Verificar se há mudanças
           if git diff --staged --quiet; then
             echo "changed=false" >> $GITHUB_OUTPUT
             echo "✅ Sem mudanças para commit"
           else
             echo "changed=true" >> $GITHUB_OUTPUT
-            git commit -m "Auto-generate IPTV playlists"
             
-            # Tentar push com pull primeiro
+            # Mostrar o que será commitado
+            echo "📦 Arquivos a serem commitados:"
+            git diff --staged --name-status
+            
+            # Commit
+            git commit -m "🤖 Auto-generate: IPTV playlists e catálogo $(date +'%Y-%m-%d')"
+            
+            # Push com tratamento de conflitos
             git pull --rebase origin main || true
             git push origin main
           fi
+
+      - name: Verificar resultado final
+        if: always()
+        run: |
+          echo "="*60
+          echo "📊 RESUMO FINAL"
+          echo "="*60
+          
+          # Estatísticas finais
+          if [ -f "web/data.json" ]; then
+            total_geral=$(cat web/data.json | grep -o '"title"' | wc -l)
+            echo "📊 Total geral de itens: $total_geral"
+          fi
+          
+          if [ -f "iptv_playlists/pirataflix_completo.m3u" ]; then
+            total_streams=$(grep -c "^http" iptv_playlists/pirataflix_completo.m3u)
+            echo "📡 Total de streams na playlist: $total_streams"
+          fi
+          
+          echo "✅ Workflow concluído!"
