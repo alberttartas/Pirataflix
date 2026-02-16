@@ -648,31 +648,50 @@ def build_vod_with_direct_capas():
         'Infantil': 'infantil'
     }
     
-    # ===== NOVO: Incluir pasta auto se existir (ANTES de criar output) =====
+    # ===== NOVO: Incluir pasta auto se existir =====
     auto_dir = base_dir / "input_auto"
     if auto_dir.exists():
         print("\n📁 Pasta input_auto encontrada! Incluindo no processamento...")
         
-        # Copiar arquivos da input_auto para as pastas correspondentes
+        # Lista de arquivos já existentes no input/
+        arquivos_existentes = set()
+        for pasta in ['Filmes', 'Series', 'Novelas', 'Animes', 'Infantil', 'TV']:
+            pasta_input = base_dir / "input" / pasta
+            if pasta_input.exists():
+                for m3u in pasta_input.glob("*.m3u"):
+                    arquivos_existentes.add(m3u.name)
+        
+        print(f"   📋 Arquivos já existentes: {len(arquivos_existentes)}")
+        
+        # Copiar apenas arquivos NOVOS
+        copiados = 0
+        ignorados = 0
+        
         for subpasta in auto_dir.iterdir():
             if subpasta.is_dir():
                 destino = base_dir / "input" / subpasta.name
                 destino.mkdir(exist_ok=True)
                 
-                # Copiar todos os .m3u
                 for m3u in subpasta.glob("*.m3u"):
-                    novo_arquivo = destino / m3u.name
-                    if not novo_arquivo.exists():  # Só copia se não existir
+                    if m3u.name not in arquivos_existentes:
                         import shutil
-                        shutil.copy2(m3u, novo_arquivo)
+                        shutil.copy2(m3u, destino / m3u.name)
                         print(f"   ✅ Copiado: {subpasta.name}/{m3u.name}")
-    # ===============================================
+                        copiados += 1
+                    else:
+                        print(f"   ⏭️  Ignorado (já existe): {subpasta.name}/{m3u.name}")
+                        ignorados += 1
+        
+        print(f"   📊 Resumo: {copiados} copiados, {ignorados} ignorados")
+    # ===============================================#
     
-    output = {cat_id: [] for cat_id in categories.values()}  # <-- output DEFINIDO AQUI
+    # O output DEVE vir DEPOIS do bloco if, mas DENTRO da função
+    output = {cat_id: [] for cat_id in categories.values()}
     
     print("============================================================")
     print("🎬 SISTEMA VOD - CAPAS DIRETAS DA PASTA")
     print("============================================================")
+    
     
     # Processar cada categoria
     for cat_folder, cat_id in categories.items():
@@ -1391,3 +1410,4 @@ def generate_html_with_correct_paths(base_dir, data):
 
 if __name__ == "__main__":
     build_vod_with_direct_capas()
+
