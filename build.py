@@ -1156,20 +1156,20 @@ def generate_html_with_correct_paths(base_dir, data):
 
         <script>
         // Dados carregados
-        let vodData = {};
+        window.vodData = {};
         let currentItem = null;
         
         // Carregar dados
         async function loadData() {
-            try {
-                const response = await fetch('data.json');
-                vodData = await response.json();
-                displayContent();
-            } catch (error) {
-                document.getElementById('content').innerHTML = 
-                    '<div class="error">Erro ao carregar dados: ' + error.message + '</div>';
-            }
-        }
+          try {
+          const response = await fetch('data.json');
+          window.vodData = await response.json();  // <-- ADICIONE window.
+          displayContent();
+           } catch (error) {
+          document.getElementById('content').innerHTML = 
+            '<div class="error">Erro ao carregar dados: ' + error.message + '</div>';
+           }
+         }
         
         // Exibir conteúdo
         function displayContent() {
@@ -1391,6 +1391,7 @@ def generate_html_with_correct_paths(base_dir, data):
 
 if __name__ == "__main__":
     build_vod_with_direct_capas()
+
 
 
 
