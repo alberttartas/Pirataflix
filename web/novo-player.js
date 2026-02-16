@@ -367,18 +367,36 @@ window.renderContinueWatching = function() {
     const list = window.ContinueWatching.getWatchingList();
     if (list.length === 0) return '';
     
+    // CORREÇÃO: Usar GitHub RAW para todas as imagens
+    
     const GITHUB_RAW = 'https://raw.githubusercontent.com/alberttartas/Pirataflix/main/assets/Capas/';
+    
     let html = '<section class="category-section" id="continue-watching"><h2 class="category-title">▶️ Continuar Assistindo</h2><div class="items-grid">';
     
     list.forEach(item => {
         const remaining = item.duration - item.currentTime;
-        const time = remaining > 3600 ? `${Math.floor(remaining/3600)}h ${Math.floor((remaining%3600)/60)}min` : `${Math.floor(remaining/60)}min`;
+        const time = remaining > 3600 ? 
+            `${Math.floor(remaining/3600)}h ${Math.floor((remaining%3600)/60)}min` : 
+            `${Math.floor(remaining/60)}min`;
         
-        let nome = 'default.jpg';
-        if (item.poster) nome = item.poster.split('/').pop();
+        // CORREÇÃO: Extrair nome do arquivo da capa
+        let nomeArquivo = 'default.jpg';
+        
+        if (item.poster) {
+            // Se já for URL completa, extrair só o nome
+            if (item.poster.includes('/')) {
+                nomeArquivo = item.poster.split('/').pop();
+            } else {
+                nomeArquivo = item.poster;
+            }
+        }
+        
+        // CORREÇÃO: Usar sempre GitHub RAW + nome do arquivo
+        const posterUrl = `${GITHUB_RAW}${nomeArquivo}`;
         
         html += `<div class="item-card continue-card" onclick="resumeItem('${item.itemId}', '${item.category}', ${item.episodeIndex})">
-            <img src="${GITHUB_RAW}${nome}" class="item-poster" onerror="this.src='${GITHUB_RAW}default.jpg';">
+            <img src="${posterUrl}" class="item-poster" 
+                 onerror="this.onerror=null; this.src='${GITHUB_RAW}default.jpg';">
             <div class="item-info">
                 <div class="item-title">${item.seriesTitle || item.title}</div>
                 <div class="item-meta">E${item.episode} • ${time}</div>
