@@ -81,7 +81,7 @@ window.playWithModernPlayer = function(url, title, info = '', itemId = null, cat
     const videoId = `${itemId}_${episodeIndex}`;
     const saved = window.ContinueWatching.get(videoId);
     
-    container.innerHTML = `<video id="current-video" controls autoplay style="width:100%;height:100%;background:#000;" src="${url}"></video>`;
+    container.innerHTML = `<video id="current-video" autoplay style="width:100%;height:100%;background:#000;" src="${url}"></video>`;
     const video = document.getElementById('current-video');
 
     // Salvar progresso
