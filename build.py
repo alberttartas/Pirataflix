@@ -1186,23 +1186,23 @@ def generate_html_with_correct_paths(base_dir, data):
         let currentItem = null;
     
     function hideLoading() {
-      const loadingScreen = document.getElementById('loadingScreen');
-      const content = document.getElementById('content');
+    const loadingScreen = document.getElementById('loadingScreen');
+    const content = document.getElementById('content');
     
-      if (loadingScreen && content) {
-         // Forçar remoção do loading
-          loadingScreen.style.opacity = '0';
-          loadingScreen.style.pointerEvents = 'none';
+    if (loadingScreen && content) {
+        // Forçar remoção do loading
+        loadingScreen.style.opacity = '0';
+        loadingScreen.style.pointerEvents = 'none';
         
-          // Mostrar conteúdo imediatamente
-          content.style.display = 'block';
+        // Mostrar conteúdo imediatamente
+        content.style.display = 'block';
         
-         // Remover loading após animação
-          setTimeout(() => {
-             loadingScreen.style.display = 'none';
-           }, 500);
-         }
-         }
+        // Remover loading após animação
+        setTimeout(() => {
+            loadingScreen.style.display = 'none';
+        }, 500);
+    }
+}
         
         async function loadData() {{
             try {{
@@ -1354,5 +1354,6 @@ def generate_html_with_correct_paths(base_dir, data):
 
 if __name__ == "__main__":
     build_vod_with_direct_capas()
+
 
 
