@@ -1,15 +1,14 @@
 #!/usr/bin/env python3
 """
-Script para consolidar filmes, séries e canais de TV no data.json sem repetições
+Script para consolidar filmes, séries e canais de TV no data.json (SEM DUPLICATAS)
 """
 import json
-import requests
 from pathlib import Path
 from datetime import datetime
 
 def consolidate_data():
     print("="*60)
-    print("🔄 CONSOLIDANDO DADOS NO DATA.JSON")
+    print("🔄 CONSOLIDANDO DADOS NO DATA.JSON (SEM DUPLICATAS)")
     print("="*60)
     
     # Caminhos dos arquivos
@@ -30,7 +29,7 @@ def consolidate_data():
     if data_json.exists():
         with open(data_json, 'r', encoding='utf-8') as f:
             data = json.load(f)
-        print(f"📂 Data.json carregado: {len(data.get('filmes', []))} filmes, {len(data.get('series', []))} séries")
+        print(f"📂 Data.json carregado: {sum(len(v) for v in data.values())} itens totais")
     else:
         data = {
             "filmes": [],
@@ -38,77 +37,46 @@ def consolidate_data():
             "novelas": [],
             "animes": [],
             "infantil": [],
-            "tv": []  # Nova categoria para TV
+            "tv": []
         }
         print("📂 Criando novo data.json")
     
-    # Carregar canais de TV
+    # Carregar canais de TV (já vem limpo do download_iptv.py)
     if channels_json.exists():
         with open(channels_json, 'r', encoding='utf-8') as f:
             tv_channels = json.load(f)
-        print(f"📺 Canais de TV carregados: {len(tv_channels)}")
+        print(f"📺 Canais de TV carregados: {len(tv_channels)} (já estão limpos)")
     else:
         tv_channels = []
         print("⚠️ Nenhum channels.json encontrado")
     
-    # Criar conjunto de URLs únicas existentes
+    # CRIAR CONJUNTO DE URLs EXISTENTES (para evitar duplicatas)
     urls_existentes = set()
     
-    # Coletar URLs de filmes
-    for filme in data.get('filmes', []):
-        if filme.get('episodes'):
-            for ep in filme['episodes']:
-                if ep.get('url'):
-                    urls_existentes.add(ep['url'])
+    # Coletar URLs de todas as categorias (exceto TV, que vamos adicionar agora)
+    for categoria in ['filmes', 'series', 'novelas', 'animes', 'infantil']:
+        for item in data.get(categoria, []):
+            # Episódios diretos
+            if item.get('episodes'):
+                for ep in item['episodes']:
+                    if ep.get('url'):
+                        urls_existentes.add(ep['url'])
+            
+            # Episódios por temporada
+            if item.get('seasons'):
+                for season in item['seasons']:
+                    if season.get('episodes'):
+                        for ep in season['episodes']:
+                            if ep.get('url'):
+                                urls_existentes.add(ep['url'])
     
-    # Coletar URLs de séries
-    for serie in data.get('series', []):
-        # Episódios diretos
-        if serie.get('episodes'):
-            for ep in serie['episodes']:
-                if ep.get('url'):
-                    urls_existentes.add(ep['url'])
-        
-        # Episódios por temporada
-        if serie.get('seasons'):
-            for season in serie['seasons']:
-                if season.get('episodes'):
-                    for ep in season['episodes']:
-                        if ep.get('url'):
-                            urls_existentes.add(ep['url'])
+    print(f"🔍 URLs únicas existentes em filmes/séries: {len(urls_existentes)}")
     
-    # Coletar URLs de novelas
-    for novela in data.get('novelas', []):
-        if novela.get('episodes'):
-            for ep in novela['episodes']:
-                if ep.get('url'):
-                    urls_existentes.add(ep['url'])
-    
-    # Coletar URLs de animes
-    for anime in data.get('animes', []):
-        if anime.get('episodes'):
-            for ep in anime['episodes']:
-                if ep.get('url'):
-                    urls_existentes.add(ep['url'])
-    
-    # Coletar URLs de infantil
-    for infantil in data.get('infantil', []):
-        if infantil.get('episodes'):
-            for ep in infantil['episodes']:
-                if ep.get('url'):
-                    urls_existentes.add(ep['url'])
-    
-    print(f"🔍 URLs únicas existentes: {len(urls_existentes)}")
-    
-    # Adicionar canais de TV (apenas os novos)
-    tv_canais_novos = 0
-    tv_canais_duplicados = 0
-    
-    # Garantir que a categoria tv existe
+    # PROCESSAR CANAIS DE TV (SEM CRIAR DUPLICATAS)
     if 'tv' not in data:
         data['tv'] = []
     
-    # URLs existentes na categoria tv
+    # URLs já existentes na categoria TV
     urls_tv_existentes = set()
     for canal in data.get('tv', []):
         if canal.get('url'):
@@ -118,59 +86,73 @@ def consolidate_data():
                 if ep.get('url'):
                     urls_tv_existentes.add(ep['url'])
     
+    # Estatísticas
+    canais_novos = 0
+    canais_duplicados_com_filmes = 0
+    canais_duplicados_na_tv = 0
+    
     for canal in tv_channels:
-        # Verificar URL principal
         url_principal = canal.get('url', '')
+        
+        # 🚨 VERIFICAR SE URL JÁ EXISTE EM FILMES/SÉRIES
         if url_principal and url_principal in urls_existentes:
-            tv_canais_duplicados += 1
-            print(f"   ⚠️ Canal duplicado ignorado: {canal.get('title')} - URL já existe")
+            canais_duplicados_com_filmes += 1
+            print(f"   ⚠️ Canal ignorado (URL já existe em filmes/séries): {canal.get('title')}")
             continue
         
-        # Verificar URLs dos episódios
+        # 🚨 VERIFICAR SE URL JÁ EXISTE NA PRÓPRIA TV
+        if url_principal and url_principal in urls_tv_existentes:
+            canais_duplicados_na_tv += 1
+            print(f"   ⚠️ Canal ignorado (já existe na TV): {canal.get('title')}")
+            continue
+        
+        # Verificar episódios
         url_duplicada = False
         if canal.get('episodes'):
             for ep in canal['episodes']:
                 if ep.get('url') and ep['url'] in urls_existentes:
                     url_duplicada = True
-                    tv_canais_duplicados += 1
-                    print(f"   ⚠️ Canal duplicado ignorado: {canal.get('title')} - URL de episódio já existe")
+                    canais_duplicados_com_filmes += 1
+                    print(f"   ⚠️ Canal ignorado (episódio já existe em filmes/séries): {canal.get('title')}")
+                    break
+                if ep.get('url') and ep['url'] in urls_tv_existentes:
+                    url_duplicada = True
+                    canais_duplicados_na_tv += 1
+                    print(f"   ⚠️ Canal ignorado (episódio já existe na TV): {canal.get('title')}")
                     break
         
         if url_duplicada:
             continue
         
-        # Verificar se já existe na categoria tv
-        if url_principal and url_principal in urls_tv_existentes:
-            tv_canais_duplicados += 1
-            print(f"   ⚠️ Canal já existe na categoria TV: {canal.get('title')}")
-            continue
-        
-        # Adicionar canal novo
+        # ✅ ADICIONAR CANAL NOVO
         data['tv'].append(canal)
-        tv_canais_novos += 1
-        urls_existentes.add(url_principal)
+        canais_novos += 1
+        
+        # Adicionar URLs ao conjunto
+        if url_principal:
+            urls_existentes.add(url_principal)
+            urls_tv_existentes.add(url_principal)
         if canal.get('episodes'):
             for ep in canal['episodes']:
                 if ep.get('url'):
                     urls_existentes.add(ep['url'])
+                    urls_tv_existentes.add(ep['url'])
         
         print(f"   ✅ Canal novo adicionado: {canal.get('title')}")
     
-    print(f"\n📊 Resultados:")
-    print(f"   ✅ Canais novos adicionados: {tv_canais_novos}")
-    print(f"   ⚠️ Canais duplicados ignorados: {tv_canais_duplicados}")
-    print(f"   📺 Total de canais na categoria TV: {len(data['tv'])}")
+    print(f"\n📊 RESULTADOS DA CONSOLIDAÇÃO:")
+    print(f"   ✅ Canais novos adicionados: {canais_novos}")
+    print(f"   ⚠️ Duplicados com filmes/séries: {canais_duplicados_com_filmes}")
+    print(f"   ⚠️ Duplicados na própria TV: {canais_duplicados_na_tv}")
+    print(f"   📺 Total de canais na TV: {len(data['tv'])}")
     
-    # Estatísticas gerais
+    # Estatísticas por categoria
+    print(f"\n📊 CATÁLOGO COMPLETO:")
     total_geral = 0
-    for categoria, itens in data.items():
-        if categoria == 'tv':
-            qtd = len(itens)
-        else:
-            qtd = len(itens)
-        total_geral += qtd
+    for categoria in ['filmes', 'series', 'novelas', 'animes', 'infantil', 'tv']:
+        qtd = len(data.get(categoria, []))
         print(f"   {categoria}: {qtd} itens")
-    
+        total_geral += qtd
     print(f"   📊 TOTAL GERAL: {total_geral} itens")
     
     # Salvar data.json consolidado
@@ -182,8 +164,9 @@ def consolidate_data():
     # Criar relatório
     relatorio = {
         'data': datetime.now().isoformat(),
-        'canais_novos': tv_canais_novos,
-        'canais_duplicados': tv_canais_duplicados,
+        'canais_novos': canais_novos,
+        'canais_duplicados_com_filmes': canais_duplicados_com_filmes,
+        'canais_duplicados_na_tv': canais_duplicados_na_tv,
         'total_tv': len(data['tv']),
         'totais_por_categoria': {k: len(v) for k, v in data.items()},
         'total_geral': total_geral
@@ -199,8 +182,8 @@ def consolidate_data():
     return data
 
 def verificar_duplicatas_no_data():
-    """Verifica se há URLs duplicadas dentro do próprio data.json"""
-    print("\n🔍 Verificando duplicatas internas no data.json...")
+    """Verifica se há URLs duplicadas no data.json (apenas para debug)"""
+    print("\n🔍 Verificando duplicatas no data.json...")
     
     data_json = Path("web/data.json")
     if not data_json.exists():
@@ -211,65 +194,60 @@ def verificar_duplicatas_no_data():
         data = json.load(f)
     
     todas_urls = []
-    urls_por_categoria = {}
-    
     for categoria, itens in data.items():
-        urls_por_categoria[categoria] = []
         for item in itens:
             if item.get('type') == 'tv':
                 if item.get('url'):
-                    todas_urls.append((categoria, item.get('title'), item['url']))
-                    urls_por_categoria[categoria].append(item['url'])
+                    todas_urls.append(item['url'])
                 if item.get('episodes'):
                     for ep in item['episodes']:
                         if ep.get('url'):
-                            todas_urls.append((categoria, item.get('title'), ep['url']))
-                            urls_por_categoria[categoria].append(ep['url'])
+                            todas_urls.append(ep['url'])
             else:
                 if item.get('episodes'):
                     for ep in item['episodes']:
                         if ep.get('url'):
-                            todas_urls.append((categoria, item.get('title'), ep['url']))
-                            urls_por_categoria[categoria].append(ep['url'])
+                            todas_urls.append(ep['url'])
                 if item.get('seasons'):
                     for season in item['seasons']:
                         if season.get('episodes'):
                             for ep in season['episodes']:
                                 if ep.get('url'):
-                                    todas_urls.append((categoria, item.get('title'), ep['url']))
-                                    urls_por_categoria[categoria].append(ep['url'])
+                                    todas_urls.append(ep['url'])
     
-    # Verificar duplicatas globais
+    # Verificar duplicatas
     urls_vistas = set()
     duplicatas = []
     
-    for categoria, titulo, url in todas_urls:
+    for url in todas_urls:
         if url in urls_vistas:
-            duplicatas.append((categoria, titulo, url))
+            duplicatas.append(url)
         else:
             urls_vistas.add(url)
     
     if duplicatas:
-        print(f"⚠️ Encontradas {len(duplicatas)} URLs duplicadas:")
-        for cat, titulo, url in duplicatas[:10]:  # Mostra apenas as 10 primeiras
-            print(f"   - {cat} | {titulo}: {url[:50]}...")
-        if len(duplicatas) > 10:
-            print(f"   ... e mais {len(duplicatas) - 10}")
+        print(f"⚠️ Encontradas {len(duplicatas)} URLs duplicadas!")
+        # Mostrar algumas
+        for url in duplicatas[:5]:
+            print(f"   - {url[:80]}...")
+        if len(duplicatas) > 5:
+            print(f"   ... e mais {len(duplicatas) - 5}")
     else:
-        print("✅ Nenhuma duplicata encontrada!")
+        print("✅ Nenhuma duplicata encontrada! Tudo limpo!")
     
     return duplicatas
 
 def main():
-    # Consolidar dados
+    # Consolidar dados (já sem duplicatas)
     consolidate_data()
     
-    # Verificar duplicatas
+    # Verificar se realmente não tem duplicatas
     verificar_duplicatas_no_data()
     
     print("\n" + "="*60)
-    print("✅ PROCESSO CONCLUÍDO!")
-    print("📁 Agora execute o script de geração de playlists")
+    print("✅ PROCESSO CONCLUÍDO COM SUCESSO!")
+    print("📁 Agora execute o script de build:")
+    print("   python build.py")
     print("="*60)
 
 if __name__ == "__main__":
