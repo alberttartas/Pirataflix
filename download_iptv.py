@@ -21,7 +21,6 @@ def criar_estrutura_pastas():
     
     base_dir = Path(__file__).parent
     
-    # Pastas principais
     pastas = {
         'auto_dir': base_dir / "input_auto",
         'filmes': base_dir / "input_auto" / "Filmes",
@@ -72,8 +71,7 @@ def parse_m3u(content):
         line = lines[i].strip()
         
         if line.startswith('#EXTINF:'):
-            # Extrair informações do canal
-            info = line[8:]  # Remove '#EXTINF:'
+            info = line[8:]
             
             # Extrair tvg-id
             tvg_id_match = re.search(r'tvg-id="([^"]*)"', info)
@@ -87,11 +85,10 @@ def parse_m3u(content):
             group_match = re.search(r'group-title="([^"]*)"', info)
             group = group_match.group(1) if group_match else "Outros"
             
-            # Extrair nome do canal (depois da última vírgula)
+            # Extrair nome do canal
             name_parts = info.split(',')
             title = name_parts[-1].strip() if len(name_parts) > 1 else "Sem nome"
             
-            # Próxima linha deve ser a URL
             i += 1
             if i < len(lines):
                 url = lines[i].strip()
@@ -108,8 +105,10 @@ def parse_m3u(content):
     return channels
 
 def criar_channels_json(canais_br, pastas):
-    """Cria o arquivo channels.json sem duplicatas"""
-    print("\n📝 Criando channels.json para integração...")
+    """
+    Cria o arquivo channels.json JÁ LIMPO, sem duplicatas
+    """
+    print("\n📝 Criando channels.json (já com limpeza de duplicatas)...")
     
     channels_data = []
     urls_vistas = set()
@@ -120,19 +119,25 @@ def criar_channels_json(canais_br, pastas):
         'cnn', 'globo news', 'sportv', 'sporTV', 'tnt', 'fox',
         'universal', 'futura', 'tv escola', 'tv brasil', 'canal rural',
         'megapix', 'telecine', 'premiere', 'combate', 'woohoo',
-        'discovery', 'history', 'a&e', 'sony', 'warner', 'max'
+        'discovery', 'history', 'a&e', 'sony', 'warner', 'max',
+        'pluto tv', 'mtv', 'nick', 'cartoon', 'food', 'gnt', 'viva'
     ]
     
+    duplicatas_encontradas = 0
+    
     for canal in canais_br:
-        # Filtrar apenas canais brasileiros relevantes
         titulo = canal['title'].lower()
+        
+        # Filtrar apenas canais brasileiros relevantes
         if any(keyword in titulo for keyword in keywords) or 'br' in canal.get('tvg_id', '').lower():
             
-            # Verificar se URL já existe
+            # 🚨 VERIFICAR SE URL JÁ EXISTE (EVITA DUPLICATAS)
             if canal['url'] in urls_vistas:
+                duplicatas_encontradas += 1
                 print(f"   ⚠️ URL duplicada ignorada: {canal['title']}")
                 continue
             
+            # Adicionar URL ao conjunto de vistas
             urls_vistas.add(canal['url'])
             
             novo_canal = {
@@ -150,10 +155,13 @@ def criar_channels_json(canais_br, pastas):
             channels_data.append(novo_canal)
             print(f"   ✅ Canal: {canal['title']}")
     
-    # Salvar channels.json na pasta web
+    print(f"\n📊 Estatísticas da limpeza:")
+    print(f"   📺 Canais únicos: {len(channels_data)}")
+    print(f"   🗑️ Duplicatas ignoradas: {duplicatas_encontradas}")
+    
+    # Carregar channels.json existente (se houver) e COMBINAR SEM DUPLICAR
     channels_file = pastas['web'] / 'channels.json'
     
-    # Se já existe, combinar com os existentes (sem duplicar)
     if channels_file.exists():
         try:
             with open(channels_file, 'r', encoding='utf-8') as f:
@@ -167,21 +175,26 @@ def criar_channels_json(canais_br, pastas):
                         if ep.get('url'):
                             urls_existentes.add(ep['url'])
             
-            # Adicionar apenas novos canais
+            # Adicionar apenas canais NOVOS (que não existiam)
+            canais_novos = 0
             for canal in channels_data:
                 if canal['url'] not in urls_existentes:
                     existing.append(canal)
+                    canais_novos += 1
                     print(f"   ✅ Novo canal adicionado: {canal['title']}")
             
             channels_data = existing
             print(f"   📦 Combinado com {len(existing)} canais existentes")
+            print(f"   ✨ Canais realmente novos: {canais_novos}")
+            
         except Exception as e:
             print(f"   ⚠️ Erro ao ler channels.json existente: {e}")
     
+    # Salvar channels.json
     with open(channels_file, 'w', encoding='utf-8') as f:
         json.dump(channels_data, f, indent=2, ensure_ascii=False)
     
-    print(f"   ✅ channels.json criado/atualizado com {len(channels_data)} canais únicos")
+    print(f"\n✅ channels.json criado/atualizado com {len(channels_data)} canais ÚNICOS")
     print(f"   💾 Local: {channels_file}")
     
     return channels_data
@@ -212,7 +225,7 @@ def download_file(url, destino, nome_fonte, pastas):
             print(f"   💾 Salvo em: {destino}")
             print(f"   📊 Tamanho: {len(response.text)} bytes")
             
-            # Se for canais brasileiros, criar channels.json
+            # Se for canais brasileiros, criar channels.json (JÁ LIMPO!)
             if nome_fonte == 'canais_br':
                 criar_channels_json(canais, pastas)
             
@@ -319,14 +332,14 @@ def download_iptv_sources():
             
             if arquivos:
                 print(f"   {pasta_nome}: {len(arquivos)} arquivo(s)")
-                for arq in arquivos[-3:]:  # Mostra últimos 3
+                for arq in arquivos[-3:]:
                     tamanho = arq.stat().st_size
                     print(f"      - {arq.name} ({tamanho} bytes)")
     
     print("\n" + "="*60)
     print("📺 INTEGRAÇÃO COM PIRATAFLIX")
     print("="*60)
-    print("✅ channels.json atualizado na pasta web/")
+    print("✅ channels.json criado/atualizado (JÁ LIMPO - SEM DUPLICATAS)")
     print("✅ Agora execute o script de consolidação:")
     print("   python3 consolidar_data.py")
     print("="*60)
