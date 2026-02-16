@@ -376,7 +376,13 @@ function addNextButton() {
         });
     }
 }
+      addNextButton();
     
+    document.getElementById('modern-player-title').textContent = title;
+    document.getElementById('modern-player-info').textContent = info;
+    
+};
+
 // RENDERIZAR CONTINUAR ASSISTINDO
 window.renderContinueWatching = function() {
     const list = window.ContinueWatching.getWatchingList();
@@ -692,4 +698,4 @@ netflixStyle.textContent = `
 `;
 document.head.appendChild(netflixStyle);
 
-console.log('✅ NOVO PLAYER AVANÇADO!');
+console.log('✅ NOVO PLAYER AVANÇADO');
