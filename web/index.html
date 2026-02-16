@@ -12,7 +12,12 @@
     <link rel="shortcut icon" href="favicon.png">
 
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
         body { 
             font-family: 'Arial', sans-serif; 
             background: #141414; 
@@ -20,7 +25,85 @@
             line-height: 1.4;
         }
         
-        /* Header Netflix-style */
+        /* ===== LOADING SCREEN ===== */
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #141414;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+        
+        .loading-screen.fade-out {
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        .loading-container {
+            text-align: center;
+        }
+        
+        .loading-icon {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 20px;
+            animation: quickPulse 0.8s ease-in-out infinite;
+        }
+        
+        .loading-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0 0 15px rgba(229, 9, 20, 0.7));
+        }
+        
+        .loading-dots {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        .dot {
+            width: 12px;
+            height: 12px;
+            background: #e50914;
+            border-radius: 50%;
+            animation: quickDot 0.8s infinite;
+        }
+        
+        .dot:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        
+        .dot:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+        
+        .loading-text {
+            color: #e50914;
+            font-size: 1.2rem;
+            margin-top: 20px;
+            letter-spacing: 2px;
+        }
+        
+        @keyframes quickPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        
+        @keyframes quickDot {
+            0%, 100% { opacity: 0.3; transform: scale(0.8); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
+        
+        /* Header */
         .header {
             position: fixed;
             top: 0;
@@ -75,17 +158,16 @@
             font-weight: bold;
         }
         
-        /* Items grid - estilo Netflix */
         .items-grid {
             display: flex;
             gap: 10px;
             overflow-x: auto;
             padding: 10px 0;
-            scrollbar-width: none; /* Firefox */
+            scrollbar-width: none;
         }
         
         .items-grid::-webkit-scrollbar {
-            display: none; /* Chrome, Safari, Opera */
+            display: none;
         }
         
         .item-card {
@@ -141,21 +223,7 @@
             color: #b3b3b3;
         }
         
-        /* Loading state */
-        .loading {
-            text-align: center;
-            padding: 100px 20px;
-            color: #e50914;
-            font-size: 1.2rem;
-        }
-        
-        .error {
-            text-align: center;
-            padding: 100px 20px;
-            color: #e50914;
-        }
-        
-        /* Modal Netflix-style */
+        /* Modal */
         .modal {
             display: none;
             position: fixed;
@@ -228,14 +296,6 @@
             color: #b3b3b3;
         }
         
-        .modal-description {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            margin-bottom: 30px;
-            color: #fff;
-        }
-        
-        /* Episode list */
         .episodes-section {
             margin-top: 30px;
         }
@@ -282,12 +342,6 @@
             margin-bottom: 5px;
         }
         
-        .episode-duration {
-            font-size: 0.85rem;
-            color: #b3b3b3;
-        }
-        
-        /* Play button */
         .play-button {
             background: #e50914;
             color: white;
@@ -308,7 +362,6 @@
             background: #f40612;
         }
         
-        /* Responsive */
         @media (max-width: 768px) {
             .header {
                 padding: 20px;
@@ -341,6 +394,21 @@
     </style>
 </head>
 <body>
+    <!-- TELA DE LOADING -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-container">
+            <div class="loading-icon">
+                <img src="https://raw.githubusercontent.com/alberttartas/Pirataflix/main/favicon.png" alt="PIRATAFLIX">
+            </div>
+            <div class="loading-dots">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+            <div class="loading-text">CARREGANDO</div>
+        </div>
+    </div>
+
     <!-- Header -->
     <header class="header">
         <a href="#" class="logo">PIRATAFLIX</a>
@@ -353,7 +421,7 @@
     </header>
 
     <!-- Main Content -->
-    <main class="main-content" id="content">
+    <main class="main-content" id="content" style="display: none;">
         <div class="loading">Carregando catálogo...</div>
     </main>
 
@@ -369,29 +437,39 @@
         </div>
     </div>
 
-        <script>
+    <script>
         // Dados carregados
         window.vodData = {};
         let currentItem = null;
         
-        // Carregar dados
-        async function loadData() {
-          try {
-          const response = await fetch('data.json');
-          window.vodData = await response.json();  // <-- ADICIONE window.
-          displayContent();
-           } catch (error) {
-          document.getElementById('content').innerHTML = 
-            '<div class="error">Erro ao carregar dados: ' + error.message + '</div>';
-           }
-         }
+        function hideLoading() {
+            const loadingScreen = document.getElementById('loadingScreen');
+            if (loadingScreen) {
+                loadingScreen.classList.add('fade-out');
+                setTimeout(() => {
+                    loadingScreen.style.display = 'none';
+                }, 500);
+            }
+        }
         
-        // Exibir conteúdo
+        async function loadData() {
+            try {
+                const response = await fetch('data.json');
+                window.vodData = await response.json();
+                hideLoading();
+                displayContent();
+            } catch (error) {
+                console.error('Erro:', error);
+                document.getElementById('content').innerHTML = 
+                    '<div class="error">Erro ao carregar dados: ' + error.message + '</div>';
+                hideLoading();
+            }
+        }
+        
         function displayContent() {
             const contentDiv = document.getElementById('content');
             let html = '';
             
-            // Ordem das categorias
             const categoryOrder = ['filmes', 'series', 'novelas', 'animes', 'infantil'];
             const categoryNames = {
                 'filmes': '🎬 Filmes',
@@ -411,11 +489,9 @@
                     <div class="items-grid">`;
                 
                 items.forEach(item => {
-                    // CORREÇÃO DAS CAPAS - Usando GitHub RAW
                     const nomeArquivo = item.poster ? item.poster.split('/').pop() : 'default.jpg';
                     const poster = `https://raw.githubusercontent.com/alberttartas/Pirataflix/main/assets/Capas/${nomeArquivo}`;
                     
-                    const type = category === 'filmes' ? 'Filme' : 'Série';
                     const episodeCount = item.episodes ? item.episodes.length : 0;
                     const seasonCount = item.seasons ? item.seasons.length : 0;
                     
@@ -445,7 +521,6 @@
             contentDiv.innerHTML = html || '<div class="loading">Nenhum conteúdo encontrado</div>';
         }
         
-        // Abrir modal
         function openModal(category, itemId) {
             const items = vodData[category];
             if (!items) return;
@@ -458,7 +533,6 @@
             let modalBodyHtml = '';
             let modalHeaderHtml = '';
             
-            // Header do modal com backdrop
             if (item.poster) {
                 const nomeArquivo = item.poster.split('/').pop();
                 const posterUrl = `https://raw.githubusercontent.com/alberttartas/Pirataflix/main/assets/Capas/${nomeArquivo}`;
@@ -471,7 +545,6 @@
                 `;
             }
             
-            // Corpo do modal
             modalBodyHtml = `
                 <h2 class="modal-title">${item.title}</h2>
                 <div class="modal-meta">
@@ -484,7 +557,6 @@
                 </button>
             `;
             
-            // Listar episódios
             if (item.episodes && item.episodes.length > 0) {
                 modalBodyHtml += `
                 <div class="episodes-section">
@@ -529,16 +601,12 @@
                 modalBodyHtml += `</div>`;
             }
             
-            // Atualizar modal
             document.getElementById('modalHeader').innerHTML = modalHeaderHtml;
             document.getElementById('modalBody').innerHTML = modalBodyHtml;
             document.getElementById('modal').style.display = 'block';
-            
-            // Rolar para o topo do modal
             document.getElementById('modal').scrollTop = 0;
         }
         
-        // Reproduzir primeiro episódio
         function playFirstEpisode(category, itemId) {
             const items = vodData[category];
             if (!items) return;
@@ -560,7 +628,6 @@
             }
         }
         
-        // Reproduzir episódio usando seu player moderno
         function playEpisode(url, title, itemId, category, episodeIndex) {
             if (typeof window.playWithModernPlayer === 'function') {
                 window.playWithModernPlayer(url, title, '', itemId, category, episodeIndex);
@@ -570,7 +637,6 @@
             }
         }
         
-        // Fechar modal
         document.getElementById('closeModal').onclick = function() {
             document.getElementById('modal').style.display = 'none';
         };
@@ -588,10 +654,9 @@
             }
         });
         
-        // Carregar dados ao iniciar
         loadData();
     </script>
-        <!-- Incluir seu script de integração do player -->
+    
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
     <script src="novo-player.js" defer></script>
 </body>
