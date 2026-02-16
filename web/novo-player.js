@@ -85,15 +85,31 @@ window.playWithModernPlayer = function(url, title, info = '', itemId = null, cat
     const video = document.getElementById('current-video');
 
     // Salvar progresso
-let interval = setInterval(() => {
+    let interval = setInterval(() => {
     if (video.duration && video.currentTime > 10) {
+        
+        // Buscar o poster do item nos dados
+        let posterUrl = '';
+        if (itemId && category && window.vodData) {
+            try {
+                const item = window.vodData[category]?.find(i => i.id === itemId);
+                if (item && item.poster) {
+                    posterUrl = item.poster;
+                    console.log('📸 Poster encontrado:', posterUrl);
+                }
+            } catch (e) {
+                console.log('⚠️ Erro ao buscar poster:', e);
+            }
+        }
+        
         window.ContinueWatching.save({
             videoId, itemId, category, episodeIndex,
             title, seriesTitle: title.split(' - ')[0],
             episode: episodeIndex + 1,
             currentTime: video.currentTime,
             duration: video.duration,
-            url, poster: ''
+            url, 
+            poster: posterUrl
         });
     }
 }, 5000);
