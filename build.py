@@ -1184,16 +1184,25 @@ def generate_html_with_correct_paths(base_dir, data):
         
         window.vodData = {{}};
         let currentItem = null;
+    
+    function hideLoading() {
+      const loadingScreen = document.getElementById('loadingScreen');
+      const content = document.getElementById('content');
+    
+      if (loadingScreen && content) {
+         // Forçar remoção do loading
+          loadingScreen.style.opacity = '0';
+          loadingScreen.style.pointerEvents = 'none';
         
-        function hideLoading() {{
-            const loadingScreen = document.getElementById('loadingScreen');
-            if (loadingScreen) {{
-                loadingScreen.classList.add('fade-out');
-                setTimeout(() => {{
-                    loadingScreen.style.display = 'none';
-                }}, 500);
-            }}
-        }}
+          // Mostrar conteúdo imediatamente
+          content.style.display = 'block';
+        
+         // Remover loading após animação
+          setTimeout(() => {
+             loadingScreen.style.display = 'none';
+           }, 500);
+         }
+         }
         
         async function loadData() {{
             try {{
@@ -1298,22 +1307,17 @@ def generate_html_with_correct_paths(base_dir, data):
                         </div>
                     </div>`;
                 }});
-                
-                html += `</div></section>`;
-            }});
-            
-            console.log(`📊 Total de itens: ${{totalItems}}`);
-            
-            if (totalItems === 0) {{
-                contentDiv.innerHTML = '<div class="error">Nenhum conteúdo encontrado no catálogo</div>';
-            }} else {{
-                contentDiv.innerHTML = html;
-            }}
-        }}
-        
-        // [Resto das funções openModal, playFirstEpisode, playEpisode...]
-        // (manter iguais ao seu código original)
-        
+              
+          html += `</div></section>`;
+         });
+
+        console.log(`📊 Total de itens: ${totalItems}`);
+
+         contentDiv.innerHTML = html || '<div class="loading">Nenhum conteúdo encontrado</div>';
+         contentDiv.style.display = 'block';
+
+        }
+               
         // Fechar modal
         document.getElementById('closeModal').onclick = function() {{
             document.getElementById('modal').style.display = 'none';
@@ -1350,4 +1354,5 @@ def generate_html_with_correct_paths(base_dir, data):
 
 if __name__ == "__main__":
     build_vod_with_direct_capas()
+
 
