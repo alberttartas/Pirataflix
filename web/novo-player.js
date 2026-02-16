@@ -182,7 +182,7 @@ video.addEventListener('ended', () => {
     }
     
 
-    // ===== BARRA DE CONTROLES COMPLETA + BOTÃO PRÓXIMO =====
+   // ===== BARRA DE CONTROLES COMPLETA + BOTÃO PRÓXIMO =====
 function addNextButton() {
     console.log('🔵 addNextButton iniciada');
     
@@ -252,6 +252,7 @@ function addNextButton() {
         
         // ===== BOTÃO PLAY/PAUSE =====
         const playPauseBtn = document.createElement('button');
+        playPauseBtn.id = 'playPauseBtn';
         playPauseBtn.innerHTML = '⏸️';
         playPauseBtn.style.cssText = `
             background: none;
@@ -275,6 +276,60 @@ function addNextButton() {
         
         video.addEventListener('play', () => playPauseBtn.innerHTML = '⏸️');
         video.addEventListener('pause', () => playPauseBtn.innerHTML = '▶️');
+        
+        // ===== BOTÃO RETROCEDER 10s =====
+        const backwardBtn = document.createElement('button');
+        backwardBtn.id = 'backwardBtn';
+        backwardBtn.innerHTML = '⏪ 10s';
+        backwardBtn.style.cssText = `
+            background: rgba(255,255,255,0.2);
+            border: none;
+            color: white;
+            font-size: 14px;
+            cursor: pointer;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: 0.2s;
+        `;
+        
+        backwardBtn.onmouseover = () => {
+            backwardBtn.style.background = 'rgba(255,255,255,0.3)';
+        };
+        backwardBtn.onmouseout = () => {
+            backwardBtn.style.background = 'rgba(255,255,255,0.2)';
+        };
+        
+        backwardBtn.onclick = () => {
+            video.currentTime = Math.max(0, video.currentTime - 10);
+            showMessage('⏪ -10 segundos');
+        };
+        
+        // ===== BOTÃO AVANÇAR 10s =====
+        const forwardBtn = document.createElement('button');
+        forwardBtn.id = 'forwardBtn';
+        forwardBtn.innerHTML = '10s ⏩';
+        forwardBtn.style.cssText = `
+            background: rgba(255,255,255,0.2);
+            border: none;
+            color: white;
+            font-size: 14px;
+            cursor: pointer;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: 0.2s;
+        `;
+        
+        forwardBtn.onmouseover = () => {
+            forwardBtn.style.background = 'rgba(255,255,255,0.3)';
+        };
+        forwardBtn.onmouseout = () => {
+            forwardBtn.style.background = 'rgba(255,255,255,0.2)';
+        };
+        
+        forwardBtn.onclick = () => {
+            video.currentTime = Math.min(video.duration, video.currentTime + 10);
+            showMessage('⏩ +10 segundos');
+        };
         
         // ===== BARRA DE PROGRESSO =====
         const progressContainer = document.createElement('div');
@@ -324,14 +379,182 @@ function addNextButton() {
             timeDisplay.textContent = `${formatTime(video.currentTime)} / ${formatTime(video.duration)}`;
         });
         
+        // ===== BOTÃO TELA CHEIA =====
+        const fullscreenBtn = document.createElement('button');
+        fullscreenBtn.id = 'fullscreenBtn';
+        fullscreenBtn.innerHTML = '⛶';
+        fullscreenBtn.style.cssText = `
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 5px;
+            width: 40px;
+        `;
+        
+        fullscreenBtn.onclick = () => {
+            if (!document.fullscreenElement) {
+                container.requestFullscreen();
+                fullscreenBtn.innerHTML = '✕';
+            } else {
+                document.exitFullscreen();
+                fullscreenBtn.innerHTML = '⛶';
+            }
+        };
+        
+        document.addEventListener('fullscreenchange', () => {
+            fullscreenBtn.innerHTML = document.fullscreenElement ? '✕' : '⛶';
+        });
+        
         // Adicionar elementos à barra
         controlsContainer.appendChild(playPauseBtn);
+        controlsContainer.appendChild(backwardBtn);
+        controlsContainer.appendChild(forwardBtn);
         controlsContainer.appendChild(progressContainer);
         controlsContainer.appendChild(timeDisplay);
+        controlsContainer.appendChild(fullscreenBtn);
         
         container.appendChild(controlsContainer);
         console.log('✅ Barra de controles criada');
     }
+    
+    // ===== ADICIONAR EVENTOS DE TECLADO =====
+    function setupKeyboardControls() {
+        document.addEventListener('keydown', (e) => {
+            // Ignorar se estiver digitando em input
+            if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+            
+            switch(e.key) {
+                case ' ':
+                case 'Space':
+                    e.preventDefault();
+                    if (video.paused) {
+                        video.play();
+                        document.getElementById('playPauseBtn').innerHTML = '⏸️';
+                    } else {
+                        video.pause();
+                        document.getElementById('playPauseBtn').innerHTML = '▶️';
+                    }
+                    break;
+                    
+                case 'ArrowLeft':
+                    e.preventDefault();
+                    video.currentTime = Math.max(0, video.currentTime - 10);
+                    showMessage('⏪ -10 segundos');
+                    break;
+                    
+                case 'ArrowRight':
+                    e.preventDefault();
+                    video.currentTime = Math.min(video.duration, video.currentTime + 10);
+                    showMessage('⏩ +10 segundos');
+                    break;
+                    
+                case 'f':
+                case 'F':
+                    e.preventDefault();
+                    if (!document.fullscreenElement) {
+                        container.requestFullscreen();
+                    } else {
+                        document.exitFullscreen();
+                    }
+                    break;
+            }
+        });
+    }
+    
+    // ===== ADICIONAR TOQUES NAS LATERAIS =====
+    function setupTouchControls() {
+        let touchStartX = 0;
+        let touchStartY = 0;
+        
+        container.addEventListener('touchstart', (e) => {
+            touchStartX = e.touches[0].clientX;
+            touchStartY = e.touches[0].clientY;
+        }, { passive: true });
+        
+        container.addEventListener('touchend', (e) => {
+            if (!touchStartX) return;
+            
+            const touchEndX = e.changedTouches[0].clientX;
+            const touchEndY = e.changedTouches[0].clientY;
+            
+            const deltaX = touchEndX - touchStartX;
+            const deltaY = touchEndY - touchStartY;
+            
+            // Se foi mais horizontal que vertical (ignorar scroll)
+            if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 50) {
+                if (deltaX > 0) {
+                    // Deslizou para direita → retroceder
+                    video.currentTime = Math.max(0, video.currentTime - 10);
+                    showMessage('⏪ -10 segundos');
+                } else {
+                    // Deslizou para esquerda → avançar
+                    video.currentTime = Math.min(video.duration, video.currentTime + 10);
+                    showMessage('⏩ +10 segundos');
+                }
+            }
+            
+            touchStartX = 0;
+        }, { passive: true });
+        
+        // Toque simples no lado esquerdo/direito da tela
+        container.addEventListener('click', (e) => {
+            const rect = container.getBoundingClientRect();
+            const clickX = e.clientX - rect.left;
+            const thirdWidth = rect.width / 3;
+            
+            // Ignorar se clicou na barra de controles
+            if (controlsContainer && controlsContainer.contains(e.target)) return;
+            
+            if (clickX < thirdWidth) {
+                // Lado esquerdo - retroceder
+                video.currentTime = Math.max(0, video.currentTime - 10);
+                showMessage('⏪ -10 segundos');
+            } else if (clickX > thirdWidth * 2) {
+                // Lado direito - avançar
+                video.currentTime = Math.min(video.duration, video.currentTime + 10);
+                showMessage('⏩ +10 segundos');
+            }
+        });
+    }
+    
+    // ===== FUNÇÃO PARA MOSTRAR MENSAGENS =====
+    function showMessage(text) {
+        const msg = document.createElement('div');
+        msg.textContent = text;
+        msg.style.cssText = `
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 20px 30px;
+            border-radius: 50px;
+            font-size: 24px;
+            font-weight: bold;
+            z-index: 10002;
+            animation: fadeOut 1s forwards;
+        `;
+        
+        // Adicionar animação
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeOut {
+                0% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+                70% { opacity: 1; transform: translate(-50%, -50%) scale(1.1); }
+                100% { opacity: 0; transform: translate(-50%, -50%) scale(1.2); }
+            }
+        `;
+        document.head.appendChild(style);
+        
+        container.appendChild(msg);
+        setTimeout(() => msg.remove(), 1000);
+    }
+    
+    setupKeyboardControls();
+    setupTouchControls();
     
     // ===== BOTÃO PRÓXIMO EPISÓDIO (se houver) =====
     if (episodeIndex + 1 < episodeList.length) {
