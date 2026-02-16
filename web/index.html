@@ -12,13 +12,7 @@
     <link rel="shortcut icon" href="favicon.png">
 
     <style>
-        /* Seu CSS existente - manter igual */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body { 
             font-family: 'Arial', sans-serif; 
             background: #141414; 
@@ -26,85 +20,7 @@
             line-height: 1.4;
         }
         
-        /* Loading */
-        .loading-screen {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: #141414;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-            transition: opacity 0.5s ease;
-        }
-        
-        .loading-screen.fade-out {
-            opacity: 0;
-            pointer-events: none;
-        }
-        
-        .loading-container {
-            text-align: center;
-        }
-        
-        .loading-icon {
-            width: 120px;
-            height: 120px;
-            margin: 0 auto 20px;
-            animation: quickPulse 0.8s ease-in-out infinite;
-        }
-        
-        .loading-icon img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            filter: drop-shadow(0 0 15px rgba(229, 9, 20, 0.7));
-        }
-        
-        .loading-dots {
-            display: flex;
-            gap: 8px;
-            justify-content: center;
-            margin-top: 20px;
-        }
-        
-        .dot {
-            width: 12px;
-            height: 12px;
-            background: #e50914;
-            border-radius: 50%;
-            animation: quickDot 0.8s infinite;
-        }
-        
-        .dot:nth-child(2) {
-            animation-delay: 0.2s;
-        }
-        
-        .dot:nth-child(3) {
-            animation-delay: 0.4s;
-        }
-        
-        .loading-text {
-            color: #e50914;
-            font-size: 1.2rem;
-            margin-top: 20px;
-            letter-spacing: 2px;
-        }
-        
-        @keyframes quickPulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-        }
-        
-        @keyframes quickDot {
-            0%, 100% { opacity: 0.3; transform: scale(0.8); }
-            50% { opacity: 1; transform: scale(1.2); }
-        }
-        
-        /* Header */
+        /* Header Netflix-style */
         .header {
             position: fixed;
             top: 0;
@@ -141,10 +57,12 @@
             color: #b3b3b3;
         }
         
+        /* Main content */
         .main-content {
             padding-top: 100px;
         }
         
+        /* Category sections */
         .category-section {
             margin-bottom: 40px;
             padding: 0 50px;
@@ -157,16 +75,17 @@
             font-weight: bold;
         }
         
+        /* Items grid - estilo Netflix */
         .items-grid {
             display: flex;
             gap: 10px;
             overflow-x: auto;
             padding: 10px 0;
-            scrollbar-width: none;
+            scrollbar-width: none; /* Firefox */
         }
         
         .items-grid::-webkit-scrollbar {
-            display: none;
+            display: none; /* Chrome, Safari, Opera */
         }
         
         .item-card {
@@ -222,7 +141,21 @@
             color: #b3b3b3;
         }
         
-        /* Modal */
+        /* Loading state */
+        .loading {
+            text-align: center;
+            padding: 100px 20px;
+            color: #e50914;
+            font-size: 1.2rem;
+        }
+        
+        .error {
+            text-align: center;
+            padding: 100px 20px;
+            color: #e50914;
+        }
+        
+        /* Modal Netflix-style */
         .modal {
             display: none;
             position: fixed;
@@ -295,6 +228,14 @@
             color: #b3b3b3;
         }
         
+        .modal-description {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            color: #fff;
+        }
+        
+        /* Episode list */
         .episodes-section {
             margin-top: 30px;
         }
@@ -341,6 +282,12 @@
             margin-bottom: 5px;
         }
         
+        .episode-duration {
+            font-size: 0.85rem;
+            color: #b3b3b3;
+        }
+        
+        /* Play button */
         .play-button {
             background: #e50914;
             color: white;
@@ -361,13 +308,7 @@
             background: #f40612;
         }
         
-        .error {
-            text-align: center;
-            padding: 100px 20px;
-            color: #e50914;
-            font-size: 1.2rem;
-        }
-        
+        /* Responsive */
         @media (max-width: 768px) {
             .header {
                 padding: 20px;
@@ -400,21 +341,6 @@
     </style>
 </head>
 <body>
-    <!-- Loading -->
-    <div class="loading-screen" id="loadingScreen">
-        <div class="loading-container">
-            <div class="loading-icon">
-                <img src="https://raw.githubusercontent.com/alberttartas/Pirataflix/main/favicon.png" alt="PIRATAFLIX">
-            </div>
-            <div class="loading-dots">
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-            </div>
-            <div class="loading-text">CARREGANDO</div>
-        </div>
-    </div>
-
     <!-- Header -->
     <header class="header">
         <a href="#" class="logo">PIRATAFLIX</a>
@@ -427,7 +353,7 @@
     </header>
 
     <!-- Main Content -->
-    <main class="main-content" id="content" style="display: none;">
+    <main class="main-content" id="content">
         <div class="loading">Carregando catálogo...</div>
     </main>
 
@@ -438,83 +364,34 @@
                 <button class="modal-close" id="closeModal">&times;</button>
             </div>
             <div class="modal-body" id="modalBody">
-                <!-- Conteúdo do modal -->
+                <!-- Conteúdo será carregado aqui -->
             </div>
         </div>
     </div>
 
-    <script>
-        // Debug - verificar caminho do data.json
-        console.log('📍 Localização atual:', window.location.href);
-        
+        <script>
+        // Dados carregados
         window.vodData = {};
         let currentItem = null;
         
-        function hideLoading() {
-            const loadingScreen = document.getElementById('loadingScreen');
-            if (loadingScreen) {
-                loadingScreen.classList.add('fade-out');
-                setTimeout(() => {
-                    loadingScreen.style.display = 'none';
-                }, 500);
-            }
-        }
-        
+        // Carregar dados
         async function loadData() {
-            try {
-                console.log('📡 Tentando carregar data.json...');
-                
-                // Tentar diferentes caminhos
-                let response;
-                const paths = [
-                    'data.json',
-                    './data.json',
-                    '/data.json',
-                    'web/data.json',
-                    '../data.json'
-                ];
-                
-                for (const path of paths) {
-                    try {
-                        console.log(`Tentando: ${path}`);
-                        response = await fetch(path);
-                        if (response.ok) {
-                            console.log(`✅ Sucesso com: ${path}`);
-                            break;
-                        }
-                    } catch (e) {
-                        console.log(`❌ Falha com: ${path}`);
-                    }
-                }
-                
-                if (!response || !response.ok) {
-                    throw new Error('Não foi possível encontrar data.json');
-                }
-                
-                const data = await response.json();
-                console.log('✅ Dados carregados:', data);
-                console.log('📊 Categorias:', Object.keys(data));
-                
-                window.vodData = data;
-                hideLoading();
-                displayContent();
-                
-            } catch (error) {
-                console.error('❌ Erro:', error);
-                document.getElementById('content').innerHTML = 
-                    '<div class="error">' +
-                    '<h2>Erro ao carregar dados</h2>' +
-                    '<p>' + error.message + '</p>' +
-                    '<p>Verifique se o arquivo data.json existe na pasta web/</p>' +
-                    '</div>';
-                hideLoading();
-            }
-        }
+          try {
+          const response = await fetch('data.json');
+          window.vodData = await response.json();  // <-- ADICIONE window.
+          displayContent();
+           } catch (error) {
+          document.getElementById('content').innerHTML = 
+            '<div class="error">Erro ao carregar dados: ' + error.message + '</div>';
+           }
+         }
         
+        // Exibir conteúdo
         function displayContent() {
             const contentDiv = document.getElementById('content');
             let html = '';
             
+            // Ordem das categorias
             const categoryOrder = ['filmes', 'series', 'novelas', 'animes', 'infantil'];
             const categoryNames = {
                 'filmes': '🎬 Filmes',
@@ -524,13 +401,9 @@
                 'infantil': '🧸 Infantil'
             };
             
-            let totalItems = 0;
             categoryOrder.forEach(category => {
                 const items = vodData[category];
                 if (!items || items.length === 0) return;
-                
-                totalItems += items.length;
-                console.log(`${category}: ${items.length} itens`);
                 
                 html += `
                 <section class="category-section" id="${category}">
@@ -538,9 +411,11 @@
                     <div class="items-grid">`;
                 
                 items.forEach(item => {
+                    // CORREÇÃO DAS CAPAS - Usando GitHub RAW
                     const nomeArquivo = item.poster ? item.poster.split('/').pop() : 'default.jpg';
                     const poster = `https://raw.githubusercontent.com/alberttartas/Pirataflix/main/assets/Capas/${nomeArquivo}`;
                     
+                    const type = category === 'filmes' ? 'Filme' : 'Série';
                     const episodeCount = item.episodes ? item.episodes.length : 0;
                     const seasonCount = item.seasons ? item.seasons.length : 0;
                     
@@ -567,17 +442,133 @@
                 html += `</div></section>`;
             });
             
-            console.log(`📊 Total de itens: ${totalItems}`);
+            contentDiv.innerHTML = html || '<div class="loading">Nenhum conteúdo encontrado</div>';
+        }
+        
+        // Abrir modal
+        function openModal(category, itemId) {
+            const items = vodData[category];
+            if (!items) return;
             
-            if (totalItems === 0) {
-                contentDiv.innerHTML = '<div class="error">Nenhum conteúdo encontrado no catálogo</div>';
-            } else {
-                contentDiv.innerHTML = html;
+            const item = items.find(i => i.id === itemId);
+            if (!item) return;
+            
+            currentItem = item;
+            
+            let modalBodyHtml = '';
+            let modalHeaderHtml = '';
+            
+            // Header do modal com backdrop
+            if (item.poster) {
+                const nomeArquivo = item.poster.split('/').pop();
+                const posterUrl = `https://raw.githubusercontent.com/alberttartas/Pirataflix/main/assets/Capas/${nomeArquivo}`;
+                
+                modalHeaderHtml = `
+                    <div class="modal-backdrop" style="background-image: url('${posterUrl}')"></div>
+                    <button class="play-button" onclick="playFirstEpisode('${category}', '${item.id}')" style="position: absolute; bottom: 30px; left: 30px;">
+                        <span>▶</span> Assistir
+                    </button>
+                `;
+            }
+            
+            // Corpo do modal
+            modalBodyHtml = `
+                <h2 class="modal-title">${item.title}</h2>
+                <div class="modal-meta">
+                    <span>${item.type === 'movie' ? 'Filme' : 'Série'}</span>
+                    ${item.episodes ? `<span>${item.episodes.length} episódios</span>` : ''}
+                    ${item.seasons ? `<span>${item.seasons.length} temporadas</span>` : ''}
+                </div>
+                <button class="play-button" onclick="playFirstEpisode('${category}', '${item.id}')">
+                    <span>▶</span> Assistir
+                </button>
+            `;
+            
+            // Listar episódios
+            if (item.episodes && item.episodes.length > 0) {
+                modalBodyHtml += `
+                <div class="episodes-section">
+                    <h3 style="margin-bottom: 20px; font-size: 1.3rem;">Episódios</h3>
+                    <div class="episode-list">`;
+                
+                item.episodes.forEach((ep, index) => {
+                    modalBodyHtml += `
+                    <div class="episode-item" onclick="playEpisode('${ep.url}', '${item.title} - ${ep.title}', '${item.id}', '${category}', ${index})">
+                        <div class="episode-number">${index + 1}</div>
+                        <div class="episode-info">
+                            <div class="episode-title">${ep.title}</div>
+                        </div>
+                    </div>`;
+                });
+                
+                modalBodyHtml += `</div></div>`;
+            } else if (item.seasons && item.seasons.length > 0) {
+                modalBodyHtml += `<div class="episodes-section">`;
+                
+                item.seasons.forEach(season => {
+                    modalBodyHtml += `
+                    <div style="margin-bottom: 30px;">
+                        <h3 style="margin-bottom: 15px; font-size: 1.2rem;">Temporada ${season.season}</h3>
+                        <div class="episode-list">`;
+                    
+                    if (season.episodes && season.episodes.length > 0) {
+                        season.episodes.forEach((ep, index) => {
+                            modalBodyHtml += `
+                            <div class="episode-item" onclick="playEpisode('${ep.url}', '${item.title} - Temp ${season.season} - ${ep.title}', '${item.id}', '${category}', ${index})">
+                                <div class="episode-number">${index + 1}</div>
+                                <div class="episode-info">
+                                    <div class="episode-title">${ep.title}</div>
+                                </div>
+                            </div>`;
+                        });
+                    }
+                    
+                    modalBodyHtml += `</div></div>`;
+                });
+                
+                modalBodyHtml += `</div>`;
+            }
+            
+            // Atualizar modal
+            document.getElementById('modalHeader').innerHTML = modalHeaderHtml;
+            document.getElementById('modalBody').innerHTML = modalBodyHtml;
+            document.getElementById('modal').style.display = 'block';
+            
+            // Rolar para o topo do modal
+            document.getElementById('modal').scrollTop = 0;
+        }
+        
+        // Reproduzir primeiro episódio
+        function playFirstEpisode(category, itemId) {
+            const items = vodData[category];
+            if (!items) return;
+            
+            const item = items.find(i => i.id === itemId);
+            if (!item) return;
+            
+            let url = '';
+            let title = '';
+            
+            if (item.episodes && item.episodes.length > 0) {
+                url = item.episodes[0].url;
+                title = `${item.title} - ${item.episodes[0].title}`;
+                playEpisode(url, title, item.id, category, 0);
+            } else if (item.seasons && item.seasons.length > 0 && item.seasons[0].episodes.length > 0) {
+                url = item.seasons[0].episodes[0].url;
+                title = `${item.title} - Temp 1 - ${item.seasons[0].episodes[0].title}`;
+                playEpisode(url, title, item.id, category, 0);
             }
         }
         
-        // [Resto das funções openModal, playFirstEpisode, playEpisode...]
-        // (manter iguais ao seu código original)
+        // Reproduzir episódio usando seu player moderno
+        function playEpisode(url, title, itemId, category, episodeIndex) {
+            if (typeof window.playWithModernPlayer === 'function') {
+                window.playWithModernPlayer(url, title, '', itemId, category, episodeIndex);
+                document.getElementById('modal').style.display = 'none';
+            } else {
+                window.open(url, '_blank');
+            }
+        }
         
         // Fechar modal
         document.getElementById('closeModal').onclick = function() {
@@ -597,10 +588,10 @@
             }
         });
         
-        // Carregar dados
+        // Carregar dados ao iniciar
         loadData();
     </script>
-    
+        <!-- Incluir seu script de integração do player -->
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
     <script src="novo-player.js" defer></script>
 </body>
