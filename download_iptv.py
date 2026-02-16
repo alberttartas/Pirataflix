@@ -6,119 +6,33 @@ from pathlib import Path
 import json
 from datetime import datetime
 import sys
-import os
 import re
 
-print("="*60)
-print("🚀 SCRIPT DOWNLOAD IPTV INICIADO")
-print(f"📅 Data/Hora: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-print(f"📂 Diretório atual: {Path(__file__).parent}")
-print("="*60)
-
-def criar_estrutura_pastas():
-    """Cria toda a estrutura de pastas necessária"""
-    print("\n📁 Verificando/criando pastas...")
-    
-    base_dir = Path(__file__).parent
-    
-    # Pastas principais
-    pastas = {
-        'auto_dir': base_dir / "input_auto",
-        'filmes': base_dir / "input_auto" / "Filmes",
-        'series': base_dir / "input_auto" / "Series",
-        'novelas': base_dir / "input_auto" / "Novelas",
-        'tv': base_dir / "input_auto" / "TV",  # Nova pasta para TV
-        'web': base_dir / "web"  # Pasta web para o channels.json
-    }
-    
-    for nome, pasta in pastas.items():
-        try:
-            if not pasta.exists():
-                pasta.mkdir(parents=True, exist_ok=True)
-                print(f"   ✅ Criada: {nome} -> {pasta}")
-            else:
-                print(f"   📁 Já existe: {nome} -> {pasta}")
-        except Exception as e:
-            print(f"   ❌ Erro ao criar {nome}: {e}")
-    
-    return pastas
-
-def testar_conexao():
-    """Testa se consegue acessar o iptv-org"""
-    print("\n🌐 Testando conexão com iptv-org...")
-    try:
-        response = requests.get(
-            "https://iptv-org.github.io/iptv/index.m3u",
-            timeout=10,
-            headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
-        )
-        if response.status_code == 200:
-            print("   ✅ Conexão OK!")
-            return True
-        else:
-            print(f"   ❌ Erro HTTP: {response.status_code}")
-            return False
-    except requests.exceptions.RequestException as e:
-        print(f"   ❌ Erro de conexão: {e}")
-        return False
-
-def parse_m3u(content):
-    """Analisa conteúdo M3U e extrai canais com suas informações"""
-    channels = []
-    lines = content.split('\n')
-    
-    i = 0
-    while i < len(lines):
-        line = lines[i].strip()
-        
-        if line.startswith('#EXTINF:'):
-            # Extrair informações do canal
-            info = line[8:]  # Remove '#EXTINF:'
-            
-            # Extrair tvg-id
-            tvg_id_match = re.search(r'tvg-id="([^"]*)"', info)
-            tvg_id = tvg_id_match.group(1) if tvg_id_match else ""
-            
-            # Extrair tvg-logo
-            tvg_logo_match = re.search(r'tvg-logo="([^"]*)"', info)
-            tvg_logo = tvg_logo_match.group(1) if tvg_logo_match else ""
-            
-            # Extrair group-title
-            group_match = re.search(r'group-title="([^"]*)"', info)
-            group = group_match.group(1) if group_match else "Outros"
-            
-            # Extrair nome do canal (depois da última vírgula)
-            name_parts = info.split(',')
-            title = name_parts[-1].strip() if len(name_parts) > 1 else "Sem nome"
-            
-            # Próxima linha deve ser a URL
-            i += 1
-            if i < len(lines):
-                url = lines[i].strip()
-                if url and not url.startswith('#'):
-                    channels.append({
-                        'title': title,
-                        'url': url,
-                        'tvg_id': tvg_id,
-                        'tvg_logo': tvg_logo,
-                        'group': group
-                    })
-        i += 1
-    
-    return channels
+# [Seu código existente até a função download_file...]
 
 def criar_channels_json(canais_br, pastas):
-    """Cria o arquivo channels.json para o outro script consumir"""
+    """Cria o arquivo channels.json sem duplicatas"""
     print("\n📝 Criando channels.json para integração...")
     
     channels_data = []
+    urls_vistas = set()
     
     for canal in canais_br:
         # Filtrar apenas canais brasileiros relevantes
-        if any(palavra in canal['title'].lower() for palavra in 
-               ['globo', 'sbt', 'record', 'band', 'rede tv', 'cultura', 'cnn', 'globo news', 'sportv', 'sporTV']):
+        titulo = canal['title'].lower()
+        if any(palavra in titulo for palavra in 
+               ['globo', 'sbt', 'record', 'band', 'rede tv', 'cultura', 
+                'cnn', 'globo news', 'sportv', 'sporTV', 'tnt', 'fox',
+                'universal', 'futura', 'tv escola', 'tv brasil', 'canal rural']):
             
-            channels_data.append({
+            # Verificar se URL já existe
+            if canal['url'] in urls_vistas:
+                print(f"   ⚠️ URL duplicada ignorada: {canal['title']}")
+                continue
+            
+            urls_vistas.add(canal['url'])
+            
+            novo_canal = {
                 'type': 'tv',
                 'title': canal['title'],
                 'tvg_id': canal['tvg_id'],
@@ -129,30 +43,36 @@ def criar_channels_json(canais_br, pastas):
                     'url': canal['url'],
                     'title': 'AO VIVO'
                 }]
-            })
+            }
+            channels_data.append(novo_canal)
     
     # Salvar channels.json na pasta web
     channels_file = pastas['web'] / 'channels.json'
     
-    # Se já existe, combinar com os existentes
+    # Se já existe, combinar com os existentes (sem duplicar)
     if channels_file.exists():
         try:
             with open(channels_file, 'r', encoding='utf-8') as f:
                 existing = json.load(f)
-                # Adicionar apenas novos canais
-                existing_urls = {c['url'] for c in existing}
-                for canal in channels_data:
-                    if canal['url'] not in existing_urls:
-                        existing.append(canal)
-                channels_data = existing
-                print(f"   📦 Combinado com {len(existing)} canais existentes")
+            
+            # URLs existentes
+            urls_existentes = {c['url'] for c in existing}
+            
+            # Adicionar apenas novos canais
+            for canal in channels_data:
+                if canal['url'] not in urls_existentes:
+                    existing.append(canal)
+                    print(f"   ✅ Novo canal: {canal['title']}")
+            
+            channels_data = existing
+            print(f"   📦 Combinado com {len(existing)} canais existentes")
         except:
             pass
     
     with open(channels_file, 'w', encoding='utf-8') as f:
         json.dump(channels_data, f, indent=2, ensure_ascii=False)
     
-    print(f"   ✅ channels.json criado/atualizado com {len(channels_data)} canais")
+    print(f"   ✅ channels.json criado/atualizado com {len(channels_data)} canais únicos")
     print(f"   💾 Local: {channels_file}")
     
     return channels_data
