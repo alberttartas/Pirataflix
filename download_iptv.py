@@ -12,12 +12,11 @@ import re
 print("="*60)
 print("🚀 SCRIPT DOWNLOAD IPTV INICIADO")
 print(f"📅 Data/Hora: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-print(f"📂 Diretório atual: {Path(__file__).parent}")
 print("="*60)
 
 def criar_estrutura_pastas():
-    """Cria toda a estrutura de pastas necessária"""
-    print("\n📁 Verificando/criando pastas...")
+    """Cria apenas as pastas necessárias"""
+    print("\n📁 Verificando pastas...")
     
     base_dir = Path(__file__).parent
     
@@ -31,38 +30,26 @@ def criar_estrutura_pastas():
     }
     
     for nome, pasta in pastas.items():
-        try:
-            if not pasta.exists():
-                pasta.mkdir(parents=True, exist_ok=True)
-                print(f"   ✅ Criada: {nome} -> {pasta}")
-            else:
-                print(f"   📁 Já existe: {nome} -> {pasta}")
-        except Exception as e:
-            print(f"   ❌ Erro ao criar {nome}: {e}")
+        if not pasta.exists():
+            pasta.mkdir(parents=True, exist_ok=True)
+            print(f"   ✅ Criada: {nome}")
     
     return pastas
 
 def testar_conexao():
-    """Testa se consegue acessar o iptv-org"""
-    print("\n🌐 Testando conexão com iptv-org...")
+    """Testa conexão rapidamente"""
     try:
         response = requests.get(
             "https://iptv-org.github.io/iptv/index.m3u",
             timeout=10,
-            headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
+            headers={'User-Agent': 'Mozilla/5.0'}
         )
-        if response.status_code == 200:
-            print("   ✅ Conexão OK!")
-            return True
-        else:
-            print(f"   ❌ Erro HTTP: {response.status_code}")
-            return False
-    except requests.exceptions.RequestException as e:
-        print(f"   ❌ Erro de conexão: {e}")
+        return response.status_code == 200
+    except:
         return False
 
 def parse_m3u(content):
-    """Analisa conteúdo M3U e extrai canais com suas informações"""
+    """Analisa conteúdo M3U e extrai canais"""
     channels = []
     lines = content.split('\n')
     
@@ -73,19 +60,15 @@ def parse_m3u(content):
         if line.startswith('#EXTINF:'):
             info = line[8:]
             
-            # Extrair tvg-id
             tvg_id_match = re.search(r'tvg-id="([^"]*)"', info)
             tvg_id = tvg_id_match.group(1) if tvg_id_match else ""
             
-            # Extrair tvg-logo
             tvg_logo_match = re.search(r'tvg-logo="([^"]*)"', info)
             tvg_logo = tvg_logo_match.group(1) if tvg_logo_match else ""
             
-            # Extrair group-title
             group_match = re.search(r'group-title="([^"]*)"', info)
             group = group_match.group(1) if group_match else "Outros"
             
-            # Extrair nome do canal
             name_parts = info.split(',')
             title = name_parts[-1].strip() if len(name_parts) > 1 else "Sem nome"
             
@@ -105,39 +88,32 @@ def parse_m3u(content):
     return channels
 
 def criar_channels_json(canais_br, pastas):
-    """
-    Cria o arquivo channels.json JÁ LIMPO, sem duplicatas
-    """
-    print("\n📝 Criando channels.json (já com limpeza de duplicatas)...")
+    """Cria channels.json SEM duplicatas (SEM backups)"""
+    print("\n📝 Criando channels.json...")
     
     channels_data = []
     urls_vistas = set()
     
-    # Lista de palavras-chave para canais brasileiros
+    # Palavras-chave para canais brasileiros
     keywords = [
         'globo', 'sbt', 'record', 'band', 'rede tv', 'cultura', 
-        'cnn', 'globo news', 'sportv', 'sporTV', 'tnt', 'fox',
+        'cnn', 'globo news', 'sportv', 'tnt', 'fox',
         'universal', 'futura', 'tv escola', 'tv brasil', 'canal rural',
         'megapix', 'telecine', 'premiere', 'combate', 'woohoo',
         'discovery', 'history', 'a&e', 'sony', 'warner', 'max',
         'pluto tv', 'mtv', 'nick', 'cartoon', 'food', 'gnt', 'viva'
     ]
     
-    duplicatas_encontradas = 0
+    duplicatas = 0
     
     for canal in canais_br:
         titulo = canal['title'].lower()
         
-        # Filtrar apenas canais brasileiros relevantes
         if any(keyword in titulo for keyword in keywords) or 'br' in canal.get('tvg_id', '').lower():
-            
-            # 🚨 VERIFICAR SE URL JÁ EXISTE (EVITA DUPLICATAS)
             if canal['url'] in urls_vistas:
-                duplicatas_encontradas += 1
-                print(f"   ⚠️ URL duplicada ignorada: {canal['title']}")
+                duplicatas += 1
                 continue
             
-            # Adicionar URL ao conjunto de vistas
             urls_vistas.add(canal['url'])
             
             novo_canal = {
@@ -153,13 +129,11 @@ def criar_channels_json(canais_br, pastas):
                 }]
             }
             channels_data.append(novo_canal)
-            print(f"   ✅ Canal: {canal['title']}")
     
-    print(f"\n📊 Estatísticas da limpeza:")
-    print(f"   📺 Canais únicos: {len(channels_data)}")
-    print(f"   🗑️ Duplicatas ignoradas: {duplicatas_encontradas}")
+    print(f"   ✅ {len(channels_data)} canais únicos")
+    print(f"   🗑️ {duplicatas} duplicatas ignoradas")
     
-    # Carregar channels.json existente (se houver) e COMBINAR SEM DUPLICAR
+    # Carregar channels.json existente e COMBINAR (sem duplicar)
     channels_file = pastas['web'] / 'channels.json'
     
     if channels_file.exists():
@@ -168,195 +142,114 @@ def criar_channels_json(canais_br, pastas):
                 existing = json.load(f)
             
             # URLs existentes
-            urls_existentes = {c['url'] for c in existing if c.get('url')}
+            urls_existentes = set()
             for c in existing:
+                if c.get('url'):
+                    urls_existentes.add(c['url'])
                 if c.get('episodes'):
                     for ep in c['episodes']:
                         if ep.get('url'):
                             urls_existentes.add(ep['url'])
             
-            # Adicionar apenas canais NOVOS (que não existiam)
+            # Adicionar apenas canais NOVOS
             canais_novos = 0
             for canal in channels_data:
                 if canal['url'] not in urls_existentes:
                     existing.append(canal)
                     canais_novos += 1
-                    print(f"   ✅ Novo canal adicionado: {canal['title']}")
             
             channels_data = existing
-            print(f"   📦 Combinado com {len(existing)} canais existentes")
-            print(f"   ✨ Canais realmente novos: {canais_novos}")
+            print(f"   ✨ {canais_novos} canais novos adicionados")
+            print(f"   📦 Total: {len(channels_data)} canais")
             
         except Exception as e:
-            print(f"   ⚠️ Erro ao ler channels.json existente: {e}")
+            print(f"   ⚠️ Erro ao ler channels.json: {e}")
     
-    # Salvar channels.json
+    # Salvar SEM backup
     with open(channels_file, 'w', encoding='utf-8') as f:
         json.dump(channels_data, f, indent=2, ensure_ascii=False)
     
-    print(f"\n✅ channels.json criado/atualizado com {len(channels_data)} canais ÚNICOS")
-    print(f"   💾 Local: {channels_file}")
+    print(f"✅ channels.json atualizado")
     
     return channels_data
 
 def download_file(url, destino, nome_fonte, pastas):
-    """Baixa um arquivo e retorna estatísticas"""
+    """Baixa um arquivo"""
     print(f"\n📡 Baixando {nome_fonte}...")
-    print(f"   URL: {url}")
     
     try:
         response = requests.get(
             url, 
             timeout=30, 
-            headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
+            headers={'User-Agent': 'Mozilla/5.0'}
         )
         
-        print(f"   Status HTTP: {response.status_code}")
-        
         if response.status_code == 200:
-            # Salvar arquivo M3U original
             with open(destino, 'w', encoding='utf-8') as f:
                 f.write(response.text)
             
-            # Analisar M3U para estatísticas
             canais = parse_m3u(response.text)
+            print(f"   ✅ {len(canais)} streams")
             
-            print(f"   ✅ {len(canais)} streams encontrados")
-            print(f"   💾 Salvo em: {destino}")
-            print(f"   📊 Tamanho: {len(response.text)} bytes")
-            
-            # Se for canais brasileiros, criar channels.json (JÁ LIMPO!)
             if nome_fonte == 'canais_br':
                 criar_channels_json(canais, pastas)
             
-            return {
-                'status': 'sucesso',
-                'links': len(canais),
-                'arquivo': str(destino),
-                'tamanho': len(response.text)
-            }
+            return len(canais)
         else:
             print(f"   ❌ Erro HTTP: {response.status_code}")
-            return {
-                'status': 'erro',
-                'codigo': response.status_code
-            }
+            return 0
             
     except Exception as e:
-        print(f"   ❌ Exceção: {type(e).__name__}: {e}")
-        return {
-            'status': 'erro',
-            'mensagem': str(e),
-            'tipo': type(e).__name__
-        }
+        print(f"   ❌ Erro: {e}")
+        return 0
 
 def download_iptv_sources():
-    """Baixa fontes do iptv-org"""
+    """Baixa fontes do iptv-org - SEM RELATÓRIOS"""
     
     print("\n" + "="*60)
-    print("📡 INICIANDO DOWNLOAD DAS FONTES IPTV")
+    print("📡 INICIANDO DOWNLOAD")
     print("="*60)
     
-    # Testar conexão primeiro
     if not testar_conexao():
-        print("\n❌ Sem conexão com iptv-org. Abortando.")
+        print("\n❌ Sem conexão. Abortando.")
         return False
     
-    # CRIAR PASTAS
     pastas = criar_estrutura_pastas()
     
-    # URLs do iptv-org
     fontes = [
         {
             'nome': 'filmes_br',
             'url': 'https://iptv-org.github.io/iptv/categories/movies/br.m3u',
             'pasta': pastas['filmes'],
-            'arquivo': f"iptv_filmes_br_{datetime.now().strftime('%Y%m%d')}.m3u"
+            'arquivo': f"iptv_filmes_br.m3u"  # Nome fixo, sem data
         },
         {
             'nome': 'series_br',
             'url': 'https://iptv-org.github.io/iptv/categories/series/br.m3u',
             'pasta': pastas['series'],
-            'arquivo': f"iptv_series_br_{datetime.now().strftime('%Y%m%d')}.m3u"
+            'arquivo': f"iptv_series_br.m3u"  # Nome fixo
         },
         {
             'nome': 'canais_br',
             'url': 'https://iptv-org.github.io/iptv/countries/br.m3u',
             'pasta': pastas['tv'],
-            'arquivo': f"iptv_canais_br_{datetime.now().strftime('%Y%m%d')}.m3u"
+            'arquivo': f"iptv_canais_br.m3u"  # Nome fixo
         }
     ]
     
-    resultados = {}
     total_links = 0
     
     for fonte in fontes:
         destino = fonte['pasta'] / fonte['arquivo']
-        resultado = download_file(fonte['url'], destino, fonte['nome'], pastas)
-        resultados[fonte['nome']] = resultado
-        
-        if resultado.get('status') == 'sucesso':
-            total_links += resultado.get('links', 0)
-    
-    # Salvar relatório
-    relatorio = {
-        'data': datetime.now().isoformat(),
-        'total_links': total_links,
-        'resultados': resultados,
-        'pastas_criadas': {k: str(v) for k, v in pastas.items()}
-    }
-    
-    # Criar pasta de logs se não existir
-    log_dir = Path(__file__).parent / "logs"
-    log_dir.mkdir(exist_ok=True)
-    
-    relatorio_path = log_dir / f'download_report_{datetime.now().strftime("%Y%m%d_%H%M%S")}.json'
-    with open(relatorio_path, 'w', encoding='utf-8') as f:
-        json.dump(relatorio, f, indent=2, ensure_ascii=False)
+        links = download_file(fonte['url'], destino, fonte['nome'], pastas)
+        total_links += links
     
     print("\n" + "="*60)
-    print("📊 RESUMO DO DOWNLOAD")
-    print("="*60)
-    print(f"📅 Data: {datetime.now().strftime('%d/%m/%Y %H:%M')}")
-    print(f"📊 Total de streams: {total_links}")
-    print(f"📁 Relatório salvo em: {relatorio_path}")
-    
-    # Listar arquivos baixados
-    print("\n📂 Arquivos baixados:")
-    for pasta_nome, pasta in pastas.items():
-        if pasta.exists():
-            if pasta_nome == 'web':
-                arquivos = list(pasta.glob("*.json"))
-            else:
-                arquivos = list(pasta.glob("*.m3u"))
-            
-            if arquivos:
-                print(f"   {pasta_nome}: {len(arquivos)} arquivo(s)")
-                for arq in arquivos[-3:]:
-                    tamanho = arq.stat().st_size
-                    print(f"      - {arq.name} ({tamanho} bytes)")
-    
-    print("\n" + "="*60)
-    print("📺 INTEGRAÇÃO COM PIRATAFLIX")
-    print("="*60)
-    print("✅ channels.json criado/atualizado (JÁ LIMPO - SEM DUPLICATAS)")
-    print("✅ Agora execute o script de consolidação:")
-    print("   python3 consolidar_data.py")
+    print(f"📊 TOTAL: {total_links} streams")
+    print("✅ Agora execute: python3 consolidar_data.py")
     print("="*60)
     
     return True
 
 if __name__ == "__main__":
-    try:
-        sucesso = download_iptv_sources()
-        if sucesso:
-            print("\n✅ Processo concluído com sucesso!")
-            sys.exit(0)
-        else:
-            print("\n❌ Processo falhou!")
-            sys.exit(1)
-    except Exception as e:
-        print(f"\n💥 Erro fatal: {e}")
-        import traceback
-        traceback.print_exc()
-        sys.exit(1)
+    download_iptv_sources()
