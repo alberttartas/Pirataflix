@@ -1,0 +1,259 @@
+/* player.css - Estilos do Modern Video Player */
+.video-player {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    overflow: hidden;
+}
+
+.video-element {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: #000;
+}
+
+.player-controls {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: linear-gradient(to bottom, 
+        rgba(0,0,0,0.8) 0%, 
+        transparent 20%,
+        transparent 80%,
+        rgba(0,0,0,0.8) 100%);
+    opacity: 1;
+    transition: opacity 0.3s;
+    z-index: 10;
+}
+
+.top-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
+}
+
+.bottom-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+}
+
+.center-controls {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.control-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    transition: all 0.2s;
+    backdrop-filter: blur(10px);
+}
+
+.control-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+.control-btn:active {
+    transform: scale(0.95);
+}
+
+.big-btn {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+}
+
+.video-title {
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    flex: 1;
+    margin: 0 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.time-display {
+    color: white;
+    font-size: 14px;
+    font-family: monospace;
+    min-width: 100px;
+    text-align: center;
+}
+
+.progress-container {
+    flex: 1;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.progress-bar {
+    position: relative;
+    width: 100%;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+    overflow: visible;
+}
+
+.progress-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #e50914;
+    border-radius: 2px;
+    width: 0%;
+}
+
+.progress-thumb {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    background: #e50914;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.progress-container:hover .progress-thumb {
+    opacity: 1;
+}
+
+.loading-spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    z-index: 20;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top-color: #e50914;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.error-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    z-index: 20;
+    max-width: 80%;
+}
+
+.error-message i {
+    font-size: 48px;
+    color: #e50914;
+}
+
+.error-message p {
+    color: white;
+    font-size: 16px;
+    margin: 0;
+}
+
+.retry-btn {
+    background: #e50914;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.retry-btn:hover {
+    background: #f40612;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .control-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 16px;
+    }
+    
+    .big-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+    
+    .video-title {
+        font-size: 14px;
+    }
+    
+    .time-display {
+        font-size: 12px;
+        min-width: 80px;
+    }
+    
+    .top-controls,
+    .bottom-controls {
+        padding: 15px;
+    }
+}
+
+/* Fullscreen styles */
+:fullscreen .video-player,
+:-webkit-full-screen .video-player,
+:-moz-full-screen .video-player,
+:-ms-fullscreen .video-player {
+    width: 100vw;
+    height: 100vh;
+}
