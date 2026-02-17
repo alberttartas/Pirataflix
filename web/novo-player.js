@@ -2,6 +2,22 @@
 // NOVO PLAYER - VERSÃO FINAL CORRIGIDA
 // ============================================
 
+// ===== CONTROLE GLOBAL DE LISTENER =====
+let onTimeUpdateHandler = null;
+
+// ===== ANIMAÇÕES DO PLAYER (CRIADAS UMA VEZ) =====
+if (!document.getElementById('player-animations')) {
+    const style = document.createElement('style');
+    style.id = 'player-animations';
+    style.textContent = `
+        @keyframes fadeOut {
+            0% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+            100% { opacity: 0; transform: translate(-50%, -50%) scale(0.9); }
+        }
+    `;
+    document.head.appendChild(style);
+}
+
 // CRIAR MODAL IMEDIATAMENTE
 (function() {
     if (!document.getElementById('modernPlayerModal')) {
@@ -68,70 +84,196 @@ window.ContinueWatching = {
     }
 };
 
-// FUNÇÃO PRINCIPAL DO PLAYER
-window.playWithModernPlayer = function(url, title, info = '', itemId = null, category = null, episodeIndex = 0) {
-    console.log('🎬 Player chamado');
-    
-    const modal = document.getElementById('modernPlayerModal');
-    if (!modal) { window.open(url, '_blank'); return; }
-    
-    modal.style.display = 'flex';
-    
-    const container = document.getElementById('modern-player-container');
-    const videoId = `${itemId}_${episodeIndex}`;
-    const saved = window.ContinueWatching.get(videoId);
-    
-    container.innerHTML = `<video id="current-video" autoplay style="width:100%;height:100%;background:#000;" src="${url}"></video>`;
-    const video = document.getElementById('current-video');
+// ==========================================
+// 🔥 FUNÇÃO GLOBAL PARA DESTRUIR O PLAYER
+// ==========================================
+window.destroyModernPlayer = function() {
+    console.log("🧹 Destruindo player...");
 
-    // Salvar progresso
-    let interval = setInterval(() => {
-    if (video.duration && video.currentTime > 10) {
-        
-        // Buscar o poster do item nos dados
+    const videos = document.querySelectorAll("video");
+
+    videos.forEach(v => {
+        try {
+            if (onTimeUpdateHandler) {
+                v.removeEventListener('timeupdate', onTimeUpdateHandler);
+            }
+
+            v.pause();
+            v.removeAttribute("src");
+            v.load();
+            v.remove();
+        } catch(e){}
+    });
+
+    onTimeUpdateHandler = null;
+
+    if (window.__playerInterval) {
+        clearInterval(window.__playerInterval);
+        window.__playerInterval = null;
+    }
+
+    if (window.__keyboardHandler) {
+        document.removeEventListener('keydown', window.__keyboardHandler);
+        window.__keyboardHandler = null;
+    }
+
+    const controls = document.getElementById('custom-controls');
+    if (controls) controls.remove();
+};
+
+
+// ==========================================
+// 🎬 FUNÇÃO PRINCIPAL DO PLAYER
+// ==========================================
+window.playWithModernPlayer = function(
+    url,
+    title,
+    info = '',
+    itemId = null,
+    category = null,
+    episodeIndex = 0
+) {
+    console.log('🎬 Player chamado');
+
+    // 🔥 SEMPRE limpar antes de criar novo player
+  window.destroyModernPlayer();
+
+    const modal = document.getElementById('modernPlayerModal');
+    const closeBtn = document.getElementById('closeModernPlayerFix');
+
+    if (!modal) {
+        window.open(url, '_blank');
+        return;
+    }
+
+    modal.style.display = 'flex';
+
+    const container = document.getElementById('modern-player-container');
+    if (!container) return;
+
+    const videoId = `${itemId}_${episodeIndex}`;
+    const saved = window.ContinueWatching?.get(videoId);
+
+    // Criar vídeo SEM autoplay direto
+    container.innerHTML = `
+        <video 
+            id="current-video"
+            style="width:100%;height:100%;background:#000;"
+            playsinline
+        >
+            <source src="${url}" type="video/mp4">
+        </video>
+    `;
+
+    const video = document.getElementById('current-video');
+    if (!video) return;
+
+    // Restaurar progresso salvo
+    if (saved && saved.currentTime) {
+        video.currentTime = saved.currentTime;
+    }
+
+    // Tocar manualmente (evita bug de autoplay)
+    video.play().catch(() => {
+        console.log("⚠️ Autoplay bloqueado pelo navegador");
+    });
+    
+// Criar barra + botão próximo
+setTimeout(() => {
+    addNextButton();
+}, 200);
+
+    // ======================================
+    // 💾 SALVAR PROGRESSO
+    // ======================================
+    window.__playerInterval = setInterval(() => {
+        if (!video.duration) return;
+        if (video.currentTime < 10) return;
+
         let posterUrl = '';
+
         if (itemId && category && window.vodData) {
             try {
                 const item = window.vodData[category]?.find(i => i.id === itemId);
-                if (item && item.poster) {
+                if (item?.poster) {
                     posterUrl = item.poster;
-                    console.log('📸 Poster encontrado:', posterUrl);
                 }
-            } catch (e) {
-                console.log('⚠️ Erro ao buscar poster:', e);
-            }
+            } catch(e){}
         }
-        
-        window.ContinueWatching.save({
-            videoId, itemId, category, episodeIndex,
-            title, seriesTitle: title.split(' - ')[0],
+
+        window.ContinueWatching?.save({
+            videoId,
+            itemId,
+            category,
+            episodeIndex,
+            title,
+            seriesTitle: title?.split(' - ')[0] || title,
             episode: episodeIndex + 1,
             currentTime: video.currentTime,
             duration: video.duration,
-            url, 
+            url,
             poster: posterUrl
         });
-    }
-}, 5000);
 
-// ===== PRÓXIMO EPISÓDIO AUTOMÁTICO (COLOQUE AQUI!) =====
-video.addEventListener('ended', () => {
-    window.ContinueWatching.remove(videoId);
-    clearInterval(interval);
-    
+    }, 5000);
+
+
+    // ======================================
+    // ⌨️ CONTROLES DE TECLADO (SEM DUPLICAR)
+    // ======================================
+    window.__keyboardHandler = function(e) {
+        if (!video) return;
+
+        switch (e.key) {
+            case " ":
+                e.preventDefault();
+                video.paused ? video.play() : video.pause();
+                break;
+
+            case "ArrowRight":
+                video.currentTime += 10;
+                break;
+
+            case "ArrowLeft":
+                video.currentTime -= 10;
+                break;
+
+            case "Escape":
+                window.destroyModernPlayer();
+                modal.style.display = 'none';
+                break;
+        }
+    };
+
+    document.addEventListener('keydown', window.__keyboardHandler);
+
+
+    // ======================================
+    // 🛑 QUANDO TERMINAR
+    // ======================================
+    video.addEventListener("ended", () => {
+    console.log("🎉 Vídeo finalizado");
+
+    window.ContinueWatching?.remove(videoId);
+
     if (itemId && category && window.vodData) {
         const item = window.vodData[category]?.find(i => i.id === itemId);
+
         if (item) {
             let episodeList = item.episodes || [];
+
+            // Se usar seasons
             if (!episodeList.length && item.seasons) {
                 item.seasons.forEach(s => {
                     if (s.episodes) episodeList = episodeList.concat(s.episodes);
                 });
             }
-            
+
+            // Se existir próximo episódio
             if (episodeIndex + 1 < episodeList.length) {
+                const next = episodeList[episodeIndex + 1];
+
                 setTimeout(() => {
-                    const next = episodeList[episodeIndex + 1];
                     window.playWithModernPlayer(
                         next.url,
                         `${item.title} - ${next.title}`,
@@ -141,31 +283,25 @@ video.addEventListener('ended', () => {
                         episodeIndex + 1
                     );
                 }, 2000);
+
+                return; // 🔥 IMPORTANTE: não destruir ainda
             }
         }
-      }
-     });
- 
-    // ===== BOTÃO FECHAR CORRIGIDO =====
-    const closeBtn = document.getElementById('closeModernPlayerFix');
-    if (closeBtn) {
-        closeBtn.onclick = function() {
-            modal.style.display = 'none';
-            video.pause();
-            container.innerHTML = '';
-        };
     }
+
+    // Se não houver próximo episódio
+    window.destroyModernPlayer();
+    modal.style.display = 'none';
+});
+
+
+    // ===== BOTÃO FECHAR CORRIGIDO =====
+    closeBtn.onclick = function() {
+    window.destroyModernPlayer();
+    modal.style.display = 'none';
+};
+
     
-    // ===== FECHAR COM ESC =====
-    const escHandler = function(e) {
-        if (e.key === 'Escape') {
-            modal.style.display = 'none';
-            video.pause();
-            container.innerHTML = '';
-            document.removeEventListener('keydown', escHandler);
-        }
-    };
-    document.addEventListener('keydown', escHandler);
     
     // Retomar progresso
     if (saved?.currentTime > 5) {
@@ -184,6 +320,9 @@ video.addEventListener('ended', () => {
 
    // ===== BARRA DE CONTROLES COMPLETA + BOTÃO PRÓXIMO =====
 function addNextButton() {
+    const oldControls = document.getElementById('custom-controls');
+if (oldControls) oldControls.remove();
+
     console.log('🔵 addNextButton iniciada');
     
     if (!itemId || !category) {
@@ -250,6 +389,25 @@ function addNextButton() {
             }, 3000);
         });
         
+        // ===== BOTÃO FULLSCREEN =====
+const fullscreenBtn = document.createElement('button');
+fullscreenBtn.innerHTML = '⛶';
+fullscreenBtn.style.cssText = `
+    background: none;
+    border: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+`;
+
+fullscreenBtn.onclick = () => {
+    if (!document.fullscreenElement) {
+        container.requestFullscreen().catch(() => {});
+    } else {
+        document.exitFullscreen();
+    }
+};
+
         // ===== BOTÃO PLAY/PAUSE =====
         const playPauseBtn = document.createElement('button');
         playPauseBtn.id = 'playPauseBtn';
@@ -353,60 +511,47 @@ function addNextButton() {
         
         progressContainer.appendChild(progressBar);
         
-        video.addEventListener('timeupdate', () => {
-            const progress = (video.currentTime / video.duration) * 100 || 0;
-            progressBar.style.width = progress + '%';
-        });
-        
-        progressContainer.addEventListener('click', (e) => {
-            const rect = progressContainer.getBoundingClientRect();
-            const pos = (e.clientX - rect.left) / rect.width;
-            video.currentTime = pos * video.duration;
-        });
-        
+               
         // ===== TEMPO =====
-        const timeDisplay = document.createElement('span');
-        timeDisplay.style.cssText = 'color: white; font-size: 14px; min-width: 100px;';
-        
-        function formatTime(seconds) {
-            if (!seconds) return '0:00';
-            const mins = Math.floor(seconds / 60);
-            const secs = Math.floor(seconds % 60).toString().padStart(2, '0');
-            return `${mins}:${secs}`;
+const timeDisplay = document.createElement('span');
+timeDisplay.style.cssText = 'color: white; font-size: 14px; min-width: 100px;';
+
+function formatTime(seconds) {
+    if (!seconds) return '0:00';
+    const mins = Math.floor(seconds / 60);
+    const secs = Math.floor(seconds % 60).toString().padStart(2, '0');
+    return `${mins}:${secs}`;
+}
+
+// ===== TIMEUPDATE UNIFICADO =====
+if (onTimeUpdateHandler) {
+    video.removeEventListener('timeupdate', onTimeUpdateHandler);
+}
+
+onTimeUpdateHandler = () => {
+    if (!video.duration) return;
+
+    const progress = (video.currentTime / video.duration) * 100 || 0;
+    progressBar.style.width = progress + '%';
+
+    timeDisplay.textContent =
+        `${formatTime(video.currentTime)} / ${formatTime(video.duration)}`;
+
+    const nextBtn = document.getElementById('nextEpisodeBtn');
+    if (nextBtn) {
+        if (video.duration - video.currentTime <= 10) {
+            nextBtn.style.opacity = '1';
+            nextBtn.style.transform = 'scale(1.1)';
+        } else {
+            nextBtn.style.opacity = '0.7';
+            nextBtn.style.transform = 'scale(1)';
         }
-        
-        video.addEventListener('timeupdate', () => {
-            timeDisplay.textContent = `${formatTime(video.currentTime)} / ${formatTime(video.duration)}`;
-        });
-        
-        // ===== BOTÃO TELA CHEIA =====
-        const fullscreenBtn = document.createElement('button');
-        fullscreenBtn.id = 'fullscreenBtn';
-        fullscreenBtn.innerHTML = '⛶';
-        fullscreenBtn.style.cssText = `
-            background: none;
-            border: none;
-            color: white;
-            font-size: 24px;
-            cursor: pointer;
-            padding: 5px;
-            width: 40px;
-        `;
-        
-        fullscreenBtn.onclick = () => {
-            if (!document.fullscreenElement) {
-                container.requestFullscreen();
-                fullscreenBtn.innerHTML = '✕';
-            } else {
-                document.exitFullscreen();
-                fullscreenBtn.innerHTML = '⛶';
-            }
-        };
-        
-        document.addEventListener('fullscreenchange', () => {
-            fullscreenBtn.innerHTML = document.fullscreenElement ? '✕' : '⛶';
-        });
-        
+    }
+};
+
+video.addEventListener('timeupdate', onTimeUpdateHandler);
+
+                       
         // Adicionar elementos à barra
         controlsContainer.appendChild(playPauseBtn);
         controlsContainer.appendChild(backwardBtn);
@@ -419,50 +564,7 @@ function addNextButton() {
         console.log('✅ Barra de controles criada');
     }
     
-    // ===== ADICIONAR EVENTOS DE TECLADO =====
-    function setupKeyboardControls() {
-        document.addEventListener('keydown', (e) => {
-            // Ignorar se estiver digitando em input
-            if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
             
-            switch(e.key) {
-                case ' ':
-                case 'Space':
-                    e.preventDefault();
-                    if (video.paused) {
-                        video.play();
-                        document.getElementById('playPauseBtn').innerHTML = '⏸️';
-                    } else {
-                        video.pause();
-                        document.getElementById('playPauseBtn').innerHTML = '▶️';
-                    }
-                    break;
-                    
-                case 'ArrowLeft':
-                    e.preventDefault();
-                    video.currentTime = Math.max(0, video.currentTime - 10);
-                    showMessage('⏪ -10 segundos');
-                    break;
-                    
-                case 'ArrowRight':
-                    e.preventDefault();
-                    video.currentTime = Math.min(video.duration, video.currentTime + 10);
-                    showMessage('⏩ +10 segundos');
-                    break;
-                    
-                case 'f':
-                case 'F':
-                    e.preventDefault();
-                    if (!document.fullscreenElement) {
-                        container.requestFullscreen();
-                    } else {
-                        document.exitFullscreen();
-                    }
-                    break;
-            }
-        });
-    }
-    
     // ===== ADICIONAR TOQUES NAS LATERAIS =====
     function setupTouchControls() {
         let touchStartX = 0;
@@ -539,21 +641,11 @@ function addNextButton() {
         `;
         
         // Adicionar animação
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes fadeOut {
-                0% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
-                70% { opacity: 1; transform: translate(-50%, -50%) scale(1.1); }
-                100% { opacity: 0; transform: translate(-50%, -50%) scale(1.2); }
-            }
-        `;
-        document.head.appendChild(style);
-        
+               
         container.appendChild(msg);
         setTimeout(() => msg.remove(), 1000);
     }
     
-    setupKeyboardControls();
     setupTouchControls();
     
     // ===== BOTÃO PRÓXIMO EPISÓDIO (se houver) =====
@@ -603,25 +695,9 @@ function addNextButton() {
         controlsContainer.appendChild(nextBtn);
         console.log('✅ Botão PRÓXIMO adicionado à barra');
         
-        // Efeito nos últimos 10 segundos
-        video.addEventListener('timeupdate', function onTimeUpdate() {
-            if (video.duration - video.currentTime <= 10) {
-                nextBtn.style.opacity = '1';
-                nextBtn.style.transform = 'scale(1.1)';
-            } else {
-                nextBtn.style.opacity = '0.7';
-                nextBtn.style.transform = 'scale(1)';
-            }
-        });
-    }
-}
-      addNextButton();
+        }
+        }
     
-    document.getElementById('modern-player-title').textContent = title;
-    document.getElementById('modern-player-info').textContent = info;
-    
-};
-
 // RENDERIZAR CONTINUAR ASSISTINDO
 window.renderContinueWatching = function() {
     const list = window.ContinueWatching.getWatchingList();
@@ -710,6 +786,23 @@ window.displayContent = function() {
         }
     }, 300);
 };
+    
+// ===== CONTROLE GLOBAL DE FULLSCREEN =====
+if (!window.__fullscreenListenerAdded) {
+
+    document.addEventListener('fullscreenchange', () => {
+        const modal = document.getElementById('modernPlayerModal');
+        if (!modal) return;
+
+        if (!document.fullscreenElement) {
+            modal.classList.remove('fullscreen-active');
+        } else {
+            modal.classList.add('fullscreen-active');
+        }
+    });
+
+    window.__fullscreenListenerAdded = true;
+}
 
 // CSS ESTILO NETFLIX
 const netflixStyle = document.createElement('style');
