@@ -317,7 +317,7 @@ def process_series_folder(folder, output_list, folder_name, category):
 # =========================
 
 def generate_m3u_with_grouping(data, output_dir):
-    """Gera M3U com agrupamento por ID para séries e novelas - VERSÃO TELEVIZO"""
+    """Gera M3U com agrupamento por ID para séries e novelas - VERSÃO UNIVERSAL"""
     
     M3U_FILE = os.path.join(output_dir, "vod_grouped.m3u")
     
@@ -328,7 +328,6 @@ def generate_m3u_with_grouping(data, output_dir):
 #PLAYLIST-VERSION:2024
 #GENERATED-BY:Pirataflix
 #ENCODING:UTF-8
-#TELEVIZO-COMPATIBLE:YES
 
 '''
     
@@ -338,32 +337,30 @@ def generate_m3u_with_grouping(data, output_dir):
         # ✅ CORREÇÃO DAS LOGOS - URLs absolutas
         if logo:
             if logo.startswith("/Pirataflix"):
-                # logo pode vir como "/Pirataflix/assets/Capas/xxx.jpg"
-                # remover o prefixo "/Pirataflix" antes de juntar com o BASE_URL completo
                 logo = f"{BASE_URL}{logo[len('/Pirataflix'):]}"
             elif logo.startswith("assets/Capas/"):
                 logo = f"{BASE_URL}/{logo}"
             elif logo.startswith("/assets/Capas/"):
-                # já começa com /assets, só prefixar BASE_URL
                 logo = f"{BASE_URL}{logo}"
             elif logo.startswith(BASE_URL):
-                # já é uma URL completa com BASE_URL, não alterar
                 logo = logo
             elif not logo.startswith("http"):
-                # Se for apenas nome do arquivo
                 filename = os.path.basename(logo)
                 logo = f"{BASE_URL}/assets/Capas/{filename}"
         
-        # ✅ FORMATO TELEVIZO: group-title PRIMEIRO, tvg-id simplificado, SEM tvg-name
-        # O Televizo para VOD funciona melhor sem tvg-name
+        # ✅ FORMATO UNIVERSAL IPTV
+        # group-title para categoria
+        # tvg-id IGUAL para todos episódios da mesma série/temporada
         m3u += f'#EXTINF:-1 group-title="{group}" tvg-id="{tvg_id}" tvg-logo="{logo}",{title}\n'
         m3u += f"{url}\n\n"
     
-    # ✅ FILMES - Agrupados individualmente
+    # ============================================
+    # FILMES - Cada filme tem seu próprio ID
+    # ============================================
     for movie in data.get("filmes", []):
         movie_id = movie.get("id", slugify(movie["title"]))
-        # Simplifica ID para Televizo
-        televizo_id = f"FILME.{movie_id.upper().replace('_', '')}"
+        # ID único para cada filme
+        tvg_id = f"{movie_id.upper()}"
         
         for ep in movie.get("episodes", []):
             add_item(
@@ -371,135 +368,204 @@ def generate_m3u_with_grouping(data, output_dir):
                 url=ep["url"],
                 group="🎬 Filmes",
                 logo=movie.get("poster", ""),
-                tvg_id=televizo_id,
-                tvg_name=""  # Não usado no Televizo
+                tvg_id=tvg_id,
+                tvg_name=movie["title"]
             )
     
-    # ✅ SÉRIES - Formato CRÍTICO para Televizo agrupar
+    # ============================================
+    # SÉRIES - Todos episódios da mesma temporada com mesmo ID
+    # ============================================
     for serie in data.get("series", []):
         serie_id = serie.get("id", slugify(serie["title"]))
+        serie_id_upper = serie_id.upper()
         
+        # 🎯 CASO 1: Série com temporadas
         if serie.get("seasons"):
             for season in serie.get("seasons", []):
                 season_num = season.get("season", 1)
                 
-                # ✅ TELEVIZO: ID igual para TODOS episódios da mesma temporada
-                # Formato: NOMESERIE.T01 (T01 = Temporada 1)
-                televizo_id = f"{serie_id.upper().replace('_', '')}.T{season_num:02d}"
+                # ✅ ID ÚNICO para TODA a temporada
+                # Formato: NOMEDASERIE_T01
+                tvg_id = f"{serie_id_upper}_T{season_num:02d}"
+                tvg_name = f"{serie['title']} - Temporada {season_num}"
                 
                 for ep in season.get("episodes", []):
                     episode_num = ep.get("episode", 0)
                     
-                    # ✅ Título no formato que Televizo reconhece
-                    episode_title = f"S{season_num:02d}E{episode_num:02d}"
+                    # Título do episódio
                     if "title" in ep and ep["title"] and ep["title"] != f"Episódio {episode_num}":
-                        episode_title += f" - {ep['title']}"
+                        # Limpar título
+                        titulo_limpo = re.sub(r'^E\d+\s*-\s*', '', ep["title"], flags=re.IGNORECASE)
+                        titulo_limpo = re.sub(r'^Episódio\s*\d+\s*-\s*', '', titulo_limpo, flags=re.IGNORECASE)
+                        episode_title = f"S{season_num:02d}E{episode_num:02d} - {titulo_limpo}"
+                    else:
+                        episode_title = f"S{season_num:02d}E{episode_num:02d}"
                     
                     add_item(
                         title=episode_title,
                         url=ep["url"],
                         group="📺 Séries",
                         logo=serie.get("poster", ""),
-                        tvg_id=televizo_id,  # ✅ MESMO ID para toda temporada
-                        tvg_name=""  # Não usado
+                        tvg_id=tvg_id,  # ✅ MESMO ID para toda temporada
+                        tvg_name=tvg_name
                     )
         
-        # ✅ Séries sem temporadas (episódios diretos)
+        # 🎯 CASO 2: Série sem temporadas (episódios diretos)
         elif serie.get("episodes"):
-            televizo_id = f"{serie_id.upper().replace('_', '')}"
+            # ✅ ID ÚNICO para TODA a série (temporada única)
+            tvg_id = f"{serie_id_upper}_T01"
+            tvg_name = serie['title']
             
             for ep in serie.get("episodes", []):
                 episode_num = ep.get("episode", 0)
-                episode_title = f"Ep {episode_num:02d}"
+                
                 if "title" in ep and ep["title"] and ep["title"] != f"Episódio {episode_num}":
-                    episode_title += f" - {ep['title']}"
+                    titulo_limpo = re.sub(r'^E\d+\s*-\s*', '', ep["title"], flags=re.IGNORECASE)
+                    titulo_limpo = re.sub(r'^Episódio\s*\d+\s*-\s*', '', titulo_limpo, flags=re.IGNORECASE)
+                    episode_title = f"Ep {episode_num:02d} - {titulo_limpo}"
+                else:
+                    episode_title = f"Ep {episode_num:02d}"
                 
                 add_item(
                     title=episode_title,
                     url=ep["url"],
                     group="📺 Séries",
                     logo=serie.get("poster", ""),
-                    tvg_id=televizo_id,  # ✅ MESMO ID para todos episódios
-                    tvg_name=""
+                    tvg_id=tvg_id,  # ✅ MESMO ID para todos episódios
+                    tvg_name=tvg_name
                 )
     
-    # ✅ NOVELAS - Mesma lógica das séries
+    # ============================================
+    # NOVELAS - Mesma lógica das séries
+    # ============================================
     for novela in data.get("novelas", []):
         novela_id = novela.get("id", slugify(novela["title"]))
+        novela_id_upper = novela_id.upper()
         
         if novela.get("seasons"):
             for season in novela.get("seasons", []):
                 season_num = season.get("season", 1)
-                televizo_id = f"{novela_id.upper().replace('_', '')}.T{season_num:02d}"
+                tvg_id = f"{novela_id_upper}_T{season_num:02d}"
+                tvg_name = f"{novela['title']} - Temporada {season_num}"
                 
                 for ep in season.get("episodes", []):
                     episode_num = ep.get("episode", 0)
-                    episode_title = f"Capítulo {episode_num:02d}"
+                    
+                    if "title" in ep and ep["title"] and ep["title"] != f"Capítulo {episode_num}":
+                        titulo_limpo = re.sub(r'^Capítulo\s*\d+\s*-\s*', '', ep["title"], flags=re.IGNORECASE)
+                        episode_title = f"Cap {episode_num:02d} - {titulo_limpo}"
+                    else:
+                        episode_title = f"Cap {episode_num:02d}"
                     
                     add_item(
                         title=episode_title,
                         url=ep["url"],
                         group="📖 Novelas",
                         logo=novela.get("poster", ""),
-                        tvg_id=televizo_id,
-                        tvg_name=""
+                        tvg_id=tvg_id,
+                        tvg_name=tvg_name
                     )
     
-    # ✅ ANIMES - Se tiver na sua estrutura
+    # ============================================
+    # ANIMES
+    # ============================================
     for anime in data.get("animes", []):
         anime_id = anime.get("id", slugify(anime["title"]))
+        anime_id_upper = anime_id.upper()
         
         if anime.get("seasons"):
             for season in anime.get("seasons", []):
                 season_num = season.get("season", 1)
-                televizo_id = f"{anime_id.upper().replace('_', '')}.T{season_num:02d}"
+                tvg_id = f"{anime_id_upper}_T{season_num:02d}"
+                tvg_name = f"{anime['title']} - Temporada {season_num}"
                 
                 for ep in season.get("episodes", []):
                     episode_num = ep.get("episode", 0)
-                    episode_title = f"Ep {episode_num:02d}"
+                    
+                    if "title" in ep and ep["title"] and ep["title"] != f"Episódio {episode_num}":
+                        titulo_limpo = re.sub(r'^E\d+\s*-\s*', '', ep["title"], flags=re.IGNORECASE)
+                        titulo_limpo = re.sub(r'^Episódio\s*\d+\s*-\s*', '', titulo_limpo, flags=re.IGNORECASE)
+                        episode_title = f"Ep {episode_num:02d} - {titulo_limpo}"
+                    else:
+                        episode_title = f"Ep {episode_num:02d}"
                     
                     add_item(
                         title=episode_title,
                         url=ep["url"],
                         group="👻 Animes",
                         logo=anime.get("poster", ""),
-                        tvg_id=televizo_id,
-                        tvg_name=""
+                        tvg_id=tvg_id,
+                        tvg_name=tvg_name
                     )
     
-    # ✅ INFANTIL - Se tiver na sua estrutura
+    # ============================================
+    # INFANTIL
+    # ============================================
     for infantil in data.get("infantil", []):
         infantil_id = infantil.get("id", slugify(infantil["title"]))
+        infantil_id_upper = infantil_id.upper()
         
         if infantil.get("seasons"):
             for season in infantil.get("seasons", []):
                 season_num = season.get("season", 1)
-                televizo_id = f"{infantil_id.upper().replace('_', '')}.T{season_num:02d}"
+                tvg_id = f"{infantil_id_upper}_T{season_num:02d}"
+                tvg_name = f"{infantil['title']} - Temporada {season_num}"
                 
                 for ep in season.get("episodes", []):
                     episode_num = ep.get("episode", 0)
-                    episode_title = f"Ep {episode_num:02d}"
+                    
+                    if "title" in ep and ep["title"] and ep["title"] != f"Episódio {episode_num}":
+                        titulo_limpo = re.sub(r'^E\d+\s*-\s*', '', ep["title"], flags=re.IGNORECASE)
+                        titulo_limpo = re.sub(r'^Episódio\s*\d+\s*-\s*', '', titulo_limpo, flags=re.IGNORECASE)
+                        episode_title = f"Ep {episode_num:02d} - {titulo_limpo}"
+                    else:
+                        episode_title = f"Ep {episode_num:02d}"
                     
                     add_item(
                         title=episode_title,
                         url=ep["url"],
                         group="🧸 Infantil",
                         logo=infantil.get("poster", ""),
-                        tvg_id=televizo_id,
-                        tvg_name=""
+                        tvg_id=tvg_id,
+                        tvg_name=tvg_name
                     )
     
+    # ============================================
+    # CANAIS DE TV (se existirem)
+    # ============================================
+    for canal in data.get("tv", []):
+        canal_id = canal.get("tvg_id") or slugify(canal.get("title", ""))
+        canal_id_upper = canal_id.upper() if canal_id else ""
+        
+        add_item(
+            title=canal.get("title", "Canal sem nome"),
+            url=canal.get("url", ""),
+            group=canal.get("group", "📺 TV"),
+            logo=canal.get("tvg_logo", ""),
+            tvg_id=canal_id_upper,
+            tvg_name=canal.get("title", "")
+        )
+    
+    # Salvar arquivo
     with open(M3U_FILE, "w", encoding="utf-8") as f:
         f.write(m3u)
     
-    print(f"\n✅ M3U otimizado para Televizo gerado: {M3U_FILE}")
-    print(f"📡 URL para player: {BASE_URL}/iptv_playlists/vod_grouped.m3u")
-    print(f"📡 URL do EPG: {BASE_URL}/iptv_playlists/epg.xml")
-    print("\n🎯 CONFIGURAÇÃO NO TELEVIZO:")
-    print("   1. Cole a URL acima")
-    print("   2. Vá em Configurações → Geral")
-    print("   3. Ative 'Agrupar por canal'")
-    print("   4. Na lista → Menu → 'Agrupar por' → 'Canal'")
+    print(f"\n✅ M3U gerado: {M3U_FILE}")
+    print(f"📊 Estatísticas:")
+    
+    # Contar itens por grupo
+    groups = {}
+    for line in m3u.split('\n'):
+        if line.startswith('#EXTINF:'):
+            group_match = re.search(r'group-title="([^"]*)"', line)
+            if group_match:
+                group = group_match.group(1)
+                groups[group] = groups.get(group, 0) + 1
+    
+    for group, count in groups.items():
+        print(f"   {group}: {count} itens")
+    
+    print(f"\n📡 URL da playlist: {BASE_URL}/iptv_playlists/vod_grouped.m3u")
     
     return M3U_FILE
     
@@ -1410,4 +1476,5 @@ def generate_html_with_correct_paths(base_dir, data):
 
 if __name__ == "__main__":
     build_vod_with_direct_capas()
+
 
