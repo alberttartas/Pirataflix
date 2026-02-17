@@ -12,18 +12,29 @@ on:
       - 'build.py'
       - 'input_auto/**'
 
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
 jobs:
   update-catalog:
+    # 🚫 NÃO roda se for commit do bot
+    if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout do repositório
+      - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Configurar Python
+      - name: Sincronizar com origin/main
+        run: |
+          git fetch origin
+          git reset --hard origin/main
+
+      - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
@@ -33,129 +44,47 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests
 
-      - name: Verificar arquivos
+      - name: Executar pipeline
         run: |
-          echo "📂 Listando arquivos na raiz:"
-          ls -la
-          echo ""
-          echo "📂 Verificando scripts necessários:"
-          for script in download_iptv.py consolidar_data.py build.py; do
-            if [ -f "$script" ]; then
-              echo "✅ $script encontrado!"
-            else
-              echo "❌ $script NÃO encontrado!"
-              exit 1
-            fi
-          done
-
-      - name: Baixar fontes IPTV
-        run: |
-          echo "============================================================"
-          echo "📡 EXECUTANDO DOWNLOAD IPTV"
-          echo "============================================================"
-          if [ -f "download_iptv.py" ]; then
-            python download_iptv.py
-            echo "✅ Download concluído!"
-            
-            if [ -f "web/channels.json" ]; then
-              echo "📺 Canais baixados: $(grep -c '"title"' web/channels.json || echo "0")"
-            else
-              echo "⚠️ channels.json não foi criado"
-            fi
-          else
-            echo "❌ download_iptv.py não encontrado!"
-            exit 1
-          fi
-
-      - name: Consolidar dados no data.json
-        run: |
-          echo "============================================================"
-          echo "🔄 CONSOLIDANDO DADOS NO DATA.JSON"
-          echo "============================================================"
-          if [ -f "consolidar_data.py" ]; then
-            python consolidar_data.py
-            echo "✅ Consolidação concluída!"
-            
-            if [ -f "web/data.json" ]; then
-              echo "📊 Estatísticas do catálogo:"
-              filmes=$(grep -o '"filmes":\[[^]]*\]' web/data.json | grep -o '"title"' | wc -l || echo "0")
-              series=$(grep -o '"series":\[[^]]*\]' web/data.json | grep -o '"title"' | wc -l || echo "0")
-              novelas=$(grep -o '"novelas":\[[^]]*\]' web/data.json | grep -o '"title"' | wc -l || echo "0")
-              animes=$(grep -o '"animes":\[[^]]*\]' web/data.json | grep -o '"title"' | wc -l || echo "0")
-              infantil=$(grep -o '"infantil":\[[^]]*\]' web/data.json | grep -o '"title"' | wc -l || echo "0")
-              tv=$(grep -o '"tv":\[[^]]*\]' web/data.json | grep -o '"title"' | wc -l || echo "0")
-              
-              echo "   🎬 Filmes: $filmes"
-              echo "   📺 Séries: $series"
-              echo "   💖 Novelas: $novelas"
-              echo "   👻 Animes: $animes"
-              echo "   🧸 Infantil: $infantil"
-              echo "   📡 TV: $tv"
-              echo "   📊 TOTAL: $((filmes + series + novelas + animes + infantil + tv)) itens"
-            fi
-          else
-            echo "❌ consolidar_data.py não encontrado!"
-            exit 1
-          fi
-
-      - name: Executar build do site
-        run: |
-          echo "============================================================"
-          echo "🏗️ EXECUTANDO BUILD"
-          echo "============================================================"
-          if [ -f "build.py" ]; then
-            python build.py
-            echo "✅ Build concluído!"
-            
-            if [ -d "iptv_playlists" ]; then
-              echo "📊 Playlists geradas:"
-              ls -la iptv_playlists/
-              if [ -f "iptv_playlists/pirataflix_completo.m3u" ]; then
-                total_streams=$(grep -c "^http" iptv_playlists/pirataflix_completo.m3u || echo "0")
-                echo "📡 Total de streams na playlist completa: $total_streams"
-              fi
-            fi
-          else
-            echo "❌ build.py não encontrado!"
-            exit 1
-          fi
+          python download_iptv.py
+          python consolidar_data.py
+          python build.py
 
       - name: Configurar Git
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Preparar arquivos para commit
+      - name: Commit automático
         id: git-check
         run: |
-          echo "============================================================"
-          echo "📦 PREPARANDO COMMIT"
-          echo "============================================================"
-          
           git add iptv_playlists/ web/ input_auto/ || true
-          
-          # Remover arquivos que não devem ser commitados
           git restore --staged web/integrate-player.js 2>/dev/null || true
-          
+
           if git diff --staged --quiet; then
             echo "changed=false" >> $GITHUB_OUTPUT
-            echo "✅ Sem mudanças para commit"
+            echo "Sem mudanças."
           else
+            git commit -m "🤖 AUTO-IPTV-UPDATE"
             echo "changed=true" >> $GITHUB_OUTPUT
-            git commit -m "🤖 Atualização automática: $(date +'%d/%m/%Y')"
-            echo "✅ Commit criado!"
           fi
 
-      - name: Push das mudanças
+      - name: Push seguro
         if: steps.git-check.outputs.changed == 'true'
         run: |
-          echo "============================================================"
-          echo "📤 FAZENDO PUSH DAS MUDANÇAS"
-          echo "============================================================"
-          
-          # Pull com rebase antes do push
           git pull --rebase origin main
-          
-          # Push
           git push origin main
-          echo "✅ Push realizado!"
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+  deploy:
+    needs: update-catalog
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+    steps:
+      - name: Deploy
+        uses: actions/deploy-pages@v4
