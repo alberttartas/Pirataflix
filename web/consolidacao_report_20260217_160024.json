@@ -1,0 +1,16 @@
+{
+  "data": "2026-02-17T16:00:24.638670",
+  "canais_novos": 0,
+  "canais_duplicados_com_filmes": 207,
+  "canais_duplicados_na_tv": 0,
+  "total_tv": 0,
+  "totais_por_categoria": {
+    "filmes": 5,
+    "series": 3,
+    "novelas": 4,
+    "animes": 3,
+    "infantil": 6,
+    "tv": 0
+  },
+  "total_geral": 21
+}
