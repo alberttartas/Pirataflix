@@ -87,53 +87,113 @@ def parse_m3u(content):
     
     return channels
 
+def filtrar_canais_brasileiros(channels):
+    """Filtra apenas canais brasileiros"""
+    
+    # Palavras-chave para identificar canais brasileiros
+    keywords_br = [
+        # Canais abertos
+        'globo', 'sbt', 'record', 'band', 'rede tv', 'cultura', 'tv Brasil',
+        'cnn', 'globo news', 'sportv', 'sporTV', 'tnt', 'fox', 'universal',
+        'futura', 'tv escola', 'canal rural', 'megapix', 'telecine', 'premiere',
+        'combate', 'woohoo', 'discovery', 'history', 'a&e', 'sony', 'warner',
+        'max', 'pluto tv', 'mtv', 'nick', 'cartoon', 'food', 'gnt', 'viva',
+        'multishow', 'bis', 'off', 'fashion tv', 'canal brasil', 'curta!',
+        'prime video', 'netflix', 'hbo', 'paramount', 'dreamworks',
+        
+        # Canais regionais
+        'tv cultura', 'tv gazeta', 'tv aparecida', 'canção nova',
+        'tv senado', 'tv câmara', 'tv justiça', 'tv assembleia',
+        
+        # Esportes
+        'espn', 'fox sports', 'band sports', 'premiere', 'combate',
+        
+        # Identificadores
+        'brazil', 'brasil', 'br ', '.br', 'português', 'portuguese',
+        
+        # Terminações comuns
+        'hd br', 'sd br', 'brazil hd', 'brasil hd'
+    ]
+    
+    # Palavras para EXCLUIR (canais de outros países)
+    keywords_excluir = [
+        'usa ', 'united states', 'uk ', 'united kingdom', 'deutsch',
+        'germany', 'france', 'italia', 'spain', 'mexico', 'argentina',
+        'colombia', 'peru', 'chile', 'uruguai', 'paraguai', 'bolivia',
+        'portugal', 'pt ', 'english', 'español', 'french', 'italian'
+    ]
+    
+    canais_br = []
+    
+    for canal in channels:
+        titulo_lower = canal['title'].lower()
+        tvg_id_lower = canal['tvg_id'].lower() if canal['tvg_id'] else ""
+        grupo_lower = canal['group'].lower() if canal['group'] else ""
+        
+        # Combinar tudo para busca
+        texto_completo = f"{titulo_lower} {tvg_id_lower} {grupo_lower}"
+        
+        # Verificar se deve EXCLUIR (prioridade)
+        excluir = False
+        for keyword in keywords_excluir:
+            if keyword in texto_completo:
+                excluir = True
+                break
+        
+        if excluir:
+            continue
+        
+        # Verificar se é brasileiro
+        is_br = False
+        for keyword in keywords_br:
+            if keyword in texto_completo:
+                is_br = True
+                break
+        
+        # Verificar se tem .br no tvg-id
+        if '.br' in tvg_id_lower or 'br.' in tvg_id_lower:
+            is_br = True
+        
+        if is_br:
+            canais_br.append(canal)
+    
+    print(f"   📊 Filtrados {len(canais_br)} canais brasileiros de {len(channels)} totais")
+    return canais_br
+
 def criar_channels_json(canais_br, pastas):
-    """Cria channels.json SEM duplicatas (SEM backups)"""
+    """Cria channels.json SEM duplicatas"""
     print("\n📝 Criando channels.json...")
     
     channels_data = []
     urls_vistas = set()
     
-    # Palavras-chave para canais brasileiros
-    keywords = [
-        'globo', 'sbt', 'record', 'band', 'rede tv', 'cultura', 
-        'cnn', 'globo news', 'sportv', 'tnt', 'fox',
-        'universal', 'futura', 'tv escola', 'tv brasil', 'canal rural',
-        'megapix', 'telecine', 'premiere', 'combate', 'woohoo',
-        'discovery', 'history', 'a&e', 'sony', 'warner', 'max',
-        'pluto tv', 'mtv', 'nick', 'cartoon', 'food', 'gnt', 'viva'
-    ]
-    
     duplicatas = 0
     
     for canal in canais_br:
-        titulo = canal['title'].lower()
+        if canal['url'] in urls_vistas:
+            duplicatas += 1
+            continue
         
-        if any(keyword in titulo for keyword in keywords) or 'br' in canal.get('tvg_id', '').lower():
-            if canal['url'] in urls_vistas:
-                duplicatas += 1
-                continue
-            
-            urls_vistas.add(canal['url'])
-            
-            novo_canal = {
-                'type': 'tv',
-                'title': canal['title'],
-                'tvg_id': canal['tvg_id'],
-                'tvg_logo': canal['tvg_logo'],
-                'group': canal['group'],
+        urls_vistas.add(canal['url'])
+        
+        novo_canal = {
+            'type': 'tv',
+            'title': canal['title'],
+            'tvg_id': canal['tvg_id'],
+            'tvg_logo': canal['tvg_logo'],
+            'group': canal['group'],
+            'url': canal['url'],
+            'episodes': [{
                 'url': canal['url'],
-                'episodes': [{
-                    'url': canal['url'],
-                    'title': 'AO VIVO'
-                }]
-            }
-            channels_data.append(novo_canal)
+                'title': 'AO VIVO'
+            }]
+        }
+        channels_data.append(novo_canal)
     
     print(f"   ✅ {len(channels_data)} canais únicos")
     print(f"   🗑️ {duplicatas} duplicatas ignoradas")
     
-    # Carregar channels.json existente e COMBINAR (sem duplicar)
+    # Carregar channels.json existente
     channels_file = pastas['web'] / 'channels.json'
     
     if channels_file.exists():
@@ -165,7 +225,7 @@ def criar_channels_json(canais_br, pastas):
         except Exception as e:
             print(f"   ⚠️ Erro ao ler channels.json: {e}")
     
-    # Salvar SEM backup
+    # Salvar
     with open(channels_file, 'w', encoding='utf-8') as f:
         json.dump(channels_data, f, indent=2, ensure_ascii=False)
     
@@ -173,7 +233,7 @@ def criar_channels_json(canais_br, pastas):
     
     return channels_data
 
-def download_file(url, destino, nome_fonte, pastas):
+def download_file(url, destino, nome_fonte):
     """Baixa um arquivo"""
     print(f"\n📡 Baixando {nome_fonte}...")
     
@@ -188,26 +248,20 @@ def download_file(url, destino, nome_fonte, pastas):
             with open(destino, 'w', encoding='utf-8') as f:
                 f.write(response.text)
             
-            canais = parse_m3u(response.text)
-            print(f"   ✅ {len(canais)} streams")
-            
-            if nome_fonte == 'canais_br':
-                criar_channels_json(canais, pastas)
-            
-            return len(canais)
+            return response.text
         else:
             print(f"   ❌ Erro HTTP: {response.status_code}")
-            return 0
+            return None
             
     except Exception as e:
         print(f"   ❌ Erro: {e}")
-        return 0
+        return None
 
 def download_iptv_sources():
-    """Baixa fontes do iptv-org - SEM RELATÓRIOS"""
+    """Baixa a lista completa e filtra canais brasileiros"""
     
     print("\n" + "="*60)
-    print("📡 INICIANDO DOWNLOAD")
+    print("📡 INICIANDO DOWNLOAD - LISTA COMPLETA")
     print("="*60)
     
     if not testar_conexao():
@@ -216,36 +270,40 @@ def download_iptv_sources():
     
     pastas = criar_estrutura_pastas()
     
-    fontes = [
-        {
-            'nome': 'filmes_br',
-            'url': 'https://iptv-org.github.io/iptv/categories/movies/br.m3u',
-            'pasta': pastas['filmes'],
-            'arquivo': f"iptv_filmes_br.m3u"  # Nome fixo, sem data
-        },
-        {
-            'nome': 'series_br',
-            'url': 'https://iptv-org.github.io/iptv/categories/series/br.m3u',
-            'pasta': pastas['series'],
-            'arquivo': f"iptv_series_br.m3u"  # Nome fixo
-        },
-        {
-            'nome': 'canais_br',
-            'url': 'https://iptv-org.github.io/iptv/countries/br.m3u',
-            'pasta': pastas['tv'],
-            'arquivo': f"iptv_canais_br.m3u"  # Nome fixo
-        }
-    ]
+    # 🔥 BAIXAR LISTA COMPLETA (MAIS CONFIÁVEL)
+    url_completa = 'https://iptv-org.github.io/iptv/index.m3u'
+    destino_completo = pastas['tv'] / "iptv_completo.m3u"
     
-    total_links = 0
+    conteudo = download_file(url_completa, destino_completo, 'lista_completa')
     
-    for fonte in fontes:
-        destino = fonte['pasta'] / fonte['arquivo']
-        links = download_file(fonte['url'], destino, fonte['nome'], pastas)
-        total_links += links
+    if not conteudo:
+        print("\n❌ Falha no download. Abortando.")
+        return False
+    
+    # Parsear todos os canais
+    todos_canais = parse_m3u(conteudo)
+    print(f"\n📊 Total de canais na lista: {len(todos_canais)}")
+    
+    # Filtrar apenas brasileiros
+    canais_br = filtrar_canais_brasileiros(todos_canais)
+    
+    # Salvar lista filtrada
+    destino_br = pastas['tv'] / "iptv_canais_br.m3u"
+    
+    # Criar arquivo M3U filtrado
+    with open(destino_br, 'w', encoding='utf-8') as f:
+        f.write("#EXTM3U\n")
+        for canal in canais_br:
+            f.write(f'#EXTINF:-1 tvg-id="{canal["tvg_id"]}" tvg-logo="{canal["tvg_logo"]}" group-title="{canal["group"]}",{canal["title"]}\n')
+            f.write(f"{canal['url']}\n\n")
+    
+    print(f"✅ Lista filtrada salva: {destino_br}")
+    
+    # Criar channels.json
+    criar_channels_json(canais_br, pastas)
     
     print("\n" + "="*60)
-    print(f"📊 TOTAL: {total_links} streams")
+    print(f"📊 TOTAL: {len(canais_br)} canais brasileiros")
     print("✅ Agora execute: python3 consolidar_data.py")
     print("="*60)
     
