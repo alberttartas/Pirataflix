@@ -1587,12 +1587,14 @@ function displayContent() {{
             </div>
             <div id="${{carouselId}}" class="owl-carousel">`;
             
-          // ===== DEBUG =====
-        console.log('📺 Categorias disponíveis:', Object.keys(vodData));
-        console.log('📺 Dados da TV:', vodData.tv ? vodData.tv.length : 0);
-        if (vodData.tv && vodData.tv.length > 0) {
-            console.log('📺 Primeiro canal:', vodData.tv[0]);
-        }
+         // ===== DEBUG =====
+console.log('📺 Categorias disponíveis:', Object.keys(vodData));
+console.log('📺 Dados da TV:', vodData.tv ? vodData.tv.length : 0);
+if (vodData.tv && vodData.tv.length > 0) {
+    console.log('📺 Primeiro canal:', vodData.tv[0]);
+} else {
+    console.log('📺 Nenhum canal de TV encontrado');
+}
         
         items.forEach(item => {{
             let poster = '';
@@ -1778,4 +1780,5 @@ function displayContent() {{
 
 if __name__ == "__main__":
     build_vod_with_direct_capas()
+
 
