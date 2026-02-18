@@ -1489,7 +1489,7 @@ function initCarousels() {{
         }});
         
         // CONFIGURAÇÃO ESPECIAL PARA O CARROSSEL CONTINUAR
-                $('.prev-continue').off('click').on('click', function(e) {{
+        $('.prev-continue').off('click').on('click', function(e) {{
             e.preventDefault();
             $('#carousel-continue').trigger('prev.owl.carousel');
         }});
@@ -1499,10 +1499,8 @@ function initCarousels() {{
             $('#carousel-continue').trigger('next.owl.carousel');
         }});
         
-    }, 300);
-}
-           
-    }}
+    }}, 300);
+}}
     
     // Exibir conteúdo
 function displayContent() {{
@@ -1511,7 +1509,7 @@ function displayContent() {{
     
     // ===== SEÇÃO CONTINUAR ASSISTINDO =====
     const continueWatching = getContinueWatching();
-    if (continueWatching.length > 0) {
+    if (continueWatching.length > 0) {{
         html += `
         <section class="category-section continue-watching">
             <div class="category-header">
@@ -1525,24 +1523,24 @@ function displayContent() {{
             </div>
             <div id="carousel-continue" class="owl-carousel">`;
         
-        continueWatching.forEach(item => {
+        continueWatching.forEach(item => {{
             const progress = item.progress || 45;
             const timeLeft = item.timeLeft || "45 min restantes";
             
             html += `
-            <div class="item-card" onclick="openModal('${item.category}', '${item.id}')">
-                <img src="${item.poster}" alt="${item.title}" class="item-poster"
-                     onerror="this.onerror=null; this.src='${RAW_BASE}/assets/Capas/default.jpg';">
+            <div class="item-card" onclick="openModal('${{item.category}}', '${{item.id}}')">
+                <img src="${{item.poster}}" alt="${{item.title}}" class="item-poster"
+                     onerror="this.onerror=null; this.src='${{RAW_BASE}}/assets/Capas/default.jpg';">
                 <div class="watch-badge">⏯️ Continuar</div>
                 <div class="progress-bar">
-                    <div class="progress-fill" style="width: ${progress}%;"></div>
+                    <div class="progress-fill" style="width: ${{progress}}%;"></div>
                 </div>
                 <div class="item-info">
-                    <div class="item-title">${item.title}</div>
-                    <div class="item-meta">${item.episode} • ${timeLeft}</div>
+                    <div class="item-title">${{item.title}}</div>
+                    <div class="item-meta">${{item.episode}} • ${{timeLeft}}</div>
                 </div>
             </div>`;
-        });
+        }});
         
         html += `</div></section>`;
     }}
@@ -1551,33 +1549,33 @@ function displayContent() {{
     function getContinueWatching() {{
         // ESTES SÃO DADOS DE EXEMPLO
         const exemplo = [
-            {
+            {{
                 id: 'todo_mundo_odeia_o_chris',
                 title: 'Todo Mundo Odeia o Chris',
-                poster: `${RAW_BASE}/assets/Capas/todo_mundo_odeia_o_chris.jpg`,
+                poster: `${{RAW_BASE}}/assets/Capas/todo_mundo_odeia_o_chris.jpg`,
                 category: 'series',
                 episode: 'T3 E12 • O Casamento',
                 progress: 65,
                 timeLeft: '22 min'
-            },
-            {
+            }},
+            {{
                 id: 'avenida_brasil',
                 title: 'Avenida Brasil',
-                poster: `${RAW_BASE}/assets/Capas/avenida_brasil.jpg`,
+                poster: `${{RAW_BASE}}/assets/Capas/avenida_brasil.jpg`,
                 category: 'novelas',
                 episode: 'Cap. 145',
                 progress: 30,
                 timeLeft: '35 min'
-            },
-            {
+            }},
+            {{
                 id: 'dragon_ball_z',
                 title: 'Dragon Ball Z',
-                poster: `${RAW_BASE}/assets/Capas/dragon_ball_z.jpg`,
+                poster: `${{RAW_BASE}}/assets/Capas/dragon_ball_z.jpg`,
                 category: 'animes',
                 episode: 'Ep. 152 • Freeza',
                 progress: 80,
                 timeLeft: '12 min'
-            }
+            }}
         ];
         
         // TODO: Substituir por dados reais do usuário
@@ -1588,83 +1586,83 @@ function displayContent() {{
     
     // ===== CATEGORIAS NORMAIS =====
     const categoryOrder = ['filmes', 'series', 'novelas', 'animes', 'infantil', 'tv'];
-    const categoryNames = {
+    const categoryNames = {{
         'filmes': '🎬 Filmes',
         'series': '📺 Séries', 
         'novelas': '💖 Novelas',
         'animes': '👻 Animes',
         'infantil': '🧸 Infantil',
         'tv': '📡 TV AO VIVO'
-    };
+    }};
     
-    const categoryPages = {
+    const categoryPages = {{
         'filmes': 'filmes.html',
         'series': 'series.html', 
         'novelas': 'novelas.html',
         'animes': 'animes.html',
         'infantil': 'infantil.html',
         'tv': 'tv.html'
-    };
+    }};
     
-    categoryOrder.forEach(category => {
+    categoryOrder.forEach(category => {{
         const items = vodData[category];
         if (!items || items.length === 0) return;
         
-        const carouselId = `carousel-${category}`;
+        const carouselId = `carousel-${{category}}`;
         
         html += `
-        <section class="category-section" id="${category}">
+        <section class="category-section" id="${{category}}">
             <div class="category-header">
-                <h2 class="category-title">${categoryNames[category]}</h2>
+                <h2 class="category-title">${{categoryNames[category]}}</h2>
                 <div style="display: flex; gap: 10px; align-items: center;">
                     <div class="nav_items_module">
-                        <a class="nav-btn prev-${carouselId}"><i class="fas fa-chevron-left"></i></a>
-                        <a class="nav-btn next-${carouselId}"><i class="fas fa-chevron-right"></i></a>
+                        <a class="nav-btn prev-${{carouselId}}"><i class="fas fa-chevron-left"></i></a>
+                        <a class="nav-btn next-${{carouselId}}"><i class="fas fa-chevron-right"></i></a>
                     </div>
-                    <a href="${categoryPages[category]}" class="see-all-link">Ver Tudo <i class="fas fa-arrow-right"></i></a>
+                    <a href="${{categoryPages[category]}}" class="see-all-link">Ver Tudo <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
-            <div id="${carouselId}" class="owl-carousel">`;
+            <div id="${{carouselId}}" class="owl-carousel">`;
         
-        items.forEach(item => {
+        items.forEach(item => {{
             let poster = '';
-            if (category === 'tv') {
+            if (category === 'tv') {{
                 const nomeLimpo = item.title.toLowerCase().replace(/[^a-z0-9]/g, '');
-                poster = window.channelsDict?.[nomeLimpo] || `${RAW_BASE}/assets/Capas/tv_default.jpg`;
-            } else {
+                poster = window.channelsDict?.[nomeLimpo] || `${{RAW_BASE}}/assets/Capas/tv_default.jpg`;
+            }} else {{
                 const nomeArquivo = item.poster ? item.poster.split('/').pop() : 'default.jpg';
-                poster = `${RAW_BASE}/assets/Capas/${nomeArquivo}`;
-            }
+                poster = `${{RAW_BASE}}/assets/Capas/${{nomeArquivo}}`;
+            }}
             
             const episodeCount = item.episodes ? item.episodes.length : 0;
             
             let meta = '';
-            if (category === 'filmes') {
+            if (category === 'filmes') {{
                 meta = `Filme`;
-            } else if (category === 'tv') {
+            }} else if (category === 'tv') {{
                 meta = `📡 Ao Vivo`;
-            } else if (item.seasons && item.seasons.length > 1) {
-                meta = `${item.seasons.length} temporadas`;
-            } else {
-                meta = `${episodeCount} episódios`;
-            }
+            }} else if (item.seasons && item.seasons.length > 1) {{
+                meta = `${{item.seasons.length}} temporadas`;
+            }} else {{
+                meta = `${{episodeCount}} episódios`;
+            }}
             
             html += `
-            <div class="item-card" onclick="openModal('${category}', '${item.id}')">
-                <img src="${poster}" alt="${item.title}" class="item-poster"
-                     onerror="this.onerror=null; this.src='${RAW_BASE}/assets/Capas/default.jpg';">
+            <div class="item-card" onclick="openModal('${{category}}', '${{item.id}}')">
+                <img src="${{poster}}" alt="${{item.title}}" class="item-poster"
+                     onerror="this.onerror=null; this.src='${{RAW_BASE}}/assets/Capas/default.jpg';">
                 <div class="item-info">
-                    <div class="item-title">${item.title}</div>
-                    <div class="item-meta">${meta}</div>
+                    <div class="item-title">${{item.title}}</div>
+                    <div class="item-meta">${{meta}}</div>
                 </div>
             </div>`;
-        });
+        }});
         
         html += `</div></section>`;
-    });
+    }});
     
     contentDiv.innerHTML = html || '<div class="loading">Nenhum conteúdo encontrado</div>';
-}
+}}
     
     // Abrir modal (MODIFICADO PARA TV)
     function openModal(category, itemId) {{
@@ -1771,7 +1769,8 @@ function displayContent() {{
         }} else {{
             window.open(url, '_blank');
         }}
-       
+    }}
+    
     // Fechar modal
     document.getElementById('closeModal').onclick = function() {{
         document.getElementById('modal').style.display = 'none';
@@ -1809,12 +1808,3 @@ function displayContent() {{
 
 if __name__ == "__main__":
     build_vod_with_direct_capas()
-
-
-
-
-
-
-
-
-
