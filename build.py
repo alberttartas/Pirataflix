@@ -868,7 +868,25 @@ def build_vod_with_direct_capas():
     
 def generate_html_with_correct_paths(base_dir, data):
     """Gera HTML estilo Netflix com carrosséis e navegação"""
-    html_template = '''<!DOCTYPE html>
+    
+    # Carregar channels.json para pegar as logos
+    channels_path = base_dir / "web" / "channels.json"
+    channels_dict = {}
+    if channels_path.exists():
+        with open(channels_path, 'r', encoding='utf-8') as f:
+            channels_list = json.load(f)
+            # Converter para dicionário {nome_canal: logo_url}
+            for canal in channels_list:
+                if 'tvg_logo' in canal and canal['tvg_logo']:
+                    # Limpar nome do canal para comparação
+                    nome_limpo = canal.get('name', canal.get('tvg_name', '')).lower()
+                    nome_limpo = re.sub(r'[^a-z0-9]', '', nome_limpo)
+                    channels_dict[nome_limpo] = canal['tvg_logo']
+    
+    # Converter channels_dict para JSON para passar ao JavaScript
+    channels_json = json.dumps(channels_dict)
+    
+    html_template = f'''<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -886,16 +904,16 @@ def generate_html_with_correct_paths(base_dir, data):
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
+        * {{ margin: 0; padding: 0; box-sizing: border-box; }}
+        body {{ 
             font-family: 'Arial', sans-serif; 
             background: #141414; 
             color: white; 
             line-height: 1.4;
-        }
+        }}
         
         /* Header Netflix-style */
-        .header {
+        .header {{
             position: fixed;
             top: 0;
             left: 0;
@@ -906,76 +924,76 @@ def generate_html_with_correct_paths(base_dir, data):
             display: flex;
             justify-content: space-between;
             align-items: center;
-        }
+        }}
         
-        .logo {
+        .logo {{
             font-size: 2.5rem;
             color: #e50914;
             font-weight: bold;
             text-decoration: none;
-        }
+        }}
         
-        .nav-links {
+        .nav-links {{
             display: flex;
             gap: 20px;
-        }
+        }}
         
-        .nav-link {
+        .nav-link {{
             color: #e5e5e5;
             text-decoration: none;
             font-size: 0.9rem;
             transition: color 0.3s;
-        }
+        }}
         
-        .nav-link:hover {
+        .nav-link:hover {{
             color: #fff;
-        }
+        }}
         
         /* Main content */
-        .main-content {
+        .main-content {{
             padding-top: 80px;
-        }
+        }}
         
         /* Category sections */
-        .category-section {
+        .category-section {{
             margin-bottom: 40px;
             padding: 0 50px;
             position: relative;
-        }
+        }}
         
-        .category-header {
+        .category-header {{
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-bottom: 15px;
-        }
+        }}
         
-        .category-title {
+        .category-title {{
             font-size: 1.4rem;
             color: #fff;
             font-weight: bold;
-        }
+        }}
         
-        .see-all-link {
+        .see-all-link {{
             color: #e50914;
             text-decoration: none;
             font-size: 0.9rem;
             padding: 5px 10px;
             border-radius: 3px;
             transition: background 0.3s;
-        }
+        }}
         
-        .see-all-link:hover {
+        .see-all-link:hover {{
             background: rgba(229, 9, 20, 0.2);
-        }
+        }}
         
         /* Navegação do carrossel */
-        .nav_items_module {
+        .nav_items_module {{
             display: flex;
             gap: 10px;
-        }
+        }}
         
-        .nav-btn {
+        .nav-btn {{
             background: rgba(0, 0, 0, 0.5);
             color: white;
             width: 40px;
@@ -987,49 +1005,49 @@ def generate_html_with_correct_paths(base_dir, data):
             cursor: pointer;
             transition: background 0.3s;
             border: 1px solid rgba(255,255,255,0.1);
-        }
+        }}
         
-        .nav-btn:hover {
+        .nav-btn:hover {{
             background: #e50914;
-        }
+        }}
         
         /* Carrossel */
-        .owl-carousel .item-card {
+        .owl-carousel .item-card {{
             margin: 0 5px;
             width: auto;
-        }
+        }}
         
-        .item-card {
+        .item-card {{
             border-radius: 4px;
             overflow: hidden;
             transition: transform 0.3s;
             cursor: pointer;
             position: relative;
             height: 100%;
-        }
+        }}
         
-        .item-card:hover {
+        .item-card:hover {{
             transform: scale(1.05);
             z-index: 10;
-        }
+        }}
         
-        .item-card:hover .item-poster {
+        .item-card:hover .item-poster {{
             opacity: 0.5;
-        }
+        }}
         
-        .item-card:hover .item-info {
+        .item-card:hover .item-info {{
             opacity: 1;
-        }
+        }}
         
-        .item-poster {
+        .item-poster {{
             width: 100%;
             height: 320px;
             object-fit: cover;
             display: block;
             transition: opacity 0.3s;
-        }
+        }}
         
-        .item-info {
+        .item-info {{
             position: absolute;
             bottom: 0;
             left: 0;
@@ -1038,24 +1056,24 @@ def generate_html_with_correct_paths(base_dir, data):
             padding: 20px;
             opacity: 0;
             transition: opacity 0.3s;
-        }
+        }}
         
-        .item-title {
+        .item-title {{
             font-size: 1rem;
             margin-bottom: 5px;
             font-weight: bold;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
-        }
+        }}
         
-        .item-meta {
+        .item-meta {{
             font-size: 0.8rem;
             color: #b3b3b3;
-        }
+        }}
         
         /* Rating badge */
-        .rating {
+        .rating {{
             position: absolute;
             top: 10px;
             right: 10px;
@@ -1066,24 +1084,24 @@ def generate_html_with_correct_paths(base_dir, data):
             font-size: 0.8rem;
             font-weight: bold;
             z-index: 2;
-        }
+        }}
         
         /* Loading state */
-        .loading {
+        .loading {{
             text-align: center;
             padding: 100px 20px;
             color: #e50914;
             font-size: 1.2rem;
-        }
+        }}
         
-        .error {
+        .error {{
             text-align: center;
             padding: 100px 20px;
             color: #e50914;
-        }
+        }}
         
         /* Modal Netflix-style */
-        .modal {
+        .modal {{
             display: none;
             position: fixed;
             top: 0;
@@ -1093,24 +1111,24 @@ def generate_html_with_correct_paths(base_dir, data):
             background: rgba(0,0,0,0.9);
             z-index: 1000;
             overflow-y: auto;
-        }
+        }}
         
-        .modal-content {
+        .modal-content {{
             background: #181818;
             border-radius: 8px;
             max-width: 850px;
             margin: 50px auto;
             position: relative;
             overflow: hidden;
-        }
+        }}
         
-        .modal-header {
+        .modal-header {{
             position: relative;
             height: 450px;
             overflow: hidden;
-        }
+        }}
         
-        .modal-backdrop {
+        .modal-backdrop {{
             position: absolute;
             top: 0;
             left: 0;
@@ -1119,9 +1137,9 @@ def generate_html_with_correct_paths(base_dir, data):
             background-size: cover;
             background-position: center;
             opacity: 0.4;
-        }
+        }}
         
-        .modal-close {
+        .modal-close {{
             position: absolute;
             top: 20px;
             right: 20px;
@@ -1137,44 +1155,44 @@ def generate_html_with_correct_paths(base_dir, data):
             display: flex;
             align-items: center;
             justify-content: center;
-        }
+        }}
         
-        .modal-close:hover {
+        .modal-close:hover {{
             background: #e50914;
-        }
+        }}
         
-        .modal-body {
+        .modal-body {{
             padding: 30px;
             position: relative;
             z-index: 1;
-        }
+        }}
         
-        .modal-title {
+        .modal-title {{
             font-size: 2rem;
             margin-bottom: 20px;
             color: #fff;
-        }
+        }}
         
-        .modal-meta {
+        .modal-meta {{
             display: flex;
             gap: 20px;
             margin-bottom: 20px;
             color: #b3b3b3;
-        }
+        }}
         
         /* Episode list */
-        .episodes-section {
+        .episodes-section {{
             margin-top: 30px;
-        }
+        }}
         
-        .episode-list {
+        .episode-list {{
             display: grid;
             gap: 10px;
             max-height: 400px;
             overflow-y: auto;
-        }
+        }}
         
-        .episode-item {
+        .episode-item {{
             background: #2d2d2d;
             border-radius: 4px;
             padding: 15px;
@@ -1183,13 +1201,13 @@ def generate_html_with_correct_paths(base_dir, data):
             display: flex;
             align-items: center;
             gap: 15px;
-        }
+        }}
         
-        .episode-item:hover {
+        .episode-item:hover {{
             background: #3d3d3d;
-        }
+        }}
         
-        .episode-number {
+        .episode-number {{
             background: #e50914;
             color: white;
             width: 35px;
@@ -1200,19 +1218,19 @@ def generate_html_with_correct_paths(base_dir, data):
             justify-content: center;
             font-weight: bold;
             flex-shrink: 0;
-        }
+        }}
         
-        .episode-info {
+        .episode-info {{
             flex: 1;
-        }
+        }}
         
-        .episode-title {
+        .episode-title {{
             font-weight: bold;
             margin-bottom: 5px;
-        }
+        }}
         
         /* Play button */
-        .play-button {
+        .play-button {{
             background: #e50914;
             color: white;
             border: none;
@@ -1226,38 +1244,38 @@ def generate_html_with_correct_paths(base_dir, data):
             gap: 10px;
             margin-top: 20px;
             transition: background 0.3s;
-        }
+        }}
         
-        .play-button:hover {
+        .play-button:hover {{
             background: #f40612;
-        }
+        }}
         
         /* Responsive */
-        @media (max-width: 768px) {
-            .header {
+        @media (max-width: 768px) {{
+            .header {{
                 padding: 20px;
-            }
+            }}
             
-            .logo {
+            .logo {{
                 font-size: 2rem;
-            }
+            }}
             
-            .category-section {
+            .category-section {{
                 padding: 0 20px;
-            }
+            }}
             
-            .item-poster {
+            .item-poster {{
                 height: 260px;
-            }
+            }}
             
-            .modal-content {
+            .modal-content {{
                 margin: 20px;
-            }
+            }}
             
-            .modal-header {
+            .modal-header {{
                 height: 300px;
-            }
-        }
+            }}
+        }}
     </style>
 </head>
 <body>
@@ -1270,6 +1288,7 @@ def generate_html_with_correct_paths(base_dir, data):
             <a href="#novelas" class="nav-link">Novelas</a>
             <a href="#animes" class="nav-link">Animes</a>
             <a href="#infantil" class="nav-link">Infantil</a>
+            <a href="#tv" class="nav-link">TV Ao Vivo</a>
         </nav>
     </header>
 
@@ -1291,199 +1310,208 @@ def generate_html_with_correct_paths(base_dir, data):
     </div>
 
     <script>
+    // Dicionário de logos dos canais (carregado do Python)
+    window.channelsDict = {channels_json};
+    
     // Dados carregados
-    window.vodData = {};
+    window.vodData = {{}};
     let currentItem = null;
     
     // URLs base
     const RAW_BASE = 'https://raw.githubusercontent.com/alberttartas/Pirataflix/main';
     
-    /// Carregar dados
-async function loadData() {
-    try {
-        const response = await fetch('data.json');
-        window.vodData = await response.json();
-        displayContent();
+    // Carregar dados
+    async function loadData() {{
+        try {{
+            const response = await fetch('data.json');
+            window.vodData = await response.json();
+            displayContent();
+            
+            // VERIFICAR se Owl Carousel existe antes de chamar
+            setTimeout(function() {{
+                if (typeof $.fn.owlCarousel === 'function') {{
+                    initCarousels();
+                    console.log('✅ Carrosséis inicializados');
+                }} else {{
+                    console.error('❌ Owl Carousel não carregado!');
+                    // Fallback: scroll manual
+                    initFallbackScroll();
+                }}
+            }}, 500);
+        }} catch (error) {{
+            document.getElementById('content').innerHTML = 
+                '<div class="error">Erro ao carregar dados: ' + error.message + '</div>';
+        }}
+    }}
+    
+    // Fallback se Owl Carousel falhar
+    function initFallbackScroll() {{
+        console.log('🔄 Usando fallback de scroll');
+        $('.owl-carousel').css({{
+            'display': 'flex',
+            'overflow-x': 'auto',
+            'gap': '10px',
+            'padding': '10px 0'
+        }});
         
-        // 🔥 VERIFICAR se Owl Carousel existe antes de chamar
-        setTimeout(function() {
-            if (typeof $.fn.owlCarousel === 'function') {
-                initCarousels();
-                console.log('✅ Carrosséis inicializados');
-            } else {
-                console.error('❌ Owl Carousel não carregado!');
-                // Fallback: scroll manual
-                initFallbackScroll();
-            }
-        }, 500);
-    } catch (error) {
-        document.getElementById('content').innerHTML = 
-            '<div class="error">Erro ao carregar dados: ' + error.message + '</div>';
-    }
-}
-
-// Fallback se Owl Carousel falhar
-function initFallbackScroll() {
-    console.log('🔄 Usando fallback de scroll');
-    $('.owl-carousel').css({
-        'display': 'flex',
-        'overflow-x': 'auto',
-        'gap': '10px',
-        'padding': '10px 0'
-    });
-    
-    $('.owl-carousel .item-card').css({
-        'flex': '0 0 auto',
-        'width': '220px'
-    });
-    
-    // Botões ainda funcionam com scroll
-    $('[class^="prev-"]').off('click').on('click', function(e) {
-        e.preventDefault();
-        const carouselId = this.className.match(/prev-(carousel-\w+)/)[1];
-        $(`#${carouselId}`).animate({ scrollLeft: '-=300' }, 300);
-    });
-    
-    $('[class^="next-"]').off('click').on('click', function(e) {
-        e.preventDefault();
-        const carouselId = this.className.match(/next-(carousel-\w+)/)[1];
-        $(`#${carouselId}`).animate({ scrollLeft: '+=300' }, 300);
-    });
-}
+        $('.owl-carousel .item-card').css({{
+            'flex': '0 0 auto',
+            'width': '220px'
+        }});
+        
+        // Botões ainda funcionam com scroll
+        $('[class^="prev-"]').off('click').on('click', function(e) {{
+            e.preventDefault();
+            const carouselId = this.className.match(/prev-(carousel-\\w+)/)[1];
+            $(`#${{carouselId}}`).animate({{ scrollLeft: '-=300' }}, 300);
+        }});
+        
+        $('[class^="next-"]').off('click').on('click', function(e) {{
+            e.preventDefault();
+            const carouselId = this.className.match(/next-(carousel-\\w+)/)[1];
+            $(`#${{carouselId}}`).animate({{ scrollLeft: '+=300' }}, 300);
+        }});
+    }}
     
     // Inicializar carrosséis
-function initCarousels() {
-    // Aguarda um momento para garantir que o DOM está pronto
-    setTimeout(function() {
-        $('.owl-carousel').each(function() {
-            const $carousel = $(this);
-            const carouselId = $carousel.attr('id');
-            
-            if (!$carousel.data('owlCarousel')) { // Evita inicializar duas vezes
-                $carousel.owlCarousel({
-                    items: 7,
-                    margin: 10,
-                    loop: false,
-                    nav: false,
-                    dots: false,
-                    responsive: {
-                        0: { items: 2 },
-                        480: { items: 3 },
-                        640: { items: 4 },
-                        768: { items: 5 },
-                        1024: { items: 6 },
-                        1280: { items: 7 }
-                    },
-                    onInitialized: function() {
-                        console.log('✅ Carrossel iniciado:', carouselId);
-                    }
-                });
-            }
-            
-            // Remover eventos antigos antes de adicionar novos (evita duplicação)
-            $(`.next-${carouselId}`).off('click');
-            $(`.prev-${carouselId}`).off('click');
-            
-            // Botão PRÓXIMO (seta DIREITA) deve ir para NEXT
-            $(`.next-${carouselId}`).on('click', function(e) {
-                e.preventDefault();
-                console.log('➡️ Avançar:', carouselId);
-                $carousel.trigger('next.owl.carousel');
-            });
-            
-            // Botão ANTERIOR (seta ESQUERDA) deve ir para PREV
-            $(`.prev-${carouselId}`).on('click', function(e) {
-                e.preventDefault();
-                console.log('⬅️ Voltar:', carouselId);
-                $carousel.trigger('prev.owl.carousel');
-            });
-        });
-    }, 300); // Pequeno delay para garantir que o DOM carregou
-}
+    function initCarousels() {{
+        // Aguarda um momento para garantir que o DOM está pronto
+        setTimeout(function() {{
+            $('.owl-carousel').each(function() {{
+                const $carousel = $(this);
+                const carouselId = $carousel.attr('id');
+                
+                if (!$carousel.data('owlCarousel')) {{ // Evita inicializar duas vezes
+                    $carousel.owlCarousel({{
+                        items: 7,
+                        margin: 10,
+                        loop: false,
+                        nav: false,
+                        dots: false,
+                        responsive: {{
+                            0: {{ items: 2 }},
+                            480: {{ items: 3 }},
+                            640: {{ items: 4 }},
+                            768: {{ items: 5 }},
+                            1024: {{ items: 6 }},
+                            1280: {{ items: 7 }}
+                        }},
+                        onInitialized: function() {{
+                            console.log('✅ Carrossel iniciado:', carouselId);
+                        }}
+                    }});
+                }}
+                
+                // Remover eventos antigos antes de adicionar novos (evita duplicação)
+                $(`.next-${{carouselId}}`).off('click');
+                $(`.prev-${{carouselId}}`).off('click');
+                
+                // Botão PRÓXIMO (seta DIREITA) deve ir para NEXT
+                $(`.next-${{carouselId}}`).on('click', function(e) {{
+                    e.preventDefault();
+                    console.log('➡️ Avançar:', carouselId);
+                    $carousel.trigger('next.owl.carousel');
+                }});
+                
+                // Botão ANTERIOR (seta ESQUERDA) deve ir para PREV
+                $(`.prev-${{carouselId}}`).on('click', function(e) {{
+                    e.preventDefault();
+                    console.log('⬅️ Voltar:', carouselId);
+                    $carousel.trigger('prev.owl.carousel');
+                }});
+            }});
+        }}, 300);
+    }}
     
     // Exibir conteúdo
-    function displayContent() {
+    function displayContent() {{
         const contentDiv = document.getElementById('content');
         let html = '';
         
-        // Ordem das categorias
-        const categoryOrder = ['filmes', 'series', 'novelas', 'animes', 'infantil'];
-        const categoryNames = {
+        // Ordem das categorias (AGORA INCLUINDO TV)
+        const categoryOrder = ['filmes', 'series', 'novelas', 'animes', 'infantil', 'tv'];
+        const categoryNames = {{
             'filmes': '🎬 Filmes',
             'series': '📺 Séries', 
             'novelas': '💖 Novelas',
             'animes': '👻 Animes',
-            'infantil': '🧸 Infantil'
-        };
+            'infantil': '🧸 Infantil',
+            'tv': '📡 TV AO VIVO'
+        }};
         
-        const categoryPages = {
+        const categoryPages = {{
             'filmes': 'filmes.html',
             'series': 'series.html', 
             'novelas': 'novelas.html',
             'animes': 'animes.html',
-            'infantil': 'infantil.html'
-        };
+            'infantil': 'infantil.html',
+            'tv': 'tv.html'
+        }};
         
-        categoryOrder.forEach(category => {
+        categoryOrder.forEach(category => {{
             const items = vodData[category];
             if (!items || items.length === 0) return;
             
-            const carouselId = `carousel-${category}`;
+            const carouselId = `carousel-${{category}}`;
             
             html += `
-            <section class="category-section" id="${category}">
+            <section class="category-section" id="${{category}}">
                 <div class="category-header">
-                    <h2 class="category-title">${categoryNames[category]}</h2>
+                    <h2 class="category-title">${{categoryNames[category]}}</h2>
                     <div style="display: flex; gap: 10px; align-items: center;">
                         <div class="nav_items_module">
-                            <a class="nav-btn prev-${carouselId}"><i class="fas fa-chevron-left"></i></a>
-                            <a class="nav-btn next-${carouselId}"><i class="fas fa-chevron-right"></i></a>
+                            <a class="nav-btn prev-${{carouselId}}"><i class="fas fa-chevron-left"></i></a>
+                            <a class="nav-btn next-${{carouselId}}"><i class="fas fa-chevron-right"></i></a>
                         </div>
-                        <a href="${categoryPages[category]}" class="see-all-link">Ver Tudo <i class="fas fa-arrow-right"></i></a>
+                        <a href="${{categoryPages[category]}}" class="see-all-link">Ver Tudo <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
-                <div id="${carouselId}" class="owl-carousel">`;
+                <div id="${{carouselId}}" class="owl-carousel">`;
             
-            items.forEach(item => {
-                const nomeArquivo = item.poster ? item.poster.split('/').pop() : 'default.jpg';
-                const poster = `${RAW_BASE}/assets/Capas/${nomeArquivo}`;
+            items.forEach(item => {{
+                // PARA TV: usar logo do channels.json se disponível
+                let poster = '';
+                if (category === 'tv') {{
+                    // Tentar encontrar logo no channelsDict
+                    const nomeLimpo = item.title.toLowerCase().replace(/[^a-z0-9]/g, '');
+                    poster = window.channelsDict?.[nomeLimpo] || `${{RAW_BASE}}/assets/Capas/tv_default.jpg`;
+                }} else {{
+                    const nomeArquivo = item.poster ? item.poster.split('/').pop() : 'default.jpg';
+                    poster = `${{RAW_BASE}}/assets/Capas/${{nomeArquivo}}`;
+                }}
                 
-                const type = category === 'filmes' ? 'Filme' : 'Série';
                 const episodeCount = item.episodes ? item.episodes.length : 0;
-                const seasonCount = item.seasons ? item.seasons.length : 0;
                 
                 let meta = '';
-                if (category === 'filmes') {
+                if (category === 'filmes') {{
                     meta = `Filme`;
-                } else if (seasonCount > 1) {
-                    meta = `${seasonCount} temporadas`;
-                } else {
-                    meta = `${episodeCount} episódios`;
-                }
-                
-                // Rating aleatório para exemplo (você pode substituir por dados reais)
-                const rating = (Math.random() * 2 + 7).toFixed(1);
+                }} else if (category === 'tv') {{
+                    meta = `📡 Ao Vivo`;
+                }} else if (item.seasons && item.seasons.length > 1) {{
+                    meta = `${{item.seasons.length}} temporadas`;
+                }} else {{
+                    meta = `${{episodeCount}} episódios`;
+                }}
                 
                 html += `
-                <div class="item-card" onclick="openModal('${category}', '${item.id}')">
-                    <img src="${poster}" alt="${item.title}" class="item-poster"
-                         onerror="this.onerror=null; this.src='${RAW_BASE}/assets/Capas/default.jpg';">
-                    <div class="rating">${rating}</div>
+                <div class="item-card" onclick="openModal('${{category}}', '${{item.id}}')">
+                    <img src="${{poster}}" alt="${{item.title}}" class="item-poster"
+                         onerror="this.onerror=null; this.src='${{RAW_BASE}}/assets/Capas/default.jpg';">
                     <div class="item-info">
-                        <div class="item-title">${item.title}</div>
-                        <div class="item-meta">${meta}</div>
+                        <div class="item-title">${{item.title}}</div>
+                        <div class="item-meta">${{meta}}</div>
                     </div>
                 </div>`;
-            });
+            }});
             
             html += `</div></section>`;
-        });
+        }});
         
         contentDiv.innerHTML = html || '<div class="loading">Nenhum conteúdo encontrado</div>';
-    }
+    }}
     
-    // Abrir modal
-    function openModal(category, itemId) {
+    // Abrir modal (MODIFICADO PARA TV)
+    function openModal(category, itemId) {{
         const items = vodData[category];
         if (!items) return;
         
@@ -1495,86 +1523,70 @@ function initCarousels() {
         let modalBodyHtml = '';
         let modalHeaderHtml = '';
         
-        // Header do modal com backdrop
-        if (item.poster) {
-            const nomeArquivo = item.poster.split('/').pop();
-            const posterUrl = `${RAW_BASE}/assets/Capas/${nomeArquivo}`;
-            
-            modalHeaderHtml = `
-                <div class="modal-backdrop" style="background-image: url('${posterUrl}')"></div>
-                <button class="play-button" onclick="playFirstEpisode('${category}', '${item.id}')" style="position: absolute; bottom: 30px; left: 30px;">
-                    <i class="fas fa-play"></i> Assistir
-                </button>
-            `;
-        }
+        // Para TV, usar logo do channels.json
+        let posterUrl = '';
+        if (category === 'tv') {{
+            const nomeLimpo = item.title.toLowerCase().replace(/[^a-z0-9]/g, '');
+            posterUrl = window.channelsDict?.[nomeLimpo] || `${{RAW_BASE}}/assets/Capas/tv_default.jpg`;
+        }} else {{
+            const nomeArquivo = item.poster ? item.poster.split('/').pop() : 'default.jpg';
+            posterUrl = `${{RAW_BASE}}/assets/Capas/${{nomeArquivo}}`;
+        }}
         
-        // Corpo do modal
-        modalBodyHtml = `
-            <h2 class="modal-title">${item.title}</h2>
-            <div class="modal-meta">
-                <span>${category === 'filmes' ? 'Filme' : 'Série'}</span>
-                ${item.episodes ? `<span>${item.episodes.length} episódios</span>` : ''}
-                ${item.seasons ? `<span>${item.seasons.length} temporadas</span>` : ''}
-            </div>
-            <button class="play-button" onclick="playFirstEpisode('${category}', '${item.id}')">
-                <i class="fas fa-play"></i> Assistir
+        // Header do modal com backdrop
+        modalHeaderHtml = `
+            <div class="modal-backdrop" style="background-image: url('${{posterUrl}}')"></div>
+            ${{category === 'tv' ? 
+                '<div style="position: absolute; top: 30px; left: 30px; background: #e50914; color: white; padding: 8px 16px; border-radius: 4px; font-weight: bold;">🔴 AO VIVO</div>' : 
+                ''}}
+            <button class="play-button" onclick="playFirstEpisode('${{category}}', '${{item.id}}')" style="position: absolute; bottom: 30px; left: 30px;">
+                <i class="fas fa-play"></i> ${{category === 'tv' ? 'Assistir ao Vivo' : 'Assistir'}}
             </button>
         `;
         
-        // Listar episódios
-        if (item.episodes && item.episodes.length > 0) {
+        // Corpo do modal
+        modalBodyHtml = `
+            <h2 class="modal-title">${{item.title}}</h2>
+            <div class="modal-meta">
+                <span>${{category === 'filmes' ? 'Filme' : (category === 'tv' ? 'Canal de TV' : 'Série')}}</span>
+                ${{category === 'tv' ? '<span>🔴 Ao Vivo</span>' : ''}}
+                ${{item.episodes ? `<span>${{item.episodes.length}} ${{category === 'tv' ? 'canais' : 'episódios'}}</span>` : ''}}
+            </div>
+            <button class="play-button" onclick="playFirstEpisode('${{category}}', '${{item.id}}')">
+                <i class="fas fa-play"></i> ${{category === 'tv' ? 'Assistir ao Vivo' : 'Assistir'}}
+            </button>
+        `;
+        
+        // Para TV, mostrar lista de canais (se houver múltiplos)
+        if (category === 'tv' && item.episodes && item.episodes.length > 0) {{
             modalBodyHtml += `
             <div class="episodes-section">
-                <h3 style="margin-bottom: 20px; font-size: 1.3rem;">Episódios</h3>
+                <h3 style="margin-bottom: 20px; font-size: 1.3rem;">Canais Disponíveis</h3>
                 <div class="episode-list">`;
             
-            item.episodes.forEach((ep, index) => {
+            item.episodes.forEach((ep, index) => {{
                 modalBodyHtml += `
-                <div class="episode-item" onclick="playEpisode('${ep.url}', '${item.title} - ${ep.title}', '${item.id}', '${category}', ${index})">
-                    <div class="episode-number">${index + 1}</div>
+                <div class="episode-item" onclick="playEpisode('${{ep.url}}', '${{item.title}} - ${{ep.title}}', '${{item.id}}', '${{category}}', ${{index}})">
+                    <div class="episode-number">${{index + 1}}</div>
                     <div class="episode-info">
-                        <div class="episode-title">${ep.title}</div>
+                        <div class="episode-title">${{ep.title || item.title}}</div>
+                        <div class="episode-duration">🔴 Ao Vivo</div>
                     </div>
                 </div>`;
-            });
+            }});
             
             modalBodyHtml += `</div></div>`;
-        } else if (item.seasons && item.seasons.length > 0) {
-            modalBodyHtml += `<div class="episodes-section">`;
-            
-            item.seasons.forEach(season => {
-                modalBodyHtml += `
-                <div style="margin-bottom: 30px;">
-                    <h3 style="margin-bottom: 15px; font-size: 1.2rem;">Temporada ${season.season}</h3>
-                    <div class="episode-list">`;
-                
-                if (season.episodes && season.episodes.length > 0) {
-                    season.episodes.forEach((ep, index) => {
-                        modalBodyHtml += `
-                        <div class="episode-item" onclick="playEpisode('${ep.url}', '${item.title} - Temp ${season.season} - ${ep.title}', '${item.id}', '${category}', ${index})">
-                            <div class="episode-number">${index + 1}</div>
-                            <div class="episode-info">
-                                <div class="episode-title">${ep.title}</div>
-                            </div>
-                        </div>`;
-                    });
-                }
-                
-                modalBodyHtml += `</div></div>`;
-            });
-            
-            modalBodyHtml += `</div>`;
-        }
+        }}
         
         // Atualizar modal
         document.getElementById('modalHeader').innerHTML = modalHeaderHtml;
         document.getElementById('modalBody').innerHTML = modalBodyHtml;
         document.getElementById('modal').style.display = 'block';
         document.getElementById('modal').scrollTop = 0;
-    }
+    }}
     
     // Reproduzir primeiro episódio
-    function playFirstEpisode(category, itemId) {
+    function playFirstEpisode(category, itemId) {{
         const items = vodData[category];
         if (!items) return;
         
@@ -1584,44 +1596,44 @@ function initCarousels() {
         let url = '';
         let title = '';
         
-        if (item.episodes && item.episodes.length > 0) {
+        if (item.episodes && item.episodes.length > 0) {{
             url = item.episodes[0].url;
-            title = `${item.title} - ${item.episodes[0].title}`;
+            title = `${{item.title}} - ${{item.episodes[0].title}}`;
             playEpisode(url, title, item.id, category, 0);
-        } else if (item.seasons && item.seasons.length > 0 && item.seasons[0].episodes.length > 0) {
+        }} else if (item.seasons && item.seasons.length > 0 && item.seasons[0].episodes.length > 0) {{
             url = item.seasons[0].episodes[0].url;
-            title = `${item.title} - Temp 1 - ${item.seasons[0].episodes[0].title}`;
+            title = `${{item.title}} - Temp 1 - ${{item.seasons[0].episodes[0].title}}`;
             playEpisode(url, title, item.id, category, 0);
-        }
-    }
+        }}
+    }}
     
     // Reproduzir episódio
-    function playEpisode(url, title, itemId, category, episodeIndex) {
-        if (typeof window.playWithModernPlayer === 'function') {
+    function playEpisode(url, title, itemId, category, episodeIndex) {{
+        if (typeof window.playWithModernPlayer === 'function') {{
             window.playWithModernPlayer(url, title, '', itemId, category, episodeIndex);
             document.getElementById('modal').style.display = 'none';
-        } else {
+        }} else {{
             window.open(url, '_blank');
-        }
-    }
+        }}
+    }}
     
     // Fechar modal
-    document.getElementById('closeModal').onclick = function() {
+    document.getElementById('closeModal').onclick = function() {{
         document.getElementById('modal').style.display = 'none';
-    };
+    }};
     
-    window.onclick = function(event) {
+    window.onclick = function(event) {{
         const modal = document.getElementById('modal');
-        if (event.target === modal) {
+        if (event.target === modal) {{
             modal.style.display = 'none';
-        }
-    };
+        }}
+    }};
     
-    document.addEventListener('keydown', function(event) {
-        if (event.key === 'Escape') {
+    document.addEventListener('keydown', function(event) {{
+        if (event.key === 'Escape') {{
             document.getElementById('modal').style.display = 'none';
-        }
-    });
+        }}
+    }});
     
     // Carregar dados ao iniciar
     loadData();
@@ -1637,11 +1649,12 @@ function initCarousels() {
     with open(html_path, "w", encoding="utf-8") as f:
         f.write(html_template)
     
-    print(f"✅ HTML gerado com carrosséis: {html_path}")
+    print(f"✅ HTML gerado com carrosséis e TV: {html_path}")
     
 
 if __name__ == "__main__":
     build_vod_with_direct_capas()
+
 
 
 
