@@ -680,6 +680,7 @@ def generate_html_with_correct_paths(base_dir, data):
             transition: background 0.3s; display: flex; align-items: center; gap: 15px;
         }}
         .episode-item:hover {{ background: #3d3d3d; }}
+        .canal-ativo {{ background: #3a0a0a !important; border-left: 3px solid #e50914; }}
         .episode-number {{
             background: #e50914; color: white; width: 35px; height: 35px;
             border-radius: 50%; display: flex; align-items: center; justify-content: center;
@@ -954,31 +955,52 @@ def generate_html_with_correct_paths(base_dir, data):
 
             var posterUrl = getPoster(item, category);
 
-            // Usar &quot; para aspas dentro de atributo style — sem aspas simples aninhadas
+            // ===== HEADER: backdrop + badge + 1 botão assistir =====
             var headerHtml = '<div class="modal-backdrop" style="background-image:url(&quot;' + posterUrl + '&quot;)"></div>';
             if (category === 'tv') {{
                 headerHtml += '<div style="position:absolute;top:30px;left:30px;background:#e50914;color:white;padding:8px 16px;border-radius:4px;font-weight:bold;">🔴 AO VIVO</div>';
             }}
-            var playLabel = category === 'tv' ? 'Assistir ao Vivo' : 'Assistir';
+            var playLabel = category === 'tv' ? '▶ Assistir ao Vivo' : '▶ Assistir';
             headerHtml += '<button class="play-button" data-action="play-first" data-category="' + category + '" data-id="' + itemId + '" style="position:absolute;bottom:30px;left:30px;">';
-            headerHtml += '<i class="fas fa-play"></i> ' + playLabel + '</button>';
+            headerHtml += playLabel + '</button>';
 
+            // ===== BODY: título + meta (SEM botão duplicado) =====
             var typeLabel = category === 'filmes' ? 'Filme' : (category === 'tv' ? 'Canal de TV' : 'Série');
             var bodyHtml = '<h2 class="modal-title">' + item.title + '</h2>';
             bodyHtml += '<div class="modal-meta">';
             bodyHtml += '<span>' + typeLabel + '</span>';
             if (category === 'tv') bodyHtml += '<span>🔴 Ao Vivo</span>';
-            if (item.episodes) {{
-                var epUnit = category === 'tv' ? ' canais' : ' episódios';
-                bodyHtml += '<span>' + item.episodes.length + epUnit + '</span>';
-            }}
             bodyHtml += '</div>';
-            bodyHtml += '<button class="play-button" data-action="play-first" data-category="' + category + '" data-id="' + itemId + '">';
-            bodyHtml += '<i class="fas fa-play"></i> ' + playLabel + '</button>';
 
-            if (item.episodes && item.episodes.length > 0) {{
-                var sectionLabel = category === 'tv' ? 'Canais Disponíveis' : 'Episódios';
-                bodyHtml += '<div class="episodes-section"><h3 style="margin-bottom:20px;font-size:1.3rem;">' + sectionLabel + '</h3>';
+            // ===== TV: mostrar TODOS os canais da categoria para navegar =====
+            if (category === 'tv') {{
+                var todosCanais = window.vodData['tv'] || [];
+                bodyHtml += '<div class="episodes-section">';
+                bodyHtml += '<h3 style="margin-bottom:15px;font-size:1.1rem;">📡 Todos os Canais</h3>';
+                bodyHtml += '<div class="episode-list">';
+                todosCanais.forEach(function(canal, idx) {{
+                    var isAtual = String(idx) === String(itemId);
+                    var canalPoster = canal.tvg_logo || '';
+                    var canalUrl = (canal.episodes && canal.episodes[0]) ? canal.episodes[0].url : canal.url || '';
+                    bodyHtml += '<div class="episode-item' + (isAtual ? ' canal-ativo' : '') + '" data-action="play-canal"';
+                    bodyHtml += ' data-url="' + canalUrl + '"';
+                    bodyHtml += ' data-id="' + idx + '"';
+                    bodyHtml += ' data-title="' + canal.title.replace(/"/g, '') + '"';
+                    bodyHtml += ' data-category="tv">';
+                    if (canalPoster) {{
+                        bodyHtml += '<img src="' + canalPoster + '" style="width:40px;height:40px;object-fit:contain;background:#222;border-radius:4px;flex-shrink:0;" onerror="this.style.display='none'">';
+                    }} else {{
+                        bodyHtml += '<div class="episode-number">📺</div>';
+                    }}
+                    bodyHtml += '<div class="episode-info">';
+                    bodyHtml += '<div class="episode-title">' + canal.title + (isAtual ? ' <span style="color:#e50914;font-size:0.8rem;">● AO VIVO</span>' : '') + '</div>';
+                    bodyHtml += '</div></div>';
+                }});
+                bodyHtml += '</div></div>';
+
+            // ===== FILMES/SÉRIES: lista de episódios normal =====
+            }} else if (item.episodes && item.episodes.length > 0) {{
+                bodyHtml += '<div class="episodes-section"><h3 style="margin-bottom:15px;font-size:1.1rem;">Episódios</h3>';
                 bodyHtml += '<div class="episode-list">';
                 item.episodes.forEach(function(ep, index) {{
                     var safeTitle = (ep.title || '').replace(/"/g, '');
@@ -990,7 +1012,7 @@ def generate_html_with_correct_paths(base_dir, data):
                     bodyHtml += ' data-index="' + index + '">';
                     bodyHtml += '<div class="episode-number">' + (index + 1) + '</div>';
                     bodyHtml += '<div class="episode-info"><div class="episode-title">' + (ep.title || item.title) + '</div>';
-                    bodyHtml += (category === 'tv' ? '<div>🔴 Ao Vivo</div>' : '') + '</div></div>';
+                    bodyHtml += '</div></div>';
                 }});
                 bodyHtml += '</div></div>';
             }}
@@ -1011,13 +1033,21 @@ def generate_html_with_correct_paths(base_dir, data):
 
             if (action === 'play-first') {{
                 playFirstEpisode(cat, id);
+            }} else if (action === 'play-canal') {{
+                // Troca de canal TV direto da lista
+                var canalUrl   = el.dataset.url;
+                var canalId    = el.dataset.id;
+                var canalTitle = el.dataset.title || '';
+                // Fechar modal e tocar
+                document.getElementById('modal').style.display = 'none';
+                playEpisode(canalUrl, canalTitle, canalId, 'tv', 0);
             }} else if (action === 'play-ep') {{
-                // data-category e data-id estão no próprio episode-item
-                var epCat = el.dataset.category;
-                var epId  = el.dataset.itemid;
-                var epUrl = el.dataset.url;
+                var epCat   = el.dataset.category;
+                var epId    = el.dataset.itemid;
+                var epUrl   = el.dataset.url;
                 var epTitle = el.dataset.title || '';
                 var epIndex = parseInt(el.dataset.index) || 0;
+                document.getElementById('modal').style.display = 'none';
                 playEpisode(epUrl, item_title_from(epCat, epId) + ' - ' + epTitle,
                             epId, epCat, epIndex);
             }}
