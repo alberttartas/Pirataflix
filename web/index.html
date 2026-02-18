@@ -346,31 +346,43 @@
 
             var posterUrl = getPoster(item, category);
 
-            var headerHtml = '<div class="modal-backdrop" style="background-image:url('' + posterUrl + '')"></div>';
+            // Usar &quot; para aspas dentro de atributo style — sem aspas simples aninhadas
+            var headerHtml = '<div class="modal-backdrop" style="background-image:url(&quot;' + posterUrl + '&quot;)"></div>';
             if (category === 'tv') {
                 headerHtml += '<div style="position:absolute;top:30px;left:30px;background:#e50914;color:white;padding:8px 16px;border-radius:4px;font-weight:bold;">🔴 AO VIVO</div>';
             }
+            var playLabel = category === 'tv' ? 'Assistir ao Vivo' : 'Assistir';
             headerHtml += '<button class="play-button" data-action="play-first" data-category="' + category + '" data-id="' + itemId + '" style="position:absolute;bottom:30px;left:30px;">';
-            headerHtml += '<i class="fas fa-play"></i> ' + (category === 'tv' ? 'Assistir ao Vivo' : 'Assistir') + '</button>';
+            headerHtml += '<i class="fas fa-play"></i> ' + playLabel + '</button>';
 
+            var typeLabel = category === 'filmes' ? 'Filme' : (category === 'tv' ? 'Canal de TV' : 'Série');
             var bodyHtml = '<h2 class="modal-title">' + item.title + '</h2>';
             bodyHtml += '<div class="modal-meta">';
-            bodyHtml += '<span>' + (category === 'filmes' ? 'Filme' : category === 'tv' ? 'Canal de TV' : 'Série') + '</span>';
+            bodyHtml += '<span>' + typeLabel + '</span>';
             if (category === 'tv') bodyHtml += '<span>🔴 Ao Vivo</span>';
-            if (item.episodes) bodyHtml += '<span>' + item.episodes.length + (category === 'tv' ? ' canais' : ' episódios') + '</span>';
+            if (item.episodes) {
+                var epUnit = category === 'tv' ? ' canais' : ' episódios';
+                bodyHtml += '<span>' + item.episodes.length + epUnit + '</span>';
+            }
             bodyHtml += '</div>';
             bodyHtml += '<button class="play-button" data-action="play-first" data-category="' + category + '" data-id="' + itemId + '">';
-            bodyHtml += '<i class="fas fa-play"></i> ' + (category === 'tv' ? 'Assistir ao Vivo' : 'Assistir') + '</button>';
+            bodyHtml += '<i class="fas fa-play"></i> ' + playLabel + '</button>';
 
             if (item.episodes && item.episodes.length > 0) {
-                var label = category === 'tv' ? 'Canais Disponíveis' : 'Episódios';
-                bodyHtml += '<div class="episodes-section"><h3 style="margin-bottom:20px;font-size:1.3rem;">' + label + '</h3>';
+                var sectionLabel = category === 'tv' ? 'Canais Disponíveis' : 'Episódios';
+                bodyHtml += '<div class="episodes-section"><h3 style="margin-bottom:20px;font-size:1.3rem;">' + sectionLabel + '</h3>';
                 bodyHtml += '<div class="episode-list">';
                 item.episodes.forEach(function(ep, index) {
-                    bodyHtml += '<div class="episode-item" data-action="play-ep" data-url="' + ep.url + '" data-title="' + (ep.title || '').replace(/"/g, '') + '" data-itemid="' + itemId + '" data-category="' + category + '" data-index="' + index + '">';
+                    var safeTitle = (ep.title || '').replace(/"/g, '');
+                    bodyHtml += '<div class="episode-item" data-action="play-ep"';
+                    bodyHtml += ' data-url="' + ep.url + '"';
+                    bodyHtml += ' data-title="' + safeTitle + '"';
+                    bodyHtml += ' data-itemid="' + itemId + '"';
+                    bodyHtml += ' data-category="' + category + '"';
+                    bodyHtml += ' data-index="' + index + '">';
                     bodyHtml += '<div class="episode-number">' + (index + 1) + '</div>';
                     bodyHtml += '<div class="episode-info"><div class="episode-title">' + (ep.title || item.title) + '</div>';
-                    bodyHtml += '<div>' + (category === 'tv' ? '🔴 Ao Vivo' : '') + '</div></div></div>';
+                    bodyHtml += (category === 'tv' ? '<div>🔴 Ao Vivo</div>' : '') + '</div></div>';
                 });
                 bodyHtml += '</div></div>';
             }
