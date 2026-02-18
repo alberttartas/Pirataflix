@@ -988,7 +988,7 @@ def generate_html_with_correct_paths(base_dir, data):
                     bodyHtml += ' data-title="' + canal.title.replace(/"/g, '') + '"';
                     bodyHtml += ' data-category="tv">';
                     if (canalPoster) {{
-                        bodyHtml += '<img src="' + canalPoster + '" style="width:40px;height:40px;object-fit:contain;background:#222;border-radius:4px;flex-shrink:0;" onerror="this.style.display='none'">';
+                       bodyHtml += '<img src="' + canalPoster + '" style="width:40px;height:40px;object-fit:contain;background:#222;border-radius:4px;flex-shrink:0;" onerror="this.style.display=\'none\'">';
                     }} else {{
                         bodyHtml += '<div class="episode-number">📺</div>';
                     }}
@@ -1121,3 +1121,4 @@ def generate_html_with_correct_paths(base_dir, data):
 
 if __name__ == "__main__":
     build_vod_with_direct_capas()
+
