@@ -1435,10 +1435,10 @@ def generate_html_with_correct_paths(base_dir, data):
         }});
     }}
     
-    // Inicializar carrosséis
-function initCarousels() {
-    setTimeout(function() {
-        $('.owl-carousel').each(function() {
+   // Inicializar carrosséis
+function initCarousels() {{
+    setTimeout(function() {{
+        $('.owl-carousel').each(function() {{
             const $carousel = $(this);
             const carouselId = $carousel.attr('id');
             
@@ -1446,58 +1446,58 @@ function initCarousels() {
             let items = 7;
             let margin = 10;
             
-            if (carouselId === 'carousel-continue') {
+            if (carouselId === 'carousel-continue') {{
                 items = 8;
                 margin = 8;
-            }
+            }}
             
-            if (!$carousel.data('owlCarousel')) {
-                $carousel.owlCarousel({
+            if (!$carousel.data('owlCarousel')) {{
+                $carousel.owlCarousel({{
                     items: items,
                     margin: margin,
                     loop: false,
                     nav: false,
                     dots: false,
-                    responsive: {
-                        0: { items: carouselId === 'carousel-continue' ? 3 : 2 },
-                        480: { items: carouselId === 'carousel-continue' ? 4 : 3 },
-                        640: { items: carouselId === 'carousel-continue' ? 5 : 4 },
-                        768: { items: carouselId === 'carousel-continue' ? 6 : 5 },
-                        1024: { items: carouselId === 'carousel-continue' ? 7 : 6 },
-                        1280: { items: carouselId === 'carousel-continue' ? 8 : 7 }
-                    },
-                    onInitialized: function() {
+                    responsive: {{
+                        0: {{ items: carouselId === 'carousel-continue' ? 3 : 2 }},
+                        480: {{ items: carouselId === 'carousel-continue' ? 4 : 3 }},
+                        640: {{ items: carouselId === 'carousel-continue' ? 5 : 4 }},
+                        768: {{ items: carouselId === 'carousel-continue' ? 6 : 5 }},
+                        1024: {{ items: carouselId === 'carousel-continue' ? 7 : 6 }},
+                        1280: {{ items: carouselId === 'carousel-continue' ? 8 : 7 }}
+                    }},
+                    onInitialized: function() {{
                         console.log('✅ Carrossel iniciado:', carouselId);
-                    }
-                });
-            }
+                    }}
+                }});
+            }}
             
             // Remover eventos antigos
-            $(`.next-${carouselId}`).off('click');
-            $(`.prev-${carouselId}`).off('click');
+            $(`.next-${{carouselId}}`).off('click');
+            $(`.prev-${{carouselId}}`).off('click');
             
             // Botões de navegação
-            $(`.next-${carouselId}`).on('click', function(e) {
+            $(`.next-${{carouselId}}`).on('click', function(e) {{
                 e.preventDefault();
                 $carousel.trigger('next.owl.carousel');
-            });
+            }});
             
-            $(`.prev-${carouselId}`).on('click', function(e) {
+            $(`.prev-${{carouselId}}`).on('click', function(e) {{
                 e.preventDefault();
                 $carousel.trigger('prev.owl.carousel');
-            });
-        });
+            }});
+        }});
         
         // CONFIGURAÇÃO ESPECIAL PARA O CARROSSEL CONTINUAR
-        $('.prev-continue').off('click').on('click', function(e) {
+                $('.prev-continue').off('click').on('click', function(e) {{
             e.preventDefault();
             $('#carousel-continue').trigger('prev.owl.carousel');
-        });
+        }});
         
-        $('.next-continue').off('click').on('click', function(e) {
+        $('.next-continue').off('click').on('click', function(e) {{
             e.preventDefault();
             $('#carousel-continue').trigger('next.owl.carousel');
-        });
+        }});
         
     }, 300);
 }
@@ -1505,7 +1505,7 @@ function initCarousels() {
     }}
     
     // Exibir conteúdo
-function displayContent() {
+function displayContent() {{
     const contentDiv = document.getElementById('content');
     let html = '';
     
@@ -1810,6 +1810,7 @@ function displayContent() {
 
 if __name__ == "__main__":
     build_vod_with_direct_capas()
+
 
 
 
