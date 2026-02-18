@@ -578,10 +578,16 @@ def generate_html_with_correct_paths(base_dir, data):
         with open(channels_path, 'r', encoding='utf-8') as f:
             channels_list = json.load(f)
             for canal in channels_list:
-                if 'tvg_logo' in canal and canal['tvg_logo']:
-                    nome_limpo = canal.get('name', canal.get('tvg_name', '')).lower()
-                    nome_limpo = re.sub(r'[^a-z0-9]', '', nome_limpo)
-                    channels_dict[nome_limpo] = canal['tvg_logo']
+                logo = canal.get('tvg_logo', '')
+                if not logo:
+                    continue
+                # Indexar por todos os campos de nome possíveis
+                for campo in ['title', 'name', 'tvg_name', 'tvg_id']:
+                    valor = canal.get(campo, '')
+                    if valor:
+                        chave = re.sub(r'[^a-z0-9]', '', valor.lower())
+                        if chave:
+                            channels_dict[chave] = logo
 
     channels_json = json.dumps(channels_dict)
 
@@ -815,11 +821,18 @@ def generate_html_with_correct_paths(base_dir, data):
         // =====================
         function getPoster(item, category) {{
             if (category === 'tv') {{
+                // 1. Usar tvg_logo direto do item (campo salvo pelo download_iptv.py)
+                if (item.tvg_logo) return item.tvg_logo;
+                // 2. Tentar channelsDict pelo título
                 var key = item.title.toLowerCase().replace(/[^a-z0-9]/g, '');
-                return (window.channelsDict && window.channelsDict[key])
-                    ? window.channelsDict[key]
-                    : RAW_BASE + '/assets/Capas/tv_default.jpg';
+                if (window.channelsDict && window.channelsDict[key]) {{
+                    return window.channelsDict[key];
+                }}
+                // 3. Fallback
+                return RAW_BASE + '/assets/Capas/tv_default.jpg';
             }}
+            // Para filmes/séries: usar poster do item
+            if (item.poster && item.poster.startsWith('http')) return item.poster;
             var file = item.poster ? item.poster.split('/').pop() : 'default.jpg';
             return RAW_BASE + '/assets/Capas/' + file;
         }}
@@ -995,8 +1008,14 @@ def generate_html_with_correct_paths(base_dir, data):
             if (action === 'play-first') {{
                 playFirstEpisode(cat, id);
             }} else if (action === 'play-ep') {{
-                playEpisode(el.dataset.url, item_title_from(cat, id) + ' - ' + el.dataset.title,
-                            id, cat, parseInt(el.dataset.index));
+                // data-category e data-id estão no próprio episode-item
+                var epCat = el.dataset.category;
+                var epId  = el.dataset.itemid;
+                var epUrl = el.dataset.url;
+                var epTitle = el.dataset.title || '';
+                var epIndex = parseInt(el.dataset.index) || 0;
+                playEpisode(epUrl, item_title_from(epCat, epId) + ' - ' + epTitle,
+                            epId, epCat, epIndex);
             }}
         }});
 
