@@ -1374,6 +1374,7 @@ def generate_html_with_correct_paths(base_dir, data):
     <script>
     // Dicionário de logos dos canais (carregado do Python)
     window.channelsDict = {channels_json};
+    console.log('📺 Canais carregados:', Object.keys(window.channelsDict).length);
     
     // Dados carregados
     window.vodData = {{}};
@@ -1545,45 +1546,7 @@ function displayContent() {{
         html += `</div></section>`;
     }}
     
-    // ===== DADOS DE CONTINUAR ASSISTINDO (EXEMPLO) =====
-    function getContinueWatching() {{
-        // ESTES SÃO DADOS DE EXEMPLO
-        const exemplo = [
-            {{
-                id: 'todo_mundo_odeia_o_chris',
-                title: 'Todo Mundo Odeia o Chris',
-                poster: `${{RAW_BASE}}/assets/Capas/todo_mundo_odeia_o_chris.jpg`,
-                category: 'series',
-                episode: 'T3 E12 • O Casamento',
-                progress: 65,
-                timeLeft: '22 min'
-            }},
-            {{
-                id: 'avenida_brasil',
-                title: 'Avenida Brasil',
-                poster: `${{RAW_BASE}}/assets/Capas/avenida_brasil.jpg`,
-                category: 'novelas',
-                episode: 'Cap. 145',
-                progress: 30,
-                timeLeft: '35 min'
-            }},
-            {{
-                id: 'dragon_ball_z',
-                title: 'Dragon Ball Z',
-                poster: `${{RAW_BASE}}/assets/Capas/dragon_ball_z.jpg`,
-                category: 'animes',
-                episode: 'Ep. 152 • Freeza',
-                progress: 80,
-                timeLeft: '12 min'
-            }}
-        ];
         
-        // TODO: Substituir por dados reais do usuário
-        // return JSON.parse(localStorage.getItem('continueWatching')) || [];
-        
-        return exemplo;
-    }}
-    
     // ===== CATEGORIAS NORMAIS =====
     const categoryOrder = ['filmes', 'series', 'novelas', 'animes', 'infantil', 'tv'];
     const categoryNames = {{
@@ -1623,6 +1586,13 @@ function displayContent() {{
                 </div>
             </div>
             <div id="${{carouselId}}" class="owl-carousel">`;
+            
+          // ===== DEBUG =====
+        console.log('📺 Categorias disponíveis:', Object.keys(vodData));
+        console.log('📺 Dados da TV:', vodData.tv ? vodData.tv.length : 0);
+        if (vodData.tv && vodData.tv.length > 0) {
+            console.log('📺 Primeiro canal:', vodData.tv[0]);
+        }
         
         items.forEach(item => {{
             let poster = '';
@@ -1808,3 +1778,4 @@ function displayContent() {{
 
 if __name__ == "__main__":
     build_vod_with_direct_capas()
+
