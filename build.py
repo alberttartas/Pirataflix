@@ -1250,55 +1250,55 @@ def generate_html_with_correct_paths(base_dir, data):
             background: #f40612;
         }}
         
-                /* Responsive */
-        @media (max-width: 768px) {
-            .header {
+                                /* Responsive */
+        @media (max-width: 768px) {{
+            .header {{
                 padding: 20px;
-            }
+            }}
             
-            .logo {
+            .logo {{
                 font-size: 2rem;
-            }
+            }}
             
-            .category-section {
+            .category-section {{
                 padding: 0 20px;
-            }
+            }}
             
-            .item-poster {
+            .item-poster {{
                 height: 260px;
-            }
+            }}
             
-            .modal-content {
+            .modal-content {{
                 margin: 20px;
-            }
+            }}
             
-            .modal-header {
+            .modal-header {{
                 height: 300px;
-            }
-        }
+            }}
+        }}
         
         /* ===== SEÇÃO CONTINUAR ASSISTINDO ===== */
-        .continue-watching .item-poster {
+        .continue-watching .item-poster {{
             height: 180px !important;  /* Altura reduzida */
-        }
+        }}
         
-        .continue-watching .item-card {
+        .continue-watching .item-card {{
             width: 160px !important;   /* Largura reduzida */
-        }
+        }}
         
-        .continue-watching .item-info {
+        .continue-watching .item-info {{
             padding: 10px;
-        }
+        }}
         
-        .continue-watching .item-title {
+        .continue-watching .item-title {{
             font-size: 0.9rem;
-        }
+        }}
         
-        .continue-watching .item-meta {
+        .continue-watching .item-meta {{
             font-size: 0.7rem;
-        }
+        }}
         
-        .continue-watching .progress-bar {
+        .continue-watching .progress-bar {{
             position: absolute;
             bottom: 0;
             left: 0;
@@ -1306,15 +1306,15 @@ def generate_html_with_correct_paths(base_dir, data):
             height: 4px;
             background: rgba(255,255,255,0.3);
             z-index: 3;
-        }
+        }}
         
-        .continue-watching .progress-fill {
+        .continue-watching .progress-fill {{
             height: 100%;
             background: #e50914;
             width: 0%;
-        }
+        }}
         
-        .continue-watching .watch-badge {
+        .continue-watching .watch-badge {{
             position: absolute;
             top: 10px;
             left: 10px;
@@ -1326,18 +1326,18 @@ def generate_html_with_correct_paths(base_dir, data):
             font-weight: bold;
             z-index: 3;
             border-left: 3px solid #e50914;
-        }
+        }}
         
         /* Responsivo para mobile */
-        @media (max-width: 768px) {
-            .continue-watching .item-poster {
+        @media (max-width: 768px) {{
+            .continue-watching .item-poster {{
                 height: 120px !important;
-            }
+            }}
             
-            .continue-watching .item-card {
+            .continue-watching .item-card {{
                 width: 120px !important;
-            }
-        }
+            }}
+        }}
     </style> 
 </head>
 <body>
@@ -1810,6 +1810,7 @@ function displayContent() {
 
 if __name__ == "__main__":
     build_vod_with_direct_capas()
+
 
 
 
