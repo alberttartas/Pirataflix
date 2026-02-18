@@ -1,0 +1,295 @@
+/* ===== PLAYER AVANÇADO DE TV ===== */
+.tv-player-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    z-index: 2000;
+    display: none;
+}
+
+.tv-player-container.active {
+    display: block;
+}
+
+#tvPlayer {
+    width: 100%;
+    height: 100%;
+    background: black;
+}
+
+.tv-controls {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+    padding: 30px 20px 20px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    z-index: 2001;
+}
+
+.tv-player-container:hover .tv-controls,
+.tv-controls:hover {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.tv-controls-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 0 20px;
+}
+
+.tv-channel-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+}
+
+.tv-channel-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    background: rgba(0,0,0,0.5);
+    border-radius: 8px;
+    padding: 5px;
+}
+
+.tv-channel-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.tv-channel-next {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: rgba(0,0,0,0.6);
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.tv-channel-next:hover {
+    background: rgba(229, 9, 20, 0.8);
+}
+
+.tv-next-thumb {
+    width: 80px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.tv-next-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.tv-next-label {
+    font-size: 0.8rem;
+    color: #b3b3b3;
+}
+
+.tv-next-title {
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+}
+
+.tv-controls-bottom {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+
+.tv-control-btn {
+    background: rgba(255,255,255,0.2);
+    border: none;
+    color: white;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 1.2rem;
+}
+
+.tv-control-btn:hover {
+    background: #e50914;
+    transform: scale(1.1);
+}
+
+.tv-progress-bar {
+    flex: 1;
+    height: 5px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    min-width: 200px;
+}
+
+.tv-progress-fill {
+    height: 100%;
+    background: #e50914;
+    border-radius: 5px;
+    width: 0%;
+    position: relative;
+}
+
+.tv-progress-fill::after {
+    content: '';
+    position: absolute;
+    right: -6px;
+    top: -4px;
+    width: 12px;
+    height: 12px;
+    background: #e50914;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tv-progress-bar:hover .tv-progress-fill::after {
+    opacity: 1;
+}
+
+.tv-time {
+    color: white;
+    font-size: 0.9rem;
+    min-width: 100px;
+    text-align: center;
+}
+
+.tv-volume-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 150px;
+}
+
+.tv-volume-slider {
+    width: 100px;
+    height: 5px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+}
+
+.tv-volume-fill {
+    height: 100%;
+    background: #e50914;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.tv-channel-list {
+    position: absolute;
+    right: 20px;
+    top: 100px;
+    width: 300px;
+    background: rgba(0,0,0,0.95);
+    border-radius: 8px;
+    padding: 10px;
+    max-height: 70vh;
+    overflow-y: auto;
+    z-index: 2002;
+    display: none;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.tv-channel-list.active {
+    display: block;
+}
+
+.tv-channel-list-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.tv-channel-list-item:hover {
+    background: #e50914;
+}
+
+.tv-channel-list-item.active {
+    background: #e50914;
+    border-left: 3px solid white;
+}
+
+.tv-channel-list-logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.tv-channel-list-title {
+    flex: 1;
+    font-size: 0.9rem;
+    color: white;
+}
+
+.tv-channel-list-now {
+    font-size: 0.7rem;
+    color: #b3b3b3;
+}
+
+.tv-controls-small {
+    display: flex;
+    gap: 10px;
+    margin-left: auto;
+}
+
+@media (max-width: 768px) {
+    .tv-controls-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .tv-channel-next {
+        width: 100%;
+    }
+    
+    .tv-controls-bottom {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .tv-volume-control {
+        min-width: 120px;
+    }
+    
+    .tv-channel-list {
+        width: 250px;
+        right: 10px;
+    }
+    
+    .tv-controls-small {
+        margin-left: 0;
+        justify-content: center;
+    }
+}
