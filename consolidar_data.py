@@ -6,6 +6,47 @@ SEM backups, SEM relatórios, apenas o essencial
 import json
 from pathlib import Path
 
+def verificar_categoria_tv(data):
+    """Verifica se os canais de TV estão na categoria correta"""
+    
+    # Verificar se há itens de TV em Novelas
+    itens_movidos = 0
+    
+    if 'novelas' in data:
+        # Procurar itens que parecem ser de TV
+        novos_tv = []
+        novelas_limpas = []
+        
+        for item in data['novelas']:
+            # Verificar se parece ser TV (nome contém 'iptv' ou é um canal)
+            titulo = item.get('title', '').lower()
+            if 'iptv' in titulo or titulo.startswith('tv ') or 'canal' in titulo:
+                # Mover para TV
+                # Garantir que o grupo está correto
+                item['group'] = "📺 TV Ao Vivo"
+                novos_tv.append(item)
+                itens_movidos += 1
+                print(f"   📺 Movendo de Novelas para TV: {item.get('title')}")
+            else:
+                novelas_limpas.append(item)
+        
+        # Atualizar categorias
+        data['novelas'] = novelas_limpas
+        if 'tv' not in data:
+            data['tv'] = []
+        data['tv'].extend(novos_tv)
+    
+    # Verificar se há canais com group-title TV
+    if 'tv' in data:
+        for canal in data['tv']:
+            # Garantir que o grupo está correto
+            canal['group'] = "📺 TV Ao Vivo"
+    
+    if itens_movidos > 0:
+        print(f"   ✅ {itens_movidos} itens movidos de Novelas para TV")
+    
+    return data
+
 def consolidate_data():
     print("="*60)
     print("🔄 CONSOLIDANDO DADOS NO DATA.JSON")
@@ -29,6 +70,9 @@ def consolidate_data():
     if data_json.exists():
         with open(data_json, 'r', encoding='utf-8') as f:
             data_antigo = json.load(f)
+        
+        # 🔥 VERIFICAR E CORRIGIR CATEGORIAS
+        data_antigo = verificar_categoria_tv(data_antigo)
         
         # 🔥 PASSO 2: GARANTIR QUE TODAS AS CATEGORIAS EXISTEM
         data = estrutura_padrao.copy()
@@ -92,6 +136,9 @@ def consolidate_data():
     
     # 🔥 PASSO 4: PROCESSAR CADA CANAL
     for canal in tv_channels:
+        # Garantir que o grupo está correto
+        canal['group'] = "📺 TV Ao Vivo"
+        
         url_principal = canal.get('url', '')
         
         # Verificar se URL já existe em filmes/séries
@@ -180,22 +227,20 @@ def verificar_duplicatas():
     
     urls_vistas = set()
     duplicatas = 0
+    exemplo_url = None
     
     for url in todas_urls:
         if url in urls_vistas:
             duplicatas += 1
+            if not exemplo_url:
+                exemplo_url = url
         else:
             urls_vistas.add(url)
     
     if duplicatas > 0:
         print(f"\n⚠️ ATENÇÃO: {duplicatas} URLs duplicadas encontradas!")
-        # Mostrar algumas duplicatas como exemplo
-        urls_vistas.clear()
-        for url in todas_urls:
-            if url in urls_vistas:
-                print(f"   Exemplo: {url[:80]}...")
-                break
-            urls_vistas.add(url)
+        if exemplo_url:
+            print(f"   Exemplo: {exemplo_url[:80]}...")
     else:
         print(f"\n✅ Nenhuma duplicata encontrada!")
 
