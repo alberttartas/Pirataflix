@@ -1503,14 +1503,22 @@ function initCarousels() {{
     }}, 300);
 }}
     
-    // Exibir conteúdo
-function displayContent() {{
+   
+// Exibir conteúdo
+function displayContent() {
     const contentDiv = document.getElementById('content');
     let html = '';
     
+    // ===== DADOS REAIS DE CONTINUAR ASSISTINDO =====
+    function getContinueWatching() {
+        // 🔥 CARREGUE SEUS DADOS REAIS AQUI
+        const saved = localStorage.getItem('continueWatching');
+        return saved ? JSON.parse(saved) : [];
+    }
+    
     // ===== SEÇÃO CONTINUAR ASSISTINDO =====
     const continueWatching = getContinueWatching();
-    if (continueWatching.length > 0) {{
+    if (continueWatching.length > 0) {
         html += `
         <section class="category-section continue-watching">
             <div class="category-header">
@@ -1524,29 +1532,28 @@ function displayContent() {{
             </div>
             <div id="carousel-continue" class="owl-carousel">`;
         
-        continueWatching.forEach(item => {{
+        continueWatching.forEach(item => {
             const progress = item.progress || 45;
             const timeLeft = item.timeLeft || "45 min restantes";
             
             html += `
-            <div class="item-card" onclick="openModal('${{item.category}}', '${{item.id}}')">
-                <img src="${{item.poster}}" alt="${{item.title}}" class="item-poster"
-                     onerror="this.onerror=null; this.src='${{RAW_BASE}}/assets/Capas/default.jpg';">
+            <div class="item-card" onclick="openModal('${item.category}', '${item.id}')">
+                <img src="${item.poster}" alt="${item.title}" class="item-poster"
+                     onerror="this.onerror=null; this.src='${RAW_BASE}/assets/Capas/default.jpg';">
                 <div class="watch-badge">⏯️ Continuar</div>
                 <div class="progress-bar">
-                    <div class="progress-fill" style="width: ${{progress}}%;"></div>
+                    <div class="progress-fill" style="width: ${progress}%;"></div>
                 </div>
                 <div class="item-info">
-                    <div class="item-title">${{item.title}}</div>
-                    <div class="item-meta">${{item.episode}} • ${{timeLeft}}</div>
+                    <div class="item-title">${item.title}</div>
+                    <div class="item-meta">${item.episode} • ${timeLeft}</div>
                 </div>
             </div>`;
-        }});
+        });
         
         html += `</div></section>`;
-    }}
+    }
     
-        
     // ===== CATEGORIAS NORMAIS =====
     const categoryOrder = ['filmes', 'series', 'novelas', 'animes', 'infantil', 'tv'];
     const categoryNames = {{
@@ -1780,3 +1787,4 @@ items.forEach(item => {{
 
 if __name__ == "__main__":
     build_vod_with_direct_capas()
+
