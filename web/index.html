@@ -43,7 +43,7 @@
         .item-card:hover { transform: scale(1.05); z-index: 10; }
         .item-card:hover .item-poster { opacity: 0.5; }
         .item-card:hover .item-info { opacity: 1; }
-        .item-poster { width: 100%; height: 320px; object-fit: cover; display: block; transition: opacity 0.3s; }
+        .item-poster { width: 100%; height: 320px; object-fit: contain; background: #0a0a0a; display: block; transition: opacity 0.3s; }
         .item-info {
             position: absolute; bottom: 0; left: 0; right: 0;
             background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
@@ -100,11 +100,11 @@
             .header { padding: 20px; }
             .logo { font-size: 2rem; }
             .category-section { padding: 0 20px; }
-            .item-poster { height: 260px; }
+            .item-poster { height: 260px; object-fit: contain; background: #0a0a0a; }
             .modal-content { margin: 20px; }
             .modal-header { height: 300px; }
         }
-        .continue-watching .item-poster { height: 180px !important; }
+        .continue-watching .item-poster { height: 180px !important; object-fit: contain; background: #0a0a0a; }
         .continue-watching .progress-bar-wrap {
             position: absolute; bottom: 0; left: 0; width: 100%;
             height: 4px; background: rgba(255,255,255,0.3); z-index: 3;
@@ -224,17 +224,13 @@
         // =====================
         function getPoster(item, category) {
             if (category === 'tv') {
-                // 1. Usar tvg_logo direto do item (campo salvo pelo download_iptv.py)
-                if (item.tvg_logo) return item.tvg_logo;
-                // 2. Tentar channelsDict pelo título
-                var key = item.title.toLowerCase().replace(/[^a-z0-9]/g, '');
-                if (window.channelsDict && window.channelsDict[key]) {
-                    return window.channelsDict[key];
-                }
-                // 3. Fallback
+                // tvg_logo vem direto do channels.json/data.json
+                if (item.tvg_logo && item.tvg_logo.startsWith('http')) return item.tvg_logo;
+                // Fallback channelsDict
+                var key = (item.title || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+                if (window.channelsDict && window.channelsDict[key]) return window.channelsDict[key];
                 return RAW_BASE + '/assets/Capas/tv_default.jpg';
             }
-            // Para filmes/séries: usar poster do item
             if (item.poster && item.poster.startsWith('http')) return item.poster;
             var file = item.poster ? item.poster.split('/').pop() : 'default.jpg';
             return RAW_BASE + '/assets/Capas/' + file;
@@ -292,7 +288,7 @@
             };
             var categoryPages = {
                 filmes: 'filmes.html', series: 'series.html', novelas: 'novelas.html',
-                animes: 'animes.html', infantil: 'infantil.html', tv: 'tv.html'
+                animes: 'animes.html', infantil: 'infantil.html', tv: '#tv'
             };
 
             categoryOrder.forEach(function(category) {
@@ -311,14 +307,16 @@
                 html += '</div></div>';
                 html += '<div id="' + carouselId + '" class="owl-carousel">';
 
-                items.forEach(function(item) {
+                items.forEach(function(item, idx) {
                     var poster = getPoster(item, category);
                     var episodeCount = item.episodes ? item.episodes.length : 0;
                     var meta = category === 'filmes' ? 'Filme'
                              : category === 'tv' ? '📡 Ao Vivo'
                              : (item.seasons && item.seasons.length > 1) ? item.seasons.length + ' temporadas'
                              : episodeCount + ' episódios';
-                    html += '<div class="item-card" data-category="' + category + '" data-id="' + item.id + '">';
+                    // Para TV: usar índice como id (canais não têm campo 'id')
+                    var itemKey = (category === 'tv') ? String(idx) : item.id;
+                    html += '<div class="item-card" data-category="' + category + '" data-id="' + itemKey + '">';
                     html += safeImg(poster, item.title);
                     html += '<div class="item-info">';
                     html += '<div class="item-title">' + item.title + '</div>';
@@ -348,7 +346,13 @@
         function openModal(category, itemId) {
             var items = window.vodData[category];
             if (!items) return;
-            var item = items.find(function(i) { return i.id === itemId; });
+            var item;
+            if (category === 'tv') {
+                // Canais de TV não têm campo 'id' — usar índice
+                item = items[parseInt(itemId)];
+            } else {
+                item = items.find(function(i) { return i.id === itemId; });
+            }
             if (!item) return;
 
             var posterUrl = getPoster(item, category);
@@ -425,17 +429,27 @@
         function item_title_from(category, itemId) {
             var items = window.vodData[category];
             if (!items) return '';
-            var item = items.find(function(i) { return i.id === itemId; });
+            var item = (category === 'tv')
+                ? items[parseInt(itemId)]
+                : items.find(function(i) { return i.id === itemId; });
             return item ? item.title : '';
         }
 
         function playFirstEpisode(category, itemId) {
             var items = window.vodData[category];
             if (!items) return;
-            var item = items.find(function(i) { return i.id === itemId; });
+            var item;
+            if (category === 'tv') {
+                item = items[parseInt(itemId)];
+            } else {
+                item = items.find(function(i) { return i.id === itemId; });
+            }
             if (!item) return;
             if (item.episodes && item.episodes.length > 0) {
-                playEpisode(item.episodes[0].url, item.title + ' - ' + item.episodes[0].title, itemId, category, 0);
+                playEpisode(item.episodes[0].url, item.title + ' - ' + (item.episodes[0].title || 'AO VIVO'), itemId, category, 0);
+            } else if (item.url) {
+                // Canal simples com URL direta
+                playEpisode(item.url, item.title, itemId, category, 0);
             } else if (item.seasons && item.seasons.length > 0 && item.seasons[0].episodes.length > 0) {
                 var ep = item.seasons[0].episodes[0];
                 playEpisode(ep.url, item.title + ' - Temp 1 - ' + ep.title, itemId, category, 0);
