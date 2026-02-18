@@ -8,6 +8,7 @@ from datetime import datetime
 import sys
 import os
 import re
+import shutil
 
 print("="*60)
 print("🚀 SCRIPT DOWNLOAD IPTV INICIADO")
@@ -35,6 +36,34 @@ def criar_estrutura_pastas():
             print(f"   ✅ Criada: {nome}")
     
     return pastas
+
+def limpar_arquivos_tv_errados():
+    """Remove arquivos de TV que foram parar em Novelas"""
+    base_dir = Path(__file__).parent
+    
+    # Pastas para verificar
+    pastas_erradas = [
+        base_dir / "input_auto" / "Novelas",
+        base_dir / "input" / "Novelas"
+    ]
+    
+    removidos = 0
+    
+    for pasta in pastas_erradas:
+        if pasta.exists():
+            # Procurar arquivos de TV (com 'iptv' no nome)
+            for arquivo in pasta.glob("iptv*.m3u"):
+                try:
+                    arquivo.unlink()
+                    print(f"   🗑️ Removido: {pasta.name}/{arquivo.name}")
+                    removidos += 1
+                except Exception as e:
+                    print(f"   ❌ Erro ao remover: {e}")
+    
+    if removidos > 0:
+        print(f"   ✅ {removidos} arquivos de TV removidos das pastas de Novelas")
+    
+    return removidos
 
 def testar_conexao():
     """Testa conexão rapidamente"""
@@ -181,7 +210,7 @@ def criar_channels_json(canais_br, pastas):
             'title': canal['title'],
             'tvg_id': canal['tvg_id'],
             'tvg_logo': canal['tvg_logo'],
-            'group': canal['group'],
+            'group': "📺 TV Ao Vivo",  # FORÇAR GRUPO CORRETO
             'url': canal['url'],
             'episodes': [{
                 'url': canal['url'],
@@ -264,6 +293,9 @@ def download_iptv_sources():
     print("📡 INICIANDO DOWNLOAD - LISTA COMPLETA")
     print("="*60)
     
+    # 🔥 LIMPAR ARQUIVOS ANTES DE COMEÇAR
+    limpar_arquivos_tv_errados()
+    
     if not testar_conexao():
         print("\n❌ Sem conexão. Abortando.")
         return False
@@ -294,7 +326,7 @@ def download_iptv_sources():
     with open(destino_br, 'w', encoding='utf-8') as f:
         f.write("#EXTM3U\n")
         for canal in canais_br:
-            f.write(f'#EXTINF:-1 tvg-id="{canal["tvg_id"]}" tvg-logo="{canal["tvg_logo"]}" group-title="{canal["group"]}",{canal["title"]}\n')
+            f.write(f'#EXTINF:-1 tvg-id="{canal["tvg_id"]}" tvg-logo="{canal["tvg_logo"]}" group-title="📺 TV Ao Vivo",{canal["title"]}\n')
             f.write(f"{canal['url']}\n\n")
     
     print(f"✅ Lista filtrada salva: {destino_br}")
