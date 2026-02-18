@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIRATAFLIX - TV Ao Vivo</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Arial', sans-serif; background: #141414; color: white; }
+        
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 50px;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            color: #e50914;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        
+        .nav-links { display: flex; gap: 20px; }
+        .nav-link { color: #e5e5e5; text-decoration: none; }
+        .nav-link:hover { color: #fff; }
+        
+        .main-content { padding: 120px 50px 50px; }
+        
+        .page-title {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .items-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        
+        .item-card {
+            border-radius: 4px;
+            overflow: hidden;
+            transition: transform 0.3s;
+            cursor: pointer;
+            position: relative;
+            background: #1f1f1f;
+        }
+        
+        .item-card:hover {
+            transform: scale(1.05);
+            z-index: 10;
+        }
+        
+        .item-poster {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+            background: #1a1a1a;
+            padding: 20px;
+        }
+        
+        .item-title {
+            padding: 15px;
+            font-weight: bold;
+            text-align: center;
+            background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+        }
+        
+        .live-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #e50914;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            animation: pulse 1.5s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 100px 20px;
+            color: #e50914;
+            font-size: 1.2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .header { padding: 20px; }
+            .main-content { padding: 100px 20px 20px; }
+            .page-title { font-size: 1.5rem; }
+            .item-poster { height: 150px; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">PIRATAFLIX</a>
+        <nav class="nav-links">
+            <a href="index.html" class="nav-link">← Voltar</a>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="page-title">
+            <h1>📡 TV AO VIVO</h1>
+            <span id="itemCount" style="color: #e50914;"></span>
+        </div>
+        <div class="items-grid" id="itemsGrid">
+            <div class="loading">Carregando canais...</div>
+        </div>
+    </main>
+
+    <script>
+        const RAW_BASE = 'https://raw.githubusercontent.com/alberttartas/Pirataflix/main';
+        let channelsDict = {};
+        
+        async function loadChannels() {
+            try {
+                const response = await fetch('channels.json');
+                const channels = await response.json();
+                
+                channels.forEach(canal => {
+                    if (canal.tvg_logo) {
+                        const nomeLimpo = (canal.name || canal.tvg_name || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+                        channelsDict[nomeLimpo] = canal.tvg_logo;
+                    }
+                });
+            } catch (error) {
+                console.warn('Erro ao carregar channels.json:', error);
+            }
+        }
+        
+        async function loadTV() {
+            try {
+                await loadChannels();
+                
+                const response = await fetch('data.json');
+                const data = await response.json();
+                const canais = data.tv || [];
+                
+                document.getElementById('itemCount').textContent = `${canais.length} canais`;
+                
+                let html = '';
+                canais.forEach(item => {
+                    // Tentar encontrar logo no channelsDict
+                    const nomeLimpo = item.title.toLowerCase().replace(/[^a-z0-9]/g, '');
+                    let logo = channelsDict[nomeLimpo];
+                    
+                    // Se não encontrar, tentar buscar por partes do nome
+                    if (!logo) {
+                        for (let [key, value] of Object.entries(channelsDict)) {
+                            if (nomeLimpo.includes(key) || key.includes(nomeLimpo)) {
+                                logo = value;
+                                break;
+                            }
+                        }
+                    }
+                    
+                    // Fallback para logo padrão
+                    logo = logo || `${RAW_BASE}/assets/Capas/tv_default.jpg`;
+                    
+                    html += `
+                        <div class="item-card" onclick="window.location.href='index.html#tv'">
+                            <img src="${logo}" alt="${item.title}" class="item-poster"
+                                 onerror="this.onerror=null; this.src='${RAW_BASE}/assets/Capas/tv_default.jpg';">
+                            <div class="live-badge">🔴 AO VIVO</div>
+                            <div class="item-title">${item.title}</div>
+                        </div>
+                    `;
+                });
+                
+                document.getElementById('itemsGrid').innerHTML = html || '<p>Nenhum canal encontrado</p>';
+            } catch (error) {
+                document.getElementById('itemsGrid').innerHTML = `<p>Erro: ${error.message}</p>`;
+            }
+        }
+        
+        loadTV();
+    </script>
+</body>
+</html>
