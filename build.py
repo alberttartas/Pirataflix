@@ -497,6 +497,24 @@ def build_vod_with_direct_capas():
         print(f"   📊 Resumo: {copiados} copiados, {ignorados} ignorados")
 
     output = {cat_id: [] for cat_id in categories.values()}
+
+    # ✅ PRESERVAR TV: ler data.json existente e manter a chave 'tv'
+    # O consolidar_data.py já populou 'tv' antes do build.py rodar
+    web_dir = base_dir / "web"
+    web_dir.mkdir(exist_ok=True)
+    json_path = web_dir / "data.json"
+
+    if json_path.exists():
+        try:
+            with open(json_path, 'r', encoding='utf-8') as f:
+                data_existente = json.load(f)
+            tv_canais = data_existente.get('tv', [])
+            if tv_canais:
+                output['tv'] = tv_canais
+                print(f"\n📺 TV carregada do data.json: {len(tv_canais)} canais preservados")
+        except Exception as e:
+            print(f"\n⚠️  Erro ao ler data.json existente: {e}")
+
     print("============================================================")
     print("🎬 SISTEMA VOD - CAPAS DIRETAS DA PASTA")
     print("============================================================")
@@ -519,12 +537,12 @@ def build_vod_with_direct_capas():
             for folder in subfolders:
                 process_series_folder(folder, output[cat_id], cat_folder, cat_id)
 
-    web_dir = base_dir / "web"
-    web_dir.mkdir(exist_ok=True)
-    json_path = web_dir / "data.json"
     with open(json_path, "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
-    print(f"\n✅ JSON salvo em: {json_path}")
+    print(f"\n✅ JSON salvo: {json_path}")
+    print(f"   📺 TV: {len(output.get('tv', []))} canais")
+    print(f"   🎬 Filmes: {len(output.get('filmes', []))}")
+    print(f"   📺 Séries: {len(output.get('series', []))}")
 
     generate_html_with_correct_paths(base_dir, output)
 
