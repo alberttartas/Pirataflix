@@ -1250,33 +1250,95 @@ def generate_html_with_correct_paths(base_dir, data):
             background: #f40612;
         }}
         
-        /* Responsive */
-        @media (max-width: 768px) {{
-            .header {{
+                /* Responsive */
+        @media (max-width: 768px) {
+            .header {
                 padding: 20px;
-            }}
+            }
             
-            .logo {{
+            .logo {
                 font-size: 2rem;
-            }}
+            }
             
-            .category-section {{
+            .category-section {
                 padding: 0 20px;
-            }}
+            }
             
-            .item-poster {{
+            .item-poster {
                 height: 260px;
-            }}
+            }
             
-            .modal-content {{
+            .modal-content {
                 margin: 20px;
-            }}
+            }
             
-            .modal-header {{
+            .modal-header {
                 height: 300px;
-            }}
-        }}
-    </style>
+            }
+        }
+        
+        /* ===== SEÇÃO CONTINUAR ASSISTINDO ===== */
+        .continue-watching .item-poster {
+            height: 180px !important;  /* Altura reduzida */
+        }
+        
+        .continue-watching .item-card {
+            width: 160px !important;   /* Largura reduzida */
+        }
+        
+        .continue-watching .item-info {
+            padding: 10px;
+        }
+        
+        .continue-watching .item-title {
+            font-size: 0.9rem;
+        }
+        
+        .continue-watching .item-meta {
+            font-size: 0.7rem;
+        }
+        
+        .continue-watching .progress-bar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: rgba(255,255,255,0.3);
+            z-index: 3;
+        }
+        
+        .continue-watching .progress-fill {
+            height: 100%;
+            background: #e50914;
+            width: 0%;
+        }
+        
+        .continue-watching .watch-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(0,0,0,0.7);
+            color: #fff;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-size: 0.7rem;
+            font-weight: bold;
+            z-index: 3;
+            border-left: 3px solid #e50914;
+        }
+        
+        /* Responsivo para mobile */
+        @media (max-width: 768px) {
+            .continue-watching .item-poster {
+                height: 120px !important;
+            }
+            
+            .continue-watching .item-card {
+                width: 120px !important;
+            }
+        }
+    </style> 
 </head>
 <body>
     <!-- Header -->
@@ -1374,141 +1436,235 @@ def generate_html_with_correct_paths(base_dir, data):
     }}
     
     // Inicializar carrosséis
-    function initCarousels() {{
-        // Aguarda um momento para garantir que o DOM está pronto
-        setTimeout(function() {{
-            $('.owl-carousel').each(function() {{
-                const $carousel = $(this);
-                const carouselId = $carousel.attr('id');
-                
-                if (!$carousel.data('owlCarousel')) {{ // Evita inicializar duas vezes
-                    $carousel.owlCarousel({{
-                        items: 7,
-                        margin: 10,
-                        loop: false,
-                        nav: false,
-                        dots: false,
-                        responsive: {{
-                            0: {{ items: 2 }},
-                            480: {{ items: 3 }},
-                            640: {{ items: 4 }},
-                            768: {{ items: 5 }},
-                            1024: {{ items: 6 }},
-                            1280: {{ items: 7 }}
-                        }},
-                        onInitialized: function() {{
-                            console.log('✅ Carrossel iniciado:', carouselId);
-                        }}
-                    }});
-                }}
-                
-                // Remover eventos antigos antes de adicionar novos (evita duplicação)
-                $(`.next-${{carouselId}}`).off('click');
-                $(`.prev-${{carouselId}}`).off('click');
-                
-                // Botão PRÓXIMO (seta DIREITA) deve ir para NEXT
-                $(`.next-${{carouselId}}`).on('click', function(e) {{
-                    e.preventDefault();
-                    console.log('➡️ Avançar:', carouselId);
-                    $carousel.trigger('next.owl.carousel');
-                }});
-                
-                // Botão ANTERIOR (seta ESQUERDA) deve ir para PREV
-                $(`.prev-${{carouselId}}`).on('click', function(e) {{
-                    e.preventDefault();
-                    console.log('⬅️ Voltar:', carouselId);
-                    $carousel.trigger('prev.owl.carousel');
-                }});
-            }});
-        }}, 300);
+function initCarousels() {
+    setTimeout(function() {
+        $('.owl-carousel').each(function() {
+            const $carousel = $(this);
+            const carouselId = $carousel.attr('id');
+            
+            // CONFIGURAÇÕES DIFERENTES PARA CONTINUAR ASSISTINDO
+            let items = 7;
+            let margin = 10;
+            
+            if (carouselId === 'carousel-continue') {
+                items = 8;
+                margin = 8;
+            }
+            
+            if (!$carousel.data('owlCarousel')) {
+                $carousel.owlCarousel({
+                    items: items,
+                    margin: margin,
+                    loop: false,
+                    nav: false,
+                    dots: false,
+                    responsive: {
+                        0: { items: carouselId === 'carousel-continue' ? 3 : 2 },
+                        480: { items: carouselId === 'carousel-continue' ? 4 : 3 },
+                        640: { items: carouselId === 'carousel-continue' ? 5 : 4 },
+                        768: { items: carouselId === 'carousel-continue' ? 6 : 5 },
+                        1024: { items: carouselId === 'carousel-continue' ? 7 : 6 },
+                        1280: { items: carouselId === 'carousel-continue' ? 8 : 7 }
+                    },
+                    onInitialized: function() {
+                        console.log('✅ Carrossel iniciado:', carouselId);
+                    }
+                });
+            }
+            
+            // Remover eventos antigos
+            $(`.next-${carouselId}`).off('click');
+            $(`.prev-${carouselId}`).off('click');
+            
+            // Botões de navegação
+            $(`.next-${carouselId}`).on('click', function(e) {
+                e.preventDefault();
+                $carousel.trigger('next.owl.carousel');
+            });
+            
+            $(`.prev-${carouselId}`).on('click', function(e) {
+                e.preventDefault();
+                $carousel.trigger('prev.owl.carousel');
+            });
+        });
+        
+        // CONFIGURAÇÃO ESPECIAL PARA O CARROSSEL CONTINUAR
+        $('.prev-continue').off('click').on('click', function(e) {
+            e.preventDefault();
+            $('#carousel-continue').trigger('prev.owl.carousel');
+        });
+        
+        $('.next-continue').off('click').on('click', function(e) {
+            e.preventDefault();
+            $('#carousel-continue').trigger('next.owl.carousel');
+        });
+        
+    }, 300);
+}
+           
     }}
     
     // Exibir conteúdo
-    function displayContent() {{
-        const contentDiv = document.getElementById('content');
-        let html = '';
-        
-        // Ordem das categorias (AGORA INCLUINDO TV)
-        const categoryOrder = ['filmes', 'series', 'novelas', 'animes', 'infantil', 'tv'];
-        const categoryNames = {{
-            'filmes': '🎬 Filmes',
-            'series': '📺 Séries', 
-            'novelas': '💖 Novelas',
-            'animes': '👻 Animes',
-            'infantil': '🧸 Infantil',
-            'tv': '📡 TV AO VIVO'
-        }};
-        
-        const categoryPages = {{
-            'filmes': 'filmes.html',
-            'series': 'series.html', 
-            'novelas': 'novelas.html',
-            'animes': 'animes.html',
-            'infantil': 'infantil.html',
-            'tv': 'tv.html'
-        }};
-        
-        categoryOrder.forEach(category => {{
-            const items = vodData[category];
-            if (!items || items.length === 0) return;
-            
-            const carouselId = `carousel-${{category}}`;
-            
-            html += `
-            <section class="category-section" id="${{category}}">
-                <div class="category-header">
-                    <h2 class="category-title">${{categoryNames[category]}}</h2>
-                    <div style="display: flex; gap: 10px; align-items: center;">
-                        <div class="nav_items_module">
-                            <a class="nav-btn prev-${{carouselId}}"><i class="fas fa-chevron-left"></i></a>
-                            <a class="nav-btn next-${{carouselId}}"><i class="fas fa-chevron-right"></i></a>
-                        </div>
-                        <a href="${{categoryPages[category]}}" class="see-all-link">Ver Tudo <i class="fas fa-arrow-right"></i></a>
+function displayContent() {
+    const contentDiv = document.getElementById('content');
+    let html = '';
+    
+    // ===== SEÇÃO CONTINUAR ASSISTINDO =====
+    const continueWatching = getContinueWatching();
+    if (continueWatching.length > 0) {
+        html += `
+        <section class="category-section continue-watching">
+            <div class="category-header">
+                <h2 class="category-title">⏯️ Continuar Assistindo</h2>
+                <div style="display: flex; gap: 10px; align-items: center;">
+                    <div class="nav_items_module">
+                        <a class="nav-btn prev-continue"><i class="fas fa-chevron-left"></i></a>
+                        <a class="nav-btn next-continue"><i class="fas fa-chevron-right"></i></a>
                     </div>
                 </div>
-                <div id="${{carouselId}}" class="owl-carousel">`;
-            
-            items.forEach(item => {{
-                // PARA TV: usar logo do channels.json se disponível
-                let poster = '';
-                if (category === 'tv') {{
-                    // Tentar encontrar logo no channelsDict
-                    const nomeLimpo = item.title.toLowerCase().replace(/[^a-z0-9]/g, '');
-                    poster = window.channelsDict?.[nomeLimpo] || `${{RAW_BASE}}/assets/Capas/tv_default.jpg`;
-                }} else {{
-                    const nomeArquivo = item.poster ? item.poster.split('/').pop() : 'default.jpg';
-                    poster = `${{RAW_BASE}}/assets/Capas/${{nomeArquivo}}`;
-                }}
-                
-                const episodeCount = item.episodes ? item.episodes.length : 0;
-                
-                let meta = '';
-                if (category === 'filmes') {{
-                    meta = `Filme`;
-                }} else if (category === 'tv') {{
-                    meta = `📡 Ao Vivo`;
-                }} else if (item.seasons && item.seasons.length > 1) {{
-                    meta = `${{item.seasons.length}} temporadas`;
-                }} else {{
-                    meta = `${{episodeCount}} episódios`;
-                }}
-                
-                html += `
-                <div class="item-card" onclick="openModal('${{category}}', '${{item.id}}')">
-                    <img src="${{poster}}" alt="${{item.title}}" class="item-poster"
-                         onerror="this.onerror=null; this.src='${{RAW_BASE}}/assets/Capas/default.jpg';">
-                    <div class="item-info">
-                        <div class="item-title">${{item.title}}</div>
-                        <div class="item-meta">${{meta}}</div>
-                    </div>
-                </div>`;
-            }});
-            
-            html += `</div></section>`;
-        }});
+            </div>
+            <div id="carousel-continue" class="owl-carousel">`;
         
-        contentDiv.innerHTML = html || '<div class="loading">Nenhum conteúdo encontrado</div>';
-    }}
+        continueWatching.forEach(item => {
+            const progress = item.progress || 45;
+            const timeLeft = item.timeLeft || "45 min restantes";
+            
+            html += `
+            <div class="item-card" onclick="openModal('${item.category}', '${item.id}')">
+                <img src="${item.poster}" alt="${item.title}" class="item-poster"
+                     onerror="this.onerror=null; this.src='${RAW_BASE}/assets/Capas/default.jpg';">
+                <div class="watch-badge">⏯️ Continuar</div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: ${progress}%;"></div>
+                </div>
+                <div class="item-info">
+                    <div class="item-title">${item.title}</div>
+                    <div class="item-meta">${item.episode} • ${timeLeft}</div>
+                </div>
+            </div>`;
+        });
+        
+        html += `</div></section>`;
+    }
+    
+    // ===== DADOS DE CONTINUAR ASSISTINDO (EXEMPLO) =====
+    function getContinueWatching() {
+        // ESTES SÃO DADOS DE EXEMPLO
+        const exemplo = [
+            {
+                id: 'todo_mundo_odeia_o_chris',
+                title: 'Todo Mundo Odeia o Chris',
+                poster: `${RAW_BASE}/assets/Capas/todo_mundo_odeia_o_chris.jpg`,
+                category: 'series',
+                episode: 'T3 E12 • O Casamento',
+                progress: 65,
+                timeLeft: '22 min'
+            },
+            {
+                id: 'avenida_brasil',
+                title: 'Avenida Brasil',
+                poster: `${RAW_BASE}/assets/Capas/avenida_brasil.jpg`,
+                category: 'novelas',
+                episode: 'Cap. 145',
+                progress: 30,
+                timeLeft: '35 min'
+            },
+            {
+                id: 'dragon_ball_z',
+                title: 'Dragon Ball Z',
+                poster: `${RAW_BASE}/assets/Capas/dragon_ball_z.jpg`,
+                category: 'animes',
+                episode: 'Ep. 152 • Freeza',
+                progress: 80,
+                timeLeft: '12 min'
+            }
+        ];
+        
+        // TODO: Substituir por dados reais do usuário
+        // return JSON.parse(localStorage.getItem('continueWatching')) || [];
+        
+        return exemplo;
+    }
+    
+    // ===== CATEGORIAS NORMAIS =====
+    const categoryOrder = ['filmes', 'series', 'novelas', 'animes', 'infantil', 'tv'];
+    const categoryNames = {
+        'filmes': '🎬 Filmes',
+        'series': '📺 Séries', 
+        'novelas': '💖 Novelas',
+        'animes': '👻 Animes',
+        'infantil': '🧸 Infantil',
+        'tv': '📡 TV AO VIVO'
+    };
+    
+    const categoryPages = {
+        'filmes': 'filmes.html',
+        'series': 'series.html', 
+        'novelas': 'novelas.html',
+        'animes': 'animes.html',
+        'infantil': 'infantil.html',
+        'tv': 'tv.html'
+    };
+    
+    categoryOrder.forEach(category => {
+        const items = vodData[category];
+        if (!items || items.length === 0) return;
+        
+        const carouselId = `carousel-${category}`;
+        
+        html += `
+        <section class="category-section" id="${category}">
+            <div class="category-header">
+                <h2 class="category-title">${categoryNames[category]}</h2>
+                <div style="display: flex; gap: 10px; align-items: center;">
+                    <div class="nav_items_module">
+                        <a class="nav-btn prev-${carouselId}"><i class="fas fa-chevron-left"></i></a>
+                        <a class="nav-btn next-${carouselId}"><i class="fas fa-chevron-right"></i></a>
+                    </div>
+                    <a href="${categoryPages[category]}" class="see-all-link">Ver Tudo <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div id="${carouselId}" class="owl-carousel">`;
+        
+        items.forEach(item => {
+            let poster = '';
+            if (category === 'tv') {
+                const nomeLimpo = item.title.toLowerCase().replace(/[^a-z0-9]/g, '');
+                poster = window.channelsDict?.[nomeLimpo] || `${RAW_BASE}/assets/Capas/tv_default.jpg`;
+            } else {
+                const nomeArquivo = item.poster ? item.poster.split('/').pop() : 'default.jpg';
+                poster = `${RAW_BASE}/assets/Capas/${nomeArquivo}`;
+            }
+            
+            const episodeCount = item.episodes ? item.episodes.length : 0;
+            
+            let meta = '';
+            if (category === 'filmes') {
+                meta = `Filme`;
+            } else if (category === 'tv') {
+                meta = `📡 Ao Vivo`;
+            } else if (item.seasons && item.seasons.length > 1) {
+                meta = `${item.seasons.length} temporadas`;
+            } else {
+                meta = `${episodeCount} episódios`;
+            }
+            
+            html += `
+            <div class="item-card" onclick="openModal('${category}', '${item.id}')">
+                <img src="${poster}" alt="${item.title}" class="item-poster"
+                     onerror="this.onerror=null; this.src='${RAW_BASE}/assets/Capas/default.jpg';">
+                <div class="item-info">
+                    <div class="item-title">${item.title}</div>
+                    <div class="item-meta">${meta}</div>
+                </div>
+            </div>`;
+        });
+        
+        html += `</div></section>`;
+    });
+    
+    contentDiv.innerHTML = html || '<div class="loading">Nenhum conteúdo encontrado</div>';
+}
     
     // Abrir modal (MODIFICADO PARA TV)
     function openModal(category, itemId) {{
@@ -1654,6 +1810,7 @@ def generate_html_with_correct_paths(base_dir, data):
 
 if __name__ == "__main__":
     build_vod_with_direct_capas()
+
 
 
 
