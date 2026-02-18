@@ -749,8 +749,8 @@ def build_vod_with_direct_capas():
                         ignorados += 1
         
         print(f"   📊 Resumo: {copiados} copiados, {ignorados} ignorados")
-    # ===============================================#
     
+       
     # O output DEVE vir DEPOIS do bloco if, mas DENTRO da função
     output = {cat_id: [] for cat_id in categories.values()}
     
@@ -1810,6 +1810,7 @@ function displayContent() {
 
 if __name__ == "__main__":
     build_vod_with_direct_capas()
+
 
 
 
