@@ -766,42 +766,46 @@ def generate_html_with_correct_paths(base_dir, data):
     }}
 
         function playEpisode(url, title, itemId, category, episodeIndex) {{
-        // Salvar progresso
-        try {{
-            const items = window.vodData[category];
-            let item;
-            if (category === 'tv') {{
-                item = items[parseInt(itemId)];
-            }} else {{
-                item = items.find(i => i.id === itemId);
-            }}
-            
-            if (item) {{
-                const poster = (category === 'tv') 
-                    ? (item.tvg_logo || window._DEFAULT_POSTER)
-                    : (item.poster ? window.RAW_BASE + '/assets/Capas/' + item.poster.split('/').pop() : window._DEFAULT_POSTER);
-                
-                const episode = category === 'tv' 
-                    ? '🔴 AO VIVO'
-                    : (item.episodes && item.episodes[episodeIndex] 
-                        ? item.episodes[episodeIndex].title 
-                        : `Episódio ${episodeIndex + 1}`);
-                
-                saveProgress(itemId, category, item.title, poster, episode, 0, 
-                            category === 'tv' ? '🔴 Ao Vivo' : '0 min');
-            }}
-        }} catch (e) {{
-            console.error('Erro ao salvar progresso:', e);
-        }}
-        
-        if (typeof window.playWithModernPlayer === 'function') {{
-            window.playWithModernPlayer(url, title, '', itemId, category, episodeIndex);
-            document.getElementById('modal').style.display = 'none';
+    // TRATAMENTO ESPECIAL PARA TV
+    if (category === 'tv') {{
+        if (typeof window.openTVPlayer === 'function') {{
+            window.openTVPlayer(parseInt(itemId));
         }} else {{
             window.open(url, '_blank');
         }}
+        document.getElementById('modal').style.display = 'none';
+        return;
     }}
     
+    // Salvar progresso (apenas para séries/filmes)
+    try {{
+        const items = window.vodData[category];
+        if (!items) return;
+        
+        const item = items.find(i => i.id === itemId);
+        if (!item) return;
+        
+        const poster = (item.poster && item.poster.includes('/')) 
+            ? (RAW_BASE + '/assets/Capas/' + item.poster.split('/').pop())
+            : (item.poster || DEFAULT_POSTER);
+        
+        const episodeTitle = (item.episodes && item.episodes[episodeIndex] 
+            ? item.episodes[episodeIndex].title 
+            : `Episódio ${episodeIndex + 1}`);
+        
+        saveProgress(itemId, category, item.title, poster, episodeTitle, 0, '0 min');
+    }} catch (e) {{
+        console.error('Erro ao salvar progresso:', e);
+    }}
+    
+    if (typeof window.playWithModernPlayer === 'function') {{
+        window.playWithModernPlayer(url, title, '', itemId, category, episodeIndex);
+        document.getElementById('modal').style.display = 'none';
+    }} else {{
+        window.open(url, '_blank');
+    }}
+}}
+
     // ===== SALVAR PROGRESSO =====
     function saveProgress(itemId, category, title, poster, episode, progress, timeLeft) {
         try {
@@ -1177,6 +1181,8 @@ def generate_html_with_correct_paths(base_dir, data):
 
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
     <script src="novo-player.js" defer></script>
+    <link rel="stylesheet" href="tv-player.css">
+    <script src="tv-player.js" defer></script>
 </body>
 </html>'''
 
@@ -1188,3 +1194,4 @@ def generate_html_with_correct_paths(base_dir, data):
 
 if __name__ == "__main__":
     build_vod_with_direct_capas()
+
