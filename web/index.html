@@ -400,6 +400,7 @@
             <a href="#novelas" class="nav-link">Novelas</a>
             <a href="#animes" class="nav-link">Animes</a>
             <a href="#infantil" class="nav-link">Infantil</a>
+            <a href="#tv" class="nav-link">TV Ao Vivo</a>
         </nav>
     </header>
 
@@ -421,6 +422,9 @@
     </div>
 
     <script>
+    // Dicionário de logos dos canais (carregado do Python)
+    window.channelsDict = {"": "https://i.imgur.com/EY2zH06.png"};
+    
     // Dados carregados
     window.vodData = {};
     let currentItem = null;
@@ -428,122 +432,123 @@
     // URLs base
     const RAW_BASE = 'https://raw.githubusercontent.com/alberttartas/Pirataflix/main';
     
-    /// Carregar dados
-async function loadData() {
-    try {
-        const response = await fetch('data.json');
-        window.vodData = await response.json();
-        displayContent();
-        
-        // 🔥 VERIFICAR se Owl Carousel existe antes de chamar
-        setTimeout(function() {
-            if (typeof $.fn.owlCarousel === 'function') {
-                initCarousels();
-                console.log('✅ Carrosséis inicializados');
-            } else {
-                console.error('❌ Owl Carousel não carregado!');
-                // Fallback: scroll manual
-                initFallbackScroll();
-            }
-        }, 500);
-    } catch (error) {
-        document.getElementById('content').innerHTML = 
-            '<div class="error">Erro ao carregar dados: ' + error.message + '</div>';
+    // Carregar dados
+    async function loadData() {
+        try {
+            const response = await fetch('data.json');
+            window.vodData = await response.json();
+            displayContent();
+            
+            // VERIFICAR se Owl Carousel existe antes de chamar
+            setTimeout(function() {
+                if (typeof $.fn.owlCarousel === 'function') {
+                    initCarousels();
+                    console.log('✅ Carrosséis inicializados');
+                } else {
+                    console.error('❌ Owl Carousel não carregado!');
+                    // Fallback: scroll manual
+                    initFallbackScroll();
+                }
+            }, 500);
+        } catch (error) {
+            document.getElementById('content').innerHTML = 
+                '<div class="error">Erro ao carregar dados: ' + error.message + '</div>';
+        }
     }
-}
-
-// Fallback se Owl Carousel falhar
-function initFallbackScroll() {
-    console.log('🔄 Usando fallback de scroll');
-    $('.owl-carousel').css({
-        'display': 'flex',
-        'overflow-x': 'auto',
-        'gap': '10px',
-        'padding': '10px 0'
-    });
     
-    $('.owl-carousel .item-card').css({
-        'flex': '0 0 auto',
-        'width': '220px'
-    });
-    
-    // Botões ainda funcionam com scroll
-    $('[class^="prev-"]').off('click').on('click', function(e) {
-        e.preventDefault();
-        const carouselId = this.className.match(/prev-(carousel-\w+)/)[1];
-        $(`#${carouselId}`).animate({ scrollLeft: '-=300' }, 300);
-    });
-    
-    $('[class^="next-"]').off('click').on('click', function(e) {
-        e.preventDefault();
-        const carouselId = this.className.match(/next-(carousel-\w+)/)[1];
-        $(`#${carouselId}`).animate({ scrollLeft: '+=300' }, 300);
-    });
-}
+    // Fallback se Owl Carousel falhar
+    function initFallbackScroll() {
+        console.log('🔄 Usando fallback de scroll');
+        $('.owl-carousel').css({
+            'display': 'flex',
+            'overflow-x': 'auto',
+            'gap': '10px',
+            'padding': '10px 0'
+        });
+        
+        $('.owl-carousel .item-card').css({
+            'flex': '0 0 auto',
+            'width': '220px'
+        });
+        
+        // Botões ainda funcionam com scroll
+        $('[class^="prev-"]').off('click').on('click', function(e) {
+            e.preventDefault();
+            const carouselId = this.className.match(/prev-(carousel-\w+)/)[1];
+            $(`#${carouselId}`).animate({ scrollLeft: '-=300' }, 300);
+        });
+        
+        $('[class^="next-"]').off('click').on('click', function(e) {
+            e.preventDefault();
+            const carouselId = this.className.match(/next-(carousel-\w+)/)[1];
+            $(`#${carouselId}`).animate({ scrollLeft: '+=300' }, 300);
+        });
+    }
     
     // Inicializar carrosséis
-function initCarousels() {
-    // Aguarda um momento para garantir que o DOM está pronto
-    setTimeout(function() {
-        $('.owl-carousel').each(function() {
-            const $carousel = $(this);
-            const carouselId = $carousel.attr('id');
-            
-            if (!$carousel.data('owlCarousel')) { // Evita inicializar duas vezes
-                $carousel.owlCarousel({
-                    items: 7,
-                    margin: 10,
-                    loop: false,
-                    nav: false,
-                    dots: false,
-                    responsive: {
-                        0: { items: 2 },
-                        480: { items: 3 },
-                        640: { items: 4 },
-                        768: { items: 5 },
-                        1024: { items: 6 },
-                        1280: { items: 7 }
-                    },
-                    onInitialized: function() {
-                        console.log('✅ Carrossel iniciado:', carouselId);
-                    }
+    function initCarousels() {
+        // Aguarda um momento para garantir que o DOM está pronto
+        setTimeout(function() {
+            $('.owl-carousel').each(function() {
+                const $carousel = $(this);
+                const carouselId = $carousel.attr('id');
+                
+                if (!$carousel.data('owlCarousel')) { // Evita inicializar duas vezes
+                    $carousel.owlCarousel({
+                        items: 7,
+                        margin: 10,
+                        loop: false,
+                        nav: false,
+                        dots: false,
+                        responsive: {
+                            0: { items: 2 },
+                            480: { items: 3 },
+                            640: { items: 4 },
+                            768: { items: 5 },
+                            1024: { items: 6 },
+                            1280: { items: 7 }
+                        },
+                        onInitialized: function() {
+                            console.log('✅ Carrossel iniciado:', carouselId);
+                        }
+                    });
+                }
+                
+                // Remover eventos antigos antes de adicionar novos (evita duplicação)
+                $(`.next-${carouselId}`).off('click');
+                $(`.prev-${carouselId}`).off('click');
+                
+                // Botão PRÓXIMO (seta DIREITA) deve ir para NEXT
+                $(`.next-${carouselId}`).on('click', function(e) {
+                    e.preventDefault();
+                    console.log('➡️ Avançar:', carouselId);
+                    $carousel.trigger('next.owl.carousel');
                 });
-            }
-            
-            // Remover eventos antigos antes de adicionar novos (evita duplicação)
-            $(`.next-${carouselId}`).off('click');
-            $(`.prev-${carouselId}`).off('click');
-            
-            // Botão PRÓXIMO (seta DIREITA) deve ir para NEXT
-            $(`.next-${carouselId}`).on('click', function(e) {
-                e.preventDefault();
-                console.log('➡️ Avançar:', carouselId);
-                $carousel.trigger('next.owl.carousel');
+                
+                // Botão ANTERIOR (seta ESQUERDA) deve ir para PREV
+                $(`.prev-${carouselId}`).on('click', function(e) {
+                    e.preventDefault();
+                    console.log('⬅️ Voltar:', carouselId);
+                    $carousel.trigger('prev.owl.carousel');
+                });
             });
-            
-            // Botão ANTERIOR (seta ESQUERDA) deve ir para PREV
-            $(`.prev-${carouselId}`).on('click', function(e) {
-                e.preventDefault();
-                console.log('⬅️ Voltar:', carouselId);
-                $carousel.trigger('prev.owl.carousel');
-            });
-        });
-    }, 300); // Pequeno delay para garantir que o DOM carregou
-}
+        }, 300);
+    }
     
     // Exibir conteúdo
     function displayContent() {
         const contentDiv = document.getElementById('content');
         let html = '';
         
-        // Ordem das categorias
-        const categoryOrder = ['filmes', 'series', 'novelas', 'animes', 'infantil'];
+        // Ordem das categorias (AGORA INCLUINDO TV)
+        const categoryOrder = ['filmes', 'series', 'novelas', 'animes', 'infantil', 'tv'];
         const categoryNames = {
             'filmes': '🎬 Filmes',
             'series': '📺 Séries', 
             'novelas': '💖 Novelas',
             'animes': '👻 Animes',
-            'infantil': '🧸 Infantil'
+            'infantil': '🧸 Infantil',
+            'tv': '📡 TV AO VIVO'
         };
         
         const categoryPages = {
@@ -551,7 +556,8 @@ function initCarousels() {
             'series': 'series.html', 
             'novelas': 'novelas.html',
             'animes': 'animes.html',
-            'infantil': 'infantil.html'
+            'infantil': 'infantil.html',
+            'tv': 'tv.html'
         };
         
         categoryOrder.forEach(category => {
@@ -575,30 +581,34 @@ function initCarousels() {
                 <div id="${carouselId}" class="owl-carousel">`;
             
             items.forEach(item => {
-                const nomeArquivo = item.poster ? item.poster.split('/').pop() : 'default.jpg';
-                const poster = `${RAW_BASE}/assets/Capas/${nomeArquivo}`;
+                // PARA TV: usar logo do channels.json se disponível
+                let poster = '';
+                if (category === 'tv') {
+                    // Tentar encontrar logo no channelsDict
+                    const nomeLimpo = item.title.toLowerCase().replace(/[^a-z0-9]/g, '');
+                    poster = window.channelsDict?.[nomeLimpo] || `${RAW_BASE}/assets/Capas/tv_default.jpg`;
+                } else {
+                    const nomeArquivo = item.poster ? item.poster.split('/').pop() : 'default.jpg';
+                    poster = `${RAW_BASE}/assets/Capas/${nomeArquivo}`;
+                }
                 
-                const type = category === 'filmes' ? 'Filme' : 'Série';
                 const episodeCount = item.episodes ? item.episodes.length : 0;
-                const seasonCount = item.seasons ? item.seasons.length : 0;
                 
                 let meta = '';
                 if (category === 'filmes') {
                     meta = `Filme`;
-                } else if (seasonCount > 1) {
-                    meta = `${seasonCount} temporadas`;
+                } else if (category === 'tv') {
+                    meta = `📡 Ao Vivo`;
+                } else if (item.seasons && item.seasons.length > 1) {
+                    meta = `${item.seasons.length} temporadas`;
                 } else {
                     meta = `${episodeCount} episódios`;
                 }
-                
-                // Rating aleatório para exemplo (você pode substituir por dados reais)
-                const rating = (Math.random() * 2 + 7).toFixed(1);
                 
                 html += `
                 <div class="item-card" onclick="openModal('${category}', '${item.id}')">
                     <img src="${poster}" alt="${item.title}" class="item-poster"
                          onerror="this.onerror=null; this.src='${RAW_BASE}/assets/Capas/default.jpg';">
-                    <div class="rating">${rating}</div>
                     <div class="item-info">
                         <div class="item-title">${item.title}</div>
                         <div class="item-meta">${meta}</div>
@@ -612,7 +622,7 @@ function initCarousels() {
         contentDiv.innerHTML = html || '<div class="loading">Nenhum conteúdo encontrado</div>';
     }
     
-    // Abrir modal
+    // Abrir modal (MODIFICADO PARA TV)
     function openModal(category, itemId) {
         const items = vodData[category];
         if (!items) return;
@@ -625,37 +635,45 @@ function initCarousels() {
         let modalBodyHtml = '';
         let modalHeaderHtml = '';
         
-        // Header do modal com backdrop
-        if (item.poster) {
-            const nomeArquivo = item.poster.split('/').pop();
-            const posterUrl = `${RAW_BASE}/assets/Capas/${nomeArquivo}`;
-            
-            modalHeaderHtml = `
-                <div class="modal-backdrop" style="background-image: url('${posterUrl}')"></div>
-                <button class="play-button" onclick="playFirstEpisode('${category}', '${item.id}')" style="position: absolute; bottom: 30px; left: 30px;">
-                    <i class="fas fa-play"></i> Assistir
-                </button>
-            `;
+        // Para TV, usar logo do channels.json
+        let posterUrl = '';
+        if (category === 'tv') {
+            const nomeLimpo = item.title.toLowerCase().replace(/[^a-z0-9]/g, '');
+            posterUrl = window.channelsDict?.[nomeLimpo] || `${RAW_BASE}/assets/Capas/tv_default.jpg`;
+        } else {
+            const nomeArquivo = item.poster ? item.poster.split('/').pop() : 'default.jpg';
+            posterUrl = `${RAW_BASE}/assets/Capas/${nomeArquivo}`;
         }
+        
+        // Header do modal com backdrop
+        modalHeaderHtml = `
+            <div class="modal-backdrop" style="background-image: url('${posterUrl}')"></div>
+            ${category === 'tv' ? 
+                '<div style="position: absolute; top: 30px; left: 30px; background: #e50914; color: white; padding: 8px 16px; border-radius: 4px; font-weight: bold;">🔴 AO VIVO</div>' : 
+                ''}
+            <button class="play-button" onclick="playFirstEpisode('${category}', '${item.id}')" style="position: absolute; bottom: 30px; left: 30px;">
+                <i class="fas fa-play"></i> ${category === 'tv' ? 'Assistir ao Vivo' : 'Assistir'}
+            </button>
+        `;
         
         // Corpo do modal
         modalBodyHtml = `
             <h2 class="modal-title">${item.title}</h2>
             <div class="modal-meta">
-                <span>${category === 'filmes' ? 'Filme' : 'Série'}</span>
-                ${item.episodes ? `<span>${item.episodes.length} episódios</span>` : ''}
-                ${item.seasons ? `<span>${item.seasons.length} temporadas</span>` : ''}
+                <span>${category === 'filmes' ? 'Filme' : (category === 'tv' ? 'Canal de TV' : 'Série')}</span>
+                ${category === 'tv' ? '<span>🔴 Ao Vivo</span>' : ''}
+                ${item.episodes ? `<span>${item.episodes.length} ${category === 'tv' ? 'canais' : 'episódios'}</span>` : ''}
             </div>
             <button class="play-button" onclick="playFirstEpisode('${category}', '${item.id}')">
-                <i class="fas fa-play"></i> Assistir
+                <i class="fas fa-play"></i> ${category === 'tv' ? 'Assistir ao Vivo' : 'Assistir'}
             </button>
         `;
         
-        // Listar episódios
-        if (item.episodes && item.episodes.length > 0) {
+        // Para TV, mostrar lista de canais (se houver múltiplos)
+        if (category === 'tv' && item.episodes && item.episodes.length > 0) {
             modalBodyHtml += `
             <div class="episodes-section">
-                <h3 style="margin-bottom: 20px; font-size: 1.3rem;">Episódios</h3>
+                <h3 style="margin-bottom: 20px; font-size: 1.3rem;">Canais Disponíveis</h3>
                 <div class="episode-list">`;
             
             item.episodes.forEach((ep, index) => {
@@ -663,37 +681,13 @@ function initCarousels() {
                 <div class="episode-item" onclick="playEpisode('${ep.url}', '${item.title} - ${ep.title}', '${item.id}', '${category}', ${index})">
                     <div class="episode-number">${index + 1}</div>
                     <div class="episode-info">
-                        <div class="episode-title">${ep.title}</div>
+                        <div class="episode-title">${ep.title || item.title}</div>
+                        <div class="episode-duration">🔴 Ao Vivo</div>
                     </div>
                 </div>`;
             });
             
             modalBodyHtml += `</div></div>`;
-        } else if (item.seasons && item.seasons.length > 0) {
-            modalBodyHtml += `<div class="episodes-section">`;
-            
-            item.seasons.forEach(season => {
-                modalBodyHtml += `
-                <div style="margin-bottom: 30px;">
-                    <h3 style="margin-bottom: 15px; font-size: 1.2rem;">Temporada ${season.season}</h3>
-                    <div class="episode-list">`;
-                
-                if (season.episodes && season.episodes.length > 0) {
-                    season.episodes.forEach((ep, index) => {
-                        modalBodyHtml += `
-                        <div class="episode-item" onclick="playEpisode('${ep.url}', '${item.title} - Temp ${season.season} - ${ep.title}', '${item.id}', '${category}', ${index})">
-                            <div class="episode-number">${index + 1}</div>
-                            <div class="episode-info">
-                                <div class="episode-title">${ep.title}</div>
-                            </div>
-                        </div>`;
-                    });
-                }
-                
-                modalBodyHtml += `</div></div>`;
-            });
-            
-            modalBodyHtml += `</div>`;
         }
         
         // Atualizar modal
