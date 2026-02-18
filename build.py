@@ -1545,10 +1545,10 @@ function displayContent() {{
         });
         
         html += `</div></section>`;
-    }
+    }}
     
     // ===== DADOS DE CONTINUAR ASSISTINDO (EXEMPLO) =====
-    function getContinueWatching() {
+    function getContinueWatching() {{
         // ESTES SÃO DADOS DE EXEMPLO
         const exemplo = [
             {
@@ -1584,7 +1584,7 @@ function displayContent() {{
         // return JSON.parse(localStorage.getItem('continueWatching')) || [];
         
         return exemplo;
-    }
+    }}
     
     // ===== CATEGORIAS NORMAIS =====
     const categoryOrder = ['filmes', 'series', 'novelas', 'animes', 'infantil', 'tv'];
@@ -1771,8 +1771,7 @@ function displayContent() {{
         }} else {{
             window.open(url, '_blank');
         }}
-    }}
-    
+       
     // Fechar modal
     document.getElementById('closeModal').onclick = function() {{
         document.getElementById('modal').style.display = 'none';
@@ -1810,6 +1809,7 @@ function displayContent() {{
 
 if __name__ == "__main__":
     build_vod_with_direct_capas()
+
 
 
 
