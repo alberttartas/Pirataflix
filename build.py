@@ -1587,7 +1587,7 @@ function displayContent() {{
             </div>
             <div id="${{carouselId}}" class="owl-carousel">`;
             
-         // ===== DEBUG =====
+// ===== DEBUG =====
 console.log('📺 Categorias disponíveis:', Object.keys(vodData));
 console.log('📺 Dados da TV:', vodData.tv ? vodData.tv.length : 0);
 if (vodData.tv && vodData.tv.length > 0) {
@@ -1780,5 +1780,6 @@ if (vodData.tv && vodData.tv.length > 0) {
 
 if __name__ == "__main__":
     build_vod_with_direct_capas()
+
 
 
