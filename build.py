@@ -589,12 +589,11 @@ def generate_html_with_correct_paths(base_dir, data):
                         if chave:
                             channels_dict[chave] = logo
 
-    channels_json = json.dumps(channels_dict)
+    # Converter para JSON string com escape adequado
+    channels_json = json.dumps(channels_dict, ensure_ascii=False)
 
-    # ESTRATÉGIA: Todo JS problemático vai para um bloco <script> separado,
-    # fora do f-string Python. Só {channels_json} é interpolado via f-string.
-    # O restante do JS usa {{ }} para escapar chaves literais.
-
+    # Template HTML - TODO o JavaScript agora está em um bloco separado
+    # com tratamento adequado de aspas e caracteres especiais
     html_template = f'''<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -744,15 +743,21 @@ def generate_html_with_correct_paths(base_dir, data):
     <!-- Dados dos canais injetados pelo Python -->
     <script>
         window.channelsDict = {channels_json};
+        window.RAW_BASE = 'https://raw.githubusercontent.com/alberttartas/Pirataflix/main';
+        window.DEFAULT_POSTER = window.RAW_BASE + '/assets/Capas/default.jpg';
     </script>
 
-    <!-- Todo o JS da aplicação num bloco separado, sem f-string Python -->
-    <script id="app-script">
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script src="novo-player.js" defer></script>
+
+    <!-- Script principal da aplicação -->
+    <script>
     (function() {{
-        var RAW_BASE = 'https://raw.githubusercontent.com/alberttartas/Pirataflix/main';
-        var DEFAULT_POSTER = RAW_BASE + '/assets/Capas/default.jpg';
-        window._DEFAULT_POSTER = DEFAULT_POSTER;
-        window.vodData = {{}};
+        'use strict';
+        
+        var vodData = {{}};
+        var RAW_BASE = window.RAW_BASE;
+        var DEFAULT_POSTER = window.DEFAULT_POSTER;
 
         // =====================
         // CARREGAR DADOS
@@ -760,7 +765,7 @@ def generate_html_with_correct_paths(base_dir, data):
         async function loadData() {{
             try {{
                 var response = await fetch('data.json');
-                window.vodData = await response.json();
+                vodData = await response.json();
                 displayContent();
                 setTimeout(function() {{
                     if (typeof $.fn.owlCarousel === 'function') {{
@@ -779,7 +784,7 @@ def generate_html_with_correct_paths(base_dir, data):
         // FALLBACK SCROLL
         // =====================
         function initFallbackScroll() {{
-            $('.owl-carousel').css({{ display: 'flex', 'overflow-x': 'auto', gap: '10px' }});
+            $('.owl-carousel').css({{ display: 'flex', overflowX: 'auto', gap: '10px' }});
             $('.owl-carousel .item-card').css({{ flex: '0 0 auto', width: '220px' }});
         }}
 
@@ -822,9 +827,7 @@ def generate_html_with_correct_paths(base_dir, data):
         // =====================
         function getPoster(item, category) {{
             if (category === 'tv') {{
-                // tvg_logo vem direto do channels.json/data.json
                 if (item.tvg_logo && item.tvg_logo.startsWith('http')) return item.tvg_logo;
-                // Fallback channelsDict
                 var key = (item.title || '').toLowerCase().replace(/[^a-z0-9]/g, '');
                 if (window.channelsDict && window.channelsDict[key]) return window.channelsDict[key];
                 return RAW_BASE + '/assets/Capas/tv_default.jpg';
@@ -835,8 +838,9 @@ def generate_html_with_correct_paths(base_dir, data):
         }}
 
         function safeImg(poster, altText) {{
-            return '<img src="' + poster + '" alt="' + altText.replace(/"/g, '') +
-                   '" class="item-poster" onerror="this.onerror=null;this.src=window._DEFAULT_POSTER">';
+            var safeAlt = altText.replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+            return '<img src="' + poster + '" alt="' + safeAlt +
+                   '" class="item-poster" onerror="this.onerror=null;this.src=window.DEFAULT_POSTER">';
         }}
 
         // =====================
@@ -890,7 +894,7 @@ def generate_html_with_correct_paths(base_dir, data):
             }};
 
             categoryOrder.forEach(function(category) {{
-                var items = window.vodData[category];
+                var items = vodData[category];
                 if (!items || items.length === 0) return;
                 var carouselId = 'carousel-' + category;
                 html += '<section class="category-section" id="' + category + '">';
@@ -912,7 +916,6 @@ def generate_html_with_correct_paths(base_dir, data):
                              : category === 'tv' ? '📡 Ao Vivo'
                              : (item.seasons && item.seasons.length > 1) ? item.seasons.length + ' temporadas'
                              : episodeCount + ' episódios';
-                    // Para TV: usar índice como id (canais não têm campo 'id')
                     var itemKey = (category === 'tv') ? String(idx) : item.id;
                     html += '<div class="item-card" data-category="' + category + '" data-id="' + itemKey + '">';
                     html += safeImg(poster, item.title);
@@ -927,7 +930,7 @@ def generate_html_with_correct_paths(base_dir, data):
 
             contentDiv.innerHTML = html || '<div class="loading">Nenhum conteúdo encontrado</div>';
 
-            // Delegação de eventos — ZERO onclick inline
+            // Delegação de eventos
             contentDiv.addEventListener('click', function(e) {{
                 var card = e.target.closest('.item-card');
                 if (card) {{
@@ -942,11 +945,10 @@ def generate_html_with_correct_paths(base_dir, data):
         // MODAL
         // =====================
         function openModal(category, itemId) {{
-            var items = window.vodData[category];
+            var items = vodData[category];
             if (!items) return;
             var item;
             if (category === 'tv') {{
-                // Canais de TV não têm campo 'id' — usar índice
                 item = items[parseInt(itemId)];
             }} else {{
                 item = items.find(function(i) {{ return i.id === itemId; }});
@@ -955,7 +957,6 @@ def generate_html_with_correct_paths(base_dir, data):
 
             var posterUrl = getPoster(item, category);
 
-            // ===== HEADER: backdrop + badge + 1 botão assistir =====
             var headerHtml = '<div class="modal-backdrop" style="background-image:url(&quot;' + posterUrl + '&quot;)"></div>';
             if (category === 'tv') {{
                 headerHtml += '<div style="position:absolute;top:30px;left:30px;background:#e50914;color:white;padding:8px 16px;border-radius:4px;font-weight:bold;">🔴 AO VIVO</div>';
@@ -964,7 +965,6 @@ def generate_html_with_correct_paths(base_dir, data):
             headerHtml += '<button class="play-button" data-action="play-first" data-category="' + category + '" data-id="' + itemId + '" style="position:absolute;bottom:30px;left:30px;">';
             headerHtml += playLabel + '</button>';
 
-            // ===== BODY: título + meta (SEM botão duplicado) =====
             var typeLabel = category === 'filmes' ? 'Filme' : (category === 'tv' ? 'Canal de TV' : 'Série');
             var bodyHtml = '<h2 class="modal-title">' + item.title + '</h2>';
             bodyHtml += '<div class="modal-meta">';
@@ -972,9 +972,8 @@ def generate_html_with_correct_paths(base_dir, data):
             if (category === 'tv') bodyHtml += '<span>🔴 Ao Vivo</span>';
             bodyHtml += '</div>';
 
-            // ===== TV: mostrar TODOS os canais da categoria para navegar =====
             if (category === 'tv') {{
-                var todosCanais = window.vodData['tv'] || [];
+                var todosCanais = vodData['tv'] || [];
                 bodyHtml += '<div class="episodes-section">';
                 bodyHtml += '<h3 style="margin-bottom:15px;font-size:1.1rem;">📡 Todos os Canais</h3>';
                 bodyHtml += '<div class="episode-list">';
@@ -985,25 +984,24 @@ def generate_html_with_correct_paths(base_dir, data):
                     bodyHtml += '<div class="episode-item' + (isAtual ? ' canal-ativo' : '') + '" data-action="play-canal"';
                     bodyHtml += ' data-url="' + canalUrl + '"';
                     bodyHtml += ' data-id="' + idx + '"';
-                    bodyHtml += ' data-title="' + canal.title.replace(/"/g, '') + '"';
+                    bodyHtml += ' data-title="' + (canal.title || '').replace(/"/g, '&quot;') + '"';
                     bodyHtml += ' data-category="tv">';
                     if (canalPoster) {{
-                        bodyHtml += '<img src="' + canalPoster + '" style="width:40px;height:40px;object-fit:contain;background:#222;border-radius:4px;flex-shrink:0;" onerror="this.style.display='none'">';
+                        bodyHtml += '<img src="' + canalPoster + '" style="width:40px;height:40px;object-fit:contain;background:#222;border-radius:4px;flex-shrink:0;" onerror="this.style.display=\'none\'">';
                     }} else {{
                         bodyHtml += '<div class="episode-number">📺</div>';
                     }}
                     bodyHtml += '<div class="episode-info">';
-                    bodyHtml += '<div class="episode-title">' + canal.title + (isAtual ? ' <span style="color:#e50914;font-size:0.8rem;">● AO VIVO</span>' : '') + '</div>';
+                    bodyHtml += '<div class="episode-title">' + (canal.title || '') + (isAtual ? ' <span style="color:#e50914;font-size:0.8rem;">● AO VIVO</span>' : '') + '</div>';
                     bodyHtml += '</div></div>';
                 }});
                 bodyHtml += '</div></div>';
 
-            // ===== FILMES/SÉRIES: lista de episódios normal =====
             }} else if (item.episodes && item.episodes.length > 0) {{
                 bodyHtml += '<div class="episodes-section"><h3 style="margin-bottom:15px;font-size:1.1rem;">Episódios</h3>';
                 bodyHtml += '<div class="episode-list">';
                 item.episodes.forEach(function(ep, index) {{
-                    var safeTitle = (ep.title || '').replace(/"/g, '');
+                    var safeTitle = (ep.title || '').replace(/"/g, '&quot;');
                     bodyHtml += '<div class="episode-item" data-action="play-ep"';
                     bodyHtml += ' data-url="' + ep.url + '"';
                     bodyHtml += ' data-title="' + safeTitle + '"';
@@ -1028,33 +1026,31 @@ def generate_html_with_correct_paths(base_dir, data):
             var el = e.target.closest('[data-action]');
             if (!el) return;
             var action = el.dataset.action;
-            var cat    = el.dataset.category;
-            var id     = el.dataset.id;
-
+            
             if (action === 'play-first') {{
+                var cat = el.dataset.category;
+                var id = el.dataset.id;
                 playFirstEpisode(cat, id);
             }} else if (action === 'play-canal') {{
-                // Troca de canal TV direto da lista
-                var canalUrl   = el.dataset.url;
-                var canalId    = el.dataset.id;
+                var canalUrl = el.dataset.url;
+                var canalId = el.dataset.id;
                 var canalTitle = el.dataset.title || '';
-                // Fechar modal e tocar
                 document.getElementById('modal').style.display = 'none';
                 playEpisode(canalUrl, canalTitle, canalId, 'tv', 0);
             }} else if (action === 'play-ep') {{
-                var epCat   = el.dataset.category;
-                var epId    = el.dataset.itemid;
-                var epUrl   = el.dataset.url;
+                var epCat = el.dataset.category;
+                var epId = el.dataset.itemid;
+                var epUrl = el.dataset.url;
                 var epTitle = el.dataset.title || '';
                 var epIndex = parseInt(el.dataset.index) || 0;
                 document.getElementById('modal').style.display = 'none';
-                playEpisode(epUrl, item_title_from(epCat, epId) + ' - ' + epTitle,
+                playEpisode(epUrl, itemTitleFrom(epCat, epId) + ' - ' + epTitle,
                             epId, epCat, epIndex);
             }}
         }});
 
-        function item_title_from(category, itemId) {{
-            var items = window.vodData[category];
+        function itemTitleFrom(category, itemId) {{
+            var items = vodData[category];
             if (!items) return '';
             var item = (category === 'tv')
                 ? items[parseInt(itemId)]
@@ -1063,7 +1059,7 @@ def generate_html_with_correct_paths(base_dir, data):
         }}
 
         function playFirstEpisode(category, itemId) {{
-            var items = window.vodData[category];
+            var items = vodData[category];
             if (!items) return;
             var item;
             if (category === 'tv') {{
@@ -1072,10 +1068,10 @@ def generate_html_with_correct_paths(base_dir, data):
                 item = items.find(function(i) {{ return i.id === itemId; }});
             }}
             if (!item) return;
+            
             if (item.episodes && item.episodes.length > 0) {{
                 playEpisode(item.episodes[0].url, item.title + ' - ' + (item.episodes[0].title || 'AO VIVO'), itemId, category, 0);
             }} else if (item.url) {{
-                // Canal simples com URL direta
                 playEpisode(item.url, item.title, itemId, category, 0);
             }} else if (item.seasons && item.seasons.length > 0 && item.seasons[0].episodes.length > 0) {{
                 var ep = item.seasons[0].episodes[0];
@@ -1086,30 +1082,29 @@ def generate_html_with_correct_paths(base_dir, data):
         function playEpisode(url, title, itemId, category, episodeIndex) {{
             if (typeof window.playWithModernPlayer === 'function') {{
                 window.playWithModernPlayer(url, title, '', itemId, category, episodeIndex);
-                document.getElementById('modal').style.display = 'none';
             }} else {{
                 window.open(url, '_blank');
             }}
         }}
 
         // Fechar modal
-        document.getElementById('closeModal').onclick = function() {{
+        document.getElementById('closeModal').addEventListener('click', function() {{
             document.getElementById('modal').style.display = 'none';
-        }};
-        window.onclick = function(event) {{
+        }});
+        
+        window.addEventListener('click', function(event) {{
             var modal = document.getElementById('modal');
             if (event.target === modal) modal.style.display = 'none';
-        }};
+        }});
+        
         document.addEventListener('keydown', function(event) {{
             if (event.key === 'Escape') document.getElementById('modal').style.display = 'none';
         }});
 
+        // Iniciar
         loadData();
     }})();
     </script>
-
-    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-    <script src="novo-player.js" defer></script>
 </body>
 </html>'''
 
@@ -1121,3 +1116,4 @@ def generate_html_with_correct_paths(base_dir, data):
 
 if __name__ == "__main__":
     build_vod_with_direct_capas()
+
