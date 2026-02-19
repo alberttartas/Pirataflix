@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PIRATAFLIX - Infantil</title>
     <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="tv-player.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Arial', sans-serif; background: #141414; color: white; }
@@ -31,20 +33,6 @@
         .nav-links { display: flex; gap: 20px; }
         .nav-link { color: #e5e5e5; text-decoration: none; }
         .nav-link:hover { color: #fff; }
-        
-        .back-link {
-            color: #e50914;
-            text-decoration: none;
-            font-size: 1rem;
-            padding: 10px 20px;
-            border: 1px solid #e50914;
-            border-radius: 4px;
-            transition: all 0.3s;
-        }
-        .back-link:hover {
-            background: #e50914;
-            color: white;
-        }
         
         .main-content { padding: 120px 50px 50px; }
         
@@ -119,38 +107,74 @@
         </div>
     </main>
 
+    <!-- Modal -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <div class="modal-header" id="modalHeader">
+                <button class="modal-close" id="closeModal"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body" id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- TV Player -->
+    <div class="tv-player-container" id="tvPlayerContainer">
+        <video id="tvPlayer" autoplay playsinline></video>
+    </div>
+
+    <!-- Scripts compartilhados -->
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script src="novo-player.js" defer></script>
+    <script src="tv-player.js" defer></script>
+    <script src="shared.js"></script>
+
     <script>
-        const RAW_BASE = 'https://raw.githubusercontent.com/alberttartas/Pirataflix/main';
-        
-        async function loadInfantil() {
-            try {
-                const response = await fetch('data.json');
-                const data = await response.json();
-                const infantil = data.infantil || [];
+    // Carregar channels
+    loadChannels();
+    
+    // Configurar listeners do modal
+    setupModalListeners();
+    
+    // Carregar dados específicos da página
+    async function loadInfantil() {
+        try {
+            const response = await fetch('data.json');
+            const data = await response.json();
+            window.vodData = data;
+            const infantil = data.infantil || [];
+            
+            document.getElementById('itemCount').textContent = `${infantil.length} itens`;
+            
+            let html = '';
+            infantil.forEach(item => {
+                const poster = getPoster(item, 'infantil');
                 
-                document.getElementById('itemCount').textContent = `${infantil.length} itens`;
-                
-                let html = '';
-                infantil.forEach(item => {
-                    const nomeArquivo = item.poster ? item.poster.split('/').pop() : 'default.jpg';
-                    const poster = `${RAW_BASE}/assets/Capas/${nomeArquivo}`;
-                    
-                    html += `
-                        <div class="item-card" onclick="window.location.href='index.html#infantil'">
-                            <img src="${poster}" alt="${item.title}" class="item-poster"
-                                 onerror="this.onerror=null; this.src='${RAW_BASE}/assets/Capas/default.jpg';">
-                            <div class="item-title">${item.title}</div>
-                        </div>
-                    `;
+                html += `
+                    <div class="item-card" data-id="${item.id}" data-category="infantil">
+                        ${safeImg(poster, item.title)}
+                        <div class="item-title">${item.title}</div>
+                    </div>
+                `;
+            });
+            
+            document.getElementById('itemsGrid').innerHTML = html || '<p>Nenhum conteúdo infantil encontrado</p>';
+            
+            // Adicionar eventos de clique
+            document.querySelectorAll('.item-card').forEach(card => {
+                card.addEventListener('click', function() {
+                    var id = this.dataset.id;
+                    var cat = this.dataset.category;
+                    if (id && cat) openModal(cat, id);
                 });
-                
-                document.getElementById('itemsGrid').innerHTML = html || '<p>Nenhum conteúdo infantil encontrado</p>';
-            } catch (error) {
-                document.getElementById('itemsGrid').innerHTML = `<p>Erro: ${error.message}</p>`;
-            }
+            });
+            
+        } catch (error) {
+            document.getElementById('itemsGrid').innerHTML = `<p>Erro: ${error.message}</p>`;
         }
-        
-        loadInfantil();
+    }
+    
+    // Iniciar
+    loadInfantil();
     </script>
 </body>
 </html>
