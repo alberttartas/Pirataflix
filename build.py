@@ -765,9 +765,12 @@ def generate_html_with_correct_paths(base_dir, data):
         return item ? item.title : '';
     }}
 
-    // ===== SALVAR PROGRESSO =====
+    // ===== SALVAR PROGRESSO (CORRIGIDO) =====
     function saveProgress(itemId, category, title, poster, episode, progress, timeLeft, episodeIndex) {{
         try {{
+            // Garantir que episodeIndex é um número válido
+            const safeIndex = (typeof episodeIndex === 'number' && !isNaN(episodeIndex)) ? episodeIndex : 0;
+            
             let continueList = JSON.parse(localStorage.getItem('continueWatching')) || [];
             
             const existingIndex = continueList.findIndex(i => i.id === itemId && i.category === category);
@@ -778,9 +781,9 @@ def generate_html_with_correct_paths(base_dir, data):
                 title: title,
                 poster: poster,
                 episode: episode,
-                episodeIndex: episodeIndex,
-                progress: progress,
-                timeLeft: timeLeft,
+                episodeIndex: safeIndex,
+                progress: progress || 0,
+                timeLeft: timeLeft || '0 min',
                 lastWatched: new Date().toISOString()
             }};
             
@@ -792,13 +795,19 @@ def generate_html_with_correct_paths(base_dir, data):
             
             continueList = continueList.slice(-20);
             localStorage.setItem('continueWatching', JSON.stringify(continueList));
+            console.log('Progresso salvo:', item);
         }} catch (e) {{
             console.error('Erro ao salvar progresso:', e);
         }}
     }}
 
-    // ===== PLAY EPISODE (VERSÃO ÚNICA CORRIGIDA) =====
+    // ===== PLAY EPISODE (ÚNICA VERSÃO CORRIGIDA) =====
     function playEpisode(url, title, itemId, category, episodeIndex) {{
+        console.log('playEpisode chamado:', {{url, title, itemId, category, episodeIndex}});
+        
+        // Garantir que episodeIndex é um número
+        const safeIndex = (typeof episodeIndex === 'number' && !isNaN(episodeIndex)) ? episodeIndex : 0;
+        
         // TRATAMENTO ESPECIAL PARA TV
         if (category === 'tv') {{
             if (typeof window.openTVPlayer === 'function') {{
@@ -810,7 +819,7 @@ def generate_html_with_correct_paths(base_dir, data):
             return;
         }}
         
-        // Salvar progresso (apenas para séries/filmes)
+        // Salvar progresso
         try {{
             const items = window.vodData[category];
             if (!items) return;
@@ -822,17 +831,35 @@ def generate_html_with_correct_paths(base_dir, data):
                 ? (RAW_BASE + '/assets/Capas/' + item.poster.split('/').pop())
                 : (item.poster || DEFAULT_POSTER);
             
-            const episodeTitle = (item.episodes && item.episodes[episodeIndex] 
-                ? item.episodes[episodeIndex].title 
-                : 'Episódio ' + (episodeIndex + 1));
+            // Encontrar o título correto do episódio
+            let episodeTitle = '';
+            if (item.episodes && item.episodes[safeIndex]) {{
+                episodeTitle = item.episodes[safeIndex].title || 'Episódio ' + (safeIndex + 1);
+            }} else if (item.seasons) {{
+                let epCounter = 0;
+                for (let s = 0; s < item.seasons.length; s++) {{
+                    const season = item.seasons[s];
+                    if (season.episodes) {{
+                        if (safeIndex < epCounter + season.episodes.length) {{
+                            const epInSeason = safeIndex - epCounter;
+                            episodeTitle = season.episodes[epInSeason]?.title || 'Episódio ' + (safeIndex + 1);
+                            break;
+                        }}
+                        epCounter += season.episodes.length;
+                    }}
+                }}
+            }} else {{
+                episodeTitle = 'Episódio ' + (safeIndex + 1);
+            }}
             
-            saveProgress(itemId, category, item.title, poster, episodeTitle, 0, '0 min', episodeIndex);
+            saveProgress(itemId, category, item.title, poster, episodeTitle, 0, '0 min', safeIndex);
         }} catch (e) {{
             console.error('Erro ao salvar progresso:', e);
         }}
         
+        // Reproduzir
         if (typeof window.playWithModernPlayer === 'function') {{
-            window.playWithModernPlayer(url, title, '', itemId, category, episodeIndex);
+            window.playWithModernPlayer(url, title, '', itemId, category, safeIndex);
             document.getElementById('modal').style.display = 'none';
         }} else {{
             window.open(url, '_blank');
@@ -841,100 +868,110 @@ def generate_html_with_correct_paths(base_dir, data):
 
     // ===== PLAY FIRST EPISODE (CORRIGIDO) =====
     function playFirstEpisode(category, itemId) {{
-        var items = window.vodData[category];
+        console.log('playFirstEpisode chamado:', {{category, itemId}});
+        
+        const items = window.vodData[category];
         if (!items) {{
             console.error('Categoria não encontrada:', category);
             return;
         }}
         
-        var item;
+        let item;
         if (category === 'tv') {{
             item = items[parseInt(itemId)];
         }} else {{
-            item = items.find(function(i) {{ return i.id === itemId; }});
+            item = items.find(i => i.id === itemId);
         }}
         
         if (!item) {{
-            console.error('Item não encontrado:', itemId, 'em', category);
+            console.error('Item não encontrado:', itemId);
             return;
         }}
         
-        // Buscar no continueList o índice salvo
-        var continueList = JSON.parse(localStorage.getItem('continueWatching')) || [];
-        var saved = continueList.find(i => i.id === itemId && i.category === category);
-        var episodeIndex = saved ? saved.episodeIndex : 0;
-        
-        // CASO 1: Série com episódios diretos
-        if (item.episodes && item.episodes.length > 0) {{
-            var idx = Math.min(episodeIndex, item.episodes.length - 1);
-            if (idx < 0) idx = 0;
-            
-            var ep = item.episodes[idx];
-            if (ep && ep.url) {{
-                playEpisode(ep.url, item.title + ' - ' + (ep.title || 'Episódio ' + (idx + 1)), itemId, category, idx);
-            }} else {{
-                console.error('Episódio sem URL:', idx, item);
+        // Buscar índice salvo
+        let episodeIndex = 0;
+        try {{
+            const continueList = JSON.parse(localStorage.getItem('continueWatching')) || [];
+            const saved = continueList.find(i => i.id === itemId && i.category === category);
+            if (saved && typeof saved.episodeIndex === 'number' && !isNaN(saved.episodeIndex)) {{
+                episodeIndex = saved.episodeIndex;
             }}
-            return;
+        }} catch (e) {{
+            console.error('Erro ao ler localStorage:', e);
         }}
         
-        // CASO 2: Item com URL direta
-        if (item.url) {{
-            playEpisode(item.url, item.title, itemId, category, 0);
-            return;
-        }}
+        console.log('Índice do episódio:', episodeIndex);
         
-        // CASO 3: Série com temporadas
-        if (item.seasons && item.seasons.length > 0) {{
-            // Calcular total de episódios
-            var totalEpisodes = 0;
-            for (var s = 0; s < item.seasons.length; s++) {{
-                totalEpisodes += (item.seasons[s].episodes || []).length;
+        // Função auxiliar para encontrar episódio
+        function findEpisodeByIndex(idx) {{
+            // Caso 1: Episódios diretos
+            if (item.episodes && item.episodes.length > 0) {{
+                const safeIdx = Math.min(idx, item.episodes.length - 1);
+                if (safeIdx >= 0 && item.episodes[safeIdx]) {{
+                    return {{
+                        url: item.episodes[safeIdx].url,
+                        title: item.title + ' - ' + (item.episodes[safeIdx].title || 'Episódio ' + (safeIdx + 1)),
+                        index: safeIdx
+                    }};
+                }}
             }}
             
-            // Validar índice
-            if (episodeIndex >= totalEpisodes) {{
-                episodeIndex = totalEpisodes - 1;
+            // Caso 2: URL direta
+            if (item.url) {{
+                return {{
+                    url: item.url,
+                    title: item.title,
+                    index: 0
+                }};
             }}
-            if (episodeIndex < 0) episodeIndex = 0;
             
-            // Encontrar temporada e episódio corretos
-            var remainingIndex = episodeIndex;
-            var foundSeason = null;
-            var foundEpIndex = 0;
-            
-            for (var s = 0; s < item.seasons.length; s++) {{
-                var season = item.seasons[s];
-                var seasonEpisodes = season.episodes || [];
+            // Caso 3: Múltiplas temporadas
+            if (item.seasons && item.seasons.length > 0) {{
+                let remainingIdx = idx;
+                for (let s = 0; s < item.seasons.length; s++) {{
+                    const season = item.seasons[s];
+                    const seasonEpisodes = season.episodes || [];
+                    
+                    if (remainingIdx < seasonEpisodes.length) {{
+                        const ep = seasonEpisodes[remainingIdx];
+                        if (ep && ep.url) {{
+                            return {{
+                                url: ep.url,
+                                title: `${{item.title}} - Temp ${{season.season}} - ${{ep.title || 'Episódio ' + (remainingIdx + 1)}}`,
+                                index: idx
+                            }};
+                        }}
+                    }}
+                    remainingIdx -= seasonEpisodes.length;
+                }}
                 
-                if (remainingIndex < seasonEpisodes.length) {{
-                    foundSeason = season;
-                    foundEpIndex = remainingIndex;
-                    break;
-                }}
-                remainingIndex -= seasonEpisodes.length;
-            }}
-            
-            // Fallback
-            if (!foundSeason && item.seasons.length > 0) {{
-                foundSeason = item.seasons[0];
-                foundEpIndex = 0;
-            }}
-            
-            if (foundSeason && foundSeason.episodes && foundSeason.episodes.length > foundEpIndex) {{
-                var ep = foundSeason.episodes[foundEpIndex];
-                if (ep && ep.url) {{
-                    var episodeTitle = item.title + ' - Temp ' + foundSeason.season + ' - ' + 
-                                      (ep.title || 'Episódio ' + (foundEpIndex + 1));
-                    playEpisode(ep.url, episodeTitle, itemId, category, episodeIndex);
-                }} else {{
-                    console.error('Episódio sem URL');
+                // Fallback: primeiro episódio da primeira temporada
+                if (item.seasons[0]?.episodes?.[0]?.url) {{
+                    return {{
+                        url: item.seasons[0].episodes[0].url,
+                        title: `${{item.title}} - Temp ${{item.seasons[0].season}} - Episódio 1`,
+                        index: 0
+                    }};
                 }}
             }}
-            return;
+            
+            return null;
         }}
         
-        console.error('Item sem episódios ou URL:', item);
+        const episode = findEpisodeByIndex(episodeIndex);
+        
+        if (episode) {{
+            playEpisode(episode.url, episode.title, itemId, category, episode.index);
+        }} else {{
+            console.error('Nenhum episódio encontrado para:', item);
+            // Fallback: tentar o primeiro episódio de qualquer forma
+            if (item.episodes?.[0]?.url) {{
+                playEpisode(item.episodes[0].url, item.title + ' - Episódio 1', itemId, category, 0);
+            }} else if (item.seasons?.[0]?.episodes?.[0]?.url) {{
+                const ep = item.seasons[0].episodes[0];
+                playEpisode(ep.url, `${{item.title}} - Temp ${{item.seasons[0].season}} - Episódio 1`, itemId, category, 0);
+            }}
+        }}
     }}
 
     // =====================
@@ -1304,6 +1341,7 @@ def generate_html_with_correct_paths(base_dir, data):
 
 if __name__ == "__main__":
     build_vod_with_direct_capas()
+
 
 
 
