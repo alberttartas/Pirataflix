@@ -83,7 +83,7 @@ function playFirstEpisode(category, itemId) {
 }
 
 // =====================
-// OPEN MODAL
+// OPEN MODAL (CORRIGIDO - ESTRUTURA HTML COMPLETA)
 // =====================
 function openModal(category, itemId) {
     var items = window.vodData[category];
@@ -92,63 +92,105 @@ function openModal(category, itemId) {
     if (!item) return;
 
     var posterUrl = getPoster(item, category);
+    
+    // HEADER com backdrop e botão (mantido)
     var headerHtml = '<div class="modal-backdrop" style="background-image:url(&quot;' + posterUrl + '&quot;)"></div>';
     if (category === 'tv') {
         headerHtml += '<div style="position:absolute;top:30px;left:30px;background:#e50914;color:white;padding:8px 16px;border-radius:4px;font-weight:bold;">🔴 AO VIVO</div>';
     }
+    
+    // BOTÃO PLAY (mantido por enquanto, depois podemos remover se quiser)
     var playLabel = category === 'tv' ? '▶ Assistir ao Vivo' : '▶ Assistir';
     headerHtml += '<button class="play-button" data-action="play-first" data-category="' + category + '" data-id="' + itemId + '" style="position:absolute;bottom:30px;left:30px;">' + playLabel + '</button>';
 
     var typeLabel = category === 'filmes' ? 'Filme' : (category === 'tv' ? 'Canal de TV' : 'Série');
-    var bodyHtml = '<h2 class="modal-title">' + item.title + '</h2>';
-    bodyHtml += '<div class="modal-meta"><span>' + typeLabel + '</span>';
+    
+    // BODY - CORRIGIDO com estrutura HTML completa
+    var bodyHtml = '';
+    bodyHtml += '<h2 class="modal-title">' + item.title + '</h2>';
+    bodyHtml += '<div class="modal-meta">';
+    bodyHtml += '<span>' + typeLabel + '</span>';
     if (category === 'tv') bodyHtml += '<span>🔴 Ao Vivo</span>';
     bodyHtml += '</div>';
 
+    // LISTA DE EPISÓDIOS - CORRIGIDA
     if (category === 'tv') {
         var todosCanais = window.vodData['tv'] || [];
-        bodyHtml += '<div class="episodes-section"><h3 style="margin-bottom:15px;font-size:1.1rem;">📡 Todos os Canais</h3><div class="episode-list">';
+        bodyHtml += '<div class="episodes-section">';
+        bodyHtml += '<h3 style="margin-bottom:15px;font-size:1.1rem;">📡 Todos os Canais</h3>';
+        bodyHtml += '<div class="episode-list">';
+        
         todosCanais.forEach(function(canal, idx) {
             var isAtual = String(idx) === String(itemId);
             var canalPoster = canal.tvg_logo || '';
             var canalUrl = (canal.episodes && canal.episodes[0]) ? canal.episodes[0].url : canal.url || '';
+            
             bodyHtml += '<div class="episode-item' + (isAtual ? ' canal-ativo' : '') + '" data-action="play-canal" data-url="' + canalUrl + '" data-id="' + idx + '" data-title="' + canal.title.replace(/"/g, '') + '" data-category="tv">';
+            
             if (canalPoster) {
                 bodyHtml += '<img src="' + canalPoster + '" style="width:40px;height:40px;object-fit:contain;background:#222;border-radius:4px;flex-shrink:0;" onerror="this.remove();">';
             } else {
                 bodyHtml += '<div class="episode-number">📺</div>';
             }
-            bodyHtml += '<div class="episode-info"><div class="episode-title">' + canal.title + (isAtual ? ' <span style="color:#e50914;font-size:0.8rem;">● AO VIVO</span>' : '') + '</div></div></div>';
+            
+            bodyHtml += '<div class="episode-info">';
+            bodyHtml += '<div class="episode-title">' + canal.title + (isAtual ? ' <span style="color:#e50914;font-size:0.8rem;">● AO VIVO</span>' : '') + '</div>';
+            bodyHtml += '</div>';
+            bodyHtml += '</div>';
         });
-        bodyHtml += '</div></div>';
+        
+        bodyHtml += '</div>'; // Fecha episode-list
+        bodyHtml += '</div>'; // Fecha episodes-section
+        
     } else if (item.seasons && item.seasons.length > 0) {
         bodyHtml += '<div class="episodes-section">';
+        
+        // Ordenar temporadas
         item.seasons.sort(function(a, b) { return a.season - b.season; });
+        
         item.seasons.forEach(function(season) {
             bodyHtml += '<h3 style="margin:25px 0 10px;color:#e50914;font-size:1.2rem;">🎬 Temporada ' + season.season + '</h3>';
             bodyHtml += '<div class="episode-list">';
+            
             season.episodes.forEach(function(ep, index) {
                 var episodeNum = ep.episode || (index + 1);
                 var episodeTitle = ep.title || 'Episódio ' + episodeNum;
                 var safeTitle = episodeTitle.replace(/"/g, '');
+                
                 bodyHtml += '<div class="episode-item" data-action="play-ep" data-url="' + ep.url + '" data-title="' + safeTitle + '" data-itemid="' + itemId + '" data-category="' + category + '" data-index="' + index + '">';
                 bodyHtml += '<div class="episode-number">' + episodeNum + '</div>';
-                bodyHtml += '<div class="episode-info"><div class="episode-title">' + safeTitle + '</div></div></div>';
+                bodyHtml += '<div class="episode-info">';
+                bodyHtml += '<div class="episode-title">' + safeTitle + '</div>';
+                bodyHtml += '</div>';
+                bodyHtml += '</div>';
             });
-            bodyHtml += '</div>';
+            
+            bodyHtml += '</div>'; // Fecha episode-list
         });
-        bodyHtml += '</div>';
+        
+        bodyHtml += '</div>'; // Fecha episodes-section
+        
     } else if (item.episodes && item.episodes.length > 0) {
-        bodyHtml += '<div class="episodes-section"><h3 style="margin-bottom:15px;font-size:1.1rem;">Episódios</h3><div class="episode-list">';
+        bodyHtml += '<div class="episodes-section">';
+        bodyHtml += '<h3 style="margin-bottom:15px;font-size:1.1rem;">Episódios</h3>';
+        bodyHtml += '<div class="episode-list">';
+        
         item.episodes.forEach(function(ep, index) {
             var safeTitle = (ep.title || '').replace(/"/g, '');
+            
             bodyHtml += '<div class="episode-item" data-action="play-ep" data-url="' + ep.url + '" data-title="' + safeTitle + '" data-itemid="' + itemId + '" data-category="' + category + '" data-index="' + index + '">';
             bodyHtml += '<div class="episode-number">' + (index + 1) + '</div>';
-            bodyHtml += '<div class="episode-info"><div class="episode-title">' + (ep.title || item.title) + '</div></div></div>';
+            bodyHtml += '<div class="episode-info">';
+            bodyHtml += '<div class="episode-title">' + (ep.title || item.title) + '</div>';
+            bodyHtml += '</div>';
+            bodyHtml += '</div>';
         });
-        bodyHtml += '</div></div>';
+        
+        bodyHtml += '</div>'; // Fecha episode-list
+        bodyHtml += '</div>'; // Fecha episodes-section
     }
 
+    // Atualizar o modal
     document.getElementById('modalHeader').innerHTML = headerHtml;
     document.getElementById('modalBody').innerHTML = bodyHtml;
     document.getElementById('modal').style.display = 'block';
