@@ -806,14 +806,14 @@ def generate_html_with_correct_paths(base_dir, data):
     }}
 }}
 
-    // ===== SALVAR PROGRESSO =====
-    function saveProgress(itemId, category, title, poster, episode, progress, timeLeft) {
-        try {
+        // ===== SALVAR PROGRESSO =====
+    function saveProgress(itemId, category, title, poster, episode, progress, timeLeft) {{
+        try {{
             let continueList = JSON.parse(localStorage.getItem('continueWatching')) || [];
             
             const existingIndex = continueList.findIndex(i => i.id === itemId && i.category === category);
             
-            const item = {
+            const item = {{
                 id: itemId,
                 category: category,
                 title: title,
@@ -822,20 +822,20 @@ def generate_html_with_correct_paths(base_dir, data):
                 progress: progress,
                 timeLeft: timeLeft,
                 lastWatched: new Date().toISOString()
-            };
+            }};
             
-            if (existingIndex >= 0) {
+            if (existingIndex >= 0) {{
                 continueList[existingIndex] = item;
-            } else {
+            }} else {{
                 continueList.push(item);
-            }
+            }}
             
             continueList = continueList.slice(-20);
             localStorage.setItem('continueWatching', JSON.stringify(continueList));
-        } catch (e) {
+        }} catch (e) {{
             console.error('Erro ao salvar progresso:', e);
-        }
-    }
+        }}
+    }}
             
     function playFirstEpisode(category, itemId) {{
         var items = window.vodData[category];
@@ -1194,4 +1194,5 @@ def generate_html_with_correct_paths(base_dir, data):
 
 if __name__ == "__main__":
     build_vod_with_direct_capas()
+
 
