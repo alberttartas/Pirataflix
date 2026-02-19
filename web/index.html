@@ -498,23 +498,55 @@
                 bodyHtml += '</div></div>';
             });
             bodyHtml += '</div></div>';
-        } else if (item.episodes && item.episodes.length > 0) {
-            bodyHtml += '<div class="episodes-section"><h3 style="margin-bottom:15px;font-size:1.1rem;">Episódios</h3>';
-            bodyHtml += '<div class="episode-list">';
-            item.episodes.forEach(function(ep, index) {
-                var safeTitle = (ep.title || '').replace(/"/g, '');
-                bodyHtml += '<div class="episode-item" data-action="play-ep"';
-                bodyHtml += ' data-url="' + ep.url + '"';
-                bodyHtml += ' data-title="' + safeTitle + '"';
-                bodyHtml += ' data-itemid="' + itemId + '"';
-                bodyHtml += ' data-category="' + category + '"';
-                bodyHtml += ' data-index="' + index + '">';
-                bodyHtml += '<div class="episode-number">' + (index + 1) + '</div>';
-                bodyHtml += '<div class="episode-info"><div class="episode-title">' + (ep.title || item.title) + '</div>';
-                bodyHtml += '</div></div>';
-            });
+        } else if (item.seasons && item.seasons.length > 0) {
+    // MÚLTIPLAS TEMPORADAS
+    bodyHtml += '<div class="episodes-section">';
+    
+    // Ordenar temporadas
+    item.seasons.sort(function(a, b) { return a.season - b.season; });
+    
+    item.seasons.forEach(function(season) {
+        bodyHtml += '<h3 style="margin:25px 0 10px;color:#e50914;font-size:1.2rem;">🎬 Temporada ' + season.season + '</h3>';
+        bodyHtml += '<div class="episode-list">';
+        
+        season.episodes.forEach(function(ep, index) {
+            var episodeNum = ep.episode || (index + 1);
+            var episodeTitle = ep.title || 'Episódio ' + episodeNum;
+            var safeTitle = episodeTitle.replace(/"/g, '');
+            
+            bodyHtml += '<div class="episode-item" data-action="play-ep"';
+            bodyHtml += ' data-url="' + ep.url + '"';
+            bodyHtml += ' data-title="' + safeTitle + '"';
+            bodyHtml += ' data-itemid="' + itemId + '"';
+            bodyHtml += ' data-category="' + category + '"';
+            bodyHtml += ' data-index="' + index + '">';
+            bodyHtml += '<div class="episode-number">' + episodeNum + '</div>';
+            bodyHtml += '<div class="episode-info">';
+            bodyHtml += '<div class="episode-title">' + safeTitle + '</div>';
             bodyHtml += '</div></div>';
-        }
+        });
+        
+        bodyHtml += '</div>';
+    });
+    
+    bodyHtml += '</div>';
+} else if (item.episodes && item.episodes.length > 0) {
+    bodyHtml += '<div class="episodes-section"><h3 style="margin-bottom:15px;font-size:1.1rem;">Episódios</h3>';
+    bodyHtml += '<div class="episode-list">';
+    item.episodes.forEach(function(ep, index) {
+        var safeTitle = (ep.title || '').replace(/"/g, '');
+        bodyHtml += '<div class="episode-item" data-action="play-ep"';
+        bodyHtml += ' data-url="' + ep.url + '"';
+        bodyHtml += ' data-title="' + safeTitle + '"';
+        bodyHtml += ' data-itemid="' + itemId + '"';
+        bodyHtml += ' data-category="' + category + '"';
+        bodyHtml += ' data-index="' + index + '">';
+        bodyHtml += '<div class="episode-number">' + (index + 1) + '</div>';
+        bodyHtml += '<div class="episode-info"><div class="episode-title">' + (ep.title || item.title) + '</div>';
+        bodyHtml += '</div></div>';
+    });
+    bodyHtml += '</div></div>';
+}
 
         document.getElementById('modalHeader').innerHTML = headerHtml;
         document.getElementById('modalBody').innerHTML = bodyHtml;
