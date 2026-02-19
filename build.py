@@ -746,15 +746,15 @@ def generate_html_with_correct_paths(base_dir, data):
         window.channelsDict = {channels_json};
     </script>
 
-        <script id="app-script">
-    (function() {{
+       <script id="app-script">
+(function() {{
     var RAW_BASE = 'https://raw.githubusercontent.com/alberttartas/Pirataflix/main';
     var DEFAULT_POSTER = RAW_BASE + '/assets/Capas/default.jpg';
     window._DEFAULT_POSTER = DEFAULT_POSTER;
     window.vodData = {{}};
 
     // =====================
-    // FUNÇÕES AUXILIARES (DEFINIDAS PRIMEIRO)
+    // FUNÇÕES AUXILIARES
     // =====================
     function item_title_from(category, itemId) {{
         var items = window.vodData[category];
@@ -765,227 +765,240 @@ def generate_html_with_correct_paths(base_dir, data):
         return item ? item.title : '';
     }}
 
-        function playEpisode(url, title, itemId, category, episodeIndex) {{
-    // TRATAMENTO ESPECIAL PARA TV
-    if (category === 'tv') {{
-        if (typeof window.openTVPlayer === 'function') {{
-            window.openTVPlayer(parseInt(itemId));
+    // ===== SALVAR PROGRESSO =====
+    function saveProgress(itemId, category, title, poster, episode, progress, timeLeft, episodeIndex) {{
+        try {{
+            let continueList = JSON.parse(localStorage.getItem('continueWatching')) || [];
+            
+            const existingIndex = continueList.findIndex(i => i.id === itemId && i.category === category);
+            
+            const item = {{
+                id: itemId,
+                category: category,
+                title: title,
+                poster: poster,
+                episode: episode,
+                episodeIndex: episodeIndex,
+                progress: progress,
+                timeLeft: timeLeft,
+                lastWatched: new Date().toISOString()
+            }};
+            
+            if (existingIndex >= 0) {{
+                continueList[existingIndex] = item;
+            }} else {{
+                continueList.push(item);
+            }}
+            
+            continueList = continueList.slice(-20);
+            localStorage.setItem('continueWatching', JSON.stringify(continueList));
+        }} catch (e) {{
+            console.error('Erro ao salvar progresso:', e);
+        }}
+    }}
+
+    // ===== PLAY EPISODE (VERSÃO ÚNICA CORRIGIDA) =====
+    function playEpisode(url, title, itemId, category, episodeIndex) {{
+        // TRATAMENTO ESPECIAL PARA TV
+        if (category === 'tv') {{
+            if (typeof window.openTVPlayer === 'function') {{
+                window.openTVPlayer(parseInt(itemId));
+            }} else {{
+                window.open(url, '_blank');
+            }}
+            document.getElementById('modal').style.display = 'none';
+            return;
+        }}
+        
+        // Salvar progresso (apenas para séries/filmes)
+        try {{
+            const items = window.vodData[category];
+            if (!items) return;
+            
+            const item = items.find(i => i.id === itemId);
+            if (!item) return;
+            
+            const poster = (item.poster && item.poster.includes('/')) 
+                ? (RAW_BASE + '/assets/Capas/' + item.poster.split('/').pop())
+                : (item.poster || DEFAULT_POSTER);
+            
+            const episodeTitle = (item.episodes && item.episodes[episodeIndex] 
+                ? item.episodes[episodeIndex].title 
+                : 'Episódio ' + (episodeIndex + 1));
+            
+            saveProgress(itemId, category, item.title, poster, episodeTitle, 0, '0 min', episodeIndex);
+        }} catch (e) {{
+            console.error('Erro ao salvar progresso:', e);
+        }}
+        
+        if (typeof window.playWithModernPlayer === 'function') {{
+            window.playWithModernPlayer(url, title, '', itemId, category, episodeIndex);
+            document.getElementById('modal').style.display = 'none';
         }} else {{
             window.open(url, '_blank');
         }}
-        document.getElementById('modal').style.display = 'none';
-        return;
     }}
-    
-    // Salvar progresso (apenas para séries/filmes)
-    try {{
-        const items = window.vodData[category];
-        if (!items) return;
-        
-        const item = items.find(i => i.id === itemId);
-        if (!item) return;
-        
-        const poster = (item.poster && item.poster.includes('/')) 
-            ? (RAW_BASE + '/assets/Capas/' + item.poster.split('/').pop())
-            : (item.poster || DEFAULT_POSTER);
-        
-        const episodeTitle = (item.episodes && item.episodes[episodeIndex] 
-    ? item.episodes[episodeIndex].title 
-    : 'Episódio ' + (episodeIndex + 1));
-        
-        saveProgress(itemId, category, item.title, poster, episodeTitle, 0, '0 min');
-    }} catch (e) {{
-        console.error('Erro ao salvar progresso:', e);
-    }}
-    
-    if (typeof window.playWithModernPlayer === 'function') {{
-        window.playWithModernPlayer(url, title, '', itemId, category, episodeIndex);
-        document.getElementById('modal').style.display = 'none';
-    }} else {{
-        window.open(url, '_blank');
-    }}
-}}
 
-        // ===== SALVAR PROGRESSO =====
-function saveProgress(itemId, category, title, poster, episode, progress, timeLeft, episodeIndex) {{
-    try {{
-        let continueList = JSON.parse(localStorage.getItem('continueWatching')) || [];
-        
-        const existingIndex = continueList.findIndex(i => i.id === itemId && i.category === category);
-        
-        const item = {{
-            id: itemId,
-            category: category,
-            title: title,
-            poster: poster,
-            episode: episode,
-            episodeIndex: episodeIndex,  // ← AGORA GUARDA O ÍNDICE
-            progress: progress,
-            timeLeft: timeLeft,
-            lastWatched: new Date().toISOString()
-        }};
-        
-        if (existingIndex >= 0) {{
-            continueList[existingIndex] = item;
-        }} else {{
-            continueList.push(item);
+    // ===== PLAY FIRST EPISODE (CORRIGIDO) =====
+    function playFirstEpisode(category, itemId) {{
+        var items = window.vodData[category];
+        if (!items) {{
+            console.error('Categoria não encontrada:', category);
+            return;
         }}
         
-        continueList = continueList.slice(-20);
-        localStorage.setItem('continueWatching', JSON.stringify(continueList));
-    }} catch (e) {{
-        console.error('Erro ao salvar progresso:', e);
-    }}
-}}
-        
-function playFirstEpisode(category, itemId) {{
-    var items = window.vodData[category];
-    if (!items) {{
-        console.error('Categoria não encontrada:', category);
-        return;
-    }}
-    
-    var item;
-    if (category === 'tv') {{
-        item = items[parseInt(itemId)];
-    }} else {{
-        item = items.find(function(i) {{ return i.id === itemId; }});
-    }}
-    
-    if (!item) {{
-        console.error('Item não encontrado:', itemId, 'em', category);
-        return;
-    }}
-    
-    // Buscar no continueList o índice salvo
-    var continueList = JSON.parse(localStorage.getItem('continueWatching')) || [];
-    var saved = continueList.find(i => i.id === itemId && i.category === category);
-    var episodeIndex = saved ? saved.episodeIndex : 0;
-    
-    // CASO 1: Série com episódios diretos
-    if (item.episodes && item.episodes.length > 0) {{
-        // Garantir que o índice não ultrapasse o total de episódios
-        var idx = Math.min(episodeIndex, item.episodes.length - 1);
-        if (idx < 0) idx = 0;
-        
-        var ep = item.episodes[idx];
-        if (ep && ep.url) {{
-            playEpisode(ep.url, item.title + ' - ' + (ep.title || 'Episódio ' + (idx + 1)), itemId, category, idx);
+        var item;
+        if (category === 'tv') {{
+            item = items[parseInt(itemId)];
         }} else {{
-            console.error('Episódio sem URL:', idx, item);
+            item = items.find(function(i) {{ return i.id === itemId; }});
         }}
-        return;
-    }}
-    
-    // CASO 2: Item com URL direta
-    if (item.url) {{
-        playEpisode(item.url, item.title, itemId, category, 0);
-        return;
-    }}
-    
-    // CASO 3: Série com temporadas
-    if (item.seasons && item.seasons.length > 0) {{
-        // Calcular total de episódios e encontrar a temporada correta
-        var targetEpisode = episodeIndex;
-        var foundSeason = null;
-        var foundEpIndex = 0;
         
-        for (var s = 0; s < item.seasons.length; s++) {{
-            var season = item.seasons[s];
-            if (!season.episodes || season.episodes.length === 0) continue;
+        if (!item) {{
+            console.error('Item não encontrado:', itemId, 'em', category);
+            return;
+        }}
+        
+        // Buscar no continueList o índice salvo
+        var continueList = JSON.parse(localStorage.getItem('continueWatching')) || [];
+        var saved = continueList.find(i => i.id === itemId && i.category === category);
+        var episodeIndex = saved ? saved.episodeIndex : 0;
+        
+        // CASO 1: Série com episódios diretos
+        if (item.episodes && item.episodes.length > 0) {{
+            var idx = Math.min(episodeIndex, item.episodes.length - 1);
+            if (idx < 0) idx = 0;
             
-            if (targetEpisode < season.episodes.length) {{
-                foundSeason = season;
-                foundEpIndex = targetEpisode;
-                break;
-            }}
-            targetEpisode -= season.episodes.length;
-        }}
-        
-        // Se não encontrou, pegar o primeiro episódio da primeira temporada
-        if (!foundSeason) {{
-            foundSeason = item.seasons[0];
-            foundEpIndex = 0;
-        }}
-        
-        if (foundSeason && foundSeason.episodes && foundSeason.episodes.length > foundEpIndex) {{
-            var ep = foundSeason.episodes[foundEpIndex];
+            var ep = item.episodes[idx];
             if (ep && ep.url) {{
-                playEpisode(ep.url, item.title + ' - Temp ' + foundSeason.season + ' - ' + (ep.title || 'Episódio ' + (foundEpIndex + 1)), itemId, category, foundEpIndex);
+                playEpisode(ep.url, item.title + ' - ' + (ep.title || 'Episódio ' + (idx + 1)), itemId, category, idx);
             }} else {{
-                console.error('Episódio sem URL na temporada:', foundSeason.season, foundEpIndex);
+                console.error('Episódio sem URL:', idx, item);
             }}
-        }} else {{
-            console.error('Não foi possível encontrar episódio');
+            return;
         }}
-        return;
+        
+        // CASO 2: Item com URL direta
+        if (item.url) {{
+            playEpisode(item.url, item.title, itemId, category, 0);
+            return;
+        }}
+        
+        // CASO 3: Série com temporadas
+        if (item.seasons && item.seasons.length > 0) {{
+            // Calcular total de episódios
+            var totalEpisodes = 0;
+            for (var s = 0; s < item.seasons.length; s++) {{
+                totalEpisodes += (item.seasons[s].episodes || []).length;
+            }}
+            
+            // Validar índice
+            if (episodeIndex >= totalEpisodes) {{
+                episodeIndex = totalEpisodes - 1;
+            }}
+            if (episodeIndex < 0) episodeIndex = 0;
+            
+            // Encontrar temporada e episódio corretos
+            var remainingIndex = episodeIndex;
+            var foundSeason = null;
+            var foundEpIndex = 0;
+            
+            for (var s = 0; s < item.seasons.length; s++) {{
+                var season = item.seasons[s];
+                var seasonEpisodes = season.episodes || [];
+                
+                if (remainingIndex < seasonEpisodes.length) {{
+                    foundSeason = season;
+                    foundEpIndex = remainingIndex;
+                    break;
+                }}
+                remainingIndex -= seasonEpisodes.length;
+            }}
+            
+            // Fallback
+            if (!foundSeason && item.seasons.length > 0) {{
+                foundSeason = item.seasons[0];
+                foundEpIndex = 0;
+            }}
+            
+            if (foundSeason && foundSeason.episodes && foundSeason.episodes.length > foundEpIndex) {{
+                var ep = foundSeason.episodes[foundEpIndex];
+                if (ep && ep.url) {{
+                    var episodeTitle = item.title + ' - Temp ' + foundSeason.season + ' - ' + 
+                                      (ep.title || 'Episódio ' + (foundEpIndex + 1));
+                    playEpisode(ep.url, episodeTitle, itemId, category, episodeIndex);
+                }} else {{
+                    console.error('Episódio sem URL');
+                }}
+            }}
+            return;
+        }}
+        
+        console.error('Item sem episódios ou URL:', item);
     }}
-    
-    console.error('Item sem episódios ou URL:', item);
-}}
 
-// =====================
-// CARREGAR DADOS
-// =====================
-async function loadData() {{
-    try {{
-        var response = await fetch('data.json');
-        window.vodData = await response.json();
-        displayContent();
+    // =====================
+    // CARREGAR DADOS
+    // =====================
+    async function loadData() {{
+        try {{
+            var response = await fetch('data.json');
+            window.vodData = await response.json();
+            displayContent();
+            setTimeout(function() {{
+                if (typeof $.fn.owlCarousel === 'function') {{
+                    initCarousels();
+                }} else {{
+                    initFallbackScroll();
+                }}
+            }}, 500);
+        }} catch (error) {{
+            document.getElementById('content').innerHTML =
+                '<div class="error">Erro ao carregar: ' + error.message + '</div>';
+        }}
+    }}
+
+    // =====================
+    // FALLBACK SCROLL
+    // =====================
+    function initFallbackScroll() {{
+        $('.owl-carousel').css({{ display: 'flex', 'overflow-x': 'auto', gap: '10px' }});
+        $('.owl-carousel .item-card').css({{ flex: '0 0 auto', width: '220px' }});
+    }}
+
+    // =====================
+    // CARROSSÉIS
+    // =====================
+    function initCarousels() {{
         setTimeout(function() {{
-            if (typeof $.fn.owlCarousel === 'function') {{
-                initCarousels();
-            }} else {{
-                initFallbackScroll();
-            }}
-        }}, 500);
-    }} catch (error) {{
-        document.getElementById('content').innerHTML =
-            '<div class="error">Erro ao carregar: ' + error.message + '</div>';
-    }}
-}}
-
-// =====================
-// FALLBACK SCROLL
-// =====================
-function initFallbackScroll() {{
-    $('.owl-carousel').css({{ display: 'flex', 'overflow-x': 'auto', gap: '10px' }});
-    $('.owl-carousel .item-card').css({{ flex: '0 0 auto', width: '220px' }});
-}}
-
-// =====================
-// CARROSSÉIS
-// =====================
-function initCarousels() {{
-    setTimeout(function() {{
-        $('.owl-carousel').each(function() {{
-            var $c = $(this);
-            var cId = $c.attr('id');
-            var isCont = cId === 'carousel-continue';
-            if (!$c.data('owlCarousel')) {{
-                $c.owlCarousel({{
-                    items: isCont ? 8 : 7,
-                    margin: isCont ? 8 : 10,
-                    loop: false, nav: false, dots: false,
-                    responsive: {{
-                        0:    {{ items: isCont ? 3 : 2 }},
-                        480:  {{ items: isCont ? 4 : 3 }},
-                        640:  {{ items: isCont ? 5 : 4 }},
-                        768:  {{ items: isCont ? 6 : 5 }},
-                        1024: {{ items: isCont ? 7 : 6 }},
-                        1280: {{ items: isCont ? 8 : 7 }}
-                    }}
+            $('.owl-carousel').each(function() {{
+                var $c = $(this);
+                var cId = $c.attr('id');
+                var isCont = cId === 'carousel-continue';
+                if (!$c.data('owlCarousel')) {{
+                    $c.owlCarousel({{
+                        items: isCont ? 8 : 7,
+                        margin: isCont ? 8 : 10,
+                        loop: false, nav: false, dots: false,
+                        responsive: {{
+                            0:    {{ items: isCont ? 3 : 2 }},
+                            480:  {{ items: isCont ? 4 : 3 }},
+                            640:  {{ items: isCont ? 5 : 4 }},
+                            768:  {{ items: isCont ? 6 : 5 }},
+                            1024: {{ items: isCont ? 7 : 6 }},
+                            1280: {{ items: isCont ? 8 : 7 }}
+                        }}
+                    }});
+                }}
+                $('.next-' + cId).off('click').on('click', function(e) {{
+                    e.preventDefault(); $c.trigger('next.owl.carousel');
                 }});
-            }}
-            $('.next-' + cId).off('click').on('click', function(e) {{
-                e.preventDefault(); $c.trigger('next.owl.carousel');
+                $('.prev-' + cId).off('click').on('click', function(e) {{
+                    e.preventDefault(); $c.trigger('prev.owl.carousel');
+                }});
             }});
-            $('.prev-' + cId).off('click').on('click', function(e) {{
-                e.preventDefault(); $c.trigger('prev.owl.carousel');
-            }});
-        }});
-    }}, 300);
-}}
+        }}, 300);
+    }}
 
     // =====================
     // HELPERS
@@ -1163,54 +1176,47 @@ function initCarousels() {{
             }});
             bodyHtml += '</div></div>';
         }} else if (item.seasons && item.seasons.length > 0) {{
-    // MÚLTIPLAS TEMPORADAS
-    bodyHtml += '<div class="episodes-section">';
-    
-    // Ordenar temporadas
-    item.seasons.sort(function(a, b) {{ return a.season - b.season; }});
-    
-    item.seasons.forEach(function(season) {{
-        bodyHtml += '<h3 style="margin:25px 0 10px;color:#e50914;font-size:1.2rem;">🎬 Temporada ' + season.season + '</h3>';
-        bodyHtml += '<div class="episode-list">';
-        
-        season.episodes.forEach(function(ep, index) {{
-            var episodeNum = ep.episode || (index + 1);
-            var episodeTitle = ep.title || 'Episódio ' + episodeNum;
-            var safeTitle = episodeTitle.replace(/"/g, '');
-            
-            bodyHtml += '<div class="episode-item" data-action="play-ep"';
-            bodyHtml += ' data-url="' + ep.url + '"';
-            bodyHtml += ' data-title="' + safeTitle + '"';
-            bodyHtml += ' data-itemid="' + itemId + '"';
-            bodyHtml += ' data-category="' + category + '"';
-            bodyHtml += ' data-index="' + index + '">';
-            bodyHtml += '<div class="episode-number">' + episodeNum + '</div>';
-            bodyHtml += '<div class="episode-info">';
-            bodyHtml += '<div class="episode-title">' + safeTitle + '</div>';
+            bodyHtml += '<div class="episodes-section">';
+            item.seasons.sort(function(a, b) {{ return a.season - b.season; }});
+            item.seasons.forEach(function(season) {{
+                bodyHtml += '<h3 style="margin:25px 0 10px;color:#e50914;font-size:1.2rem;">🎬 Temporada ' + season.season + '</h3>';
+                bodyHtml += '<div class="episode-list">';
+                season.episodes.forEach(function(ep, index) {{
+                    var episodeNum = ep.episode || (index + 1);
+                    var episodeTitle = ep.title || 'Episódio ' + episodeNum;
+                    var safeTitle = episodeTitle.replace(/"/g, '');
+                    
+                    bodyHtml += '<div class="episode-item" data-action="play-ep"';
+                    bodyHtml += ' data-url="' + ep.url + '"';
+                    bodyHtml += ' data-title="' + safeTitle + '"';
+                    bodyHtml += ' data-itemid="' + itemId + '"';
+                    bodyHtml += ' data-category="' + category + '"';
+                    bodyHtml += ' data-index="' + index + '">';
+                    bodyHtml += '<div class="episode-number">' + episodeNum + '</div>';
+                    bodyHtml += '<div class="episode-info">';
+                    bodyHtml += '<div class="episode-title">' + safeTitle + '</div>';
+                    bodyHtml += '</div></div>';
+                }});
+                bodyHtml += '</div>';
+            }});
+            bodyHtml += '</div>';
+        }} else if (item.episodes && item.episodes.length > 0) {{
+            bodyHtml += '<div class="episodes-section"><h3 style="margin-bottom:15px;font-size:1.1rem;">Episódios</h3>';
+            bodyHtml += '<div class="episode-list">';
+            item.episodes.forEach(function(ep, index) {{
+                var safeTitle = (ep.title || '').replace(/"/g, '');
+                bodyHtml += '<div class="episode-item" data-action="play-ep"';
+                bodyHtml += ' data-url="' + ep.url + '"';
+                bodyHtml += ' data-title="' + safeTitle + '"';
+                bodyHtml += ' data-itemid="' + itemId + '"';
+                bodyHtml += ' data-category="' + category + '"';
+                bodyHtml += ' data-index="' + index + '">';
+                bodyHtml += '<div class="episode-number">' + (index + 1) + '</div>';
+                bodyHtml += '<div class="episode-info"><div class="episode-title">' + (ep.title || item.title) + '</div>';
+                bodyHtml += '</div></div>';
+            }});
             bodyHtml += '</div></div>';
-        }});
-        
-        bodyHtml += '</div>';
-    }});
-    
-    bodyHtml += '</div>';
-}} else if (item.episodes && item.episodes.length > 0) {{
-    bodyHtml += '<div class="episodes-section"><h3 style="margin-bottom:15px;font-size:1.1rem;">Episódios</h3>';
-    bodyHtml += '<div class="episode-list">';
-    item.episodes.forEach(function(ep, index) {{
-        var safeTitle = (ep.title || '').replace(/"/g, '');
-        bodyHtml += '<div class="episode-item" data-action="play-ep"';
-        bodyHtml += ' data-url="' + ep.url + '"';
-        bodyHtml += ' data-title="' + safeTitle + '"';
-        bodyHtml += ' data-itemid="' + itemId + '"';
-        bodyHtml += ' data-category="' + category + '"';
-        bodyHtml += ' data-index="' + index + '">';
-        bodyHtml += '<div class="episode-number">' + (index + 1) + '</div>';
-        bodyHtml += '<div class="episode-info"><div class="episode-title">' + (ep.title || item.title) + '</div>';
-        bodyHtml += '</div></div>';
-    }});
-    bodyHtml += '</div></div>';
-}}
+        }}
 
         document.getElementById('modalHeader').innerHTML = headerHtml;
         document.getElementById('modalBody').innerHTML = bodyHtml;
@@ -1273,15 +1279,15 @@ function initCarousels() {{
         }});
     }});
     
- // Expor funções globalmente para acesso pelo console
+    // Expor funções globalmente
     window.openModal = openModal;
     window.playEpisode = playEpisode;
     window.playFirstEpisode = playFirstEpisode;
     
     // Iniciar
     loadData();
-    }})();
-    </script>
+}})();
+</script>
 
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
     <script src="novo-player.js" defer></script>
@@ -1298,6 +1304,7 @@ function initCarousels() {{
 
 if __name__ == "__main__":
     build_vod_with_direct_capas()
+
 
 
 
