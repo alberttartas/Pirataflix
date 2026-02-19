@@ -807,118 +807,150 @@ def generate_html_with_correct_paths(base_dir, data):
 }}
 
         // ===== SALVAR PROGRESSO =====
-    function saveProgress(itemId, category, title, poster, episode, progress, timeLeft) {{
-        try {{
-            let continueList = JSON.parse(localStorage.getItem('continueWatching')) || [];
-            
-            const existingIndex = continueList.findIndex(i => i.id === itemId && i.category === category);
-            
-            const item = {{
-                id: itemId,
-                category: category,
-                title: title,
-                poster: poster,
-                episode: episode,
-                progress: progress,
-                timeLeft: timeLeft,
-                lastWatched: new Date().toISOString()
-            }};
-            
-            if (existingIndex >= 0) {{
-                continueList[existingIndex] = item;
-            }} else {{
-                continueList.push(item);
-            }}
-            
-            continueList = continueList.slice(-20);
-            localStorage.setItem('continueWatching', JSON.stringify(continueList));
-        }} catch (e) {{
-            console.error('Erro ao salvar progresso:', e);
-        }}
-    }}
-            
-    function playFirstEpisode(category, itemId) {{
-        var items = window.vodData[category];
-        if (!items) return;
-        var item;
-        if (category === 'tv') {{
-            item = items[parseInt(itemId)];
+function saveProgress(itemId, category, title, poster, episode, progress, timeLeft, episodeIndex) {{
+    try {{
+        let continueList = JSON.parse(localStorage.getItem('continueWatching')) || [];
+        
+        const existingIndex = continueList.findIndex(i => i.id === itemId && i.category === category);
+        
+        const item = {{
+            id: itemId,
+            category: category,
+            title: title,
+            poster: poster,
+            episode: episode,
+            episodeIndex: episodeIndex,  // ← AGORA GUARDA O ÍNDICE
+            progress: progress,
+            timeLeft: timeLeft,
+            lastWatched: new Date().toISOString()
+        }};
+        
+        if (existingIndex >= 0) {{
+            continueList[existingIndex] = item;
         }} else {{
-            item = items.find(function(i) {{ return i.id === itemId; }});
+            continueList.push(item);
         }}
-        if (!item) return;
-        if (item.episodes && item.episodes.length > 0) {{
-            playEpisode(item.episodes[0].url, item.title + ' - ' + (item.episodes[0].title || 'AO VIVO'), itemId, category, 0);
-        }} else if (item.url) {{
-            playEpisode(item.url, item.title, itemId, category, 0);
-        }} else if (item.seasons && item.seasons.length > 0 && item.seasons[0].episodes.length > 0) {{
+        
+        continueList = continueList.slice(-20);
+        localStorage.setItem('continueWatching', JSON.stringify(continueList));
+    }} catch (e) {{
+        console.error('Erro ao salvar progresso:', e);
+    }}
+}}
+        
+function playFirstEpisode(category, itemId) {{
+    var items = window.vodData[category];
+    if (!items) return;
+    var item;
+    if (category === 'tv') {{
+        item = items[parseInt(itemId)];
+    }} else {{
+        item = items.find(function(i) {{ return i.id === itemId; }});
+    }}
+    if (!item) return;
+    
+    // Buscar no continueList o índice salvo
+    var continueList = JSON.parse(localStorage.getItem('continueWatching')) || [];
+    var saved = continueList.find(i => i.id === itemId && i.category === category);
+    var episodeIndex = saved ? saved.episodeIndex : 0;
+    
+    if (item.episodes && item.episodes.length > 0) {{
+        // Garantir que o índice não ultrapasse o total de episódios
+        var idx = Math.min(episodeIndex, item.episodes.length - 1);
+        playEpisode(item.episodes[idx].url, item.title + ' - ' + (item.episodes[idx].title || 'AO VIVO'), itemId, category, idx);
+    }} else if (item.url) {{
+        playEpisode(item.url, item.title, itemId, category, 0);
+    }} else if (item.seasons && item.seasons.length > 0 && item.seasons[0].episodes.length > 0) {{
+        // Para séries com temporadas, encontrar o episódio correto
+        var totalEpisodes = 0;
+        var targetEpisode = episodeIndex;
+        var foundSeason = null;
+        var foundEpIndex = 0;
+        
+        // Calcular total de episódios e encontrar a temporada correta
+        for (var s = 0; s < item.seasons.length; s++) {{
+            var season = item.seasons[s];
+            if (targetEpisode < season.episodes.length) {{
+                foundSeason = season;
+                foundEpIndex = targetEpisode;
+                break;
+            }}
+            targetEpisode -= season.episodes.length;
+        }}
+        
+        if (foundSeason) {{
+            var ep = foundSeason.episodes[foundEpIndex];
+            playEpisode(ep.url, item.title + ' - Temp ' + foundSeason.season + ' - ' + (ep.title || 'Episódio ' + (foundEpIndex + 1)), itemId, category, foundEpIndex);
+        }} else {{
+            // Fallback para o primeiro episódio
             var ep = item.seasons[0].episodes[0];
             playEpisode(ep.url, item.title + ' - Temp 1 - ' + ep.title, itemId, category, 0);
         }}
     }}
+}}
 
-    // =====================
-    // CARREGAR DADOS
-    // =====================
-    async function loadData() {{
-        try {{
-            var response = await fetch('data.json');
-            window.vodData = await response.json();
-            displayContent();
-            setTimeout(function() {{
-                if (typeof $.fn.owlCarousel === 'function') {{
-                    initCarousels();
-                }} else {{
-                    initFallbackScroll();
-                }}
-            }}, 500);
-        }} catch (error) {{
-            document.getElementById('content').innerHTML =
-                '<div class="error">Erro ao carregar: ' + error.message + '</div>';
-        }}
-    }}
-
-    // =====================
-    // FALLBACK SCROLL
-    // =====================
-    function initFallbackScroll() {{
-        $('.owl-carousel').css({{ display: 'flex', 'overflow-x': 'auto', gap: '10px' }});
-        $('.owl-carousel .item-card').css({{ flex: '0 0 auto', width: '220px' }});
-    }}
-
-    // =====================
-    // CARROSSÉIS
-    // =====================
-    function initCarousels() {{
+// =====================
+// CARREGAR DADOS
+// =====================
+async function loadData() {{
+    try {{
+        var response = await fetch('data.json');
+        window.vodData = await response.json();
+        displayContent();
         setTimeout(function() {{
-            $('.owl-carousel').each(function() {{
-                var $c = $(this);
-                var cId = $c.attr('id');
-                var isCont = cId === 'carousel-continue';
-                if (!$c.data('owlCarousel')) {{
-                    $c.owlCarousel({{
-                        items: isCont ? 8 : 7,
-                        margin: isCont ? 8 : 10,
-                        loop: false, nav: false, dots: false,
-                        responsive: {{
-                            0:    {{ items: isCont ? 3 : 2 }},
-                            480:  {{ items: isCont ? 4 : 3 }},
-                            640:  {{ items: isCont ? 5 : 4 }},
-                            768:  {{ items: isCont ? 6 : 5 }},
-                            1024: {{ items: isCont ? 7 : 6 }},
-                            1280: {{ items: isCont ? 8 : 7 }}
-                        }}
-                    }});
-                }}
-                $('.next-' + cId).off('click').on('click', function(e) {{
-                    e.preventDefault(); $c.trigger('next.owl.carousel');
-                }});
-                $('.prev-' + cId).off('click').on('click', function(e) {{
-                    e.preventDefault(); $c.trigger('prev.owl.carousel');
-                }});
-            }});
-        }}, 300);
+            if (typeof $.fn.owlCarousel === 'function') {{
+                initCarousels();
+            }} else {{
+                initFallbackScroll();
+            }}
+        }}, 500);
+    }} catch (error) {{
+        document.getElementById('content').innerHTML =
+            '<div class="error">Erro ao carregar: ' + error.message + '</div>';
     }}
+}}
+
+// =====================
+// FALLBACK SCROLL
+// =====================
+function initFallbackScroll() {{
+    $('.owl-carousel').css({{ display: 'flex', 'overflow-x': 'auto', gap: '10px' }});
+    $('.owl-carousel .item-card').css({{ flex: '0 0 auto', width: '220px' }});
+}}
+
+// =====================
+// CARROSSÉIS
+// =====================
+function initCarousels() {{
+    setTimeout(function() {{
+        $('.owl-carousel').each(function() {{
+            var $c = $(this);
+            var cId = $c.attr('id');
+            var isCont = cId === 'carousel-continue';
+            if (!$c.data('owlCarousel')) {{
+                $c.owlCarousel({{
+                    items: isCont ? 8 : 7,
+                    margin: isCont ? 8 : 10,
+                    loop: false, nav: false, dots: false,
+                    responsive: {{
+                        0:    {{ items: isCont ? 3 : 2 }},
+                        480:  {{ items: isCont ? 4 : 3 }},
+                        640:  {{ items: isCont ? 5 : 4 }},
+                        768:  {{ items: isCont ? 6 : 5 }},
+                        1024: {{ items: isCont ? 7 : 6 }},
+                        1280: {{ items: isCont ? 8 : 7 }}
+                    }}
+                }});
+            }}
+            $('.next-' + cId).off('click').on('click', function(e) {{
+                e.preventDefault(); $c.trigger('next.owl.carousel');
+            }});
+            $('.prev-' + cId).off('click').on('click', function(e) {{
+                e.preventDefault(); $c.trigger('prev.owl.carousel');
+            }});
+        }});
+    }}, 300);
+}}
 
     // =====================
     // HELPERS
@@ -1231,6 +1263,7 @@ def generate_html_with_correct_paths(base_dir, data):
 
 if __name__ == "__main__":
     build_vod_with_direct_capas()
+
 
 
 
