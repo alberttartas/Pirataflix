@@ -65074,6 +65074,51 @@
           "title": "AO VIVO"
         }
       ]
+    },
+    {
+      "id": "animax__544p",
+      "type": "tv",
+      "title": "Animax (544p)",
+      "tvg_id": "",
+      "tvg_logo": "",
+      "group": "📺 TV Ao Vivo",
+      "url": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=bs15",
+      "episodes": [
+        {
+          "url": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=bs15",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "History.jp",
+      "type": "tv",
+      "title": "History Channel Japan (544p)",
+      "tvg_id": "History.jp",
+      "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/History_%282021%29.svg/512px-History_%282021%29.svg.png",
+      "group": "📺 TV Ao Vivo",
+      "url": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=cs09",
+      "episodes": [
+        {
+          "url": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=cs09",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "MTV.jp",
+      "type": "tv",
+      "title": "MTV Japan (544p)",
+      "tvg_id": "MTV.jp",
+      "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/MTV_2021_%28brand_version%29.svg/512px-MTV_2021_%28brand_version%29.svg.png",
+      "group": "📺 TV Ao Vivo",
+      "url": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=cs18",
+      "episodes": [
+        {
+          "url": "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=cs18",
+          "title": "AO VIVO"
+        }
+      ]
     }
   ]
 }
