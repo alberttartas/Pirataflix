@@ -243,36 +243,60 @@ function saveProgress(itemId, category, title, poster, episode, progress, timeLe
         
 function playFirstEpisode(category, itemId) {
     var items = window.vodData[category];
-    if (!items) return;
+    if (!items) {
+        console.error('Categoria não encontrada:', category);
+        return;
+    }
+    
     var item;
     if (category === 'tv') {
         item = items[parseInt(itemId)];
     } else {
         item = items.find(function(i) { return i.id === itemId; });
     }
-    if (!item) return;
+    
+    if (!item) {
+        console.error('Item não encontrado:', itemId, 'em', category);
+        return;
+    }
     
     // Buscar no continueList o índice salvo
     var continueList = JSON.parse(localStorage.getItem('continueWatching')) || [];
     var saved = continueList.find(i => i.id === itemId && i.category === category);
     var episodeIndex = saved ? saved.episodeIndex : 0;
     
+    // CASO 1: Série com episódios diretos
     if (item.episodes && item.episodes.length > 0) {
         // Garantir que o índice não ultrapasse o total de episódios
         var idx = Math.min(episodeIndex, item.episodes.length - 1);
-        playEpisode(item.episodes[idx].url, item.title + ' - ' + (item.episodes[idx].title || 'AO VIVO'), itemId, category, idx);
-    } else if (item.url) {
+        if (idx < 0) idx = 0;
+        
+        var ep = item.episodes[idx];
+        if (ep && ep.url) {
+            playEpisode(ep.url, item.title + ' - ' + (ep.title || 'Episódio ' + (idx + 1)), itemId, category, idx);
+        } else {
+            console.error('Episódio sem URL:', idx, item);
+        }
+        return;
+    }
+    
+    // CASO 2: Item com URL direta
+    if (item.url) {
         playEpisode(item.url, item.title, itemId, category, 0);
-    } else if (item.seasons && item.seasons.length > 0 && item.seasons[0].episodes.length > 0) {
-        // Para séries com temporadas, encontrar o episódio correto
-        var totalEpisodes = 0;
+        return;
+    }
+    
+    // CASO 3: Série com temporadas
+    if (item.seasons && item.seasons.length > 0) {
+        // Calcular total de episódios e encontrar a temporada correta
         var targetEpisode = episodeIndex;
         var foundSeason = null;
         var foundEpIndex = 0;
         
-        // Calcular total de episódios e encontrar a temporada correta
         for (var s = 0; s < item.seasons.length; s++) {
             var season = item.seasons[s];
+            if (!season.episodes || season.episodes.length === 0) continue;
+            
             if (targetEpisode < season.episodes.length) {
                 foundSeason = season;
                 foundEpIndex = targetEpisode;
@@ -281,15 +305,26 @@ function playFirstEpisode(category, itemId) {
             targetEpisode -= season.episodes.length;
         }
         
-        if (foundSeason) {
-            var ep = foundSeason.episodes[foundEpIndex];
-            playEpisode(ep.url, item.title + ' - Temp ' + foundSeason.season + ' - ' + (ep.title || 'Episódio ' + (foundEpIndex + 1)), itemId, category, foundEpIndex);
-        } else {
-            // Fallback para o primeiro episódio
-            var ep = item.seasons[0].episodes[0];
-            playEpisode(ep.url, item.title + ' - Temp 1 - ' + ep.title, itemId, category, 0);
+        // Se não encontrou, pegar o primeiro episódio da primeira temporada
+        if (!foundSeason) {
+            foundSeason = item.seasons[0];
+            foundEpIndex = 0;
         }
+        
+        if (foundSeason && foundSeason.episodes && foundSeason.episodes.length > foundEpIndex) {
+            var ep = foundSeason.episodes[foundEpIndex];
+            if (ep && ep.url) {
+                playEpisode(ep.url, item.title + ' - Temp ' + foundSeason.season + ' - ' + (ep.title || 'Episódio ' + (foundEpIndex + 1)), itemId, category, foundEpIndex);
+            } else {
+                console.error('Episódio sem URL na temporada:', foundSeason.season, foundEpIndex);
+            }
+        } else {
+            console.error('Não foi possível encontrar episódio');
+        }
+        return;
     }
+    
+    console.error('Item sem episódios ou URL:', item);
 }
 
 // =====================
