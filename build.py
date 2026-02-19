@@ -1173,7 +1173,12 @@ def generate_html_with_correct_paths(base_dir, data):
             }}
         }});
     }});
-
+    
+ // Expor funções globalmente para acesso pelo console
+    window.openModal = openModal;
+    window.playEpisode = playEpisode;
+    window.playFirstEpisode = playFirstEpisode;
+    
     // Iniciar
     loadData();
     }})();
@@ -1194,6 +1199,7 @@ def generate_html_with_correct_paths(base_dir, data):
 
 if __name__ == "__main__":
     build_vod_with_direct_capas()
+
 
 
 
