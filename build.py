@@ -790,8 +790,8 @@ def generate_html_with_correct_paths(base_dir, data):
             : (item.poster || DEFAULT_POSTER);
         
         const episodeTitle = (item.episodes && item.episodes[episodeIndex] 
-            ? item.episodes[episodeIndex].title 
-            : `Episódio ${episodeIndex + 1}`);
+    ? item.episodes[episodeIndex].title 
+    : 'Episódio ' + (episodeIndex + 1));
         
         saveProgress(itemId, category, item.title, poster, episodeTitle, 0, '0 min');
     }} catch (e) {{
@@ -1194,5 +1194,6 @@ def generate_html_with_correct_paths(base_dir, data):
 
 if __name__ == "__main__":
     build_vod_with_direct_capas()
+
 
 
