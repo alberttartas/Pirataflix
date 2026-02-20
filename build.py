@@ -547,19 +547,7 @@ def build_vod_with_direct_capas():
     generate_html_with_correct_paths(base_dir, output)
 
     print("\n📋 VERIFICANDO CÓPIA DO INTEGRATE-PLAYER.JS:")
-    integrate_js_path = base_dir / "integrate-player.js"
-    web_integrate_path = web_dir / "integrate-player.js"
-    if integrate_js_path.exists():
-        tamanho = integrate_js_path.stat().st_size
-        print(f"   ✅ Arquivo fonte ENCONTRADO! Tamanho: {tamanho} bytes")
-        with open(integrate_js_path, 'r', encoding='utf-8') as src:
-            conteudo = src.read()
-        with open(web_integrate_path, 'w', encoding='utf-8') as dst:
-            dst.write(conteudo)
-        if web_integrate_path.exists():
-            print(f"   ✅ Arquivo COPIADO com sucesso!")
     else:
-        print(f"   ❌ Arquivo fonte NÃO ENCONTRADO em: {integrate_js_path}")
 
     output_dir = base_dir / "iptv_playlists"
     output_dir.mkdir(exist_ok=True)
@@ -608,111 +596,111 @@ def generate_html_with_correct_paths(base_dir, data):
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        * {{ margin: 0; padding: 0; box-sizing: border-box; }}
-        body {{ font-family: Arial, sans-serif; background: #141414; color: white; line-height: 1.4; }}
-        .header {{
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; background: #141414; color: white; line-height: 1.4; }
+        .header {
             position: fixed; top: 0; left: 0; width: 100%; padding: 20px 50px;
             background: linear-gradient(to bottom, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
             z-index: 100; display: flex; justify-content: space-between; align-items: center;
-        }}
-        .logo {{ font-size: 2.5rem; color: #e50914; font-weight: bold; text-decoration: none; }}
-        .nav-links {{ display: flex; gap: 20px; }}
-        .nav-link {{ color: #e5e5e5; text-decoration: none; font-size: 0.9rem; transition: color 0.3s; }}
-        .nav-link:hover {{ color: #fff; }}
-        .main-content {{ padding-top: 80px; }}
-        .category-section {{ margin-bottom: 40px; padding: 0 50px; position: relative; }}
-        .category-header {{ display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }}
-        .category-title {{ font-size: 1.4rem; color: #fff; font-weight: bold; }}
-        .see-all-link {{ color: #e50914; text-decoration: none; font-size: 0.9rem; padding: 5px 10px; border-radius: 3px; transition: background 0.3s; }}
-        .see-all-link:hover {{ background: rgba(229,9,20,0.2); }}
-        .nav_items_module {{ display: flex; gap: 10px; }}
-        .nav-btn {{
+        }
+        .logo { font-size: 2.5rem; color: #e50914; font-weight: bold; text-decoration: none; }
+        .nav-links { display: flex; gap: 20px; }
+        .nav-link { color: #e5e5e5; text-decoration: none; font-size: 0.9rem; transition: color 0.3s; }
+        .nav-link:hover { color: #fff; }
+        .main-content { padding-top: 80px; }
+        .category-section { margin-bottom: 40px; padding: 0 50px; position: relative; }
+        .category-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+        .category-title { font-size: 1.4rem; color: #fff; font-weight: bold; }
+        .see-all-link { color: #e50914; text-decoration: none; font-size: 0.9rem; padding: 5px 10px; border-radius: 3px; transition: background 0.3s; }
+        .see-all-link:hover { background: rgba(229,9,20,0.2); }
+        .nav_items_module { display: flex; gap: 10px; }
+        .nav-btn {
             background: rgba(0,0,0,0.5); color: white; width: 40px; height: 40px;
             border-radius: 50%; display: flex; align-items: center; justify-content: center;
             cursor: pointer; transition: background 0.3s; border: 1px solid rgba(255,255,255,0.1);
-        }}
-        .nav-btn:hover {{ background: #e50914; }}
-        .owl-carousel .item-card {{ margin: 0 5px; }}
-        .item-card {{
+        }
+        .nav-btn:hover { background: #e50914; }
+        .owl-carousel .item-card { margin: 0 5px; }
+        .item-card {
             border-radius: 4px; overflow: hidden; transition: transform 0.3s;
             cursor: pointer; position: relative;
-        }}
-        .item-card:hover {{ transform: scale(1.05); z-index: 10; }}
-        .item-card:hover .item-poster {{ opacity: 0.5; }}
-        .item-card:hover .item-info {{ opacity: 1; }}
-        .item-poster {{ width: 100%; height: 320px; object-fit: contain; background: #0a0a0a; display: block; transition: opacity 0.3s; }}
-        .item-info {{
+        }
+        .item-card:hover { transform: scale(1.05); z-index: 10; }
+        .item-card:hover .item-poster { opacity: 0.5; }
+        .item-card:hover .item-info { opacity: 1; }
+        .item-poster { width: 100%; height: 320px; object-fit: contain; background: #0a0a0a; display: block; transition: opacity 0.3s; }
+        .item-info {
             position: absolute; bottom: 0; left: 0; right: 0;
             background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
             padding: 20px; opacity: 0; transition: opacity 0.3s;
-        }}
-        .item-title {{ font-size: 1rem; margin-bottom: 5px; font-weight: bold; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }}
-        .item-meta {{ font-size: 0.8rem; color: #b3b3b3; }}
-        .loading {{ text-align: center; padding: 100px 20px; color: #e50914; font-size: 1.2rem; }}
-        .error {{ text-align: center; padding: 100px 20px; color: #e50914; }}
-        .modal {{
+        }
+        .item-title { font-size: 1rem; margin-bottom: 5px; font-weight: bold; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .item-meta { font-size: 0.8rem; color: #b3b3b3; }
+        .loading { text-align: center; padding: 100px 20px; color: #e50914; font-size: 1.2rem; }
+        .error { text-align: center; padding: 100px 20px; color: #e50914; }
+        .modal {
             display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
             background: rgba(0,0,0,0.9); z-index: 1000; overflow-y: auto;
-        }}
-        .modal-content {{
+        }
+        .modal-content {
             background: #181818; border-radius: 8px; max-width: 850px;
             margin: 50px auto; position: relative; overflow: hidden;
-        }}
-        .modal-header {{ position: relative; height: 450px; overflow: hidden; }}
-        .modal-backdrop {{
+        }
+        .modal-header { position: relative; height: 450px; overflow: hidden; }
+        .modal-backdrop {
             position: absolute; top: 0; left: 0; width: 100%; height: 100%;
             background-size: cover; background-position: center; opacity: 0.4;
-        }}
-        .modal-close {{
+        }
+        .modal-close {
             position: absolute; top: 20px; right: 20px; background: rgba(0,0,0,0.7);
             border: none; color: white; width: 40px; height: 40px; border-radius: 50%;
             font-size: 24px; cursor: pointer; z-index: 1001;
             display: flex; align-items: center; justify-content: center;
-        }}
-        .modal-close:hover {{ background: #e50914; }}
-        .modal-body {{ padding: 30px; }}
-        .modal-title {{ font-size: 2rem; margin-bottom: 20px; color: #fff; }}
-        .modal-meta {{ display: flex; gap: 20px; margin-bottom: 20px; color: #b3b3b3; }}
-        .episodes-section {{ margin-top: 30px; }}
-        .episode-list {{ display: grid; gap: 10px; max-height: 400px; overflow-y: auto; }}
-        .episode-item {{
+        }
+        .modal-close:hover { background: #e50914; }
+        .modal-body { padding: 30px; }
+        .modal-title { font-size: 2rem; margin-bottom: 20px; color: #fff; }
+        .modal-meta { display: flex; gap: 20px; margin-bottom: 20px; color: #b3b3b3; }
+        .episodes-section { margin-top: 30px; }
+        .episode-list { display: grid; gap: 10px; max-height: 400px; overflow-y: auto; }
+        .episode-item {
             background: #2d2d2d; border-radius: 4px; padding: 15px; cursor: pointer;
             transition: background 0.3s; display: flex; align-items: center; gap: 15px;
-        }}
-        .episode-item:hover {{ background: #3d3d3d; }}
-        .canal-ativo {{ background: #3a0a0a !important; border-left: 3px solid #e50914; }}
-        .episode-number {{
+        }
+        .episode-item:hover { background: #3d3d3d; }
+        .canal-ativo { background: #3a0a0a !important; border-left: 3px solid #e50914; }
+        .episode-number {
             background: #e50914; color: white; width: 35px; height: 35px;
             border-radius: 50%; display: flex; align-items: center; justify-content: center;
             font-weight: bold; flex-shrink: 0;
-        }}
-        .episode-info {{ flex: 1; }}
-        .episode-title {{ font-weight: bold; margin-bottom: 5px; }}
-        .play-button {{
+        }
+        .episode-info { flex: 1; }
+        .episode-title { font-weight: bold; margin-bottom: 5px; }
+        .play-button {
             background: #e50914; color: white; border: none; padding: 12px 30px;
             border-radius: 4px; font-size: 1rem; font-weight: bold; cursor: pointer;
             display: flex; align-items: center; gap: 10px; margin-top: 20px; transition: background 0.3s;
-        }}
-        .play-button:hover {{ background: #f40612; }}
-        @media (max-width: 768px) {{
-            .header {{ padding: 20px; }}
-            .logo {{ font-size: 2rem; }}
-            .category-section {{ padding: 0 20px; }}
-            .item-poster {{ height: 260px; object-fit: contain; background: #0a0a0a; }}
-            .modal-content {{ margin: 20px; }}
-            .modal-header {{ height: 300px; }}
-        }}
-        .continue-watching .item-poster {{ height: 180px !important; object-fit: contain; background: #0a0a0a; }}
-        .continue-watching .progress-bar-wrap {{
+        }
+        .play-button:hover { background: #f40612; }
+        @media (max-width: 768px) {
+            .header { padding: 20px; }
+            .logo { font-size: 2rem; }
+            .category-section { padding: 0 20px; }
+            .item-poster { height: 260px; object-fit: contain; background: #0a0a0a; }
+            .modal-content { margin: 20px; }
+            .modal-header { height: 300px; }
+        }
+        .continue-watching .item-poster { height: 180px !important; object-fit: contain; background: #0a0a0a; }
+        .continue-watching .progress-bar-wrap {
             position: absolute; bottom: 0; left: 0; width: 100%;
             height: 4px; background: rgba(255,255,255,0.3); z-index: 3;
-        }}
-        .continue-watching .progress-fill {{ height: 100%; background: #e50914; }}
-        .continue-watching .watch-badge {{
+        }
+        .continue-watching .progress-fill { height: 100%; background: #e50914; }
+        .continue-watching .watch-badge {
             position: absolute; top: 10px; left: 10px; background: rgba(0,0,0,0.7);
             color: #fff; padding: 3px 8px; border-radius: 3px; font-size: 0.7rem;
             font-weight: bold; z-index: 3; border-left: 3px solid #e50914;
-        }}
+        }
     </style>
 </head>
 <body>
@@ -743,39 +731,39 @@ def generate_html_with_correct_paths(base_dir, data):
 
     <!-- Dados dos canais injetados pelo Python -->
     <script>
-        window.channelsDict = {channels_json};
+        window.channelsDict = {"1001noites720pnot247": "https://i.imgur.com/dWA9y2J.png", "1001noitesbrsd": "https://i.imgur.com/dWA9y2J.png", "adessotv720p": "https://i.postimg.cc/3J4hysL3/adessotv.png", "adessotvbrsd": "https://i.postimg.cc/3J4hysL3/adessotv.png", "adrenalinapuratv": "https://i.imgur.com/Pvid2iH.png", "adrenalinapuratvusbrazil": "https://i.imgur.com/Pvid2iH.png", "agrobrasiltv720pnot247": "https://i.imgur.com/aNkP7Zd.png", "agrobrasiltvbrsd": "https://i.imgur.com/aNkP7Zd.png", "alphachannel720p": "https://i.imgur.com/c1QqslA.png", "alphachannelbrsd": "https://i.imgur.com/c1QqslA.png", "amazonsat1080p": "https://i.imgur.com/7rjCS5i.png", "amazonsatbrsd": "https://i.imgur.com/7rjCS5i.png", "babyfirst": "https://i.imgur.com/WxLHBwu.png", "babyfirstusbrazil": "https://i.imgur.com/WxLHBwu.png", "bdctv576p": "https://i.imgur.com/6ckHV6k.jpeg", "bdctvbrsd": "https://i.imgur.com/6ckHV6k.jpeg", "betplutotv": "https://i.imgur.com/Kq9WKZg.png", "betplutotvusbrazil": "https://i.imgur.com/Kq9WKZg.png", "bmcnews": "https://i.imgur.com/pOUY2Uz.png", "bmcnewsbrsd": "https://i.imgur.com/pOUY2Uz.png", "boasnovas1080p": "https://i.imgur.com/ZqhizdP.png", "boasnovasbrsd": "https://i.imgur.com/ZqhizdP.png", "cabofriotv720p": "https://i.imgur.com/mPi6Wp3.png", "cabofriotvbrsd": "https://i.imgur.com/mPi6Wp3.png", "canal25jundia404pnot247": "https://i.imgur.com/7igGMwH.png", "canal25jundiaibrsd": "https://i.imgur.com/7igGMwH.png", "canal38720p": "https://i.imgur.com/co7TCWC.png", "canal38brsd": "https://i.imgur.com/co7TCWC.png", "canaldocriador1080p": "https://i.imgur.com/k29So6X.png", "canaldocriadorbrsd": "https://i.imgur.com/k29So6X.png", "canaldointer720pnot247": "https://i.imgur.com/TQFWEIS.png", "canaldointerbrsd": "https://i.imgur.com/TQFWEIS.png", "canaleducao720p": "https://i.imgur.com/OOB7nrS.png", "canaleducacaobrsd": "https://i.imgur.com/OOB7nrS.png", "canalgov720p": "https://i.imgur.com/rHPY0Yv.png", "canalgovbrsd": "https://i.imgur.com/rHPY0Yv.png", "canallibras720p": "https://i.imgur.com/LnWWKzP.png", "canallibrasbrsd": "https://i.imgur.com/LnWWKzP.png", "canalricos480p": "https://i.imgur.com/hs2YVJ3.png", "canalricosbrsd": "https://i.imgur.com/hs2YVJ3.png", "canalrural1080p": "https://i.imgur.com/w9R9IIX.png", "canalruralbrsd": "https://i.imgur.com/w9R9IIX.png", "canalsade720pnot247": "https://i.imgur.com/ht4tUOc.png", "canalsaudebrsd": "https://i.imgur.com/ht4tUOc.png", "catve2720p": "https://i.imgur.com/qiVfsfB.png", "catve2brsd": "https://i.imgur.com/qiVfsfB.png", "catvefm720pnot247": "https://i.imgur.com/w89yw36.png", "catvefmbrsd": "https://i.imgur.com/w89yw36.png", "catvemastertv720pnot247": "https://i.imgur.com/4m7Iazm.png", "catvemastertvbrsd": "https://i.imgur.com/4m7Iazm.png", "chromatv480p": "https://i.imgur.com/SnaIMgj.png", "chromatvbrsd": "https://i.imgur.com/SnaIMgj.png", "classiquetv360p": "https://i.imgur.com/rHxcraT.png", "classiquetvbrsd": "https://i.imgur.com/rHxcraT.png", "combrasil1080pnot247": "https://i.imgur.com/GrjGwKM.png", "combrasilbrsd": "https://i.imgur.com/GrjGwKM.png", "combateglobal": "https://i.imgur.com/ZPYK5jr.png", "combatebrsd": "https://i.imgur.com/ZPYK5jr.png", "comedycentralplutotv": "https://i.imgur.com/9y6TtjF.png", "comedycentralplutotvusbrazil": "https://i.imgur.com/9y6TtjF.png", "comedycentralsouthpark": "https://i.imgur.com/7GKO6Fp.png", "comedycentralsouthparkusbrazil": "https://i.imgur.com/7GKO6Fp.png", "conectatv720p": "https://i.imgur.com/qHwTWlz.png", "conectamaistvbrsd": "https://i.imgur.com/qHwTWlz.png", "conectvbrasil720p": "https://i.imgur.com/XN6jjMR.png", "conectvbrasilbrsd": "https://i.imgur.com/XN6jjMR.png", "conexotv720p": "https://i.imgur.com/CJ9SPsZ.png", "conexaotvbrsd": "https://i.imgur.com/CJ9SPsZ.png", "culturapar480pnot247": "https://i.imgur.com/5jPEI5c.png", "culturaparabrsd": "https://i.imgur.com/5jPEI5c.png", "cwbtv720p": "https://i.imgur.com/S0ISpmU.png", "cwbtvbrsd": "https://i.imgur.com/S0ISpmU.png", "demaistv720p": "https://i.imgur.com/Md3xibE.png", "demaistvbrsd": "https://i.imgur.com/Md3xibE.png", "despertartv720p": "https://res.cloudinary.com/dpkehkbpv/image/upload/v1721839192/logo/mixtv/despertar_tv_ieb2l3.png", "despertartvbrhd": "https://res.cloudinary.com/dpkehkbpv/image/upload/v1721839192/logo/mixtv/despertar_tv_ieb2l3.png", "elementalchannel1080p": "https://i.imgur.com/8upyApg.png", "elementalchannelbrsd": "https://i.imgur.com/8upyApg.png", "elytv360p": "https://i.imgur.com/1eHNe91.png", "elytvbrsd": "https://i.imgur.com/1eHNe91.png", "eutv720p": "https://i.imgur.com/8PxpamC.png", "eutvbrsd": "https://i.imgur.com/8PxpamC.png", "failarmy": "https://i.imgur.com/VIpQJxL.png", "failarmyusbrazil": "https://i.imgur.com/VIpQJxL.png", "falalitoral480p": "https://i.imgur.com/NF6PL8O.png", "falalitoralbrsd": "https://i.imgur.com/NF6PL8O.png", "filmessuspense": "https://i.imgur.com/45V9MKk.png", "filmessuspenseusbrazil": "https://i.imgur.com/45V9MKk.png", "fontetv1080pnot247": "https://i.imgur.com/7q2BmNc.png", "fontetvbrsd": "https://i.imgur.com/7q2BmNc.png", "geekdot720p": "https://i.imgur.com/jML1u4O.png", "geekdotbrsd": "https://i.imgur.com/jML1u4O.png", "ghosttv712pnot247": "https://i.imgur.com/ZVO8GVI.png", "ghosttvbrsd": "https://i.imgur.com/ZVO8GVI.png", "gloob576p": "https://i.imgur.com/N1BUULh.png", "gloobbrsd": "https://i.imgur.com/N1BUULh.png", "gospelcartoon360p": "https://i.imgur.com/yxjPno5.png", "gospelcartoonbrsd": "https://i.imgur.com/yxjPno5.png", "gospelmovietv360p": "https://i.imgur.com/cQN3nWt.png", "gospelmovietvbrsd": "https://i.imgur.com/cQN3nWt.png", "istv720pnot247": "https://i.imgur.com/RUKVrOH.png", "istvbrsd": "https://i.imgur.com/RUKVrOH.png", "jovempannewsjpnews1080pnot247": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Jovem_Pan_logo_2018.svg/512px-Jovem_Pan_logo_2018.svg.png", "jovempannewsbrsd": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Jovem_Pan_logo_2018.svg/512px-Jovem_Pan_logo_2018.svg.png", "kenankel": "https://i.imgur.com/h9dpcgN.png", "kenankelusbrazil": "https://i.imgur.com/h9dpcgN.png", "kpoptvplay576p": "https://i.imgur.com/Tf0vweF.png", "kpoptvplaybrsd": "https://i.imgur.com/Tf0vweF.png", "loading720p": "https://i.imgur.com/R0aflu1.png", "loadingbrsd": "https://i.imgur.com/R0aflu1.png", "masterchef": "https://i.imgur.com/lOuySbz.png", "masterchefusbrazil": "https://i.imgur.com/lOuySbz.png", "mkkwebtv720pnot247": "https://i.imgur.com/A8Yhtid.png", "mkkwebtvbrsd": "https://i.imgur.com/A8Yhtid.png", "mtvbiggestpop": "https://i.imgur.com/AOaZmlS.png", "mtvbiggestpopusbrazil": "https://i.imgur.com/AOaZmlS.png", "mtvcomoex": "https://i.imgur.com/sWqnNPm.png", "mtvcomoexusbrazil": "https://i.imgur.com/sWqnNPm.png", "mytimemovienetworkbrazil720p": "https://i.imgur.com/aiGQtzI.png", "mytimemovienetworkbrsd": "https://i.imgur.com/aiGQtzI.png", "naruto": "https://i.imgur.com/M8X3Kvc.png", "narutousbrazil": "https://i.imgur.com/M8X3Kvc.png", "nickelodeonclssico": "https://i.imgur.com/Crip6wT.png", "nickclassicousbrazil": "https://i.imgur.com/Crip6wT.png", "novaeratv1080pnot247": "https://i.imgur.com/IK3F9Uq.png", "novaeratvbrsd": "https://i.imgur.com/IK3F9Uq.png", "novotempo720p": "https://i.postimg.cc/mgpGyqRg/novotempo.png", "novotempobrsd": "https://i.postimg.cc/mgpGyqRg/novotempo.png", "oencantadordeces": "https://i.imgur.com/sQn6vvh.png", "oencantadordecaesusbrazil": "https://i.imgur.com/sQn6vvh.png", "oreinoinfantil": "https://i.imgur.com/qoVxc13.png", "oreinoinfantilusbrazil": "https://i.imgur.com/qoVxc13.png", "playtv720p": "https://i.imgur.com/Ikrj3lk.png", "playtvbrsd": "https://i.imgur.com/Ikrj3lk.png", "plenatv720p": "https://i.imgur.com/lH4RT7b.png", "plenatvbrsd": "https://i.imgur.com/lH4RT7b.png", "plutotvanime": "https://i.imgur.com/bvbn8pa.png", "plutotvanimeusbrazil": "https://i.imgur.com/bvbn8pa.png", "plutotvanimeao": "https://i.imgur.com/d8PpfB3.png", "plutotvanimeacaousbrazil": "https://i.imgur.com/d8PpfB3.png", "plutotvcineclssicos": "https://i.imgur.com/N3UYHFS.png", "plutotvcineclassicosusbrazil": "https://i.imgur.com/N3UYHFS.png", "plutotvcinedrama": "https://i.imgur.com/AQBtheU.png", "plutotvcinedramausbrazil": "https://i.imgur.com/AQBtheU.png", "plutotvcinefamlia": "https://i.imgur.com/r9UhBfV.png", "plutotvcinefamiliausbrazil": "https://i.imgur.com/r9UhBfV.png", "plutotvcineromance": "https://i.imgur.com/WXMD53u.png", "plutotvcineromanceusbrazil": "https://i.imgur.com/WXMD53u.png", "plutotvcinesucessos": "https://i.imgur.com/Tq0SMcl.png", "plutotvcinesucessosusbrazil": "https://i.imgur.com/Tq0SMcl.png", "plutotvcineterror": "https://i.imgur.com/I5XxyLI.png", "cineterrorusbrazil": "https://i.imgur.com/I5XxyLI.png", "plutotvficocientfica": "https://i.imgur.com/JVEfXbi.png", "plutotvficcaocientificausbrazil": "https://i.imgur.com/JVEfXbi.png", "plutotvfilmesao": "https://i.imgur.com/HkCV9cQ.png", "plutotvfilmesacaousbrazil": "https://i.imgur.com/HkCV9cQ.png", "plutotvfilmesnacionais": "https://i.imgur.com/9QTzDJG.png", "plutotvfilmesnacionaisusbrazil": "https://i.imgur.com/9QTzDJG.png", "plutotvinvestigao": "https://i.imgur.com/JlQq0YJ.png", "plutotvinvestigacaousbrazil": "https://i.imgur.com/JlQq0YJ.png", "plutotvjunior": "https://i.imgur.com/7sApMZS.png", "plutotvjuniorusbrazil": "https://i.imgur.com/7sApMZS.png", "plutotvkaraokporstingray": "https://i.imgur.com/rWpLepJ.png", "plutotvkaraokeporstingrayusbrazil": "https://i.imgur.com/rWpLepJ.png", "plutotvminhaobsessofavorita": "https://i.imgur.com/ZZuaiqb.png", "plutotvminhaobsessaofavoritausbrazil": "https://i.imgur.com/ZZuaiqb.png", "plutotvmistrios": "https://i.imgur.com/gwxX1Y3.png", "plutotvmisteriosusbrazil": "https://i.imgur.com/gwxX1Y3.png", "plutotvnatureza": "https://i.imgur.com/RuyQQ6M.png", "plutotvnaturezausbrazil": "https://i.imgur.com/RuyQQ6M.png", "plutotvpaisagensporstingray": "https://i.imgur.com/6kElzw7.png", "plutotvpaisagensporstingrayusbrazil": "https://i.imgur.com/6kElzw7.png", "plutotvretr": "https://i.imgur.com/wztO3GM.png", "plutotvretrousbrazil": "https://i.imgur.com/wztO3GM.png", "plutotvshowsporstingray": "https://i.imgur.com/TrG7Y84.png", "plutotvshowsporstingrayusbrazil": "https://i.imgur.com/TrG7Y84.png", "plutotvvidareal": "https://i.imgur.com/dRbBbxP.png", "plutotvvidarealusbrazil": "https://i.imgur.com/dRbBbxP.png", "primertv1080p": "https://i.imgur.com/PMptSP3.png", "primertvbrsd": "https://i.imgur.com/PMptSP3.png", "rbatv720p": "https://i.imgur.com/ZWFxlU1.png", "rbatvbrsd": "https://i.imgur.com/ZWFxlU1.png", "record": "https://i.imgur.com/sz9gTTr.png", "recordbrsd": "https://i.imgur.com/sz9gTTr.png", "recordnews720pgeoblocked": "https://i.imgur.com/HZDRG0K.png", "recordnewsbrsd": "https://i.imgur.com/HZDRG0K.png", "recordtvbelem720pgeoblocked": "https://i.imgur.com/gEEiN10.png", "recordtvbelembrsd": "https://i.imgur.com/gEEiN10.png", "recordtvbrasilia720pgeoblocked": "https://i.imgur.com/PZMas8Y.png", "recordtvbrasiliabrsd": "https://i.imgur.com/PZMas8Y.png", "recordtvgoias720pgeoblocked": "https://i.imgur.com/Fdoax1M.png", "recordtvgoiasbrsd": "https://i.imgur.com/Fdoax1M.png", "recordtvitapoan720pgeoblocked": "https://upload.wikimedia.org/wikipedia/pt/thumb/1/13/Logotipo_da_RecordTV_Itapoan.png/512px-Logotipo_da_RecordTV_Itapoan.png", "recordtvitapoanbrsd": "https://upload.wikimedia.org/wikipedia/pt/thumb/1/13/Logotipo_da_RecordTV_Itapoan.png/512px-Logotipo_da_RecordTV_Itapoan.png", "recordtvrio720pgeoblocked": "https://upload.wikimedia.org/wikipedia/pt/thumb/c/ce/Logotipo_da_RecordTV_Rio.png/512px-Logotipo_da_RecordTV_Rio.png", "recordtvriobrsd": "https://upload.wikimedia.org/wikipedia/pt/thumb/c/ce/Logotipo_da_RecordTV_Rio.png/512px-Logotipo_da_RecordTV_Rio.png", "recordtvrs720pgeoblocked": "https://i.imgur.com/JLQWoNc.png", "recordrsbrsd": "https://i.imgur.com/JLQWoNc.png", "recordtvsp720pgeoblocked": "https://upload.wikimedia.org/wikipedia/pt/thumb/1/10/Logotipo_da_Record.png/512px-Logotipo_da_Record.png", "recordtvsaopaulobrsd": "https://upload.wikimedia.org/wikipedia/pt/thumb/1/10/Logotipo_da_Record.png/512px-Logotipo_da_Record.png", "recordtvinteriorsp": "https://i.imgur.com/VcHy0fu.png", "recordtvinteriorspbrsd": "https://i.imgur.com/VcHy0fu.png", "redegospel1080p": "https://i.imgur.com/mttSwgO.png", "redegospelbrsd": "https://i.imgur.com/mttSwgO.png", "redeminas1080pnot247": "https://i.imgur.com/MtQWAHv.png", "redeminasbrsd": "https://i.imgur.com/MtQWAHv.png", "redengt1080p": "https://i.imgur.com/ZFN1R4B.png", "redengtbrsd": "https://i.imgur.com/ZFN1R4B.png", "rederc720pnot247": "https://i.imgur.com/y9dqo3f.png", "redercbrsd": "https://i.imgur.com/y9dqo3f.png", "redesptv360p": "https://i.imgur.com/kh3LGAP.png", "redesptvbrsd": "https://i.imgur.com/kh3LGAP.png", "redetves1080p": "https://i.imgur.com/k7vO9Bk.png", "redetvesbrsd": "https://i.imgur.com/k7vO9Bk.png", "redetvsp720pnot247": "https://i.imgur.com/ZJgD38F.png", "redetvbrsd": "https://i.imgur.com/ZJgD38F.png", "rittv1080p": "https://i.imgur.com/Unjs1wi.png", "rittvbrsd": "https://i.imgur.com/Unjs1wi.png", "santaceciliatv1080pnot247": "https://i.imgur.com/KxYsq1d.png", "santaceciliatvbrsd": "https://i.imgur.com/KxYsq1d.png", "sbtinterior720p": "https://i.imgur.com/IkZfa4j.png", "sbtinteriorbrsd": "https://i.imgur.com/IkZfa4j.png", "sertotv720p": "https://i.imgur.com/b5xOCsC.png", "sertaotvbrsd": "https://i.imgur.com/b5xOCsC.png", "sesctv1080p": "https://i.imgur.com/Mu8O6CV.png", "sesctvbrsd": "https://i.imgur.com/Mu8O6CV.png", "sictv720p": "https://i.imgur.com/mHxQyB2.png", "sictvbrsd": "https://i.imgur.com/mHxQyB2.png", "stztv1080p": "https://i.imgur.com/SeF2I7q.png", "stztvbrsd": "https://i.imgur.com/SeF2I7q.png", "tastemade": "https://i.imgur.com/FPy4zF4.png", "tastemadebrasilusbrazil": "https://i.imgur.com/FPy4zF4.png", "tcm10hd1080p": "https://i.imgur.com/aMuMVvB.png", "tcm10hdbrsd": "https://i.imgur.com/aMuMVvB.png", "thepetcollective": "https://i.imgur.com/yH7n2dF.png", "thepetcollectiveusbrazil": "https://i.imgur.com/yH7n2dF.png", "timesbrasil1080p": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Times_Brasil_CNBC_logo_2025.svg/512px-Times_Brasil_CNBC_logo_2025.svg.png", "timesbrasilbrsd": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Times_Brasil_CNBC_logo_2025.svg/512px-Times_Brasil_CNBC_logo_2025.svg.png", "tokusato": "https://i.imgur.com/tWpjXtl.png", "tokusatousbrazil": "https://i.imgur.com/tWpjXtl.png", "turmadamnica": "https://i.imgur.com/nrvPPrW.png", "turmadamonicausbrazil": "https://i.imgur.com/nrvPPrW.png", "tvafolha720p": "https://i.imgur.com/I7XGMhj.png", "tvafolhabrsd": "https://i.imgur.com/I7XGMhj.png", "tvaldeia720p": "https://i.imgur.com/rsfnv4Z.png", "tvaldeiabrsd": "https://i.imgur.com/rsfnv4Z.png", "tvalianacatarinense720p": "https://i.imgur.com/eqmOhtP.png", "tvaliancacatarinensebrsd": "https://i.imgur.com/eqmOhtP.png", "tvalternativa410p": "https://i.imgur.com/wM9xXhc.png", "tvalternativabrsd": "https://i.imgur.com/wM9xXhc.png", "tvaparecida1080pnot247": "https://i.imgur.com/kxrja0X.png", "tvaparecidabrsd": "https://i.imgur.com/kxrja0X.png", "tvarapuan720p": "https://i.imgur.com/3395A2h.png", "tvarapuanbrsd": "https://i.imgur.com/3395A2h.png", "tvaratu720p": "https://i.imgur.com/LCETtuk.png", "tvaratubrsd": "https://i.imgur.com/LCETtuk.png", "tvassembliacear720p": "https://i.imgur.com/UPa1tjs.png", "tvassembleiacearabrsd": "https://i.imgur.com/UPa1tjs.png", "tvbirigui640p": "https://i.imgur.com/z7VlNLR.png", "tvbiriguibrsd": "https://i.imgur.com/z7VlNLR.png", "tvbrasil720p": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/TvBrasil2023.png/320px-TvBrasil2023.png", "tvbrasilbrsd": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/TvBrasil2023.png/320px-TvBrasil2023.png", "tvbrasiloeste720p": "https://i.imgur.com/noqGfuy.png", "tvbrasiloestebrsd": "https://i.imgur.com/noqGfuy.png", "tvbricsportuguese1080p": "https://i.imgur.com/vLpm8tN.png", "tvbricsportuguesebrsd": "https://i.imgur.com/vLpm8tN.png", "tvbrusque720p": "https://i.imgur.com/J2EAZPS.png", "tvbrusquebrsd": "https://i.imgur.com/J2EAZPS.png", "tvcmara1080p": "https://i.imgur.com/Sdou1Ab.png", "tvcamarabrsd": "https://i.imgur.com/Sdou1Ab.png", "tvcmara21080pnot247": "https://i.imgur.com/dHrUG1R.png", "tvcamara2brsd": "https://i.imgur.com/dHrUG1R.png", "tvcmarasalvador288pnot247": "https://i.imgur.com/VEXEzSx.png", "tvcamarasalvadorbrsd": "https://i.imgur.com/VEXEzSx.png", "tvcancaonova720p": "https://i.imgur.com/OaM9hkH.png", "tvcancaonovabrsd": "https://i.imgur.com/OaM9hkH.png", "tvcidadedepetrpolis1080pnot247": "https://i.imgur.com/xUs8gHV.png", "tvcidadedepetropolisbrsd": "https://i.imgur.com/xUs8gHV.png", "tvcidadeoeste": "https://i.imgur.com/EmYaxEh.png", "tvcidadeoestebrsd": "https://i.imgur.com/EmYaxEh.png", "tvcidadeverde720p": "https://i.imgur.com/SysgBqZ.png", "tvcidadeverdebrsd": "https://i.imgur.com/SysgBqZ.png", "tvclube720p": "https://i.imgur.com/CpXjcyE.png", "tvclubebrsd": "https://i.imgur.com/CpXjcyE.png", "tvcultura": "https://i.ibb.co/nm0jXMM/cultura-3x.png", "tvculturabrsd": "https://i.ibb.co/nm0jXMM/cultura-3x.png", "tvcurua360p": "https://i.imgur.com/JdCKNZ4.png", "tvcurucabrsd": "https://i.imgur.com/JdCKNZ4.png", "tvdasartes360p": "https://i.imgur.com/fSWaiKt.png", "tvdasartesbrsd": "https://i.imgur.com/fSWaiKt.png", "tvdestak360p": "https://i.imgur.com/YoCVrav.png", "tvdestakbrsd": "https://i.imgur.com/YoCVrav.png", "tvdiriomacap1080pnot247": "https://i.imgur.com/yAW2Z5j.jpg", "tvdiariomacapabrsd": "https://i.imgur.com/yAW2Z5j.jpg", "tvdifusoraleste1080p": "https://i.imgur.com/hEd25Cr.png", "tvdifusoralestebrsd": "https://i.imgur.com/hEd25Cr.png", "tvdigitalbirigu640p": "https://i.imgur.com/B5ZTMzY.png", "tvdigitalbiriguibrsd": "https://i.imgur.com/B5ZTMzY.png", "tvdopovo540p": "https://i.imgur.com/58EQ5qX.png", "tvdopovobrsd": "https://i.imgur.com/58EQ5qX.png", "tvempiremagazine720p": "https://i.imgur.com/tT1NVfV.png", "tvempirebrsd": "https://i.imgur.com/tT1NVfV.png", "tvencontrodasaguas": "https://www.lyngsat.com/logo/tv/tt/tv-encontro-das-aguas-br.png", "tvencontrodasaguasbrsd": "https://www.lyngsat.com/logo/tv/tt/tv-encontro-das-aguas-br.png", "tvevangelizar480p": "https://i.imgur.com/IrYR7Kp.png", "tvevangelizarbrsd": "https://i.imgur.com/IrYR7Kp.png", "tvfuturo1080p": "https://i.imgur.com/xonrNBf.png", "tvfuturobrsd": "https://i.imgur.com/xonrNBf.png", "tvgideoes1080pnot247": "https://i.imgur.com/dDomKND.png", "tvgideoesbrsd": "https://i.imgur.com/dDomKND.png", "tvgrandenatal1080p": "https://i.imgur.com/MTuErdw.png", "tvgrandenatalbrsd": "https://i.imgur.com/MTuErdw.png", "tvgraopar720p": "https://i.imgur.com/1drg0E9.png", "tvgraoparabrsd": "https://i.imgur.com/1drg0E9.png", "tvguar720pnot247": "https://i.imgur.com/8PErNBT.png", "tvguarabrsd": "https://i.imgur.com/8PErNBT.png", "tvinterlagos360p": "https://i.imgur.com/iuQVDpq.jpg", "tvinterlagosbrsd": "https://i.imgur.com/iuQVDpq.jpg", "tvliberdade720pnot247": "https://i.imgur.com/W6bHHqE.png", "tvliberdadebrsd": "https://i.imgur.com/W6bHHqE.png", "tvlifeamerica720p": "https://i.imgur.com/HZI0ilU.png", "tvlifeamericabrhd": "https://i.imgur.com/HZI0ilU.png", "tvmackenzie480p": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/TV_Mackenzie_logo.svg/512px-TV_Mackenzie_logo.svg.png", "tvmackenziebrsd": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/TV_Mackenzie_logo.svg/512px-TV_Mackenzie_logo.svg.png", "tvmaismaric1080p": "https://i.imgur.com/lgCRX7q.png", "tvmaismaricabrsd": "https://i.imgur.com/lgCRX7q.png", "tvmanbrasil1080p": "https://i.imgur.com/AFb712e.png", "tvmanabrasilptsd": "https://i.imgur.com/AFb712e.png", "tvmarajoara720p": "https://i.imgur.com/9d9vBN7.png", "tvmarajoarabrsd": "https://i.imgur.com/9d9vBN7.png", "tvmax720p": "https://i.imgur.com/XcrkfGh.png", "tvmaxbrsd": "https://i.imgur.com/2Pg0baJ.png", "tvmetropole720pnot247": "https://i.imgur.com/bJyjLpg.png", "tvmetropolebrsd": "https://i.imgur.com/bJyjLpg.png", "tvmodelo720p": "https://play-lh.googleusercontent.com/7kD2A0jUqWrVMxd_15RAPt9S0P9pxPMpNEc9dHOSl8Bi0DOMVlQHijXaL7ppUC5F46g", "tvmodelobrsd": "https://play-lh.googleusercontent.com/7kD2A0jUqWrVMxd_15RAPt9S0P9pxPMpNEc9dHOSl8Bi0DOMVlQHijXaL7ppUC5F46g", "tvpadrecicero720p": "https://i.imgur.com/Y7b29VG.png", "tvpadrecicerobrsd": "https://i.imgur.com/Y7b29VG.png", "tvpantanalms360pnot247": "https://i.imgur.com/0FOmktl.png", "tvpantanalmsbrsd": "https://i.imgur.com/0FOmktl.png", "tvparaense720p": "https://duckduckgo.com/i/e408ea02.png", "tvparaensebrhd": "https://duckduckgo.com/i/e408ea02.png", "tvparanturismo720pnot247": "https://i.imgur.com/I6pKoBd.png", "tvparanaturismobrsd": "https://i.imgur.com/I6pKoBd.png", "tvpassofundo720p": "https://i.imgur.com/QFE6TiV.png", "tvpassofundobrsd": "https://i.imgur.com/QFE6TiV.png", "tvsandegi360p": "https://i.imgur.com/vJ6ZQSG.png", "tvsandegibrsd": "https://i.imgur.com/vJ6ZQSG.png", "tvsoraimundo268p": "https://i.imgur.com/f34CQIG.png", "tvsaoraimundobrsd": "https://i.imgur.com/f34CQIG.png", "tvseries1aspanteras480p": "https://i.imgur.com/Ff5mj0o.png", "tvseriesbrsd": "https://i.imgur.com/Ff5mj0o.png", "tvsimcachoeiro720p": "https://i.imgur.com/t5oUK3C.png", "tvsimcachoeirobrsd": "https://i.imgur.com/t5oUK3C.png", "tvsimcolatina720p": "https://i.imgur.com/t5oUK3C.png", "tvsimcolatinabrsd": "https://i.imgur.com/t5oUK3C.png", "tvsimsomateus720p": "https://i.imgur.com/t5oUK3C.png", "tvsimsaomateusbrsd": "https://i.imgur.com/t5oUK3C.png", "tvsolcomunidade480pnot247": "https://i.imgur.com/5cGnb4r.png", "tvsolcomunidadebrsd": "https://i.imgur.com/5cGnb4r.png", "tvsulbahia320p": "https://i.imgur.com/qM6nMWm.png", "tvsulbahiabrsd": "https://i.imgur.com/qM6nMWm.png", "tvsuldeminas720p": "https://i.imgur.com/hPh8cxK.png", "tvsuldeminasbrsd": "https://i.imgur.com/hPh8cxK.png", "tvterceiroanjo360p": "https://i.imgur.com/PExKWNv.png", "tvterceiroanjobrsd": "https://i.imgur.com/PExKWNv.png", "tvthathi720pnot247": "https://i.imgur.com/w9yKTxE.png", "tvthathibrsd": "https://i.imgur.com/w9yKTxE.png", "tvufg720pnot247": "https://i.imgur.com/Yp3dbJo.png", "tvufgbrsd": "https://i.imgur.com/Yp3dbJo.png", "tvuniversal480p": "https://i.imgur.com/TIsk5zN.png", "tvuniversalbrsd": "https://i.imgur.com/TIsk5zN.png", "tvviosa480p": "https://i.imgur.com/TZF55f9.png", "tvvicosabrsd": "https://i.imgur.com/TZF55f9.png", "tvvilareal720p": "https://i.imgur.com/Z1uWe7g.png", "tvvilarealbrsd": "https://i.imgur.com/Z1uWe7g.png", "tvzoom720p": "https://i.imgur.com/jCGrjf5.png", "tvzoombrsd": "https://i.imgur.com/jCGrjf5.png", "tvcrio": "https://i.imgur.com/WDiikWv.png", "tvcriobrsd": "https://i.imgur.com/WDiikWv.png", "tvcomdf360p": "https://i.imgur.com/uxefHY3.png", "tvcomunitariabrsd": "https://i.imgur.com/uxefHY3.png", "tvcommacei480p": "https://i.imgur.com/IE7IZzi.png", "tvcommaceiobrsd": "https://i.imgur.com/IE7IZzi.png", "tvers1080pnot247": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/TVE_Bahia_logo.svg/512px-TVE_Bahia_logo.svg.png", "tvebahiabrsd": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/TVE_Bahia_logo.svg/512px-TVE_Bahia_logo.svg.png", "tvers1080p": "https://i.imgur.com/MQ6lJpS.png", "tversbrsd": "https://i.imgur.com/MQ6lJpS.png", "tvdeonews720pnot247": "https://i.imgur.com/vstHOYx.png", "tvideonewsbrsd": "https://i.imgur.com/vstHOYx.png", "tvitap720p": "https://i.imgur.com/XeqcwKe.png", "tvitapebrsd": "https://i.imgur.com/XeqcwKe.png", "tvmaticcomedy720p": "https://i.imgur.com/l5PBcKN.png", "tvmaticcomedybrsd": "https://i.imgur.com/l5PBcKN.png", "tvmaticcrafts720p": "https://i.imgur.com/l5PBcKN.png", "tvmaticcraftsbrsd": "https://i.imgur.com/l5PBcKN.png", "tvmaticfacebook720p": "https://i.imgur.com/l5PBcKN.png", "tvmaticfacebookbrsd": "https://i.imgur.com/l5PBcKN.png", "tvmaticfight720p": "https://i.imgur.com/l5PBcKN.png", "tvmaticfightbrsd": "https://i.imgur.com/l5PBcKN.png", "tvmaticfunny720p": "https://i.imgur.com/l5PBcKN.png", "tvmaticfunnybrsd": "https://i.imgur.com/l5PBcKN.png", "tvmatictiktok720p": "https://i.imgur.com/l5PBcKN.png", "tvmatictiktokbrsd": "https://i.imgur.com/l5PBcKN.png", "tvnbn720p": "https://i.imgur.com/zoHBxn1.png", "tvnbnbrsd": "https://i.imgur.com/zoHBxn1.png", "unisultv720p": "https://i.imgur.com/N0TvAFz.png", "unisultvbrsd": "https://i.imgur.com/N0TvAFz.png", "unitvportoalegre480p": "https://i.imgur.com/GmA5uuk.png", "unitvportoalegrebrsd": "https://i.imgur.com/GmA5uuk.png", "vrtchannel720p": "https://i.imgur.com/crszh3d.png", "vrtchannelbrsd": "https://i.imgur.com/crszh3d.png", "vv8tv720p": "https://i.imgur.com/TxHWAeD.png", "vv8tvbrsd": "https://i.imgur.com/TxHWAeD.png", "30adarcizzleoffshore720p": "https://i.imgur.com/Q4l2uao.png", "30adarcizzleoffshoreussd": "https://i.imgur.com/Q4l2uao.png", "aeeast720pnot247": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/A%26E_Network_logo.svg/512px-A%26E_Network_logo.svg.png", "aeuseast": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/A%26E_Network_logo.svg/512px-A%26E_Network_logo.svg.png", "aaseervathamtv576p": "https://i.imgur.com/GlfrYs7.png", "aaseervathamtvinsd": "https://i.imgur.com/GlfrYs7.png", "abudhabisports11080p": "https://i.imgur.com/6BVWk8z.png", "abudhabisports1aehd": "https://i.imgur.com/6BVWk8z.png", "abudhabisports21080p": "https://i.imgur.com/y1I2jFK.png", "abudhabisports2aesd": "https://i.imgur.com/y1I2jFK.png", "acnn480p": "https://i.imgur.com/91JLpxr.png", "acnnngsd": "https://i.imgur.com/91JLpxr.png", "adoramtv720p": "https://i.imgur.com/uU01KHz.png", "adoramtvdosd": "https://i.imgur.com/uU01KHz.png", "alquranalkareemtv360p": "https://i.imgur.com/A2fJysM.png", "alquranalkareemtvsasd": "https://i.imgur.com/A2fJysM.png", "alyaumtv1080p": "https://i.imgur.com/rBixF3P.png", "alyaumtvaesd": "https://i.imgur.com/rBixF3P.png", "angeltvportuguese720p": "https://i.imgur.com/qKLEGU7.png", "angeltvinportuguese": "https://i.imgur.com/qKLEGU7.png", "animaxasiaindia1080pgeoblocked": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Animax.png/512px-Animax.png", "animaxasiasgindia": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Animax.png/512px-Animax.png", "asharqdiscovery1080p": "https://i.imgur.com/Czxi7yk.png", "asharqdiscoverysasd": "https://i.imgur.com/Czxi7yk.png", "atntelevisin720pnot247": "https://i.imgur.com/79sX78u.png", "atntelevisioncosd": "https://i.imgur.com/79sX78u.png", "autentichistory1080p": "https://d3b6luslimvglo.cloudfront.net/images/79/rlaxximages/channels-rescaled/icon-white/autentichistory_white.png", "autentichistorydesd": "https://d3b6luslimvglo.cloudfront.net/images/79/rlaxximages/channels-rescaled/icon-white/autentichistory_white.png", "avivatv288pnot247": "https://i.imgur.com/0jMM4TQ.png", "avivatvhnsd": "https://i.imgur.com/0jMM4TQ.png", "avivamientotv1080pnot247": "https://i.imgur.com/ydoBp3b.png", "avivamientotvcosd": "https://i.imgur.com/ydoBp3b.png", "bandungtv360p": "https://i.postimg.cc/D0WYpKD6/bandungtv.png", "bandungtvidsd": "https://i.postimg.cc/D0WYpKD6/bandungtv.png", "batamtv480pnot247": "https://i.imgur.com/lo7YXnW.png", "batamtvidsd": "https://i.imgur.com/lo7YXnW.png", "betplutotvusus": "https://i.imgur.com/Kq9WKZg.png", "bfmtv576p": "https://i.imgur.com/YJCcczD.png", "bfmtvfrsd": "https://i.imgur.com/YJCcczD.png", "boonniyomtv": "https://i.imgur.com/KvdFCD5.png", "boonniyomtvthsd": "https://i.imgur.com/KvdFCD5.png", "brfernsehennord720p": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Logo_Bayerischer_Rundfunk_2024.svg/512px-Logo_Bayerischer_Rundfunk_2024.svg.png", "brfernsehendenord": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Logo_Bayerischer_Rundfunk_2024.svg/512px-Logo_Bayerischer_Rundfunk_2024.svg.png", "brfernsehensud1080p": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Logo_Bayerischer_Rundfunk_2024.svg/512px-Logo_Bayerischer_Rundfunk_2024.svg.png", "brfernsehendesud": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Logo_Bayerischer_Rundfunk_2024.svg/512px-Logo_Bayerischer_Rundfunk_2024.svg.png", "btmtv480pnot247": "https://i.imgur.com/NUvA2jf.png", "btmtvugsd": "https://i.imgur.com/NUvA2jf.png", "btntv1080p": "https://i.imgur.com/sOoS7RQ.png", "btntvkrsd": "https://i.imgur.com/sOoS7RQ.png", "btntv480p": "https://i.imgur.com/WmaP8zP.png", "btntvrwsd": "https://i.imgur.com/WmaP8zP.png", "cmalayalamtv1080p": "https://i.imgur.com/rpg0bQA.png", "cmalayalamtvcasd": "https://i.imgur.com/rpg0bQA.png", "canal32telemax720pnot247": "https://i.imgur.com/HisGao7.png", "telemaxgtsd": "https://i.imgur.com/HisGao7.png", "cartoonclassics": "https://images-3.rakuten.tv/storage/global-live-channel/translation/artwork/3227c06e-333b-4b1b-b657-3e3ab99ebd06-width200-quality90.jpeg", "cartoonclassicsplfast": "https://images-3.rakuten.tv/storage/global-live-channel/translation/artwork/3227c06e-333b-4b1b-b657-3e3ab99ebd06-width200-quality90.jpeg", "cbs3omahanekmtvtv720p": "https://i.imgur.com/E4PkyqN.png", "kmtvdt1ussd": "https://i.imgur.com/E4PkyqN.png", "ccplutotv": "https://i.imgur.com/MjC40At.png", "ccplutotvusaustria": "https://i.imgur.com/MjC40At.png", "ceacomtvnot247": "https://i.imgur.com/hutdRfk.png", "ceacomtvbosd": "https://i.imgur.com/hutdRfk.png", "cfmtvchannel98360p": "https://i.imgur.com/LGs524I.png", "cfmtvchannel98ussd": "https://i.imgur.com/LGs524I.png", "cgntvchinese1080p": "https://i.imgur.com/bPoPAbR.png", "cgntvchinesetwsd": "https://i.imgur.com/bPoPAbR.png", "cgntvsouthkorea1080p": "https://i.imgur.com/zwZASOB.png", "cgntvsouthkoreakrsd": "https://i.imgur.com/zwZASOB.png", "cinepremiere720p": "https://i.imgur.com/PdhWTO6.png", "cinepremiereussd": "https://i.imgur.com/PdhWTO6.png", "cinesony720p": "https://i.imgur.com/bZWoDTg.png", "cinesonyussd": "https://i.imgur.com/bZWoDTg.png", "cmmtvhd1080p": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/CMMedia.svg/276px-CMMedia.svg.png", "cmmtveshd": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/CMMedia.svg/276px-CMMedia.svg.png", "cmtvkenya576pnot247": "https://i.imgur.com/ewHBokK.jpg", "cmtvkenyakesd": "https://i.imgur.com/ewHBokK.jpg", "cnmtv720pnot247": "https://i.ibb.co/0cfdGKv/1630802325205.jpg", "cnmtvsnsd": "https://i.ibb.co/0cfdGKv/1630802325205.jpg", "comedycentralplutotvusus": "https://i.imgur.com/9y6TtjF.png", "costamesasmunicipalaccesschannelcmtv3720p": "https://i.imgur.com/73LKwAK.png", "cmtvussd": "https://i.imgur.com/73LKwAK.png", "cromtv1080pnot247": "https://i.imgur.com/jk1lkOV.png", "cromtvdosd": "https://i.imgur.com/jk1lkOV.png", "ctntvconneticut720pnot247": "https://i.imgur.com/pb0TFQt.jpg", "ctntvconneticutussd": "https://i.imgur.com/pb0TFQt.jpg", "dbmtv1080p": "https://i.imgur.com/ab6p2SW.png", "dbmtvfrsd": "https://i.imgur.com/ab6p2SW.png", "delmartv720p": "https://i.imgur.com/M1eQ1eZ.png", "dmtvussd": "https://i.imgur.com/M1eQ1eZ.png", "dimtv720pgeoblocked": "https://i.imgur.com/X4QFDhk.png", "dimtvtrsd": "https://i.imgur.com/X4QFDhk.png", "dmtvmalang": "https://i.imgur.com/3iC41QX.png", "dmtvmalangidsd": "https://i.imgur.com/3iC41QX.png", "dreamtv720p": "https://i.imgur.com/YPbvzgV.png", "dreamtvmnsd": "https://i.imgur.com/YPbvzgV.png", "dreamtv480p": "https://i.imgur.com/XRUDhqQ.png", "dreamtvugsd": "https://i.imgur.com/XRUDhqQ.png", "dreamworkschannelasiavietnam1080p": "https://upload.wikimedia.org/wikipedia/fr/thumb/5/55/1024px-DreamWorks_Animation_SKG_logo_with_fishing_boy.png/330px-1024px-DreamWorks_Animation_SKG_logo_with_fishing_boy.png", "dreamworkschannelasiausvietnam": "https://upload.wikimedia.org/wikipedia/fr/thumb/5/55/1024px-DreamWorks_Animation_SKG_logo_with_fishing_boy.png/330px-1024px-DreamWorks_Animation_SKG_logo_with_fishing_boy.png", "durangaldekotelebista576p": "https://i.imgur.com/qdlW6cg.png", "durangaldekotelebistaessd": "https://i.imgur.com/qdlW6cg.png", "elimtv480pnot247": "https://i.imgur.com/payIg0N.png", "elimtvsvsd": "https://i.imgur.com/payIg0N.png", "espndeportes360p": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/ESPN_Deportes.svg/512px-ESPN_Deportes.svg.png", "espndeportesussd": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/ESPN_Deportes.svg/512px-ESPN_Deportes.svg.png", "euronewsportuguese720p": "https://i.imgur.com/8t9mdg9.png", "euronewsportuguesefrsd": "https://i.imgur.com/8t9mdg9.png", "fairfieldgovernmentaccesschannel26fairfieldca720pgeoblocked": "https://i.imgur.com/fiqaiUe.png", "cityoffairfieldchannel26ussd": "https://i.imgur.com/fiqaiUe.png", "fifaportuguese720p": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/FIFA%2B_(2025).svg/700px-FIFA%2B_(2025).svg.png", "fifaplusukportuguese": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/FIFA%2B_(2025).svg/700px-FIFA%2B_(2025).svg.png", "filamtvnetwork": "https://i.imgur.com/nRiApdI.png", "filamtvnetworkushd": "https://i.imgur.com/nRiApdI.png", "filmax576p": "https://i.postimg.cc/MHxhsGVS/filmax.png", "filmaxpksd": "https://i.postimg.cc/MHxhsGVS/filmax.png", "flicksoffury": "https://i.imgur.com/rtL5L81.png", "flicksoffuryussd": "https://i.imgur.com/rtL5L81.png", "foodfood": "https://jiotvimages.cdn.jio.com/dare_images/images/Food_Food.png", "foodfoodinsd": "https://jiotvimages.cdn.jio.com/dare_images/images/Food_Food.png", "foodtime": "https://i.imgur.com/gxCYAwH.png", "foodtimerusd": "https://i.imgur.com/gxCYAwH.png", "fortpiercelivestreamfortpiercefl720p": "https://i.imgur.com/2ChoSsi.png", "cityoffortpierceussd": "https://i.imgur.com/2ChoSsi.png", "fox2sanfranciscocaktvu720p": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Fox_Networks_Group_US_logo.svg/512px-Fox_Networks_Group_US_logo.svg.png", "ktvudt1ussd": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Fox_Networks_Group_US_logo.svg/512px-Fox_Networks_Group_US_logo.svg.png", "fox13seattlewakcpq720p": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/FOX_wordmark-red.svg/512px-FOX_wordmark-red.svg.png", "kcpqdt1ussd": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/FOX_wordmark-red.svg/512px-FOX_wordmark-red.svg.png", "fox23capegirardeaumokbsidt1720pnot247": "https://static.wikia.nocookie.net/tvstations/images/8/8e/KBSIO6.png", "kbsidt1ussd": "https://static.wikia.nocookie.net/tvstations/images/8/8e/KBSIO6.png", "fox25bostonwfxttvgeoblocked": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/FOX_wordmark-red.svg/512px-FOX_wordmark-red.svg.png", "wfxtdt1ussd": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/FOX_wordmark-red.svg/512px-FOX_wordmark-red.svg.png", "foxbusinessnetwork720pnot247": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Fox_Business.svg/512px-Fox_Business.svg.png", "foxbusinessnetworkussd": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Fox_Business.svg/512px-Fox_Business.svg.png", "foxdeportes": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/FOX_Deportes_logo.png/512px-FOX_Deportes_logo.png", "foxdeportesussd": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/FOX_Deportes_logo.png/512px-FOX_Deportes_logo.png", "foxnewsradio720p": "https://radio.foxnews.com/wp-content/uploads/2017/10/default_logo-150x150.png", "foxnewsradioussd": "https://radio.foxnews.com/wp-content/uploads/2017/10/default_logo-150x150.png", "foxsoul1080p": "https://i.imgur.com/YIamDGn.png", "foxsoulussd": "https://i.imgur.com/YIamDGn.png", "foxweather720p": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Fox_Weather_logo.svg/512px-Fox_Weather_logo.svg.png", "foxweatherussd": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Fox_Weather_logo.svg/512px-Fox_Weather_logo.svg.png", "frecuenciamusicaltvnot247": "https://i.imgur.com/vPxvbVv.png", "fmtvuksd": "https://i.imgur.com/vPxvbVv.png", "gamtvcr720p": "https://i.ibb.co/xFCS7wM/GAMTVCR.png", "gamtvcrcrsd": "https://i.ibb.co/xFCS7wM/GAMTVCR.png", "garshomtv360pnot247": "https://i.imgur.com/KnbwUyb.png", "garshomtvuksd": "https://i.imgur.com/KnbwUyb.png", "gemfood": "https://i.imgur.com/SMtSinK.png", "gemfoodtrsd": "https://i.imgur.com/SMtSinK.png", "globotv1080pnot247": "https://i.imgur.com/hxGvZ77.png", "globotvhnsd": "https://i.imgur.com/hxGvZ77.png", "globotv720pgeoblocked": "https://i.imgur.com/PJ4c4jq.png", "globotvhusd": "https://i.imgur.com/PJ4c4jq.png", "gmtv1080p": "https://i.imgur.com/GJYb8c8.png", "gmtvussd": "https://i.imgur.com/GJYb8c8.png", "goldeneaglecartoon": "https://i.imgur.com/xfVHrKQ.png", "goldeneaglecartooncnsd": "https://i.imgur.com/xfVHrKQ.png", "gtntv1080pnot247": "https://i.imgur.com/CSCZW6L.png", "gtntvkesd": "https://i.imgur.com/CSCZW6L.png", "hamaikatelebista1080p": "https://i.imgur.com/HR3G3Ie.png", "hamaikatelebistaessd": "https://i.imgur.com/HR3G3Ie.png", "historychannel1080p": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/History_%282021%29.svg/512px-History_%282021%29.svg.png", "historysihd": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/History_%282021%29.svg/512px-History_%282021%29.svg.png", "historyhit720p": "https://i.imgur.com/ulHoqlP.png", "historyhitussd": "https://i.imgur.com/ulHoqlP.png", "historytv18hd1080pgeoblocked": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_HISTORY_TV18_HD/images/LOGO_HD/image.png", "historytv18inhd": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_HISTORY_TV18_HD/images/LOGO_HD/image.png", "hmtv720p": "https://i.imgur.com/GJ52eFs.png", "hmtvinsd": "https://i.imgur.com/GJ52eFs.png", "htsportv1080p": "https://www.htspor.com/images/manifest/social-share-logo.png", "htsportvtrsd": "https://www.htspor.com/images/manifest/social-share-logo.png", "ilam": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Ilam_TV.png/240px-Ilam_TV.png", "ilamtvirsd": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Ilam_TV.png/240px-Ilam_TV.png", "imagenuniversaltv": "https://i.imgur.com/DP6HmDV.png", "imagenuniversaltvdosd": "https://i.imgur.com/DP6HmDV.png", "jamtvgeoblocked": "https://i.ibb.co/WpjKp2z4/jam.png", "jamtvirsd": "https://i.ibb.co/WpjKp2z4/jam.png", "janamtv576p": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_JANAM_TV/images/LOGO_HD/image.png", "janamtvinsd": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_JANAM_TV/images/LOGO_HD/image.png", "japanimtv1080p": "https://static-cdn.jtvnw.net/jtv_user_pictures/6b97e19f-4243-4d48-b794-ff8cf54d795f-profile_image-300x300.png", "japanimtvbesd": "https://static-cdn.jtvnw.net/jtv_user_pictures/6b97e19f-4243-4d48-b794-ff8cf54d795f-profile_image-300x300.png", "jcmtv720pnot247": "https://i.imgur.com/28YB7dD.jpg", "jcmtvkesd": "https://i.imgur.com/28YB7dD.jpg", "jiajiacartoon": "https://i.imgur.com/0TLG3Xk.png", "jiajiacartooncnsd": "https://i.imgur.com/0TLG3Xk.png", "khushboobangla720p": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_KHUSHBOO_BANGLA/images/LOGO_HD/image.png", "khushboobanglainsd": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_KHUSHBOO_BANGLA/images/LOGO_HD/image.png", "kozoomtv": "https://i.imgur.com/M1Ee79b.png", "kozoomtvfrsd": "https://i.imgur.com/M1Ee79b.png", "ksbynewssanlouisobispoca720p": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/NBC_logo_2022_%28vertical%29.svg/512px-NBC_logo_2022_%28vertical%29.svg.png", "ksbydt1ussd": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/NBC_logo_2022_%28vertical%29.svg/512px-NBC_logo_2022_%28vertical%29.svg.png", "kurdmaxmusic720p": "https://i.imgur.com/otnIdEu.png", "kurdmaxmusiciqsd": "https://i.imgur.com/otnIdEu.png", "kurdmaxshow720p": "https://i.imgur.com/XTmyGmL.png", "kurdmaxshowiqsd": "https://i.imgur.com/XTmyGmL.png", "kurdmaxsorani1080p": "https://i.imgur.com/JkK8HG8.png", "kurdmaxsoraniiqsd": "https://i.imgur.com/JkK8HG8.png", "leomax241080p": "https://i.imgur.com/qU9ohQu.png", "leomax24rusd": "https://i.imgur.com/qU9ohQu.png", "liceumtv576p": "https://i.imgur.com/Hf122ZD.png", "liceumtvhusd": "https://i.imgur.com/Hf122ZD.png", "limtv720p": "https://i.imgur.com/CALoCyo.png", "limtvpysd": "https://i.imgur.com/CALoCyo.png", "littoralfm720p": "https://i.imgur.com/DCZKAQ1.png", "littoralfmtvfrsd": "https://i.imgur.com/DCZKAQ1.png", "livenowfromfox720pgeoblocked": "https://i.imgur.com/1JnyzHv.png", "livenowfromfoxussd": "https://i.imgur.com/1JnyzHv.png", "logoplutotv": "https://i.imgur.com/GtNgJ28.png", "logoplutotvussd": "https://i.imgur.com/GtNgJ28.png", "madhimugamtv576p": "https://jiotvimages.cdn.jio.com/dare_images/images/Madhimugam_TV.png", "madhimugamtvinsd": "https://jiotvimages.cdn.jio.com/dare_images/images/Madhimugam_TV.png", "madrasfmtv1080p": "https://i.imgur.com/spGg1CZ.png", "madrasfmtvgpsd": "https://i.imgur.com/spGg1CZ.png", "mahaamax1080p": "https://objectstorage.ap-mumbai-1.oraclecloud.com/p/7Eg7LPw1gBcncVDrfwf__7yyrg13awaU6DmMk4gutavGYZgoAuAziv8e0aSEdU4G/n/bmaqqlwez184/b/GTPL_CHANNEL_LOGO/o/gtpl/MAHAA+MAX+LOGO.png", "mahaamaxinsd": "https://objectstorage.ap-mumbai-1.oraclecloud.com/p/7Eg7LPw1gBcncVDrfwf__7yyrg13awaU6DmMk4gutavGYZgoAuAziv8e0aSEdU4G/n/bmaqqlwez184/b/GTPL_CHANNEL_LOGO/o/gtpl/MAHAA+MAX+LOGO.png", "max4576p": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Max4_logo.png/375px-Max4_logo.png", "max4husd": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Max4_logo.png/375px-Max4_logo.png", "maxtv1080p": "https://i.imgur.com/TF4snV6.jpeg", "maxtvbzsd": "https://i.imgur.com/TF4snV6.jpeg", "maxivisintv720p": "https://i.imgur.com/UC8WrEN.jpg", "maxivisiontvgtsd": "https://i.imgur.com/UC8WrEN.jpg", "maxtvnot247": "https://gia.tv/streams/pstream/209851.png", "maxtvcohd": "https://gia.tv/streams/pstream/209851.png", "maxtvdieutv1080p": "https://i.postimg.cc/02YKz58q/maxtv.png", "maxtvchsd": "https://i.postimg.cc/02YKz58q/maxtv.png", "mbcgyeongnammbc1080pnot247": "https://i.imgur.com/Ronb1JP.png", "mbcgyeongnamtvkrsd": "https://i.imgur.com/Ronb1JP.png", "meltemtv1080p": "https://i.imgur.com/C3m6w5S.png", "meltemtvtrsd": "https://i.imgur.com/C3m6w5S.png", "metafilmtv": "https://www.lyngsat.com/logo/tv/mm/meta-film-tv.png", "metafilmtvirsd": "https://www.lyngsat.com/logo/tv/mm/meta-film-tv.png", "minimax576pnot247": "https://i.imgur.com/TJvf8vd.png", "minimaxpksd": "https://i.imgur.com/TJvf8vd.png", "minimax576p576p": "https://i.imgur.com/WWOlm1x.png", "minimaxceeczsd": "https://i.imgur.com/WWOlm1x.png", "mmtv1080p": "https://i.imgur.com/21tpl5b.png", "mmtvmvsd": "https://i.imgur.com/21tpl5b.png", "mntv1080p": "https://i.imgur.com/cFNw4Af.png", "marutamtvinsd": "https://i.imgur.com/cFNw4Af.png", "mtv1080p": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/MTV_2021_%28brand_version%29.svg/512px-MTV_2021_%28brand_version%29.svg.png", "mtvfrsd": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/MTV_2021_%28brand_version%29.svg/512px-MTV_2021_%28brand_version%29.svg.png", "mtv1080pnot247": "https://upload.wikimedia.org/wikipedia/commons/7/75/Murr_tv.png", "mtvlebanonlbsd": "https://upload.wikimedia.org/wikipedia/commons/7/75/Murr_tv.png", "mtv3720p": "https://i.imgur.com/C5rQbBM.png", "mtv3fisd": "https://i.imgur.com/C5rQbBM.png", "mtvava720p": "https://i.imgur.com/WxNCiAk.png", "mtvavafisd": "https://i.imgur.com/WxNCiAk.png", "mtvbiggestpopusus": "https://i.imgur.com/AOaZmlS.png", "mtvcatfishtvshow": "https://i.imgur.com/tpLRnP2.png", "mtvcatfishtvshowusaustria": "https://i.imgur.com/tpLRnP2.png", "mtvchontales720pnot247": "https://i.imgur.com/zgUPYdv.png", "mtvchontalesnisd": "https://i.imgur.com/zgUPYdv.png", "mtvguyana1080pnot247": "https://i.imgur.com/Ky70brA.png", "mtvguyanagysd": "https://i.imgur.com/Ky70brA.png", "mtvplutotv": "https://i.imgur.com/lTBim20.png", "mtvplutotvusaustria": "https://i.imgur.com/WsQRCmZ.png", "mtvplutotvusus": "https://i.imgur.com/WsQRCmZ.png", "plutotvmtvussd": "https://i.imgur.com/lTBim20.png", "mtvridiculousness": "https://i.imgur.com/GIKkbjT.png", "mtvridiculousnessusaustria": "https://i.imgur.com/GIKkbjT.png", "mtvspankinnew": "https://i.imgur.com/thbvJd1.png", "mtvspankinnewusus": "https://i.imgur.com/thbvJd1.png", "mtvsub720p": "https://i.imgur.com/rmV8LO1.png", "mtvsubfisd": "https://i.imgur.com/rmV8LO1.png", "mtvteenmom": "https://i.imgur.com/6EzdThG.png", "mtvteenmomusaustria": "https://i.imgur.com/6EzdThG.png", "mtvtheshores": "https://i.imgur.com/I2QM1Gd.png", "mtvtheshoresusaustria": "https://i.imgur.com/I2QM1Gd.png", "mtvuutiset720p": "https://i.imgur.com/ZO8ShOK.png", "mtvuutisetfisd": "https://i.imgur.com/ZO8ShOK.png", "nbskoreaagriculturalbroadcasting720p": "https://i.imgur.com/pOSroOE.png", "nbskrsd": "https://i.imgur.com/pOSroOE.png", "netmaxtv720pnot247": "https://i.imgur.com/dLvRD4k.png", "netmaxtvgrsd": "https://i.imgur.com/dLvRD4k.png", "newsmax2720p": "https://www.lyngsat.com/logo/tv/nn/newsmax-2-us-ug.png", "newsmax2ussd": "https://www.lyngsat.com/logo/tv/nn/newsmax-2-us-ug.png", "newsmaxtv720p": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Newsmax_logo.svg/512px-Newsmax_logo.svg.png", "newsmaxtvussd": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Newsmax_logo.svg/512px-Newsmax_logo.svg.png", "nickjr576p": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Nick_Jr._logo_2023_(outline).svg/512px-Nick_Jr._logo_2023_(outline).svg.png", "nickjrinsd": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Nick_Jr._logo_2023_(outline).svg/512px-Nick_Jr._logo_2023_(outline).svg.png", "nickjrlatinamerica480p": "https://i.imgur.com/KT4tdQs.png", "nickjrlatinamericauspanregional": "https://i.imgur.com/KT4tdQs.png", "nickplutotv": "https://i.imgur.com/N7rQyzN.png", "nickplutotvusaustria": "https://i.imgur.com/N7rQyzN.png", "nickplutotvusus": "https://i.imgur.com/N7rQyzN.png", "nickcomedycentral1hd1080p": "https://i.imgur.com/08ZUI9k.png", "nickcomedycentralplus1dehd": "https://i.imgur.com/08ZUI9k.png", "nickelodeon576p": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NICK/images/LOGO_HD/image.png", "nickelodeoneesd": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Nickelodeon_2023_logo_%28outline%29.svg/1200px-Nickelodeon_2023_logo_%28outline%29.svg.png", "nickelodeon": "https://i.imgur.com/E84jnP8.png", "nickelodeonfrsd": "https://i.imgur.com/E84jnP8.png", "nickelodeoninsd": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NICK/images/LOGO_HD/image.png", "nickelodeonuseast": "https://i.imgur.com/E84jnP8.png", "nickelodeonjunior": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Nickelodeon_Junior.png/512px-Nickelodeon_Junior.png", "nickelodeonjuniorfrsd": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Nickelodeon_Junior.png/512px-Nickelodeon_Junior.png", "nickelodeonlatinamerica720p": "https://i.imgur.com/E84jnP8.png", "nickelodeonlatinamericauspanregional": "https://i.imgur.com/E84jnP8.png", "nickelodeonteen": "https://i.postimg.cc/50ML7sqZ/nickelodeonteen.png", "nickelodeonteenfrsd": "https://i.postimg.cc/50ML7sqZ/nickelodeonteen.png", "nicktoons720p": "https://i.ibb.co/ZpmVmC3G/IMG-0291.jpg", "nicktoonscafast": "https://i.ibb.co/ZpmVmC3G/IMG-0291.jpg", "nicktoons576p": "https://i.postimg.cc/mZjCjNc5/nicktoons.png", "nicktoonsuksd": "https://i.postimg.cc/mZjCjNc5/nicktoons.png", "nimtv720pnot247": "https://i.imgur.com/mBNOSzl.png", "nimtvgtsd": "https://i.imgur.com/mBNOSzl.png", "nogoumfmtv672pnot247": "https://i.imgur.com/krp3kgv.png", "nogoumfmtvegsd": "https://i.imgur.com/krp3kgv.png", "oepmtv720p": "https://i.imgur.com/QghtwMB.jpeg", "oepmtvdosd": "https://i.imgur.com/QghtwMB.jpeg", "oftvoffenbach720p": "https://i.imgur.com/WAcxCJr.png", "oftvoffenbachdesd": "https://i.imgur.com/WAcxCJr.png", "omtv576p": "https://jiotvimages.cdn.jio.com/dare_images/images/OM_TV.png", "omtvinsd": "https://jiotvimages.cdn.jio.com/dare_images/images/OM_TV.png", "omanalthakafia1080p": "https://i.imgur.com/b38wNPK.png", "omantvculturalomsd": "https://i.imgur.com/b38wNPK.png", "openrotterdam480pnot247": "https://i.imgur.com/nWahRAb.png", "openrotterdamtvnlsd": "https://i.imgur.com/nWahRAb.png", "p2mtv720p": "https://i.imgur.com/TrecSeG.png", "p2mtvfrsd": "https://i.imgur.com/TrecSeG.png", "paramountmoviechannel": "https://i.imgur.com/sj5h9bl.png", "paramountmoviechannelussd": "https://i.imgur.com/sj5h9bl.png", "paramountpicks": "https://images.pluto.tv/channels/5ff8c708653d080007361b14/featuredImage.jpg", "paramountpluspicksussd": "https://images.pluto.tv/channels/5ff8c708653d080007361b14/featuredImage.jpg", "payamtv720pnot247": "https://i.postimg.cc/DZLrc9VV/payamtv.png", "payamtviqsd": "https://i.postimg.cc/DZLrc9VV/payamtv.png", "pbrridepass": "https://i.imgur.com/gUxH97E.png", "pbrridepassussd": "https://i.imgur.com/gUxH97E.png", "plutotvaction": "https://i.imgur.com/tDapGal.png", "plutotvactionusus": "https://i.imgur.com/tDapGal.png", "plutotvanimals": "https://i.imgur.com/N00seOn.png", "plutotvanimalsusaustria": "https://i.imgur.com/N00seOn.png", "animealldayusus": "https://i.imgur.com/bYZtd0G.png", "plutotvanimeusaustria": "https://i.imgur.com/bvbn8pa.png", "plutotvbackcountry": "https://i.imgur.com/KnlQzs7.png", "plutotvbackcountryussd": "https://i.imgur.com/KnlQzs7.png", "plutotvcars": "https://i.imgur.com/Tm3VFmq.png", "plutotvcarsussd": "https://i.imgur.com/Tm3VFmq.png", "plutotvcineaccion": "https://i.imgur.com/PXhCzXn.png", "plutotvcineaccionusus": "https://i.imgur.com/PXhCzXn.png", "plutotvcineestelar": "https://i.imgur.com/v3BO4nW.png", "plutotvcineestelarusus": "https://i.imgur.com/v3BO4nW.png", "plutotvcomedy": "https://i.imgur.com/MTVrbd5.png", "plutotvcomedyusus": "https://i.imgur.com/MTVrbd5.png", "plutotvcrime": "https://i.imgur.com/QwEpDY9.png", "plutotvcrimeusaustria": "https://i.imgur.com/QwEpDY9.png", "plutotvcrimedrama": "https://i.imgur.com/9j1njE3.png", "plutotvcrimedramaussd": "https://i.imgur.com/9j1njE3.png", "plutotvcrimemovies": "https://i.imgur.com/SJcqknt.png", "plutotvcrimemoviesussd": "https://i.imgur.com/SJcqknt.png", "plutotvcultfilms": "https://i.imgur.com/xoaIAus.png", "plutotvcultfilmsusus": "https://i.imgur.com/xoaIAus.png", "plutotvdrama": "https://i.imgur.com/PvhbHTZ.png", "plutotvdramausus": "https://i.imgur.com/PvhbHTZ.png", "plutotvestrellasdeaccion": "https://i.imgur.com/GVOYX4L.png", "plutotvestrellasdeaccionussd": "https://i.imgur.com/GVOYX4L.png", "plutotvexplore": "https://i.imgur.com/Fhrcxje.png", "plutotvexploreusaustria": "https://i.imgur.com/Fhrcxje.png", "plutotvfantastic": "https://i.imgur.com/MCu7YTA.png", "plutotvfantasticussd": "https://i.imgur.com/MCu7YTA.png", "plutotvfood": "https://i.imgur.com/HTLo1GG.png", "plutotvfoodusaustria": "https://i.imgur.com/HTLo1GG.png", "plutotvgameshows": "https://i.imgur.com/JXZEg2e.png", "plutotvgameshowsussd": "https://i.imgur.com/JXZEg2e.png", "plutotvhistory": "https://i.imgur.com/XkQD5kM.png", "plutotvhistoryusaustria": "https://i.imgur.com/XkQD5kM.png", "plutotvhistoryusus": "https://i.imgur.com/XkQD5kM.png", "plutotvhorror": "https://i.imgur.com/k6qttca.png", "plutotvhorrorusaustria": "https://i.imgur.com/k6qttca.png", "plutotvhorrorusus": "https://i.imgur.com/k6qttca.png", "plutotvkultfilme": "https://i.imgur.com/RJhxl8t.png", "plutotvkultfilmeusaustria": "https://i.imgur.com/RJhxl8t.png", "plutotvlives": "https://i.imgur.com/laupYwG.png", "plutotvlivesusus": "https://i.imgur.com/laupYwG.png", "plutotvmilitary": "https://i.imgur.com/O8VXZB4.png", "plutotvmilitaryussd": "https://i.imgur.com/O8VXZB4.png", "plutotvmovies": "https://i.imgur.com/XzAbXAn.png", "plutotvmoviesusaustria": "https://i.imgur.com/XzAbXAn.png", "plutotvmtvclassic": "https://i.imgur.com/NPavpts.png", "plutotvmtvclassicussd": "https://i.imgur.com/NPavpts.png", "plutotvmystery": "https://i.imgur.com/oXpLEXI.png", "plutotvmysteryusaustria": "https://i.imgur.com/oXpLEXI.png", "plutotvnature": "https://i.imgur.com/PtWUmss.png", "plutotvnatureusaustria": "https://i.imgur.com/PtWUmss.png", "plutotvnovelas": "https://i.imgur.com/R44LypS.png", "plutotvnovelasussd": "https://i.imgur.com/R44LypS.png", "plutotvparanormal": "https://i.imgur.com/ApN6nfw.png", "plutotvparanormalusaustria": "https://i.imgur.com/ApN6nfw.png", "plutotvparanormalusus": "https://i.imgur.com/ApN6nfw.png", "plutotvreaction": "https://i.imgur.com/H9k3OXN.png", "plutotvreactionussd": "https://i.imgur.com/H9k3OXN.png", "plutotvreality": "https://i.imgur.com/OvN7FCv.png", "plutotvrealityusus": "https://i.imgur.com/OvN7FCv.png", "plutotvromance": "https://i.imgur.com/GJBxfyf.png", "plutotvromanceusus": "https://i.imgur.com/GJBxfyf.png", "plutotvscifi": "https://i.imgur.com/vSzd5m7.png", "plutotvscifiusaustria": "https://i.imgur.com/vSzd5m7.png", "plutotvscience": "https://i.imgur.com/uhunRoU.png", "plutotvscienceusaustria": "https://i.imgur.com/uhunRoU.png", "plutotvscienceusus": "https://i.imgur.com/uhunRoU.png", "plutotvserie": "https://i.imgur.com/bqedNmK.png", "plutotvserieusaustria": "https://i.imgur.com/u3c80e8.png", "plutotvserieplususaustria": "https://i.imgur.com/bqedNmK.png", "plutotvsitcoms": "https://i.imgur.com/YzrUL8P.png", "plutotvsitcomsusaustria": "https://i.imgur.com/YzrUL8P.png", "plutotvspace": "https://i.imgur.com/hQwS3ui.png", "plutotvspaceusaustria": "https://i.imgur.com/hQwS3ui.png", "plutotvspotlight": "https://i.imgur.com/UmuJkVB.png", "plutotvspotlightussd": "https://i.imgur.com/UmuJkVB.png", "plutotvstaffpicks": "https://i.imgur.com/JzwO8IO.png", "plutotvstaffpicksussd": "https://i.imgur.com/JzwO8IO.png", "plutotvstartrek": "https://i.imgur.com/8cvXYiT.png", "startrekusaustria": "https://i.imgur.com/8cvXYiT.png", "plutotvterror": "https://i.imgur.com/eWtoHDM.png", "plutotvterrorussd": "https://i.imgur.com/eWtoHDM.png", "plutotvthrillers": "https://i.imgur.com/ULKvDN7.png", "plutotvthrillersusus": "https://i.imgur.com/ULKvDN7.png", "plutotvtruecrime": "https://i.imgur.com/lNfaxiv.png", "plutotvtruecrimeusaustria": "https://i.imgur.com/lNfaxiv.png", "plutotvtruecrimeusus": "https://i.imgur.com/lNfaxiv.png", "plutotvwestern": "https://i.imgur.com/biepi4A.png", "plutotvwesternsusaustria": "https://i.imgur.com/biepi4A.png", "plutotvwesterns": "https://i.imgur.com/biepi4A.png", "plutotvwesternsusus": "https://i.imgur.com/biepi4A.png", "podiumtv1080pnot247": "https://i.postimg.cc/BbNMxrDS/podiumtv.png", "podiumtvnlsd": "https://i.postimg.cc/BbNMxrDS/podiumtv.png", "podiumtv21080pnot247": "https://i.imgur.com/bAhMhuz.jpg", "podiumtv2nlsd": "https://i.imgur.com/bAhMhuz.jpg", "podiumtv31080pnot247": "https://i.imgur.com/bAhMhuz.jpg", "podiumtv3nlsd": "https://i.imgur.com/bAhMhuz.jpg", "powermaxradiotv720p": "https://i.ibb.co/qgZLYDj/channels4-profile-6.jpg", "powermaxradiotvarsd": "https://i.ibb.co/qgZLYDj/channels4-profile-6.jpg", "prosiebenmaxx576p": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/ProSieben_MAXX_Logo.svg/512px-ProSieben_MAXX_Logo.svg.png", "prosiebenmaxxdesd": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/ProSieben_MAXX_Logo.svg/512px-ProSieben_MAXX_Logo.svg.png", "puthuyugamtv576p": "https://jiotvimages.cdn.jio.com/dare_images/images/Puthu_Yugam.png", "puthuyugamtvinsd": "https://jiotvimages.cdn.jio.com/dare_images/images/Puthu_Yugam.png", "radiohitfmtv720p": "https://i.imgur.com/gP2OT4S.png", "radiohitfmtvrssd": "https://i.imgur.com/gP2OT4S.png", "recordtveuropa720pgeoblocked": "https://i.imgur.com/DvxfBTE.png", "recordtveuropaptsd": "https://i.imgur.com/DvxfBTE.png", "rmtv288p": "https://rmtv.bg/img/logo.png", "rmtvbgsd": "https://rmtv.bg/img/logo.png", "rtmtv1080p": "https://i.imgur.com/w9Twxsi.png", "rtmtvitsd": "https://i.imgur.com/w9Twxsi.png", "rtvveluwezoom720p": "https://i.imgur.com/KeHbJTM.png", "rtvveluwezoomtvnlsd": "https://i.imgur.com/KeHbJTM.png", "saamtv": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SAAM_TV/images/LOGO_HD/image.png", "saamtvinsd": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SAAM_TV/images/LOGO_HD/image.png", "salaamtv720p": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SALAAM_TV/images/LOGO_HD/image.png", "salaamtvinsd": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SALAAM_TV/images/LOGO_HD/image.png", "salamtv1080p": "https://i.imgur.com/00Ifzgo.png", "salamtvidsd": "https://i.imgur.com/00Ifzgo.png", "sathiyamtv720p": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SATHIYAM_TV/images/LOGO_HD/image.png", "sathiyamtvinsd": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SATHIYAM_TV/images/LOGO_HD/image.png", "sbttv": "https://i.imgur.com/rmNDylW.png", "sbttvthsd": "https://i.imgur.com/rmNDylW.png", "sbtv1080pnot247": "https://i.imgur.com/MIampxZ.png", "sbtvhrsd": "https://i.imgur.com/MIampxZ.png", "seraphimtvnot247": "https://i.imgur.com/MfeKk07.png", "seraphimtvzasd": "https://i.imgur.com/MfeKk07.png", "seriemax": "https://i.imgur.com/GaRQXHT.png", "seriemaxcisd": "https://i.imgur.com/GaRQXHT.png", "shalomtv360p": "https://i.imgur.com/lJ4MLHn.png", "shalomtvsrsd": "https://i.imgur.com/lJ4MLHn.png", "shoppingnt720p": "https://i.imgur.com/BgbJp5X.png", "shoppingntkrsd": "https://i.imgur.com/BgbJp5X.png", "silkuniversal": "https://i.imgur.com/z0XHsPE.png", "silkuniversalgesd": "https://i.imgur.com/z0XHsPE.png", "smithsonianchannelplutotv": "https://i.imgur.com/Kt5j8Vr.png", "smithsonianchannelselectsussd": "https://i.imgur.com/Kt5j8Vr.png", "smtv720pnot247": "https://upload.wikimedia.org/wikipedia/id/6/6e/Logo_SMTV_Sumedang.png", "smtvidsd": "https://upload.wikimedia.org/wikipedia/id/6/6e/Logo_SMTV_Sumedang.png", "sonyaath576p": "https://i.imgur.com/q4AwVq9.png", "sonyaathinsd": "https://i.imgur.com/q4AwVq9.png", "sonycanalescapeperfecto": "https://i.imgur.com/ohE9IgP.png", "sonycanalescapeperfectoussd": "https://i.imgur.com/ohE9IgP.png", "sonychannel1080p": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Sony_Channel_Logo.png/512px-Sony_Channel_Logo.png", "sonychannelarsd": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Sony_Channel_Logo.png/512px-Sony_Channel_Logo.png", "sonyentertainmenttelevisionhd720p": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SET_HD/images/LOGO_HD/image.png", "sonyentertainmenttelevisioninhd": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SET_HD/images/LOGO_HD/image.png", "sonykalhindi1080p": "https://i.imgur.com/9Qq8DKh.png", "sonykalhindiussd": "https://i.imgur.com/9Qq8DKh.png", "sonymax576p": "https://i.imgur.com/LBICKI5.png", "sonymaxuksd": "https://i.imgur.com/LBICKI5.png", "sonyoneblacklist1080p": "https://i.imgur.com/uJC8rXr.png", "sonyoneblacklistfrhd": "https://i.imgur.com/uJC8rXr.png", "sonyonefavoris1080p": "https://i.imgur.com/RO4AM4b.png", "sonyonefavorisfrhd": "https://i.imgur.com/RO4AM4b.png", "sonyonehitsaction1080p": "https://i.imgur.com/pXsZEsR.png", "sonyonehitsactionfrhd": "https://i.imgur.com/pXsZEsR.png", "sonyonehitscomedie1080p": "https://i.imgur.com/8sHuxxS.png", "sonyonehitscomediefrhd": "https://i.imgur.com/8sHuxxS.png", "sonyoneseriescomedie1080p": "https://i.ibb.co/ns4Md77B/FR-FAST-Plex-Comedy-TV-logo-dark.png", "sonyoneseriescomediefrhd": "https://i.ibb.co/ns4Md77B/FR-FAST-Plex-Comedy-TV-logo-dark.png", "sonyoneseriesthriller1080p": "https://i.imgur.com/RVS8LDj.png", "sonyoneseriesthrillerfrhd": "https://i.imgur.com/RVS8LDj.png", "sonypal576p": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_PAL/images/LOGO_HD/image.png", "sonypalinsd": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_PAL/images/LOGO_HD/image.png", "sonypixhd1080p": "https://i.postimg.cc/Z5G8j67L/PIX-HD-WHITE.png", "sonypixinhd": "https://i.postimg.cc/Z5G8j67L/PIX-HD-WHITE.png", "sonysab720p": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_SAB/images/LOGO_HD/image.png", "sonysabinsd": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_SAB/images/LOGO_HD/image.png", "sonysabhd1080p": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_SAB/images/LOGO_HD/image.png", "sonysabinhd": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_SAB/images/LOGO_HD/image.png", "sonysportsten2hd1080p": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_SPORTS_TEN_2/images/LOGO_HD/image.png", "sonysportsten2inhd": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_SPORTS_TEN_2/images/LOGO_HD/image.png", "sonysportsten3hindi576p": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_SPORTS_TEN_3/images/LOGO_HD/LOGO_HD_image.png", "sonysportsten3hindiinsd": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_SPORTS_TEN_3/images/LOGO_HD/LOGO_HD_image.png", "sonysportsten5hd1080p": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_SPORTS_TEN_5/images/LOGO_HD/image.png", "sonysportsten5inhd": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_SPORTS_TEN_5/images/LOGO_HD/image.png", "sonywah576p": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_WAH/images/LOGO_HD/image.png", "sonywahinsd": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_WAH/images/LOGO_HD/image.png", "sonyyay576p": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_YAY/images/LOGO_HD/image.png", "sonyyayinsd": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_YAY/images/LOGO_HD/image.png", "spikeplutotv": "https://i.imgur.com/woY8Ecb.png", "spikeplutotvussd": "https://i.imgur.com/woY8Ecb.png", "stztelebista1080p": "https://i.imgur.com/rFQuAEv.png", "stztelebistaessd": "https://i.imgur.com/rFQuAEv.png", "sumtvlatino1080p": "https://i.imgur.com/ZObFN8Z.png", "sumtvlatinoussd": "https://i.imgur.com/ZObFN8Z.png", "suramtv1080p": "https://i.imgur.com/2N9LCES.png", "suramtvcosd": "https://i.imgur.com/2N9LCES.png", "tarimtv1080p": "https://i.imgur.com/q30sFms.png", "tarimtvtrsd": "https://i.imgur.com/q30sFms.png", "tbmmtv720p": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/TBMM_TV_logo.svg/512px-TBMM_TV_logo.svg.png", "tbmmtvtrsd": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/TBMM_TV_logo.svg/512px-TBMM_TV_logo.svg.png", "telemax": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Telemax_Argentina_%282018%29.png/512px-Telemax_Argentina_%282018%29.png", "telemaxarsd": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Telemax_Argentina_%282018%29.png/512px-Telemax_Argentina_%282018%29.png", "telemax1080pnot247": "https://i.imgur.com/QvKmjvV.png", "telemaxdosd": "https://i.imgur.com/QvKmjvV.png", "telemaxxewhtdt1080p": "https://i.imgur.com/klhTyDU.png", "xewhtdtmxsd": "https://i.imgur.com/klhTyDU.png", "tmtv720p": "https://tmlive.tv/wp-content/uploads/2018/07/immigration-consultants-network-en-.png", "tmtvmnsd": "https://i.imgur.com/Bza9r7U.png", "tmtvussd": "https://tmlive.tv/wp-content/uploads/2018/07/immigration-consultants-network-en-.png", "tntkids288p": "https://i.imgur.com/irTDbpn.png", "tntkidstvbasd": "https://i.imgur.com/irTDbpn.png", "tntv1080p": "https://i.imgur.com/e5eVHam.png", "tntvpfsd": "https://i.imgur.com/e5eVHam.png", "toonmaxtv": "https://i.imgur.com/Uhwv1il.png", "toonmaxtvcnsd": "https://i.imgur.com/Uhwv1il.png", "truehistory": "https://i.imgur.com/1BHDGXx.png", "truehistoryussd": "https://i.imgur.com/1BHDGXx.png", "tvoff": "https://i.imgur.com/vBe1GgI.png", "tvoffbosd": "https://i.imgur.com/vBe1GgI.png", "tvsenado360p": "https://i.imgur.com/CNUZ6ig.png", "tvsenadoclsd": "https://i.imgur.com/CNUZ6ig.png", "tvuniversalecuador720p": "https://i.imgur.com/TIsk5zN.png", "tvuniversalecuadorecsd": "https://i.imgur.com/TIsk5zN.png", "tvmaxpasd": "https://i.imgur.com/XcrkfGh.png", "tvrcultural": "https://i.imgur.com/U9i70C9.png", "tvrculturalrosd": "https://i.imgur.com/U9i70C9.png", "tvshollywoodhistory582p": "https://i.imgur.com/QtQGyMS.png", "tvshollywoodhistoryussd": "https://i.imgur.com/QtQGyMS.png", "tweedekamermaxvanderstoelzaal1080pnot247": "https://i.imgur.com/X9fezZ8.png", "tweedekamermaxvanderstoelzaalnlsd": "https://i.imgur.com/X9fezZ8.png", "umtv1080pnot247": "https://i.imgur.com/sjxVdPh.png", "umtvmxsd": "https://i.imgur.com/sjxVdPh.png", "universalcinema480p": "https://i.imgur.com/XxfET68.png", "universalcinemaussd": "https://i.imgur.com/XxfET68.png", "universalcomedy480p": "https://i.imgur.com/avBL8pQ.png", "universalcomedyussd": "https://i.imgur.com/avBL8pQ.png", "universalcrime": "https://i.imgur.com/OwSlGMu.png", "universalcrimeuseast": "https://i.imgur.com/OwSlGMu.png", "universalsomalitv": "https://i.imgur.com/awa4oas.png", "universalsomalitvuksd": "https://i.imgur.com/awa4oas.png", "urolatelebista416p": "https://i.imgur.com/V23bltn.png", "urolatelebistaessd": "https://i.imgur.com/V23bltn.png", "vamvidsmore720p": "https://i.imgur.com/CD1PffA.png", "vamtvcwsd": "https://i.imgur.com/CD1PffA.png", "vasanthamtv720p": "https://upload.wikimedia.org/wikipedia/en/1/18/Vasanthamtv_channel.jpg", "vasanthamtvlksd": "https://upload.wikimedia.org/wikipedia/en/1/18/Vasanthamtv_channel.jpg", "velichamtv576p": "https://upload.wikimedia.org/wikipedia/en/e/e4/Logo_of_Velicham_TV.png", "velichamtvinsd": "https://upload.wikimedia.org/wikipedia/en/e/e4/Logo_of_Velicham_TV.png", "verbumtv480pnot247": "https://i.imgur.com/YEKEaB4.png", "verbumtvlksd": "https://i.imgur.com/YEKEaB4.png", "vivarussia1080p": "https://i.imgur.com/OFhQQCD.png", "vivarussiarusd": "https://i.imgur.com/OFhQQCD.png", "vivatvcanal30sanjuanderococonot247": "https://i.imgur.com/n0buXRa.jpeg", "vivatvnisd": "https://i.imgur.com/n0buXRa.jpeg", "vivatvyurimaguas720p": "https://i.imgur.com/GkSoxhx.png", "vivatvyurimaguaspesd": "https://i.imgur.com/GkSoxhx.png", "vivamvil720p": "https://i.imgur.com/QQviU5m.png", "vivamovilessd": "https://i.imgur.com/QQviU5m.png", "wazobiamaxtvabuja720p": "https://i.imgur.com/XYMKPPT.png", "wazobiamaxtvabujangsd": "https://i.imgur.com/XYMKPPT.png", "wazobiamaxtvnigeria720p": "https://i.imgur.com/IeioxBp.png", "wazobiamaxtvnigeriangsd": "https://i.imgur.com/IeioxBp.png", "wazobiamaxtvportharcourt720p": "https://rndcdn.dstv.com/dstvcms/2016/10/20/WazobiaMaz_new4-4logo_001_xlrg.png", "wazobiamaxtvportharcourtngsd": "https://rndcdn.dstv.com/dstvcms/2016/10/20/WazobiaMaz_new4-4logo_001_xlrg.png", "weertfmtv720p": "https://i.postimg.cc/cLL97H6Y/weertfmtv.png", "weertfmtvnlsd": "https://i.postimg.cc/cLL97H6Y/weertfmtv.png", "worldoffreesports": "https://i.imgur.com/lta5Mog.png", "worldoffreesportsdepoland": "https://i.imgur.com/lta5Mog.png", "worldoffreesports1080p": "https://i.imgur.com/lta5Mog.png", "worldoffreesportsdesd": "https://i.imgur.com/lta5Mog.png", "yomtv": "https://i.imgur.com/hzNXDdY.png", "yomtvussd": "https://i.imgur.com/hzNXDdY.png", "zbcartoon1080p": "https://jiotvimages.cdn.jio.com/dare_images/images/zbcatun.png", "zbcartooninhd": "https://jiotvimages.cdn.jio.com/dare_images/images/zbcatun.png", "zeebiskope576p": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_BISKOPE/images/LOGO_HD/LOGO_HD_image.png", "zeebiskopeinsd": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_BISKOPE/images/LOGO_HD/LOGO_HD_image.png", "720pnot247": "https://i.imgur.com/pdCAUrP.png", "mtvvolgogradrusd": "https://i.imgur.com/pdCAUrP.png", "4international": "https://i.imgur.com/SjdOaya.png", "tnt4internationalrusd": "https://i.imgur.com/SjdOaya.png", "international": "https://i.imgur.com/l0RGbRI.png", "tntinternationalrusd": "https://i.imgur.com/l0RGbRI.png", "576p": "https://i.imgur.com/2FJfPDx.png", "youmancartoonchannelcnsd": "https://i.imgur.com/GZInf2W.png", "cndfilmdiscoverychannelcnsd": "https://i.imgur.com/2FJfPDx.png", "406pgeoblocked": "https://i.imgur.com/EY2zH06.png", "shandongtvagriculturalsciencechannelcnsd": "https://i.imgur.com/EY2zH06.png", "historychanneljapan544p": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/History_%282021%29.svg/512px-History_%282021%29.svg.png", "historyjp": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/History_%282021%29.svg/512px-History_%282021%29.svg.png", "mtvjapan544p": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/MTV_2021_%28brand_version%29.svg/512px-MTV_2021_%28brand_version%29.svg.png", "mtvjp": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/MTV_2021_%28brand_version%29.svg/512px-MTV_2021_%28brand_version%29.svg.png"};
     </script>
 
        <script id="app-script">
-(function() {{
+(function() {
     var RAW_BASE = 'https://raw.githubusercontent.com/alberttartas/Pirataflix/main';
     var DEFAULT_POSTER = RAW_BASE + '/assets/Capas/default.jpg';
     window._DEFAULT_POSTER = DEFAULT_POSTER;
-    window.vodData = {{}};
+    window.vodData = {};
 
     // =====================
     // FUNÇÕES AUXILIARES
     // =====================
-    function item_title_from(category, itemId) {{
+    function item_title_from(category, itemId) {
         var items = window.vodData[category];
         if (!items) return '';
         var item = (category === 'tv')
             ? items[parseInt(itemId)]
-            : items.find(function(i) {{ return i.id === itemId; }});
+            : items.find(function(i) { return i.id === itemId; });
         return item ? item.title : '';
-    }}
+    }
 
     // ===== SALVAR PROGRESSO (CORRIGIDO) =====
-    function saveProgress(itemId, category, title, poster, episode, progress, timeLeft, episodeIndex) {{
-        try {{
+    function saveProgress(itemId, category, title, poster, episode, progress, timeLeft, episodeIndex) {
+        try {
             // Garantir que episodeIndex é um número válido
             const safeIndex = (typeof episodeIndex === 'number' && !isNaN(episodeIndex)) ? episodeIndex : 0;
             
-            let continueList = JSON.parse(localStorage.getItem('continueWatching')) || [];
+            let continueList = JSON.parse(localStorage.getItem('pirataflix_progressos')) || [];
             
             const existingIndex = continueList.findIndex(i => i.id === itemId && i.category === category);
             
-            const item = {{
+            const item = {
                 id: itemId,
                 category: category,
                 title: title,
@@ -785,42 +773,42 @@ def generate_html_with_correct_paths(base_dir, data):
                 progress: progress || 0,
                 timeLeft: timeLeft || '0 min',
                 lastWatched: new Date().toISOString()
-            }};
+            };
             
-            if (existingIndex >= 0) {{
+            if (existingIndex >= 0) {
                 continueList[existingIndex] = item;
-            }} else {{
+            } else {
                 continueList.push(item);
-            }}
+            }
             
             continueList = continueList.slice(-20);
-            localStorage.setItem('continueWatching', JSON.stringify(continueList));
+            localStorage.setItem('pirataflix_progressos', JSON.stringify(continueList));
             console.log('Progresso salvo:', item);
-        }} catch (e) {{
+        } catch (e) {
             console.error('Erro ao salvar progresso:', e);
-        }}
-    }}
+        }
+    }
 
     // ===== PLAY EPISODE (ÚNICA VERSÃO CORRIGIDA) =====
-    function playEpisode(url, title, itemId, category, episodeIndex) {{
-        console.log('playEpisode chamado:', {{url, title, itemId, category, episodeIndex}});
+    function playEpisode(url, title, itemId, category, episodeIndex) {
+        console.log('playEpisode chamado:', {url, title, itemId, category, episodeIndex});
         
         // Garantir que episodeIndex é um número
         const safeIndex = (typeof episodeIndex === 'number' && !isNaN(episodeIndex)) ? episodeIndex : 0;
         
         // TRATAMENTO ESPECIAL PARA TV
-        if (category === 'tv') {{
-            if (typeof window.openTVPlayer === 'function') {{
+        if (category === 'tv') {
+            if (typeof window.openTVPlayer === 'function') {
                 window.openTVPlayer(parseInt(itemId));
-            }} else {{
+            } else {
                 window.open(url, '_blank');
-            }}
+            }
             document.getElementById('modal').style.display = 'none';
             return;
-        }}
+        }
         
         // Salvar progresso
-        try {{
+        try {
             const items = window.vodData[category];
             if (!items) return;
             
@@ -833,245 +821,259 @@ def generate_html_with_correct_paths(base_dir, data):
             
             // Encontrar o título correto do episódio
             let episodeTitle = '';
-            if (item.episodes && item.episodes[safeIndex]) {{
+            if (item.episodes && item.episodes[safeIndex]) {
                 episodeTitle = item.episodes[safeIndex].title || 'Episódio ' + (safeIndex + 1);
-            }} else if (item.seasons) {{
+            } else if (item.seasons) {
                 let epCounter = 0;
-                for (let s = 0; s < item.seasons.length; s++) {{
+                for (let s = 0; s < item.seasons.length; s++) {
                     const season = item.seasons[s];
-                    if (season.episodes) {{
-                        if (safeIndex < epCounter + season.episodes.length) {{
+                    if (season.episodes) {
+                        if (safeIndex < epCounter + season.episodes.length) {
                             const epInSeason = safeIndex - epCounter;
                             episodeTitle = season.episodes[epInSeason]?.title || 'Episódio ' + (safeIndex + 1);
                             break;
-                        }}
+                        }
                         epCounter += season.episodes.length;
-                    }}
-                }}
-            }} else {{
+                    }
+                }
+            } else {
                 episodeTitle = 'Episódio ' + (safeIndex + 1);
-            }}
+            }
             
             saveProgress(itemId, category, item.title, poster, episodeTitle, 0, '0 min', safeIndex);
-        }} catch (e) {{
+        } catch (e) {
             console.error('Erro ao salvar progresso:', e);
-        }}
+        }
         
         // Reproduzir
-        if (typeof window.playWithModernPlayer === 'function') {{
+        if (typeof window.playWithModernPlayer === 'function') {
             window.playWithModernPlayer(url, title, '', itemId, category, safeIndex);
             document.getElementById('modal').style.display = 'none';
-        }} else {{
+        } else {
             window.open(url, '_blank');
-        }}
-    }}
+        }
+    }
 
     // ===== PLAY FIRST EPISODE (CORRIGIDO) =====
-    function playFirstEpisode(category, itemId) {{
-        console.log('playFirstEpisode chamado:', {{category, itemId}});
+    function playFirstEpisode(category, itemId) {
+        console.log('playFirstEpisode chamado:', {category, itemId});
         
         const items = window.vodData[category];
-        if (!items) {{
+        if (!items) {
             console.error('Categoria não encontrada:', category);
             return;
-        }}
+        }
         
         let item;
-        if (category === 'tv') {{
+        if (category === 'tv') {
             item = items[parseInt(itemId)];
-        }} else {{
+        } else {
             item = items.find(i => i.id === itemId);
-        }}
+        }
         
-        if (!item) {{
+        if (!item) {
             console.error('Item não encontrado:', itemId);
             return;
-        }}
+        }
         
         // Buscar índice salvo
         let episodeIndex = 0;
-        try {{
-            const continueList = JSON.parse(localStorage.getItem('continueWatching')) || [];
+        try {
+            const continueList = JSON.parse(localStorage.getItem('pirataflix_progressos')) || [];
             const saved = continueList.find(i => i.id === itemId && i.category === category);
-            if (saved && typeof saved.episodeIndex === 'number' && !isNaN(saved.episodeIndex)) {{
+            if (saved && typeof saved.episodeIndex === 'number' && !isNaN(saved.episodeIndex)) {
                 episodeIndex = saved.episodeIndex;
-            }}
-        }} catch (e) {{
+            }
+        } catch (e) {
             console.error('Erro ao ler localStorage:', e);
-        }}
+        }
         
         console.log('Índice do episódio:', episodeIndex);
         
         // Função auxiliar para encontrar episódio
-        function findEpisodeByIndex(idx) {{
+        function findEpisodeByIndex(idx) {
             // Caso 1: Episódios diretos
-            if (item.episodes && item.episodes.length > 0) {{
+            if (item.episodes && item.episodes.length > 0) {
                 const safeIdx = Math.min(idx, item.episodes.length - 1);
-                if (safeIdx >= 0 && item.episodes[safeIdx]) {{
-                    return {{
+                if (safeIdx >= 0 && item.episodes[safeIdx]) {
+                    return {
                         url: item.episodes[safeIdx].url,
                         title: item.title + ' - ' + (item.episodes[safeIdx].title || 'Episódio ' + (safeIdx + 1)),
                         index: safeIdx
-                    }};
-                }}
-            }}
+                    };
+                }
+            }
             
             // Caso 2: URL direta
-            if (item.url) {{
-                return {{
+            if (item.url) {
+                return {
                     url: item.url,
                     title: item.title,
                     index: 0
-                }};
-            }}
+                };
+            }
             
             // Caso 3: Múltiplas temporadas
-            if (item.seasons && item.seasons.length > 0) {{
+            if (item.seasons && item.seasons.length > 0) {
                 let remainingIdx = idx;
-                for (let s = 0; s < item.seasons.length; s++) {{
+                for (let s = 0; s < item.seasons.length; s++) {
                     const season = item.seasons[s];
                     const seasonEpisodes = season.episodes || [];
                     
-                    if (remainingIdx < seasonEpisodes.length) {{
+                    if (remainingIdx < seasonEpisodes.length) {
                         const ep = seasonEpisodes[remainingIdx];
-                        if (ep && ep.url) {{
-                            return {{
+                        if (ep && ep.url) {
+                            return {
                                 url: ep.url,
-                                title: `${{item.title}} - Temp ${{season.season}} - ${{ep.title || 'Episódio ' + (remainingIdx + 1)}}`,
+                                title: `${item.title} - Temp ${season.season} - ${ep.title || 'Episódio ' + (remainingIdx + 1)}`,
                                 index: idx
-                            }};
-                        }}
-                    }}
+                            };
+                        }
+                    }
                     remainingIdx -= seasonEpisodes.length;
-                }}
+                }
                 
                 // Fallback: primeiro episódio da primeira temporada
-                if (item.seasons[0]?.episodes?.[0]?.url) {{
-                    return {{
+                if (item.seasons[0]?.episodes?.[0]?.url) {
+                    return {
                         url: item.seasons[0].episodes[0].url,
-                        title: `${{item.title}} - Temp ${{item.seasons[0].season}} - Episódio 1`,
+                        title: `${item.title} - Temp ${item.seasons[0].season} - Episódio 1`,
                         index: 0
-                    }};
-                }}
-            }}
+                    };
+                }
+            }
             
             return null;
-        }}
+        }
         
         const episode = findEpisodeByIndex(episodeIndex);
         
-        if (episode) {{
+        if (episode) {
             playEpisode(episode.url, episode.title, itemId, category, episode.index);
-        }} else {{
+        } else {
             console.error('Nenhum episódio encontrado para:', item);
             // Fallback: tentar o primeiro episódio de qualquer forma
-            if (item.episodes?.[0]?.url) {{
+            if (item.episodes?.[0]?.url) {
                 playEpisode(item.episodes[0].url, item.title + ' - Episódio 1', itemId, category, 0);
-            }} else if (item.seasons?.[0]?.episodes?.[0]?.url) {{
+            } else if (item.seasons?.[0]?.episodes?.[0]?.url) {
                 const ep = item.seasons[0].episodes[0];
-                playEpisode(ep.url, `${{item.title}} - Temp ${{item.seasons[0].season}} - Episódio 1`, itemId, category, 0);
-            }}
-        }}
-    }}
+                playEpisode(ep.url, `${item.title} - Temp ${item.seasons[0].season} - Episódio 1`, itemId, category, 0);
+            }
+        }
+    }
 
     // =====================
     // CARREGAR DADOS
     // =====================
-    async function loadData() {{
-        try {{
+    async function loadData() {
+        try {
             var response = await fetch('data.json');
             window.vodData = await response.json();
             displayContent();
-            setTimeout(function() {{
-                if (typeof $.fn.owlCarousel === 'function') {{
+            setTimeout(function() {
+                if (typeof $.fn.owlCarousel === 'function') {
                     initCarousels();
-                }} else {{
+                } else {
                     initFallbackScroll();
-                }}
-            }}, 500);
-        }} catch (error) {{
+                }
+            }, 500);
+        } catch (error) {
             document.getElementById('content').innerHTML =
                 '<div class="error">Erro ao carregar: ' + error.message + '</div>';
-        }}
-    }}
+        }
+    }
 
     // =====================
     // FALLBACK SCROLL
     // =====================
-    function initFallbackScroll() {{
-        $('.owl-carousel').css({{ display: 'flex', 'overflow-x': 'auto', gap: '10px' }});
-        $('.owl-carousel .item-card').css({{ flex: '0 0 auto', width: '220px' }});
-    }}
+    function initFallbackScroll() {
+        $('.owl-carousel').css({ display: 'flex', 'overflow-x': 'auto', gap: '10px' });
+        $('.owl-carousel .item-card').css({ flex: '0 0 auto', width: '220px' });
+    }
 
     // =====================
     // CARROSSÉIS
     // =====================
-    function initCarousels() {{
-        setTimeout(function() {{
-            $('.owl-carousel').each(function() {{
+    function initCarousels() {
+        setTimeout(function() {
+            $('.owl-carousel').each(function() {
                 var $c = $(this);
                 var cId = $c.attr('id');
                 var isCont = cId === 'carousel-continue';
-                if (!$c.data('owlCarousel')) {{
-                    $c.owlCarousel({{
+                if (!$c.data('owlCarousel')) {
+                    $c.owlCarousel({
                         items: isCont ? 8 : 7,
                         margin: isCont ? 8 : 10,
                         loop: false, nav: false, dots: false,
-                        responsive: {{
-                            0:    {{ items: isCont ? 3 : 2 }},
-                            480:  {{ items: isCont ? 4 : 3 }},
-                            640:  {{ items: isCont ? 5 : 4 }},
-                            768:  {{ items: isCont ? 6 : 5 }},
-                            1024: {{ items: isCont ? 7 : 6 }},
-                            1280: {{ items: isCont ? 8 : 7 }}
-                        }}
-                    }});
-                }}
-                $('.next-' + cId).off('click').on('click', function(e) {{
+                        responsive: {
+                            0:    { items: isCont ? 3 : 2 },
+                            480:  { items: isCont ? 4 : 3 },
+                            640:  { items: isCont ? 5 : 4 },
+                            768:  { items: isCont ? 6 : 5 },
+                            1024: { items: isCont ? 7 : 6 },
+                            1280: { items: isCont ? 8 : 7 }
+                        }
+                    });
+                }
+                $('.next-' + cId).off('click').on('click', function(e) {
                     e.preventDefault(); $c.trigger('next.owl.carousel');
-                }});
-                $('.prev-' + cId).off('click').on('click', function(e) {{
+                });
+                $('.prev-' + cId).off('click').on('click', function(e) {
                     e.preventDefault(); $c.trigger('prev.owl.carousel');
-                }});
-            }});
-        }}, 300);
-    }}
+                });
+            });
+        }, 300);
+    }
 
     // =====================
     // HELPERS
     // =====================
-    function getPoster(item, category) {{
-        if (category === 'tv') {{
+    function getPoster(item, category) {
+        if (category === 'tv') {
             if (item.tvg_logo && item.tvg_logo.startsWith('http')) return item.tvg_logo;
             var key = (item.title || '').toLowerCase().replace(/[^a-z0-9]/g, '');
             if (window.channelsDict && window.channelsDict[key]) return window.channelsDict[key];
             return RAW_BASE + '/assets/Capas/tv_default.jpg';
-        }}
+        }
         if (item.poster && item.poster.startsWith('http')) return item.poster;
         var file = item.poster ? item.poster.split('/').pop() : 'default.jpg';
         return RAW_BASE + '/assets/Capas/' + file;
-    }}
+    }
 
-    function safeImg(poster, altText) {{
+    function safeImg(poster, altText) {
         return '<img src="' + poster + '" alt="' + altText.replace(/"/g, '') +
                '" class="item-poster" onerror="this.onerror=null;this.src=window._DEFAULT_POSTER">';
-    }}
+    }
 
     // =====================
     // EXIBIR CONTEÚDO
     // =====================
-    function displayContent() {{
+    function displayContent() {
         var contentDiv = document.getElementById('content');
         var html = '';
 
         // Continuar assistindo
         var continueList = [];
-        try {{
-            var saved = localStorage.getItem('continueWatching');
+        try {
+            var saved = localStorage.getItem('pirataflix_progressos');
             continueList = saved ? JSON.parse(saved) : [];
-        }} catch(e) {{ continueList = []; }}
+        } catch(e) { continueList = []; }
 
-        if (continueList.length > 0) {{
+        // Converter formato do novo-player.js para o carrossel
+        // novo-player salva: {videoId, itemId, category, currentTime, duration, poster, title, episodeIndex}
+        // Precisamos deduplicar por itemId (pegar o mais recente de cada série)
+        var uniqueItems = {};
+        Object.values(continueList).forEach(function(item) {
+            var key = (item.itemId || item.id) + '_' + item.category;
+            if (!uniqueItems[key] || item.timestamp > uniqueItems[key].timestamp) {
+                uniqueItems[key] = item;
+            }
+        });
+        var deduped = Object.values(uniqueItems).sort(function(a,b) {
+            return (b.timestamp||0) - (a.timestamp||0);
+        }).slice(0, 20);
+
+        if (deduped.length > 0) {
             html += '<section class="category-section continue-watching">';
             html += '<div class="category-header">';
             html += '<h2 class="category-title">⏯️ Continuar Assistindo</h2>';
@@ -1080,34 +1082,55 @@ def generate_html_with_correct_paths(base_dir, data):
             html += '<a class="nav-btn next-carousel-continue"><i class="fas fa-chevron-right"></i></a>';
             html += '</div></div>';
             html += '<div id="carousel-continue" class="owl-carousel">';
-            continueList.forEach(function(item) {{
-                var progress = item.progress || 45;
-                var timeLeft = item.timeLeft || '45 min restantes';
-                var poster = item.poster ? (RAW_BASE + '/assets/Capas/' + item.poster.split('/').pop()) : DEFAULT_POSTER;
-                html += '<div class="item-card" data-category="' + item.category + '" data-id="' + item.id + '">';
-                html += safeImg(poster, item.title);
+            deduped.forEach(function(item) {
+                // Suportar ambos os formatos: itemId (novo) e id (antigo)
+                var itemId = item.itemId || item.id;
+                var cat = item.category;
+                var epIdx = (typeof item.episodeIndex === 'number') ? item.episodeIndex : 0;
+                var progress = item.progress || (item.duration ? Math.round((item.currentTime/item.duration)*100) : 0);
+                // Calcular tempo restante
+                var timeLeft = '';
+                if (item.duration && item.currentTime) {
+                    var rem = Math.max(0, item.duration - item.currentTime);
+                    timeLeft = rem > 3600
+                        ? Math.floor(rem/3600) + 'h ' + Math.floor((rem%3600)/60) + 'min restantes'
+                        : Math.floor(rem/60) + 'min restantes';
+                } else {
+                    timeLeft = item.timeLeft || '';
+                }
+                // Poster: novo-player salva nome relativo ou URL completa
+                var poster = DEFAULT_POSTER;
+                if (item.poster) {
+                    poster = item.poster.startsWith('http')
+                        ? item.poster
+                        : (RAW_BASE + '/assets/Capas/' + item.poster.split('/').pop());
+                }
+                var displayTitle = item.seriesTitle || item.title || '';
+                var epLabel = (item.episode || epIdx > 0) ? ('Ep ' + (item.episode || (epIdx+1))) : '';
+                html += '<div class="item-card continue-card" data-category="' + cat + '" data-id="' + itemId + '" data-ep="' + epIdx + '">';
+                html += safeImg(poster, displayTitle);
                 html += '<div class="watch-badge">⏯️ Continuar</div>';
                 html += '<div class="progress-bar-wrap"><div class="progress-fill" style="width:' + progress + '%;"></div></div>';
                 html += '<div class="item-info">';
-                html += '<div class="item-title">' + item.title + '</div>';
-                html += '<div class="item-meta">' + (item.episode || '') + ' • ' + timeLeft + '</div>';
+                html += '<div class="item-title">' + displayTitle + '</div>';
+                html += '<div class="item-meta">' + epLabel + (epLabel && timeLeft ? ' • ' : '') + timeLeft + '</div>';
                 html += '</div></div>';
-            }});
+            });
             html += '</div></section>';
-        }}
+        }
 
         // Categorias normais
         var categoryOrder = ['filmes', 'series', 'novelas', 'animes', 'infantil', 'tv'];
-        var categoryNames = {{
+        var categoryNames = {
             filmes: '🎬 Filmes', series: '📺 Séries', novelas: '💖 Novelas',
             animes: '👻 Animes', infantil: '🧸 Infantil', tv: '📡 TV AO VIVO'
-        }};
-        var categoryPages = {{
+        };
+        var categoryPages = {
             filmes: 'filmes.html', series: 'series.html', novelas: 'novelas.html',
             animes: 'animes.html', infantil: 'infantil.html', tv: '#tv'
-        }};
+        };
 
-        categoryOrder.forEach(function(category) {{
+        categoryOrder.forEach(function(category) {
             var items = window.vodData[category];
             if (!items || items.length === 0) return;
             var carouselId = 'carousel-' + category;
@@ -1123,7 +1146,7 @@ def generate_html_with_correct_paths(base_dir, data):
             html += '</div></div>';
             html += '<div id="' + carouselId + '" class="owl-carousel">';
 
-            items.forEach(function(item, idx) {{
+            items.forEach(function(item, idx) {
                 var poster = getPoster(item, category);
                 var episodeCount = item.episodes ? item.episodes.length : 0;
                 var meta = category === 'filmes' ? 'Filme'
@@ -1137,43 +1160,51 @@ def generate_html_with_correct_paths(base_dir, data):
                 html += '<div class="item-title">' + item.title + '</div>';
                 html += '<div class="item-meta">' + meta + '</div>';
                 html += '</div></div>';
-            }});
+            });
 
             html += '</div></section>';
-        }});
+        });
 
         contentDiv.innerHTML = html || '<div class="loading">Nenhum conteúdo encontrado</div>';
 
-        contentDiv.addEventListener('click', function(e) {{
+        contentDiv.addEventListener('click', function(e) {
             var card = e.target.closest('.item-card');
-            if (card) {{
-                var cat = card.dataset.category;
-                var id  = card.dataset.id;
-                if (cat && id) openModal(cat, id);
-            }}
-        }});
-    }}
+            if (!card) return;
+            var cat = card.dataset.category;
+            var id  = card.dataset.id;
+            if (!cat || !id) return;
+
+            // Continuar assistindo: retomar no tempo exato salvo
+            if (card.classList.contains('continue-card')) {
+                var epIdx = parseInt(card.dataset.ep) || 0;
+                window.resumeFromStorage(id, cat, epIdx);
+                return;
+            }
+
+            openModal(cat, id);
+        });
+    }
 
     // =====================
     // MODAL
     // =====================
-    function openModal(category, itemId) {{
+    function openModal(category, itemId) {
         var items = window.vodData[category];
         if (!items) return;
         var item;
-        if (category === 'tv') {{
+        if (category === 'tv') {
             item = items[parseInt(itemId)];
-        }} else {{
-            item = items.find(function(i) {{ return i.id === itemId; }});
-        }}
+        } else {
+            item = items.find(function(i) { return i.id === itemId; });
+        }
         if (!item) return;
 
         var posterUrl = getPoster(item, category);
 
         var headerHtml = '<div class="modal-backdrop" style="background-image:url(&quot;' + posterUrl + '&quot;)"></div>';
-        if (category === 'tv') {{
+        if (category === 'tv') {
             headerHtml += '<div style="position:absolute;top:30px;left:30px;background:#e50914;color:white;padding:8px 16px;border-radius:4px;font-weight:bold;">🔴 AO VIVO</div>';
-        }}
+        }
         var playLabel = category === 'tv' ? '▶ Assistir ao Vivo' : '▶ Assistir';
         headerHtml += '<button class="play-button" data-action="play-first" data-category="' + category + '" data-id="' + itemId + '" style="position:absolute;bottom:30px;left:30px;">';
         headerHtml += playLabel + '</button>';
@@ -1185,12 +1216,12 @@ def generate_html_with_correct_paths(base_dir, data):
         if (category === 'tv') bodyHtml += '<span>🔴 Ao Vivo</span>';
         bodyHtml += '</div>';
 
-        if (category === 'tv') {{
+        if (category === 'tv') {
             var todosCanais = window.vodData['tv'] || [];
             bodyHtml += '<div class="episodes-section">';
             bodyHtml += '<h3 style="margin-bottom:15px;font-size:1.1rem;">📡 Todos os Canais</h3>';
             bodyHtml += '<div class="episode-list">';
-            todosCanais.forEach(function(canal, idx) {{
+            todosCanais.forEach(function(canal, idx) {
                 var isAtual = String(idx) === String(itemId);
                 var canalPoster = canal.tvg_logo || '';
                 var canalUrl = (canal.episodes && canal.episodes[0]) ? canal.episodes[0].url : canal.url || '';
@@ -1199,26 +1230,26 @@ def generate_html_with_correct_paths(base_dir, data):
                 bodyHtml += ' data-id="' + idx + '"';
                 bodyHtml += ' data-title="' + canal.title.replace(/"/g, '') + '"';
                 bodyHtml += ' data-category="tv">';
-                if (canalPoster) {{
+                if (canalPoster) {
                     bodyHtml += '<img src="' + canalPoster + '" ' +
             'style="width:40px;height:40px;object-fit:contain;background:#222;border-radius:4px;flex-shrink:0;" ' +
             'onerror="this.remove();">';
             
-                }} else {{
+                } else {
                     bodyHtml += '<div class="episode-number">📺</div>';
-                }}
+                }
                 bodyHtml += '<div class="episode-info">';
                 bodyHtml += '<div class="episode-title">' + canal.title + (isAtual ? ' <span style="color:#e50914;font-size:0.8rem;">● AO VIVO</span>' : '') + '</div>';
                 bodyHtml += '</div></div>';
-            }});
+            });
             bodyHtml += '</div></div>';
-        }} else if (item.seasons && item.seasons.length > 0) {{
+        } else if (item.seasons && item.seasons.length > 0) {
             bodyHtml += '<div class="episodes-section">';
-            item.seasons.sort(function(a, b) {{ return a.season - b.season; }});
-            item.seasons.forEach(function(season) {{
+            item.seasons.sort(function(a, b) { return a.season - b.season; });
+            item.seasons.forEach(function(season) {
                 bodyHtml += '<h3 style="margin:25px 0 10px;color:#e50914;font-size:1.2rem;">🎬 Temporada ' + season.season + '</h3>';
                 bodyHtml += '<div class="episode-list">';
-                season.episodes.forEach(function(ep, index) {{
+                season.episodes.forEach(function(ep, index) {
                     var episodeNum = ep.episode || (index + 1);
                     var episodeTitle = ep.title || 'Episódio ' + episodeNum;
                     var safeTitle = episodeTitle.replace(/"/g, '');
@@ -1233,14 +1264,14 @@ def generate_html_with_correct_paths(base_dir, data):
                     bodyHtml += '<div class="episode-info">';
                     bodyHtml += '<div class="episode-title">' + safeTitle + '</div>';
                     bodyHtml += '</div></div>';
-                }});
+                });
                 bodyHtml += '</div>';
-            }});
+            });
             bodyHtml += '</div>';
-        }} else if (item.episodes && item.episodes.length > 0) {{
+        } else if (item.episodes && item.episodes.length > 0) {
             bodyHtml += '<div class="episodes-section"><h3 style="margin-bottom:15px;font-size:1.1rem;">Episódios</h3>';
             bodyHtml += '<div class="episode-list">';
-            item.episodes.forEach(function(ep, index) {{
+            item.episodes.forEach(function(ep, index) {
                 var safeTitle = (ep.title || '').replace(/"/g, '');
                 bodyHtml += '<div class="episode-item" data-action="play-ep"';
                 bodyHtml += ' data-url="' + ep.url + '"';
@@ -1251,40 +1282,40 @@ def generate_html_with_correct_paths(base_dir, data):
                 bodyHtml += '<div class="episode-number">' + (index + 1) + '</div>';
                 bodyHtml += '<div class="episode-info"><div class="episode-title">' + (ep.title || item.title) + '</div>';
                 bodyHtml += '</div></div>';
-            }});
+            });
             bodyHtml += '</div></div>';
-        }}
+        }
 
         document.getElementById('modalHeader').innerHTML = headerHtml;
         document.getElementById('modalBody').innerHTML = bodyHtml;
         document.getElementById('modal').style.display = 'block';
         document.getElementById('modal').scrollTop = 0;
-    }}
+    }
 
     // =====================
     // EVENT LISTENERS
     // =====================
-    document.addEventListener('DOMContentLoaded', function() {{
+    document.addEventListener('DOMContentLoaded', function() {
         var modal = document.getElementById('modal');
         var closeBtn = document.getElementById('closeModal');
         
-        if (modal) {{
-            modal.addEventListener('click', function(e) {{
+        if (modal) {
+            modal.addEventListener('click', function(e) {
                 var el = e.target.closest('[data-action]');
                 if (!el) return;
                 var action = el.dataset.action;
                 var cat = el.dataset.category;
                 var id = el.dataset.id;
 
-                if (action === 'play-first') {{
+                if (action === 'play-first') {
                     playFirstEpisode(cat, id);
-                }} else if (action === 'play-canal') {{
+                } else if (action === 'play-canal') {
                     var canalUrl = el.dataset.url;
                     var canalId = el.dataset.id;
                     var canalTitle = el.dataset.title || '';
                     modal.style.display = 'none';
                     playEpisode(canalUrl, canalTitle, canalId, 'tv', 0);
-                }} else if (action === 'play-ep') {{
+                } else if (action === 'play-ep') {
                     var epCat = el.dataset.category;
                     var epId = el.dataset.itemid;
                     var epUrl = el.dataset.url;
@@ -1293,43 +1324,84 @@ def generate_html_with_correct_paths(base_dir, data):
                     modal.style.display = 'none';
                     playEpisode(epUrl, item_title_from(epCat, epId) + ' - ' + epTitle,
                                 epId, epCat, epIndex);
-                }}
-            }});
+                }
+            });
 
-            if (closeBtn) {{
-                closeBtn.onclick = function() {{
+            if (closeBtn) {
+                closeBtn.onclick = function() {
                     modal.style.display = 'none';
-                }};
-            }}
-        }}
+                };
+            }
+        }
 
-        window.onclick = function(event) {{
+        window.onclick = function(event) {
             var modal = document.getElementById('modal');
             if (event.target === modal) modal.style.display = 'none';
-        }};
+        };
 
-        document.addEventListener('keydown', function(event) {{
-            if (event.key === 'Escape') {{
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
                 var modal = document.getElementById('modal');
                 if (modal) modal.style.display = 'none';
-            }}
-        }});
-    }});
+            }
+        });
+    });
     
     // Expor funções globalmente
     window.openModal = openModal;
+
+    // ======================================
+    // ▶️ RETOMAR DO STORAGE (TEMPO EXATO)
+    // ======================================
+    window.resumeFromStorage = function(itemId, category, episodeIndex) {
+        var items = window.vodData[category];
+        if (!items) return;
+        var item = (category === 'tv')
+            ? items[parseInt(itemId)]
+            : items.find(function(i) { return i.id === itemId; });
+        if (!item) { openModal(category, itemId); return; }
+
+        var safeIdx = (typeof episodeIndex === 'number' && !isNaN(episodeIndex)) ? episodeIndex : 0;
+
+        // Encontrar URL do episódio
+        var url = '', title = '';
+        if (item.episodes && item.episodes[safeIdx]) {
+            url = item.episodes[safeIdx].url;
+            title = item.title + ' - ' + (item.episodes[safeIdx].title || 'Ep ' + (safeIdx+1));
+        } else if (item.seasons) {
+            var count = 0;
+            outer: for (var s = 0; s < item.seasons.length; s++) {
+                for (var ep = 0; ep < item.seasons[s].episodes.length; ep++) {
+                    if (count === safeIdx) {
+                        url = item.seasons[s].episodes[ep].url;
+                        title = item.title + ' - ' + (item.seasons[s].episodes[ep].title || 'Ep '+(safeIdx+1));
+                        break outer;
+                    }
+                    count++;
+                }
+            }
+        }
+        if (!url) { openModal(category, itemId); return; }
+
+        if (typeof window.playWithModernPlayer === 'function') {
+            window.playWithModernPlayer(url, title, '', itemId, category, safeIdx);
+            document.getElementById('modal').style.display = 'none';
+        } else {
+            openModal(category, itemId);
+        }
+    };
     window.playEpisode = playEpisode;
     window.playFirstEpisode = playFirstEpisode;
     
     // Iniciar
     loadData();
-}})();
+})();
 </script>
 
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-    <script src="novo-player.js" defer></script>
+    <script src="novo-player.js"></script>
     <link rel="stylesheet" href="tv-player.css">
-    <script src="tv-player.js" defer></script>
+    <script src="tv-player.js"></script>
 </body>
 </html>'''
 
