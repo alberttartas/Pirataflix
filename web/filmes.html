@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PIRATAFLIX - Novelas</title>
+    <title>PIRATAFLIX - Filmes</title>
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="tv-player.css">
@@ -99,11 +99,11 @@
 
     <main class="main-content">
         <div class="page-title">
-            <h1>💖 Todas as Novelas</h1>
+            <h1>🎬 Todos os Filmes</h1>
             <span id="itemCount" style="color: #e50914;"></span>
         </div>
         <div class="items-grid" id="itemsGrid">
-            <div class="loading">Carregando novelas...</div>
+            <div class="loading">Carregando filmes...</div>
         </div>
     </main>
 
@@ -136,28 +136,28 @@
     setupModalListeners();
     
     // Carregar dados específicos da página
-    async function loadNovelas() {
+    async function loadFilmes() {
         try {
             const response = await fetch('data.json');
             const data = await response.json();
             window.vodData = data;
-            const novelas = data.novelas || [];
+            const filmes = data.filmes || [];
             
-            document.getElementById('itemCount').textContent = `${novelas.length} novelas`;
+            document.getElementById('itemCount').textContent = `${filmes.length} filmes`;
             
             let html = '';
-            novelas.forEach(item => {
-                const poster = getPoster(item, 'novelas');
+            filmes.forEach(item => {
+                const poster = getPoster(item, 'filmes');
                 
                 html += `
-                    <div class="item-card" data-id="${item.id}" data-category="novelas">
+                    <div class="item-card" data-id="${item.id}" data-category="filmes">
                         ${safeImg(poster, item.title)}
                         <div class="item-title">${item.title}</div>
                     </div>
                 `;
             });
             
-            document.getElementById('itemsGrid').innerHTML = html || '<p>Nenhuma novela encontrada</p>';
+            document.getElementById('itemsGrid').innerHTML = html || '<p>Nenhum filme encontrado</p>';
             
             // Adicionar eventos de clique
             document.querySelectorAll('.item-card').forEach(card => {
@@ -174,7 +174,7 @@
     }
     
     // Iniciar
-    loadNovelas();
+    loadFilmes();
     </script>
 </body>
 </html>
