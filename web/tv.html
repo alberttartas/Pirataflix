@@ -160,26 +160,28 @@
                 document.getElementById('itemCount').textContent = `${canais.length} canais`;
                 
                 let html = '';
-                canais.forEach(item => {
-                    // Tentar encontrar logo no channelsDict
-                    const nomeLimpo = item.title.toLowerCase().replace(/[^a-z0-9]/g, '');
-                    let logo = channelsDict[nomeLimpo];
+                canais.forEach((item, idx) => {
+                    // Usar tvg_logo direto do item (já vem no data.json)
+                    let logo = item.tvg_logo || '';
                     
-                    // Se não encontrar, tentar buscar por partes do nome
+                    // Fallback: tentar channelsDict pelo título
                     if (!logo) {
-                        for (let [key, value] of Object.entries(channelsDict)) {
-                            if (nomeLimpo.includes(key) || key.includes(nomeLimpo)) {
-                                logo = value;
-                                break;
+                        const nomeLimpo = item.title.toLowerCase().replace(/[^a-z0-9]/g, '');
+                        logo = channelsDict[nomeLimpo] || '';
+                        if (!logo) {
+                            for (let [key, value] of Object.entries(channelsDict)) {
+                                if (nomeLimpo.includes(key) || key.includes(nomeLimpo)) {
+                                    logo = value; break;
+                                }
                             }
                         }
                     }
                     
-                    // Fallback para logo padrão
                     logo = logo || `${RAW_BASE}/assets/Capas/tv_default.jpg`;
+                    const url = (item.episodes && item.episodes[0]) ? item.episodes[0].url : (item.url || '');
                     
                     html += `
-                        <div class="item-card" onclick="window.location.href='index.html#tv'">
+                        <div class="item-card" onclick="openChannelFromTV(${idx}, '${url.replace(/'/g,"\\'")}', '${item.title.replace(/'/g,"\\'")}')" style="cursor:pointer;">
                             <img src="${logo}" alt="${item.title}" class="item-poster"
                                  onerror="this.onerror=null; this.src='${RAW_BASE}/assets/Capas/tv_default.jpg';">
                             <div class="live-badge">🔴 AO VIVO</div>
@@ -195,6 +197,29 @@
         }
         
         loadTV();
+        
+        // Abrir canal direto da página TV
+        async function openChannelFromTV(idx, url, title) {
+            // Se tv-player.js já carregou, usar openTVPlayer
+            if (typeof window.openTVPlayer === 'function') {
+                // Precisamos que vodData.tv esteja disponível
+                if (!window.vodData || !window.vodData.tv) {
+                    // Carregar data.json para ter os canais disponíveis
+                    try {
+                        const r = await fetch('data.json');
+                        window.vodData = await r.json();
+                    } catch(e) {}
+                }
+                window.openTVPlayer(idx);
+            } else if (url) {
+                // Fallback: abrir stream direto
+                window.open(url, '_blank');
+            }
+        }
     </script>
+    
+    <!-- Player de TV (mesmo do index) -->
+    <link rel="stylesheet" href="tv-player.css">
+    <script src="tv-player.js"></script>
 </body>
 </html>
