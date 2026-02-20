@@ -195,12 +195,8 @@ window.playWithModernPlayer = function(
     const video = document.getElementById('current-video');
     if (!video) return;
 
-    // Restaurar progresso salvo
-    if (saved && saved.currentTime) {
-        video.currentTime = saved.currentTime;
-    }
-
     // Tocar manualmente (evita bug de autoplay)
+    // NOTA: currentTime só pode ser setado depois de loadedmetadata — ver abaixo
     video.play().catch(() => {
         console.log("⚠️ Autoplay bloqueado pelo navegador");
     });
@@ -327,18 +323,36 @@ window.playWithModernPlayer = function(
         modal.style.display = 'none';
     };
 
-    // Retomar progresso
+    // ======================================
+    // ▶️ RESTAURAR PROGRESSO (CORRIGIDO)
+    // currentTime só funciona depois que o metadata carrega
+    // Usamos loadedmetadata + fallback canplay para garantir
+    // ======================================
     if (saved?.currentTime > 5) {
-        video.addEventListener('loadedmetadata', () => {
+        let restored = false;
+
+        function doRestore() {
+            if (restored) return;
+            // Só aplica se o browser aceitou a duração
+            if (!video.duration || isNaN(video.duration)) return;
+            // Não restaurar além do fim
+            if (saved.currentTime >= video.duration - 2) return;
+            
+            restored = true;
             video.currentTime = saved.currentTime;
+
             const minutes = Math.floor(saved.currentTime / 60);
             const seconds = Math.floor(saved.currentTime % 60).toString().padStart(2,'0');
             const msg = document.createElement('div');
             msg.textContent = `⏯️ Retomando de ${minutes}:${seconds}`;
-            msg.style.cssText = 'position:absolute;top:80px;left:20px;background:#e50914;color:white;padding:8px 16px;border-radius:4px;z-index:10000;';
+            msg.style.cssText = 'position:absolute;top:80px;left:20px;background:#e50914;color:white;padding:8px 16px;border-radius:4px;z-index:10000;font-weight:bold;';
             container.appendChild(msg);
             setTimeout(() => msg.remove(), 3000);
-        });
+        }
+
+        video.addEventListener('loadedmetadata', doRestore);
+        // Fallback: alguns browsers (especialmente com HLS) disparam canplay antes
+        video.addEventListener('canplay', doRestore, { once: true });
     }
 };
 
