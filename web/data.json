@@ -500,7 +500,7 @@
     {
       "id": "bridgerton",
       "title": "Bridgerton",
-      "poster": "/Pirataflix/assets/Capas/bridgerton.jpg",
+      "poster": "/Pirataflix/assets/Capas/Bridgerton.jpg",
       "seasons": [
         {
           "season": 1,
@@ -634,6 +634,31 @@
               "title": "Bridgerton - Temporada 3 Episódio 8",
               "url": "https://cdn-novflix.com/storagePSN/SERIES/BRIDGERTON/BRIDGERTON3x08.mp4",
               "episode": 8
+            }
+          ]
+        },
+        {
+          "season": 4,
+          "episodes": [
+            {
+              "title": "Bridgerton T4E01",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/BRIDGERTON/BRIDGERTON4x01.mp4",
+              "episode": 1
+            },
+            {
+              "title": "Bridgerton T4E02",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/BRIDGERTON/BRIDGERTON4x02.mp4",
+              "episode": 2
+            },
+            {
+              "title": "Bridgerton T4E03",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/BRIDGERTON/BRIDGERTON4x03.mp4",
+              "episode": 3
+            },
+            {
+              "title": "Bridgerton T4E04",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/BRIDGERTON/BRIDGERTON4x04.mp4",
+              "episode": 4
             }
           ]
         }
@@ -6022,7 +6047,7 @@
     {
       "id": "cobras_e_lagartos",
       "title": "Cobras E Lagartos",
-      "poster": "/Pirataflix/assets/Capas/default.jpg",
+      "poster": "/Pirataflix/assets/Capas/cobras_e_lagartos.jpg",
       "seasons": [
         {
           "season": 1,
@@ -34805,6 +34830,16 @@
               "title": "Sousou no Frieren 2 02",
               "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/s/sousou-no-frieren-2-dublado/02.mp4/index.m3u8",
               "episode": 2
+            },
+            {
+              "title": "Sousou no Frieren 2 03",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/s/sousou-no-frieren-2-dublado/03.mp4/index.m3u8",
+              "episode": 3
+            },
+            {
+              "title": "Sousou no Frieren 2 04",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/s/sousou-no-frieren-2-dublado/04.mp4/index.m3u8",
+              "episode": 4
             }
           ]
         }
