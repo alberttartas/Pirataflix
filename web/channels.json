@@ -15765,5 +15765,140 @@
         "title": "AO VIVO"
       }
     ]
+  },
+  {
+    "id": "BFMTV.fr@SD",
+    "type": "tv",
+    "title": "BFM TV [Geo-Blocked]",
+    "tvg_id": "BFMTV.fr@SD",
+    "tvg_logo": "https://i.imgur.com/YJCcczD.png",
+    "group": "📺 TV Ao Vivo",
+    "url": "https://viamotionhsi.netplus.ch/live/eds/bfmtv/browser-HLS8/bfmtv.m3u8",
+    "episodes": [
+      {
+        "url": "https://viamotionhsi.netplus.ch/live/eds/bfmtv/browser-HLS8/bfmtv.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "KMTVDT1.us@SD",
+    "type": "tv",
+    "title": "CBS 3 Omaha NE (KMTV) (720p)",
+    "tvg_id": "KMTVDT1.us@SD",
+    "tvg_logo": "https://i.imgur.com/E4PkyqN.png",
+    "group": "📺 TV Ao Vivo",
+    "url": "https://aegis-cloudfront-1.tubi.video/0b16cabe-a8fd-4d91-99e5-3efb7aa740cc/playlist.m3u8",
+    "episodes": [
+      {
+        "url": "https://aegis-cloudfront-1.tubi.video/0b16cabe-a8fd-4d91-99e5-3efb7aa740cc/playlist.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "ESPN8TheOcho.us@ESPN8TheOchoHD",
+    "type": "tv",
+    "title": "ESPN 8: The Ocho",
+    "tvg_id": "ESPN8TheOcho.us@ESPN8TheOchoHD",
+    "tvg_logo": "https://images.fubo.tv/channel-config-ui/station-logos/on-dark/espn_8_the_ocho_bw.png",
+    "group": "📺 TV Ao Vivo",
+    "url": "https://d3b6q2ou5kp8ke.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-vz67vw1bljinm/ESPNTheOcho.m3u8",
+    "episodes": [
+      {
+        "url": "https://d3b6q2ou5kp8ke.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-vz67vw1bljinm/ESPNTheOcho.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "FoxDeportes.us@SD",
+    "type": "tv",
+    "title": "Fox Sports en Espanol (720p)",
+    "tvg_id": "FoxDeportes.us@SD",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/FOX_Deportes_logo.png/512px-FOX_Deportes_logo.png",
+    "group": "📺 TV Ao Vivo",
+    "url": "https://live-manifest.production-public.tubi.io/live/d906efca-1302-4e29-b0d9-9a1d7a305d69/playlist.m3u8",
+    "episodes": [
+      {
+        "url": "https://live-manifest.production-public.tubi.io/live/d906efca-1302-4e29-b0d9-9a1d7a305d69/playlist.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "NewsmaxTV.us@SD",
+    "type": "tv",
+    "title": "Newsmax TV",
+    "tvg_id": "NewsmaxTV.us@SD",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Newsmax_logo.svg/512px-Newsmax_logo.svg.png",
+    "group": "📺 TV Ao Vivo",
+    "url": "https://dash3.antik.sk/live/test_newsmax_avc/playlist.m3u8",
+    "episodes": [
+      {
+        "url": "https://dash3.antik.sk/live/test_newsmax_avc/playlist.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "Record.br@SD",
+    "type": "tv",
+    "title": "RecordTV",
+    "tvg_id": "Record.br@SD",
+    "tvg_logo": "https://i.imgur.com/sz9gTTr.png",
+    "group": "📺 TV Ao Vivo",
+    "url": "https://cdn.jmvstream.com/w/LVW-10842/LVW10842_513N26MDBL/chunklist.m3u8",
+    "episodes": [
+      {
+        "url": "https://cdn.jmvstream.com/w/LVW-10842/LVW10842_513N26MDBL/chunklist.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "SonyMax.in@SD",
+    "type": "tv",
+    "title": "Sony Max (576p)",
+    "tvg_id": "SonyMax.in@SD",
+    "tvg_logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_MAX/images/LOGO_HD/image.png",
+    "group": "📺 TV Ao Vivo",
+    "url": "http://103.113.103.202:8001/play/a025/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://103.113.103.202:8001/play/a025/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "SonyMax2.in@SD",
+    "type": "tv",
+    "title": "Sony Max 2 (576p)",
+    "tvg_id": "SonyMax2.in@SD",
+    "tvg_logo": "https://i.imgur.com/gqUYk6C.png",
+    "group": "📺 TV Ao Vivo",
+    "url": "http://103.113.103.202:8001/play/a002/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://103.113.103.202:8001/play/a002/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "UniversalCrime.us@East",
+    "type": "tv",
+    "title": "Universal Crime",
+    "tvg_id": "UniversalCrime.us@East",
+    "tvg_logo": "https://i.imgur.com/OwSlGMu.png",
+    "group": "📺 TV Ao Vivo",
+    "url": "https://xumo-xumoent-vc-107-xmuvk.fast.nbcuni.com/live/master.m3u8",
+    "episodes": [
+      {
+        "url": "https://xumo-xumoent-vc-107-xmuvk.fast.nbcuni.com/live/master.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
   }
 ]
