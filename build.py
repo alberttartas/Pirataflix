@@ -542,6 +542,22 @@ def build_vod_with_direct_capas():
     print(f"   🎬 Filmes: {len(output.get('filmes', []))}")
     print(f"   📺 Séries: {len(output.get('series', []))}")
 
+    # Normalizar grupos dos canais de TV
+    for canal in output.get('tv', []):
+        canal['group'] = normalize_tv_group(canal.get('group', ''))
+
+    # Enriquecer com TMDB (só itens sem overview já)
+    items_sem_meta = [
+        i for cat in ['filmes','series','novelas','animes','infantil']
+        for i in output.get(cat, []) if not i.get('overview')
+    ]
+    if items_sem_meta:
+        enrich_with_tmdb(output)
+
+    with open(json_path, "w", encoding="utf-8") as f:
+        json.dump(output, f, ensure_ascii=False, indent=2)
+    print(f"\n✅ JSON final salvo com metadados TMDB")
+
     generate_html_with_correct_paths(base_dir, output)
 
     output_dir = base_dir / "iptv_playlists"
@@ -550,6 +566,124 @@ def build_vod_with_direct_capas():
     generate_epg(output, output_dir)
     print(f"\n🌐 Interface web atualizada")
     print(f"📍 Acesse: http://localhost:8000/web/")
+
+
+TMDB_API_KEY = '6862f118a59693b921840e5bbbdabb74'
+TMDB_BASE    = 'https://api.themoviedb.org/3'
+TMDB_IMG     = 'https://image.tmdb.org/t/p/w500'
+
+def fetch_tmdb_metadata(title, media_type='movie'):
+    """Busca metadados do TMDB: poster, sinopse, ano, gêneros, nota."""
+    import urllib.request, urllib.parse, time
+    try:
+        query = urllib.parse.quote(title)
+        url   = f"{TMDB_BASE}/search/{media_type}?api_key={TMDB_API_KEY}&query={query}&language=pt-BR"
+        req   = urllib.request.Request(url, headers={'User-Agent': 'Pirataflix/1.0'})
+        with urllib.request.urlopen(req, timeout=8) as r:
+            data = json.loads(r.read())
+        results = data.get('results', [])
+        if not results:
+            # tentar em inglês
+            url2 = f"{TMDB_BASE}/search/{media_type}?api_key={TMDB_API_KEY}&query={query}"
+            req2 = urllib.request.Request(url2, headers={'User-Agent': 'Pirataflix/1.0'})
+            with urllib.request.urlopen(req2, timeout=8) as r2:
+                data = json.loads(r2.read())
+            results = data.get('results', [])
+        if not results:
+            return {}
+        item   = results[0]
+        poster = (TMDB_IMG + item['poster_path']) if item.get('poster_path') else ''
+        genres = []
+        genre_map = {
+            28:'Ação',18:'Drama',35:'Comédia',27:'Terror',878:'Ficção Científica',
+            10749:'Romance',12:'Aventura',16:'Animação',99:'Documentário',
+            80:'Crime',9648:'Mistério',14:'Fantasia',10402:'Música',36:'História',
+            10751:'Família',37:'Faroeste',53:'Suspense',10752:'Guerra',
+            10770:'Filme de TV',
+            10759:'Ação & Aventura',10762:'Kids',10763:'News',10764:'Realidade',
+            10765:'Sci-Fi & Fantasia',10766:'Novela',10767:'Talk',10768:'Guerra & Política'
+        }
+        for gid in item.get('genre_ids', [])[:3]:
+            if gid in genre_map:
+                genres.append(genre_map[gid])
+        year_raw = item.get('release_date') or item.get('first_air_date') or ''
+        year     = year_raw[:4] if year_raw else ''
+        overview = item.get('overview', '')
+        vote     = item.get('vote_average', 0)
+        return {
+            'tmdb_poster':   poster,
+            'overview':      overview,
+            'year':          year,
+            'genres':        genres,
+            'rating':        round(vote, 1) if vote else 0,
+            'tmdb_id':       item.get('id', '')
+        }
+    except Exception as e:
+        return {}
+
+def enrich_with_tmdb(output):
+    """Enriquece filmes e séries com metadados do TMDB."""
+    import time
+    CATEGORY_TYPE = {
+        'filmes': 'movie', 'series': 'tv', 'novelas': 'tv',
+        'animes': 'tv', 'infantil': 'tv'
+    }
+    total = sum(len(output.get(c, [])) for c in CATEGORY_TYPE)
+    done  = 0
+    print(f"\n🎬 Buscando metadados TMDB para {total} itens...")
+    for cat, mtype in CATEGORY_TYPE.items():
+        for item in output.get(cat, []):
+            done += 1
+            meta = fetch_tmdb_metadata(item['title'], mtype)
+            if meta:
+                if meta.get('tmdb_poster') and not item.get('poster','').startswith('http'):
+                    item['poster'] = meta['tmdb_poster']
+                if meta.get('overview'):   item['overview'] = meta['overview']
+                if meta.get('year'):       item['year']     = meta['year']
+                if meta.get('genres'):     item['genres']   = meta['genres']
+                if meta.get('rating'):     item['rating']   = meta['rating']
+                print(f"   ✅ [{done}/{total}] {item['title']} ({meta.get('year','')})")
+            else:
+                print(f"   ⚠️  [{done}/{total}] {item['title']} — não encontrado no TMDB")
+            time.sleep(0.26)   # respeitar rate limit TMDB (40 req/10s)
+    print("✅ TMDB concluído!")
+
+def normalize_tv_group(raw_group):
+    """Mapeia grupos M3U em inglês para categorias PT-BR."""
+    g = (raw_group or '').strip()
+    mapping = {
+        'General':        '📺 Geral',
+        'Movies':         '🎬 Filmes',
+        'Entertainment':  '🎭 Entretenimento',
+        'Religious':      '✝️ Religioso',
+        'News':           '📰 Notícias',
+        'Kids':           '🧸 Infantil',
+        'Music':          '🎵 Música',
+        'Series':         '📺 Séries',
+        'Sports':         '⚽ Esportes',
+        'Education':      '📚 Educação',
+        'Documentary':    '🎥 Documentário',
+        'Legislative':    '🏛️ Legislativo',
+        'Culture':        '🎨 Cultura',
+        'Comedy':         '😂 Comédia',
+        'Animation':      '🎨 Animação',
+        'Outdoor':        '🌿 Natureza',
+        'Science':        '🔬 Ciência',
+        'Shop':           '🛍️ Shopping',
+        'Cooking':        '🍳 Culinária',
+        'Travel':         '✈️ Viagem',
+        'Business':       '💼 Negócios',
+        'Weather':        '🌦️ Clima',
+        'Auto':           '🚗 Automóvel',
+        'Lifestyle':      '💅 Lifestyle',
+        'Classic':        '🎞️ Clássicos',
+        'Family':         '👨‍👩‍👧 Família',
+        'Undefined':      '📺 Geral',
+        '📺 TV Ao Vivo':  '📺 Geral',
+    }
+    # Lidar com grupos compostos como "Animation;Kids"
+    first = g.split(';')[0].strip()
+    return mapping.get(first, mapping.get(g, '📺 Geral'))
 
 
 def generate_pwa_files(web_dir):
@@ -784,12 +918,12 @@ def generate_html_with_correct_paths(base_dir, data):
     <header class="header">
         <a href="#" class="logo">PIRATAFLIX</a>
         <nav class="nav-links">
-            <a href="#filmes" class="nav-link">Filmes</a>
-            <a href="#series" class="nav-link">Séries</a>
-            <a href="#novelas" class="nav-link">Novelas</a>
-            <a href="#animes" class="nav-link">Animes</a>
-            <a href="#infantil" class="nav-link">Infantil</a>
-            <a href="#tv" class="nav-link">TV Ao Vivo</a>
+            <a href="#filmes"          class="nav-link">Filmes</a>
+            <a href="#series"          class="nav-link">Séries</a>
+            <a href="#novelas"         class="nav-link">Novelas</a>
+            <a href="#animes"          class="nav-link">Animes</a>
+            <a href="#infantil"        class="nav-link">Infantil</a>
+            <a href="tv.html"          class="nav-link">TV Ao Vivo</a>
         </nav>
     </header>
 
@@ -1303,6 +1437,7 @@ def generate_html_with_correct_paths(base_dir, data):
     <script src="novo-player.js"></script>
     <link rel="stylesheet" href="tv-player.css">
     <script src="tv-player.js"></script>
+    <script src="shared.js"></script>
 
     <!-- PWA: Service Worker + Botão Instalar -->
     <script>
