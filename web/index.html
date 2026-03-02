@@ -51,7 +51,7 @@
         .item-card:hover { transform: scale(1.05); z-index: 10; }
         .item-card:hover .item-poster { opacity: 0.5; }
         .item-card:hover .item-info { opacity: 1; }
-        .item-poster { width: 100%; height: 320px; object-fit: contain; background: #0a0a0a; display: block; transition: opacity 0.3s; }
+        .item-poster { width: 100%; height: 320px; object-fit: cover; display: block; transition: opacity 0.3s; }
         .item-info {
             position: absolute; bottom: 0; left: 0; right: 0;
             background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
@@ -109,11 +109,11 @@
             .header { padding: 20px; }
             .logo { font-size: 2rem; }
             .category-section { padding: 0 20px; }
-            .item-poster { height: 260px; object-fit: contain; background: #0a0a0a; }
+            .item-poster { height: 260px; object-fit: cover; }
             .modal-content { margin: 20px; }
             .modal-header { height: 300px; }
         }
-        .continue-watching .item-poster { height: 180px !important; object-fit: contain; background: #0a0a0a; }
+        .continue-watching .item-poster { height: 180px !important; object-fit: cover; }
         .continue-watching .progress-bar-wrap {
             position: absolute; bottom: 0; left: 0; width: 100%;
             height: 4px; background: rgba(255,255,255,0.3); z-index: 3;
