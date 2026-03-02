@@ -5,117 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PIRATAFLIX - TV Ao Vivo</title>
     <link rel="icon" type="image/png" href="favicon.png">
-    <!-- PWA -->
-    <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#e50914">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="Pirataflix">
-    <link rel="apple-touch-icon" href="icons/icon-192.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="tv-player.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Arial', sans-serif; background: #141414; color: white; }
-        
+        body { font-family: Arial, sans-serif; background: #141414; color: white; }
         .header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            padding: 20px 50px;
-            background: linear-gradient(to bottom, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
-            z-index: 100;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            position: fixed; top: 0; width: 100%; padding: 16px 50px;
+            background: rgba(10,10,10,.95); z-index: 100;
+            display: flex; justify-content: space-between; align-items: center;
+            backdrop-filter: blur(8px); border-bottom: 1px solid rgba(255,255,255,.06);
         }
-        
-        .logo {
-            font-size: 2.5rem;
-            color: #e50914;
-            font-weight: bold;
-            text-decoration: none;
-        }
-        
+        .logo { font-size: 2rem; color: #e50914; font-weight: bold; text-decoration: none; }
         .nav-links { display: flex; gap: 20px; }
-        .nav-link { color: #e5e5e5; text-decoration: none; }
+        .nav-link { color: #e5e5e5; text-decoration: none; font-size: .9rem; }
         .nav-link:hover { color: #fff; }
-        
-        .main-content { padding: 120px 50px 50px; }
-        
-        .page-title {
-            font-size: 2rem;
-            margin-bottom: 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .items-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 20px;
-        }
-        
-        .item-card {
-            border-radius: 4px;
-            overflow: hidden;
-            transition: transform 0.3s;
-            cursor: pointer;
-            position: relative;
-            background: #1f1f1f;
-        }
-        
-        .item-card:hover {
-            transform: scale(1.05);
-            z-index: 10;
-        }
-        
-        .item-poster {
-            width: 100%;
-            height: 200px;
-            object-fit: contain;
-            background: #1a1a1a;
-            padding: 20px;
-        }
-        
-        .item-title {
-            padding: 15px;
-            font-weight: bold;
-            text-align: center;
-            background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
-        }
-        
-        .live-badge {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: #e50914;
-            color: white;
-            padding: 5px 10px;
-            border-radius: 3px;
-            font-size: 0.8rem;
-            font-weight: bold;
-            animation: pulse 1.5s infinite;
-        }
-        
-        @keyframes pulse {
-            0% { opacity: 1; }
-            50% { opacity: 0.7; }
-            100% { opacity: 1; }
-        }
-        
-        .loading {
-            text-align: center;
-            padding: 100px 20px;
-            color: #e50914;
-            font-size: 1.2rem;
-        }
-        
+        .main-content { padding: 90px 40px 50px; }
+        .filter-bar { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 24px; }
+        .filter-search-wrap { position: relative; flex: 1; min-width: 220px; max-width: 360px; }
+        .filter-search-wrap i { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: #555; font-size: .9rem; pointer-events: none; }
+        #tvSearch { width: 100%; padding: 10px 12px 10px 36px; background: #1f1f1f; border: 1px solid rgba(255,255,255,.08); border-radius: 8px; color: white; font-size: .9rem; outline: none; transition: border .2s; }
+        #tvSearch:focus { border-color: #e50914; }
+        #tvSearch::placeholder { color: #444; }
+        .group-filters { display: flex; gap: 8px; flex-wrap: wrap; flex: 1; }
+        .group-btn { background: #1f1f1f; color: #ccc; border: 1px solid rgba(255,255,255,.08); border-radius: 20px; padding: 7px 14px; font-size: .8rem; cursor: pointer; transition: all .2s; white-space: nowrap; }
+        .group-btn:hover { background: #2a2a2a; color: white; }
+        .group-btn.active { background: #e50914; color: white; border-color: #e50914; }
+        .page-title { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+        .page-title h1 { font-size: 1.8rem; }
+        #itemCount { color: #e50914; font-size: .9rem; }
+        .items-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 16px; }
+        .item-card { border-radius: 8px; overflow: hidden; cursor: pointer; background: #1a1a1a; transition: transform .25s, box-shadow .25s; position: relative; }
+        .item-card:hover { transform: scale(1.04); box-shadow: 0 8px 24px rgba(0,0,0,.6); z-index: 2; }
+        .item-poster { width: 100%; height: 110px; object-fit: contain; background: #111; padding: 12px; display: block; }
+        .item-title { padding: 10px 12px; font-size: .82rem; font-weight: bold; text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; border-top: 1px solid rgba(255,255,255,.05); }
+        .live-badge { position: absolute; top: 8px; right: 8px; background: #e50914; color: white; padding: 3px 7px; border-radius: 3px; font-size: .7rem; font-weight: bold; animation: pulse 1.5s infinite; }
+        @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.6} }
+        .loading { text-align: center; padding: 80px 20px; color: #e50914; font-size: 1.1rem; }
+        .no-results { text-align: center; padding: 60px; color: #555; font-size: 1rem; }
         @media (max-width: 768px) {
-            .header { padding: 20px; }
-            .main-content { padding: 100px 20px 20px; }
-            .page-title { font-size: 1.5rem; }
-            .item-poster { height: 150px; }
+            .header { padding: 14px 20px; }
+            .main-content { padding: 76px 16px 40px; }
+            .items-grid { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 12px; }
+            .page-title h1 { font-size: 1.3rem; }
+            .filter-search-wrap { min-width: 100%; }
         }
     </style>
 </head>
@@ -123,182 +56,109 @@
     <header class="header">
         <a href="index.html" class="logo">PIRATAFLIX</a>
         <nav class="nav-links">
-            <a href="index.html" class="nav-link">← Voltar</a>
+            <a href="index.html"    class="nav-link">Início</a>
+            <a href="filmes.html"   class="nav-link">Filmes</a>
+            <a href="series.html"   class="nav-link">Séries</a>
+            <a href="novelas.html"  class="nav-link">Novelas</a>
+            <a href="animes.html"   class="nav-link">Animes</a>
+            <a href="infantil.html" class="nav-link">Infantil</a>
         </nav>
     </header>
 
     <main class="main-content">
         <div class="page-title">
             <h1>📡 TV AO VIVO</h1>
-            <span id="itemCount" style="color: #e50914;"></span>
+            <span id="itemCount"></span>
+        </div>
+        <div class="filter-bar">
+            <div class="filter-search-wrap">
+                <i class="fas fa-search"></i>
+                <input type="text" id="tvSearch" placeholder="Buscar canal...">
+            </div>
+            <div class="group-filters" id="groupFilters"></div>
         </div>
         <div class="items-grid" id="itemsGrid">
             <div class="loading">Carregando canais...</div>
         </div>
     </main>
 
-    <script>
-        const RAW_BASE = 'https://raw.githubusercontent.com/alberttartas/Pirataflix/main';
-        let channelsDict = {};
-        
-        async function loadChannels() {
-            try {
-                const response = await fetch('channels.json');
-                const channels = await response.json();
-                
-                channels.forEach(canal => {
-                    if (canal.tvg_logo) {
-                        const nomeLimpo = (canal.name || canal.tvg_name || '').toLowerCase().replace(/[^a-z0-9]/g, '');
-                        channelsDict[nomeLimpo] = canal.tvg_logo;
-                    }
-                });
-            } catch (error) {
-                console.warn('Erro ao carregar channels.json:', error);
-            }
-        }
-        
-        async function loadTV() {
-            try {
-                await loadChannels();
-                
-                const response = await fetch('data.json');
-                const data = await response.json();
-                const canais = data.tv || [];
-                
-                document.getElementById('itemCount').textContent = `${canais.length} canais`;
-                
-                let html = '';
-                canais.forEach((item, idx) => {
-                    // Usar tvg_logo direto do item (já vem no data.json)
-                    let logo = item.tvg_logo || '';
-                    
-                    // Fallback: tentar channelsDict pelo título
-                    if (!logo) {
-                        const nomeLimpo = item.title.toLowerCase().replace(/[^a-z0-9]/g, '');
-                        logo = channelsDict[nomeLimpo] || '';
-                        if (!logo) {
-                            for (let [key, value] of Object.entries(channelsDict)) {
-                                if (nomeLimpo.includes(key) || key.includes(nomeLimpo)) {
-                                    logo = value; break;
-                                }
-                            }
-                        }
-                    }
-                    
-                    logo = logo || `${RAW_BASE}/assets/Capas/tv_default.jpg`;
-                    const url = (item.episodes && item.episodes[0]) ? item.episodes[0].url : (item.url || '');
-                    
-                    html += `
-                        <div class="item-card" onclick="openChannelFromTV(${idx}, '${url.replace(/'/g,"\\'")}', '${item.title.replace(/'/g,"\\'")}')" style="cursor:pointer;">
-                            <img src="${logo}" alt="${item.title}" class="item-poster"
-                                 onerror="this.onerror=null; this.src='${RAW_BASE}/assets/Capas/tv_default.jpg';">
-                            <div class="live-badge">🔴 AO VIVO</div>
-                            <div class="item-title">${item.title}</div>
-                        </div>
-                    `;
-                });
-                
-                document.getElementById('itemsGrid').innerHTML = html || '<p>Nenhum canal encontrado</p>';
-            } catch (error) {
-                document.getElementById('itemsGrid').innerHTML = `<p>Erro: ${error.message}</p>`;
-            }
-        }
-        
-        loadTV();
-        
-        // Abrir canal direto da página TV
-        async function openChannelFromTV(idx, url, title) {
-            // Se tv-player.js já carregou, usar openTVPlayer
-            if (typeof window.openTVPlayer === 'function') {
-                // Precisamos que vodData.tv esteja disponível
-                if (!window.vodData || !window.vodData.tv) {
-                    // Carregar data.json para ter os canais disponíveis
-                    try {
-                        const r = await fetch('data.json');
-                        window.vodData = await r.json();
-                    } catch(e) {}
-                }
-                window.openTVPlayer(idx);
-            } else if (url) {
-                // Fallback: abrir stream direto
-                window.open(url, '_blank');
-            }
-        }
-    </script>
-    
-    <!-- Player de TV (mesmo do index) -->
-    <link rel="stylesheet" href="tv-player.css">
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script src="novo-player.js"></script>
     <script src="tv-player.js"></script>
-
-    <!-- PWA Service Worker + Install Button -->
+    <script src="shared.js"></script>
     <script>
-    // Register Service Worker
-    if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-            navigator.serviceWorker.register('./sw.js').catch(() => {});
+    const RAW_BASE = 'https://raw.githubusercontent.com/alberttartas/Pirataflix/main';
+    let allCanais  = [];
+    let activeGroup = 'Todos';
+
+    async function loadTV() {
+        try {
+            await loadChannels();
+            const r    = await fetch('data.json');
+            const data = await r.json();
+            window.vodData = data;
+            allCanais      = data.tv || [];
+            buildGroupFilters();
+            renderCanais(allCanais);
+            document.getElementById('tvSearch').addEventListener('input', applyFilters);
+        } catch(err) {
+            document.getElementById('itemsGrid').innerHTML = '<p class="no-results">Erro: ' + err.message + '</p>';
+        }
+    }
+
+    function buildGroupFilters() {
+        const groups = {};
+        allCanais.forEach(c => { const g = c.group || '📺 Geral'; groups[g] = (groups[g]||0)+1; });
+        const sorted = Object.entries(groups).sort((a,b) => b[1]-a[1]);
+        const wrap   = document.getElementById('groupFilters');
+        let html = '<button class="group-btn active" data-group="Todos">Todos (' + allCanais.length + ')</button>';
+        sorted.forEach(([g, n]) => { html += '<button class="group-btn" data-group="' + g.replace(/"/g,'&quot;') + '">' + g + ' (' + n + ')</button>'; });
+        wrap.innerHTML = html;
+        wrap.addEventListener('click', e => {
+            const btn = e.target.closest('.group-btn');
+            if (!btn) return;
+            wrap.querySelectorAll('.group-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            activeGroup = btn.dataset.group;
+            applyFilters();
         });
     }
 
-    // Install button logic
-    let deferredPrompt;
-    window.addEventListener('beforeinstallprompt', (e) => {
-        e.preventDefault();
-        deferredPrompt = e;
-        const btn = document.getElementById('pwa-install-btn');
-        if (btn) btn.style.display = 'flex';
-    });
-
-    window.addEventListener('appinstalled', () => {
-        const btn = document.getElementById('pwa-install-btn');
-        if (btn) btn.style.display = 'none';
-        deferredPrompt = null;
-    });
-
-    function installPWA() {
-        if (!deferredPrompt) return;
-        deferredPrompt.prompt();
-        deferredPrompt.userChoice.then(() => { deferredPrompt = null; });
+    function applyFilters() {
+        const q = (document.getElementById('tvSearch').value||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+        let f = allCanais;
+        if (activeGroup !== 'Todos') f = f.filter(c => (c.group||'📺 Geral') === activeGroup);
+        if (q.length >= 2) f = f.filter(c => (c.title||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').includes(q));
+        renderCanais(f);
     }
+
+    function renderCanais(canais) {
+        document.getElementById('itemCount').textContent = canais.length + ' canais';
+        if (!canais.length) { document.getElementById('itemsGrid').innerHTML = '<div class="no-results">Nenhum canal encontrado</div>'; return; }
+        const fallback = RAW_BASE + '/assets/Capas/tv_default.jpg';
+        let html = '';
+        canais.forEach(item => {
+            const realIdx = allCanais.indexOf(item);
+            let logo = item.tvg_logo || '';
+            if (!logo) { const k = item.title.toLowerCase().replace(/[^a-z0-9]/g,''); logo = window.channelsDict[k] || fallback; }
+            html += '<div class="item-card" onclick="openCh(' + realIdx + ')">'
+                  + '<img src="' + logo + '" alt="" class="item-poster" onerror="this.onerror=null;this.src=\'' + fallback + '\'">'
+                  + '<div class="live-badge">🔴 AO VIVO</div>'
+                  + '<div class="item-title">' + item.title + '</div></div>';
+        });
+        document.getElementById('itemsGrid').innerHTML = html;
+    }
+
+    async function openCh(idx) {
+        if (!window.vodData || !window.vodData.tv) {
+            try { const r = await fetch('data.json'); window.vodData = await r.json(); } catch(e) {}
+        }
+        if (typeof window.openTVPlayer === 'function') { window.openTVPlayer(idx); return; }
+        const c = allCanais[idx];
+        if (c) window.open((c.episodes && c.episodes[0] ? c.episodes[0].url : c.url)||'', '_blank');
+    }
+
+    loadTV();
     </script>
-
-    <!-- PWA Install Button (fixed) -->
-    <style>
-    #pwa-install-btn {
-        display: none;
-        position: fixed;
-        bottom: 24px;
-        right: 24px;
-        z-index: 9999;
-        align-items: center;
-        gap: 8px;
-        background: #e50914;
-        color: white;
-        border: none;
-        border-radius: 30px;
-        padding: 12px 20px;
-        font-size: 14px;
-        font-weight: bold;
-        cursor: pointer;
-        box-shadow: 0 4px 20px rgba(229,9,20,0.5);
-        transition: transform 0.2s, box-shadow 0.2s;
-        font-family: Arial, sans-serif;
-        text-decoration: none;
-        animation: pulse-pwa 2.5s ease-in-out infinite;
-    }
-    #pwa-install-btn:hover {
-        transform: scale(1.06);
-        box-shadow: 0 6px 28px rgba(229,9,20,0.7);
-        animation: none;
-    }
-    @keyframes pulse-pwa {
-        0%, 100% { box-shadow: 0 4px 20px rgba(229,9,20,0.5); }
-        50% { box-shadow: 0 4px 32px rgba(229,9,20,0.9); }
-    }
-    #pwa-install-btn svg { width: 18px; height: 18px; fill: white; flex-shrink: 0; }
-    </style>
-    <button id="pwa-install-btn" onclick="installPWA()" title="Instalar Pirataflix">
-        <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zm-8 2V5h2v6h1.17L12 13.17 9.83 11H11zm-6 7h14v2H5z"/></svg>
-        Instalar App
-    </button>
 </body>
 </html>
