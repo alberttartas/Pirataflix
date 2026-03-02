@@ -5,95 +5,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PIRATAFLIX - Filmes</title>
     <link rel="icon" type="image/png" href="favicon.png">
-    <!-- PWA -->
-    <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#e50914">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="Pirataflix">
-    <link rel="apple-touch-icon" href="icons/icon-192.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="tv-player.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Arial', sans-serif; background: #141414; color: white; }
-        
+        body { font-family: Arial, sans-serif; background: #141414; color: white; }
         .header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            padding: 20px 50px;
-            background: linear-gradient(to bottom, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
-            z-index: 100;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            position: fixed; top: 0; width: 100%; padding: 16px 50px;
+            background: rgba(10,10,10,.95); z-index: 100;
+            display: flex; justify-content: space-between; align-items: center;
+            backdrop-filter: blur(8px); border-bottom: 1px solid rgba(255,255,255,.06);
         }
-        
-        .logo {
-            font-size: 2.5rem;
-            color: #e50914;
-            font-weight: bold;
-            text-decoration: none;
-        }
-        
+        .logo { font-size: 2rem; color: #e50914; font-weight: bold; text-decoration: none; }
         .nav-links { display: flex; gap: 20px; }
-        .nav-link { color: #e5e5e5; text-decoration: none; }
+        .nav-link { color: #e5e5e5; text-decoration: none; font-size: .9rem; transition: color .2s; }
         .nav-link:hover { color: #fff; }
-        
-        .main-content { padding: 120px 50px 50px; }
-        
+        .main-content { padding: 90px 40px 50px; }
         .page-title {
-            font-size: 2rem;
-            margin-bottom: 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            font-size: 1.8rem; margin-bottom: 28px;
+            display: flex; justify-content: space-between; align-items: center;
         }
-        
+        #itemCount { color: #e50914; font-size: .9rem; }
+        .search-bar {
+            display: flex; margin-bottom: 24px;
+        }
+        .search-bar-wrap {
+            position: relative; width: 100%; max-width: 420px;
+        }
+        .search-bar-wrap i {
+            position: absolute; left: 12px; top: 50%; transform: translateY(-50%);
+            color: #555; font-size: .9rem; pointer-events: none;
+        }
+        #pageSearch {
+            width: 100%; padding: 10px 12px 10px 36px; background: #1f1f1f;
+            border: 1px solid rgba(255,255,255,.08); border-radius: 8px;
+            color: white; font-size: .9rem; outline: none; transition: border .2s;
+        }
+        #pageSearch:focus { border-color: #e50914; }
+        #pageSearch::placeholder { color: #444; }
         .items-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 18px;
         }
-        
         .item-card {
-            border-radius: 4px;
-            overflow: hidden;
-            transition: transform 0.3s;
-            cursor: pointer;
-            position: relative;
+            border-radius: 6px; overflow: hidden; transition: transform .3s;
+            cursor: pointer; position: relative; background: #1a1a1a;
         }
-        
-        .item-card:hover {
-            transform: scale(1.05);
-            z-index: 10;
+        .item-card:hover { transform: scale(1.04); z-index: 2; box-shadow: 0 8px 24px rgba(0,0,0,.6); }
+        .item-poster { width: 100%; height: 300px; object-fit: cover; display: block; }
+        .item-title { padding: 10px 12px; font-weight: bold; font-size: .85rem; text-align: center; }
+        .item-meta { padding: 0 12px 10px; font-size: .75rem; color: #808080; text-align: center; }
+        .loading { text-align: center; padding: 100px 20px; color: #e50914; font-size: 1.1rem; }
+        .no-results { text-align: center; padding: 60px; color: #555; }
+        .modal {
+            display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,.9); z-index: 1000; overflow-y: auto;
         }
-        
-        .item-poster {
-            width: 100%;
-            height: 320px;
-            object-fit: cover;
+        .modal-content {
+            background: #181818; border-radius: 8px; max-width: 850px;
+            margin: 50px auto; position: relative; overflow: hidden;
         }
-        
-        .item-title {
-            padding: 10px;
-            font-weight: bold;
-            text-align: center;
+        .modal-header { position: relative; height: 420px; overflow: hidden; }
+        .modal-backdrop {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background-size: cover; background-position: center; opacity: .4;
         }
-        
-        .loading {
-            text-align: center;
-            padding: 100px 20px;
-            color: #e50914;
-            font-size: 1.2rem;
+        .modal-close {
+            position: absolute; top: 16px; right: 16px; background: rgba(0,0,0,.7);
+            border: none; color: white; width: 38px; height: 38px; border-radius: 50%;
+            font-size: 20px; cursor: pointer; z-index: 10; display: flex; align-items: center; justify-content: center;
         }
-        
+        .modal-close:hover { background: #e50914; }
+        .modal-body { padding: 28px; }
+        .modal-title { font-size: 1.8rem; margin-bottom: 12px; }
+        .modal-meta { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 14px; }
+        .play-button {
+            background: #e50914; color: white; border: none; padding: 11px 28px;
+            border-radius: 4px; font-size: .95rem; font-weight: bold; cursor: pointer;
+            display: flex; align-items: center; gap: 8px; margin-top: 18px; transition: background .2s;
+            position: absolute; bottom: 24px; left: 24px;
+        }
+        .play-button:hover { background: #f40612; }
+        .episodes-section { margin-top: 24px; }
+        .episode-list { display: grid; gap: 8px; max-height: 380px; overflow-y: auto; }
+        .episode-item {
+            background: #2d2d2d; border-radius: 4px; padding: 13px; cursor: pointer;
+            transition: background .2s; display: flex; align-items: center; gap: 12px;
+        }
+        .episode-item:hover { background: #383838; }
+        .canal-ativo { background: #3a0a0a !important; border-left: 3px solid #e50914; }
+        .episode-number {
+            background: #e50914; color: white; width: 32px; height: 32px;
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            font-weight: bold; flex-shrink: 0; font-size: .85rem;
+        }
+        .episode-title { font-weight: bold; font-size: .88rem; }
         @media (max-width: 768px) {
-            .header { padding: 20px; }
-            .main-content { padding: 100px 20px 20px; }
-            .page-title { font-size: 1.5rem; }
+            .header { padding: 14px 20px; }
+            .main-content { padding: 76px 16px 36px; }
+            .items-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
+            .item-poster { height: 220px; }
+            .modal-content { margin: 16px; }
+            .modal-header { height: 280px; }
         }
     </style>
 </head>
@@ -101,21 +115,32 @@
     <header class="header">
         <a href="index.html" class="logo">PIRATAFLIX</a>
         <nav class="nav-links">
-            <a href="index.html" class="nav-link">← Voltar</a>
+            <a href="index.html"    class="nav-link">Início</a>
+            <a href="filmes.html"   class="nav-link">Filmes</a>
+            <a href="series.html"   class="nav-link">Séries</a>
+            <a href="novelas.html"  class="nav-link">Novelas</a>
+            <a href="animes.html"   class="nav-link">Animes</a>
+            <a href="infantil.html" class="nav-link">Infantil</a>
+            <a href="tv.html"       class="nav-link">TV Ao Vivo</a>
         </nav>
     </header>
 
     <main class="main-content">
         <div class="page-title">
             <h1>🎬 Todos os Filmes</h1>
-            <span id="itemCount" style="color: #e50914;"></span>
+            <span id="itemCount"></span>
+        </div>
+        <div class="search-bar">
+            <div class="search-bar-wrap">
+                <i class="fas fa-search"></i>
+                <input type="text" id="pageSearch" placeholder="Filtrar...">
+            </div>
         </div>
         <div class="items-grid" id="itemsGrid">
-            <div class="loading">Carregando filmes...</div>
+            <div class="loading">Carregando...</div>
         </div>
     </main>
 
-    <!-- Modal -->
     <div class="modal" id="modal">
         <div class="modal-content">
             <div class="modal-header" id="modalHeader">
@@ -125,135 +150,52 @@
         </div>
     </div>
 
-    <!-- TV Player -->
-    <div class="tv-player-container" id="tvPlayerContainer">
-        <video id="tvPlayer" autoplay playsinline></video>
-    </div>
-
-    <!-- Scripts compartilhados -->
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
     <script src="novo-player.js"></script>
     <script src="tv-player.js"></script>
     <script src="shared.js"></script>
-
     <script>
-    // Carregar channels
     loadChannels();
-    
-    // Configurar listeners do modal
-    setupModalListeners();
-    
-    // Carregar dados específicos da página
-    async function loadFilmes() {
+
+    async function loadPage() {
         try {
-            const response = await fetch('data.json');
-            const data = await response.json();
+            const r    = await fetch('data.json');
+            const data = await r.json();
             window.vodData = data;
-            const filmes = data.filmes || [];
-            
-            document.getElementById('itemCount').textContent = `${filmes.length} filmes`;
-            
-            let html = '';
-            filmes.forEach(item => {
-                const poster = getPoster(item, 'filmes');
-                
-                html += `
-                    <div class="item-card" data-id="${item.id}" data-category="filmes">
-                        ${safeImg(poster, item.title)}
-                        <div class="item-title">${item.title}</div>
-                    </div>
-                `;
+            const items = data['filmes'] || [];
+            renderItems(items);
+            document.getElementById('pageSearch').addEventListener('input', function() {
+                const q = this.value.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+                const filtered = items.filter(i => (i.title||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').includes(q));
+                renderItems(filtered);
             });
-            
-            document.getElementById('itemsGrid').innerHTML = html || '<p>Nenhum filme encontrado</p>';
-            
-            // Adicionar eventos de clique
-            document.querySelectorAll('.item-card').forEach(card => {
-                card.addEventListener('click', function() {
-                    var id = this.dataset.id;
-                    var cat = this.dataset.category;
-                    if (id && cat) openModal(cat, id);
-                });
-            });
-            
-        } catch (error) {
-            document.getElementById('itemsGrid').innerHTML = `<p>Erro: ${error.message}</p>`;
+        } catch(err) {
+            document.getElementById('itemsGrid').innerHTML = '<p class="no-results">Erro: ' + err.message + '</p>';
         }
     }
-    
-    // Iniciar
-    loadFilmes();
-    </script>
 
-    <!-- PWA Service Worker + Install Button -->
-    <script>
-    // Register Service Worker
-    if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-            navigator.serviceWorker.register('./sw.js').catch(() => {});
+    function renderItems(items) {
+        document.getElementById('itemCount').textContent = items.length + ' item' + (items.length !== 1 ? 's' : '');
+        if (!items.length) { document.getElementById('itemsGrid').innerHTML = '<div class="no-results">Nenhum item encontrado</div>'; return; }
+        let html = '';
+        items.forEach(item => {
+            const poster = getPoster(item, 'filmes');
+            const seasons = item.seasons ? item.seasons.length : 0;
+            const eps     = item.episodes ? item.episodes.length : 0;
+            const meta    = 'filmes' === 'filmes' ? 'Filme' : (seasons > 1 ? seasons + ' temporadas' : eps + ' episódios');
+            html += '<div class="item-card" data-id="' + item.id + '" data-category="filmes">'
+                  + safeImg(poster, item.title)
+                  + '<div class="item-title">' + item.title + '</div>'
+                  + '<div class="item-meta">' + meta + (item.year ? ' · ' + item.year : '') + '</div>'
+                  + '</div>';
+        });
+        document.getElementById('itemsGrid').innerHTML = html;
+        document.querySelectorAll('.item-card').forEach(card => {
+            card.addEventListener('click', function() { openModal(this.dataset.category, this.dataset.id); });
         });
     }
 
-    // Install button logic
-    let deferredPrompt;
-    window.addEventListener('beforeinstallprompt', (e) => {
-        e.preventDefault();
-        deferredPrompt = e;
-        const btn = document.getElementById('pwa-install-btn');
-        if (btn) btn.style.display = 'flex';
-    });
-
-    window.addEventListener('appinstalled', () => {
-        const btn = document.getElementById('pwa-install-btn');
-        if (btn) btn.style.display = 'none';
-        deferredPrompt = null;
-    });
-
-    function installPWA() {
-        if (!deferredPrompt) return;
-        deferredPrompt.prompt();
-        deferredPrompt.userChoice.then(() => { deferredPrompt = null; });
-    }
+    loadPage();
     </script>
-
-    <!-- PWA Install Button (fixed) -->
-    <style>
-    #pwa-install-btn {
-        display: none;
-        position: fixed;
-        bottom: 24px;
-        right: 24px;
-        z-index: 9999;
-        align-items: center;
-        gap: 8px;
-        background: #e50914;
-        color: white;
-        border: none;
-        border-radius: 30px;
-        padding: 12px 20px;
-        font-size: 14px;
-        font-weight: bold;
-        cursor: pointer;
-        box-shadow: 0 4px 20px rgba(229,9,20,0.5);
-        transition: transform 0.2s, box-shadow 0.2s;
-        font-family: Arial, sans-serif;
-        text-decoration: none;
-        animation: pulse-pwa 2.5s ease-in-out infinite;
-    }
-    #pwa-install-btn:hover {
-        transform: scale(1.06);
-        box-shadow: 0 6px 28px rgba(229,9,20,0.7);
-        animation: none;
-    }
-    @keyframes pulse-pwa {
-        0%, 100% { box-shadow: 0 4px 20px rgba(229,9,20,0.5); }
-        50% { box-shadow: 0 4px 32px rgba(229,9,20,0.9); }
-    }
-    #pwa-install-btn svg { width: 18px; height: 18px; fill: white; flex-shrink: 0; }
-    </style>
-    <button id="pwa-install-btn" onclick="installPWA()" title="Instalar Pirataflix">
-        <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zm-8 2V5h2v6h1.17L12 13.17 9.83 11H11zm-6 7h14v2H5z"/></svg>
-        Instalar App
-    </button>
 </body>
 </html>
