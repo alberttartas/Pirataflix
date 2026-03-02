@@ -552,6 +552,85 @@ def build_vod_with_direct_capas():
     print(f"📍 Acesse: http://localhost:8000/web/")
 
 
+def generate_pwa_files(web_dir):
+    """Gera manifest.json, sw.js e ícones PWA na pasta web/"""
+    import json as _json
+
+    # --- manifest.json ---
+    manifest = {
+        "name": "PIRATAFLIX",
+        "short_name": "Pirataflix",
+        "description": "Sua plataforma de streaming pirata",
+        "start_url": "./index.html",
+        "display": "standalone",
+        "background_color": "#141414",
+        "theme_color": "#e50914",
+        "orientation": "any",
+        "icons": [
+            {"src": f"icons/icon-{s}.png", "sizes": f"{s}x{s}", "type": "image/png", "purpose": "any maskable"}
+            for s in [72, 96, 128, 144, 152, 192, 384, 512]
+        ]
+    }
+    manifest_path = web_dir / "manifest.json"
+    with open(manifest_path, "w", encoding="utf-8") as f:
+        _json.dump(manifest, f, ensure_ascii=False, indent=2)
+    print(f"✅ PWA manifest gerado: {manifest_path}")
+
+    # --- sw.js ---
+    sw_content = """const CACHE_NAME = 'pirataflix-v1';
+const ASSETS = [
+  './', './index.html', './filmes.html', './series.html', './novelas.html',
+  './animes.html', './infantil.html', './tv.html',
+  './style.css', './tv-player.css', './shared.js', './tv-player.js',
+  './novo-player.js', './data.json', './channels.json',
+  './favicon.png', './manifest.json'
+];
+self.addEventListener('install', e => {
+  e.waitUntil(caches.open(CACHE_NAME).then(c => c.addAll(ASSETS).catch(() => {})));
+  self.skipWaiting();
+});
+self.addEventListener('activate', e => {
+  e.waitUntil(caches.keys().then(keys =>
+    Promise.all(keys.filter(k => k !== CACHE_NAME).map(k => caches.delete(k)))
+  ));
+  self.clients.claim();
+});
+self.addEventListener('fetch', e => {
+  if (e.request.method !== 'GET') return;
+  e.respondWith(
+    fetch(e.request).then(r => {
+      if (r && r.status === 200) {
+        caches.open(CACHE_NAME).then(c => c.put(e.request, r.clone()));
+      }
+      return r;
+    }).catch(() => caches.match(e.request))
+  );
+});
+"""
+    sw_path = web_dir / "sw.js"
+    with open(sw_path, "w", encoding="utf-8") as f:
+        f.write(sw_content)
+    print(f"✅ PWA service worker gerado: {sw_path}")
+
+    # --- icons/ ---
+    icons_dir = web_dir / "icons"
+    icons_dir.mkdir(exist_ok=True)
+    favicon_path = web_dir / "favicon.png"
+    try:
+        from PIL import Image
+        base_img = Image.open(favicon_path).convert("RGBA") if favicon_path.exists() else None
+        for size in [72, 96, 128, 144, 152, 192, 384, 512]:
+            img = Image.new("RGBA", (size, size), (20, 20, 20, 255))
+            if base_img:
+                icon = base_img.resize((int(size * 0.7), int(size * 0.7)), Image.LANCZOS)
+                offset = ((size - icon.width) // 2, (size - icon.height) // 2)
+                img.paste(icon, offset, icon)
+            img.save(icons_dir / f"icon-{size}.png", "PNG")
+        print(f"✅ PWA ícones gerados: {icons_dir}")
+    except ImportError:
+        print("⚠️  Pillow não instalado — ícones PWA não gerados. Execute: pip install Pillow")
+
+
 def generate_html_with_correct_paths(base_dir, data):
     """Gera HTML estilo Netflix com carrosséis e navegação"""
 
@@ -580,6 +659,14 @@ def generate_html_with_correct_paths(base_dir, data):
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PIRATAFLIX</title>
     <link rel="icon" type="image/png" href="favicon.png">
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#e50914">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Pirataflix">
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -1216,6 +1303,52 @@ def generate_html_with_correct_paths(base_dir, data):
     <script src="novo-player.js"></script>
     <link rel="stylesheet" href="tv-player.css">
     <script src="tv-player.js"></script>
+
+    <!-- PWA: Service Worker + Botão Instalar -->
+    <script>
+    if ('serviceWorker' in navigator) {{
+        window.addEventListener('load', function() {{
+            navigator.serviceWorker.register('./sw.js').catch(function() {{}});
+        }});
+    }}
+    var _pwaPrompt;
+    window.addEventListener('beforeinstallprompt', function(e) {{
+        e.preventDefault();
+        _pwaPrompt = e;
+        var btn = document.getElementById('pwa-install-btn');
+        if (btn) btn.style.display = 'flex';
+    }});
+    window.addEventListener('appinstalled', function() {{
+        var btn = document.getElementById('pwa-install-btn');
+        if (btn) btn.style.display = 'none';
+        _pwaPrompt = null;
+    }});
+    function installPWA() {{
+        if (!_pwaPrompt) return;
+        _pwaPrompt.prompt();
+        _pwaPrompt.userChoice.then(function() {{ _pwaPrompt = null; }});
+    }}
+    </script>
+    <style>
+    #pwa-install-btn {{
+        display: none; position: fixed; bottom: 24px; right: 24px; z-index: 9999;
+        align-items: center; gap: 8px; background: #e50914; color: white;
+        border: none; border-radius: 30px; padding: 12px 20px; font-size: 14px;
+        font-weight: bold; cursor: pointer; box-shadow: 0 4px 20px rgba(229,9,20,0.5);
+        transition: transform 0.2s, box-shadow 0.2s; font-family: Arial, sans-serif;
+        animation: pulse-pwa 2.5s ease-in-out infinite;
+    }}
+    #pwa-install-btn:hover {{ transform: scale(1.06); animation: none; }}
+    @keyframes pulse-pwa {{
+        0%, 100% {{ box-shadow: 0 4px 20px rgba(229,9,20,0.5); }}
+        50% {{ box-shadow: 0 4px 32px rgba(229,9,20,0.9); }}
+    }}
+    #pwa-install-btn svg {{ width: 18px; height: 18px; fill: white; flex-shrink: 0; }}
+    </style>
+    <button id="pwa-install-btn" onclick="installPWA()" title="Instalar Pirataflix">
+        <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zm-8 2V5h2v6h1.17L12 13.17 9.83 11H11zm-6 7h14v2H5z"/></svg>
+        Instalar App
+    </button>
 </body>
 </html>'''
 
@@ -1223,6 +1356,11 @@ def generate_html_with_correct_paths(base_dir, data):
     with open(html_path, "w", encoding="utf-8") as f:
         f.write(html_template)
     print(f"✅ HTML gerado com carrosséis e TV: {html_path}")
+
+    # =====================
+    # GERAR ARQUIVOS PWA
+    # =====================
+    generate_pwa_files(base_dir / "web")
 
 
 if __name__ == "__main__":
