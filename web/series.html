@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PIRATAFLIX - Séries</title>
     <link rel="icon" type="image/png" href="favicon.png">
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#e50914">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Pirataflix">
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="tv-player.css">
     <style>
@@ -176,5 +184,76 @@
     // Iniciar
     loadSeries();
     </script>
+
+    <!-- PWA Service Worker + Install Button -->
+    <script>
+    // Register Service Worker
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('./sw.js').catch(() => {});
+        });
+    }
+
+    // Install button logic
+    let deferredPrompt;
+    window.addEventListener('beforeinstallprompt', (e) => {
+        e.preventDefault();
+        deferredPrompt = e;
+        const btn = document.getElementById('pwa-install-btn');
+        if (btn) btn.style.display = 'flex';
+    });
+
+    window.addEventListener('appinstalled', () => {
+        const btn = document.getElementById('pwa-install-btn');
+        if (btn) btn.style.display = 'none';
+        deferredPrompt = null;
+    });
+
+    function installPWA() {
+        if (!deferredPrompt) return;
+        deferredPrompt.prompt();
+        deferredPrompt.userChoice.then(() => { deferredPrompt = null; });
+    }
+    </script>
+
+    <!-- PWA Install Button (fixed) -->
+    <style>
+    #pwa-install-btn {
+        display: none;
+        position: fixed;
+        bottom: 24px;
+        right: 24px;
+        z-index: 9999;
+        align-items: center;
+        gap: 8px;
+        background: #e50914;
+        color: white;
+        border: none;
+        border-radius: 30px;
+        padding: 12px 20px;
+        font-size: 14px;
+        font-weight: bold;
+        cursor: pointer;
+        box-shadow: 0 4px 20px rgba(229,9,20,0.5);
+        transition: transform 0.2s, box-shadow 0.2s;
+        font-family: Arial, sans-serif;
+        text-decoration: none;
+        animation: pulse-pwa 2.5s ease-in-out infinite;
+    }
+    #pwa-install-btn:hover {
+        transform: scale(1.06);
+        box-shadow: 0 6px 28px rgba(229,9,20,0.7);
+        animation: none;
+    }
+    @keyframes pulse-pwa {
+        0%, 100% { box-shadow: 0 4px 20px rgba(229,9,20,0.5); }
+        50% { box-shadow: 0 4px 32px rgba(229,9,20,0.9); }
+    }
+    #pwa-install-btn svg { width: 18px; height: 18px; fill: white; flex-shrink: 0; }
+    </style>
+    <button id="pwa-install-btn" onclick="installPWA()" title="Instalar Pirataflix">
+        <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zm-8 2V5h2v6h1.17L12 13.17 9.83 11H11zm-6 7h14v2H5z"/></svg>
+        Instalar App
+    </button>
 </body>
 </html>
