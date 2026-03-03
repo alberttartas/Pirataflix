@@ -1,5 +1,4 @@
 name: Atualizar Catálogo Automático
-
 on:
   schedule:
     - cron: '0 3 * * *'
@@ -11,56 +10,46 @@ on:
       - 'consolidar_data.py'
       - 'build.py'
       - 'input_auto/**'
-
 permissions:
   contents: write
   pages: write
   id-token: write
-
 jobs:
   update-catalog:
     # 🚫 NÃO roda se for commit do bot
     if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-
       - name: Sincronizar com origin/main
         run: |
           git fetch origin
           git reset --hard origin/main
-
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-
       - name: Instalar dependências
         run: |
           python -m pip install --upgrade pip
           pip install requests
-
       - name: Executar pipeline
         run: |
           python download_iptv.py
           python consolidar_data.py
           python build.py
-
       - name: Configurar Git
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-
       - name: Commit automático
         id: git-check
         run: |
           git add iptv_playlists/ web/ input_auto/ || true
           git restore --staged web/integrate-player.js 2>/dev/null || true
-
           if git diff --staged --quiet; then
             echo "changed=false" >> $GITHUB_OUTPUT
             echo "Sem mudanças."
@@ -68,18 +57,16 @@ jobs:
             git commit -m "🤖 AUTO-IPTV-UPDATE"
             echo "changed=true" >> $GITHUB_OUTPUT
           fi
-
       - name: Push seguro
         if: steps.git-check.outputs.changed == 'true'
         run: |
-          git pull --rebase origin main
+          git fetch origin main
+          git rebase -X theirs origin/main || (git rebase --abort && git reset --soft HEAD~1 && git stash && git reset --hard origin/main && git stash pop && git add -A && git commit -m "🤖 AUTO-IPTV-UPDATE")
           git push origin main
-
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: .
-
   deploy:
     needs: update-catalog
     runs-on: ubuntu-latest
