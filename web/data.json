@@ -63383,1210 +63383,6 @@
       "rating": 7.7
     },
     {
-      "id": "dragoes",
-      "title": "Dragões",
-      "poster": "https://image.tmdb.org/t/p/w500/qy0yQAmbU2hHItfpah4Hsejn64L.jpg",
-      "seasons": [
-        {
-          "season": 1,
-          "episodes": [
-            {
-              "title": "dragoes T1E01",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/01.mp4/index.m3u8",
-              "episode": 1
-            },
-            {
-              "title": "dragoes T1E02",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/02.mp4/index.m3u8",
-              "episode": 2
-            },
-            {
-              "title": "dragoes T1E03",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/03.mp4/index.m3u8",
-              "episode": 3
-            },
-            {
-              "title": "dragoes T1E04",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/04.mp4/index.m3u8",
-              "episode": 4
-            },
-            {
-              "title": "dragoes T1E05",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/05.mp4/index.m3u8",
-              "episode": 5
-            },
-            {
-              "title": "dragoes T1E06",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/06.mp4/index.m3u8",
-              "episode": 6
-            },
-            {
-              "title": "dragoes T1E07",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/07.mp4/index.m3u8",
-              "episode": 7
-            },
-            {
-              "title": "dragoes T1E08",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/08.mp4/index.m3u8",
-              "episode": 8
-            },
-            {
-              "title": "dragoes T1E09",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/09.mp4/index.m3u8",
-              "episode": 9
-            },
-            {
-              "title": "dragoes T1E10",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/10.mp4/index.m3u8",
-              "episode": 10
-            },
-            {
-              "title": "dragoes T1E11",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/11.mp4/index.m3u8",
-              "episode": 11
-            },
-            {
-              "title": "dragoes T1E12",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/12.mp4/index.m3u8",
-              "episode": 12
-            },
-            {
-              "title": "dragoes T1E13",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/13.mp4/index.m3u8",
-              "episode": 13
-            },
-            {
-              "title": "dragoes T1E14",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/14.mp4/index.m3u8",
-              "episode": 14
-            },
-            {
-              "title": "dragoes T1E15",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/15.mp4/index.m3u8",
-              "episode": 15
-            },
-            {
-              "title": "dragoes T1E16",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/16.mp4/index.m3u8",
-              "episode": 16
-            },
-            {
-              "title": "dragoes T1E17",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/17.mp4/index.m3u8",
-              "episode": 17
-            },
-            {
-              "title": "dragoes T1E18",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/18.mp4/index.m3u8",
-              "episode": 18
-            },
-            {
-              "title": "dragoes T1E19",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/19.mp4/index.m3u8",
-              "episode": 19
-            },
-            {
-              "title": "dragoes T1E20",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/20.mp4/index.m3u8",
-              "episode": 20
-            },
-            {
-              "title": "dragoes T2E01",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/01.mp4/index.m3u8",
-              "episode": 1
-            },
-            {
-              "title": "dragoes T2E02",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/02.mp4/index.m3u8",
-              "episode": 2
-            },
-            {
-              "title": "dragoes T2E03",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/03.mp4/index.m3u8",
-              "episode": 3
-            },
-            {
-              "title": "dragoes T2E04",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/04.mp4/index.m3u8",
-              "episode": 4
-            },
-            {
-              "title": "dragoes T2E05",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/05.mp4/index.m3u8",
-              "episode": 5
-            },
-            {
-              "title": "dragoes T2E06",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/06.mp4/index.m3u8",
-              "episode": 6
-            },
-            {
-              "title": "dragoes T2E07",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/07.mp4/index.m3u8",
-              "episode": 7
-            },
-            {
-              "title": "dragoes T2E08",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/08.mp4/index.m3u8",
-              "episode": 8
-            },
-            {
-              "title": "dragoes T2E09",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/09.mp4/index.m3u8",
-              "episode": 9
-            },
-            {
-              "title": "dragoes T2E10",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/10.mp4/index.m3u8",
-              "episode": 10
-            },
-            {
-              "title": "dragoes T2E11",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/11.mp4/index.m3u8",
-              "episode": 11
-            },
-            {
-              "title": "dragoes T2E12",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/12.mp4/index.m3u8",
-              "episode": 12
-            },
-            {
-              "title": "dragoes T2E13",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/13.mp4/index.m3u8",
-              "episode": 13
-            },
-            {
-              "title": "dragoes T2E14",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/14.mp4/index.m3u8",
-              "episode": 14
-            },
-            {
-              "title": "dragoes T2E15",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/15.mp4/index.m3u8",
-              "episode": 15
-            },
-            {
-              "title": "dragoes T2E16",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/16.mp4/index.m3u8",
-              "episode": 16
-            },
-            {
-              "title": "dragoes T2E17",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/17.mp4/index.m3u8",
-              "episode": 17
-            },
-            {
-              "title": "dragoes T2E18",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/18.mp4/index.m3u8",
-              "episode": 18
-            },
-            {
-              "title": "dragoes T2E19",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/19.mp4/index.m3u8",
-              "episode": 19
-            },
-            {
-              "title": "dragoes T2E20",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/20.mp4/index.m3u8",
-              "episode": 20
-            },
-            {
-              "title": "dragoes T3E01",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-3-temporada-dublado/01.mp4/index.m3u8",
-              "episode": 1
-            },
-            {
-              "title": "dragoes T3E02",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-3-temporada-dublado/02.mp4/index.m3u8",
-              "episode": 2
-            },
-            {
-              "title": "dragoes T3E03",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-3-temporada-dublado/03.mp4/index.m3u8",
-              "episode": 3
-            },
-            {
-              "title": "dragoes T3E04",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-3-temporada-dublado/04.mp4/index.m3u8",
-              "episode": 4
-            },
-            {
-              "title": "dragoes T3E05",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-3-temporada-dublado/05.mp4/index.m3u8",
-              "episode": 5
-            },
-            {
-              "title": "dragoes T3E06",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-3-temporada-dublado/06.mp4/index.m3u8",
-              "episode": 6
-            },
-            {
-              "title": "dragoes T3E07",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-3-temporada-dublado/07.mp4/index.m3u8",
-              "episode": 7
-            },
-            {
-              "title": "dragoes T3E08",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-3-temporada-dublado/08.mp4/index.m3u8",
-              "episode": 8
-            },
-            {
-              "title": "dragoes T3E09",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-3-temporada-dublado/09.mp4/index.m3u8",
-              "episode": 9
-            },
-            {
-              "title": "dragoes T3E10",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-3-temporada-dublado/10.mp4/index.m3u8",
-              "episode": 10
-            },
-            {
-              "title": "dragoes T3E11",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-3-temporada-dublado/11.mp4/index.m3u8",
-              "episode": 11
-            },
-            {
-              "title": "dragoes T3E12",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-3-temporada-dublado/12.mp4/index.m3u8",
-              "episode": 12
-            },
-            {
-              "title": "dragoes T3E13",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-3-temporada-dublado/13.mp4/index.m3u8",
-              "episode": 13
-            },
-            {
-              "title": "dragoes T4E01",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-4-temporada-dublado/01.mp4/index.m3u8",
-              "episode": 1
-            },
-            {
-              "title": "dragoes T4E02",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-4-temporada-dublado/02.mp4/index.m3u8",
-              "episode": 2
-            },
-            {
-              "title": "dragoes T4E03",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-4-temporada-dublado/03.mp4/index.m3u8",
-              "episode": 3
-            },
-            {
-              "title": "dragoes T4E04",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-4-temporada-dublado/04.mp4/index.m3u8",
-              "episode": 4
-            },
-            {
-              "title": "dragoes T4E05",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-4-temporada-dublado/05.mp4/index.m3u8",
-              "episode": 5
-            },
-            {
-              "title": "dragoes T4E06",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-4-temporada-dublado/06.mp4/index.m3u8",
-              "episode": 6
-            },
-            {
-              "title": "dragoes T4E07",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-4-temporada-dublado/07.mp4/index.m3u8",
-              "episode": 7
-            },
-            {
-              "title": "dragoes T4E08",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-4-temporada-dublado/08.mp4/index.m3u8",
-              "episode": 8
-            },
-            {
-              "title": "dragoes T4E09",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-4-temporada-dublado/09.mp4/index.m3u8",
-              "episode": 9
-            },
-            {
-              "title": "dragoes T4E10",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-4-temporada-dublado/10.mp4/index.m3u8",
-              "episode": 10
-            },
-            {
-              "title": "dragoes T4E11",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-4-temporada-dublado/11.mp4/index.m3u8",
-              "episode": 11
-            },
-            {
-              "title": "dragoes T4E12",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-4-temporada-dublado/12.mp4/index.m3u8",
-              "episode": 12
-            },
-            {
-              "title": "dragoes T4E13",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-4-temporada-dublado/13.mp4/index.m3u8",
-              "episode": 13
-            },
-            {
-              "title": "dragoes T5E01",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-5-temporada-dublado/01.mp4/index.m3u8",
-              "episode": 1
-            },
-            {
-              "title": "dragoes T5E02",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-5-temporada-dublado/02.mp4/index.m3u8",
-              "episode": 2
-            },
-            {
-              "title": "dragoes T5E03",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-5-temporada-dublado/03.mp4/index.m3u8",
-              "episode": 3
-            },
-            {
-              "title": "dragoes T5E04",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-5-temporada-dublado/04.mp4/index.m3u8",
-              "episode": 4
-            },
-            {
-              "title": "dragoes T5E05",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-5-temporada-dublado/05.mp4/index.m3u8",
-              "episode": 5
-            },
-            {
-              "title": "dragoes T5E06",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-5-temporada-dublado/06.mp4/index.m3u8",
-              "episode": 6
-            },
-            {
-              "title": "dragoes T5E07",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-5-temporada-dublado/07.mp4/index.m3u8",
-              "episode": 7
-            },
-            {
-              "title": "dragoes T5E08",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-5-temporada-dublado/08.mp4/index.m3u8",
-              "episode": 8
-            },
-            {
-              "title": "dragoes T5E09",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-5-temporada-dublado/09.mp4/index.m3u8",
-              "episode": 9
-            },
-            {
-              "title": "dragoes T5E10",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-5-temporada-dublado/10.mp4/index.m3u8",
-              "episode": 10
-            },
-            {
-              "title": "dragoes T5E11",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-5-temporada-dublado/11.mp4/index.m3u8",
-              "episode": 11
-            },
-            {
-              "title": "dragoes T5E12",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-5-temporada-dublado/12.mp4/index.m3u8",
-              "episode": 12
-            },
-            {
-              "title": "dragoes T5E13",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-5-temporada-dublado/13.mp4/index.m3u8",
-              "episode": 13
-            },
-            {
-              "title": "dragoes T6E01",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-6-temporada-dublado/01.mp4/index.m3u8",
-              "episode": 1
-            },
-            {
-              "title": "dragoes T6E02",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-6-temporada-dublado/02.mp4/index.m3u8",
-              "episode": 2
-            },
-            {
-              "title": "dragoes T6E03",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-6-temporada-dublado/03.mp4/index.m3u8",
-              "episode": 3
-            },
-            {
-              "title": "dragoes T6E04",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-6-temporada-dublado/04.mp4/index.m3u8",
-              "episode": 4
-            },
-            {
-              "title": "dragoes T6E05",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-6-temporada-dublado/05.mp4/index.m3u8",
-              "episode": 5
-            },
-            {
-              "title": "dragoes T6E06",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-6-temporada-dublado/06.mp4/index.m3u8",
-              "episode": 6
-            },
-            {
-              "title": "dragoes T6E07",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-6-temporada-dublado/07.mp4/index.m3u8",
-              "episode": 7
-            },
-            {
-              "title": "dragoes T6E08",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-6-temporada-dublado/08.mp4/index.m3u8",
-              "episode": 8
-            },
-            {
-              "title": "dragoes T6E09",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-6-temporada-dublado/09.mp4/index.m3u8",
-              "episode": 9
-            },
-            {
-              "title": "dragoes T6E10",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-6-temporada-dublado/10.mp4/index.m3u8",
-              "episode": 10
-            },
-            {
-              "title": "dragoes T6E11",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-6-temporada-dublado/11.mp4/index.m3u8",
-              "episode": 11
-            },
-            {
-              "title": "dragoes T6E12",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-6-temporada-dublado/12.mp4/index.m3u8",
-              "episode": 12
-            },
-            {
-              "title": "dragoes T6E13",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-6-temporada-dublado/13.mp4/index.m3u8",
-              "episode": 13
-            },
-            {
-              "title": "dragoes T7E01",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-7-temporada-dublado/01.mp4/index.m3u8",
-              "episode": 1
-            },
-            {
-              "title": "dragoes T7E02",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-7-temporada-dublado/02.mp4/index.m3u8",
-              "episode": 2
-            },
-            {
-              "title": "dragoes T7E03",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-7-temporada-dublado/03.mp4/index.m3u8",
-              "episode": 3
-            },
-            {
-              "title": "dragoes T7E04",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-7-temporada-dublado/04.mp4/index.m3u8",
-              "episode": 4
-            },
-            {
-              "title": "dragoes T7E05",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-7-temporada-dublado/05.mp4/index.m3u8",
-              "episode": 5
-            },
-            {
-              "title": "dragoes T7E06",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-7-temporada-dublado/06.mp4/index.m3u8",
-              "episode": 6
-            },
-            {
-              "title": "dragoes T7E07",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-7-temporada-dublado/07.mp4/index.m3u8",
-              "episode": 7
-            },
-            {
-              "title": "dragoes T7E08",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-7-temporada-dublado/08.mp4/index.m3u8",
-              "episode": 8
-            },
-            {
-              "title": "dragoes T7E09",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-7-temporada-dublado/09.mp4/index.m3u8",
-              "episode": 9
-            },
-            {
-              "title": "dragoes T7E10",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-7-temporada-dublado/10.mp4/index.m3u8",
-              "episode": 10
-            },
-            {
-              "title": "dragoes T7E11",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-7-temporada-dublado/11.mp4/index.m3u8",
-              "episode": 11
-            },
-            {
-              "title": "dragoes T7E12",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-7-temporada-dublado/12.mp4/index.m3u8",
-              "episode": 12
-            },
-            {
-              "title": "dragoes T7E13",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-7-temporada-dublado/13.mp4/index.m3u8",
-              "episode": 13
-            },
-            {
-              "title": "dragoes T8E01",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-8-temporada-dublado/01.mp4/index.m3u8",
-              "episode": 1
-            },
-            {
-              "title": "dragoes T8E02",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-8-temporada-dublado/02.mp4/index.m3u8",
-              "episode": 2
-            },
-            {
-              "title": "dragoes T8E03",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-8-temporada-dublado/03.mp4/index.m3u8",
-              "episode": 3
-            },
-            {
-              "title": "dragoes T8E04",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-8-temporada-dublado/04.mp4/index.m3u8",
-              "episode": 4
-            },
-            {
-              "title": "dragoes T8E05",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-8-temporada-dublado/05.mp4/index.m3u8",
-              "episode": 5
-            },
-            {
-              "title": "dragoes T8E06",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-8-temporada-dublado/06.mp4/index.m3u8",
-              "episode": 6
-            },
-            {
-              "title": "dragoes T8E07",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-8-temporada-dublado/07.mp4/index.m3u8",
-              "episode": 7
-            },
-            {
-              "title": "dragoes T8E08",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-8-temporada-dublado/08.mp4/index.m3u8",
-              "episode": 8
-            },
-            {
-              "title": "dragoes T8E09",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-8-temporada-dublado/09.mp4/index.m3u8",
-              "episode": 9
-            },
-            {
-              "title": "dragoes T8E10",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-8-temporada-dublado/10.mp4/index.m3u8",
-              "episode": 10
-            },
-            {
-              "title": "dragoes T8E11",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-8-temporada-dublado/11.mp4/index.m3u8",
-              "episode": 11
-            },
-            {
-              "title": "dragoes T8E12",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-8-temporada-dublado/12.mp4/index.m3u8",
-              "episode": 12
-            },
-            {
-              "title": "dragoes T8E13",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-8-temporada-dublado/13.mp4/index.m3u8",
-              "episode": 13
-            }
-          ]
-        }
-      ],
-      "episodes": [
-        {
-          "title": "dragoes T1E01",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/01.mp4/index.m3u8",
-          "episode": 1
-        },
-        {
-          "title": "dragoes T1E02",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/02.mp4/index.m3u8",
-          "episode": 2
-        },
-        {
-          "title": "dragoes T1E03",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/03.mp4/index.m3u8",
-          "episode": 3
-        },
-        {
-          "title": "dragoes T1E04",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/04.mp4/index.m3u8",
-          "episode": 4
-        },
-        {
-          "title": "dragoes T1E05",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/05.mp4/index.m3u8",
-          "episode": 5
-        },
-        {
-          "title": "dragoes T1E06",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/06.mp4/index.m3u8",
-          "episode": 6
-        },
-        {
-          "title": "dragoes T1E07",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/07.mp4/index.m3u8",
-          "episode": 7
-        },
-        {
-          "title": "dragoes T1E08",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/08.mp4/index.m3u8",
-          "episode": 8
-        },
-        {
-          "title": "dragoes T1E09",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/09.mp4/index.m3u8",
-          "episode": 9
-        },
-        {
-          "title": "dragoes T1E10",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/10.mp4/index.m3u8",
-          "episode": 10
-        },
-        {
-          "title": "dragoes T1E11",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/11.mp4/index.m3u8",
-          "episode": 11
-        },
-        {
-          "title": "dragoes T1E12",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/12.mp4/index.m3u8",
-          "episode": 12
-        },
-        {
-          "title": "dragoes T1E13",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/13.mp4/index.m3u8",
-          "episode": 13
-        },
-        {
-          "title": "dragoes T1E14",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/14.mp4/index.m3u8",
-          "episode": 14
-        },
-        {
-          "title": "dragoes T1E15",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/15.mp4/index.m3u8",
-          "episode": 15
-        },
-        {
-          "title": "dragoes T1E16",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/16.mp4/index.m3u8",
-          "episode": 16
-        },
-        {
-          "title": "dragoes T1E17",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/17.mp4/index.m3u8",
-          "episode": 17
-        },
-        {
-          "title": "dragoes T1E18",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/18.mp4/index.m3u8",
-          "episode": 18
-        },
-        {
-          "title": "dragoes T1E19",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/19.mp4/index.m3u8",
-          "episode": 19
-        },
-        {
-          "title": "dragoes T1E20",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/20.mp4/index.m3u8",
-          "episode": 20
-        },
-        {
-          "title": "dragoes T2E01",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/01.mp4/index.m3u8",
-          "episode": 1
-        },
-        {
-          "title": "dragoes T2E02",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/02.mp4/index.m3u8",
-          "episode": 2
-        },
-        {
-          "title": "dragoes T2E03",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/03.mp4/index.m3u8",
-          "episode": 3
-        },
-        {
-          "title": "dragoes T2E04",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/04.mp4/index.m3u8",
-          "episode": 4
-        },
-        {
-          "title": "dragoes T2E05",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/05.mp4/index.m3u8",
-          "episode": 5
-        },
-        {
-          "title": "dragoes T2E06",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/06.mp4/index.m3u8",
-          "episode": 6
-        },
-        {
-          "title": "dragoes T2E07",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/07.mp4/index.m3u8",
-          "episode": 7
-        },
-        {
-          "title": "dragoes T2E08",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/08.mp4/index.m3u8",
-          "episode": 8
-        },
-        {
-          "title": "dragoes T2E09",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/09.mp4/index.m3u8",
-          "episode": 9
-        },
-        {
-          "title": "dragoes T2E10",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/10.mp4/index.m3u8",
-          "episode": 10
-        },
-        {
-          "title": "dragoes T2E11",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/11.mp4/index.m3u8",
-          "episode": 11
-        },
-        {
-          "title": "dragoes T2E12",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/12.mp4/index.m3u8",
-          "episode": 12
-        },
-        {
-          "title": "dragoes T2E13",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/13.mp4/index.m3u8",
-          "episode": 13
-        },
-        {
-          "title": "dragoes T2E14",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/14.mp4/index.m3u8",
-          "episode": 14
-        },
-        {
-          "title": "dragoes T2E15",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/15.mp4/index.m3u8",
-          "episode": 15
-        },
-        {
-          "title": "dragoes T2E16",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/16.mp4/index.m3u8",
-          "episode": 16
-        },
-        {
-          "title": "dragoes T2E17",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/17.mp4/index.m3u8",
-          "episode": 17
-        },
-        {
-          "title": "dragoes T2E18",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/18.mp4/index.m3u8",
-          "episode": 18
-        },
-        {
-          "title": "dragoes T2E19",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/19.mp4/index.m3u8",
-          "episode": 19
-        },
-        {
-          "title": "dragoes T2E20",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/20.mp4/index.m3u8",
-          "episode": 20
-        },
-        {
-          "title": "dragoes T3E01",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-3-temporada-dublado/01.mp4/index.m3u8",
-          "episode": 1
-        },
-        {
-          "title": "dragoes T3E02",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-3-temporada-dublado/02.mp4/index.m3u8",
-          "episode": 2
-        },
-        {
-          "title": "dragoes T3E03",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-3-temporada-dublado/03.mp4/index.m3u8",
-          "episode": 3
-        },
-        {
-          "title": "dragoes T3E04",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-3-temporada-dublado/04.mp4/index.m3u8",
-          "episode": 4
-        },
-        {
-          "title": "dragoes T3E05",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-3-temporada-dublado/05.mp4/index.m3u8",
-          "episode": 5
-        },
-        {
-          "title": "dragoes T3E06",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-3-temporada-dublado/06.mp4/index.m3u8",
-          "episode": 6
-        },
-        {
-          "title": "dragoes T3E07",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-3-temporada-dublado/07.mp4/index.m3u8",
-          "episode": 7
-        },
-        {
-          "title": "dragoes T3E08",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-3-temporada-dublado/08.mp4/index.m3u8",
-          "episode": 8
-        },
-        {
-          "title": "dragoes T3E09",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-3-temporada-dublado/09.mp4/index.m3u8",
-          "episode": 9
-        },
-        {
-          "title": "dragoes T3E10",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-3-temporada-dublado/10.mp4/index.m3u8",
-          "episode": 10
-        },
-        {
-          "title": "dragoes T3E11",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-3-temporada-dublado/11.mp4/index.m3u8",
-          "episode": 11
-        },
-        {
-          "title": "dragoes T3E12",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-3-temporada-dublado/12.mp4/index.m3u8",
-          "episode": 12
-        },
-        {
-          "title": "dragoes T3E13",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-3-temporada-dublado/13.mp4/index.m3u8",
-          "episode": 13
-        },
-        {
-          "title": "dragoes T4E01",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-4-temporada-dublado/01.mp4/index.m3u8",
-          "episode": 1
-        },
-        {
-          "title": "dragoes T4E02",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-4-temporada-dublado/02.mp4/index.m3u8",
-          "episode": 2
-        },
-        {
-          "title": "dragoes T4E03",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-4-temporada-dublado/03.mp4/index.m3u8",
-          "episode": 3
-        },
-        {
-          "title": "dragoes T4E04",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-4-temporada-dublado/04.mp4/index.m3u8",
-          "episode": 4
-        },
-        {
-          "title": "dragoes T4E05",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-4-temporada-dublado/05.mp4/index.m3u8",
-          "episode": 5
-        },
-        {
-          "title": "dragoes T4E06",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-4-temporada-dublado/06.mp4/index.m3u8",
-          "episode": 6
-        },
-        {
-          "title": "dragoes T4E07",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-4-temporada-dublado/07.mp4/index.m3u8",
-          "episode": 7
-        },
-        {
-          "title": "dragoes T4E08",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-4-temporada-dublado/08.mp4/index.m3u8",
-          "episode": 8
-        },
-        {
-          "title": "dragoes T4E09",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-4-temporada-dublado/09.mp4/index.m3u8",
-          "episode": 9
-        },
-        {
-          "title": "dragoes T4E10",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-4-temporada-dublado/10.mp4/index.m3u8",
-          "episode": 10
-        },
-        {
-          "title": "dragoes T4E11",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-4-temporada-dublado/11.mp4/index.m3u8",
-          "episode": 11
-        },
-        {
-          "title": "dragoes T4E12",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-4-temporada-dublado/12.mp4/index.m3u8",
-          "episode": 12
-        },
-        {
-          "title": "dragoes T4E13",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-4-temporada-dublado/13.mp4/index.m3u8",
-          "episode": 13
-        },
-        {
-          "title": "dragoes T5E01",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-5-temporada-dublado/01.mp4/index.m3u8",
-          "episode": 1
-        },
-        {
-          "title": "dragoes T5E02",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-5-temporada-dublado/02.mp4/index.m3u8",
-          "episode": 2
-        },
-        {
-          "title": "dragoes T5E03",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-5-temporada-dublado/03.mp4/index.m3u8",
-          "episode": 3
-        },
-        {
-          "title": "dragoes T5E04",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-5-temporada-dublado/04.mp4/index.m3u8",
-          "episode": 4
-        },
-        {
-          "title": "dragoes T5E05",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-5-temporada-dublado/05.mp4/index.m3u8",
-          "episode": 5
-        },
-        {
-          "title": "dragoes T5E06",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-5-temporada-dublado/06.mp4/index.m3u8",
-          "episode": 6
-        },
-        {
-          "title": "dragoes T5E07",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-5-temporada-dublado/07.mp4/index.m3u8",
-          "episode": 7
-        },
-        {
-          "title": "dragoes T5E08",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-5-temporada-dublado/08.mp4/index.m3u8",
-          "episode": 8
-        },
-        {
-          "title": "dragoes T5E09",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-5-temporada-dublado/09.mp4/index.m3u8",
-          "episode": 9
-        },
-        {
-          "title": "dragoes T5E10",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-5-temporada-dublado/10.mp4/index.m3u8",
-          "episode": 10
-        },
-        {
-          "title": "dragoes T5E11",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-5-temporada-dublado/11.mp4/index.m3u8",
-          "episode": 11
-        },
-        {
-          "title": "dragoes T5E12",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-5-temporada-dublado/12.mp4/index.m3u8",
-          "episode": 12
-        },
-        {
-          "title": "dragoes T5E13",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-5-temporada-dublado/13.mp4/index.m3u8",
-          "episode": 13
-        },
-        {
-          "title": "dragoes T6E01",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-6-temporada-dublado/01.mp4/index.m3u8",
-          "episode": 1
-        },
-        {
-          "title": "dragoes T6E02",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-6-temporada-dublado/02.mp4/index.m3u8",
-          "episode": 2
-        },
-        {
-          "title": "dragoes T6E03",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-6-temporada-dublado/03.mp4/index.m3u8",
-          "episode": 3
-        },
-        {
-          "title": "dragoes T6E04",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-6-temporada-dublado/04.mp4/index.m3u8",
-          "episode": 4
-        },
-        {
-          "title": "dragoes T6E05",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-6-temporada-dublado/05.mp4/index.m3u8",
-          "episode": 5
-        },
-        {
-          "title": "dragoes T6E06",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-6-temporada-dublado/06.mp4/index.m3u8",
-          "episode": 6
-        },
-        {
-          "title": "dragoes T6E07",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-6-temporada-dublado/07.mp4/index.m3u8",
-          "episode": 7
-        },
-        {
-          "title": "dragoes T6E08",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-6-temporada-dublado/08.mp4/index.m3u8",
-          "episode": 8
-        },
-        {
-          "title": "dragoes T6E09",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-6-temporada-dublado/09.mp4/index.m3u8",
-          "episode": 9
-        },
-        {
-          "title": "dragoes T6E10",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-6-temporada-dublado/10.mp4/index.m3u8",
-          "episode": 10
-        },
-        {
-          "title": "dragoes T6E11",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-6-temporada-dublado/11.mp4/index.m3u8",
-          "episode": 11
-        },
-        {
-          "title": "dragoes T6E12",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-6-temporada-dublado/12.mp4/index.m3u8",
-          "episode": 12
-        },
-        {
-          "title": "dragoes T6E13",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-6-temporada-dublado/13.mp4/index.m3u8",
-          "episode": 13
-        },
-        {
-          "title": "dragoes T7E01",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-7-temporada-dublado/01.mp4/index.m3u8",
-          "episode": 1
-        },
-        {
-          "title": "dragoes T7E02",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-7-temporada-dublado/02.mp4/index.m3u8",
-          "episode": 2
-        },
-        {
-          "title": "dragoes T7E03",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-7-temporada-dublado/03.mp4/index.m3u8",
-          "episode": 3
-        },
-        {
-          "title": "dragoes T7E04",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-7-temporada-dublado/04.mp4/index.m3u8",
-          "episode": 4
-        },
-        {
-          "title": "dragoes T7E05",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-7-temporada-dublado/05.mp4/index.m3u8",
-          "episode": 5
-        },
-        {
-          "title": "dragoes T7E06",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-7-temporada-dublado/06.mp4/index.m3u8",
-          "episode": 6
-        },
-        {
-          "title": "dragoes T7E07",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-7-temporada-dublado/07.mp4/index.m3u8",
-          "episode": 7
-        },
-        {
-          "title": "dragoes T7E08",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-7-temporada-dublado/08.mp4/index.m3u8",
-          "episode": 8
-        },
-        {
-          "title": "dragoes T7E09",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-7-temporada-dublado/09.mp4/index.m3u8",
-          "episode": 9
-        },
-        {
-          "title": "dragoes T7E10",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-7-temporada-dublado/10.mp4/index.m3u8",
-          "episode": 10
-        },
-        {
-          "title": "dragoes T7E11",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-7-temporada-dublado/11.mp4/index.m3u8",
-          "episode": 11
-        },
-        {
-          "title": "dragoes T7E12",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-7-temporada-dublado/12.mp4/index.m3u8",
-          "episode": 12
-        },
-        {
-          "title": "dragoes T7E13",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-7-temporada-dublado/13.mp4/index.m3u8",
-          "episode": 13
-        },
-        {
-          "title": "dragoes T8E01",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-8-temporada-dublado/01.mp4/index.m3u8",
-          "episode": 1
-        },
-        {
-          "title": "dragoes T8E02",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-8-temporada-dublado/02.mp4/index.m3u8",
-          "episode": 2
-        },
-        {
-          "title": "dragoes T8E03",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-8-temporada-dublado/03.mp4/index.m3u8",
-          "episode": 3
-        },
-        {
-          "title": "dragoes T8E04",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-8-temporada-dublado/04.mp4/index.m3u8",
-          "episode": 4
-        },
-        {
-          "title": "dragoes T8E05",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-8-temporada-dublado/05.mp4/index.m3u8",
-          "episode": 5
-        },
-        {
-          "title": "dragoes T8E06",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-8-temporada-dublado/06.mp4/index.m3u8",
-          "episode": 6
-        },
-        {
-          "title": "dragoes T8E07",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-8-temporada-dublado/07.mp4/index.m3u8",
-          "episode": 7
-        },
-        {
-          "title": "dragoes T8E08",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-8-temporada-dublado/08.mp4/index.m3u8",
-          "episode": 8
-        },
-        {
-          "title": "dragoes T8E09",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-8-temporada-dublado/09.mp4/index.m3u8",
-          "episode": 9
-        },
-        {
-          "title": "dragoes T8E10",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-8-temporada-dublado/10.mp4/index.m3u8",
-          "episode": 10
-        },
-        {
-          "title": "dragoes T8E11",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-8-temporada-dublado/11.mp4/index.m3u8",
-          "episode": 11
-        },
-        {
-          "title": "dragoes T8E12",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-8-temporada-dublado/12.mp4/index.m3u8",
-          "episode": 12
-        },
-        {
-          "title": "dragoes T8E13",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-8-temporada-dublado/13.mp4/index.m3u8",
-          "episode": 13
-        }
-      ],
-      "type": "series",
-      "category": "infantil",
-      "overview": "Poderes Ninja e uma missão para lutar contra vilões que maltratam dragões? Essa dupla de adolescentes tem um trabalho e tanto pela frente.",
-      "year": "2023",
-      "genres": [
-        "Animação",
-        "Kids",
-        "Ação & Aventura"
-      ],
-      "rating": 8.3
-    },
-    {
       "id": "turma_da_monica",
       "title": "Turma Da Monica",
       "poster": "https://image.tmdb.org/t/p/w500/jsI9PztwfMBE9LyJqPkWJOAvHD6.jpg",
@@ -67439,6 +66235,1210 @@
         "Família"
       ],
       "rating": 8.1
+    },
+    {
+      "id": "dragoes_a_serie",
+      "title": "Dragões A Serie",
+      "poster": "https://image.tmdb.org/t/p/w500/4VNCNifeC0KJ0EoPQZTUJW1rYMI.jpg",
+      "seasons": [
+        {
+          "season": 1,
+          "episodes": [
+            {
+              "title": "dragoes T1E01",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/01.mp4/index.m3u8",
+              "episode": 1
+            },
+            {
+              "title": "dragoes T1E02",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/02.mp4/index.m3u8",
+              "episode": 2
+            },
+            {
+              "title": "dragoes T1E03",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/03.mp4/index.m3u8",
+              "episode": 3
+            },
+            {
+              "title": "dragoes T1E04",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/04.mp4/index.m3u8",
+              "episode": 4
+            },
+            {
+              "title": "dragoes T1E05",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/05.mp4/index.m3u8",
+              "episode": 5
+            },
+            {
+              "title": "dragoes T1E06",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/06.mp4/index.m3u8",
+              "episode": 6
+            },
+            {
+              "title": "dragoes T1E07",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/07.mp4/index.m3u8",
+              "episode": 7
+            },
+            {
+              "title": "dragoes T1E08",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/08.mp4/index.m3u8",
+              "episode": 8
+            },
+            {
+              "title": "dragoes T1E09",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/09.mp4/index.m3u8",
+              "episode": 9
+            },
+            {
+              "title": "dragoes T1E10",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/10.mp4/index.m3u8",
+              "episode": 10
+            },
+            {
+              "title": "dragoes T1E11",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/11.mp4/index.m3u8",
+              "episode": 11
+            },
+            {
+              "title": "dragoes T1E12",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/12.mp4/index.m3u8",
+              "episode": 12
+            },
+            {
+              "title": "dragoes T1E13",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/13.mp4/index.m3u8",
+              "episode": 13
+            },
+            {
+              "title": "dragoes T1E14",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/14.mp4/index.m3u8",
+              "episode": 14
+            },
+            {
+              "title": "dragoes T1E15",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/15.mp4/index.m3u8",
+              "episode": 15
+            },
+            {
+              "title": "dragoes T1E16",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/16.mp4/index.m3u8",
+              "episode": 16
+            },
+            {
+              "title": "dragoes T1E17",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/17.mp4/index.m3u8",
+              "episode": 17
+            },
+            {
+              "title": "dragoes T1E18",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/18.mp4/index.m3u8",
+              "episode": 18
+            },
+            {
+              "title": "dragoes T1E19",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/19.mp4/index.m3u8",
+              "episode": 19
+            },
+            {
+              "title": "dragoes T1E20",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/20.mp4/index.m3u8",
+              "episode": 20
+            },
+            {
+              "title": "dragoes T2E01",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/01.mp4/index.m3u8",
+              "episode": 1
+            },
+            {
+              "title": "dragoes T2E02",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/02.mp4/index.m3u8",
+              "episode": 2
+            },
+            {
+              "title": "dragoes T2E03",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/03.mp4/index.m3u8",
+              "episode": 3
+            },
+            {
+              "title": "dragoes T2E04",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/04.mp4/index.m3u8",
+              "episode": 4
+            },
+            {
+              "title": "dragoes T2E05",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/05.mp4/index.m3u8",
+              "episode": 5
+            },
+            {
+              "title": "dragoes T2E06",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/06.mp4/index.m3u8",
+              "episode": 6
+            },
+            {
+              "title": "dragoes T2E07",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/07.mp4/index.m3u8",
+              "episode": 7
+            },
+            {
+              "title": "dragoes T2E08",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/08.mp4/index.m3u8",
+              "episode": 8
+            },
+            {
+              "title": "dragoes T2E09",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/09.mp4/index.m3u8",
+              "episode": 9
+            },
+            {
+              "title": "dragoes T2E10",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/10.mp4/index.m3u8",
+              "episode": 10
+            },
+            {
+              "title": "dragoes T2E11",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/11.mp4/index.m3u8",
+              "episode": 11
+            },
+            {
+              "title": "dragoes T2E12",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/12.mp4/index.m3u8",
+              "episode": 12
+            },
+            {
+              "title": "dragoes T2E13",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/13.mp4/index.m3u8",
+              "episode": 13
+            },
+            {
+              "title": "dragoes T2E14",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/14.mp4/index.m3u8",
+              "episode": 14
+            },
+            {
+              "title": "dragoes T2E15",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/15.mp4/index.m3u8",
+              "episode": 15
+            },
+            {
+              "title": "dragoes T2E16",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/16.mp4/index.m3u8",
+              "episode": 16
+            },
+            {
+              "title": "dragoes T2E17",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/17.mp4/index.m3u8",
+              "episode": 17
+            },
+            {
+              "title": "dragoes T2E18",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/18.mp4/index.m3u8",
+              "episode": 18
+            },
+            {
+              "title": "dragoes T2E19",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/19.mp4/index.m3u8",
+              "episode": 19
+            },
+            {
+              "title": "dragoes T2E20",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/20.mp4/index.m3u8",
+              "episode": 20
+            },
+            {
+              "title": "dragoes T3E01",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-3-temporada-dublado/01.mp4/index.m3u8",
+              "episode": 1
+            },
+            {
+              "title": "dragoes T3E02",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-3-temporada-dublado/02.mp4/index.m3u8",
+              "episode": 2
+            },
+            {
+              "title": "dragoes T3E03",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-3-temporada-dublado/03.mp4/index.m3u8",
+              "episode": 3
+            },
+            {
+              "title": "dragoes T3E04",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-3-temporada-dublado/04.mp4/index.m3u8",
+              "episode": 4
+            },
+            {
+              "title": "dragoes T3E05",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-3-temporada-dublado/05.mp4/index.m3u8",
+              "episode": 5
+            },
+            {
+              "title": "dragoes T3E06",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-3-temporada-dublado/06.mp4/index.m3u8",
+              "episode": 6
+            },
+            {
+              "title": "dragoes T3E07",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-3-temporada-dublado/07.mp4/index.m3u8",
+              "episode": 7
+            },
+            {
+              "title": "dragoes T3E08",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-3-temporada-dublado/08.mp4/index.m3u8",
+              "episode": 8
+            },
+            {
+              "title": "dragoes T3E09",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-3-temporada-dublado/09.mp4/index.m3u8",
+              "episode": 9
+            },
+            {
+              "title": "dragoes T3E10",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-3-temporada-dublado/10.mp4/index.m3u8",
+              "episode": 10
+            },
+            {
+              "title": "dragoes T3E11",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-3-temporada-dublado/11.mp4/index.m3u8",
+              "episode": 11
+            },
+            {
+              "title": "dragoes T3E12",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-3-temporada-dublado/12.mp4/index.m3u8",
+              "episode": 12
+            },
+            {
+              "title": "dragoes T3E13",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-3-temporada-dublado/13.mp4/index.m3u8",
+              "episode": 13
+            },
+            {
+              "title": "dragoes T4E01",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-4-temporada-dublado/01.mp4/index.m3u8",
+              "episode": 1
+            },
+            {
+              "title": "dragoes T4E02",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-4-temporada-dublado/02.mp4/index.m3u8",
+              "episode": 2
+            },
+            {
+              "title": "dragoes T4E03",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-4-temporada-dublado/03.mp4/index.m3u8",
+              "episode": 3
+            },
+            {
+              "title": "dragoes T4E04",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-4-temporada-dublado/04.mp4/index.m3u8",
+              "episode": 4
+            },
+            {
+              "title": "dragoes T4E05",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-4-temporada-dublado/05.mp4/index.m3u8",
+              "episode": 5
+            },
+            {
+              "title": "dragoes T4E06",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-4-temporada-dublado/06.mp4/index.m3u8",
+              "episode": 6
+            },
+            {
+              "title": "dragoes T4E07",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-4-temporada-dublado/07.mp4/index.m3u8",
+              "episode": 7
+            },
+            {
+              "title": "dragoes T4E08",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-4-temporada-dublado/08.mp4/index.m3u8",
+              "episode": 8
+            },
+            {
+              "title": "dragoes T4E09",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-4-temporada-dublado/09.mp4/index.m3u8",
+              "episode": 9
+            },
+            {
+              "title": "dragoes T4E10",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-4-temporada-dublado/10.mp4/index.m3u8",
+              "episode": 10
+            },
+            {
+              "title": "dragoes T4E11",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-4-temporada-dublado/11.mp4/index.m3u8",
+              "episode": 11
+            },
+            {
+              "title": "dragoes T4E12",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-4-temporada-dublado/12.mp4/index.m3u8",
+              "episode": 12
+            },
+            {
+              "title": "dragoes T4E13",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-4-temporada-dublado/13.mp4/index.m3u8",
+              "episode": 13
+            },
+            {
+              "title": "dragoes T5E01",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-5-temporada-dublado/01.mp4/index.m3u8",
+              "episode": 1
+            },
+            {
+              "title": "dragoes T5E02",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-5-temporada-dublado/02.mp4/index.m3u8",
+              "episode": 2
+            },
+            {
+              "title": "dragoes T5E03",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-5-temporada-dublado/03.mp4/index.m3u8",
+              "episode": 3
+            },
+            {
+              "title": "dragoes T5E04",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-5-temporada-dublado/04.mp4/index.m3u8",
+              "episode": 4
+            },
+            {
+              "title": "dragoes T5E05",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-5-temporada-dublado/05.mp4/index.m3u8",
+              "episode": 5
+            },
+            {
+              "title": "dragoes T5E06",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-5-temporada-dublado/06.mp4/index.m3u8",
+              "episode": 6
+            },
+            {
+              "title": "dragoes T5E07",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-5-temporada-dublado/07.mp4/index.m3u8",
+              "episode": 7
+            },
+            {
+              "title": "dragoes T5E08",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-5-temporada-dublado/08.mp4/index.m3u8",
+              "episode": 8
+            },
+            {
+              "title": "dragoes T5E09",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-5-temporada-dublado/09.mp4/index.m3u8",
+              "episode": 9
+            },
+            {
+              "title": "dragoes T5E10",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-5-temporada-dublado/10.mp4/index.m3u8",
+              "episode": 10
+            },
+            {
+              "title": "dragoes T5E11",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-5-temporada-dublado/11.mp4/index.m3u8",
+              "episode": 11
+            },
+            {
+              "title": "dragoes T5E12",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-5-temporada-dublado/12.mp4/index.m3u8",
+              "episode": 12
+            },
+            {
+              "title": "dragoes T5E13",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-5-temporada-dublado/13.mp4/index.m3u8",
+              "episode": 13
+            },
+            {
+              "title": "dragoes T6E01",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-6-temporada-dublado/01.mp4/index.m3u8",
+              "episode": 1
+            },
+            {
+              "title": "dragoes T6E02",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-6-temporada-dublado/02.mp4/index.m3u8",
+              "episode": 2
+            },
+            {
+              "title": "dragoes T6E03",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-6-temporada-dublado/03.mp4/index.m3u8",
+              "episode": 3
+            },
+            {
+              "title": "dragoes T6E04",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-6-temporada-dublado/04.mp4/index.m3u8",
+              "episode": 4
+            },
+            {
+              "title": "dragoes T6E05",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-6-temporada-dublado/05.mp4/index.m3u8",
+              "episode": 5
+            },
+            {
+              "title": "dragoes T6E06",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-6-temporada-dublado/06.mp4/index.m3u8",
+              "episode": 6
+            },
+            {
+              "title": "dragoes T6E07",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-6-temporada-dublado/07.mp4/index.m3u8",
+              "episode": 7
+            },
+            {
+              "title": "dragoes T6E08",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-6-temporada-dublado/08.mp4/index.m3u8",
+              "episode": 8
+            },
+            {
+              "title": "dragoes T6E09",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-6-temporada-dublado/09.mp4/index.m3u8",
+              "episode": 9
+            },
+            {
+              "title": "dragoes T6E10",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-6-temporada-dublado/10.mp4/index.m3u8",
+              "episode": 10
+            },
+            {
+              "title": "dragoes T6E11",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-6-temporada-dublado/11.mp4/index.m3u8",
+              "episode": 11
+            },
+            {
+              "title": "dragoes T6E12",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-6-temporada-dublado/12.mp4/index.m3u8",
+              "episode": 12
+            },
+            {
+              "title": "dragoes T6E13",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-6-temporada-dublado/13.mp4/index.m3u8",
+              "episode": 13
+            },
+            {
+              "title": "dragoes T7E01",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-7-temporada-dublado/01.mp4/index.m3u8",
+              "episode": 1
+            },
+            {
+              "title": "dragoes T7E02",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-7-temporada-dublado/02.mp4/index.m3u8",
+              "episode": 2
+            },
+            {
+              "title": "dragoes T7E03",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-7-temporada-dublado/03.mp4/index.m3u8",
+              "episode": 3
+            },
+            {
+              "title": "dragoes T7E04",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-7-temporada-dublado/04.mp4/index.m3u8",
+              "episode": 4
+            },
+            {
+              "title": "dragoes T7E05",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-7-temporada-dublado/05.mp4/index.m3u8",
+              "episode": 5
+            },
+            {
+              "title": "dragoes T7E06",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-7-temporada-dublado/06.mp4/index.m3u8",
+              "episode": 6
+            },
+            {
+              "title": "dragoes T7E07",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-7-temporada-dublado/07.mp4/index.m3u8",
+              "episode": 7
+            },
+            {
+              "title": "dragoes T7E08",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-7-temporada-dublado/08.mp4/index.m3u8",
+              "episode": 8
+            },
+            {
+              "title": "dragoes T7E09",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-7-temporada-dublado/09.mp4/index.m3u8",
+              "episode": 9
+            },
+            {
+              "title": "dragoes T7E10",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-7-temporada-dublado/10.mp4/index.m3u8",
+              "episode": 10
+            },
+            {
+              "title": "dragoes T7E11",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-7-temporada-dublado/11.mp4/index.m3u8",
+              "episode": 11
+            },
+            {
+              "title": "dragoes T7E12",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-7-temporada-dublado/12.mp4/index.m3u8",
+              "episode": 12
+            },
+            {
+              "title": "dragoes T7E13",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-7-temporada-dublado/13.mp4/index.m3u8",
+              "episode": 13
+            },
+            {
+              "title": "dragoes T8E01",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-8-temporada-dublado/01.mp4/index.m3u8",
+              "episode": 1
+            },
+            {
+              "title": "dragoes T8E02",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-8-temporada-dublado/02.mp4/index.m3u8",
+              "episode": 2
+            },
+            {
+              "title": "dragoes T8E03",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-8-temporada-dublado/03.mp4/index.m3u8",
+              "episode": 3
+            },
+            {
+              "title": "dragoes T8E04",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-8-temporada-dublado/04.mp4/index.m3u8",
+              "episode": 4
+            },
+            {
+              "title": "dragoes T8E05",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-8-temporada-dublado/05.mp4/index.m3u8",
+              "episode": 5
+            },
+            {
+              "title": "dragoes T8E06",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-8-temporada-dublado/06.mp4/index.m3u8",
+              "episode": 6
+            },
+            {
+              "title": "dragoes T8E07",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-8-temporada-dublado/07.mp4/index.m3u8",
+              "episode": 7
+            },
+            {
+              "title": "dragoes T8E08",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-8-temporada-dublado/08.mp4/index.m3u8",
+              "episode": 8
+            },
+            {
+              "title": "dragoes T8E09",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-8-temporada-dublado/09.mp4/index.m3u8",
+              "episode": 9
+            },
+            {
+              "title": "dragoes T8E10",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-8-temporada-dublado/10.mp4/index.m3u8",
+              "episode": 10
+            },
+            {
+              "title": "dragoes T8E11",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-8-temporada-dublado/11.mp4/index.m3u8",
+              "episode": 11
+            },
+            {
+              "title": "dragoes T8E12",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-8-temporada-dublado/12.mp4/index.m3u8",
+              "episode": 12
+            },
+            {
+              "title": "dragoes T8E13",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-8-temporada-dublado/13.mp4/index.m3u8",
+              "episode": 13
+            }
+          ]
+        }
+      ],
+      "episodes": [
+        {
+          "title": "dragoes T1E01",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/01.mp4/index.m3u8",
+          "episode": 1
+        },
+        {
+          "title": "dragoes T1E02",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/02.mp4/index.m3u8",
+          "episode": 2
+        },
+        {
+          "title": "dragoes T1E03",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/03.mp4/index.m3u8",
+          "episode": 3
+        },
+        {
+          "title": "dragoes T1E04",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/04.mp4/index.m3u8",
+          "episode": 4
+        },
+        {
+          "title": "dragoes T1E05",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/05.mp4/index.m3u8",
+          "episode": 5
+        },
+        {
+          "title": "dragoes T1E06",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/06.mp4/index.m3u8",
+          "episode": 6
+        },
+        {
+          "title": "dragoes T1E07",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/07.mp4/index.m3u8",
+          "episode": 7
+        },
+        {
+          "title": "dragoes T1E08",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/08.mp4/index.m3u8",
+          "episode": 8
+        },
+        {
+          "title": "dragoes T1E09",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/09.mp4/index.m3u8",
+          "episode": 9
+        },
+        {
+          "title": "dragoes T1E10",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/10.mp4/index.m3u8",
+          "episode": 10
+        },
+        {
+          "title": "dragoes T1E11",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/11.mp4/index.m3u8",
+          "episode": 11
+        },
+        {
+          "title": "dragoes T1E12",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/12.mp4/index.m3u8",
+          "episode": 12
+        },
+        {
+          "title": "dragoes T1E13",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/13.mp4/index.m3u8",
+          "episode": 13
+        },
+        {
+          "title": "dragoes T1E14",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/14.mp4/index.m3u8",
+          "episode": 14
+        },
+        {
+          "title": "dragoes T1E15",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/15.mp4/index.m3u8",
+          "episode": 15
+        },
+        {
+          "title": "dragoes T1E16",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/16.mp4/index.m3u8",
+          "episode": 16
+        },
+        {
+          "title": "dragoes T1E17",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/17.mp4/index.m3u8",
+          "episode": 17
+        },
+        {
+          "title": "dragoes T1E18",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/18.mp4/index.m3u8",
+          "episode": 18
+        },
+        {
+          "title": "dragoes T1E19",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/19.mp4/index.m3u8",
+          "episode": 19
+        },
+        {
+          "title": "dragoes T1E20",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-1-temporada-dublado/20.mp4/index.m3u8",
+          "episode": 20
+        },
+        {
+          "title": "dragoes T2E01",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/01.mp4/index.m3u8",
+          "episode": 1
+        },
+        {
+          "title": "dragoes T2E02",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/02.mp4/index.m3u8",
+          "episode": 2
+        },
+        {
+          "title": "dragoes T2E03",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/03.mp4/index.m3u8",
+          "episode": 3
+        },
+        {
+          "title": "dragoes T2E04",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/04.mp4/index.m3u8",
+          "episode": 4
+        },
+        {
+          "title": "dragoes T2E05",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/05.mp4/index.m3u8",
+          "episode": 5
+        },
+        {
+          "title": "dragoes T2E06",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/06.mp4/index.m3u8",
+          "episode": 6
+        },
+        {
+          "title": "dragoes T2E07",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/07.mp4/index.m3u8",
+          "episode": 7
+        },
+        {
+          "title": "dragoes T2E08",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/08.mp4/index.m3u8",
+          "episode": 8
+        },
+        {
+          "title": "dragoes T2E09",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/09.mp4/index.m3u8",
+          "episode": 9
+        },
+        {
+          "title": "dragoes T2E10",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/10.mp4/index.m3u8",
+          "episode": 10
+        },
+        {
+          "title": "dragoes T2E11",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/11.mp4/index.m3u8",
+          "episode": 11
+        },
+        {
+          "title": "dragoes T2E12",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/12.mp4/index.m3u8",
+          "episode": 12
+        },
+        {
+          "title": "dragoes T2E13",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/13.mp4/index.m3u8",
+          "episode": 13
+        },
+        {
+          "title": "dragoes T2E14",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/14.mp4/index.m3u8",
+          "episode": 14
+        },
+        {
+          "title": "dragoes T2E15",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/15.mp4/index.m3u8",
+          "episode": 15
+        },
+        {
+          "title": "dragoes T2E16",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/16.mp4/index.m3u8",
+          "episode": 16
+        },
+        {
+          "title": "dragoes T2E17",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/17.mp4/index.m3u8",
+          "episode": 17
+        },
+        {
+          "title": "dragoes T2E18",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/18.mp4/index.m3u8",
+          "episode": 18
+        },
+        {
+          "title": "dragoes T2E19",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/19.mp4/index.m3u8",
+          "episode": 19
+        },
+        {
+          "title": "dragoes T2E20",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-2-temporada-dublado/20.mp4/index.m3u8",
+          "episode": 20
+        },
+        {
+          "title": "dragoes T3E01",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-3-temporada-dublado/01.mp4/index.m3u8",
+          "episode": 1
+        },
+        {
+          "title": "dragoes T3E02",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-3-temporada-dublado/02.mp4/index.m3u8",
+          "episode": 2
+        },
+        {
+          "title": "dragoes T3E03",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-3-temporada-dublado/03.mp4/index.m3u8",
+          "episode": 3
+        },
+        {
+          "title": "dragoes T3E04",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-3-temporada-dublado/04.mp4/index.m3u8",
+          "episode": 4
+        },
+        {
+          "title": "dragoes T3E05",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-3-temporada-dublado/05.mp4/index.m3u8",
+          "episode": 5
+        },
+        {
+          "title": "dragoes T3E06",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-3-temporada-dublado/06.mp4/index.m3u8",
+          "episode": 6
+        },
+        {
+          "title": "dragoes T3E07",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-3-temporada-dublado/07.mp4/index.m3u8",
+          "episode": 7
+        },
+        {
+          "title": "dragoes T3E08",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-3-temporada-dublado/08.mp4/index.m3u8",
+          "episode": 8
+        },
+        {
+          "title": "dragoes T3E09",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-3-temporada-dublado/09.mp4/index.m3u8",
+          "episode": 9
+        },
+        {
+          "title": "dragoes T3E10",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-3-temporada-dublado/10.mp4/index.m3u8",
+          "episode": 10
+        },
+        {
+          "title": "dragoes T3E11",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-3-temporada-dublado/11.mp4/index.m3u8",
+          "episode": 11
+        },
+        {
+          "title": "dragoes T3E12",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-3-temporada-dublado/12.mp4/index.m3u8",
+          "episode": 12
+        },
+        {
+          "title": "dragoes T3E13",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-3-temporada-dublado/13.mp4/index.m3u8",
+          "episode": 13
+        },
+        {
+          "title": "dragoes T4E01",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-4-temporada-dublado/01.mp4/index.m3u8",
+          "episode": 1
+        },
+        {
+          "title": "dragoes T4E02",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-4-temporada-dublado/02.mp4/index.m3u8",
+          "episode": 2
+        },
+        {
+          "title": "dragoes T4E03",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-4-temporada-dublado/03.mp4/index.m3u8",
+          "episode": 3
+        },
+        {
+          "title": "dragoes T4E04",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-4-temporada-dublado/04.mp4/index.m3u8",
+          "episode": 4
+        },
+        {
+          "title": "dragoes T4E05",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-4-temporada-dublado/05.mp4/index.m3u8",
+          "episode": 5
+        },
+        {
+          "title": "dragoes T4E06",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-4-temporada-dublado/06.mp4/index.m3u8",
+          "episode": 6
+        },
+        {
+          "title": "dragoes T4E07",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-4-temporada-dublado/07.mp4/index.m3u8",
+          "episode": 7
+        },
+        {
+          "title": "dragoes T4E08",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-4-temporada-dublado/08.mp4/index.m3u8",
+          "episode": 8
+        },
+        {
+          "title": "dragoes T4E09",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-4-temporada-dublado/09.mp4/index.m3u8",
+          "episode": 9
+        },
+        {
+          "title": "dragoes T4E10",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-4-temporada-dublado/10.mp4/index.m3u8",
+          "episode": 10
+        },
+        {
+          "title": "dragoes T4E11",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-4-temporada-dublado/11.mp4/index.m3u8",
+          "episode": 11
+        },
+        {
+          "title": "dragoes T4E12",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-4-temporada-dublado/12.mp4/index.m3u8",
+          "episode": 12
+        },
+        {
+          "title": "dragoes T4E13",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-4-temporada-dublado/13.mp4/index.m3u8",
+          "episode": 13
+        },
+        {
+          "title": "dragoes T5E01",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-5-temporada-dublado/01.mp4/index.m3u8",
+          "episode": 1
+        },
+        {
+          "title": "dragoes T5E02",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-5-temporada-dublado/02.mp4/index.m3u8",
+          "episode": 2
+        },
+        {
+          "title": "dragoes T5E03",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-5-temporada-dublado/03.mp4/index.m3u8",
+          "episode": 3
+        },
+        {
+          "title": "dragoes T5E04",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-5-temporada-dublado/04.mp4/index.m3u8",
+          "episode": 4
+        },
+        {
+          "title": "dragoes T5E05",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-5-temporada-dublado/05.mp4/index.m3u8",
+          "episode": 5
+        },
+        {
+          "title": "dragoes T5E06",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-5-temporada-dublado/06.mp4/index.m3u8",
+          "episode": 6
+        },
+        {
+          "title": "dragoes T5E07",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-5-temporada-dublado/07.mp4/index.m3u8",
+          "episode": 7
+        },
+        {
+          "title": "dragoes T5E08",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-5-temporada-dublado/08.mp4/index.m3u8",
+          "episode": 8
+        },
+        {
+          "title": "dragoes T5E09",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-5-temporada-dublado/09.mp4/index.m3u8",
+          "episode": 9
+        },
+        {
+          "title": "dragoes T5E10",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-5-temporada-dublado/10.mp4/index.m3u8",
+          "episode": 10
+        },
+        {
+          "title": "dragoes T5E11",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-5-temporada-dublado/11.mp4/index.m3u8",
+          "episode": 11
+        },
+        {
+          "title": "dragoes T5E12",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-5-temporada-dublado/12.mp4/index.m3u8",
+          "episode": 12
+        },
+        {
+          "title": "dragoes T5E13",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-5-temporada-dublado/13.mp4/index.m3u8",
+          "episode": 13
+        },
+        {
+          "title": "dragoes T6E01",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-6-temporada-dublado/01.mp4/index.m3u8",
+          "episode": 1
+        },
+        {
+          "title": "dragoes T6E02",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-6-temporada-dublado/02.mp4/index.m3u8",
+          "episode": 2
+        },
+        {
+          "title": "dragoes T6E03",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-6-temporada-dublado/03.mp4/index.m3u8",
+          "episode": 3
+        },
+        {
+          "title": "dragoes T6E04",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-6-temporada-dublado/04.mp4/index.m3u8",
+          "episode": 4
+        },
+        {
+          "title": "dragoes T6E05",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-6-temporada-dublado/05.mp4/index.m3u8",
+          "episode": 5
+        },
+        {
+          "title": "dragoes T6E06",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-6-temporada-dublado/06.mp4/index.m3u8",
+          "episode": 6
+        },
+        {
+          "title": "dragoes T6E07",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-6-temporada-dublado/07.mp4/index.m3u8",
+          "episode": 7
+        },
+        {
+          "title": "dragoes T6E08",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-6-temporada-dublado/08.mp4/index.m3u8",
+          "episode": 8
+        },
+        {
+          "title": "dragoes T6E09",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-6-temporada-dublado/09.mp4/index.m3u8",
+          "episode": 9
+        },
+        {
+          "title": "dragoes T6E10",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-6-temporada-dublado/10.mp4/index.m3u8",
+          "episode": 10
+        },
+        {
+          "title": "dragoes T6E11",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-6-temporada-dublado/11.mp4/index.m3u8",
+          "episode": 11
+        },
+        {
+          "title": "dragoes T6E12",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-6-temporada-dublado/12.mp4/index.m3u8",
+          "episode": 12
+        },
+        {
+          "title": "dragoes T6E13",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-6-temporada-dublado/13.mp4/index.m3u8",
+          "episode": 13
+        },
+        {
+          "title": "dragoes T7E01",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-7-temporada-dublado/01.mp4/index.m3u8",
+          "episode": 1
+        },
+        {
+          "title": "dragoes T7E02",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-7-temporada-dublado/02.mp4/index.m3u8",
+          "episode": 2
+        },
+        {
+          "title": "dragoes T7E03",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-7-temporada-dublado/03.mp4/index.m3u8",
+          "episode": 3
+        },
+        {
+          "title": "dragoes T7E04",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-7-temporada-dublado/04.mp4/index.m3u8",
+          "episode": 4
+        },
+        {
+          "title": "dragoes T7E05",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-7-temporada-dublado/05.mp4/index.m3u8",
+          "episode": 5
+        },
+        {
+          "title": "dragoes T7E06",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-7-temporada-dublado/06.mp4/index.m3u8",
+          "episode": 6
+        },
+        {
+          "title": "dragoes T7E07",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-7-temporada-dublado/07.mp4/index.m3u8",
+          "episode": 7
+        },
+        {
+          "title": "dragoes T7E08",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-7-temporada-dublado/08.mp4/index.m3u8",
+          "episode": 8
+        },
+        {
+          "title": "dragoes T7E09",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-7-temporada-dublado/09.mp4/index.m3u8",
+          "episode": 9
+        },
+        {
+          "title": "dragoes T7E10",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-7-temporada-dublado/10.mp4/index.m3u8",
+          "episode": 10
+        },
+        {
+          "title": "dragoes T7E11",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-7-temporada-dublado/11.mp4/index.m3u8",
+          "episode": 11
+        },
+        {
+          "title": "dragoes T7E12",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-7-temporada-dublado/12.mp4/index.m3u8",
+          "episode": 12
+        },
+        {
+          "title": "dragoes T7E13",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-7-temporada-dublado/13.mp4/index.m3u8",
+          "episode": 13
+        },
+        {
+          "title": "dragoes T8E01",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-8-temporada-dublado/01.mp4/index.m3u8",
+          "episode": 1
+        },
+        {
+          "title": "dragoes T8E02",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-8-temporada-dublado/02.mp4/index.m3u8",
+          "episode": 2
+        },
+        {
+          "title": "dragoes T8E03",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-8-temporada-dublado/03.mp4/index.m3u8",
+          "episode": 3
+        },
+        {
+          "title": "dragoes T8E04",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-8-temporada-dublado/04.mp4/index.m3u8",
+          "episode": 4
+        },
+        {
+          "title": "dragoes T8E05",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-8-temporada-dublado/05.mp4/index.m3u8",
+          "episode": 5
+        },
+        {
+          "title": "dragoes T8E06",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-8-temporada-dublado/06.mp4/index.m3u8",
+          "episode": 6
+        },
+        {
+          "title": "dragoes T8E07",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-8-temporada-dublado/07.mp4/index.m3u8",
+          "episode": 7
+        },
+        {
+          "title": "dragoes T8E08",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-8-temporada-dublado/08.mp4/index.m3u8",
+          "episode": 8
+        },
+        {
+          "title": "dragoes T8E09",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-8-temporada-dublado/09.mp4/index.m3u8",
+          "episode": 9
+        },
+        {
+          "title": "dragoes T8E10",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-8-temporada-dublado/10.mp4/index.m3u8",
+          "episode": 10
+        },
+        {
+          "title": "dragoes T8E11",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-8-temporada-dublado/11.mp4/index.m3u8",
+          "episode": 11
+        },
+        {
+          "title": "dragoes T8E12",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-8-temporada-dublado/12.mp4/index.m3u8",
+          "episode": 12
+        },
+        {
+          "title": "dragoes T8E13",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/d/dragoes-8-temporada-dublado/13.mp4/index.m3u8",
+          "episode": 13
+        }
+      ],
+      "type": "series",
+      "category": "infantil",
+      "overview": "Depois de Soluço e seu companheiro Fúria da Noite, Banguela, salvou o povo de Berk, derrotando a Morte Rubra, que inspirou os Vikings de Berk fazer as pazes com os dragões. No entanto, Soluço descobre que a co-habitação está longe de ser harmonioso com a ignorância Viking e os instintos dos Dragões ameaçam destruir a aliança. \n\nPara resolver o problema, Soluço, organiza a Academia Dragões de Berk, ele e os amigos podem aprender tudo sobre dragões. Para provara aldeia e combater vilões como Alvin , os adolescentes Vikings de Berk e seus dragões dedicar-se a alcançar um entendimento vital.",
+      "year": "2012",
+      "genres": [
+        "Animação",
+        "Ação & Aventura",
+        "Sci-Fi & Fantasia"
+      ],
+      "rating": 7.7
     },
     {
       "id": "corrida_maluca",
@@ -84338,6 +84338,36 @@
       "episodes": [
         {
           "url": "http://223.110.245.145/ott.js.chinamobile.com/PLTV/3/224/3221226303/index.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "MaxMovies.in@HD",
+      "type": "tv",
+      "title": "Max Movies (1080p)",
+      "tvg_id": "MaxMovies.in@HD",
+      "tvg_logo": "https://livetv.ashokadigital.net/upload/logo/1732168422_WhatsApp%20Image%202024-11-21%20at%2010.18.47%20AM.jpeg",
+      "group": "📺 Geral",
+      "url": "https://live.maxtn.in/maxmovies/maxmovies/index.m3u8",
+      "episodes": [
+        {
+          "url": "https://live.maxtn.in/maxmovies/maxmovies/index.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "MaxMusic.in@HD",
+      "type": "tv",
+      "title": "Max Music (1080p)",
+      "tvg_id": "MaxMusic.in@HD",
+      "tvg_logo": "https://livetv.ashokadigital.net/upload/logo/1732168750_WhatsApp%20Image%202024-11-21%20at%2011.05.55%20AM%20(1).jpeg",
+      "group": "📺 Geral",
+      "url": "https://live.maxtn.in/maxmusic/maxmusic/index.m3u8",
+      "episodes": [
+        {
+          "url": "https://live.maxtn.in/maxmusic/maxmusic/index.m3u8",
           "title": "AO VIVO"
         }
       ]

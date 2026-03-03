@@ -16260,5 +16260,35 @@
         "title": "AO VIVO"
       }
     ]
+  },
+  {
+    "id": "MaxMovies.in@HD",
+    "type": "tv",
+    "title": "Max Movies (1080p)",
+    "tvg_id": "MaxMovies.in@HD",
+    "tvg_logo": "https://livetv.ashokadigital.net/upload/logo/1732168422_WhatsApp%20Image%202024-11-21%20at%2010.18.47%20AM.jpeg",
+    "group": "📺 TV Ao Vivo",
+    "url": "https://live.maxtn.in/maxmovies/maxmovies/index.m3u8",
+    "episodes": [
+      {
+        "url": "https://live.maxtn.in/maxmovies/maxmovies/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "MaxMusic.in@HD",
+    "type": "tv",
+    "title": "Max Music (1080p)",
+    "tvg_id": "MaxMusic.in@HD",
+    "tvg_logo": "https://livetv.ashokadigital.net/upload/logo/1732168750_WhatsApp%20Image%202024-11-21%20at%2011.05.55%20AM%20(1).jpeg",
+    "group": "📺 TV Ao Vivo",
+    "url": "https://live.maxtn.in/maxmusic/maxmusic/index.m3u8",
+    "episodes": [
+      {
+        "url": "https://live.maxtn.in/maxmusic/maxmusic/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
   }
 ]
