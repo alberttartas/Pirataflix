@@ -1205,7 +1205,7 @@ def generate_html_with_correct_paths(base_dir, data):
         }};
         var categoryPages = {{
             filmes: 'filmes.html', series: 'series.html', novelas: 'novelas.html',
-            animes: 'animes.html', infantil: 'infantil.html', tv: '#tv'
+            animes: 'animes.html', infantil: 'infantil.html', tv: 'tv.html'
         }};
 
         categoryOrder.forEach(function(category) {{
