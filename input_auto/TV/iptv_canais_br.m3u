@@ -2,6 +2,9 @@
 #EXTINF:-1 tvg-id="30ADarcizzleOffshore.us@SD" tvg-logo="https://i.imgur.com/Q4l2uao.png" group-title="📺 TV Ao Vivo",30A Darcizzle Offshore (720p)
 https://30a-tv.com/darcizzle.m3u8
 
+#EXTINF:-1 tvg-id="" tvg-logo="" group-title="📺 TV Ao Vivo",60 Days In by A&E (720p)
+https://d2b8jic9gadlvy.cloudfront.net/v1/aenetworks_60daysin_1/samsungheadend_us/latest/main/hls/playlist.m3u8
+
 #EXTINF:-1 tvg-id="1001Noites.br@SD" tvg-logo="https://i.imgur.com/dWA9y2J.png" group-title="📺 TV Ao Vivo",1001 Noites (720p) [Not 24/7]
 https://cdn.jmvstream.com/w/LVW-8155/ngrp:LVW8155_41E1ciuCvO_all/playlist.m3u8
 
@@ -35,11 +38,17 @@ https://cdn-globecast.akamaized.net/live/eds/saudi_quran/hls_roku/index.m3u8
 #EXTINF:-1 tvg-id="AlYaumTV.ae@SD" tvg-logo="https://i.imgur.com/rBixF3P.png" group-title="📺 TV Ao Vivo",Al Yaum TV (1080p)
 https://hlspackager.akamaized.net/live/DB/ALYAUM_TV/HLS/ALYAUM_TV.m3u8
 
+#EXTINF:-1 tvg-id="" tvg-logo="" group-title="📺 TV Ao Vivo",Alone By History (720p)
+https://d3181anftsyl2u.cloudfront.net/v1/aenetworks_alone_1/samsungheadend_us/latest/main/hls/playlist.m3u8
+
 #EXTINF:-1 tvg-id="AlphaChannel.br@SD" tvg-logo="https://i.imgur.com/c1QqslA.png" group-title="📺 TV Ao Vivo",Alpha Channel (720p)
 https://5b01a3d32b65c.streamlock.net:1936/tvalpha/tvalpha/playlist.m3u8
 
 #EXTINF:-1 tvg-id="AmazonSat.br@SD" tvg-logo="https://i.imgur.com/7rjCS5i.png" group-title="📺 TV Ao Vivo",Amazon Sat (1080p)
 https://amazonsat.brasilstream.com.br/hls/amazonsat/index.m3u8
+
+#EXTINF:-1 tvg-id="" tvg-logo="" group-title="📺 TV Ao Vivo",American Pickers by History (1080p) [Geo-blocked]
+https://pb-k9ikw6ov8z4qi.akamaized.net/American_Pickers_by_History.m3u8
 
 #EXTINF:-1 tvg-id="AngelTV.in@Portuguese" tvg-logo="https://i.imgur.com/qKLEGU7.png" group-title="📺 TV Ao Vivo",Angel TV Portuguese (720p)
 https://janya-digimix.akamaized.net/vglive-sk-382409/portuese/ngrp:angelportuguese_all/playlist.m3u8
@@ -73,6 +82,9 @@ http://202.150.153.254:65500/bandungtvWEBSITE.m3u8
 
 #EXTINF:-1 tvg-id="BatamTV.id@SD" tvg-logo="https://i.imgur.com/lo7YXnW.png" group-title="📺 TV Ao Vivo",Batam TV (480p) [Not 24/7]
 http://122.248.43.242:1935/BATAMTV/_definst_/myStream/playlist.m3u8
+
+#EXTINF:-1 tvg-id="BBCFood.us" tvg-logo="https://i.imgur.com/kcmHcSx.png" group-title="📺 TV Ao Vivo",BBC Food (1080p)
+https://d1e9r0b71zfwk7.cloudfront.net/playlist.m3u8
 
 #EXTINF:-1 tvg-id="BDCTV.br@SD" tvg-logo="https://i.imgur.com/6ckHV6k.jpeg" group-title="📺 TV Ao Vivo",BDC TV (576p)
 https://video01.kshost.com.br/bdctv/bdctv/playlist.m3u8
@@ -248,8 +260,8 @@ https://stream.soporteccrtv.xyz/hls/master-dveo.m3u8
 #EXTINF:-1 tvg-id="ElyTV.br@SD" tvg-logo="https://i.imgur.com/1eHNe91.png" group-title="📺 TV Ao Vivo",ElyTV (360p)
 https://stmv1.srvsite.com/ely/ely/playlist.m3u8
 
-#EXTINF:-1 tvg-id="ESPN8TheOcho.us@ESPN8TheOchoHD" tvg-logo="https://images.fubo.tv/channel-config-ui/station-logos/on-dark/espn_8_the_ocho_bw.png" group-title="📺 TV Ao Vivo",ESPN 8: The Ocho
-https://d3b6q2ou5kp8ke.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-vz67vw1bljinm/ESPNTheOcho.m3u8
+#EXTINF:-1 tvg-id="ESPN8TheOcho.us@ESPN8TheOchoHD" tvg-logo="https://images.fubo.tv/channel-config-ui/station-logos/on-dark/espn_8_the_ocho_bw.png" group-title="📺 TV Ao Vivo",ESPN8 The Ocho (1080p)
+https://d3b6q2ou5kp8ke.cloudfront.net/ESPNTheOcho.m3u8
 
 #EXTINF:-1 tvg-id="ESPNDeportes.us@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/ESPN_Deportes.svg/512px-ESPN_Deportes.svg.png" group-title="📺 TV Ao Vivo",ESPN Deportes (360p)
 https://e3.thetvapp.to/hls/espn-deportes/index.m3u8
@@ -311,6 +323,9 @@ https://radiovid.foxnews.com/hls/live/661547/RADIOVID/index.m3u8
 #EXTINF:-1 tvg-id="FoxSoul.us@SD" tvg-logo="https://i.imgur.com/YIamDGn.png" group-title="📺 TV Ao Vivo",Fox Soul (1080p)
 https://fox-foxsoul-samsungus.amagi.tv/playlist.m3u8
 
+#EXTINF:-1 tvg-id="" tvg-logo="" group-title="📺 TV Ao Vivo",FOX Sports (1080p)
+https://d1jzu95oc8fgt3.cloudfront.net/FOX_Sports.m3u8
+
 #EXTINF:-1 tvg-id="" tvg-logo="" group-title="📺 TV Ao Vivo",Fox Sports (720p)
 https://live-manifest.production-public.tubi.io/live/6035c7fd-efff-4ec7-93dc-aa0c7a58ba47/playlist.m3u8
 
@@ -368,6 +383,12 @@ https://goliveafrica.media:9998/live/644e07abdc1d3/index.m3u8
 #EXTINF:-1 tvg-id="HamaikaTelebista.es@SD" tvg-logo="https://i.imgur.com/HR3G3Ie.png" group-title="📺 TV Ao Vivo",Hamaika Telebista (1080p)
 https://cdn3.wowza.com/1/RERMR282dnU5eE5Z/OHY0dVFs/hls/live/playlist.m3u8
 
+#EXTINF:-1 tvg-id="" tvg-logo="" group-title="📺 TV Ao Vivo",History 365 (1080p) [Geo-blocked]
+https://pb-162j8hrspp1iq.akamaized.net/History_365.m3u8
+
+#EXTINF:-1 tvg-id="" tvg-logo="" group-title="📺 TV Ao Vivo",History & Warfare Now (1080p)
+https://d1nzda2a2b3swt.cloudfront.net/History_Warfare_Now.m3u8
+
 #EXTINF:-1 tvg-id="" tvg-logo="" group-title="📺 TV Ao Vivo",History and Warfare Now (1080p)
 https://d28gzbv9fhdm3h.cloudfront.net/playlist/amg00376-magellantv-historyandwarfarenowaunzin-samsungau/playlist.m3u8
 
@@ -392,6 +413,9 @@ https://amg01448-amg01448c16-samsung-in-3495.playouts.now.amagi.tv/playlist/amg0
 #EXTINF:-1 tvg-id="HMTV.in@SD" tvg-logo="https://i.imgur.com/GJ52eFs.png" group-title="📺 TV Ao Vivo",HMTV (720p)
 https://cdn-1.pishow.tv/live/280/master.m3u8
 
+#EXTINF:-1 tvg-id="" tvg-logo="" group-title="📺 TV Ao Vivo",Hoarders by A&E (720p)
+https://d1klo92zvoj2of.cloudfront.net/v1/aenetworks_hoarders_1/samsungheadend_us/latest/main/hls/playlist.m3u8
+
 #EXTINF:-1 tvg-id="HTSporTV.tr@SD" tvg-logo="https://www.htspor.com/images/manifest/social-share-logo.png" group-title="📺 TV Ao Vivo",HTSpor TV (1080p)
 https://ciner.daioncdn.net/ht-spor/ht-spor.m3u8?app=web
 
@@ -400,6 +424,9 @@ https://ncdn.telewebion.com/ilam/live/playlist.m3u8
 
 #EXTINF:-1 tvg-id="ImagenUniversalTV.do@SD" tvg-logo="https://i.imgur.com/DP6HmDV.png" group-title="📺 TV Ao Vivo",Imagen Universal TV
 https://imagenuniversaltv.net:3771/live/iutvlive.m3u8
+
+#EXTINF:-1 tvg-id="" tvg-logo="" group-title="📺 TV Ao Vivo",Intervention by A&E (1080p) [Geo-blocked]
+https://pb-5kduxc2en4kdz.akamaized.net/Intervention_by_AE.m3u8
 
 #EXTINF:-1 tvg-id="ISTV.br@SD" tvg-logo="https://i.imgur.com/RUKVrOH.png" group-title="📺 TV Ao Vivo",ISTV (720p) [Not 24/7]
 https://stmv1.srvstm.com/sistema7933/sistema7933/playlist.m3u8
@@ -424,6 +451,9 @@ http://49.113.179.174:4022/udp/238.125.0.158:5140
 
 #EXTINF:-1 tvg-id="JovemPanNews.br@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Jovem_Pan_logo_2018.svg/512px-Jovem_Pan_logo_2018.svg.png" group-title="📺 TV Ao Vivo",Jovem Pan News (JP News) (1080p) [Not 24/7]
 https://d6yfbj4xxtrod.cloudfront.net/out/v1/7836eb391ec24452b149f3dc6df15bbd/index.m3u8
+
+#EXTINF:-1 tvg-id="" tvg-logo="" group-title="📺 TV Ao Vivo",K Food by CJ ENM (1080p)
+https://dmxcualdgbo80.cloudfront.net/b2c874a8_68b3_49cb_9435_0264a4d32e4a/hls/playlist.m3u8
 
 #EXTINF:-1 tvg-id="KhushbooBangla.in@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_KHUSHBOO_BANGLA/images/LOGO_HD/image.png" group-title="📺 TV Ao Vivo",Khushboo Bangla (720p)
 https://cdn-4.pishow.tv/live/1473/master.m3u8
@@ -455,8 +485,8 @@ https://tv.invasivamedia.com/hls/limtv.m3u8
 #EXTINF:-1 tvg-id="LittoralFMTV.fr@SD" tvg-logo="https://i.imgur.com/DCZKAQ1.png" group-title="📺 TV Ao Vivo",Littoral FM (720p)
 https://live.creacast.com/littoralfm-ch1/stream/playlist.m3u8
 
-#EXTINF:-1 tvg-id="LiveNOWfromFOX.us@SD" tvg-logo="https://i.imgur.com/1JnyzHv.png" group-title="📺 TV Ao Vivo",LiveNOW from FOX (720p)
-https://fox-foxnewsnow-vizio.amagi.tv/playlist.m3u8
+#EXTINF:-1 tvg-id="LiveNOWfromFOX.us" tvg-logo="https://i.imgur.com/1JnyzHv.png" group-title="📺 TV Ao Vivo",LiveNOW from FOX (1080p) [Geo-blocked]
+https://pb-k5p02dtnr2162.akamaized.net/LiveNOW_from_FOX.m3u8
 
 #EXTINF:-1 tvg-id="Loading.br@SD" tvg-logo="https://i.imgur.com/R0aflu1.png" group-title="📺 TV Ao Vivo",Loading (720p)
 https://stmv1.srvif.com/loadingtv/loadingtv/playlist.m3u8
@@ -506,6 +536,9 @@ http://116.90.120.149:8000/play/a01c/index.m3u8
 #EXTINF:-1 tvg-id="MinimaxCEE.cz@SD" tvg-logo="https://i.imgur.com/WWOlm1x.png" group-title="📺 TV Ao Vivo",Minimax (576p) (576p)
 http://88.212.15.19/live/test_minimax/playlist.m3u8
 
+#EXTINF:-1 tvg-id="" tvg-logo="" group-title="📺 TV Ao Vivo",Miramax Channel (1080p) [Geo-blocked]
+https://pb-w5d3w3kisxahy.akamaized.net/playlist.m3u8
+
 #EXTINF:-1 tvg-id="MKKWebTV.br@SD" tvg-logo="https://i.imgur.com/A8Yhtid.png" group-title="📺 TV Ao Vivo",MKK Web TV (720p) [Not 24/7]
 https://video01.logicahost.com.br/mkkwebtv/mkkwebtv/playlist.m3u8
 
@@ -514,6 +547,9 @@ https://sendlive.online/hls/mmtv.m3u8
 
 #EXTINF:-1 tvg-id="MarutamTV.in@SD" tvg-logo="https://i.imgur.com/cFNw4Af.png" group-title="📺 TV Ao Vivo",MNTV (1080p)
 https://mntv.livebox.co.in/mntvhls/live.m3u8
+
+#EXTINF:-1 tvg-id="" tvg-logo="" group-title="📺 TV Ao Vivo",Modern Marvels Presented by History (720p) [Geo-blocked]
+https://pb-m89wlp8flmjzf.akamaized.net/v1/aenetworks_modernmarvels_1/samsungheadend_us/latest/main/hls/playlist.m3u8
 
 #EXTINF:-1 tvg-id="MTV.fr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/MTV_2021_%28brand_version%29.svg/512px-MTV_2021_%28brand_version%29.svg.png" group-title="📺 TV Ao Vivo",MTV (1080p) [Geo-Blocked]
 https://viamotionhsi.netplus.ch/live/eds/mtvfrance/browser-HLS8/mtvfrance.m3u8
@@ -637,6 +673,9 @@ https://viamotionhsi.netplus.ch/live/eds/paramount/browser-HLS8/paramount.m3u8
 
 #EXTINF:-1 tvg-id="PayamTV.iq@SD" tvg-logo="https://i.imgur.com/qySEibb.png" group-title="📺 TV Ao Vivo",Payam TV (720p) [Not 24/7]
 https://media2.streambrothers.com:1936/8218/8218/playlist.m3u8
+
+#EXTINF:-1 tvg-id="" tvg-logo="" group-title="📺 TV Ao Vivo",PBS Food (1080p)
+https://d3w43rc3ob044a.cloudfront.net/PBS_Food.m3u8
 
 #EXTINF:-1 tvg-id="" tvg-logo="" group-title="📺 TV Ao Vivo",PBS History (1080p)
 https://amg02333-pbs-amg02333c1-samsung-au-1253.playouts.now.amagi.tv/playlist/amg02333-pbsdistributionfast-pbshistory-samsungau/playlist.m3u8
@@ -836,6 +875,9 @@ http://111.88.78.21:8000/play/a0q1/index.m3u8
 #EXTINF:-1 tvg-id="SonyOneBlacklist.fr@HD" tvg-logo="https://i.imgur.com/uJC8rXr.png" group-title="📺 TV Ao Vivo",Sony One Blacklist (1080p)
 https://06cb85ad6ccb4a6b97f561e62d16ad3f.mediatailor.us-west-2.amazonaws.com/v1/master/ba62fe743df0fe93366eba3a257d792884136c7f/LINEAR-822-FR-SONYONETHEBLACKLIST-LG_FR/playlist.m3u8
 
+#EXTINF:-1 tvg-id="" tvg-logo="" group-title="📺 TV Ao Vivo",Sony One Competencias (720p)
+https://d30n46zt9yce2k.cloudfront.net/playlist.m3u8
+
 #EXTINF:-1 tvg-id="SonyOneFavoris.fr@HD" tvg-logo="https://i.imgur.com/RO4AM4b.png" group-title="📺 TV Ao Vivo",Sony One Favoris (1080p)
 https://49d735318d6b4c30a24a7997ea594e1b.mediatailor.us-west-2.amazonaws.com/v1/master/ba62fe743df0fe93366eba3a257d792884136c7f/LINEAR-820-FR-SONYONEFAVORIS-LG_FR/playlist.m3u8
 
@@ -844,6 +886,9 @@ https://5098a8b860504a3690fd2e7c0a18d68f.mediatailor.us-west-2.amazonaws.com/v1/
 
 #EXTINF:-1 tvg-id="SonyOneHitsComedie.fr@HD" tvg-logo="https://i.imgur.com/8sHuxxS.png" group-title="📺 TV Ao Vivo",Sony One Hits Comedie (1080p)
 https://7aa9671895264ec9a384dfed1b992171.mediatailor.us-west-2.amazonaws.com/v1/master/ba62fe743df0fe93366eba3a257d792884136c7f/LINEAR-818-FR-SONYONEHITSCOMDIE-LG_FR/playlist.m3u8
+
+#EXTINF:-1 tvg-id="" tvg-logo="" group-title="📺 TV Ao Vivo",Sony One Novelas (720p)
+https://d2n3o8b1tdnc4w.cloudfront.net/playlist.m3u8
 
 #EXTINF:-1 tvg-id="SonyOneSeriesComedie.fr@HD" tvg-logo="https://i.ibb.co/ns4Md77B/FR-FAST-Plex-Comedy-TV-logo-dark.png" group-title="📺 TV Ao Vivo",Sony One Series Comedie (1080p)
 https://4f2a3e1ff5274297b115cf0f7da1c2cd.mediatailor.us-west-2.amazonaws.com/v1/master/ba62fe743df0fe93366eba3a257d792884136c7f/LINEAR-819-FR-SONYONESRIESCOMDIE-LG_FR/playlist.m3u8
@@ -1285,6 +1330,9 @@ https://mainstreammedia-worldoffreesportsintl-rakuten.amagi.tv/hls/amagi_hls_dat
 
 #EXTINF:-1 tvg-id="WorldofFreesports.de@SD" tvg-logo="https://i.imgur.com/lta5Mog.png" group-title="📺 TV Ao Vivo",World of Freesports (1080p)
 https://mainstreammedia-worldoffreesportsintl-rakuten.amagi.tv/playlist.m3u8
+
+#EXTINF:-1 tvg-id="" tvg-logo="" group-title="📺 TV Ao Vivo",Xtreme Outdoor Presented by HISTORY (720p)
+https://dxagbr7yc4m1d.cloudfront.net/v1/aenetworks_skills_thrills_1/samsungheadend_us/latest/main/hls/playlist.m3u8
 
 #EXTINF:-1 tvg-id="ZBCartoon.in@HD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/zbcatun.png" group-title="📺 TV Ao Vivo",ZB Cartoon (1080p)
 https://server.zillarbarta.com/zbcatun/video.m3u8

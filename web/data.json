@@ -43,6 +43,19 @@
       "rating": 6.5
     },
     {
+      "id": "princesa_mononoke_dublado",
+      "title": "Princesa Mononoke Dublado",
+      "poster": "/Pirataflix/assets/Capas/default.jpg",
+      "episodes": [
+        {
+          "title": "Princesa Mononoke (Dublado) Ep 01",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/filmes/p/princesa-mononoke-dublado/01.mp4/index.m3u8",
+          "episode": 1
+        }
+      ],
+      "type": "movie"
+    },
+    {
       "id": "ainda_estou_aqui",
       "title": "Ainda Estou Aqui",
       "poster": "https://image.tmdb.org/t/p/w500/yY0HDAGfu79cpOLQBgR3kgGZ7HS.jpg",
@@ -81,6 +94,19 @@
         "Música"
       ],
       "rating": 8.1
+    },
+    {
+      "id": "spy_x_family_filme",
+      "title": "Spy-x-family-filme",
+      "poster": "/Pirataflix/assets/Capas/spy_x_family.jpg",
+      "episodes": [
+        {
+          "title": "SPY x FAMILY CODE: White",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/s/spy-x-family-code-white-dublado/01.mp4/index.m3u8",
+          "episode": 1
+        }
+      ],
+      "type": "movie"
     },
     {
       "id": "familia_pero_no_mucho",
@@ -185,7 +211,7 @@
         "Drama",
         "Crime"
       ],
-      "rating": 7.5
+      "rating": 7.3
     },
     {
       "id": "todo_mundo_odeia_o_chris",
@@ -997,7 +1023,7 @@
         "Ação & Aventura",
         "Drama"
       ],
-      "rating": 5.5
+      "rating": 5.6
     }
   ],
   "novelas": [
@@ -67807,7 +67833,7 @@
     {
       "id": "scooby_doo",
       "title": "Scooby Doo",
-      "poster": "https://image.tmdb.org/t/p/w500/4Qbn97SvuPScCynn64zOED3uzH3.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/75ZldxGKFQDRHFn2G6FngCvlVzu.jpg",
       "seasons": [
         {
           "season": 1,
@@ -68069,14 +68095,14 @@
       ],
       "type": "series",
       "category": "infantil",
-      "overview": "Ao contrário do seu tio, Scooby-Loo, muitas vezes tenta assumir a tarefa de capturar o vilão da semana em suas próprias mãos, forçando Salsicha e Scooby para tentar seu melhor teste de coragem sem precisar de Fred, Daphne e Velma. Embora ainda presentes nestes episódios, Fred, Daphne e Velma aparecem com pouca frequência no enredo.",
-      "year": "1979",
+      "overview": "Fred Jones Jr., Daphne Blake, Velma Dinkley, Norville \"Salsicha\" Rogers e Scooby-Doo é um time de adolescentes solucionadores de mistérios que vivem na pequena cidade de Baía Cristal, o auto-proclamado \"lugar mais aterrorizado da terra\". A trama longa a história de estranhos desaparecimentos, de aparições de fantasmas e monstros da cidade formam a base para a sua próspera indústria turística e, como tal, os adultos da cidade (o principal deles sendo o pai de \"Fred\" o prefeito) sendo que ele não está feliz que as crianças estão derrubando tudo os acontecimentos sobrenaturais que trazem tanto turismo para a cidade.",
+      "year": "2010",
       "genres": [
         "Animação",
         "Mistério",
-        "Comédia"
+        "Família"
       ],
-      "rating": 7.5
+      "rating": 8.2
     }
   ],
   "tv": [
@@ -84368,6 +84394,276 @@
       "episodes": [
         {
           "url": "https://live.maxtn.in/maxmusic/maxmusic/index.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "60_days_in_by_a_e__720p",
+      "type": "tv",
+      "title": "60 Days In by A&E (720p)",
+      "tvg_id": "",
+      "tvg_logo": "",
+      "group": "📺 Geral",
+      "url": "https://d2b8jic9gadlvy.cloudfront.net/v1/aenetworks_60daysin_1/samsungheadend_us/latest/main/hls/playlist.m3u8",
+      "episodes": [
+        {
+          "url": "https://d2b8jic9gadlvy.cloudfront.net/v1/aenetworks_60daysin_1/samsungheadend_us/latest/main/hls/playlist.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "alone_by_history__720p",
+      "type": "tv",
+      "title": "Alone By History (720p)",
+      "tvg_id": "",
+      "tvg_logo": "",
+      "group": "📺 Geral",
+      "url": "https://d3181anftsyl2u.cloudfront.net/v1/aenetworks_alone_1/samsungheadend_us/latest/main/hls/playlist.m3u8",
+      "episodes": [
+        {
+          "url": "https://d3181anftsyl2u.cloudfront.net/v1/aenetworks_alone_1/samsungheadend_us/latest/main/hls/playlist.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "american_pickers_by_history__1080p___geo_blocked",
+      "type": "tv",
+      "title": "American Pickers by History (1080p) [Geo-blocked]",
+      "tvg_id": "",
+      "tvg_logo": "",
+      "group": "📺 Geral",
+      "url": "https://pb-k9ikw6ov8z4qi.akamaized.net/American_Pickers_by_History.m3u8",
+      "episodes": [
+        {
+          "url": "https://pb-k9ikw6ov8z4qi.akamaized.net/American_Pickers_by_History.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "BBCFood.us",
+      "type": "tv",
+      "title": "BBC Food (1080p)",
+      "tvg_id": "BBCFood.us",
+      "tvg_logo": "https://i.imgur.com/kcmHcSx.png",
+      "group": "📺 Geral",
+      "url": "https://d1e9r0b71zfwk7.cloudfront.net/playlist.m3u8",
+      "episodes": [
+        {
+          "url": "https://d1e9r0b71zfwk7.cloudfront.net/playlist.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "ESPN8TheOcho.us@ESPN8TheOchoHD",
+      "type": "tv",
+      "title": "ESPN8 The Ocho (1080p)",
+      "tvg_id": "ESPN8TheOcho.us@ESPN8TheOchoHD",
+      "tvg_logo": "https://images.fubo.tv/channel-config-ui/station-logos/on-dark/espn_8_the_ocho_bw.png",
+      "group": "📺 Geral",
+      "url": "https://d3b6q2ou5kp8ke.cloudfront.net/ESPNTheOcho.m3u8",
+      "episodes": [
+        {
+          "url": "https://d3b6q2ou5kp8ke.cloudfront.net/ESPNTheOcho.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "fox_sports__1080p",
+      "type": "tv",
+      "title": "FOX Sports (1080p)",
+      "tvg_id": "",
+      "tvg_logo": "",
+      "group": "📺 Geral",
+      "url": "https://d1jzu95oc8fgt3.cloudfront.net/FOX_Sports.m3u8",
+      "episodes": [
+        {
+          "url": "https://d1jzu95oc8fgt3.cloudfront.net/FOX_Sports.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "history_365__1080p___geo_blocked",
+      "type": "tv",
+      "title": "History 365 (1080p) [Geo-blocked]",
+      "tvg_id": "",
+      "tvg_logo": "",
+      "group": "📺 Geral",
+      "url": "https://pb-162j8hrspp1iq.akamaized.net/History_365.m3u8",
+      "episodes": [
+        {
+          "url": "https://pb-162j8hrspp1iq.akamaized.net/History_365.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "history___warfare_now__1080p",
+      "type": "tv",
+      "title": "History & Warfare Now (1080p)",
+      "tvg_id": "",
+      "tvg_logo": "",
+      "group": "📺 Geral",
+      "url": "https://d1nzda2a2b3swt.cloudfront.net/History_Warfare_Now.m3u8",
+      "episodes": [
+        {
+          "url": "https://d1nzda2a2b3swt.cloudfront.net/History_Warfare_Now.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "hoarders_by_a_e__720p",
+      "type": "tv",
+      "title": "Hoarders by A&E (720p)",
+      "tvg_id": "",
+      "tvg_logo": "",
+      "group": "📺 Geral",
+      "url": "https://d1klo92zvoj2of.cloudfront.net/v1/aenetworks_hoarders_1/samsungheadend_us/latest/main/hls/playlist.m3u8",
+      "episodes": [
+        {
+          "url": "https://d1klo92zvoj2of.cloudfront.net/v1/aenetworks_hoarders_1/samsungheadend_us/latest/main/hls/playlist.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "intervention_by_a_e__1080p___geo_blocked",
+      "type": "tv",
+      "title": "Intervention by A&E (1080p) [Geo-blocked]",
+      "tvg_id": "",
+      "tvg_logo": "",
+      "group": "📺 Geral",
+      "url": "https://pb-5kduxc2en4kdz.akamaized.net/Intervention_by_AE.m3u8",
+      "episodes": [
+        {
+          "url": "https://pb-5kduxc2en4kdz.akamaized.net/Intervention_by_AE.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "k_food_by_cj_enm__1080p",
+      "type": "tv",
+      "title": "K Food by CJ ENM (1080p)",
+      "tvg_id": "",
+      "tvg_logo": "",
+      "group": "📺 Geral",
+      "url": "https://dmxcualdgbo80.cloudfront.net/b2c874a8_68b3_49cb_9435_0264a4d32e4a/hls/playlist.m3u8",
+      "episodes": [
+        {
+          "url": "https://dmxcualdgbo80.cloudfront.net/b2c874a8_68b3_49cb_9435_0264a4d32e4a/hls/playlist.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "LiveNOWfromFOX.us",
+      "type": "tv",
+      "title": "LiveNOW from FOX (1080p) [Geo-blocked]",
+      "tvg_id": "LiveNOWfromFOX.us",
+      "tvg_logo": "https://i.imgur.com/1JnyzHv.png",
+      "group": "📺 Geral",
+      "url": "https://pb-k5p02dtnr2162.akamaized.net/LiveNOW_from_FOX.m3u8",
+      "episodes": [
+        {
+          "url": "https://pb-k5p02dtnr2162.akamaized.net/LiveNOW_from_FOX.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "miramax_channel__1080p___geo_blocked",
+      "type": "tv",
+      "title": "Miramax Channel (1080p) [Geo-blocked]",
+      "tvg_id": "",
+      "tvg_logo": "",
+      "group": "📺 Geral",
+      "url": "https://pb-w5d3w3kisxahy.akamaized.net/playlist.m3u8",
+      "episodes": [
+        {
+          "url": "https://pb-w5d3w3kisxahy.akamaized.net/playlist.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "modern_marvels_presented_by_history__720p___geo_blocked",
+      "type": "tv",
+      "title": "Modern Marvels Presented by History (720p) [Geo-blocked]",
+      "tvg_id": "",
+      "tvg_logo": "",
+      "group": "📺 Geral",
+      "url": "https://pb-m89wlp8flmjzf.akamaized.net/v1/aenetworks_modernmarvels_1/samsungheadend_us/latest/main/hls/playlist.m3u8",
+      "episodes": [
+        {
+          "url": "https://pb-m89wlp8flmjzf.akamaized.net/v1/aenetworks_modernmarvels_1/samsungheadend_us/latest/main/hls/playlist.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "pbs_food__1080p",
+      "type": "tv",
+      "title": "PBS Food (1080p)",
+      "tvg_id": "",
+      "tvg_logo": "",
+      "group": "📺 Geral",
+      "url": "https://d3w43rc3ob044a.cloudfront.net/PBS_Food.m3u8",
+      "episodes": [
+        {
+          "url": "https://d3w43rc3ob044a.cloudfront.net/PBS_Food.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "sony_one_competencias__720p",
+      "type": "tv",
+      "title": "Sony One Competencias (720p)",
+      "tvg_id": "",
+      "tvg_logo": "",
+      "group": "📺 Geral",
+      "url": "https://d30n46zt9yce2k.cloudfront.net/playlist.m3u8",
+      "episodes": [
+        {
+          "url": "https://d30n46zt9yce2k.cloudfront.net/playlist.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "sony_one_novelas__720p",
+      "type": "tv",
+      "title": "Sony One Novelas (720p)",
+      "tvg_id": "",
+      "tvg_logo": "",
+      "group": "📺 Geral",
+      "url": "https://d2n3o8b1tdnc4w.cloudfront.net/playlist.m3u8",
+      "episodes": [
+        {
+          "url": "https://d2n3o8b1tdnc4w.cloudfront.net/playlist.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "xtreme_outdoor_presented_by_history__720p",
+      "type": "tv",
+      "title": "Xtreme Outdoor Presented by HISTORY (720p)",
+      "tvg_id": "",
+      "tvg_logo": "",
+      "group": "📺 Geral",
+      "url": "https://dxagbr7yc4m1d.cloudfront.net/v1/aenetworks_skills_thrills_1/samsungheadend_us/latest/main/hls/playlist.m3u8",
+      "episodes": [
+        {
+          "url": "https://dxagbr7yc4m1d.cloudfront.net/v1/aenetworks_skills_thrills_1/samsungheadend_us/latest/main/hls/playlist.m3u8",
           "title": "AO VIVO"
         }
       ]
