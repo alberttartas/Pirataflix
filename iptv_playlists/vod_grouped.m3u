@@ -9,7 +9,7 @@ https://vod3.cf.dmcdn.net/sec2(blut8bv28wqADpZFN7q8w3GijtuaC8y79DpoCqOffLBzT0DZh
 #EXTINF:-1 group-title="🎬 Filmes" tvg-id="LILO_STITCH_FILME" tvg-logo="https://image.tmdb.org/t/p/w500/1LCfRArffse3PnqkACooOHkWcry.jpg",Lilo & Stitch Filme
 https://cdn-novflix.com/storagePSN/FILMES/LILOSTITCH2025.mp4
 
-#EXTINF:-1 group-title="🎬 Filmes" tvg-id="PRINCESA_MONONOKE_DUBLADO" tvg-logo="https://alberttartas.github.io/Pirataflix/assets/Capas/default.jpg",Princesa Mononoke Dublado
+#EXTINF:-1 group-title="🎬 Filmes" tvg-id="PRINCESA_MONONOKE_DUBLADO" tvg-logo="https://alberttartas.github.io/Pirataflix/assets/Capas/princesa mononoke.jpg",Princesa Mononoke Dublado
 https://cdn-s01.mywallpaper-4k-image.net/stream/filmes/p/princesa-mononoke-dublado/01.mp4/index.m3u8
 
 #EXTINF:-1 group-title="🎬 Filmes" tvg-id="AINDA_ESTOU_AQUI" tvg-logo="https://image.tmdb.org/t/p/w500/yY0HDAGfu79cpOLQBgR3kgGZ7HS.jpg",Ainda Estou Aqui
@@ -323,51 +323,6 @@ https://cdn-novflix.com/storagePSN/SERIES/BRIDGERTON/BRIDGERTON4x03.mp4
 
 #EXTINF:-1 group-title="📺 Séries" tvg-id="BRIDGERTON_T04" tvg-logo="https://image.tmdb.org/t/p/w500/rAKJSFPXv9aFpeZAyr0yNg0HxuP.jpg",S04E04 - Bridgerton T4E04
 https://cdn-novflix.com/storagePSN/SERIES/BRIDGERTON/BRIDGERTON4x04.mp4
-
-#EXTINF:-1 group-title="📺 Séries" tvg-id="DONA_BEIJA_T01" tvg-logo="https://image.tmdb.org/t/p/w500/AtO79AfyHSOVyTU6vvqWBwoesOS.jpg",S01E01 - Dona Beija Episódio 01
-https://cdn-novflix.com/storage2/BEJA/BEJA-001.mp4
-
-#EXTINF:-1 group-title="📺 Séries" tvg-id="DONA_BEIJA_T01" tvg-logo="https://image.tmdb.org/t/p/w500/AtO79AfyHSOVyTU6vvqWBwoesOS.jpg",S01E02 - Dona Beija Episódio 02
-https://cdn-novflix.com/storage2/BEJA/BEJA-002.mp4
-
-#EXTINF:-1 group-title="📺 Séries" tvg-id="DONA_BEIJA_T01" tvg-logo="https://image.tmdb.org/t/p/w500/AtO79AfyHSOVyTU6vvqWBwoesOS.jpg",S01E03 - Dona Beija Episódio 03
-https://cdn-novflix.com/storage2/BEJA/BEJA-003.mp4
-
-#EXTINF:-1 group-title="📺 Séries" tvg-id="DONA_BEIJA_T01" tvg-logo="https://image.tmdb.org/t/p/w500/AtO79AfyHSOVyTU6vvqWBwoesOS.jpg",S01E04 - Dona Beija Episódio 04
-https://cdn-novflix.com/storage2/BEJA/BEJA-004.mp4
-
-#EXTINF:-1 group-title="📺 Séries" tvg-id="DONA_BEIJA_T01" tvg-logo="https://image.tmdb.org/t/p/w500/AtO79AfyHSOVyTU6vvqWBwoesOS.jpg",S01E05 - Dona Beija Episódio 05
-https://cdn-novflix.com/storage2/BEJA/BEJA-005.mp4
-
-#EXTINF:-1 group-title="📺 Séries" tvg-id="DONA_BEIJA_T01" tvg-logo="https://image.tmdb.org/t/p/w500/AtO79AfyHSOVyTU6vvqWBwoesOS.jpg",S01E06 - Dona Beija Episódio 06
-https://cdn-novflix.com/storage2/BEJA/BEJA-006.mp4
-
-#EXTINF:-1 group-title="📺 Séries" tvg-id="DONA_BEIJA_T01" tvg-logo="https://image.tmdb.org/t/p/w500/AtO79AfyHSOVyTU6vvqWBwoesOS.jpg",S01E07 - Dona Beija Episódio 07
-https://cdn-novflix.com/storage2/BEJA/BEJA-007.mp4
-
-#EXTINF:-1 group-title="📺 Séries" tvg-id="DONA_BEIJA_T01" tvg-logo="https://image.tmdb.org/t/p/w500/AtO79AfyHSOVyTU6vvqWBwoesOS.jpg",S01E08 - Dona Beija Episódio 08
-https://cdn-novflix.com/storage2/BEJA/BEJA-008.mp4
-
-#EXTINF:-1 group-title="📺 Séries" tvg-id="DONA_BEIJA_T01" tvg-logo="https://image.tmdb.org/t/p/w500/AtO79AfyHSOVyTU6vvqWBwoesOS.jpg",S01E09 - Dona Beija Episódio 09
-https://cdn-novflix.com/storage2/BEJA/BEJA-009.mp4
-
-#EXTINF:-1 group-title="📺 Séries" tvg-id="DONA_BEIJA_T01" tvg-logo="https://image.tmdb.org/t/p/w500/AtO79AfyHSOVyTU6vvqWBwoesOS.jpg",S01E10 - Dona Beija Episódio 10
-https://cdn-novflix.com/storage2/BEJA/BEJA-010.mp4
-
-#EXTINF:-1 group-title="📺 Séries" tvg-id="DONA_BEIJA_T01" tvg-logo="https://image.tmdb.org/t/p/w500/AtO79AfyHSOVyTU6vvqWBwoesOS.jpg",S01E11 - Dona Beija Episódio 11
-https://cdn-novflix.com/storage2/BEJA/BEJA-011.mp4
-
-#EXTINF:-1 group-title="📺 Séries" tvg-id="DONA_BEIJA_T01" tvg-logo="https://image.tmdb.org/t/p/w500/AtO79AfyHSOVyTU6vvqWBwoesOS.jpg",S01E12 - Dona Beija Episódio 12
-https://cdn-novflix.com/storage2/BEJA/BEJA-012.mp4
-
-#EXTINF:-1 group-title="📺 Séries" tvg-id="DONA_BEIJA_T01" tvg-logo="https://image.tmdb.org/t/p/w500/AtO79AfyHSOVyTU6vvqWBwoesOS.jpg",S01E13 - Dona Beija Episódio 13
-https://cdn-novflix.com/storage2/BEJA/BEJA-013.mp4
-
-#EXTINF:-1 group-title="📺 Séries" tvg-id="DONA_BEIJA_T01" tvg-logo="https://image.tmdb.org/t/p/w500/AtO79AfyHSOVyTU6vvqWBwoesOS.jpg",S01E14 - Dona Beija Episódio 14
-https://cdn-novflix.com/storage2/BEJA/BEJA-014.mp4
-
-#EXTINF:-1 group-title="📺 Séries" tvg-id="DONA_BEIJA_T01" tvg-logo="https://image.tmdb.org/t/p/w500/AtO79AfyHSOVyTU6vvqWBwoesOS.jpg",S01E15 - Dona Beija Episódio 15
-https://cdn-novflix.com/storage2/BEJA/BEJA-015.mp4
 
 #EXTINF:-1 group-title="📺 Séries" tvg-id="RAINHAS_DA_GRANA_T01" tvg-logo="https://image.tmdb.org/t/p/w500/j03RtWsauZNNFdSrHbJoxdX5HYO.jpg",S01E01 - RAINHADAGRANA1x01
 https://cdn-novflix.com/storagePSN/SERIES/RAINHADAGRANA/RAINHADAGRANA1x01.mp4
