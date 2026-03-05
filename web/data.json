@@ -74,19 +74,6 @@
       ]
     },
     {
-      "id": "spy_x_famiy_code_white",
-      "title": "Spy X Famiy Code: White",
-      "poster": "/Pirataflix/assets/Capas/default.jpg",
-      "episodes": [
-        {
-          "title": "SPY x FAMILY CODE: White",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/s/spy-x-family-code-white-dublado/01.mp4/index.m3u8",
-          "episode": 1
-        }
-      ],
-      "type": "movie"
-    },
-    {
       "id": "princesa_mononoke_dublado",
       "title": "Princesa Mononoke Dublado",
       "poster": "https://image.tmdb.org/t/p/w500/d4NaGE6rXBlQG6aT9Z7XqSTBBVh.jpg",
@@ -203,6 +190,79 @@
           "name": "Luiza Kosovski",
           "character": "Eliana",
           "profile": "https://image.tmdb.org/t/p/w185/zu3oHbqfqfc6u72wkWq5FCirmgS.jpg"
+        }
+      ]
+    },
+    {
+      "id": "spy_x_family_codigo_branco",
+      "title": "Spy X Family Código: Branco",
+      "poster": "https://image.tmdb.org/t/p/w500/thGaW3UXecNJAEdB6rs8sC45JWv.jpg",
+      "episodes": [
+        {
+          "title": "SPY x FAMILY CODE: White",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/s/spy-x-family-code-white-dublado/01.mp4/index.m3u8",
+          "episode": 1
+        }
+      ],
+      "type": "movie",
+      "local_poster": "/Pirataflix/assets/Capas/spy_x_family.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/xlIQf4y9eB14iYzNN142tROIWON.jpg",
+        "https://image.tmdb.org/t/p/w500/riv537dUuKib4KXC6Rg7CINs4xO.jpg",
+        "https://image.tmdb.org/t/p/w500/thGaW3UXecNJAEdB6rs8sC45JWv.jpg",
+        "https://image.tmdb.org/t/p/w500/l01GfNS7UFZCW1ePdDXP5vArpxt.jpg",
+        "https://image.tmdb.org/t/p/w500/s2nNx9dkt6My4hjXqoYIVX7zrzW.jpg",
+        "https://image.tmdb.org/t/p/w500/fJIC1baT5SCUwSlGOwZrVQ4TTPA.jpg"
+      ],
+      "backdrop": "https://image.tmdb.org/t/p/w1280/zVDJ4cRgSpHlILSm7kGiklHQ6O7.jpg",
+      "overview": "Ele é um espião. Ela uma assassina. Juntos, Loid e Yor mantêm suas vidas duplas enquanto fingem serem a família perfeita. No entanto, sua filha adotiva, Anya, uma telepata, conhece seus empolgantes segredos, sem eles saberem. Usando o pretexto de levar sua família numa viagem de inverno no fim de semana, a tentativa de Loid de progredir em sua missão atual, a Operação Strix, é frustrada quando Anya se envolve por engano e ativa eventos que ameaçam a paz mundial!",
+      "year": "2023",
+      "genres": [
+        "Animação",
+        "Comédia",
+        "Aventura"
+      ],
+      "rating": 7.1,
+      "cast": [
+        {
+          "name": "Takuya Eguchi",
+          "character": "Loid Forger (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/hPPhUp0mM65Lc87Q8WXUEmGQAXx.jpg"
+        },
+        {
+          "name": "Atsumi Tanezaki",
+          "character": "Anya Forger (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/6tM8GU7QvrdUCvR4kxqVUZivtvO.jpg"
+        },
+        {
+          "name": "Saori Hayami",
+          "character": "Yor Forger (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/gLv9lO7dlUbIsmyJUvgegqAAXki.jpg"
+        },
+        {
+          "name": "Kenichirou Matsuda",
+          "character": "Bond Forger / Narration (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/YCEXgyl763zg62qhsjhWHRzGkL.jpg"
+        },
+        {
+          "name": "Tomoya Nakamura",
+          "character": "Domitri (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/rBDbzWAYVRNpWIbheY82zPgPdAa.jpg"
+        },
+        {
+          "name": "Kento Kaku",
+          "character": "Luca (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/1c7WZIRaQTUoKlD0LSDWB5n15X6.jpg"
+        },
+        {
+          "name": "Banjo Ginga",
+          "character": "Snidel (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/qiXnKaZheMiVyA1U2mX9tPdNA3T.jpg"
+        },
+        {
+          "name": "Shunsuke Takeuchi",
+          "character": "Type F (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/p1bD76bPptJ41mKRtv0mIr8ZcvO.jpg"
         }
       ]
     },
