@@ -694,7 +694,10 @@ def enrich_with_tmdb(output):
             meta = fetch_tmdb_metadata(item['title'], mtype)
             if meta:
                 if meta.get('tmdb_poster') and not item.get('poster','').startswith('http'):
+                    item['local_poster'] = item['poster']   # preservar capa local
                     item['poster'] = meta['tmdb_poster']
+                elif meta.get('tmdb_poster') and item.get('poster','').startswith('http'):
+                    item['tmdb_poster'] = meta['tmdb_poster']  # já é TMDB, guardar mesmo assim
                 if meta.get('backdrop'):   item['backdrop'] = meta['backdrop']
                 if meta.get('overview'):   item['overview'] = meta['overview']
                 if meta.get('year'):       item['year']     = meta['year']
@@ -1295,13 +1298,14 @@ def generate_html_with_correct_paths(base_dir, data):
 
             items.forEach(function(item, idx) {{
                 var poster = getPoster(item, category);
-                // Alternância: capa local para tmdb e vice-versa
+                // Alternância: usa local_poster (salvo antes do TMDB sobrescrever) vs poster TMDB
                 var posterAlt = '';
                 if (category !== 'tv') {{
-                    var localFile = item.poster && !item.poster.startsWith('http') ? (RAW_BASE + '/assets/Capas/' + item.poster.split('/').pop()) : '';
-                    var tmdbPoster = item.poster && item.poster.startsWith('http') ? item.poster : '';
-                    if (localFile && tmdbPoster && localFile !== tmdbPoster) {{
-                        posterAlt = (poster === localFile) ? tmdbPoster : localFile;
+                    var tmdbUrl  = (item.poster && item.poster.startsWith('http')) ? item.poster : (item.tmdb_poster || '');
+                    var localRaw = item.local_poster || '';
+                    var localUrl = localRaw ? (RAW_BASE + '/assets/Capas/' + localRaw.split('/').pop()) : '';
+                    if (tmdbUrl && localUrl && tmdbUrl !== localUrl) {{
+                        posterAlt = localUrl;
                     }}
                 }}
                 var episodeCount = item.episodes ? item.episodes.length : 0;
