@@ -464,7 +464,8 @@
                         allPosters.push(localUrl);
                     }
                 }
-                var postersAttr = allPosters.length > 1 ? ' data-posters='' + JSON.stringify(allPosters) + ''' : '';
+                var postersJson = allPosters.length > 1 ? JSON.stringify(allPosters).replace(/"/g, '&quot;') : '';
+                var postersAttr = postersJson ? ' data-posters="' + postersJson + '"' : '';
                 var episodeCount = item.episodes ? item.episodes.length : 0;
                 var meta = category === 'filmes' ? 'Filme'
                          : category === 'tv' ? '📡 Ao Vivo'

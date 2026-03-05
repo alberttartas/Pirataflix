@@ -1,4 +1,4 @@
-const CACHE_NAME = 'pirataflix-v1';
+const CACHE_NAME = 'pirataflix-v2';
 const ASSETS = [
   './', './index.html', './filmes.html', './series.html', './novelas.html',
   './animes.html', './infantil.html', './tv.html',
@@ -19,9 +19,10 @@ self.addEventListener('activate', e => {
 self.addEventListener('fetch', e => {
   if (e.request.method !== 'GET') return;
   e.respondWith(
-    fetch(e.request).then(r => {
-      if (r && r.status === 200) {
-        caches.open(CACHE_NAME).then(c => c.put(e.request, r.clone()));
+    fetch(e.request.clone()).then(r => {
+      if (r && r.status === 200 && r.type !== 'opaque') {
+        const rc = r.clone();
+        caches.open(CACHE_NAME).then(c => c.put(e.request, rc));
       }
       return r;
     }).catch(() => caches.match(e.request))
