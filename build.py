@@ -625,7 +625,10 @@ def fetch_tmdb_metadata(title, media_type='movie'):
         if not results:
             return {}
         item   = results[0]
-        poster = (TMDB_IMG + item['poster_path']) if item.get('poster_path') else ''
+        tmdb_id = item.get('id', '')
+        poster  = (TMDB_IMG + item['poster_path']) if item.get('poster_path') else ''
+        # Backdrop em alta resolução (w1280)
+        backdrop = ('https://image.tmdb.org/t/p/w1280' + item['backdrop_path']) if item.get('backdrop_path') else ''
         genres = []
         genre_map = {
             28:'Ação',18:'Drama',35:'Comédia',27:'Terror',878:'Ficção Científica',
@@ -643,13 +646,34 @@ def fetch_tmdb_metadata(title, media_type='movie'):
         year     = year_raw[:4] if year_raw else ''
         overview = item.get('overview', '')
         vote     = item.get('vote_average', 0)
+
+        # Buscar elenco principal via /credits
+        cast = []
+        if tmdb_id:
+            try:
+                credits_url = f"{TMDB_BASE}/{media_type}/{tmdb_id}/credits?api_key={TMDB_API_KEY}&language=pt-BR"
+                req_c = urllib.request.Request(credits_url, headers={'User-Agent': 'Pirataflix/1.0'})
+                with urllib.request.urlopen(req_c, timeout=8) as rc:
+                    credits_data = json.loads(rc.read())
+                for actor in credits_data.get('cast', [])[:8]:
+                    profile = ('https://image.tmdb.org/t/p/w185' + actor['profile_path']) if actor.get('profile_path') else ''
+                    cast.append({
+                        'name':      actor.get('name', ''),
+                        'character': actor.get('character', ''),
+                        'profile':   profile
+                    })
+            except Exception:
+                pass
+
         return {
             'tmdb_poster':   poster,
+            'backdrop':      backdrop,
             'overview':      overview,
             'year':          year,
             'genres':        genres,
             'rating':        round(vote, 1) if vote else 0,
-            'tmdb_id':       item.get('id', '')
+            'tmdb_id':       tmdb_id,
+            'cast':          cast
         }
     except Exception as e:
         return {}
@@ -671,10 +695,12 @@ def enrich_with_tmdb(output):
             if meta:
                 if meta.get('tmdb_poster') and not item.get('poster','').startswith('http'):
                     item['poster'] = meta['tmdb_poster']
+                if meta.get('backdrop'):   item['backdrop'] = meta['backdrop']
                 if meta.get('overview'):   item['overview'] = meta['overview']
                 if meta.get('year'):       item['year']     = meta['year']
                 if meta.get('genres'):     item['genres']   = meta['genres']
                 if meta.get('rating'):     item['rating']   = meta['rating']
+                if meta.get('cast'):       item['cast']     = meta['cast']
                 print(f"   ✅ [{done}/{total}] {item['title']} ({meta.get('year','')})")
             else:
                 print(f"   ⚠️  [{done}/{total}] {item['title']} — não encontrado no TMDB")
@@ -1108,6 +1134,10 @@ def generate_html_with_correct_paths(base_dir, data):
                 }} else {{
                     initFallbackScroll();
                 }}
+                // Alternância de capas (capa local <-> TMDB)
+                if (typeof window.initPosterRotation === 'function') {{
+                    setTimeout(window.initPosterRotation, 600);
+                }}
             }}, 500);
         }} catch (error) {{
             document.getElementById('content').innerHTML =
@@ -1265,13 +1295,22 @@ def generate_html_with_correct_paths(base_dir, data):
 
             items.forEach(function(item, idx) {{
                 var poster = getPoster(item, category);
+                // Alternância: capa local para tmdb e vice-versa
+                var posterAlt = '';
+                if (category !== 'tv') {{
+                    var localFile = item.poster && !item.poster.startsWith('http') ? (RAW_BASE + '/assets/Capas/' + item.poster.split('/').pop()) : '';
+                    var tmdbPoster = item.poster && item.poster.startsWith('http') ? item.poster : '';
+                    if (localFile && tmdbPoster && localFile !== tmdbPoster) {{
+                        posterAlt = (poster === localFile) ? tmdbPoster : localFile;
+                    }}
+                }}
                 var episodeCount = item.episodes ? item.episodes.length : 0;
                 var meta = category === 'filmes' ? 'Filme'
                          : category === 'tv' ? '📡 Ao Vivo'
                          : (item.seasons && item.seasons.length > 1) ? item.seasons.length + ' temporadas'
                          : episodeCount + ' episódios';
                 var itemKey = (category === 'tv') ? String(idx) : item.id;
-                html += '<div class="item-card" data-category="' + category + '" data-id="' + itemKey + '">';
+                html += '<div class="item-card" data-category="' + category + '" data-id="' + itemKey + '"' + (posterAlt ? ' data-poster-alt="' + posterAlt + '"' : '') + '>';
                 html += safeImg(poster, item.title);
                 html += '<div class="item-info">';
                 html += '<div class="item-title">' + item.title + '</div>';
