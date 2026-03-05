@@ -665,8 +665,28 @@ def fetch_tmdb_metadata(title, media_type='movie'):
             except Exception:
                 pass
 
+        # Buscar múltiplas capas via /images
+        posters = []
+        if tmdb_id:
+            try:
+                images_url = f"{TMDB_BASE}/{media_type}/{tmdb_id}/images?api_key={TMDB_API_KEY}&include_image_language=pt,null,en"
+                req_i = urllib.request.Request(images_url, headers={'User-Agent': 'Pirataflix/1.0'})
+                with urllib.request.urlopen(req_i, timeout=8) as ri:
+                    images_data = json.loads(ri.read())
+                for p in images_data.get('posters', [])[:6]:
+                    if p.get('file_path'):
+                        url_p = 'https://image.tmdb.org/t/p/w500' + p['file_path']
+                        if url_p not in posters:
+                            posters.append(url_p)
+            except Exception:
+                pass
+        # Garantir que o poster principal está na lista
+        if poster and poster not in posters:
+            posters.insert(0, poster)
+
         return {
             'tmdb_poster':   poster,
+            'posters':       posters,
             'backdrop':      backdrop,
             'overview':      overview,
             'year':          year,
@@ -694,10 +714,11 @@ def enrich_with_tmdb(output):
             meta = fetch_tmdb_metadata(item['title'], mtype)
             if meta:
                 if meta.get('tmdb_poster') and not item.get('poster','').startswith('http'):
-                    item['local_poster'] = item['poster']   # preservar capa local
+                    item['local_poster'] = item['poster']
                     item['poster'] = meta['tmdb_poster']
                 elif meta.get('tmdb_poster') and item.get('poster','').startswith('http'):
-                    item['tmdb_poster'] = meta['tmdb_poster']  # já é TMDB, guardar mesmo assim
+                    item['tmdb_poster'] = meta['tmdb_poster']
+                if meta.get('posters'):    item['posters']  = meta['posters']
                 if meta.get('backdrop'):   item['backdrop'] = meta['backdrop']
                 if meta.get('overview'):   item['overview'] = meta['overview']
                 if meta.get('year'):       item['year']     = meta['year']
@@ -1298,23 +1319,30 @@ def generate_html_with_correct_paths(base_dir, data):
 
             items.forEach(function(item, idx) {{
                 var poster = getPoster(item, category);
-                // Alternância: usa local_poster (salvo antes do TMDB sobrescrever) vs poster TMDB
-                var posterAlt = '';
+                // Montar lista completa de capas: TMDB posters + capa local
+                var allPosters = [];
                 if (category !== 'tv') {{
-                    var tmdbUrl  = (item.poster && item.poster.startsWith('http')) ? item.poster : (item.tmdb_poster || '');
                     var localRaw = item.local_poster || '';
                     var localUrl = localRaw ? (RAW_BASE + '/assets/Capas/' + localRaw.split('/').pop()) : '';
-                    if (tmdbUrl && localUrl && tmdbUrl !== localUrl) {{
-                        posterAlt = localUrl;
+                    // Começar com posters TMDB
+                    if (item.posters && item.posters.length) {{
+                        allPosters = item.posters.slice();
+                    }} else if (item.poster && item.poster.startsWith('http')) {{
+                        allPosters = [item.poster];
+                    }}
+                    // Adicionar capa local se existir e não estiver na lista
+                    if (localUrl && allPosters.indexOf(localUrl) === -1) {{
+                        allPosters.push(localUrl);
                     }}
                 }}
+                var postersAttr = allPosters.length > 1 ? ' data-posters=\'' + JSON.stringify(allPosters) + '\'' : '';
                 var episodeCount = item.episodes ? item.episodes.length : 0;
                 var meta = category === 'filmes' ? 'Filme'
                          : category === 'tv' ? '📡 Ao Vivo'
                          : (item.seasons && item.seasons.length > 1) ? item.seasons.length + ' temporadas'
                          : episodeCount + ' episódios';
                 var itemKey = (category === 'tv') ? String(idx) : item.id;
-                html += '<div class="item-card" data-category="' + category + '" data-id="' + itemKey + '"' + (posterAlt ? ' data-poster-alt="' + posterAlt + '"' : '') + '>';
+                html += '<div class="item-card" data-category="' + category + '" data-id="' + itemKey + '"' + postersAttr + '>';
                 html += safeImg(poster, item.title);
                 html += '<div class="item-info">';
                 html += '<div class="item-title">' + item.title + '</div>';
@@ -1407,7 +1435,7 @@ def generate_html_with_correct_paths(base_dir, data):
         <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zm-8 2V5h2v6h1.17L12 13.17 9.83 11H11zm-6 7h14v2H5z"/></svg>
         Instalar App
     </button>
-    
+
 </body>
 </html>'''
 
@@ -1424,4 +1452,3 @@ def generate_html_with_correct_paths(base_dir, data):
 
 if __name__ == "__main__":
     build_vod_with_direct_capas()
-
