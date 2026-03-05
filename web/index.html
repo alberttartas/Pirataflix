@@ -287,6 +287,10 @@
                 } else {
                     initFallbackScroll();
                 }
+                // Alternância de capas (capa local <-> TMDB)
+                if (typeof window.initPosterRotation === 'function') {
+                    setTimeout(window.initPosterRotation, 600);
+                }
             }, 500);
         } catch (error) {
             document.getElementById('content').innerHTML =
@@ -444,13 +448,22 @@
 
             items.forEach(function(item, idx) {
                 var poster = getPoster(item, category);
+                // Alternância: capa local para tmdb e vice-versa
+                var posterAlt = '';
+                if (category !== 'tv') {
+                    var localFile = item.poster && !item.poster.startsWith('http') ? (RAW_BASE + '/assets/Capas/' + item.poster.split('/').pop()) : '';
+                    var tmdbPoster = item.poster && item.poster.startsWith('http') ? item.poster : '';
+                    if (localFile && tmdbPoster && localFile !== tmdbPoster) {
+                        posterAlt = (poster === localFile) ? tmdbPoster : localFile;
+                    }
+                }
                 var episodeCount = item.episodes ? item.episodes.length : 0;
                 var meta = category === 'filmes' ? 'Filme'
                          : category === 'tv' ? '📡 Ao Vivo'
                          : (item.seasons && item.seasons.length > 1) ? item.seasons.length + ' temporadas'
                          : episodeCount + ' episódios';
                 var itemKey = (category === 'tv') ? String(idx) : item.id;
-                html += '<div class="item-card" data-category="' + category + '" data-id="' + itemKey + '">';
+                html += '<div class="item-card" data-category="' + category + '" data-id="' + itemKey + '"' + (posterAlt ? ' data-poster-alt="' + posterAlt + '"' : '') + '>';
                 html += safeImg(poster, item.title);
                 html += '<div class="item-info">';
                 html += '<div class="item-title">' + item.title + '</div>';
