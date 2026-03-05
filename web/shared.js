@@ -1,5 +1,5 @@
 // ============================================
-// PIRATAFLIX shared.js 
+// PIRATAFLIX shared.js v3
 // ============================================
 
 window.RAW_BASE        = 'https://raw.githubusercontent.com/alberttartas/Pirataflix/main';
@@ -104,25 +104,31 @@ function playFirstEpisode(category, itemId) {
 // Alterna entre capa local e poster TMDB a cada 5s com fade
 // =====================
 function initPosterRotation() {
-    document.querySelectorAll('.item-card').forEach(card => {
-        const img     = card.querySelector('.item-poster');
-        const altSrc  = card.dataset.posterAlt;
-        if (!img || !altSrc || altSrc === img.src) return;
+    const INTERVAL = 2 * 60 * 1000; // 2 minutos
+    const FADE     = 500;            // ms do fade
 
-        const primary = img.getAttribute('src');
-        let showingPrimary = true;
+    document.querySelectorAll('.item-card').forEach(card => {
+        const img        = card.querySelector('.item-poster');
+        const postersRaw = card.dataset.posters;
+        if (!img || !postersRaw) return;
+
+        let posters;
+        try { posters = JSON.parse(postersRaw); } catch(e) { return; }
+        if (!posters || posters.length < 2) return;
+
+        let idx = 0;
 
         // Offset aleatório para não trocarem todos ao mesmo tempo
-        const delay = Math.random() * 4500 + 500;
+        const delay = Math.random() * (INTERVAL * 0.9);
         setTimeout(() => {
             card._posterInterval = setInterval(() => {
+                idx = (idx + 1) % posters.length;
                 img.style.opacity = '0';
                 setTimeout(() => {
-                    img.setAttribute('src', showingPrimary ? altSrc : primary);
+                    img.setAttribute('src', posters[idx]);
                     img.style.opacity = '1';
-                    showingPrimary = !showingPrimary;
-                }, 400);
-            }, 5500);
+                }, FADE);
+            }, INTERVAL);
         }, delay);
     });
 }
