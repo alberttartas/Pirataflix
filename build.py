@@ -794,7 +794,7 @@ def generate_pwa_files(web_dir):
     print(f"✅ PWA manifest gerado: {manifest_path}")
 
     # --- sw.js ---
-    sw_content = """const CACHE_NAME = 'pirataflix-v1';
+    sw_content = """const CACHE_NAME = 'pirataflix-v2';
 const ASSETS = [
   './', './index.html', './filmes.html', './series.html', './novelas.html',
   './animes.html', './infantil.html', './tv.html',
@@ -815,9 +815,10 @@ self.addEventListener('activate', e => {
 self.addEventListener('fetch', e => {
   if (e.request.method !== 'GET') return;
   e.respondWith(
-    fetch(e.request).then(r => {
-      if (r && r.status === 200) {
-        caches.open(CACHE_NAME).then(c => c.put(e.request, r.clone()));
+    fetch(e.request.clone()).then(r => {
+      if (r && r.status === 200 && r.type !== 'opaque') {
+        const rc = r.clone();
+        caches.open(CACHE_NAME).then(c => c.put(e.request, rc));
       }
       return r;
     }).catch(() => caches.match(e.request))
@@ -1335,7 +1336,8 @@ def generate_html_with_correct_paths(base_dir, data):
                         allPosters.push(localUrl);
                     }}
                 }}
-                var postersAttr = allPosters.length > 1 ? ' data-posters=\'' + JSON.stringify(allPosters) + '\'' : '';
+                var postersJson = allPosters.length > 1 ? JSON.stringify(allPosters).replace(/"/g, '&quot;') : '';
+                var postersAttr = postersJson ? ' data-posters="' + postersJson + '"' : '';
                 var episodeCount = item.episodes ? item.episodes.length : 0;
                 var meta = category === 'filmes' ? 'Filme'
                          : category === 'tv' ? '📡 Ao Vivo'
