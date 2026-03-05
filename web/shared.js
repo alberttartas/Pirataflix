@@ -113,7 +113,10 @@ function initPosterRotation() {
         if (!img || !postersRaw) return;
 
         let posters;
-        try { posters = JSON.parse(postersRaw); } catch(e) { return; }
+        try {
+            // dataset já decodifica &quot; automaticamente via getAttribute
+            posters = JSON.parse(postersRaw);
+        } catch(e) { return; }
         if (!posters || posters.length < 2) return;
 
         let idx = 0;
