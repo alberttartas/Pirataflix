@@ -24,7 +24,7 @@
     {
       "id": "lilo_stitch_filme",
       "title": "Lilo & Stitch Filme",
-      "poster": "https://image.tmdb.org/t/p/w500/1LCfRArffse3PnqkACooOHkWcry.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/ottRXMCQ9jPB318syTcfIdtJWIE.jpg",
       "episodes": [
         {
           "title": "Lilo & Stitch – Filme 2025",
@@ -33,19 +33,19 @@
         }
       ],
       "type": "movie",
-      "overview": "Como recompensa por reunir os 625 experimentos, Lilo, Stitch, Jumba e Pleakley foram colocados em locais ao redor da galáxia onde cada um pensa estar \"no seu lugar\". Suas vidas viram de cabeça pra baixo quando o ignóbil Dr. Hamsterviel escapa da prisāo e força Jumba a criar um novo experimento, Leroy, o gêmeo malvado de Stitch. Para piorar as coisas, Hamsterviel logo clona a endiabrada criatura, formando seu proprio exército do mal. Agora cabe a Lilo reunir Stitch e o resto da turma dos cantos mais longínquos da galáxia para enfrentar a legião de Leroys. Ouando as coisas se complicam, nossos amigos descobrem que eles realmente devem permanecer juntos.",
-      "year": "2006",
+      "overview": "Lilo é uma garotinha de cinco anos que ama cuidar de animais. Um dia ela adota um cachorro e decide chamá-lo de Stitch. O que ela não sabe é que Stitch é um alienígena e um dos criminosos mais perigosos da galáxia. Agora, para escapar de seus captores que ainda o persegue, Stitch decide se passar por um cachorro comum, criando com o tempo um laço de amizade com Lilo.",
+      "year": "2002",
       "genres": [
         "Animação",
-        "Comédia",
-        "Família"
+        "Família",
+        "Comédia"
       ],
-      "rating": 6.5
+      "rating": 7.6
     },
     {
       "id": "princesa_mononoke_dublado",
       "title": "Princesa Mononoke Dublado",
-      "poster": "/Pirataflix/assets/Capas/princesa mononoke.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/d4NaGE6rXBlQG6aT9Z7XqSTBBVh.jpg",
       "episodes": [
         {
           "title": "Princesa Mononoke (Dublado) Ep 01",
@@ -53,7 +53,11 @@
           "episode": 1
         }
       ],
-      "type": "movie"
+      "type": "movie",
+      "year": "2004",
+      "genres": [
+        "Documentário"
+      ]
     },
     {
       "id": "ainda_estou_aqui",
@@ -40035,7 +40039,7 @@
     {
       "id": "boku_no_hero_academia_dublado",
       "title": "Boku No Hero Academia (dublado)",
-      "poster": "/Pirataflix/assets/Capas/boku_no_hero_academia_dublado.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/fS9M8vz8WwaG9Mj0TKDji428Sx7.jpg",
       "seasons": [
         {
           "season": 1,
@@ -41736,7 +41740,15 @@
         }
       ],
       "type": "series",
-      "category": "animes"
+      "category": "animes",
+      "overview": "Koichi Haimawari é um estudante universitário monótono que sonhava em ser um herói, mas desistiu desse objetivo. Embora 80% da população mundial tenha poderes sobre-humanos chamados \"Individualidades\", poucos são escolhidos para levar o título de herói e proteger as pessoas. Tudo muda para Koichi quando ele e Pop☆Step são salvos pelo vigilante Knuckleduster, e acabam sendo recrutados para se tornarem vigilantes!",
+      "year": "2025",
+      "genres": [
+        "Animação",
+        "Ação & Aventura",
+        "Drama"
+      ],
+      "rating": 7.8
     },
     {
       "id": "sousou_no_frieren",
@@ -43064,7 +43076,7 @@
     {
       "id": "dandandan",
       "title": "Dandandan",
-      "poster": "/Pirataflix/assets/Capas/dandandan.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/vtQug1eOyeU2VXIpNoDF1lTlcH4.jpg",
       "seasons": [
         {
           "season": 1,
@@ -43198,7 +43210,15 @@
         }
       ],
       "type": "series",
-      "category": "animes"
+      "category": "animes",
+      "overview": "Quando a estudante do ensino médio Momo – que vem de uma família de médiuns e não acredita em alienígenas – encontra Okarun, um garoto obcecado por ocultismo que acredita em extraterrestres, a rivalidade entre os dois coloca a dupla diante de ameaças paranormais reais. Momo descobre seus poderes espirituais, enquanto Okarun ganha habilidades ao ser possuído por uma maldição, o que faz com que se unam para lutar contra yokai, OVNIs e caos de outros mundos.",
+      "year": "2024",
+      "genres": [
+        "Animação",
+        "Ação & Aventura",
+        "Comédia"
+      ],
+      "rating": 8.6
     },
     {
       "id": "one_piece",
