@@ -448,23 +448,30 @@
 
             items.forEach(function(item, idx) {
                 var poster = getPoster(item, category);
-                // Alternância: usa local_poster (salvo antes do TMDB sobrescrever) vs poster TMDB
-                var posterAlt = '';
+                // Montar lista completa de capas: TMDB posters + capa local
+                var allPosters = [];
                 if (category !== 'tv') {
-                    var tmdbUrl  = (item.poster && item.poster.startsWith('http')) ? item.poster : (item.tmdb_poster || '');
                     var localRaw = item.local_poster || '';
                     var localUrl = localRaw ? (RAW_BASE + '/assets/Capas/' + localRaw.split('/').pop()) : '';
-                    if (tmdbUrl && localUrl && tmdbUrl !== localUrl) {
-                        posterAlt = localUrl;
+                    // Começar com posters TMDB
+                    if (item.posters && item.posters.length) {
+                        allPosters = item.posters.slice();
+                    } else if (item.poster && item.poster.startsWith('http')) {
+                        allPosters = [item.poster];
+                    }
+                    // Adicionar capa local se existir e não estiver na lista
+                    if (localUrl && allPosters.indexOf(localUrl) === -1) {
+                        allPosters.push(localUrl);
                     }
                 }
+                var postersAttr = allPosters.length > 1 ? ' data-posters='' + JSON.stringify(allPosters) + ''' : '';
                 var episodeCount = item.episodes ? item.episodes.length : 0;
                 var meta = category === 'filmes' ? 'Filme'
                          : category === 'tv' ? '📡 Ao Vivo'
                          : (item.seasons && item.seasons.length > 1) ? item.seasons.length + ' temporadas'
                          : episodeCount + ' episódios';
                 var itemKey = (category === 'tv') ? String(idx) : item.id;
-                html += '<div class="item-card" data-category="' + category + '" data-id="' + itemKey + '"' + (posterAlt ? ' data-poster-alt="' + posterAlt + '"' : '') + '>';
+                html += '<div class="item-card" data-category="' + category + '" data-id="' + itemKey + '"' + postersAttr + '>';
                 html += safeImg(poster, item.title);
                 html += '<div class="item-info">';
                 html += '<div class="item-title">' + item.title + '</div>';
@@ -557,6 +564,6 @@
         <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zm-8 2V5h2v6h1.17L12 13.17 9.83 11H11zm-6 7h14v2H5z"/></svg>
         Instalar App
     </button>
-    
+
 </body>
 </html>

@@ -13,6 +13,14 @@
       ],
       "type": "movie",
       "local_poster": "/Pirataflix/assets/Capas/2_coelhos.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/iVX3VNB4Zi0kS1Zw24BKQhiuBtl.jpg",
+        "https://image.tmdb.org/t/p/w500/a10bWLpmCSlfz2olvOprIWUdras.jpg",
+        "https://image.tmdb.org/t/p/w500/892aC897BynLiXtWxDzAhRPTPzQ.jpg",
+        "https://image.tmdb.org/t/p/w500/eQH48Oyvy3M85BWxPywET6BjWMt.jpg",
+        "https://image.tmdb.org/t/p/w500/a22mljhA63S9J6X0URsbDB65nFM.jpg",
+        "https://image.tmdb.org/t/p/w500/y06wNiAZzOPKOBi7Qn46e7Zdyoz.jpg"
+      ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/roHJmwFlNtHdqEd1clB2l0IAqTt.jpg",
       "overview": "Após se envolver em um grave acidente automobilístico, no qual uma mulher e seu filho são mortos, Edgar é indiciado, mas consegue escapar da prisão graças à influência de um deputado estadual. Logo em seguida ele parte para uma temporada em Miami, onde retorna com um elaborado plano em que pretende atingir tanto o deputado que o ajudou, símbolo da corrupção política, quanto Maicon, um criminoso que consegue escapar da justiça graças ao suborno de políticos influentes.",
       "year": "2012",
@@ -66,6 +74,19 @@
       ]
     },
     {
+      "id": "spy_x_famiy_code_white",
+      "title": "Spy X Famiy Code: White",
+      "poster": "/Pirataflix/assets/Capas/default.jpg",
+      "episodes": [
+        {
+          "title": "SPY x FAMILY CODE: White",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/s/spy-x-family-code-white-dublado/01.mp4/index.m3u8",
+          "episode": 1
+        }
+      ],
+      "type": "movie"
+    },
+    {
       "id": "princesa_mononoke_dublado",
       "title": "Princesa Mononoke Dublado",
       "poster": "https://image.tmdb.org/t/p/w500/d4NaGE6rXBlQG6aT9Z7XqSTBBVh.jpg",
@@ -78,6 +99,9 @@
       ],
       "type": "movie",
       "local_poster": "/Pirataflix/assets/Capas/princesa mononoke.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/d4NaGE6rXBlQG6aT9Z7XqSTBBVh.jpg"
+      ],
       "year": "2004",
       "genres": [
         "Documentário"
@@ -123,6 +147,14 @@
       ],
       "type": "movie",
       "local_poster": "/Pirataflix/assets/Capas/ainda_estou_aqui.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/gZnsMbhCvhzAQlKaVpeFRHYjGyb.jpg",
+        "https://image.tmdb.org/t/p/w500/yY0HDAGfu79cpOLQBgR3kgGZ7HS.jpg",
+        "https://image.tmdb.org/t/p/w500/quSUoX9zBrK7abP20fRf4d5YlXA.jpg",
+        "https://image.tmdb.org/t/p/w500/zNAw7jK8bwCK56rIW676pdgkwhd.jpg",
+        "https://image.tmdb.org/t/p/w500/b089cRxHzCZqixMNgTz3xQPEKTG.jpg",
+        "https://image.tmdb.org/t/p/w500/qNLMPY3KLrYgTX2QZ5iEwwOqyRz.jpg"
+      ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/j9uruwRe9qM8RnP758dF7ISB8Bj.jpg",
       "overview": "No início da década de 1970, o Brasil enfrenta o endurecimento da ditadura militar. No Rio de Janeiro, a família Paiva – Rubens, Eunice e seus cinco filhos – vive à beira da praia em uma casa de portas abertas para os amigos. Um dia, Rubens Paiva é levado por militares à paisana e desaparece.",
       "year": "2024",
@@ -187,6 +219,14 @@
       ],
       "type": "movie",
       "local_poster": "/Pirataflix/assets/Capas/homem_com_h.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/sOed9XD0TS9d0XRSnTiw5tpXIIO.jpg",
+        "https://image.tmdb.org/t/p/w500/oXRqROca0iCJrkOultglQ2gcc0Y.jpg",
+        "https://image.tmdb.org/t/p/w500/xExgeiovpUKl2gvvEkECKky3zUA.jpg",
+        "https://image.tmdb.org/t/p/w500/STOYx9aepaMnmhlGiWoDtkdzs1.jpg",
+        "https://image.tmdb.org/t/p/w500/xCYgD1N4S9at70p4WdskbVWHgZS.jpg",
+        "https://image.tmdb.org/t/p/w500/oL1EMPQxZBpNAsDecFt3A9J7g7c.jpg"
+      ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/38byjV1A8WpA05xiXl0AXZCnCfv.jpg",
       "overview": "Dono de uma voz inconfundível e de performances memoráveis, Ney Matogrosso morava com os pais e irmãos na pequena cidade de Bela Vista (MS). Os embates com o pai, que insistia que o menino “virasse homem”, levaram Ney a se afastar da família, antes de enveredar para a vida artística. Anos depois de sair de casa, em São Paulo, estreou como vocalista dos Secos e Molhados, dando início às performances históricas que o definiram como um dos maiores artistas brasileiros da atualidade.",
       "year": "2025",
@@ -239,19 +279,6 @@
       ]
     },
     {
-      "id": "spy_x_family_filme",
-      "title": "Spy-x-family-filme",
-      "poster": "/Pirataflix/assets/Capas/spy_x_family.jpg",
-      "episodes": [
-        {
-          "title": "SPY x FAMILY CODE: White",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/s/spy-x-family-code-white-dublado/01.mp4/index.m3u8",
-          "episode": 1
-        }
-      ],
-      "type": "movie"
-    },
-    {
       "id": "lilo_stitch_live_action",
       "title": "Lilo & Stitch Live Action",
       "poster": "/Pirataflix/assets/Capas/Lilo & Stitch Live Action.jpg",
@@ -277,6 +304,14 @@
       ],
       "type": "movie",
       "local_poster": "/Pirataflix/assets/Capas/familia_pero_no_mucho.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/mNAb8OTrlhW5eFwlsPUW3CRXCXh.jpg",
+        "https://image.tmdb.org/t/p/w500/g0Q7m2s2k0ZWdzIs07AvPKHoA9Q.jpg",
+        "https://image.tmdb.org/t/p/w500/sJTEJDlUwuXet2s8Ou6MUryqpQh.jpg",
+        "https://image.tmdb.org/t/p/w500/n4frNcukpO1doc4fgH46RjNFsL5.jpg",
+        "https://image.tmdb.org/t/p/w500/rZEqYIhk0jVHZc9HGIB3GkYu3Or.jpg",
+        "https://image.tmdb.org/t/p/w500/qZQLQ4pXTw1mJbrB6DSCpDnBSLZ.jpg"
+      ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/lP5kcBL67k4aduIEzlSTVRR4RBh.jpg",
       "overview": "Um pai brasileiro viaja até Bariloche com a família para conhecer os futuros sogros da filha — até que tudo acaba em treta.",
       "year": "2025",
@@ -405,6 +440,13 @@
       "type": "series",
       "category": "series",
       "local_poster": "/Pirataflix/assets/Capas/unfamiliar.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/fX0Kvvo6hj9feqS3JyFpVmscz2Y.jpg",
+        "https://image.tmdb.org/t/p/w500/n8CWRI8k1pLT1HAmIy0mAerDJmc.jpg",
+        "https://image.tmdb.org/t/p/w500/OvNMzIOJIzDlouhZVqCHRE6HlL.jpg",
+        "https://image.tmdb.org/t/p/w500/1mCU3UEnGItOp7heoDdwRCtpmod.jpg",
+        "https://image.tmdb.org/t/p/w500/DZRZVh3uPSFkOF4udkVqD95hdk.jpg"
+      ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/qDq3dG4ElRohih5fUGNQRLHuBaC.jpg",
       "overview": "Quando o passado bate à porta de um casal de ex-espiões, o maior desafio não são as perseguições, os tiroteios e as brigas... é contar a verdade um ao outro.",
       "year": "2026",
@@ -811,6 +853,14 @@
       "type": "series",
       "category": "series",
       "local_poster": "/Pirataflix/assets/Capas/todo_mundo_odeia_o_chris.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/dXyy1e3TJ5ut6DRCrQQT3TcsrGU.jpg",
+        "https://image.tmdb.org/t/p/w500/zX0xZnyReJxtGAqDOS3WcsgpOgx.jpg",
+        "https://image.tmdb.org/t/p/w500/4BYXh0cY3AyyUB05CTLVJO5FjCM.jpg",
+        "https://image.tmdb.org/t/p/w500/3FjakKDEuaO8FpR1qJctV6njqYy.jpg",
+        "https://image.tmdb.org/t/p/w500/nYfvhUtbqMGtd5iV9sj2fdEFN5p.jpg",
+        "https://image.tmdb.org/t/p/w500/5rqCyqJWi7LqbuCJyRCNaZtKcHc.jpg"
+      ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/qji729gwCW88RpIIWidlaLTul3V.jpg",
       "overview": "Para Chris, fazer 13 anos não tem nada de maravilhoso. Ele é o único negro da turma do ensino médio, onde tem uma educação medíocre. É amigo de Greg, e é frequentemente abusado por Joey Caruso. Ambos os pais trabalham e ele cuida de seus dois irmãos. Parece trágico, mas é hilário.",
       "year": "2005",
@@ -1025,6 +1075,15 @@
       "type": "series",
       "category": "series",
       "local_poster": "/Pirataflix/assets/Capas/Bridgerton.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/rAKJSFPXv9aFpeZAyr0yNg0HxuP.jpg",
+        "https://image.tmdb.org/t/p/w500/uXTg565ahu9RwonCX1V2Hex1NU6.jpg",
+        "https://image.tmdb.org/t/p/w500/zCEm0xrRMa5fLCQ9d0nvcw6tvcr.jpg",
+        "https://image.tmdb.org/t/p/w500/dxRdS7dSbSDv0YLdkjbxzIAZHoq.jpg",
+        "https://image.tmdb.org/t/p/w500/v2TL9tcfsFsFY1wM8rhwiQwo01t.jpg",
+        "https://image.tmdb.org/t/p/w500/qaewZKBKmXjb4ZfFBb1LCug6BE8.jpg",
+        "https://image.tmdb.org/t/p/w500/olviL1bDh3UjK3Bao8Y7ypPqE7k.jpg"
+      ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/iVadPLeLVb97RznIGDkswxtBzi6.jpg",
       "overview": "Um mundo sensual, luxuoso e competitivo da alta sociedade londrina no início do século XIX. Nesse período, a família Bridgerton, composta por oito irmãos, enfrenta o disputado mercado de casamentos, os bailes suntuosos de Mayfair e os palácios aristocráticos de Park Lane.",
       "year": "2020",
@@ -1076,9 +1135,165 @@
       ]
     },
     {
-      "id": "dona_beja_2026",
-      "title": "Dona Beja 2026",
-      "poster": "/Pirataflix/assets/Capas/default.jpg",
+      "id": "rainhas_da_grana",
+      "title": "Rainhas Da Grana",
+      "poster": "https://image.tmdb.org/t/p/w500/j03RtWsauZNNFdSrHbJoxdX5HYO.jpg",
+      "seasons": [
+        {
+          "season": 1,
+          "episodes": [
+            {
+              "title": "RAINHADAGRANA1x01",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/RAINHADAGRANA/RAINHADAGRANA1x01.mp4",
+              "episode": 1
+            },
+            {
+              "title": "RAINHADAGRANA1x02",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/RAINHADAGRANA/RAINHADAGRANA1x02.mp4",
+              "episode": 2
+            },
+            {
+              "title": "RAINHADAGRANA1x03",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/RAINHADAGRANA/RAINHADAGRANA1x03.mp4",
+              "episode": 3
+            },
+            {
+              "title": "RAINHADAGRANA1x04",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/RAINHADAGRANA/RAINHADAGRANA1x04.mp4",
+              "episode": 4
+            },
+            {
+              "title": "RAINHADAGRANA1x05",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/RAINHADAGRANA/RAINHADAGRANA1x05.mp4",
+              "episode": 5
+            },
+            {
+              "title": "RAINHADAGRANA1x06",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/RAINHADAGRANA/RAINHADAGRANA1x06.mp4",
+              "episode": 6
+            },
+            {
+              "title": "RAINHADAGRANA1x07",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/RAINHADAGRANA/RAINHADAGRANA1x07.mp4",
+              "episode": 7
+            },
+            {
+              "title": "RAINHADAGRANA1x08",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/RAINHADAGRANA/RAINHADAGRANA1x08.mp4",
+              "episode": 8
+            }
+          ]
+        }
+      ],
+      "episodes": [
+        {
+          "title": "RAINHADAGRANA1x01",
+          "url": "https://cdn-novflix.com/storagePSN/SERIES/RAINHADAGRANA/RAINHADAGRANA1x01.mp4",
+          "episode": 1
+        },
+        {
+          "title": "RAINHADAGRANA1x02",
+          "url": "https://cdn-novflix.com/storagePSN/SERIES/RAINHADAGRANA/RAINHADAGRANA1x02.mp4",
+          "episode": 2
+        },
+        {
+          "title": "RAINHADAGRANA1x03",
+          "url": "https://cdn-novflix.com/storagePSN/SERIES/RAINHADAGRANA/RAINHADAGRANA1x03.mp4",
+          "episode": 3
+        },
+        {
+          "title": "RAINHADAGRANA1x04",
+          "url": "https://cdn-novflix.com/storagePSN/SERIES/RAINHADAGRANA/RAINHADAGRANA1x04.mp4",
+          "episode": 4
+        },
+        {
+          "title": "RAINHADAGRANA1x05",
+          "url": "https://cdn-novflix.com/storagePSN/SERIES/RAINHADAGRANA/RAINHADAGRANA1x05.mp4",
+          "episode": 5
+        },
+        {
+          "title": "RAINHADAGRANA1x06",
+          "url": "https://cdn-novflix.com/storagePSN/SERIES/RAINHADAGRANA/RAINHADAGRANA1x06.mp4",
+          "episode": 6
+        },
+        {
+          "title": "RAINHADAGRANA1x07",
+          "url": "https://cdn-novflix.com/storagePSN/SERIES/RAINHADAGRANA/RAINHADAGRANA1x07.mp4",
+          "episode": 7
+        },
+        {
+          "title": "RAINHADAGRANA1x08",
+          "url": "https://cdn-novflix.com/storagePSN/SERIES/RAINHADAGRANA/RAINHADAGRANA1x08.mp4",
+          "episode": 8
+        }
+      ],
+      "type": "series",
+      "category": "series",
+      "local_poster": "/Pirataflix/assets/Capas/rainhas_da_grana.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/g1p2cnWAhZcdeK31styndyqrGCN.jpg",
+        "https://image.tmdb.org/t/p/w500/hu9DpdDLU7W0nqmsAJPmWKDeRjT.jpg",
+        "https://image.tmdb.org/t/p/w500/ad7jxVVXwV7Xr92qemTENzngPcy.jpg",
+        "https://image.tmdb.org/t/p/w500/pgKPoEtlu5YalQfnmEZqIEcSHMv.jpg",
+        "https://image.tmdb.org/t/p/w500/eMfxjfQT4wEHLErNANe4EVMUMyZ.jpg",
+        "https://image.tmdb.org/t/p/w500/j03RtWsauZNNFdSrHbJoxdX5HYO.jpg"
+      ],
+      "backdrop": "https://image.tmdb.org/t/p/w1280/djAGltv1bVw625yYku4CyA42gq0.jpg",
+      "overview": "No limite do desespero, cinco amigas decidem que a única saída é formar uma gangue, conseguir armas e começar a assaltar bancos.",
+      "year": "2026",
+      "genres": [
+        "Comédia",
+        "Ação & Aventura",
+        "Drama"
+      ],
+      "rating": 5.6,
+      "cast": [
+        {
+          "name": "Rebecca Marder",
+          "character": "",
+          "profile": "https://image.tmdb.org/t/p/w185/nVjmGILgh0CLMMmMaphCOnTZ34X.jpg"
+        },
+        {
+          "name": "Naidra Ayadi",
+          "character": "",
+          "profile": "https://image.tmdb.org/t/p/w185/oNUYzgil3ZrduOELBJvC79YjXzb.jpg"
+        },
+        {
+          "name": "Zoé Marchal",
+          "character": "",
+          "profile": "https://image.tmdb.org/t/p/w185/cAc417DqXCnygDvGTKE3K1Wb3hn.jpg"
+        },
+        {
+          "name": "Pascale Arbillot",
+          "character": "",
+          "profile": "https://image.tmdb.org/t/p/w185/sFLTfpEqhkEYwYKWxrWlGW2CVXt.jpg"
+        },
+        {
+          "name": "Jonathan Cohen",
+          "character": "",
+          "profile": "https://image.tmdb.org/t/p/w185/T7ucGNWUDsRRXrjjVfY3uhPfMq.jpg"
+        },
+        {
+          "name": "Tya Deslauriers",
+          "character": "",
+          "profile": "https://image.tmdb.org/t/p/w185/gfivKQolrZX1Qu7xSWYJgzQV3qK.jpg"
+        },
+        {
+          "name": "François Damiens",
+          "character": "",
+          "profile": "https://image.tmdb.org/t/p/w185/agHzt46feTHdFK9YdgRjmnqFUtS.jpg"
+        },
+        {
+          "name": "Brahim Koutari",
+          "character": "",
+          "profile": "https://image.tmdb.org/t/p/w185/mcbpH7vJz1l8jthtGDLfCPtFgxq.jpg"
+        }
+      ]
+    },
+    {
+      "id": "dona_beja",
+      "title": "Dona Beja",
+      "poster": "https://image.tmdb.org/t/p/w500/eN3jw7AEOwNtTQTsGVHlEPvs6OC.jpg",
       "seasons": [
         {
           "season": 1,
@@ -1339,153 +1554,64 @@
         }
       ],
       "type": "series",
-      "category": "series"
-    },
-    {
-      "id": "rainhas_da_grana",
-      "title": "Rainhas Da Grana",
-      "poster": "https://image.tmdb.org/t/p/w500/j03RtWsauZNNFdSrHbJoxdX5HYO.jpg",
-      "seasons": [
-        {
-          "season": 1,
-          "episodes": [
-            {
-              "title": "RAINHADAGRANA1x01",
-              "url": "https://cdn-novflix.com/storagePSN/SERIES/RAINHADAGRANA/RAINHADAGRANA1x01.mp4",
-              "episode": 1
-            },
-            {
-              "title": "RAINHADAGRANA1x02",
-              "url": "https://cdn-novflix.com/storagePSN/SERIES/RAINHADAGRANA/RAINHADAGRANA1x02.mp4",
-              "episode": 2
-            },
-            {
-              "title": "RAINHADAGRANA1x03",
-              "url": "https://cdn-novflix.com/storagePSN/SERIES/RAINHADAGRANA/RAINHADAGRANA1x03.mp4",
-              "episode": 3
-            },
-            {
-              "title": "RAINHADAGRANA1x04",
-              "url": "https://cdn-novflix.com/storagePSN/SERIES/RAINHADAGRANA/RAINHADAGRANA1x04.mp4",
-              "episode": 4
-            },
-            {
-              "title": "RAINHADAGRANA1x05",
-              "url": "https://cdn-novflix.com/storagePSN/SERIES/RAINHADAGRANA/RAINHADAGRANA1x05.mp4",
-              "episode": 5
-            },
-            {
-              "title": "RAINHADAGRANA1x06",
-              "url": "https://cdn-novflix.com/storagePSN/SERIES/RAINHADAGRANA/RAINHADAGRANA1x06.mp4",
-              "episode": 6
-            },
-            {
-              "title": "RAINHADAGRANA1x07",
-              "url": "https://cdn-novflix.com/storagePSN/SERIES/RAINHADAGRANA/RAINHADAGRANA1x07.mp4",
-              "episode": 7
-            },
-            {
-              "title": "RAINHADAGRANA1x08",
-              "url": "https://cdn-novflix.com/storagePSN/SERIES/RAINHADAGRANA/RAINHADAGRANA1x08.mp4",
-              "episode": 8
-            }
-          ]
-        }
-      ],
-      "episodes": [
-        {
-          "title": "RAINHADAGRANA1x01",
-          "url": "https://cdn-novflix.com/storagePSN/SERIES/RAINHADAGRANA/RAINHADAGRANA1x01.mp4",
-          "episode": 1
-        },
-        {
-          "title": "RAINHADAGRANA1x02",
-          "url": "https://cdn-novflix.com/storagePSN/SERIES/RAINHADAGRANA/RAINHADAGRANA1x02.mp4",
-          "episode": 2
-        },
-        {
-          "title": "RAINHADAGRANA1x03",
-          "url": "https://cdn-novflix.com/storagePSN/SERIES/RAINHADAGRANA/RAINHADAGRANA1x03.mp4",
-          "episode": 3
-        },
-        {
-          "title": "RAINHADAGRANA1x04",
-          "url": "https://cdn-novflix.com/storagePSN/SERIES/RAINHADAGRANA/RAINHADAGRANA1x04.mp4",
-          "episode": 4
-        },
-        {
-          "title": "RAINHADAGRANA1x05",
-          "url": "https://cdn-novflix.com/storagePSN/SERIES/RAINHADAGRANA/RAINHADAGRANA1x05.mp4",
-          "episode": 5
-        },
-        {
-          "title": "RAINHADAGRANA1x06",
-          "url": "https://cdn-novflix.com/storagePSN/SERIES/RAINHADAGRANA/RAINHADAGRANA1x06.mp4",
-          "episode": 6
-        },
-        {
-          "title": "RAINHADAGRANA1x07",
-          "url": "https://cdn-novflix.com/storagePSN/SERIES/RAINHADAGRANA/RAINHADAGRANA1x07.mp4",
-          "episode": 7
-        },
-        {
-          "title": "RAINHADAGRANA1x08",
-          "url": "https://cdn-novflix.com/storagePSN/SERIES/RAINHADAGRANA/RAINHADAGRANA1x08.mp4",
-          "episode": 8
-        }
-      ],
-      "type": "series",
       "category": "series",
-      "local_poster": "/Pirataflix/assets/Capas/rainhas_da_grana.jpg",
-      "backdrop": "https://image.tmdb.org/t/p/w1280/djAGltv1bVw625yYku4CyA42gq0.jpg",
-      "overview": "No limite do desespero, cinco amigas decidem que a única saída é formar uma gangue, conseguir armas e começar a assaltar bancos.",
+      "local_poster": "/Pirataflix/assets/Capas/dona_beja.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/eN3jw7AEOwNtTQTsGVHlEPvs6OC.jpg",
+        "https://image.tmdb.org/t/p/w500/30reRyN0gQLAsu1VploZLpTbdSw.jpg",
+        "https://image.tmdb.org/t/p/w500/xOXehIb9Y0pzoN0WIJDmYZTXdx7.jpg",
+        "https://image.tmdb.org/t/p/w500/enYFWcUTX9p8p7o8Wu6iN1DGIm0.jpg",
+        "https://image.tmdb.org/t/p/w500/nCLoAT96tI7v5WW6gEnYuuDqv09.jpg",
+        "https://image.tmdb.org/t/p/w500/tkNohFnnGFYuYDHCKme7IZyKJ2S.jpg"
+      ],
+      "backdrop": "https://image.tmdb.org/t/p/w1280/lqjaaYhHobZcTyIORyq9zzVUtvB.jpg",
+      "overview": "Depois que um ouvidor cruel muda o rumo do seu futuro, Beja transforma a dor em poder de sedução e desafia todas as convenções do Brasil imperial.",
       "year": "2026",
       "genres": [
-        "Comédia",
-        "Ação & Aventura",
-        "Drama"
+        "Drama",
+        "Novela"
       ],
-      "rating": 5.6,
+      "rating": 6.2,
       "cast": [
         {
-          "name": "Rebecca Marder",
-          "character": "",
-          "profile": "https://image.tmdb.org/t/p/w185/nVjmGILgh0CLMMmMaphCOnTZ34X.jpg"
+          "name": "Grazi Massafera",
+          "character": "Ana Jacinta de São José (Dona Beja)",
+          "profile": "https://image.tmdb.org/t/p/w185/zywWoTxzzaKwHbT0wQyvwH6kgy8.jpg"
         },
         {
-          "name": "Naidra Ayadi",
-          "character": "",
-          "profile": "https://image.tmdb.org/t/p/w185/oNUYzgil3ZrduOELBJvC79YjXzb.jpg"
+          "name": "David Junior",
+          "character": "Antônio Felizardo Sampaio",
+          "profile": "https://image.tmdb.org/t/p/w185/kCjugq8PaAGvthZF3QNhyYuGONK.jpg"
         },
         {
-          "name": "Zoé Marchal",
-          "character": "",
-          "profile": "https://image.tmdb.org/t/p/w185/cAc417DqXCnygDvGTKE3K1Wb3hn.jpg"
+          "name": "André Luiz Miranda",
+          "character": "João Carneiro de Mendonça",
+          "profile": "https://image.tmdb.org/t/p/w185/yAPrcjurdhBRmlnPQWxIcTDQhhz.jpg"
         },
         {
-          "name": "Pascale Arbillot",
-          "character": "",
-          "profile": "https://image.tmdb.org/t/p/w185/sFLTfpEqhkEYwYKWxrWlGW2CVXt.jpg"
+          "name": "Pedro Fasanaro",
+          "character": "Severina",
+          "profile": "https://image.tmdb.org/t/p/w185/k8ihhMvqpqTDQyqkL16gK2jRix7.jpg"
         },
         {
-          "name": "Jonathan Cohen",
-          "character": "",
-          "profile": "https://image.tmdb.org/t/p/w185/T7ucGNWUDsRRXrjjVfY3uhPfMq.jpg"
+          "name": "Bianca Bin",
+          "character": "Angélica Felizardo Sampaio",
+          "profile": "https://image.tmdb.org/t/p/w185/vzGF7iuevixDOTda1jnISHhTRid.jpg"
         },
         {
-          "name": "Tya Deslauriers",
-          "character": "",
-          "profile": "https://image.tmdb.org/t/p/w185/gfivKQolrZX1Qu7xSWYJgzQV3qK.jpg"
+          "name": "Deborah Evelyn",
+          "character": "Cecília Felizardo Sampaio (Ceci)",
+          "profile": "https://image.tmdb.org/t/p/w185/tk3XXeiCAtpXO0x2tDK9VBKTIIk.jpg"
         },
         {
-          "name": "François Damiens",
-          "character": "",
-          "profile": "https://image.tmdb.org/t/p/w185/agHzt46feTHdFK9YdgRjmnqFUtS.jpg"
+          "name": "Indira Nascimento",
+          "character": "Maria Felizardo Sampaio",
+          "profile": "https://image.tmdb.org/t/p/w185/y0TS0x9Sfa4W8GxhtJ2tqt2ezcu.jpg"
         },
         {
-          "name": "Brahim Koutari",
-          "character": "",
-          "profile": "https://image.tmdb.org/t/p/w185/mcbpH7vJz1l8jthtGDLfCPtFgxq.jpg"
+          "name": "Bukassa Kabengele",
+          "character": "Coronel Paulo Sampaio",
+          "profile": "https://image.tmdb.org/t/p/w185/wg1lFAnr2cYQsIC1DoES6i1VbCx.jpg"
         }
       ]
     }
@@ -1587,6 +1713,14 @@
       "type": "series",
       "category": "novelas",
       "local_poster": "/Pirataflix/assets/Capas/os_donos_do_jogo.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/jwPI58JAidRzzbUI0j8uUu2rsyy.jpg",
+        "https://image.tmdb.org/t/p/w500/yisRO3W0s17yxJ8kGzG9uLPkWJz.jpg",
+        "https://image.tmdb.org/t/p/w500/90dQrWK5jFF1vT7w5AqIFDxufnw.jpg",
+        "https://image.tmdb.org/t/p/w500/timtatSK4kslUWVxda8jiE1r7GI.jpg",
+        "https://image.tmdb.org/t/p/w500/2TqtXFRt1sE6ifbaq8PO7bzA8Ai.jpg",
+        "https://image.tmdb.org/t/p/w500/urfKUODTGNkTSviW0TIlHJcDbqU.jpg"
+      ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/1b2OYNA3Ikq9BBwk6If8As89bge.jpg",
       "overview": "Um novato ambiciona liderar o submundo do jogo do bicho no Rio de Janeiro e acaba se envolvendo em uma perigosa rede de traições, luxúria e sangue.",
       "year": "2025",
@@ -3444,6 +3578,14 @@
       "type": "series",
       "category": "novelas",
       "local_poster": "/Pirataflix/assets/Capas/paraiso_tropical.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/1njDNkBHYLL7LS6KmvAsmxqnMxD.jpg",
+        "https://image.tmdb.org/t/p/w500/dWuJIg97YJUhjNZnRvZrdfpovi5.jpg",
+        "https://image.tmdb.org/t/p/w500/eqstFEbqOvwffrRyFjeQg7mWbqj.jpg",
+        "https://image.tmdb.org/t/p/w500/7wo3iyA8FYtmDGneS5bCsA636To.jpg",
+        "https://image.tmdb.org/t/p/w500/pYOqvkyMMGgAp5pR0wANpceLC4P.jpg",
+        "https://image.tmdb.org/t/p/w500/gFwCp4hb1lX7iI5FDlAnlpf9wMu.jpg"
+      ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/psedRtpZwLUoDN3d7b2BgPTBtJi.jpg",
       "overview": "A novela conta a história amor de Paula e Daniel, vítimas de várias armações de Olavo, o vilão que ganhou a torcida do público ao se envolver com a prostituta Bebel.",
       "year": "2007",
@@ -5262,6 +5404,14 @@
       "type": "series",
       "category": "novelas",
       "local_poster": "/Pirataflix/assets/Capas/totalmente_demais.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/2fnrIUhoxXUcmnYyncFj7Rctvju.jpg",
+        "https://image.tmdb.org/t/p/w500/97dc3fmnSBvGYTxMZW49FnXr2Wm.jpg",
+        "https://image.tmdb.org/t/p/w500/htqKuRODBalHQfm0TibcCUfhiMe.jpg",
+        "https://image.tmdb.org/t/p/w500/rkf47HidXAvXDLTrWvZVz6lnrIR.jpg",
+        "https://image.tmdb.org/t/p/w500/zfbqdUyARlOdtlz9m4b8QtgHZYF.jpg",
+        "https://image.tmdb.org/t/p/w500/kso8tNYeW8AFP39wHjroAD3Uh5T.jpg"
+      ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/83u4gkeTANzjyWe3t8lEZ8EIR7.jpg",
       "overview": "Em um conto de fadas moderno, a novela conta a história de Eliza. A vida da vendedora de flores se transforma quando ela conhece Arthur, dono de uma agência de modelos.",
       "year": "2015",
@@ -6760,6 +6910,12 @@
       "type": "series",
       "category": "novelas",
       "local_poster": "/Pirataflix/assets/Capas/cordel_encantado.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/vn1i1q2awNMiQl1NoAJWJbrPQwB.jpg",
+        "https://image.tmdb.org/t/p/w500/ePUC4nGISCn7EQ2YveFdMLomWXC.jpg",
+        "https://image.tmdb.org/t/p/w500/5RAEdRVymAyipE7hkcuTUltX10Z.jpg",
+        "https://image.tmdb.org/t/p/w500/qo9ktMD1BJWNhHaPRr6Yt8QWrDW.jpg"
+      ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/ljgCd6hhfY3CpJWwe7ksQPqO5xZ.jpg",
       "overview": "A história é uma fábula sobre dois universos distintos: o encantamento da realeza europeia e as lendas heróicas do sertão brasileiro. A união desses mundos é representada pelo romance de Açucena, uma cabocla brejeira criada por lavradores no nordeste do Brasil, sem saber que é a princesa de um reino europeu. E Jesuíno, um jovem sertanejo que desconhece ser filho legítimo do cangaceiro mais famoso da região.",
       "year": "2011",
@@ -8127,6 +8283,11 @@
       "type": "series",
       "category": "novelas",
       "local_poster": "/Pirataflix/assets/Capas/cobras_e_lagartos.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/2u5e0zlurzsyDhfb7ybhaS0cgly.jpg",
+        "https://image.tmdb.org/t/p/w500/5LUd2rdlWNH3HsxDCj3bRlZX8z3.jpg",
+        "https://image.tmdb.org/t/p/w500/rXbu0eDu5PnHvGtkX13jt0KNKbH.jpg"
+      ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/wCMTHbzRhyb3PaS5BxTK1fMUI8l.jpg",
       "overview": "Com pouco tempo de vida, Omar encontra em Duda o homem ideal para casar com a sobrinha Bel e herdar o império que construiu. Porém, quem acaba herdando o patrimônio é Foguinho.",
       "year": "2006",
@@ -9685,6 +9846,15 @@
       "type": "series",
       "category": "novelas",
       "local_poster": "/Pirataflix/assets/Capas/marimar.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/2lfgLiOVZwMG5rD6RVbR7jYCtmd.jpg",
+        "https://image.tmdb.org/t/p/w500/iJ3jf3k56Cy1ImA9t3egPeGKQ2R.jpg",
+        "https://image.tmdb.org/t/p/w500/r0AFBjxrIRfpk5jmoHAgmS8id1f.jpg",
+        "https://image.tmdb.org/t/p/w500/2uYubmyZoLHajkvsnsglZU4W866.jpg",
+        "https://image.tmdb.org/t/p/w500/iCVanUSLJkTvDJbPuE8bsSa8bS0.jpg",
+        "https://image.tmdb.org/t/p/w500/woVcqvuN7gVLvJQFR4XsymA02NA.jpg",
+        "https://image.tmdb.org/t/p/w500/4xpSaTAtmsHwwEoLhHTL5Ut4xuN.jpg"
+      ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/nDh9cvt64J3gD1wxxxfR85jiEmB.jpg",
       "overview": "Marimar, uma jovem humilde de uma pequena vila de pescadores, verá sua vida simples mudar para sempre após se apaixonar por Sergio, filho de um fazendeiro muito rico da região.",
       "year": "1994",
@@ -11492,6 +11662,12 @@
       "type": "series",
       "category": "novelas",
       "local_poster": "/Pirataflix/assets/Capas/salve_jorge.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/uyG1iWsAGX7K7o0iTVKGEVT2RPR.jpg",
+        "https://image.tmdb.org/t/p/w500/ue98uJc9ymnKQc4w9SxkOuzn0ST.jpg",
+        "https://image.tmdb.org/t/p/w500/ehbB6L0gMU2ILJCScO2036crfEw.jpg",
+        "https://image.tmdb.org/t/p/w500/xWJ3QxMVN4G8arSQyfPVYvnNrX2.jpg"
+      ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/80TdemQlDHOVTQgRwtR4PwWwgXB.jpg",
       "overview": "Morena e Théo se conhecem durante a ocupação do Complexo do Alemão e, apesar das diferenças, engatam um romance. A situação se complica quando a jovem é vítima de um golpe e, ao aceitar um emprego fora do país, cai nas mãos de uma quadrilha internacional de tráfico de pessoas.  A novela é ambientada na Turquia e no Rio de Janeiro.",
       "year": "2012",
@@ -14430,6 +14606,12 @@
       "type": "series",
       "category": "novelas",
       "local_poster": "/Pirataflix/assets/Capas/a_caverna_encantada.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/8jMdqBks4utiOHp9LkYINixtPda.jpg",
+        "https://image.tmdb.org/t/p/w500/5GhlwbZ8ogQUf2Xuq8tE2lX7gk7.jpg",
+        "https://image.tmdb.org/t/p/w500/zv8aah1oS8ESsAhcYywNtOrjiWe.jpg",
+        "https://image.tmdb.org/t/p/w500/yjlQ29fzLXGNIZh9yDIfROTx0Cf.jpg"
+      ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/rydgjijtjdfs4Aedi59a9gV5M65.jpg",
       "overview": "A trama conta a história de Anna, filha de Paulo, um médico missionário. Os dois vivem juntos no norte de Minas Gerais. Paulo recebe um chamado para uma missão perigosa e, infelizmente, Anna não poderá acompanhá-lo. Então, o pai deixa a filha num colégio interno no interior de São Paulo, onde a menina vai conviver com crianças bem diferentes. Paulo garante voltar no dia do aniversário da filha, mas misteriosamente, não retorna. Anna embarca numa jornada inesperada e descobrirá muito mais a respeito dos enigmas do colégio, sua família e sobre ela mesma.",
       "year": "2024",
@@ -15518,6 +15700,12 @@
       "type": "series",
       "category": "novelas",
       "local_poster": "/Pirataflix/assets/Capas/a_usurpadora.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/3DkdWuttsr0FOLjKpAvkQ9FOI95.jpg",
+        "https://image.tmdb.org/t/p/w500/pcslXe33yoUsEu97U5ekrS5qzip.jpg",
+        "https://image.tmdb.org/t/p/w500/w144KydKF2ec1Q77vNZsSUDiW3Z.jpg",
+        "https://image.tmdb.org/t/p/w500/jEnu97oREReB9508EsOoZstTgg2.jpg"
+      ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/7isN2RSPLTQ2yquIemmiuTf7fql.jpg",
       "overview": "Paulina é uma jovem bondosa que precisa cuidar de sua mãe doente. Ao acaso, encontrará uma mulher idêntica a ela, a rica Paola Bracho, que mudará sua vida para sempre.",
       "year": "1998",
@@ -19021,6 +19209,14 @@
       "type": "series",
       "category": "novelas",
       "local_poster": "/Pirataflix/assets/Capas/tieta.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/3YNb7mSpuaP18W4yAXjtaV5W2lI.jpg",
+        "https://image.tmdb.org/t/p/w500/6SYRr0yI4o3q2SvFaewcc1xO40z.jpg",
+        "https://image.tmdb.org/t/p/w500/F7itjwhgkRs9nCdYA8PZ1W2ZUY.jpg",
+        "https://image.tmdb.org/t/p/w500/lVW3iGMFN2IAZFZHr0P47N08HZ5.jpg",
+        "https://image.tmdb.org/t/p/w500/6fJw0LsOfpKjHCLQR5XFuylPNWM.jpg",
+        "https://image.tmdb.org/t/p/w500/NKzh2pwonhmcjxPWdUWZtOoKl3.jpg"
+      ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/wHi44gV8p2FWgYOuCefyE8jI8Qc.jpg",
       "overview": "Inspirada no romance “Tieta do Agreste”, de Jorge Amado, a trama se passa na fictícia cidade de Santana do Agreste, no Nordeste brasileiro, e tem como tema central a reviravolta da vida de Tieta. Vinte e cinco anos após ser escorraçada da cidade pelo pai, Zé Esteves, ela retorna à terra natal para se vingar de todos que a trataram mal e riram do seu passado. Sua ousadia mexe com a rotina de Santana do Agreste.",
       "year": "1989",
@@ -19599,6 +19795,14 @@
       "type": "series",
       "category": "novelas",
       "local_poster": "/Pirataflix/assets/Capas/verdades_secretas_2.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/kM32hmDGTxmqNeT1x8zJExJdDCM.jpg",
+        "https://image.tmdb.org/t/p/w500/s4B1eXbr5CILyczLmCRaxEuYX4O.jpg",
+        "https://image.tmdb.org/t/p/w500/p20gDJQIF9gR94KByQXbHFjFAIi.jpg",
+        "https://image.tmdb.org/t/p/w500/pWXvXuhnjyevNwfkbbvzERdhR7t.jpg",
+        "https://image.tmdb.org/t/p/w500/ebJLw46IxUH2OY6qin8Jns92Ywn.jpg",
+        "https://image.tmdb.org/t/p/w500/wLN4eYIzpErNwW2j1UW44h5NDfV.jpg"
+      ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/3CHC5GAlTFoFrf6BUgjO8Z9D0QN.jpg",
       "overview": "Angel está de volta ao submundo da moda e do luxo. Giovanna acredita que Angel matou seu pai e começa uma guerra que envolve Cristiano, um investigador particular.",
       "year": "2021",
@@ -21756,6 +21960,14 @@
       "type": "series",
       "category": "novelas",
       "local_poster": "/Pirataflix/assets/Capas/chocolate_com_pimenta.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/vPh5Fo4ptnHrI8Ku0QplHrSoeDe.jpg",
+        "https://image.tmdb.org/t/p/w500/38FKG5GDlyqArrTbte7e6GDpEEB.jpg",
+        "https://image.tmdb.org/t/p/w500/fDsowfHtep4OPQvbDIHHsziqtm7.jpg",
+        "https://image.tmdb.org/t/p/w500/hLFPmYd2mq36lPyN0tDhK4cXDuZ.jpg",
+        "https://image.tmdb.org/t/p/w500/ajjPiFS9F7fyKLhk45rptbGyHp7.jpg",
+        "https://image.tmdb.org/t/p/w500/oySql14763320e0JTvSAwEhBpA9.jpg"
+      ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/2XGClQjMgz317DM0FpIjlU7qK49.jpg",
       "overview": "Uma doce e humilde moça, ridicularizada por todos, se transforma em uma linda milionária ao se casar com um grande e generoso amigo.",
       "year": "2003",
@@ -22994,6 +23206,14 @@
       "type": "series",
       "category": "novelas",
       "local_poster": "/Pirataflix/assets/Capas/tres_gracas.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/uSRDefBBX0bTHjAaK7mOZOdKKWo.jpg",
+        "https://image.tmdb.org/t/p/w500/euLl4ntSW4bJE5QnDk90UKGW2Tp.jpg",
+        "https://image.tmdb.org/t/p/w500/nAQWPukHkvcfzsPsqakar0VTXKl.jpg",
+        "https://image.tmdb.org/t/p/w500/j3bMUJpgAIsITpN7nlm6Agx5Jvf.jpg",
+        "https://image.tmdb.org/t/p/w500/j3cHoKAWEPqvyOGwHc8ktxw59wH.jpg",
+        "https://image.tmdb.org/t/p/w500/54HlhxWBCrXf2XAszHbXI9khWoP.jpg"
+      ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/bsnzAWs9MITfYgsQ8jp1SQ3AyHI.jpg",
       "overview": "Lígia, Gerluce e Joélly — três mulheres de diferentes gerações da mesma família — cujas vidas são marcadas por um ponto em comum: todas enfrentaram uma gravidez na adolescência e foram abandonadas por seus respectivos companheiros.",
       "year": "2025",
@@ -23701,6 +23921,14 @@
       "type": "series",
       "category": "novelas",
       "local_poster": "/Pirataflix/assets/Capas/verdades_secretas.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/rw1bnxgPhfzg9EvBlgbtjLkWBzy.jpg",
+        "https://image.tmdb.org/t/p/w500/js4ME0psGSLwJQs3zbiYN2fhlEE.jpg",
+        "https://image.tmdb.org/t/p/w500/eHzLZ3dC2EcXAUkAK2Oq0mJjKQr.jpg",
+        "https://image.tmdb.org/t/p/w500/faRwRQbaxJ0ZAtpLjkSSGXlG3Ze.jpg",
+        "https://image.tmdb.org/t/p/w500/ucfw09rlxRdILflKCcVpdNgR0Ab.jpg",
+        "https://image.tmdb.org/t/p/w500/hlACuXfQMPAK5i5tI4j3c2FZmXU.jpg"
+      ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/lU28XFV7ITJLnWAqRJpvK10deA6.jpg",
       "overview": "Um triângulo amoroso envolvendo mãe e filha é o foco incendiário de Verdades Secretas, que traz como pano de fundo o lado obscuro do mundo da moda e explora os limites de cada um.",
       "year": "2015",
@@ -25618,6 +25846,14 @@
       "type": "series",
       "category": "novelas",
       "local_poster": "/Pirataflix/assets/Capas/maria_do_bairro.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/xIwIgMAW9e2qUZN9gyYZS0xcdS6.jpg",
+        "https://image.tmdb.org/t/p/w500/nDwcQqvw31Mz3hW5hjQ50DF5GRx.jpg",
+        "https://image.tmdb.org/t/p/w500/nuEe8twxXvpqlVXEMAIJHpoihnC.jpg",
+        "https://image.tmdb.org/t/p/w500/kn3qUIo7bhFt40nqJsVXI1zYGEy.jpg",
+        "https://image.tmdb.org/t/p/w500/oICdvgMM9CsIPuxuWhoXuXHe1Tb.jpg",
+        "https://image.tmdb.org/t/p/w500/wyG6KIuOJ6p3AdEHV33Oz73VDtv.jpg"
+      ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/wt1AEm5eqsjiv3WOIvagUaizO9M.jpg",
       "overview": "Uma jovem catadora de lixo que mora na periferia da cidade perde sua madrinha. Antes de morrer, a madrinha implora ao padre local que proteja a jovem. O padre ajuda a moça conseguindo trabalho para ela na casa de um milionário.",
       "year": "1995",
@@ -27655,6 +27891,12 @@
       "type": "series",
       "category": "novelas",
       "local_poster": "/Pirataflix/assets/Capas/renascer.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/kUWvvMkNIf21UUDmHjYw55v6o7C.jpg",
+        "https://image.tmdb.org/t/p/w500/7vd7jaZGLBD8rKKLDufctKal84A.jpg",
+        "https://image.tmdb.org/t/p/w500/xon9xbgCFOaqORqQ7g00ZnnOvPL.jpg",
+        "https://image.tmdb.org/t/p/w500/b3jNa6UeL1oZJpqERuBeAZToI1R.jpg"
+      ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/bEKRyT7WN5TjFKv0JTWI2cyNlak.jpg",
       "overview": "Entre lendas e mistérios, um homem sem posses e sozinho no mundo finca seu destino aos pés de um jequitibá. Tendo a natureza como testemunha ele renasce e estabelece um pacto que o acompanhará ao longo de toda a sua trajetória.",
       "year": "2024",
@@ -29872,6 +30114,12 @@
       "type": "series",
       "category": "novelas",
       "local_poster": "/Pirataflix/assets/Capas/o_beijo_do_vampiro.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/fQsnoRyA9Fd0Zw6AUldw4sxrYyR.jpg",
+        "https://image.tmdb.org/t/p/w500/sA8onwgwNdqLzHp4rlVzw9NVXt.jpg",
+        "https://image.tmdb.org/t/p/w500/4evXawSpLYZOtUEOmwy0M7LWXaP.jpg",
+        "https://image.tmdb.org/t/p/w500/kPBQnOkXpAAbsIZutWHlnGOkmXt.jpg"
+      ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/kNF0czlnSmhT11wFVgZRnRHwEKS.jpg",
       "overview": "História cheia de mistérios que mescla realidade e fantasia, no mundo sombrio do vampiro Bóris com elementos sobrenaturais, drama e humor.",
       "year": "2002",
@@ -31730,6 +31978,14 @@
       "type": "series",
       "category": "novelas",
       "local_poster": "/Pirataflix/assets/Capas/avenida_brasil.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/p8uzK1Lngu9q9dpnn4SwPKIT1H7.jpg",
+        "https://image.tmdb.org/t/p/w500/aeS2iyJIZpc9URhOWNfZlSMgLoL.jpg",
+        "https://image.tmdb.org/t/p/w500/tdEknOECKODv0IAgx2pOQfsjBBb.jpg",
+        "https://image.tmdb.org/t/p/w500/jgd86jJQGAl1GYThvd8oHLIy5AG.jpg",
+        "https://image.tmdb.org/t/p/w500/3wH4kZ0hdoizAcgqCgp3gUD1fFq.jpg",
+        "https://image.tmdb.org/t/p/w500/c57RPAsrgLSKd6pgGsIfGSNWEPt.jpg"
+      ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/5ssgDp28z1Nif6hR8OFrNQUspd4.jpg",
       "overview": "Rita é abandonada no lixão pela madrasta após seu pai morrer. Anos depois e sob nova identidade, a menina se infiltra na mansão da nova família de Carminha para se vingar dela.",
       "year": "2012",
@@ -33818,6 +34074,15 @@
       "type": "series",
       "category": "novelas",
       "local_poster": "/Pirataflix/assets/Capas/caminho_das_indias.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/xyix3KOYBZd1zqwy051Bhtwe3Vv.jpg",
+        "https://image.tmdb.org/t/p/w500/3uKOloNUgnspaUz745AT6mDofCt.jpg",
+        "https://image.tmdb.org/t/p/w500/5rXZcv8UG2FLYyixW9W4fevOL9u.jpg",
+        "https://image.tmdb.org/t/p/w500/vhu6pfy43BYXgIeVuwdINQX4CcC.jpg",
+        "https://image.tmdb.org/t/p/w500/uy2AXX6mpmPuDFrh16IXEXOjN5z.jpg",
+        "https://image.tmdb.org/t/p/w500/cii5lVvqwXlwSM9oMgAlUFpmvlp.jpg",
+        "https://image.tmdb.org/t/p/w500/wajBLFHhaoXDJqIdhpvmnBe94lq.jpg"
+      ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/vYAkx4BQeIb9OkGCMZe5xL1RUeV.jpg",
       "overview": "Ambientada na Índia e no Brasil, a trama conta a saga de Maya e Raj, que têm um casamento arranjado. Primeira novela brasileira a vencer o Prêmio Emmy Internacional.",
       "year": "2009",
@@ -35675,6 +35940,10 @@
       "type": "series",
       "category": "novelas",
       "local_poster": "/Pirataflix/assets/Capas/pe_na_jaca.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/6J5SnU2RfoFKvUwzG6cPBc3BcGI.jpg",
+        "https://image.tmdb.org/t/p/w500/8ay0yolMrgWfP29ZtFP7AbVeuhj.jpg"
+      ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/h3d7B4ic6qKDB5JeI16Th8K9Y7N.jpg",
       "overview": "Reencontro de amigos de infância desencadeia uma caça à fortuna, temperada por divertidas confusões amorosas.",
       "year": "2006",
@@ -40733,6 +41002,15 @@
       "type": "series",
       "category": "animes",
       "local_poster": "/Pirataflix/assets/Capas/naruto_shippuden.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/nRJmByfK9XdtOY73VArcN8KpKVs.jpg",
+        "https://image.tmdb.org/t/p/w500/71mASgFgSiPl9QUexVH8BubU0lD.jpg",
+        "https://image.tmdb.org/t/p/w500/kV27j3Nz4d5z8u6mN3EJw9RiLg2.jpg",
+        "https://image.tmdb.org/t/p/w500/hKkY4Hf5tDKCwVzzeo42vp1RxPQ.jpg",
+        "https://image.tmdb.org/t/p/w500/rmibYhCE5Ie2l4PIU1rrhDv2qAb.jpg",
+        "https://image.tmdb.org/t/p/w500/uYDKFLf8N5Vz2hkJfhn1voLBMOY.jpg",
+        "https://image.tmdb.org/t/p/w500/m6nUbk6R7hHDS3hjHatrA6hxv8T.jpg"
+      ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/z0YhJvomqedHF85bplUJEotkN5l.jpg",
       "overview": "Naruto Shippuden ocorre 2 anos e meio após Naruto ter deixado a vila para treinar com Jiraiya. Após seu retorno, Naruto descobre que seus amigos  shinobi's o superaram na classificação, e ele caiu para trás. No  entanto, com apenas 6 meses para resgatar Sasuke, Naruto tem de  enfrentar inimigos ainda mais perigosos. O plano da Akatsuki se revela  lentamente e os perigos surgem mais do que nunca!",
       "year": "2007",
@@ -41441,6 +41719,15 @@
       "type": "series",
       "category": "animes",
       "local_poster": "/Pirataflix/assets/Capas/dragon_ball_gt.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/kxXsfMR9lQr3Gem6aDFbvmyRyqd.jpg",
+        "https://image.tmdb.org/t/p/w500/rLHhDpv6rrhuzBjNzaMRNv2fng.jpg",
+        "https://image.tmdb.org/t/p/w500/l1nOGq0e689viyziACqSSFLuwbg.jpg",
+        "https://image.tmdb.org/t/p/w500/621kwKHFsA0JYnHPmvzwdRw0dbr.jpg",
+        "https://image.tmdb.org/t/p/w500/mwXRvTce1TxgkNBAq6O4jeVrZD1.jpg",
+        "https://image.tmdb.org/t/p/w500/fzH3xKyIvLnq1paTrjecNyWQmRh.jpg",
+        "https://image.tmdb.org/t/p/w500/5Fv5dOR0PP6THmBLztv2hbKaDqm.jpg"
+      ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/4XfjLB6mGUx9z42oFJ8IaDmkdv3.jpg",
       "overview": "A história se passa 10 anos após o final da saga Z, Goku reencontra vilões de sua infância, que estão roubando as esferas do dragão que estão no templo do kamisama, goku descobre o que eles estão tramando e por um engano, pilaf deseja que Shenlong transforme Goku em criança, agora as esferas se espalharam pelo universo e goku e seus amigos tem apenas um ano para encontrar todas, antes que a terra exploda. Eles embarcam numa aventura em busca das 7 esferas do dragão.",
       "year": "1996",
@@ -43343,6 +43630,14 @@
       "type": "series",
       "category": "animes",
       "local_poster": "/Pirataflix/assets/Capas/boku_no_hero_academia_dublado.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/iv0cXt6uJGlTryWZNQMGyum4Pme.jpg",
+        "https://image.tmdb.org/t/p/w500/t3FjASWwvkNWdhzTk0yMApzcbXw.jpg",
+        "https://image.tmdb.org/t/p/w500/fS9M8vz8WwaG9Mj0TKDji428Sx7.jpg",
+        "https://image.tmdb.org/t/p/w500/3INu3n1sUa9K3O5OTPrqvJOetbd.jpg",
+        "https://image.tmdb.org/t/p/w500/94YELK3KZt8WKGAZFDCJAb5vhk7.jpg",
+        "https://image.tmdb.org/t/p/w500/AuW6bjQIGVLBfZy7V5kiL86QXYt.jpg"
+      ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/baZ0pGbBGjCBhIqsFyOSTpJyUnQ.jpg",
       "overview": "Koichi Haimawari é um estudante universitário monótono que sonhava em ser um herói, mas desistiu desse objetivo. Embora 80% da população mundial tenha poderes sobre-humanos chamados \"Individualidades\", poucos são escolhidos para levar o título de herói e proteger as pessoas. Tudo muda para Koichi quando ele e Pop☆Step são salvos pelo vigilante Knuckleduster, e acabam sendo recrutados para se tornarem vigilantes!",
       "year": "2025",
@@ -43549,6 +43844,14 @@
       "type": "series",
       "category": "animes",
       "local_poster": "/Pirataflix/assets/Capas/sousou_no_frieren.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/dqZENchTd7lp5zht7BdlqM7RBhD.jpg",
+        "https://image.tmdb.org/t/p/w500/2IGeAnIbToKIalm624kd0OVD7Iv.jpg",
+        "https://image.tmdb.org/t/p/w500/cHhJzdUGcEBq6av4wr9jsIvUITH.jpg",
+        "https://image.tmdb.org/t/p/w500/4oIkJpy27JnTcf0pdCsUEtJEoOz.jpg",
+        "https://image.tmdb.org/t/p/w500/d9IuDqPWoUYukwblQhqV00jlCzZ.jpg",
+        "https://image.tmdb.org/t/p/w500/fa3uCbfUaz5gQrJw9tLPrUc9hWt.jpg"
+      ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/rBOnrVlck7BIlGeWVlzYiZeg4l2.jpg",
       "overview": "Décadas depois de derrotar o Rei Demônio, a elfa Frieren vai ao funeral de um amigo e começa uma jornada de autoconhecimento.",
       "year": "2023",
@@ -44497,6 +44800,14 @@
       "type": "series",
       "category": "animes",
       "local_poster": "/Pirataflix/assets/Capas/ataque_dos_titans.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/8aMqmB5xSblsZc7bLMEhE28yHa2.jpg",
+        "https://image.tmdb.org/t/p/w500/hTP1DtLGFamjfu8WqjnuQdP1n4i.jpg",
+        "https://image.tmdb.org/t/p/w500/kQmxrdNTlDOQHorew1y5aXI3qzk.jpg",
+        "https://image.tmdb.org/t/p/w500/sHim6U0ANsbzxcmNRYuIubBVQaz.jpg",
+        "https://image.tmdb.org/t/p/w500/hqRb1wyIVsaMukZElPBUXoJPqrR.jpg",
+        "https://image.tmdb.org/t/p/w500/i9UAKpCXTB23AdeVLMJBHWykfYw.jpg"
+      ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/rqbCbjB19amtOtFQbb3K2lgm2zv.jpg",
       "overview": "Titãs estão quase exterminando a raça humana. Porém alguns estão dispostos a formar um exército de ataque aos seres assassinos. O jovem Eren, após ver sua mãe ser devorada por um titã, decide que não deixará nenhum deles vivo e buscará sua vingança completa.",
       "year": "2013",
@@ -44763,6 +45074,15 @@
       "type": "series",
       "category": "animes",
       "local_poster": "/Pirataflix/assets/Capas/spy_x_family.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/vaIREdPGZOnW9Jrs86mheVVlIQQ.jpg",
+        "https://image.tmdb.org/t/p/w500/7NAvPYPAu7MeHwP8E9sn81PqsRh.jpg",
+        "https://image.tmdb.org/t/p/w500/3r4LYFuXrg3G8fepysr4xSLWnQL.jpg",
+        "https://image.tmdb.org/t/p/w500/gHZqglFWJTFwx6rnTq4vkPRnuxu.jpg",
+        "https://image.tmdb.org/t/p/w500/nShEY0JnMOsvdhEnmYvL9mowIKz.jpg",
+        "https://image.tmdb.org/t/p/w500/v0Iv5qTpOQQF2tFFgSt4dDCNTa8.jpg",
+        "https://image.tmdb.org/t/p/w500/bQoQ6GT5G0NU252gdEMYhVwWMfv.jpg"
+      ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/lysUnU6V0VfcthDbviuVlIqgHOR.jpg",
       "overview": "Há décadas, as nações de Ostania e Westalis promovem uma guerra fria sem fim. Para investigar os movimentos do presidente de um importante partido político, Westalis mobiliza Twilight, seu melhor agente, a montar uma família falsa e se infiltrar nos eventos sociais promovidos pela escola do filho do político. Mas por um acaso do destino, Twilight acaba adotando Anya, uma jovem com poderes telepáticos, e se \"casando\" com Yor, uma assassina profissional! Sem saberem das identidades uns dos outros, este trio incomum vai embarcar em aventuras cheias de surpresas para garantir a paz mundial.",
       "year": "2022",
@@ -44934,6 +45254,15 @@
       "type": "series",
       "category": "animes",
       "local_poster": "/Pirataflix/assets/Capas/dandandan.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/vtQug1eOyeU2VXIpNoDF1lTlcH4.jpg",
+        "https://image.tmdb.org/t/p/w500/4h2m9BO7milJaCsbKBgKvCX0dOZ.jpg",
+        "https://image.tmdb.org/t/p/w500/6qfZAOEUFIrbUH3JvePclx1nXzz.jpg",
+        "https://image.tmdb.org/t/p/w500/tiF5I6wF6tEUy39gmNtw3G1GYyz.jpg",
+        "https://image.tmdb.org/t/p/w500/sprLXd82pEDyNm5HcLoepxqmkQG.jpg",
+        "https://image.tmdb.org/t/p/w500/ibw0s6SEnd7oqy3CToKZyIAASLB.jpg",
+        "https://image.tmdb.org/t/p/w500/bOPmmOXj33bxVW5DoWabkCLn6vE.jpg"
+      ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/uNTrRKIOyKYISthoeizghtXPEOK.jpg",
       "overview": "Quando a estudante do ensino médio Momo – que vem de uma família de médiuns e não acredita em alienígenas – encontra Okarun, um garoto obcecado por ocultismo que acredita em extraterrestres, a rivalidade entre os dois coloca a dupla diante de ameaças paranormais reais. Momo descobre seus poderes espirituais, enquanto Okarun ganha habilidades ao ser possuído por uma maldição, o que faz com que se unam para lutar contra yokai, OVNIs e caos de outros mundos.",
       "year": "2024",
@@ -52952,6 +53281,14 @@
       "type": "series",
       "category": "animes",
       "local_poster": "/Pirataflix/assets/Capas/one_piece.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/aesLt9fsKSA6KCgGxA60VVxjtLk.jpg",
+        "https://image.tmdb.org/t/p/w500/rVX05xRKS5JhEYQFObCi4lAnZT4.jpg",
+        "https://image.tmdb.org/t/p/w500/lXl3ZbY5TksOdt6eYgdyg6vsnFW.jpg",
+        "https://image.tmdb.org/t/p/w500/yEtSBgugED8XyhqjcKgF6j2zDMf.jpg",
+        "https://image.tmdb.org/t/p/w500/mik4odDfAXQrabV4VA4X4IDtBXF.jpg",
+        "https://image.tmdb.org/t/p/w500/g2JdWEbm1FOQMDCff06luyiozGn.jpg"
+      ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/qD211Hb5XwFxrszzBBe5EUYJerh.jpg",
       "overview": "O jovem pirata Monkey D. Luffy veste o chapéu de palha e, com sua tripulação atrapalhada, zarpa em uma jornada épica nesta adaptação em live-action do popular mangá.",
       "year": "2023",
@@ -54539,6 +54876,15 @@
       "type": "series",
       "category": "animes",
       "local_poster": "/Pirataflix/assets/Capas/dragon_ball_z.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/f2zhRLqwRLrKhEMeIM7Z5buJFo3.jpg",
+        "https://image.tmdb.org/t/p/w500/yfyToia25GnvjY7FPAGaCm3lKRc.jpg",
+        "https://image.tmdb.org/t/p/w500/dBsDWUcdfbuZwglgyeeQ9ChRoS4.jpg",
+        "https://image.tmdb.org/t/p/w500/i1lMlxir5E4jyeLlqS2bK1Cn3Tt.jpg",
+        "https://image.tmdb.org/t/p/w500/6VKOfL6ihwTiB5Vibq6QTfzhxA6.jpg",
+        "https://image.tmdb.org/t/p/w500/jB9l4mp0bzBgzE5y4tvBH6AMeMk.jpg",
+        "https://image.tmdb.org/t/p/w500/qNmSRIUsnRsDgm6Lqmc9F9Ye7Jb.jpg"
+      ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/ydf1CeiBLfdxiyNTpskM0802TKl.jpg",
       "overview": "Dragon Ball Z (ドラゴンボールZ, Doragon Bōru Zetto) foi uma série de animação produzida pela Toei Animation. Baseada na série de mangá Dragon Ball escrita por Akira Toriyama, Dragon Ball Z corresponde aos volumes 17 ao 42 do mangá que foi publicado na revista, Weekly Shonen Jump, de 1988 a 1995, e estreou no Japão na Fuji TV em 26 de abril de 1989, e terminou dia 31 de janeiro de 1996 com o total de 291 episódios, antes de ser dublada em diversos territórios ao redor do mundo, incluindo Estados Unidos, Austrália, Europa, Índia e Brasil. A série já foi exibida em mais de 80 países ao redor do mundo.",
       "year": "1989",
@@ -54975,6 +55321,14 @@
       "type": "series",
       "category": "animes",
       "local_poster": "/Pirataflix/assets/Capas/jujutsu_kaisen.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/mGPwEkHxyErWoX7Z1sk2YuOKtQ8.jpg",
+        "https://image.tmdb.org/t/p/w500/fHpKWq9ayzSk8nSwqRuaAUemRKh.jpg",
+        "https://image.tmdb.org/t/p/w500/mJVUZpPR4BdZzLWyP51h8pOU1RO.jpg",
+        "https://image.tmdb.org/t/p/w500/3yFHMtdhriig4sm1w8oMQfA2gFN.jpg",
+        "https://image.tmdb.org/t/p/w500/dG6H80X9zF3nA7NiOAs3gmxO6mc.jpg",
+        "https://image.tmdb.org/t/p/w500/8R1mMSC1gX1cg5ed7ns49JOEqw3.jpg"
+      ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/gmECX1DvFgdUPjtio2zaL8BPYPu.jpg",
       "overview": "Sofrimento, arrependimento, vergonha: os sentimentos negativos dos humanos tornam-se Maldições, causando terríveis acidentes que podem levar até mesmo à morte. E pra piorar, Maldições só podem ser exorcizadas por outras Maldições. Certo dia, para salvar amigos que estavam sendo atacados por Maldições, Yuji Itadori engole o dedo do Ryomen-Sukuna, absorvendo sua Maldição. Ele então decide se matricular no Colégio Técnico de Feitiçaria de Tóquio, uma organização que combate as Maldições... e assim começa a heróica lenda do garoto que tornou-se uma Maldição para exorcizar uma Maldição.",
       "year": "2020",
@@ -55201,6 +55555,14 @@
       "type": "series",
       "category": "animes",
       "local_poster": "/Pirataflix/assets/Capas/dragon_ball_daima.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/8tpLyWAmYhe1D0d62gV3CWFDu2f.jpg",
+        "https://image.tmdb.org/t/p/w500/qlLJvJO8rsltmnWWbKgT13hP90I.jpg",
+        "https://image.tmdb.org/t/p/w500/73rGI735Tzf5ohSBh4rE06uyVyD.jpg",
+        "https://image.tmdb.org/t/p/w500/lMULbSFZNXUC87MqOZQ4SSV9DXI.jpg",
+        "https://image.tmdb.org/t/p/w500/svAf41ljs9p0TOAVD8gNvOCOd77.jpg",
+        "https://image.tmdb.org/t/p/w500/cIDPZMGsiVHkHA6HPJmEmGcgyyw.jpg"
+      ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/oUmWLyeko3kYdUr8DBLIsxwcugl.jpg",
       "overview": "Goku e companhia viviam pacificamente quando de repente ficaram pequenos por causa de uma conspiração! Quando eles descobrem que o motivo para isso pode estar no \"Mundo dos Demônios\", um misterioso Majin chamado Glorio aparece para eles.",
       "year": "2024",
@@ -55707,6 +56069,14 @@
       "type": "series",
       "category": "animes",
       "local_poster": "/Pirataflix/assets/Capas/monster-rancher.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/lzh49cRWKSjNm98Cov0bBDvBww7.jpg",
+        "https://image.tmdb.org/t/p/w500/yi77t39040fU3cgUBZa7wggpJrt.jpg",
+        "https://image.tmdb.org/t/p/w500/aXsoGZn6DoKZZ4w7kD71S4xc8OC.jpg",
+        "https://image.tmdb.org/t/p/w500/83QRtXDj3qVHLR0fwzI4R0cwPrp.jpg",
+        "https://image.tmdb.org/t/p/w500/p1fqA7VQ5qy5Lq4KJLAF3kRBAU4.jpg",
+        "https://image.tmdb.org/t/p/w500/rZU9MeIiSQj3BdcELTdnHFznvPe.jpg"
+      ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/ttuBTSrNq4GSZyN01aPOvXYoOR3.jpg",
       "overview": "Monster Rancher conta a história de Genki, um garoto viciado em videogames que ganha como prêmio por ter vencido uma competição um novo jogo que ainda não saiu no mercado. Mas, para sua surpresa, quando ele tenta jogá-lo, vai parar dentro do jogo, em outro mundo. Nesse mundo, os humanos vivem pacificamente, na maior parte do tempo, com os monstros que lá existem. Junto de uma garota, Holly, e vários monstros, entre eles Suezo, Mocchi, Lebre, Tigre e Golem, ele descobre um mundo completamente diferente do seu, onde o vilão Moo quer controlar todos os monstros e destruir o mundo, então o grupo sai em busca da fenix para revive-la.",
       "year": "1999",
@@ -57975,6 +58345,15 @@
       "type": "series",
       "category": "animes",
       "local_poster": "/Pirataflix/assets/Capas/naruto_classico.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/9ptbVZpKNy5NY9D4zq4KGiYWRQY.jpg",
+        "https://image.tmdb.org/t/p/w500/Asv6ornwVeMxKUdA5ySLMrgENwy.jpg",
+        "https://image.tmdb.org/t/p/w500/xppeysfvDKVx775MFuH8Z9BlpMk.jpg",
+        "https://image.tmdb.org/t/p/w500/7gvdcNRLXyZexj8X50LEXn04ka8.jpg",
+        "https://image.tmdb.org/t/p/w500/cHrpI0GcFWti4y39Sfjs61pv3Kk.jpg",
+        "https://image.tmdb.org/t/p/w500/gkCghQ2MyUIAMzXEB2D7POwpbnm.jpg",
+        "https://image.tmdb.org/t/p/w500/uHx9NvFe9oSvHsXPZxksU6Vn0Lk.jpg"
+      ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/mpsYIytXhDXjI9yYC1Fp1S3PxsS.jpg",
       "overview": "Momentos antes do nascimento de Naruto Uzumaki, um enorme demônio conhecido como o Kyuubi, a Raposa de Nove Caudas, atacou o vilarejo da folha oculta Konoha, causando destruição. Para pôr fim à devastação de Kyuubi, o líder da aldeia, o quarto Hokage, sacrificou sua vida e selou o monstruoso animal dentro do recém-nascido Naruto. Agora, Naruto é um ninja hiperativo e cabeça dura que ainda vivem em Konoha. Evitado pelos demais habitantes por causa da Kyuubi dentro dele, Naruto se esforça para encontrar seu lugar na aldeia, enquanto o seu ardente desejo de se tornar o Hokage de Konoha o leva a conhecer alguns grandes novos amigos, e também alguns inimigos mortais.",
       "year": "2002",
@@ -58253,6 +58632,14 @@
       "type": "series",
       "category": "animes",
       "local_poster": "/Pirataflix/assets/Capas/os_simpsons.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/uWpG7GqfKGQqX4YMAo3nv5OrglV.jpg",
+        "https://image.tmdb.org/t/p/w500/1jGPgDDcmg3Xgs3WO8sfYfbnFoA.jpg",
+        "https://image.tmdb.org/t/p/w500/5NW6rUmsJSxtcdL3FgF6vq9Aanr.jpg",
+        "https://image.tmdb.org/t/p/w500/9n4dv0aGRb8Ma15H7jbWsY7Eg0N.jpg",
+        "https://image.tmdb.org/t/p/w500/k5UALlcA0EnviaCUn2wMjOWYiOO.jpg",
+        "https://image.tmdb.org/t/p/w500/sQIKgdjJRIKC88xZLTHaEfYWd1e.jpg"
+      ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/ukzJIPKTTSUzdr7jQoGKdrvZGk7.jpg",
       "overview": "Uma animação sobre uma típica família dos Estados Unidos. Homer é o pai de família nada saudável ou inteligente, que adora beber cerveja. Marge é a esposa e mãe de família dedicada. Bart é o filho de 10 anos, que não leva a escola a sério e tem orgulho disso. Lisa é a garota de 8 anos, um gênio não apreciado. E Maggie é a bebê que não larga a chupeta.",
       "year": "1989",
@@ -59663,6 +60050,14 @@
       "type": "series",
       "category": "infantil",
       "local_poster": "/Pirataflix/assets/Capas/chaves_desenho_animado.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/gIApIbyHEb3UcoxbHtbgqtXbHbq.jpg",
+        "https://image.tmdb.org/t/p/w500/fIQpvawxgajLhjZfN7XS0stzesJ.jpg",
+        "https://image.tmdb.org/t/p/w500/sSLSwvqVxIdm6FV5Cp5MS91pEuh.jpg",
+        "https://image.tmdb.org/t/p/w500/2Ot15ofLIS2m6izm0wHndIPep4s.jpg",
+        "https://image.tmdb.org/t/p/w500/o0lQjlmkC5HrJFxtqEMNBWs3eEy.jpg",
+        "https://image.tmdb.org/t/p/w500/fMWXklDJ5tNjjq7FR91wXnXoSCx.jpg"
+      ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/hAAQlQfCwRfHWftE3vuHe5nDq5a.jpg",
       "overview": "Baseado na Série Original, Chaves vem para animar e nos entreter com a sua adorável inocência e alguns mal-entendidos que causará as mais divertidas situações entre amigos e moradores da vila.",
       "year": "2006",
@@ -59961,6 +60356,9 @@
       "type": "series",
       "category": "infantil",
       "local_poster": "/Pirataflix/assets/Capas/historias_novo_testamento.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/qA3ON6WEr40VfubkTAQ8HVL00Zl.jpg"
+      ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/nY06ASViHMi73qTbPq7hVwZBxQ5.jpg",
       "overview": "pt-BR (Português)",
       "year": "1994",
@@ -61272,6 +61670,15 @@
       "type": "series",
       "category": "infantil",
       "local_poster": "/Pirataflix/assets/Capas/pantera_cor_de_rosa.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/aBMXYJV934Ftu3LPwkuZqQ0XLYk.jpg",
+        "https://image.tmdb.org/t/p/w500/ulQ6nGkApH7gkoWIo1sGcCGPkHk.jpg",
+        "https://image.tmdb.org/t/p/w500/65uTaYHK0fzM34hlt4P5WY7Mo0A.jpg",
+        "https://image.tmdb.org/t/p/w500/dohaha5ofzVEsMnmMWLysgIuJxl.jpg",
+        "https://image.tmdb.org/t/p/w500/7icQIRC2Zi1RcpWyOIiu7ReDJEU.jpg",
+        "https://image.tmdb.org/t/p/w500/vkkNpWVsDK4kVTY7UlyO7GWtza0.jpg",
+        "https://image.tmdb.org/t/p/w500/qu64UV3FMaT53mxNZP60zT4rMAJ.jpg"
+      ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/pcc0wEg1Jm9WpHxksCUJmuvC8MB.jpg",
       "overview": "A Pantera Cor-de-Rosa (The Pink Panther Show, no original em inglês) é uma série animada criada pelos estúdios DePatie-Freleng Enterprises, exibida originalmente entre 1964 e 1980 nos Estados Unidos. A Pantera Cor-de-Rosa foi um personagem criado para fazer apenas uma introdução ao filme Pantera Cor-de-Rosa, de Blake Edwards, com Peter Sellers.  O sucesso foi tão grande com crítica e público que, de personagem coadjuvante, passou a principal. Começou a ter uma série de curta-metragens lançados nos cinemas a partir de 1964 e em 1969, passou a ser exibidos na TV em 1969 no bloco de animação The Pink Panther Show.",
       "year": "1993",
@@ -61598,6 +62005,14 @@
       "type": "series",
       "category": "infantil",
       "local_poster": "/Pirataflix/assets/Capas/manda_chuva.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/hnWYwPE7nwqAD1OGLEEXyML5LaH.jpg",
+        "https://image.tmdb.org/t/p/w500/dHhGIbUhyIiaXFwgMMzEb6s5b0b.jpg",
+        "https://image.tmdb.org/t/p/w500/ewGNQ2obyGXNx1dOMXum2FLAAIf.jpg",
+        "https://image.tmdb.org/t/p/w500/dKG92P13e9YflWs5JoB9a7RZbf4.jpg",
+        "https://image.tmdb.org/t/p/w500/bccVkejZxfi0AIhswyo4010iMxM.jpg",
+        "https://image.tmdb.org/t/p/w500/6d0EvwOBfIvoLDBiArkCXi1tkU6.jpg"
+      ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/82czKnq7CcHaGjNSkxlHLwanE2k.jpg",
       "overview": "Manda-Chuva é o líder de uma gangue de gatos de rua: Bacana, Espeto, Batatinha, Gênio e Chu-Chu. Eles estão sempre tentando ganhar dinheiro por meio de algum golpe ilegal e são perseguidos pelo Guarda Belo, que tenta expulsá-los do beco onde vivem.",
       "year": "1961",
@@ -62186,6 +62601,14 @@
       "type": "series",
       "category": "infantil",
       "local_poster": "/Pirataflix/assets/Capas/coragem.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/yLn8nI9Ec3LZ1WflYxo9MjF4BBg.jpg",
+        "https://image.tmdb.org/t/p/w500/uJQsBgzlrgZpjeB5fHBtJQA04nS.jpg",
+        "https://image.tmdb.org/t/p/w500/3upyO2ISjkBHuvPyYV3e8X96Fj8.jpg",
+        "https://image.tmdb.org/t/p/w500/dzD8EWDvtg7rBCINu0RCH5EUejh.jpg",
+        "https://image.tmdb.org/t/p/w500/m9iu0mxhhMNovWWRaJ61lwHVenS.jpg",
+        "https://image.tmdb.org/t/p/w500/cgqwuSfDO1qhXuUmZQahTdweyar.jpg"
+      ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/dugFpakDXxjDjEUloukNqAx3cjK.jpg",
       "overview": "Coragem é um cão incrivelmente tímido e muito fácil de assustar que precisa defender um velho casal de aposentados de acontecimentos paranormais que ameaçam a segurança e a estabilidade da sua casa.",
       "year": "1999",
@@ -62344,6 +62767,11 @@
       "type": "series",
       "category": "infantil",
       "local_poster": "/Pirataflix/assets/Capas/os_7_ursos.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/voK3P84shtv4Nqaz4qzozcndgDR.jpg",
+        "https://image.tmdb.org/t/p/w500/tplCF56PGKztikc4gbstu6dpbIw.jpg",
+        "https://image.tmdb.org/t/p/w500/58qB2nWpBINAhgwxduW03tuMLX.jpg"
+      ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/8aIy81OdhFWCBgu6DBU2T4ReiQE.jpg",
       "overview": "Esqueça os sete anões, porque os sete ursos estão chegando! Esses bichinhos fofos vão revolucionar os contos de fadas que todo mundo conhece.",
       "year": "2025",
@@ -65377,6 +65805,15 @@
       "type": "series",
       "category": "infantil",
       "local_poster": "/Pirataflix/assets/Capas/bob_esponja.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/yXrtQINkVRyNmfUQFyVG2LuoTqm.jpg",
+        "https://image.tmdb.org/t/p/w500/5h0EU2lqBb03dp5vtRuUHJwqzem.jpg",
+        "https://image.tmdb.org/t/p/w500/zDuKxQkG8EemvLdBn43ChdM0MJL.jpg",
+        "https://image.tmdb.org/t/p/w500/amvtZgiTty0GHIgD56gpouBWrcy.jpg",
+        "https://image.tmdb.org/t/p/w500/rIQdb0hAna692SeEbGnw4EfRcO0.jpg",
+        "https://image.tmdb.org/t/p/w500/eTTsOyXm49jixiQJ93L97CCvVBk.jpg",
+        "https://image.tmdb.org/t/p/w500/xFUl1CVkOYAqG3zLhLD3Dw1wZM1.jpg"
+      ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/aasp5EmwclAQbwfGABWLTNLhjwB.jpg",
       "overview": "Uma esponja-do-mar chamada Bob Esponja Calça Quadrada mora com seu caracol de estimação na Fenda do Biquíni, no fundo do oceano. Bob trabalha no Siri Cascudo e, nas horas vagas, vive arrumando confusões com seu melhor amigo, a estrela-do-mar Patrick.",
       "year": "1999",
@@ -68270,6 +68707,14 @@
       "type": "series",
       "category": "infantil",
       "local_poster": "/Pirataflix/assets/Capas/turma_da_monica.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/jsI9PztwfMBE9LyJqPkWJOAvHD6.jpg",
+        "https://image.tmdb.org/t/p/w500/prBanjRsf6YcXAvdauvaIuAFNH2.jpg",
+        "https://image.tmdb.org/t/p/w500/cJvaychJKyeQpKKGWVo6G75Ziav.jpg",
+        "https://image.tmdb.org/t/p/w500/xMibNLtAiLeDltSgfRmawFbtFzL.jpg",
+        "https://image.tmdb.org/t/p/w500/xpotNjbtDRUUjrLMyafc16kntRl.jpg",
+        "https://image.tmdb.org/t/p/w500/tfHUfTypfDVW6100rRsVXwJnu0H.jpg"
+      ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/cTW722AtOb14gAu11ppXn7Vz85m.jpg",
       "overview": "Um grupo de amigos está sempre se metendo em confusões no Bairro do Limoeiro. Acompanhe todas as aventuras de Mônica, Cebolinha, Cascão, Magali e do resto da turminha.",
       "year": "1976",
@@ -69498,6 +69943,14 @@
       "type": "series",
       "category": "infantil",
       "local_poster": "/Pirataflix/assets/Capas/dragoes a serie.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/gFhBIF8oXjpdVk1NbI4kP4l8LAe.jpg",
+        "https://image.tmdb.org/t/p/w500/4VNCNifeC0KJ0EoPQZTUJW1rYMI.jpg",
+        "https://image.tmdb.org/t/p/w500/8aWH7HzaFCtDhH9MUJ5e4FmUrt1.jpg",
+        "https://image.tmdb.org/t/p/w500/saqoerRN5OdjCNuchebqeSqrLXP.jpg",
+        "https://image.tmdb.org/t/p/w500/fDzGH0jGhJMMxbgsb9JiC7Ep4uk.jpg",
+        "https://image.tmdb.org/t/p/w500/aUbSLWM2RC428PWudMrvBP2kv56.jpg"
+      ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/lXMmT078fOOvCAg5f6tKNrMNpOS.jpg",
       "overview": "Depois de Soluço e seu companheiro Fúria da Noite, Banguela, salvou o povo de Berk, derrotando a Morte Rubra, que inspirou os Vikings de Berk fazer as pazes com os dragões. No entanto, Soluço descobre que a co-habitação está longe de ser harmonioso com a ignorância Viking e os instintos dos Dragões ameaçam destruir a aliança. \n\nPara resolver o problema, Soluço, organiza a Academia Dragões de Berk, ele e os amigos podem aprender tudo sobre dragões. Para provara aldeia e combater vilões como Alvin , os adolescentes Vikings de Berk e seus dragões dedicar-se a alcançar um entendimento vital.",
       "year": "2012",
@@ -69871,6 +70324,12 @@
       "type": "series",
       "category": "infantil",
       "local_poster": "/Pirataflix/assets/Capas/corrida_maluca.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/lQ1Qk2rdXLaxDDFVmmxJfLzfZ51.jpg",
+        "https://image.tmdb.org/t/p/w500/rgmUxN8vPB4WvvWKEhEpWs8SR9D.jpg",
+        "https://image.tmdb.org/t/p/w500/3ae3xHw6pB7fTzb4DNSsn6eVAH1.jpg",
+        "https://image.tmdb.org/t/p/w500/l3ZCO62uQIjZHZmAwarQOcRDUyr.jpg"
+      ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/f2PzX6WjS3e9wTizrNBHwBodmvn.jpg",
       "overview": "Quando os motores dão a partida, as risadas começam nesta série de comédia animada que mostra o retorno dos seus pilotos favoritos e, claro, seus carros malucos.",
       "year": "2017",
@@ -70179,6 +70638,15 @@
       "type": "series",
       "category": "infantil",
       "local_poster": "/Pirataflix/assets/Capas/scooby_doo.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/75ZldxGKFQDRHFn2G6FngCvlVzu.jpg",
+        "https://image.tmdb.org/t/p/w500/crKsdtMuN7Y2JdXmmkzIrQzzo36.jpg",
+        "https://image.tmdb.org/t/p/w500/wmX7rAqoCTHLedr06rEmxPujb6s.jpg",
+        "https://image.tmdb.org/t/p/w500/z6JoE4yAiHLfzFFN3D7cFI2mNo8.jpg",
+        "https://image.tmdb.org/t/p/w500/iaAOL66ec0jPVsEfDdXBhDkPXMg.jpg",
+        "https://image.tmdb.org/t/p/w500/mu8zU2jQfPbGO5bC6RHYrSypxUd.jpg",
+        "https://image.tmdb.org/t/p/w500/rbL3PJpWxgVYfhWYtMS1LH8Pd9z.jpg"
+      ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/ttzacVSKybUfVfIYnZ3HAO0iXzJ.jpg",
       "overview": "Fred Jones Jr., Daphne Blake, Velma Dinkley, Norville \"Salsicha\" Rogers e Scooby-Doo é um time de adolescentes solucionadores de mistérios que vivem na pequena cidade de Baía Cristal, o auto-proclamado \"lugar mais aterrorizado da terra\". A trama longa a história de estranhos desaparecimentos, de aparições de fantasmas e monstros da cidade formam a base para a sua próspera indústria turística e, como tal, os adultos da cidade (o principal deles sendo o pai de \"Fred\" o prefeito) sendo que ele não está feliz que as crianças estão derrubando tudo os acontecimentos sobrenaturais que trazem tanto turismo para a cidade.",
       "year": "2010",
