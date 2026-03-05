@@ -572,13 +572,46 @@ TMDB_API_KEY = '6862f118a59693b921840e5bbbdabb74'
 TMDB_BASE    = 'https://api.themoviedb.org/3'
 TMDB_IMG     = 'https://image.tmdb.org/t/p/w500'
 
+# Mapeamento manual para títulos que o TMDB não acha corretamente
+# Formato: 'titulo_no_sistema': {'search': 'titulo para buscar', 'type': 'movie'/'tv', 'tmdb_id': id_opcional}
+TMDB_TITLE_MAP = {
+    'princesa mononoke dublado': {'search': 'Princess Mononoke', 'type': 'movie'},
+    'princesa mononoke':         {'search': 'Princess Mononoke', 'type': 'movie'},
+    'lilo stitch filme':         {'search': 'Lilo & Stitch', 'type': 'movie', 'year': '2002'},
+    'lilo stitch':               {'search': 'Lilo & Stitch', 'type': 'movie', 'year': '2002'},
+    'lilo & stitch filme':       {'search': 'Lilo & Stitch', 'type': 'movie', 'year': '2002'},
+    'spy x family filme':        {'search': 'Spy x Family Code: White', 'type': 'movie'},
+    'boku no hero academia dublado': {'search': 'My Hero Academia', 'type': 'tv'},
+    'ataque dos titans':         {'search': 'Attack on Titan', 'type': 'tv'},
+    'sousou no frieren':         {'search': 'Frieren: Beyond Journey\'s End', 'type': 'tv'},
+    'dragon ball daima':         {'search': 'Dragon Ball Daima', 'type': 'tv'},
+    'invencivel':                {'search': 'Invincible', 'type': 'tv'},
+    'dandandan':                 {'search': 'DAN DA DAN', 'type': 'tv'},
+}
+
 def fetch_tmdb_metadata(title, media_type='movie'):
     """Busca metadados do TMDB: poster, sinopse, ano, gêneros, nota."""
     import urllib.request, urllib.parse, time
+
+    # Verificar mapeamento manual primeiro
+    title_key = title.lower().strip()
+    # Normalizar: remover acentos e caracteres especiais para lookup
+    import unicodedata as _ud
+    title_key_norm = _ud.normalize('NFKD', title_key).encode('ASCII', 'ignore').decode('ASCII')
+    title_key_norm = re.sub(r'[^\w\s]', '', title_key_norm).strip()
+
+    mapped = TMDB_TITLE_MAP.get(title_key) or TMDB_TITLE_MAP.get(title_key_norm)
+    if mapped:
+        search_title = mapped['search']
+        media_type   = mapped.get('type', media_type)
+    else:
+        search_title = title
+
     try:
-        query = urllib.parse.quote(title)
+        query = urllib.parse.quote(search_title)
         url   = f"{TMDB_BASE}/search/{media_type}?api_key={TMDB_API_KEY}&query={query}&language=pt-BR"
         req   = urllib.request.Request(url, headers={'User-Agent': 'Pirataflix/1.0'})
+
         with urllib.request.urlopen(req, timeout=8) as r:
             data = json.loads(r.read())
         results = data.get('results', [])
@@ -1331,6 +1364,24 @@ def generate_html_with_correct_paths(base_dir, data):
         <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zm-8 2V5h2v6h1.17L12 13.17 9.83 11H11zm-6 7h14v2H5z"/></svg>
         Instalar App
     </button>
+
+    <footer style="
+        text-align:center;
+        padding:28px 20px 20px;
+        margin-top:40px;
+        border-top:1px solid rgba(255,255,255,.07);
+        color:#555;
+        font-size:.78rem;
+        line-height:1.8;
+        font-family:Arial,sans-serif;
+    ">
+        <p style="margin-bottom:6px;">
+            &copy; 2026 &mdash; <span style="color:#e50914;font-weight:bold;">PirataFlix</span> &mdash; Todos os Direitos Reservados!
+        </p>
+        <p style="color:#444;">
+            Esse site não hospeda nenhum vídeo em seu servidor, todo o conteúdo é disponibilizado por terceiros não afiliados.
+        </p>
+    </footer>
 </body>
 </html>'''
 
