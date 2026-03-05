@@ -88,9 +88,16 @@ function playFirstEpisode(category, itemId) {
 }
 
 // =====================
-// MODAL ENRIQUECIDO
+// MODAL — ABRIR COM HISTÓRICO (botão Voltar fecha modal)
 // =====================
 function openModal(category, itemId) {
+    // Empurrar estado no histórico para interceptar o Voltar
+    history.pushState({ pirataflixModal: true, category, itemId }, '');
+
+    _renderModal(category, itemId);
+}
+
+function _renderModal(category, itemId) {
     const items = window.vodData[category];
     if (!items) return;
     const item = category === 'tv' ? items[parseInt(itemId)] : items.find(i => i.id === itemId);
@@ -129,17 +136,34 @@ function openModal(category, itemId) {
         });
         bodyHtml += '</div></div>';
     } else if (item.seasons && item.seasons.length) {
+        const sortedSeasons = item.seasons.slice().sort((a,b) => a.season - b.season);
+        const lastSeasonIdx = sortedSeasons.length - 1;
         bodyHtml += '<div class="episodes-section">';
-        item.seasons.slice().sort((a,b) => a.season - b.season).forEach(season => {
-            bodyHtml += '<h3 class="eps-title">🎬 Temporada ' + season.season + '</h3><div class="episode-list">';
+        sortedSeasons.forEach((season, sIdx) => {
+            // Última temporada começa aberta, demais colapsadas
+            const isOpen = (sIdx === lastSeasonIdx);
+            const collapseId = 'season-' + itemId + '-' + season.season;
+            bodyHtml += '<div class="season-block">';
+            bodyHtml += '<div class="season-header" data-toggle="' + collapseId + '">';
+            bodyHtml += '<span class="season-label">🎬 Temporada ' + season.season + '</span>';
+            bodyHtml += '<span class="season-count">' + season.episodes.length + ' ep.</span>';
+            bodyHtml += '<span class="season-chevron">' + (isOpen ? '▲' : '▼') + '</span>';
+            bodyHtml += '</div>';
+            bodyHtml += '<div class="episode-list season-episodes" id="' + collapseId + '" style="display:' + (isOpen ? 'grid' : 'none') + '">';
+
+            // Calcular offset global do índice para este season
+            let epOffset = 0;
+            for (let i = 0; i < sIdx; i++) epOffset += sortedSeasons[i].episodes.length;
+
             season.episodes.forEach((ep, index) => {
-                const num = ep.episode || (index+1);
-                const t   = (ep.title || 'Episódio '+num).replace(/"/g,'');
-                bodyHtml += '<div class="episode-item" data-action="play-ep" data-url="' + ep.url + '" data-title="' + t + '" data-itemid="' + itemId + '" data-category="' + category + '" data-index="' + index + '">';
+                const num      = ep.episode || (index+1);
+                const t        = (ep.title || 'Episódio '+num).replace(/"/g,'');
+                const globalIdx = epOffset + index;
+                bodyHtml += '<div class="episode-item" data-action="play-ep" data-url="' + ep.url + '" data-title="' + t + '" data-itemid="' + itemId + '" data-category="' + category + '" data-index="' + globalIdx + '">';
                 bodyHtml += '<div class="episode-number">' + num + '</div>';
                 bodyHtml += '<div class="episode-info"><div class="episode-title">' + t + '</div></div></div>';
             });
-            bodyHtml += '</div>';
+            bodyHtml += '</div></div>';
         });
         bodyHtml += '</div>';
     } else if (item.episodes && item.episodes.length) {
@@ -304,11 +328,54 @@ function setupModalListeners() {
                 modal.style.display = 'none';
                 playEpisode(el.dataset.url, item_title_from(el.dataset.category, el.dataset.itemid)+' - '+(el.dataset.title||''), el.dataset.itemid, el.dataset.category, parseInt(el.dataset.index)||0);
             }
+
+            // Toggle de temporadas colapsáveis
+            const toggleTarget = el.dataset.toggle || el.closest('[data-toggle]')?.dataset.toggle;
+            if (toggleTarget) {
+                const panel   = document.getElementById(toggleTarget);
+                const chevron = el.closest('.season-header')?.querySelector('.season-chevron') ||
+                                document.querySelector('[data-toggle="'+toggleTarget+'"] .season-chevron');
+                if (panel) {
+                    const open = panel.style.display === 'grid';
+                    panel.style.display = open ? 'none' : 'grid';
+                    if (chevron) chevron.textContent = open ? '▼' : '▲';
+                }
+            }
         });
-        if (closeBtn) closeBtn.onclick = () => (modal.style.display = 'none');
+
+        // Delegação separada para season-header (pode clicar fora do [data-action])
+        modal.addEventListener('click', e => {
+            const header = e.target.closest('.season-header');
+            if (!header) return;
+            const collapseId = header.dataset.toggle;
+            if (!collapseId) return;
+            const panel   = document.getElementById(collapseId);
+            const chevron = header.querySelector('.season-chevron');
+            if (panel) {
+                const open = panel.style.display === 'grid';
+                panel.style.display = open ? 'none' : 'grid';
+                if (chevron) chevron.textContent = open ? '▼' : '▲';
+            }
+        });
+
+        function closeModal() {
+            modal.style.display = 'none';
+        }
+        if (closeBtn) closeBtn.onclick = closeModal;
+
+        // Fechar modal ao clicar fora
+        window.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+
+        // Fechar modal com ESC
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeAllModals(); });
+
+        // Interceptar botão Voltar do navegador
+        window.addEventListener('popstate', e => {
+            if (modal.style.display === 'block' || modal.style.display === 'flex') {
+                closeModal();
+            }
+        });
     }
-    window.addEventListener('click', e => { if (e.target === modal) modal.style.display = 'none'; });
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeAllModals(); });
 }
 
 // =====================
@@ -380,6 +447,18 @@ function setupModalListeners() {
         margin:12px 0 0;max-height:130px;overflow-y:auto;
     }
     .eps-title{margin:18px 0 8px;color:#e50914;font-size:1rem;}
+    /* Temporadas colapsáveis */
+    .season-block{margin-bottom:8px;border-radius:6px;overflow:hidden;border:1px solid rgba(255,255,255,.07);}
+    .season-header{
+        display:flex;align-items:center;gap:10px;padding:12px 16px;
+        background:rgba(255,255,255,.05);cursor:pointer;
+        transition:background .2s;user-select:none;
+    }
+    .season-header:hover{background:rgba(229,9,20,.12);}
+    .season-label{font-size:.95rem;font-weight:bold;color:#fff;flex:1;}
+    .season-count{font-size:.78rem;color:#888;background:rgba(255,255,255,.08);padding:2px 8px;border-radius:10px;}
+    .season-chevron{font-size:.7rem;color:#888;margin-left:4px;transition:transform .2s;}
+    .season-episodes{gap:6px;padding:8px;}
     .hamburger{
         display:none;flex-direction:column;gap:5px;
         cursor:pointer;background:none;border:none;padding:5px;
