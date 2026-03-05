@@ -1,257 +1,225 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """
-Script para consolidar filmes, séries e canais de TV no data.json (SEM DUPLICATAS)
-SEM backups, SEM relatórios, apenas o essencial
+consolidar_data.py — Consolida filmes, séries e canais de TV no data.json
+Mantém categorias de TV separadas por grupo
 """
+
 import json
+import re
 from pathlib import Path
 
-def verificar_categoria_tv(data):
-    """Verifica se os canais de TV estão na categoria correta"""
-    
-    # Verificar se há itens de TV em Novelas
-    itens_movidos = 0
-    
-    if 'novelas' in data:
-        # Procurar itens que parecem ser de TV
-        novos_tv = []
-        novelas_limpas = []
-        
-        for item in data['novelas']:
-            # Verificar se parece ser TV (nome contém 'iptv' ou é um canal)
-            titulo = item.get('title', '').lower()
-            if 'iptv' in titulo or titulo.startswith('tv ') or 'canal' in titulo:
-                # Mover para TV
-                # Garantir que o grupo está correto
-                item['group'] = "📺 TV Ao Vivo"
-                novos_tv.append(item)
-                itens_movidos += 1
-                print(f"   📺 Movendo de Novelas para TV: {item.get('title')}")
-            else:
-                novelas_limpas.append(item)
-        
-        # Atualizar categorias
-        data['novelas'] = novelas_limpas
-        if 'tv' not in data:
-            data['tv'] = []
-        data['tv'].extend(novos_tv)
-    
-    # Verificar se há canais com group-title TV
-    if 'tv' in data:
-        for canal in data['tv']:
-            # Garantir que o grupo está correto
-            canal['group'] = "📺 TV Ao Vivo"
-    
-    if itens_movidos > 0:
-        print(f"   ✅ {itens_movidos} itens movidos de Novelas para TV")
-    
-    return data
+print("=" * 60)
+print("🔄 CONSOLIDANDO DADOS NO DATA.JSON")
+print("=" * 60)
 
-def consolidate_data():
-    print("="*60)
-    print("🔄 CONSOLIDANDO DADOS NO DATA.JSON")
-    print("="*60)
-    
-    web_dir = Path("web")
-    data_json = web_dir / "data.json"
-    channels_json = web_dir / "channels.json"
-    
-    # 🔥 PASSO 1: DEFINIR ESTRUTURA PADRÃO
-    estrutura_padrao = {
-        "filmes": [],
-        "series": [],
-        "novelas": [],
-        "animes": [],
-        "infantil": [],
-        "tv": []  # 🔥 GARANTIR QUE TV EXISTE
-    }
-    
-    # Carregar data.json atual ou criar novo
-    if data_json.exists():
-        with open(data_json, 'r', encoding='utf-8') as f:
-            data_antigo = json.load(f)
-        
-        # 🔥 VERIFICAR E CORRIGIR CATEGORIAS
-        data_antigo = verificar_categoria_tv(data_antigo)
-        
-        # 🔥 PASSO 2: GARANTIR QUE TODAS AS CATEGORIAS EXISTEM
-        data = estrutura_padrao.copy()
-        for categoria in estrutura_padrao.keys():
-            if categoria in data_antigo:
-                data[categoria] = data_antigo[categoria]
-        
-        total_itens = sum(len(data.get(cat, [])) for cat in estrutura_padrao.keys())
-        print(f"📂 Data.json carregado: {total_itens} itens totais")
-    else:
-        data = estrutura_padrao.copy()
-        print("📂 Criando novo data.json com todas as categorias")
-    
-    # Carregar canais de TV
-    if channels_json.exists():
-        with open(channels_json, 'r', encoding='utf-8') as f:
-            tv_channels = json.load(f)
-        print(f"📺 Canais de TV carregados: {len(tv_channels)}")
-    else:
+# Categorias base do VOD
+CATS_VOD = ['filmes', 'series', 'novelas', 'animes', 'infantil']
+
+# Categorias de TV que viram subcategorias no data.json
+# Chave: nome PT-BR (igual ao normalizar_grupo), Valor: chave no data.json
+TV_CATS = {
+    '📺 Geral':           'tv_geral',
+    '📰 Notícias':        'tv_noticias',
+    '⚽ Esportes':        'tv_esportes',
+    '🎬 Filmes':          'tv_filmes',
+    '📺 Séries':          'tv_series',
+    '🎭 Entretenimento':  'tv_entretenimento',
+    '✝️ Religioso':       'tv_religioso',
+    '🧸 Infantil':        'tv_infantil',
+    '🎵 Música':          'tv_musica',
+    '📚 Educação':        'tv_educacao',
+    '🎥 Documentário':    'tv_documentario',
+    '🌿 Natureza':        'tv_natureza',
+    '🎨 Animação':        'tv_animacao',
+    '😂 Comédia':         'tv_comedia',
+    '🎨 Cultura':         'tv_cultura',
+    '🏛️ Legislativo':     'tv_legislativo',
+    '🔬 Ciência':         'tv_ciencia',
+    '🛍️ Shopping':        'tv_shopping',
+    '🍳 Culinária':       'tv_culinaria',
+    '✈️ Viagem':          'tv_viagem',
+    '🚗 Automóvel':       'tv_automovel',
+    '💅 Lifestyle':       'tv_lifestyle',
+    '🎞️ Clássicos':       'tv_classicos',
+    '👨‍👩‍👧 Família':        'tv_familia',
+    '💼 Negócios':        'tv_negocios',
+    '🌦️ Clima':           'tv_clima',
+}
+
+# Chave legada que o site usa para TV ao vivo
+TV_LEGACY_KEY = 'tv'
+
+
+def carregar_json(path: Path) -> list | dict:
+    if path.exists():
+        try:
+            return json.loads(path.read_text(encoding='utf-8'))
+        except Exception as e:
+            print(f"   ⚠️ Erro ao ler {path.name}: {e}")
+    return [] if path.suffix == '.json' and 'channels' in path.name else {}
+
+
+def coletar_urls_vod(data: dict) -> set[str]:
+    urls = set()
+    for cat in CATS_VOD:
+        for item in data.get(cat, []):
+            for ep in item.get('episodes', []):
+                if ep.get('url'): urls.add(ep['url'])
+            for season in item.get('seasons', []):
+                for ep in season.get('episodes', []):
+                    if ep.get('url'): urls.add(ep['url'])
+    return urls
+
+
+def coletar_urls_tv(data: dict) -> set[str]:
+    urls = set()
+    # Chave legada
+    for canal in data.get(TV_LEGACY_KEY, []):
+        _extrair_urls_canal(canal, urls)
+    # Subcategorias
+    for chave in TV_CATS.values():
+        for canal in data.get(chave, []):
+            _extrair_urls_canal(canal, urls)
+    return urls
+
+
+def _extrair_urls_canal(canal: dict, urls: set):
+    if canal.get('url'):     urls.add(canal['url'])
+    for ep in canal.get('episodes', []):
+        if ep.get('url'):    urls.add(ep['url'])
+
+
+def consolidate():
+    base_dir      = Path(__file__).parent
+    web_dir       = base_dir / 'web'
+    data_json     = web_dir / 'data.json'
+    channels_json = web_dir / 'channels.json'
+
+    # ── Carregar data.json existente ──────────────────────────
+    data_antigo = carregar_json(data_json)
+    if not isinstance(data_antigo, dict):
+        data_antigo = {}
+
+    # Estrutura base
+    data: dict = {cat: data_antigo.get(cat, []) for cat in CATS_VOD}
+    # Preservar TV legada e subcategorias existentes
+    data[TV_LEGACY_KEY] = data_antigo.get(TV_LEGACY_KEY, [])
+    for chave in TV_CATS.values():
+        data[chave] = data_antigo.get(chave, [])
+
+    total_vod = sum(len(data[c]) for c in CATS_VOD)
+    print(f"📂 VOD carregado: {total_vod} itens")
+
+    # ── Carregar channels.json ────────────────────────────────
+    tv_channels: list[dict] = carregar_json(channels_json)
+    if not isinstance(tv_channels, list):
         tv_channels = []
-        print("⚠️ Nenhum channels.json encontrado")
-    
-    # 🔥 PASSO 3: GARANTIR QUE A CATEGORIA TV EXISTE (redundante, mas seguro)
-    if 'tv' not in data:
-        data['tv'] = []
-        print("📺 Criando categoria TV (não existia)")
-    
-    # Coletar URLs existentes de filmes/séries
-    urls_existentes = set()
-    for categoria in ['filmes', 'series', 'novelas', 'animes', 'infantil']:
-        for item in data.get(categoria, []):
-            if item.get('episodes'):
-                for ep in item['episodes']:
-                    if ep.get('url'):
-                        urls_existentes.add(ep['url'])
-            if item.get('seasons'):
-                for season in item['seasons']:
-                    if season.get('episodes'):
-                        for ep in season['episodes']:
-                            if ep.get('url'):
-                                urls_existentes.add(ep['url'])
-    
-    print(f"🔍 URLs em filmes/séries: {len(urls_existentes)}")
-    
-    # URLs já na TV
-    urls_tv_existentes = set()
-    for canal in data.get('tv', []):
-        if canal.get('url'):
-            urls_tv_existentes.add(canal['url'])
-        if canal.get('episodes'):
-            for ep in canal['episodes']:
-                if ep.get('url'):
-                    urls_tv_existentes.add(ep['url'])
-    
-    print(f"📺 URLs já na TV: {len(urls_tv_existentes)}")
-    
-    # Adicionar canais novos
-    canais_novos = 0
-    duplicados_com_filmes = 0
-    duplicados_na_tv = 0
-    
-    # 🔥 PASSO 4: PROCESSAR CADA CANAL
+    print(f"📺 channels.json: {len(tv_channels)} canais")
+
+    # ── Coletar URLs já existentes ────────────────────────────
+    urls_vod = coletar_urls_vod(data)
+    urls_tv  = coletar_urls_tv(data)
+    print(f"🔍 URLs VOD: {len(urls_vod)} | URLs TV existentes: {len(urls_tv)}")
+
+    # ── Separar canais por categoria ──────────────────────────
+    # Inicializar acumuladores por subcategoria
+    por_cat: dict[str, list] = {chave: [] for chave in TV_CATS.values()}
+    legado: list = []
+
+    novos = dup_vod = dup_tv = 0
+
     for canal in tv_channels:
-        # Garantir que o grupo está correto
-        canal['group'] = "📺 TV Ao Vivo"
-        
-        url_principal = canal.get('url', '')
-        
-        # Verificar se URL já existe em filmes/séries
-        if url_principal and url_principal in urls_existentes:
-            duplicados_com_filmes += 1
+        url = canal.get('url', '')
+        if not url:
             continue
-        
-        # Verificar se URL já existe na própria TV
-        if url_principal and url_principal in urls_tv_existentes:
-            duplicados_na_tv += 1
+        if url in urls_vod:
+            dup_vod += 1
             continue
-        
-        # Verificar episódios
-        url_duplicada = False
-        if canal.get('episodes'):
-            for ep in canal['episodes']:
-                if ep.get('url'):
-                    if ep['url'] in urls_existentes:
-                        duplicados_com_filmes += 1
-                        url_duplicada = True
-                        break
-                    if ep['url'] in urls_tv_existentes:
-                        duplicados_na_tv += 1
-                        url_duplicada = True
-                        break
-        
-        if url_duplicada:
+        if url in urls_tv:
+            dup_tv += 1
             continue
-        
-        # 🔥 PASSO 5: ADICIONAR CANAL NOVO (COM VERIFICAÇÃO DE SEGURANÇA)
-        if 'tv' not in data:
-            data['tv'] = []
-        
-        data['tv'].append(canal)
-        canais_novos += 1
-        
-        # Adicionar URLs ao conjunto da TV
-        if url_principal:
-            urls_tv_existentes.add(url_principal)
-        if canal.get('episodes'):
-            for ep in canal['episodes']:
-                if ep.get('url'):
-                    urls_tv_existentes.add(ep['url'])
-    
-    print(f"\n📊 RESULTADO:")
-    print(f"   ✅ Canais novos adicionados: {canais_novos}")
-    print(f"   ⚠️ Duplicados com filmes/séries: {duplicados_com_filmes}")
-    print(f"   ⚠️ Duplicados na própria TV: {duplicados_na_tv}")
-    print(f"   📺 Total na TV: {len(data.get('tv', []))}")
-    
-    # Total geral
-    total_geral = 0
-    for cat in estrutura_padrao.keys():
-        total_geral += len(data.get(cat, []))
-    print(f"   📊 TOTAL GERAL: {total_geral} itens")
-    
-    # 🔥 PASSO 6: SALVAR (SEM BACKUP)
-    with open(data_json, 'w', encoding='utf-8') as f:
-        json.dump(data, f, indent=2, ensure_ascii=False)
-    
-    print(f"\n💾 Data.json atualizado com sucesso!")
-    print("="*60)
 
-def verificar_duplicatas():
-    """Verificação rápida de duplicatas"""
-    data_json = Path("web/data.json")
-    if not data_json.exists():
-        return
-    
-    with open(data_json, 'r', encoding='utf-8') as f:
-        data = json.load(f)
-    
-    todas_urls = []
-    for categoria, itens in data.items():
-        for item in itens:
-            if item.get('episodes'):
-                for ep in item['episodes']:
-                    if ep.get('url'):
-                        todas_urls.append(ep['url'])
-            if item.get('seasons'):
-                for season in item['seasons']:
-                    if season.get('episodes'):
-                        for ep in season['episodes']:
-                            if ep.get('url'):
-                                todas_urls.append(ep['url'])
-    
-    urls_vistas = set()
-    duplicatas = 0
-    exemplo_url = None
-    
-    for url in todas_urls:
-        if url in urls_vistas:
-            duplicatas += 1
-            if not exemplo_url:
-                exemplo_url = url
+        # Normalizar grupo
+        grupo_raw = canal.get('group', canal.get('group_raw', ''))
+        grupo_pt  = grupo_raw  # já deve estar em PT-BR vindo do download_iptv.py
+
+        # Se ainda vier em inglês, converter
+        if grupo_pt not in TV_CATS:
+            grupo_pt = _fallback_grupo(grupo_raw)
+
+        canal['group'] = grupo_pt
+
+        chave_cat = TV_CATS.get(grupo_pt)
+        if chave_cat:
+            por_cat[chave_cat].append(canal)
         else:
-            urls_vistas.add(url)
-    
-    if duplicatas > 0:
-        print(f"\n⚠️ ATENÇÃO: {duplicatas} URLs duplicadas encontradas!")
-        if exemplo_url:
-            print(f"   Exemplo: {exemplo_url[:80]}...")
-    else:
-        print(f"\n✅ Nenhuma duplicata encontrada!")
+            legado.append(canal)
 
-def main():
-    consolidate_data()
-    verificar_duplicatas()
-    
-    print("\n" + "="*60)
-    print("✅ PROCESSO CONCLUÍDO COM SUCESSO!")
-    print("📁 Agora execute: python build.py")
-    print("="*60)
+        urls_tv.add(url)
+        novos += 1
 
-if __name__ == "__main__":
-    main()
+    # ── Mesclar com existentes (sem duplicar) ─────────────────
+    for chave, lista in por_cat.items():
+        data[chave].extend(lista)
+
+    # Legado vai para tv_geral ou TV_LEGACY_KEY
+    data['tv_geral'].extend(legado)
+
+    # Manter TV_LEGACY_KEY como união de todos para compatibilidade
+    todos_tv: list[dict] = []
+    seen_urls: set[str] = set()
+    for chave in [TV_LEGACY_KEY] + list(TV_CATS.values()):
+        for canal in data.get(chave, []):
+            u = canal.get('url', '')
+            if u and u not in seen_urls:
+                seen_urls.add(u)
+                todos_tv.append(canal)
+    data[TV_LEGACY_KEY] = todos_tv
+
+    # ── Resultado ─────────────────────────────────────────────
+    print(f"\n📊 RESULTADO:")
+    print(f"   ✅ Novos canais adicionados: {novos}")
+    print(f"   ⚠️  Duplicados com VOD: {dup_vod}")
+    print(f"   ⚠️  Duplicados na TV: {dup_tv}")
+    print(f"\n📺 CANAIS POR CATEGORIA:")
+    for grupo_pt, chave in sorted(TV_CATS.items()):
+        qtd = len(data.get(chave, []))
+        if qtd:
+            print(f"   {grupo_pt}: {qtd}")
+    print(f"   Total TV (legado): {len(data[TV_LEGACY_KEY])}")
+
+    # ── Salvar ────────────────────────────────────────────────
+    data_json.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding='utf-8')
+    print(f"\n💾 data.json salvo — {sum(len(data.get(c,[])) for c in list(CATS_VOD)+[TV_LEGACY_KEY])} itens totais")
+    print("=" * 60)
+    print("✅ Concluído! Execute agora: python3 build.py")
+
+
+def _fallback_grupo(raw: str) -> str:
+    """Converte grupos em inglês ainda não convertidos."""
+    MAP = {
+        'news': '📰 Notícias', 'sports': '⚽ Esportes',
+        'movies': '🎬 Filmes', 'series': '📺 Séries',
+        'kids': '🧸 Infantil', 'music': '🎵 Música',
+        'religious': '✝️ Religioso', 'education': '📚 Educação',
+        'documentary': '🎥 Documentário', 'entertainment': '🎭 Entretenimento',
+        'animation': '🎨 Animação', 'comedy': '😂 Comédia',
+        'outdoor': '🌿 Natureza', 'science': '🔬 Ciência',
+        'legislative': '🏛️ Legislativo', 'culture': '🎨 Cultura',
+        'shop': '🛍️ Shopping', 'cooking': '🍳 Culinária',
+        'travel': '✈️ Viagem', 'auto': '🚗 Automóvel',
+        'lifestyle': '💅 Lifestyle', 'classic': '🎞️ Clássicos',
+        'family': '👨‍👩‍👧 Família', 'business': '💼 Negócios',
+        'weather': '🌦️ Clima', 'general': '📺 Geral',
+        'undefined': '📺 Geral',
+    }
+    chave = raw.lower().split(';')[0].split('|')[0].strip()
+    for k, v in MAP.items():
+        if k in chave:
+            return v
+    return '📺 Geral'
+
+
+if __name__ == '__main__':
+    consolidate()
