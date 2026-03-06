@@ -793,7 +793,7 @@ def enrich_with_tmdb(output):
 EPISODE_SCHEDULE_TITLES = {
     # slug_do_titulo : tmdb_id (série)
     'tres_gracas': 289996,
-    'dona-beija': 152401,
+    'dona_beja': 152401,
 }
 # Delay de liberação: servidor leva ~5h após meia-noite do air_date
 SCHEDULE_RELEASE_DELAY_HOURS = 5  # libera às 05:00 BRT do dia do air_date
@@ -1626,4 +1626,5 @@ def generate_html_with_correct_paths(base_dir, data):
 
 if __name__ == "__main__":
     build_vod_with_direct_capas()
+
 
