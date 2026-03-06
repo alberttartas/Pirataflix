@@ -796,7 +796,7 @@ EPISODE_SCHEDULE_TITLES = {
     'dona_beja': 152401,
 }
 # Delay de liberação: servidor leva ~5h após meia-noite do air_date
-SCHEDULE_RELEASE_DELAY_HOURS = 5  # libera às 05:00 BRT do dia do air_date
+SCHEDULE_RELEASE_DELAY_HOURS = 21
 
 def fetch_episode_schedule(tmdb_id: int, season: int = 1) -> list[dict]:
     """Busca dados por episódio de uma temporada: air_date, overview, still, guest_stars."""
@@ -1626,5 +1626,6 @@ def generate_html_with_correct_paths(base_dir, data):
 
 if __name__ == "__main__":
     build_vod_with_direct_capas()
+
 
 
