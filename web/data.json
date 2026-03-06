@@ -1382,202 +1382,648 @@
             {
               "title": "Dona Beja Episódio 01",
               "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-001.mp4",
-              "episode": 1
+              "episode": 1,
+              "air_date": "2026-02-02",
+              "overview": "Enquanto aguarda a volta do noivo do exterior, Beja desperta a atenção indesejada de um ouvidor do Rei, que altera seus planos para o futuro.",
+              "still": "https://image.tmdb.org/t/p/w400/znQTl6CEUBY8kI7TzEN0AjQviKc.jpg",
+              "guest_stars": [
+                {
+                  "name": "Joana Solnado",
+                  "character": "Maria Bernarda Alves",
+                  "photo": "https://image.tmdb.org/t/p/w185/k798mk0GXr0XLE6NPjPneww7UOJ.jpg"
+                },
+                {
+                  "name": "Roberto Bomtempo",
+                  "character": "José Alves",
+                  "photo": "https://image.tmdb.org/t/p/w185/8whwEacqSAuKA9urVojx70d8MNb.jpg"
+                },
+                {
+                  "name": "Ana Carolina Leite",
+                  "character": "Ana Jacinta de São José (Dona Beja - criança)",
+                  "photo": "https://image.tmdb.org/t/p/w185/1j7SGiaB3tL3Pk0noggvMP42JXW.jpg"
+                },
+                {
+                  "name": "Levi Asaf",
+                  "character": "Antônio Sampaio (criança)",
+                  "photo": "https://image.tmdb.org/t/p/w185/es92F0ACfqTxdd2awn7BU3H6oPB.jpg"
+                }
+              ],
+              "locked": false
             },
             {
               "title": "Dona Beja Episódio 02",
               "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-002.mp4",
-              "episode": 2
+              "episode": 2,
+              "air_date": "2026-02-02",
+              "overview": "Levada de Araxá a Paracatu, Beja evita Mota e encontra refúgio na amizade com Severina. Com a ajuda de João, Antônio se livra de sérios problemas.",
+              "still": "https://image.tmdb.org/t/p/w400/8LJLdjyDqLWb0rzisWOq4Md7R7V.jpg",
+              "guest_stars": [
+                {
+                  "name": "Ana Carolina Leite",
+                  "character": "Ana Jacinta de São José (Dona Beja - criança)",
+                  "photo": "https://image.tmdb.org/t/p/w185/1j7SGiaB3tL3Pk0noggvMP42JXW.jpg"
+                },
+                {
+                  "name": "Levi Asaf",
+                  "character": "Antônio Sampaio (criança)",
+                  "photo": "https://image.tmdb.org/t/p/w185/es92F0ACfqTxdd2awn7BU3H6oPB.jpg"
+                },
+                {
+                  "name": "Kauã Torres",
+                  "character": "João Carneiro de Mendonça (criança)",
+                  "photo": ""
+                },
+                {
+                  "name": "Virgílio Castelo",
+                  "character": "Ouvidor Joaquim Inácio Silveira Mota",
+                  "photo": "https://image.tmdb.org/t/p/w185/kWTwY3niuf9UrbDIAyFjcYp5M9c.jpg"
+                }
+              ],
+              "locked": false
             },
             {
               "title": "Dona Beja Episódio 03",
               "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-003.mp4",
-              "episode": 3
+              "episode": 3,
+              "air_date": "2026-02-02",
+              "overview": "Enquanto Beja enfrenta a determinação crescente de Mota em mantê-la em Paracatu, Antônio tenta resgatar a noiva e desmentir os rumores.",
+              "still": "https://image.tmdb.org/t/p/w400/afF0906jHlJmI0dDPPj8m0h0pLo.jpg",
+              "guest_stars": [
+                {
+                  "name": "Virgílio Castelo",
+                  "character": "Ouvidor Joaquim Inácio Silveira Mota",
+                  "photo": "https://image.tmdb.org/t/p/w185/kWTwY3niuf9UrbDIAyFjcYp5M9c.jpg"
+                },
+                {
+                  "name": "Marcello Escorel",
+                  "character": "Padre Melo Franco",
+                  "photo": "https://image.tmdb.org/t/p/w185/1SXEmTjPhxRpljv4vNjMmNe7HSg.jpg"
+                },
+                {
+                  "name": "Cláudio Mendes",
+                  "character": "Juca",
+                  "photo": "https://image.tmdb.org/t/p/w185/sEPJYjdyatsmDfnivIdAANCjhFp.jpg"
+                }
+              ],
+              "locked": false
             },
             {
               "title": "Dona Beja Episódio 04",
               "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-004.mp4",
-              "episode": 4
+              "episode": 4,
+              "air_date": "2026-02-02",
+              "overview": "Beja aceita viver uma vida com Mota, mas usa suas virtudes a seu favor. Antônio fica ferido em sua missão, e Maria avança com seu plano.",
+              "still": "https://image.tmdb.org/t/p/w400/ng7RPOVraqzTaoF1axkMV8l9C6y.jpg",
+              "guest_stars": [
+                {
+                  "name": "Virgílio Castelo",
+                  "character": "Ouvidor Joaquim Inácio Silveira Mota",
+                  "photo": "https://image.tmdb.org/t/p/w185/kWTwY3niuf9UrbDIAyFjcYp5M9c.jpg"
+                },
+                {
+                  "name": "Marcello Escorel",
+                  "character": "Padre Melo Franco",
+                  "photo": "https://image.tmdb.org/t/p/w185/1SXEmTjPhxRpljv4vNjMmNe7HSg.jpg"
+                },
+                {
+                  "name": "Cláudio Mendes",
+                  "character": "Juca",
+                  "photo": "https://image.tmdb.org/t/p/w185/sEPJYjdyatsmDfnivIdAANCjhFp.jpg"
+                },
+                {
+                  "name": "Elizabeth Savalla",
+                  "character": "Madame Constance",
+                  "photo": "https://image.tmdb.org/t/p/w185/LHSWt3pywlkRTE5dNMfqszAdbm.jpg"
+                }
+              ],
+              "locked": false
             },
             {
               "title": "Dona Beja Episódio 05",
               "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-005.mp4",
-              "episode": 5
+              "episode": 5,
+              "air_date": "2026-02-02",
+              "overview": "Beja prepara um plano contra Mota. Antônio ouve uma revelação de Angélica, cujas consequências abalam seu futuro casamento.",
+              "still": "https://image.tmdb.org/t/p/w400/gfUX8ZPvTXYw4NurPD26cx7oHzD.jpg",
+              "guest_stars": [
+                {
+                  "name": "Roberto Bomtempo",
+                  "character": "José Alves",
+                  "photo": "https://image.tmdb.org/t/p/w185/8whwEacqSAuKA9urVojx70d8MNb.jpg"
+                },
+                {
+                  "name": "Ana Carolina Leite",
+                  "character": "Ana Jacinta de São José (Dona Beja - criança)",
+                  "photo": "https://image.tmdb.org/t/p/w185/1j7SGiaB3tL3Pk0noggvMP42JXW.jpg"
+                },
+                {
+                  "name": "Levi Asaf",
+                  "character": "Antônio Sampaio (criança)",
+                  "photo": "https://image.tmdb.org/t/p/w185/es92F0ACfqTxdd2awn7BU3H6oPB.jpg"
+                },
+                {
+                  "name": "Virgílio Castelo",
+                  "character": "Ouvidor Joaquim Inácio Silveira Mota",
+                  "photo": "https://image.tmdb.org/t/p/w185/kWTwY3niuf9UrbDIAyFjcYp5M9c.jpg"
+                }
+              ],
+              "locked": false
             },
             {
               "title": "Dona Beja Episódio 06",
               "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-006.mp4",
-              "episode": 6
+              "episode": 6,
+              "air_date": "2026-02-09",
+              "overview": "De volta a Araxá, Beja mantém a cabeça erguida enquanto espera o retorno de Antônio da capital, sem saber que ele está noivo de Angélica.",
+              "still": "https://image.tmdb.org/t/p/w400/o9OVXJRifZvQnb4CyjnWGIglz5Y.jpg",
+              "guest_stars": [
+                {
+                  "name": "Roberto Bomtempo",
+                  "character": "José Alves",
+                  "photo": "https://image.tmdb.org/t/p/w185/8whwEacqSAuKA9urVojx70d8MNb.jpg"
+                },
+                {
+                  "name": "Ana Carolina Leite",
+                  "character": "Ana Jacinta de São José (Dona Beja - criança)",
+                  "photo": "https://image.tmdb.org/t/p/w185/1j7SGiaB3tL3Pk0noggvMP42JXW.jpg"
+                },
+                {
+                  "name": "Levi Asaf",
+                  "character": "Antônio Sampaio (criança)",
+                  "photo": "https://image.tmdb.org/t/p/w185/es92F0ACfqTxdd2awn7BU3H6oPB.jpg"
+                },
+                {
+                  "name": "Paulo Giardini",
+                  "character": "Eliseu",
+                  "photo": "https://image.tmdb.org/t/p/w185/5g69Cpq8UtAuyKX73Zza8SHLCsP.jpg"
+                }
+              ],
+              "locked": false
             },
             {
               "title": "Dona Beja Episódio 07",
               "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-007.mp4",
-              "episode": 7
+              "episode": 7,
+              "air_date": "2026-02-09",
+              "overview": "Enquanto Beja abre um novo caminho para si em Araxá, Josefa enfrenta um julgamento e os problemas no casamento de Angélica se intensificam.",
+              "still": "https://image.tmdb.org/t/p/w400/zwZi2fhIj29Ngo8WNKDhcDQem5A.jpg",
+              "guest_stars": [
+                {
+                  "name": "Elisa Lucinda",
+                  "character": "Flaviana",
+                  "photo": "https://image.tmdb.org/t/p/w185/x1iCvQREawt35bLKLXFXTuNsTOo.jpg"
+                },
+                {
+                  "name": "Luiz Henrique Nogueira",
+                  "character": "Domingos Junqueira",
+                  "photo": "https://image.tmdb.org/t/p/w185/pMEzigfe6sKpjLotPD0NJjhSCTH.jpg"
+                },
+                {
+                  "name": "Othon Bastos",
+                  "character": "Juiz",
+                  "photo": "https://image.tmdb.org/t/p/w185/cKZos1GKCQNHbaUqa9byGGl90rq.jpg"
+                }
+              ],
+              "locked": false
             },
             {
               "title": "Dona Beja Episódio 08",
               "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-008.mp4",
-              "episode": 8
+              "episode": 8,
+              "air_date": "2026-02-09",
+              "overview": "Carminha e Honorato vivem um momento inesperado. Antônio e João disputam Beja, e ela decide mudar as regras na Chácara do Jatobá.",
+              "still": "https://image.tmdb.org/t/p/w400/dKhMgbuGhjWkeOW43sTnLzZ4qGD.jpg",
+              "guest_stars": [
+                {
+                  "name": "Luiz Henrique Nogueira",
+                  "character": "Domingos Junqueira",
+                  "photo": "https://image.tmdb.org/t/p/w185/pMEzigfe6sKpjLotPD0NJjhSCTH.jpg"
+                },
+                {
+                  "name": "Othon Bastos",
+                  "character": "Juiz",
+                  "photo": "https://image.tmdb.org/t/p/w185/cKZos1GKCQNHbaUqa9byGGl90rq.jpg"
+                }
+              ],
+              "locked": false
             },
             {
               "title": "Dona Beja Episódio 09",
               "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-009.mp4",
-              "episode": 9
+              "episode": 9,
+              "air_date": "2026-02-09",
+              "overview": "Beja retoma sua relação com João e usa informações comprometedoras para encerrar uma discussão com Antônio. Severina revela um talento oculto.",
+              "still": "https://image.tmdb.org/t/p/w400/bmNUjX0j055QQy6yjxO2kEIjzje.jpg",
+              "guest_stars": [
+                {
+                  "name": "Othon Bastos",
+                  "character": "Juiz",
+                  "photo": "https://image.tmdb.org/t/p/w185/cKZos1GKCQNHbaUqa9byGGl90rq.jpg"
+                }
+              ],
+              "locked": false
             },
             {
               "title": "Dona Beja Episódio 10",
               "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-010.mp4",
-              "episode": 10
+              "episode": 10,
+              "air_date": "2026-02-09",
+              "overview": "A família de Antônio se revolta ao descobrir que ele voltou com Beja. Maria abre o coração para Beja, e Candinha se junta a Beja contra as beatas.",
+              "still": "https://image.tmdb.org/t/p/w400/31ef0Fm2Kj2q7pyI5r82BHX5aPM.jpg",
+              "guest_stars": [],
+              "locked": false
             },
             {
               "title": "Dona Beja Episódio 11",
               "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-011.mp4",
-              "episode": 11
+              "episode": 11,
+              "air_date": "2026-02-16",
+              "overview": "As famílias de João e Maria acertam o noivado dos dois. Maria toma medidas drásticas para impedir que Antônio se aproxime de Beja.",
+              "still": "https://image.tmdb.org/t/p/w400/5O8oaYivgMijwBnp6FIQMfc3poQ.jpg",
+              "guest_stars": [
+                {
+                  "name": "Ana Carolina Leite",
+                  "character": "Ana Jacinta de São José (Dona Beja - criança)",
+                  "photo": "https://image.tmdb.org/t/p/w185/1j7SGiaB3tL3Pk0noggvMP42JXW.jpg"
+                },
+                {
+                  "name": "Duda Bernardo",
+                  "character": "Maria Sampaio (criança)",
+                  "photo": ""
+                }
+              ],
+              "locked": false
             },
             {
               "title": "Dona Beja Episódio 12",
               "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-012.mp4",
-              "episode": 12
+              "episode": 12,
+              "air_date": "2026-02-16",
+              "overview": "Após ser proibida de vestir calças, Beja desafia as normas cavalgando nua com diadema de diamante na cabeça e sofre atentado.",
+              "still": "https://image.tmdb.org/t/p/w400/yewE3KLDI4vdqR2vtxI7ef9nNl8.jpg",
+              "guest_stars": [
+                {
+                  "name": "Othon Bastos",
+                  "character": "Juiz",
+                  "photo": "https://image.tmdb.org/t/p/w185/cKZos1GKCQNHbaUqa9byGGl90rq.jpg"
+                }
+              ],
+              "locked": false
             },
             {
               "title": "Dona Beja Episódio 13",
               "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-013.mp4",
-              "episode": 13
+              "episode": 13,
+              "air_date": "2026-02-16",
+              "overview": "Com Beja ferida, Antônio e João se unem para descobrir quem está por trás do atentado. Antônio encontra uma pista que o leva até sua própria casa.",
+              "still": "https://image.tmdb.org/t/p/w400/4kDROQRWzrwOpt4cGz0kCswf6oc.jpg",
+              "guest_stars": [],
+              "locked": false
             },
             {
               "title": "Dona Beja Episódio 14",
               "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-014.mp4",
-              "episode": 14
+              "episode": 14,
+              "air_date": "2026-02-16",
+              "overview": "Ao lado de Severina, João e Antônio armam uma emboscada para capturar o verdadeiro autor do atentado.",
+              "still": "https://image.tmdb.org/t/p/w400/5e5Yn38ivka6odF1iYH5tfaw0C4.jpg",
+              "guest_stars": [
+                {
+                  "name": "Virgílio Castelo",
+                  "character": "Ouvidor Joaquim Inácio Silveira Mota",
+                  "photo": "https://image.tmdb.org/t/p/w185/kWTwY3niuf9UrbDIAyFjcYp5M9c.jpg"
+                }
+              ],
+              "locked": false
             },
             {
               "title": "Dona Beja Episódio 15",
               "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-015.mp4",
-              "episode": 15
+              "episode": 15,
+              "air_date": "2026-02-16",
+              "overview": "Mota confessa suas falsas acusações contra Beja, e ela o confronta. Severina descobre que tem admirador secreto inesperado.",
+              "still": "https://image.tmdb.org/t/p/w400/reFjOKIdjgTGthd6kMazwt5tpgp.jpg",
+              "guest_stars": [
+                {
+                  "name": "Virgílio Castelo",
+                  "character": "Ouvidor Joaquim Inácio Silveira Mota",
+                  "photo": "https://image.tmdb.org/t/p/w185/kWTwY3niuf9UrbDIAyFjcYp5M9c.jpg"
+                }
+              ],
+              "locked": false
             },
             {
               "title": "Dona Beja Episódio 16",
               "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-016.mp4",
-              "episode": 16
+              "episode": 16,
+              "air_date": "2026-02-23",
+              "overview": "Os moradores de Araxá querem fechar a Chácara do Jatobá. Grávida, Beja encontra uma saída para a Chácara com a ajuda de Olívia.",
+              "still": "https://image.tmdb.org/t/p/w400/l1HZkI6VBNJLFTNNeOtgZAdfRCM.jpg",
+              "guest_stars": [
+                {
+                  "name": "Joana Solnado",
+                  "character": "Maria Bernarda Alves",
+                  "photo": "https://image.tmdb.org/t/p/w185/k798mk0GXr0XLE6NPjPneww7UOJ.jpg"
+                },
+                {
+                  "name": "Ana Carolina Leite",
+                  "character": "Ana Jacinta de São José (Dona Beja - criança)",
+                  "photo": "https://image.tmdb.org/t/p/w185/1j7SGiaB3tL3Pk0noggvMP42JXW.jpg"
+                }
+              ],
+              "locked": false
             },
             {
               "title": "Dona Beja Episódio 17",
               "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-017.mp4",
-              "episode": 17
+              "episode": 17,
+              "air_date": "2026-02-23",
+              "overview": "Maria tenta proteger a reputação de Antônio, mas ao revelar a Angélica que Beja está grávida, provoca uma tragédia.",
+              "still": "https://image.tmdb.org/t/p/w400/crsdM8buswd3siMX8d020vnhPBF.jpg",
+              "guest_stars": [],
+              "locked": false
             },
             {
               "title": "Dona Beja Episódio 18",
               "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-018.mp4",
-              "episode": 18
+              "episode": 18,
+              "air_date": "2026-02-23",
+              "overview": "Antônio pede perdão à sua família. João entra para a política com o apoio de Beja, e Maria toma uma decisão inesperada na hora do seu casamento.",
+              "still": "https://image.tmdb.org/t/p/w400/cZcsQDTVLTDpXEu6WlDeNxEvUUw.jpg",
+              "guest_stars": [],
+              "locked": false
             },
             {
               "title": "Dona Beja Episódio 19",
               "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-019.mp4",
-              "episode": 19
+              "episode": 19,
+              "air_date": "2026-02-23",
+              "overview": "Beja e João invadem uma reunião política na casa dos Sampaios. Maria, cada vez mais descontrolada, toma medidas extremas.",
+              "still": "https://image.tmdb.org/t/p/w400/tgoN5yOyVXYiD0cKecpcJ8EwN3s.jpg",
+              "guest_stars": [],
+              "locked": false
             },
             {
               "title": "Dona Beja Episódio 20",
               "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-020.mp4",
-              "episode": 20
+              "episode": 20,
+              "air_date": "2026-02-23",
+              "overview": "Com a ajuda de Severina, Beja arma um plano para salvar Antônio. Padre Aranha vive um dilema decisivo em sua vida.",
+              "still": "https://image.tmdb.org/t/p/w400/uwv9zVPigSrvwogU86aG8TYrZeA.jpg",
+              "guest_stars": [],
+              "locked": false
             },
             {
               "title": "Dona Beja Episódio 21",
               "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-021.mp4",
-              "episode": 21
+              "episode": 21,
+              "air_date": "2026-03-02",
+              "overview": "Ceci e Sampaio decidem internar Maria em um convento. Beja e Antônio se reconciliam, e Fortunato finalmente cede aos próprios desejos.",
+              "still": "https://image.tmdb.org/t/p/w400/sFQOeJ9Qkj07GedVrh16pvGpA0c.jpg",
+              "guest_stars": [],
+              "locked": false
             },
             {
               "title": "Dona Beja Episódio 22",
               "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-022.mp4",
-              "episode": 22
+              "episode": 22,
+              "air_date": "2026-03-02",
+              "overview": "O jantar na casa de Antônio é interrompido por uma visita surpresa. Antônio faz uma promessa a Sampaio em seu leito de morte.",
+              "still": "https://image.tmdb.org/t/p/w400/xVu4tTmuckvtJc5JHOt9ey0Tkld.jpg",
+              "guest_stars": [],
+              "locked": false
             },
             {
               "title": "Dona Beja Episódio 23",
               "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-023.mp4",
-              "episode": 23
+              "episode": 23,
+              "air_date": "2026-03-02",
+              "overview": "Beja toma uma decisão por causa da promessa feita por Antônio a seu pai. A extorsão de Botelhinho traz consequências para Honorato e Carminha.",
+              "still": "https://image.tmdb.org/t/p/w400/yoQMwVwPu9Kxpca3xlGhP31gL85.jpg",
+              "guest_stars": [],
+              "locked": false
             },
             {
               "title": "Dona Beja Episódio 24",
               "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-024.mp4",
-              "episode": 24
+              "episode": 24,
+              "air_date": "2026-03-02",
+              "overview": "Depois de dezessete anos, Beja pede João em casamento. Teresa, a filha mais velha de Beja, insiste em saber quem é seu pai.",
+              "still": "https://image.tmdb.org/t/p/w400/tWeruD024LT8xWZsBD87GoSx532.jpg",
+              "guest_stars": [
+                {
+                  "name": "Manuela Dourado",
+                  "character": "Teresa Tomásia de São José",
+                  "photo": ""
+                },
+                {
+                  "name": "Danielle Olímpia",
+                  "character": "Joana de Deus de São José",
+                  "photo": ""
+                },
+                {
+                  "name": "Lucinha Lins",
+                  "character": "Miss Callen",
+                  "photo": "https://image.tmdb.org/t/p/w185/75xAn5Rvgc902OmAACdg9D6DnYK.jpg"
+                }
+              ],
+              "locked": false
             },
             {
               "title": "Dona Beja Episódio 25",
               "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-025.mp4",
-              "episode": 25
+              "episode": 25,
+              "air_date": "2026-03-02",
+              "overview": "Beja revive lembranças dolorosas de violência entre seu avô e sua mãe. Antônio descobre um segredo sobre Sampaio e decide conhecer a filha.",
+              "still": "https://image.tmdb.org/t/p/w400/y45jTDnlSWaaUAM79sitrqOQstJ.jpg",
+              "guest_stars": [
+                {
+                  "name": "Joana Solnado",
+                  "character": "Maria Bernarda Alves",
+                  "photo": "https://image.tmdb.org/t/p/w185/k798mk0GXr0XLE6NPjPneww7UOJ.jpg"
+                },
+                {
+                  "name": "Roberto Bomtempo",
+                  "character": "José Alves",
+                  "photo": "https://image.tmdb.org/t/p/w185/8whwEacqSAuKA9urVojx70d8MNb.jpg"
+                },
+                {
+                  "name": "Ana Carolina Leite",
+                  "character": "Ana Jacinta de São José (Dona Beja - criança)",
+                  "photo": "https://image.tmdb.org/t/p/w185/1j7SGiaB3tL3Pk0noggvMP42JXW.jpg"
+                },
+                {
+                  "name": "Manuela Dourado",
+                  "character": "Teresa Tomásia de São José",
+                  "photo": ""
+                }
+              ],
+              "locked": false
             },
             {
               "title": "Dona Beja Episódio 26",
               "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-026.mp4",
-              "episode": 26
+              "episode": 26,
+              "air_date": "2026-03-09",
+              "overview": "",
+              "still": "",
+              "guest_stars": [],
+              "locked": true,
+              "release_iso": "2026-03-09T05:00:00"
             },
             {
               "title": "Dona Beja Episódio 27",
               "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-027.mp4",
-              "episode": 27
+              "episode": 27,
+              "air_date": "2026-03-09",
+              "overview": "",
+              "still": "",
+              "guest_stars": [],
+              "locked": true,
+              "release_iso": "2026-03-09T05:00:00"
             },
             {
               "title": "Dona Beja Episódio 28",
               "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-028.mp4",
-              "episode": 28
+              "episode": 28,
+              "air_date": "2026-03-09",
+              "overview": "",
+              "still": "",
+              "guest_stars": [],
+              "locked": true,
+              "release_iso": "2026-03-09T05:00:00"
             },
             {
               "title": "Dona Beja Episódio 29",
               "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-029.mp4",
-              "episode": 29
+              "episode": 29,
+              "air_date": "2026-03-09",
+              "overview": "",
+              "still": "",
+              "guest_stars": [],
+              "locked": true,
+              "release_iso": "2026-03-09T05:00:00"
             },
             {
               "title": "Dona Beja Episódio 30",
               "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-030.mp4",
-              "episode": 30
+              "episode": 30,
+              "air_date": "2026-03-09",
+              "overview": "",
+              "still": "",
+              "guest_stars": [],
+              "locked": true,
+              "release_iso": "2026-03-09T05:00:00"
             },
             {
               "title": "Dona Beja Episódio 31",
               "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-031.mp4",
-              "episode": 31
+              "episode": 31,
+              "air_date": "2026-03-16",
+              "overview": "",
+              "still": "",
+              "guest_stars": [],
+              "locked": true,
+              "release_iso": "2026-03-16T05:00:00"
             },
             {
               "title": "Dona Beja Episódio 32",
               "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-032.mp4",
-              "episode": 32
+              "episode": 32,
+              "air_date": "2026-03-16",
+              "overview": "",
+              "still": "",
+              "guest_stars": [],
+              "locked": true,
+              "release_iso": "2026-03-16T05:00:00"
             },
             {
               "title": "Dona Beja Episódio 33",
               "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-033.mp4",
-              "episode": 33
+              "episode": 33,
+              "air_date": "2026-03-16",
+              "overview": "",
+              "still": "",
+              "guest_stars": [],
+              "locked": true,
+              "release_iso": "2026-03-16T05:00:00"
             },
             {
               "title": "Dona Beja Episódio 34",
               "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-034.mp4",
-              "episode": 34
+              "episode": 34,
+              "air_date": "2026-03-16",
+              "overview": "",
+              "still": "",
+              "guest_stars": [],
+              "locked": true,
+              "release_iso": "2026-03-16T05:00:00"
             },
             {
               "title": "Dona Beja Episódio 35",
               "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-035.mp4",
-              "episode": 35
+              "episode": 35,
+              "air_date": "2026-03-16",
+              "overview": "",
+              "still": "",
+              "guest_stars": [],
+              "locked": true,
+              "release_iso": "2026-03-16T05:00:00"
             },
             {
               "title": "Dona Beja Episódio 36",
               "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-036.mp4",
-              "episode": 36
+              "episode": 36,
+              "air_date": "2026-03-23",
+              "overview": "",
+              "still": "",
+              "guest_stars": [],
+              "locked": true,
+              "release_iso": "2026-03-23T05:00:00"
             },
             {
               "title": "Dona Beja Episódio 37",
               "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-037.mp4",
-              "episode": 37
+              "episode": 37,
+              "air_date": "2026-03-23",
+              "overview": "",
+              "still": "",
+              "guest_stars": [],
+              "locked": true,
+              "release_iso": "2026-03-23T05:00:00"
             },
             {
               "title": "Dona Beja Episódio 38",
               "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-038.mp4",
-              "episode": 38
+              "episode": 38,
+              "air_date": "2026-03-23",
+              "overview": "",
+              "still": "",
+              "guest_stars": [],
+              "locked": true,
+              "release_iso": "2026-03-23T05:00:00"
             },
             {
               "title": "Dona Beja Episódio 39",
               "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-039.mp4",
-              "episode": 39
+              "episode": 39,
+              "air_date": "2026-03-23",
+              "overview": "",
+              "still": "",
+              "guest_stars": [],
+              "locked": true,
+              "release_iso": "2026-03-23T05:00:00"
             },
             {
               "title": "Dona Beja Episódio 40",
               "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-040.mp4",
-              "episode": 40
+              "episode": 40,
+              "air_date": "2026-03-23",
+              "overview": "",
+              "still": "",
+              "guest_stars": [],
+              "locked": true,
+              "release_iso": "2026-03-23T05:00:00"
             }
           ]
         }
@@ -1586,202 +2032,648 @@
         {
           "title": "Dona Beja Episódio 01",
           "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-001.mp4",
-          "episode": 1
+          "episode": 1,
+          "air_date": "2026-02-02",
+          "overview": "Enquanto aguarda a volta do noivo do exterior, Beja desperta a atenção indesejada de um ouvidor do Rei, que altera seus planos para o futuro.",
+          "still": "https://image.tmdb.org/t/p/w400/znQTl6CEUBY8kI7TzEN0AjQviKc.jpg",
+          "guest_stars": [
+            {
+              "name": "Joana Solnado",
+              "character": "Maria Bernarda Alves",
+              "photo": "https://image.tmdb.org/t/p/w185/k798mk0GXr0XLE6NPjPneww7UOJ.jpg"
+            },
+            {
+              "name": "Roberto Bomtempo",
+              "character": "José Alves",
+              "photo": "https://image.tmdb.org/t/p/w185/8whwEacqSAuKA9urVojx70d8MNb.jpg"
+            },
+            {
+              "name": "Ana Carolina Leite",
+              "character": "Ana Jacinta de São José (Dona Beja - criança)",
+              "photo": "https://image.tmdb.org/t/p/w185/1j7SGiaB3tL3Pk0noggvMP42JXW.jpg"
+            },
+            {
+              "name": "Levi Asaf",
+              "character": "Antônio Sampaio (criança)",
+              "photo": "https://image.tmdb.org/t/p/w185/es92F0ACfqTxdd2awn7BU3H6oPB.jpg"
+            }
+          ],
+          "locked": false
         },
         {
           "title": "Dona Beja Episódio 02",
           "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-002.mp4",
-          "episode": 2
+          "episode": 2,
+          "air_date": "2026-02-02",
+          "overview": "Levada de Araxá a Paracatu, Beja evita Mota e encontra refúgio na amizade com Severina. Com a ajuda de João, Antônio se livra de sérios problemas.",
+          "still": "https://image.tmdb.org/t/p/w400/8LJLdjyDqLWb0rzisWOq4Md7R7V.jpg",
+          "guest_stars": [
+            {
+              "name": "Ana Carolina Leite",
+              "character": "Ana Jacinta de São José (Dona Beja - criança)",
+              "photo": "https://image.tmdb.org/t/p/w185/1j7SGiaB3tL3Pk0noggvMP42JXW.jpg"
+            },
+            {
+              "name": "Levi Asaf",
+              "character": "Antônio Sampaio (criança)",
+              "photo": "https://image.tmdb.org/t/p/w185/es92F0ACfqTxdd2awn7BU3H6oPB.jpg"
+            },
+            {
+              "name": "Kauã Torres",
+              "character": "João Carneiro de Mendonça (criança)",
+              "photo": ""
+            },
+            {
+              "name": "Virgílio Castelo",
+              "character": "Ouvidor Joaquim Inácio Silveira Mota",
+              "photo": "https://image.tmdb.org/t/p/w185/kWTwY3niuf9UrbDIAyFjcYp5M9c.jpg"
+            }
+          ],
+          "locked": false
         },
         {
           "title": "Dona Beja Episódio 03",
           "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-003.mp4",
-          "episode": 3
+          "episode": 3,
+          "air_date": "2026-02-02",
+          "overview": "Enquanto Beja enfrenta a determinação crescente de Mota em mantê-la em Paracatu, Antônio tenta resgatar a noiva e desmentir os rumores.",
+          "still": "https://image.tmdb.org/t/p/w400/afF0906jHlJmI0dDPPj8m0h0pLo.jpg",
+          "guest_stars": [
+            {
+              "name": "Virgílio Castelo",
+              "character": "Ouvidor Joaquim Inácio Silveira Mota",
+              "photo": "https://image.tmdb.org/t/p/w185/kWTwY3niuf9UrbDIAyFjcYp5M9c.jpg"
+            },
+            {
+              "name": "Marcello Escorel",
+              "character": "Padre Melo Franco",
+              "photo": "https://image.tmdb.org/t/p/w185/1SXEmTjPhxRpljv4vNjMmNe7HSg.jpg"
+            },
+            {
+              "name": "Cláudio Mendes",
+              "character": "Juca",
+              "photo": "https://image.tmdb.org/t/p/w185/sEPJYjdyatsmDfnivIdAANCjhFp.jpg"
+            }
+          ],
+          "locked": false
         },
         {
           "title": "Dona Beja Episódio 04",
           "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-004.mp4",
-          "episode": 4
+          "episode": 4,
+          "air_date": "2026-02-02",
+          "overview": "Beja aceita viver uma vida com Mota, mas usa suas virtudes a seu favor. Antônio fica ferido em sua missão, e Maria avança com seu plano.",
+          "still": "https://image.tmdb.org/t/p/w400/ng7RPOVraqzTaoF1axkMV8l9C6y.jpg",
+          "guest_stars": [
+            {
+              "name": "Virgílio Castelo",
+              "character": "Ouvidor Joaquim Inácio Silveira Mota",
+              "photo": "https://image.tmdb.org/t/p/w185/kWTwY3niuf9UrbDIAyFjcYp5M9c.jpg"
+            },
+            {
+              "name": "Marcello Escorel",
+              "character": "Padre Melo Franco",
+              "photo": "https://image.tmdb.org/t/p/w185/1SXEmTjPhxRpljv4vNjMmNe7HSg.jpg"
+            },
+            {
+              "name": "Cláudio Mendes",
+              "character": "Juca",
+              "photo": "https://image.tmdb.org/t/p/w185/sEPJYjdyatsmDfnivIdAANCjhFp.jpg"
+            },
+            {
+              "name": "Elizabeth Savalla",
+              "character": "Madame Constance",
+              "photo": "https://image.tmdb.org/t/p/w185/LHSWt3pywlkRTE5dNMfqszAdbm.jpg"
+            }
+          ],
+          "locked": false
         },
         {
           "title": "Dona Beja Episódio 05",
           "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-005.mp4",
-          "episode": 5
+          "episode": 5,
+          "air_date": "2026-02-02",
+          "overview": "Beja prepara um plano contra Mota. Antônio ouve uma revelação de Angélica, cujas consequências abalam seu futuro casamento.",
+          "still": "https://image.tmdb.org/t/p/w400/gfUX8ZPvTXYw4NurPD26cx7oHzD.jpg",
+          "guest_stars": [
+            {
+              "name": "Roberto Bomtempo",
+              "character": "José Alves",
+              "photo": "https://image.tmdb.org/t/p/w185/8whwEacqSAuKA9urVojx70d8MNb.jpg"
+            },
+            {
+              "name": "Ana Carolina Leite",
+              "character": "Ana Jacinta de São José (Dona Beja - criança)",
+              "photo": "https://image.tmdb.org/t/p/w185/1j7SGiaB3tL3Pk0noggvMP42JXW.jpg"
+            },
+            {
+              "name": "Levi Asaf",
+              "character": "Antônio Sampaio (criança)",
+              "photo": "https://image.tmdb.org/t/p/w185/es92F0ACfqTxdd2awn7BU3H6oPB.jpg"
+            },
+            {
+              "name": "Virgílio Castelo",
+              "character": "Ouvidor Joaquim Inácio Silveira Mota",
+              "photo": "https://image.tmdb.org/t/p/w185/kWTwY3niuf9UrbDIAyFjcYp5M9c.jpg"
+            }
+          ],
+          "locked": false
         },
         {
           "title": "Dona Beja Episódio 06",
           "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-006.mp4",
-          "episode": 6
+          "episode": 6,
+          "air_date": "2026-02-09",
+          "overview": "De volta a Araxá, Beja mantém a cabeça erguida enquanto espera o retorno de Antônio da capital, sem saber que ele está noivo de Angélica.",
+          "still": "https://image.tmdb.org/t/p/w400/o9OVXJRifZvQnb4CyjnWGIglz5Y.jpg",
+          "guest_stars": [
+            {
+              "name": "Roberto Bomtempo",
+              "character": "José Alves",
+              "photo": "https://image.tmdb.org/t/p/w185/8whwEacqSAuKA9urVojx70d8MNb.jpg"
+            },
+            {
+              "name": "Ana Carolina Leite",
+              "character": "Ana Jacinta de São José (Dona Beja - criança)",
+              "photo": "https://image.tmdb.org/t/p/w185/1j7SGiaB3tL3Pk0noggvMP42JXW.jpg"
+            },
+            {
+              "name": "Levi Asaf",
+              "character": "Antônio Sampaio (criança)",
+              "photo": "https://image.tmdb.org/t/p/w185/es92F0ACfqTxdd2awn7BU3H6oPB.jpg"
+            },
+            {
+              "name": "Paulo Giardini",
+              "character": "Eliseu",
+              "photo": "https://image.tmdb.org/t/p/w185/5g69Cpq8UtAuyKX73Zza8SHLCsP.jpg"
+            }
+          ],
+          "locked": false
         },
         {
           "title": "Dona Beja Episódio 07",
           "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-007.mp4",
-          "episode": 7
+          "episode": 7,
+          "air_date": "2026-02-09",
+          "overview": "Enquanto Beja abre um novo caminho para si em Araxá, Josefa enfrenta um julgamento e os problemas no casamento de Angélica se intensificam.",
+          "still": "https://image.tmdb.org/t/p/w400/zwZi2fhIj29Ngo8WNKDhcDQem5A.jpg",
+          "guest_stars": [
+            {
+              "name": "Elisa Lucinda",
+              "character": "Flaviana",
+              "photo": "https://image.tmdb.org/t/p/w185/x1iCvQREawt35bLKLXFXTuNsTOo.jpg"
+            },
+            {
+              "name": "Luiz Henrique Nogueira",
+              "character": "Domingos Junqueira",
+              "photo": "https://image.tmdb.org/t/p/w185/pMEzigfe6sKpjLotPD0NJjhSCTH.jpg"
+            },
+            {
+              "name": "Othon Bastos",
+              "character": "Juiz",
+              "photo": "https://image.tmdb.org/t/p/w185/cKZos1GKCQNHbaUqa9byGGl90rq.jpg"
+            }
+          ],
+          "locked": false
         },
         {
           "title": "Dona Beja Episódio 08",
           "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-008.mp4",
-          "episode": 8
+          "episode": 8,
+          "air_date": "2026-02-09",
+          "overview": "Carminha e Honorato vivem um momento inesperado. Antônio e João disputam Beja, e ela decide mudar as regras na Chácara do Jatobá.",
+          "still": "https://image.tmdb.org/t/p/w400/dKhMgbuGhjWkeOW43sTnLzZ4qGD.jpg",
+          "guest_stars": [
+            {
+              "name": "Luiz Henrique Nogueira",
+              "character": "Domingos Junqueira",
+              "photo": "https://image.tmdb.org/t/p/w185/pMEzigfe6sKpjLotPD0NJjhSCTH.jpg"
+            },
+            {
+              "name": "Othon Bastos",
+              "character": "Juiz",
+              "photo": "https://image.tmdb.org/t/p/w185/cKZos1GKCQNHbaUqa9byGGl90rq.jpg"
+            }
+          ],
+          "locked": false
         },
         {
           "title": "Dona Beja Episódio 09",
           "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-009.mp4",
-          "episode": 9
+          "episode": 9,
+          "air_date": "2026-02-09",
+          "overview": "Beja retoma sua relação com João e usa informações comprometedoras para encerrar uma discussão com Antônio. Severina revela um talento oculto.",
+          "still": "https://image.tmdb.org/t/p/w400/bmNUjX0j055QQy6yjxO2kEIjzje.jpg",
+          "guest_stars": [
+            {
+              "name": "Othon Bastos",
+              "character": "Juiz",
+              "photo": "https://image.tmdb.org/t/p/w185/cKZos1GKCQNHbaUqa9byGGl90rq.jpg"
+            }
+          ],
+          "locked": false
         },
         {
           "title": "Dona Beja Episódio 10",
           "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-010.mp4",
-          "episode": 10
+          "episode": 10,
+          "air_date": "2026-02-09",
+          "overview": "A família de Antônio se revolta ao descobrir que ele voltou com Beja. Maria abre o coração para Beja, e Candinha se junta a Beja contra as beatas.",
+          "still": "https://image.tmdb.org/t/p/w400/31ef0Fm2Kj2q7pyI5r82BHX5aPM.jpg",
+          "guest_stars": [],
+          "locked": false
         },
         {
           "title": "Dona Beja Episódio 11",
           "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-011.mp4",
-          "episode": 11
+          "episode": 11,
+          "air_date": "2026-02-16",
+          "overview": "As famílias de João e Maria acertam o noivado dos dois. Maria toma medidas drásticas para impedir que Antônio se aproxime de Beja.",
+          "still": "https://image.tmdb.org/t/p/w400/5O8oaYivgMijwBnp6FIQMfc3poQ.jpg",
+          "guest_stars": [
+            {
+              "name": "Ana Carolina Leite",
+              "character": "Ana Jacinta de São José (Dona Beja - criança)",
+              "photo": "https://image.tmdb.org/t/p/w185/1j7SGiaB3tL3Pk0noggvMP42JXW.jpg"
+            },
+            {
+              "name": "Duda Bernardo",
+              "character": "Maria Sampaio (criança)",
+              "photo": ""
+            }
+          ],
+          "locked": false
         },
         {
           "title": "Dona Beja Episódio 12",
           "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-012.mp4",
-          "episode": 12
+          "episode": 12,
+          "air_date": "2026-02-16",
+          "overview": "Após ser proibida de vestir calças, Beja desafia as normas cavalgando nua com diadema de diamante na cabeça e sofre atentado.",
+          "still": "https://image.tmdb.org/t/p/w400/yewE3KLDI4vdqR2vtxI7ef9nNl8.jpg",
+          "guest_stars": [
+            {
+              "name": "Othon Bastos",
+              "character": "Juiz",
+              "photo": "https://image.tmdb.org/t/p/w185/cKZos1GKCQNHbaUqa9byGGl90rq.jpg"
+            }
+          ],
+          "locked": false
         },
         {
           "title": "Dona Beja Episódio 13",
           "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-013.mp4",
-          "episode": 13
+          "episode": 13,
+          "air_date": "2026-02-16",
+          "overview": "Com Beja ferida, Antônio e João se unem para descobrir quem está por trás do atentado. Antônio encontra uma pista que o leva até sua própria casa.",
+          "still": "https://image.tmdb.org/t/p/w400/4kDROQRWzrwOpt4cGz0kCswf6oc.jpg",
+          "guest_stars": [],
+          "locked": false
         },
         {
           "title": "Dona Beja Episódio 14",
           "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-014.mp4",
-          "episode": 14
+          "episode": 14,
+          "air_date": "2026-02-16",
+          "overview": "Ao lado de Severina, João e Antônio armam uma emboscada para capturar o verdadeiro autor do atentado.",
+          "still": "https://image.tmdb.org/t/p/w400/5e5Yn38ivka6odF1iYH5tfaw0C4.jpg",
+          "guest_stars": [
+            {
+              "name": "Virgílio Castelo",
+              "character": "Ouvidor Joaquim Inácio Silveira Mota",
+              "photo": "https://image.tmdb.org/t/p/w185/kWTwY3niuf9UrbDIAyFjcYp5M9c.jpg"
+            }
+          ],
+          "locked": false
         },
         {
           "title": "Dona Beja Episódio 15",
           "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-015.mp4",
-          "episode": 15
+          "episode": 15,
+          "air_date": "2026-02-16",
+          "overview": "Mota confessa suas falsas acusações contra Beja, e ela o confronta. Severina descobre que tem admirador secreto inesperado.",
+          "still": "https://image.tmdb.org/t/p/w400/reFjOKIdjgTGthd6kMazwt5tpgp.jpg",
+          "guest_stars": [
+            {
+              "name": "Virgílio Castelo",
+              "character": "Ouvidor Joaquim Inácio Silveira Mota",
+              "photo": "https://image.tmdb.org/t/p/w185/kWTwY3niuf9UrbDIAyFjcYp5M9c.jpg"
+            }
+          ],
+          "locked": false
         },
         {
           "title": "Dona Beja Episódio 16",
           "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-016.mp4",
-          "episode": 16
+          "episode": 16,
+          "air_date": "2026-02-23",
+          "overview": "Os moradores de Araxá querem fechar a Chácara do Jatobá. Grávida, Beja encontra uma saída para a Chácara com a ajuda de Olívia.",
+          "still": "https://image.tmdb.org/t/p/w400/l1HZkI6VBNJLFTNNeOtgZAdfRCM.jpg",
+          "guest_stars": [
+            {
+              "name": "Joana Solnado",
+              "character": "Maria Bernarda Alves",
+              "photo": "https://image.tmdb.org/t/p/w185/k798mk0GXr0XLE6NPjPneww7UOJ.jpg"
+            },
+            {
+              "name": "Ana Carolina Leite",
+              "character": "Ana Jacinta de São José (Dona Beja - criança)",
+              "photo": "https://image.tmdb.org/t/p/w185/1j7SGiaB3tL3Pk0noggvMP42JXW.jpg"
+            }
+          ],
+          "locked": false
         },
         {
           "title": "Dona Beja Episódio 17",
           "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-017.mp4",
-          "episode": 17
+          "episode": 17,
+          "air_date": "2026-02-23",
+          "overview": "Maria tenta proteger a reputação de Antônio, mas ao revelar a Angélica que Beja está grávida, provoca uma tragédia.",
+          "still": "https://image.tmdb.org/t/p/w400/crsdM8buswd3siMX8d020vnhPBF.jpg",
+          "guest_stars": [],
+          "locked": false
         },
         {
           "title": "Dona Beja Episódio 18",
           "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-018.mp4",
-          "episode": 18
+          "episode": 18,
+          "air_date": "2026-02-23",
+          "overview": "Antônio pede perdão à sua família. João entra para a política com o apoio de Beja, e Maria toma uma decisão inesperada na hora do seu casamento.",
+          "still": "https://image.tmdb.org/t/p/w400/cZcsQDTVLTDpXEu6WlDeNxEvUUw.jpg",
+          "guest_stars": [],
+          "locked": false
         },
         {
           "title": "Dona Beja Episódio 19",
           "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-019.mp4",
-          "episode": 19
+          "episode": 19,
+          "air_date": "2026-02-23",
+          "overview": "Beja e João invadem uma reunião política na casa dos Sampaios. Maria, cada vez mais descontrolada, toma medidas extremas.",
+          "still": "https://image.tmdb.org/t/p/w400/tgoN5yOyVXYiD0cKecpcJ8EwN3s.jpg",
+          "guest_stars": [],
+          "locked": false
         },
         {
           "title": "Dona Beja Episódio 20",
           "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-020.mp4",
-          "episode": 20
+          "episode": 20,
+          "air_date": "2026-02-23",
+          "overview": "Com a ajuda de Severina, Beja arma um plano para salvar Antônio. Padre Aranha vive um dilema decisivo em sua vida.",
+          "still": "https://image.tmdb.org/t/p/w400/uwv9zVPigSrvwogU86aG8TYrZeA.jpg",
+          "guest_stars": [],
+          "locked": false
         },
         {
           "title": "Dona Beja Episódio 21",
           "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-021.mp4",
-          "episode": 21
+          "episode": 21,
+          "air_date": "2026-03-02",
+          "overview": "Ceci e Sampaio decidem internar Maria em um convento. Beja e Antônio se reconciliam, e Fortunato finalmente cede aos próprios desejos.",
+          "still": "https://image.tmdb.org/t/p/w400/sFQOeJ9Qkj07GedVrh16pvGpA0c.jpg",
+          "guest_stars": [],
+          "locked": false
         },
         {
           "title": "Dona Beja Episódio 22",
           "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-022.mp4",
-          "episode": 22
+          "episode": 22,
+          "air_date": "2026-03-02",
+          "overview": "O jantar na casa de Antônio é interrompido por uma visita surpresa. Antônio faz uma promessa a Sampaio em seu leito de morte.",
+          "still": "https://image.tmdb.org/t/p/w400/xVu4tTmuckvtJc5JHOt9ey0Tkld.jpg",
+          "guest_stars": [],
+          "locked": false
         },
         {
           "title": "Dona Beja Episódio 23",
           "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-023.mp4",
-          "episode": 23
+          "episode": 23,
+          "air_date": "2026-03-02",
+          "overview": "Beja toma uma decisão por causa da promessa feita por Antônio a seu pai. A extorsão de Botelhinho traz consequências para Honorato e Carminha.",
+          "still": "https://image.tmdb.org/t/p/w400/yoQMwVwPu9Kxpca3xlGhP31gL85.jpg",
+          "guest_stars": [],
+          "locked": false
         },
         {
           "title": "Dona Beja Episódio 24",
           "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-024.mp4",
-          "episode": 24
+          "episode": 24,
+          "air_date": "2026-03-02",
+          "overview": "Depois de dezessete anos, Beja pede João em casamento. Teresa, a filha mais velha de Beja, insiste em saber quem é seu pai.",
+          "still": "https://image.tmdb.org/t/p/w400/tWeruD024LT8xWZsBD87GoSx532.jpg",
+          "guest_stars": [
+            {
+              "name": "Manuela Dourado",
+              "character": "Teresa Tomásia de São José",
+              "photo": ""
+            },
+            {
+              "name": "Danielle Olímpia",
+              "character": "Joana de Deus de São José",
+              "photo": ""
+            },
+            {
+              "name": "Lucinha Lins",
+              "character": "Miss Callen",
+              "photo": "https://image.tmdb.org/t/p/w185/75xAn5Rvgc902OmAACdg9D6DnYK.jpg"
+            }
+          ],
+          "locked": false
         },
         {
           "title": "Dona Beja Episódio 25",
           "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-025.mp4",
-          "episode": 25
+          "episode": 25,
+          "air_date": "2026-03-02",
+          "overview": "Beja revive lembranças dolorosas de violência entre seu avô e sua mãe. Antônio descobre um segredo sobre Sampaio e decide conhecer a filha.",
+          "still": "https://image.tmdb.org/t/p/w400/y45jTDnlSWaaUAM79sitrqOQstJ.jpg",
+          "guest_stars": [
+            {
+              "name": "Joana Solnado",
+              "character": "Maria Bernarda Alves",
+              "photo": "https://image.tmdb.org/t/p/w185/k798mk0GXr0XLE6NPjPneww7UOJ.jpg"
+            },
+            {
+              "name": "Roberto Bomtempo",
+              "character": "José Alves",
+              "photo": "https://image.tmdb.org/t/p/w185/8whwEacqSAuKA9urVojx70d8MNb.jpg"
+            },
+            {
+              "name": "Ana Carolina Leite",
+              "character": "Ana Jacinta de São José (Dona Beja - criança)",
+              "photo": "https://image.tmdb.org/t/p/w185/1j7SGiaB3tL3Pk0noggvMP42JXW.jpg"
+            },
+            {
+              "name": "Manuela Dourado",
+              "character": "Teresa Tomásia de São José",
+              "photo": ""
+            }
+          ],
+          "locked": false
         },
         {
           "title": "Dona Beja Episódio 26",
           "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-026.mp4",
-          "episode": 26
+          "episode": 26,
+          "air_date": "2026-03-09",
+          "overview": "",
+          "still": "",
+          "guest_stars": [],
+          "locked": true,
+          "release_iso": "2026-03-09T05:00:00"
         },
         {
           "title": "Dona Beja Episódio 27",
           "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-027.mp4",
-          "episode": 27
+          "episode": 27,
+          "air_date": "2026-03-09",
+          "overview": "",
+          "still": "",
+          "guest_stars": [],
+          "locked": true,
+          "release_iso": "2026-03-09T05:00:00"
         },
         {
           "title": "Dona Beja Episódio 28",
           "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-028.mp4",
-          "episode": 28
+          "episode": 28,
+          "air_date": "2026-03-09",
+          "overview": "",
+          "still": "",
+          "guest_stars": [],
+          "locked": true,
+          "release_iso": "2026-03-09T05:00:00"
         },
         {
           "title": "Dona Beja Episódio 29",
           "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-029.mp4",
-          "episode": 29
+          "episode": 29,
+          "air_date": "2026-03-09",
+          "overview": "",
+          "still": "",
+          "guest_stars": [],
+          "locked": true,
+          "release_iso": "2026-03-09T05:00:00"
         },
         {
           "title": "Dona Beja Episódio 30",
           "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-030.mp4",
-          "episode": 30
+          "episode": 30,
+          "air_date": "2026-03-09",
+          "overview": "",
+          "still": "",
+          "guest_stars": [],
+          "locked": true,
+          "release_iso": "2026-03-09T05:00:00"
         },
         {
           "title": "Dona Beja Episódio 31",
           "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-031.mp4",
-          "episode": 31
+          "episode": 31,
+          "air_date": "2026-03-16",
+          "overview": "",
+          "still": "",
+          "guest_stars": [],
+          "locked": true,
+          "release_iso": "2026-03-16T05:00:00"
         },
         {
           "title": "Dona Beja Episódio 32",
           "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-032.mp4",
-          "episode": 32
+          "episode": 32,
+          "air_date": "2026-03-16",
+          "overview": "",
+          "still": "",
+          "guest_stars": [],
+          "locked": true,
+          "release_iso": "2026-03-16T05:00:00"
         },
         {
           "title": "Dona Beja Episódio 33",
           "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-033.mp4",
-          "episode": 33
+          "episode": 33,
+          "air_date": "2026-03-16",
+          "overview": "",
+          "still": "",
+          "guest_stars": [],
+          "locked": true,
+          "release_iso": "2026-03-16T05:00:00"
         },
         {
           "title": "Dona Beja Episódio 34",
           "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-034.mp4",
-          "episode": 34
+          "episode": 34,
+          "air_date": "2026-03-16",
+          "overview": "",
+          "still": "",
+          "guest_stars": [],
+          "locked": true,
+          "release_iso": "2026-03-16T05:00:00"
         },
         {
           "title": "Dona Beja Episódio 35",
           "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-035.mp4",
-          "episode": 35
+          "episode": 35,
+          "air_date": "2026-03-16",
+          "overview": "",
+          "still": "",
+          "guest_stars": [],
+          "locked": true,
+          "release_iso": "2026-03-16T05:00:00"
         },
         {
           "title": "Dona Beja Episódio 36",
           "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-036.mp4",
-          "episode": 36
+          "episode": 36,
+          "air_date": "2026-03-23",
+          "overview": "",
+          "still": "",
+          "guest_stars": [],
+          "locked": true,
+          "release_iso": "2026-03-23T05:00:00"
         },
         {
           "title": "Dona Beja Episódio 37",
           "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-037.mp4",
-          "episode": 37
+          "episode": 37,
+          "air_date": "2026-03-23",
+          "overview": "",
+          "still": "",
+          "guest_stars": [],
+          "locked": true,
+          "release_iso": "2026-03-23T05:00:00"
         },
         {
           "title": "Dona Beja Episódio 38",
           "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-038.mp4",
-          "episode": 38
+          "episode": 38,
+          "air_date": "2026-03-23",
+          "overview": "",
+          "still": "",
+          "guest_stars": [],
+          "locked": true,
+          "release_iso": "2026-03-23T05:00:00"
         },
         {
           "title": "Dona Beja Episódio 39",
           "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-039.mp4",
-          "episode": 39
+          "episode": 39,
+          "air_date": "2026-03-23",
+          "overview": "",
+          "still": "",
+          "guest_stars": [],
+          "locked": true,
+          "release_iso": "2026-03-23T05:00:00"
         },
         {
           "title": "Dona Beja Episódio 40",
           "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-040.mp4",
-          "episode": 40
+          "episode": 40,
+          "air_date": "2026-03-23",
+          "overview": "",
+          "still": "",
+          "guest_stars": [],
+          "locked": true,
+          "release_iso": "2026-03-23T05:00:00"
         }
       ],
       "type": "series",
@@ -1844,7 +2736,8 @@
           "character": "Coronel Paulo Sampaio",
           "profile": "https://image.tmdb.org/t/p/w185/wg1lFAnr2cYQsIC1DoES6i1VbCx.jpg"
         }
-      ]
+      ],
+      "has_schedule": true
     }
   ],
   "novelas": [
@@ -23699,13 +24592,13 @@
             {
               "title": "TGRACAS-118",
               "url": "https://cdn-novflix.com/storage1/TGRACAS/TGRACAS-118.mp4",
-              "episode": 117,
-              "air_date": "2026-03-04",
+              "episode": 118,
+              "air_date": "2026-03-05",
               "overview": "",
-              "still": "https://image.tmdb.org/t/p/w400/m5YkLC998mZpAT4j4Z7QWqTvjug.jpg",
+              "still": "",
               "guest_stars": [],
               "locked": false
-            },           
+            },
             {
               "title": "TGRACAS-119",
               "url": "https://cdn-novflix.com/storage1/TGRACAS/TGRACAS-119.mp4",
@@ -25818,25 +26711,14 @@
           "locked": false
         },
         {
-          "title": "TGRACAS-117",
+          "title": "TGRACAS-118",
           "url": "https://cdn-novflix.com/storage1/TGRACAS/TGRACAS-118.mp4",
-          "episode": 117,
-          "air_date": "2026-03-04",
-          "overview": "",
-          "still": "https://image.tmdb.org/t/p/w400/m5YkLC998mZpAT4j4Z7QWqTvjug.jpg",
-          "guest_stars": [],
-          "locked": false
-        },
-        {
-          "title": "Capítulo 118",
-          "url": "",
           "episode": 118,
           "air_date": "2026-03-05",
           "overview": "",
           "still": "",
           "guest_stars": [],
-          "locked": false,
-          "release_iso": "2026-03-05T05:00:00"
+          "locked": false
         },
         {
           "title": "TGRACAS-119",
@@ -48167,207 +49049,6 @@
       ]
     },
     {
-      "id": "invencivel",
-      "title": "Invencivel",
-      "poster": "https://image.tmdb.org/t/p/w500/gIuCoLJSD09qx16FUn2OckjL6CA.jpg",
-      "seasons": [
-        {
-          "season": 1,
-          "episodes": [
-            {
-              "title": "invencivel 01",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/i/invencivel-dublado/01.mp4/index.m3u8",
-              "episode": 1
-            },
-            {
-              "title": "invencivel 02",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/i/invencivel-dublado/02.mp4/index.m3u8",
-              "episode": 2
-            },
-            {
-              "title": "invencivel 03",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/i/invencivel-dublado/03.mp4/index.m3u8",
-              "episode": 3
-            },
-            {
-              "title": "invencivel 04",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/i/invencivel-dublado/04.mp4/index.m3u8",
-              "episode": 4
-            },
-            {
-              "title": "invencivel 05",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/i/invencivel-dublado/05.mp4/index.m3u8",
-              "episode": 5
-            },
-            {
-              "title": "invencivel 06",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/i/invencivel-dublado/06.mp4/index.m3u8",
-              "episode": 6
-            },
-            {
-              "title": "invencivel 07",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/i/invencivel-dublado/07.mp4/index.m3u8",
-              "episode": 7
-            },
-            {
-              "title": "invencivel 08",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/i/invencivel-dublado/08.mp4/index.m3u8",
-              "episode": 8
-            }
-          ]
-        },
-        {
-          "season": 2,
-          "episodes": [
-            {
-              "title": "invencivel 2 01",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/i/invencivel-2-dublado/01.mp4/index.m3u8",
-              "episode": 1
-            },
-            {
-              "title": "invencivel 2 02",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/i/invencivel-2-dublado/02.mp4/index.m3u8",
-              "episode": 2
-            },
-            {
-              "title": "invencivel 2 03",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/i/invencivel-2-dublado/03.mp4/index.m3u8",
-              "episode": 3
-            },
-            {
-              "title": "invencivel 2 04",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/i/invencivel-2-dublado/04.mp4/index.m3u8",
-              "episode": 4
-            },
-            {
-              "title": "invencivel 2 05",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/i/invencivel-2-dublado/05.mp4/index.m3u8",
-              "episode": 5
-            },
-            {
-              "title": "invencivel 2 06",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/i/invencivel-2-dublado/06.mp4/index.m3u8",
-              "episode": 6
-            },
-            {
-              "title": "invencivel 2 07",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/i/invencivel-2-dublado/07.mp4/index.m3u8",
-              "episode": 7
-            },
-            {
-              "title": "invencivel 2 08",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/i/invencivel-2-dublado/08.mp4/index.m3u8",
-              "episode": 8
-            }
-          ]
-        },
-        {
-          "season": 3,
-          "episodes": [
-            {
-              "title": "invencivel 3 01",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/i/invencivel-3-dublado/01.mp4/index.m3u8",
-              "episode": 1
-            },
-            {
-              "title": "invencivel 3 02",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/i/invencivel-3-dublado/02.mp4/index.m3u8",
-              "episode": 2
-            },
-            {
-              "title": "invencivel 3 03",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/i/invencivel-3-dublado/03.mp4/index.m3u8",
-              "episode": 3
-            },
-            {
-              "title": "invencivel 3 04",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/i/invencivel-3-dublado/04.mp4/index.m3u8",
-              "episode": 4
-            },
-            {
-              "title": "invencivel 3 05",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/i/invencivel-3-dublado/05.mp4/index.m3u8",
-              "episode": 5
-            },
-            {
-              "title": "invencivel 3 06",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/i/invencivel-3-dublado/06.mp4/index.m3u8",
-              "episode": 6
-            },
-            {
-              "title": "invencivel 3 07",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/i/invencivel-3-dublado/07.mp4/index.m3u8",
-              "episode": 7
-            },
-            {
-              "title": "invencivel 3 08",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/i/invencivel-3-dublado/08.mp4/index.m3u8",
-              "episode": 8
-            }
-          ]
-        }
-      ],
-      "type": "series",
-      "category": "animes",
-      "local_poster": "/Pirataflix/assets/Capas/default.jpg",
-      "posters": [
-        "https://image.tmdb.org/t/p/w500/frtzbwANetYd0M4zdrZ5gx0E89q.jpg",
-        "https://image.tmdb.org/t/p/w500/gIuCoLJSD09qx16FUn2OckjL6CA.jpg",
-        "https://image.tmdb.org/t/p/w500/s0ZYSohyhOwqn545N0Dbbhaz6jk.jpg",
-        "https://image.tmdb.org/t/p/w500/gUtgotHd1VD9DhcR6G9NjRMRNoA.jpg"
-      ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/1M8uW8o6fdDaa3zqmBD2UUKu0VZ.jpg",
-      "overview": "Baki e os lutadores mais fortes da arena subterrânea encaram uma ameaça de proporções históricas: Musashi Miyamoto, o maior samurai do Japão, que foi ressuscitado.",
-      "year": "2026",
-      "genres": [
-        "Animação",
-        "Ação & Aventura"
-      ],
-      "rating": 8.4,
-      "cast": [
-        {
-          "name": "Nobunaga Shimazaki",
-          "character": "Baki Hanma (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/qke5rZusHsjSlvB0NKlJ5dQF5D.jpg"
-        },
-        {
-          "name": "Naoya Uchida",
-          "character": "Miyamoto Musashi (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/i1Vl4QbiEsyATmX2HSH2rIEyzeS.jpg"
-        },
-        {
-          "name": "Akio Otsuka",
-          "character": "",
-          "profile": "https://image.tmdb.org/t/p/w185/uH9oiqOOgrsz2zNnouVZ1qPzDyb.jpg"
-        },
-        {
-          "name": "Takuya Eguchi",
-          "character": "",
-          "profile": "https://image.tmdb.org/t/p/w185/hPPhUp0mM65Lc87Q8WXUEmGQAXx.jpg"
-        },
-        {
-          "name": "Kenta Miyake",
-          "character": "",
-          "profile": "https://image.tmdb.org/t/p/w185/7YL8vM2KYzPMeQqTpHWmNj6s1AP.jpg"
-        },
-        {
-          "name": "小山力也",
-          "character": "",
-          "profile": "https://image.tmdb.org/t/p/w185/hsZm87BORLpzhaycBaWOD5xpjVC.jpg"
-        },
-        {
-          "name": "菅生隆之",
-          "character": "",
-          "profile": "https://image.tmdb.org/t/p/w185/72SmjQLslGqH61JONZkSnEcvcRv.jpg"
-        },
-        {
-          "name": "島田敏",
-          "character": "",
-          "profile": "https://image.tmdb.org/t/p/w185/5jJgMyFAP3GgQtFxP2qe0oE4LHk.jpg"
-        }
-      ]
-    },
-    {
       "id": "dandandan",
       "title": "Dandandan",
       "poster": "https://image.tmdb.org/t/p/w500/bXtD4o9SwXhVKtQQfO8cvKm95yT.jpg",
@@ -61597,6 +62278,181 @@
           "name": "増川洋一",
           "character": "Rock Lee (voice)",
           "profile": "https://image.tmdb.org/t/p/w185/sE664CcqM1pvoWsYsca7szlIzl5.jpg"
+        }
+      ]
+    },
+    {
+      "id": "invincible",
+      "title": "Invincible",
+      "poster": "https://image.tmdb.org/t/p/w500/29myVHhdGoS735ZJ9hblY0pQ3K9.jpg",
+      "seasons": [
+        {
+          "season": 1,
+          "episodes": [
+            {
+              "title": "invencivel 01",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/i/invencivel-dublado/01.mp4/index.m3u8",
+              "episode": 1
+            },
+            {
+              "title": "invencivel 02",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/i/invencivel-dublado/02.mp4/index.m3u8",
+              "episode": 2
+            },
+            {
+              "title": "invencivel 03",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/i/invencivel-dublado/03.mp4/index.m3u8",
+              "episode": 3
+            },
+            {
+              "title": "invencivel 04",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/i/invencivel-dublado/04.mp4/index.m3u8",
+              "episode": 4
+            },
+            {
+              "title": "invencivel 05",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/i/invencivel-dublado/05.mp4/index.m3u8",
+              "episode": 5
+            },
+            {
+              "title": "invencivel 06",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/i/invencivel-dublado/06.mp4/index.m3u8",
+              "episode": 6
+            },
+            {
+              "title": "invencivel 07",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/i/invencivel-dublado/07.mp4/index.m3u8",
+              "episode": 7
+            },
+            {
+              "title": "invencivel 08",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/i/invencivel-dublado/08.mp4/index.m3u8",
+              "episode": 8
+            }
+          ]
+        },
+        {
+          "season": 2,
+          "episodes": [
+            {
+              "title": "invencivel 2 01",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/i/invencivel-2-dublado/01.mp4/index.m3u8",
+              "episode": 1
+            },
+            {
+              "title": "invencivel 2 02",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/i/invencivel-2-dublado/02.mp4/index.m3u8",
+              "episode": 2
+            },
+            {
+              "title": "invencivel 2 03",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/i/invencivel-2-dublado/03.mp4/index.m3u8",
+              "episode": 3
+            },
+            {
+              "title": "invencivel 2 04",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/i/invencivel-2-dublado/04.mp4/index.m3u8",
+              "episode": 4
+            },
+            {
+              "title": "invencivel 2 05",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/i/invencivel-2-dublado/05.mp4/index.m3u8",
+              "episode": 5
+            },
+            {
+              "title": "invencivel 2 06",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/i/invencivel-2-dublado/06.mp4/index.m3u8",
+              "episode": 6
+            },
+            {
+              "title": "invencivel 2 07",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/i/invencivel-2-dublado/07.mp4/index.m3u8",
+              "episode": 7
+            },
+            {
+              "title": "invencivel 2 08",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/i/invencivel-2-dublado/08.mp4/index.m3u8",
+              "episode": 8
+            }
+          ]
+        },
+        {
+          "season": 3,
+          "episodes": [
+            {
+              "title": "invencivel 3 01",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/i/invencivel-3-dublado/01.mp4/index.m3u8",
+              "episode": 1
+            },
+            {
+              "title": "invencivel 3 02",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/i/invencivel-3-dublado/02.mp4/index.m3u8",
+              "episode": 2
+            },
+            {
+              "title": "invencivel 3 03",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/i/invencivel-3-dublado/03.mp4/index.m3u8",
+              "episode": 3
+            },
+            {
+              "title": "invencivel 3 04",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/i/invencivel-3-dublado/04.mp4/index.m3u8",
+              "episode": 4
+            },
+            {
+              "title": "invencivel 3 05",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/i/invencivel-3-dublado/05.mp4/index.m3u8",
+              "episode": 5
+            },
+            {
+              "title": "invencivel 3 06",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/i/invencivel-3-dublado/06.mp4/index.m3u8",
+              "episode": 6
+            },
+            {
+              "title": "invencivel 3 07",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/i/invencivel-3-dublado/07.mp4/index.m3u8",
+              "episode": 7
+            },
+            {
+              "title": "invencivel 3 08",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/i/invencivel-3-dublado/08.mp4/index.m3u8",
+              "episode": 8
+            }
+          ]
+        }
+      ],
+      "type": "series",
+      "category": "animes",
+      "local_poster": "/Pirataflix/assets/Capas/default.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/29myVHhdGoS735ZJ9hblY0pQ3K9.jpg",
+        "https://image.tmdb.org/t/p/w500/jBn4LWlgdsf6xIUYhYBwpctBVsj.jpg",
+        "https://image.tmdb.org/t/p/w500/w9XQ7ehwaxqV6WJSAUE0qLTQHgq.jpg",
+        "https://image.tmdb.org/t/p/w500/lxVS24ZhG3WQf3IMbkFIg6olT6A.jpg",
+        "https://image.tmdb.org/t/p/w500/yDWJYRAwMNKbIYT8ZB33qy84uzO.jpg",
+        "https://image.tmdb.org/t/p/w500/bpKYMRKNJoDY3swRNQ3qahSAdr2.jpg",
+        "https://image.tmdb.org/t/p/w500/mRD931fx06zPepHiDlIdPY7qw7z.jpg"
+      ],
+      "backdrop": "https://image.tmdb.org/t/p/w1280/dfmPbyeZZSz3bekeESvMJaH91gS.jpg",
+      "overview": "Uma animação de super-heróis para adultos e conta a história de Mark Grayson, de 17 anos, um cara como qualquer outro de sua idade, exceto que seu pai é o super-herói mais poderoso do planeta, Omni-Man. Porém, à medida que Mark desenvolve seus próprios poderes, ele descobre que o legado de seu pai pode não ser tão heroico quanto parece.",
+      "year": "2021",
+      "rating": 8.6,
+      "cast": [
+        {
+          "name": "Steven Yeun",
+          "character": "Mark Grayson / Invincible (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/fOMFO2Xx4duzpNgS9Q5ytO44yGb.jpg"
+        },
+        {
+          "name": "Sandra Oh",
+          "character": "Debbie Grayson (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/zU8vjebHxcP60ESEL5Ok68KWZvj.jpg"
+        },
+        {
+          "name": "J.K. Simmons",
+          "character": "Nolan Grayson / Omni-Man (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/ScmKoJ9eiSUOthAt1PDNLi8Fkw.jpg"
         }
       ]
     },
