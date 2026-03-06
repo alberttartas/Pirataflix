@@ -798,8 +798,9 @@ EPISODE_SCHEDULE_TITLES = {
     'naruto': 46260,
     'naruto_shippuden': 31910,
     'spy_x_family': 120089,
+    'historias_novo_testamento': 212879,
     
-}
+    }
 # Delay de liberação: servidor leva ~5h após meia-noite do air_date
 SCHEDULE_RELEASE_DELAY_HOURS = 21
 
@@ -1631,6 +1632,7 @@ def generate_html_with_correct_paths(base_dir, data):
 
 if __name__ == "__main__":
     build_vod_with_direct_capas()
+
 
 
 
