@@ -20,9 +20,10 @@
   "dandandan":                     { "tmdb_id": 246804,  "type": "tv" },
   "spy_x_family":                  { "tmdb_id": 120089,  "type": "tv" },
   "ataque_dos_titans":             { "tmdb_id": 1429,    "type": "tv" },
-  "ivencivel":                     { "tmdb_id": 95557,   "type": "tv" },
+  "invincible":                     { "tmdb_id": 95557,   "type": "tv" },
   "tres_gracas":                   { "tmdb_id": 289996,  "type": "tv" },
   "princesa_mononoke_dublado":     { "tmdb_id": 128,     "type": "movie" },
   "lilo_stitch_filme":             { "tmdb_id": 11544,   "type": "movie" },
   "spy_x_family_filme":            { "tmdb_id": 1064213, "type": "movie" }
 }
+
