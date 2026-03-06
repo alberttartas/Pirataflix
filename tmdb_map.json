@@ -24,6 +24,7 @@
   "tres_gracas":                   { "tmdb_id": 289996,  "type": "tv" },
   "princesa_mononoke_dublado":     { "tmdb_id": 128,     "type": "movie" },
   "lilo_stitch_filme":             { "tmdb_id": 11544,   "type": "movie" },
-  "spy_x_family_filme":            { "tmdb_id": 1064213, "type": "movie" }
+  "spy_x_family_filme":            { "tmdb_id": 1064213, "type": "movie" },
+  "cabocla":                         { "tmdb_id": 42928, "type": "tv" }
 }
 
