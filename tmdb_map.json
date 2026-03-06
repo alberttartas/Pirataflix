@@ -23,12 +23,12 @@
   "invincible":                     { "tmdb_id": 95557,   "type": "tv" },
   "tres_gracas":                   { "tmdb_id": 289996,  "type": "tv" },
   "princesa_mononoke_dublado":     { "tmdb_id": 128,     "type": "movie" },
-  "lilo_stitch_filme":             { "tmdb_id": 11544,   "type": "movie" },
-  "spy_x_family_filme":            { "tmdb_id": 1064213, "type": "movie" },
+  "lilo_stitch_live_action":         { "tmdb_id": 552524,   "type": "movie" },
+  "spy_x_family_codigo_branco":     { "tmdb_id": 1062807, "type": "movie" },
   "cabocla":                         { "tmdb_id": 42928, "type": "tv" },
-  "historias_novo_testamento":     { "tmdb_id": 212879, "type": "tv" }
-  
+  "historias_novo_testamento":   {  "tmdb_id": 212879,  "type": "tv",  "search": "Historias del Nuevo Testamento"}  
 }
+
 
 
 
