@@ -243,23 +243,23 @@ function _renderModal(category, itemId) {
         sortedSeasons.forEach((season, sIdx) => {
             const isOpen     = sIdx === lastIdx;
             const collapseId = 'season-' + itemId + '-' + season.season;
+            const totalEps   = season.episodes.length;
+            const availEps   = season.episodes.filter(e => !e.locked).length;
             bodyHtml += `<div class="pf-season-block">
                 <div class="pf-season-header" data-toggle="${collapseId}">
                     <span class="pf-season-label">🎬 Temporada ${season.season}</span>
-                    <span class="pf-season-count">${season.episodes.length} ep.</span>
+                    <span class="pf-season-count">${availEps}/${totalEps} ep.</span>
                     <span class="pf-season-chevron">${isOpen ? '▲' : '▼'}</span>
                 </div>
                 <div class="pf-episode-list pf-season-episodes" id="${collapseId}" style="display:${isOpen ? 'flex' : 'none'}">`;
             season.episodes.forEach((ep, index) => {
                 const num       = ep.episode || (index + 1);
-                const t         = (ep.title || 'Episódio ' + num).replace(/"/g,'');
+                const t         = (ep.title || 'Capítulo ' + num).replace(/"/g,'');
                 const globalIdx = epOffset + index;
-                bodyHtml += `<div class="pf-episode-item" data-action="play-ep" data-url="${ep.url}" data-title="${t}" data-itemid="${itemId}" data-category="${category}" data-index="${globalIdx}">
-                    <div class="pf-ep-num">${num}</div>
-                    <div class="pf-ep-info"><div class="pf-ep-title">${t}</div></div>
-                    <div class="pf-ep-play"><i class="fas fa-play"></i></div>
-                </div>`;
+                bodyHtml += _renderEpisodeItem(ep, num, t, globalIdx, itemId, category);
             });
+            // Banner de próximo episódio bloqueado após o último disponível
+            bodyHtml += _renderNextEpisodeBanner(season.episodes);
             bodyHtml += `</div></div>`;
             epOffset += season.episodes.length;
         });
@@ -270,13 +270,12 @@ function _renderModal(category, itemId) {
             <h3 class="pf-section-title"><i class="fas fa-list"></i> Episódios</h3>
             <div class="pf-episode-list">`;
         item.episodes.forEach((ep, index) => {
-            const t = (ep.title || item.title).replace(/"/g,'');
-            bodyHtml += `<div class="pf-episode-item" data-action="play-ep" data-url="${ep.url}" data-title="${t}" data-itemid="${itemId}" data-category="${category}" data-index="${index}">
-                <div class="pf-ep-num">${index + 1}</div>
-                <div class="pf-ep-info"><div class="pf-ep-title">${t}</div></div>
-                <div class="pf-ep-play"><i class="fas fa-play"></i></div>
-            </div>`;
+            const num = ep.episode || (index + 1);
+            const t   = (ep.title || item.title).replace(/"/g,'');
+            bodyHtml += _renderEpisodeItem(ep, num, t, index, itemId, category);
         });
+        // Banner de próximo episódio após o último
+        bodyHtml += _renderNextEpisodeBanner(item.episodes);
         bodyHtml += `</div></div>`;
     }
 
@@ -292,6 +291,84 @@ function _renderModal(category, itemId) {
     if (closeBtn) closeBtn.onclick = () => {
         modal.style.display = 'none';
     };
+}
+
+// =====================
+// HELPERS DE SCHEDULE
+// =====================
+function _fmtDate(isoStr) {
+    if (!isoStr) return '';
+    try {
+        const d = new Date(isoStr.length === 10 ? isoStr + 'T00:00:00' : isoStr);
+        return d.toLocaleDateString('pt-BR', {day:'2-digit', month:'long', year:'numeric'});
+    } catch(e) { return isoStr; }
+}
+
+function _renderEpisodeItem(ep, num, title, globalIdx, itemId, category) {
+    const locked     = ep.locked || (!ep.url);
+    const hasStill   = ep.still && ep.still.startsWith('http');
+    const releaseStr = ep.release_iso ? _fmtDate(ep.release_iso) : (ep.air_date ? _fmtDate(ep.air_date) : '');
+
+    if (locked) {
+        return `<div class="pf-episode-item pf-ep-locked">
+            ${hasStill
+                ? `<img src="${ep.still}" class="pf-ep-still" loading="lazy" onerror="this.style.display='none'">`
+                : '<div class="pf-ep-still pf-still-placeholder"><i class="fas fa-film"></i></div>'}
+            <div class="pf-ep-info">
+                <div class="pf-ep-title">Capítulo ${num}</div>
+                <div class="pf-ep-release"><i class="fas fa-clock"></i> ${releaseStr ? 'Disponível em ' + releaseStr : 'Em breve'}</div>
+                ${ep.overview ? `<div class="pf-ep-overview">${ep.overview}</div>` : ''}
+            </div>
+            <div class="pf-ep-lock"><i class="fas fa-lock"></i></div>
+        </div>`;
+    }
+
+    const guestHtml = (ep.guest_stars && ep.guest_stars.length)
+        ? `<div class="pf-ep-guests">${ep.guest_stars.map(g =>
+            `<span class="pf-guest-tag">${g.photo ? `<img src="${g.photo}" loading="lazy" onerror="this.remove()">` : ''}<span>${g.name}</span></span>`
+          ).join('')}</div>`
+        : '';
+
+    return `<div class="pf-episode-item${ep.still || ep.overview ? ' pf-ep-rich' : ''}" data-action="play-ep" data-url="${ep.url}" data-title="${title}" data-itemid="${itemId}" data-category="${category}" data-index="${globalIdx}">
+        ${hasStill
+            ? `<img src="${ep.still}" class="pf-ep-still" loading="lazy" onerror="this.remove()">`
+            : `<div class="pf-ep-num">${num}</div>`}
+        <div class="pf-ep-info">
+            <div class="pf-ep-title">${title}</div>
+            ${ep.air_date ? `<div class="pf-ep-airdate">${_fmtDate(ep.air_date)}</div>` : ''}
+            ${ep.overview ? `<div class="pf-ep-overview">${ep.overview}</div>` : ''}
+            ${guestHtml}
+        </div>
+        <div class="pf-ep-play"><i class="fas fa-play"></i></div>
+    </div>`;
+}
+
+function _renderNextEpisodeBanner(episodes) {
+    if (!episodes || !episodes.length) return '';
+    const lastAvail = [...episodes].reverse().find(e => !e.locked && e.url);
+    if (!lastAvail) return '';
+    const lastNum = lastAvail.episode || 0;
+    const nextEp  = episodes.find(e => (e.episode || 0) > lastNum && e.locked);
+    if (!nextEp) {
+        // Verificar se é realmente o último ou apenas não tem mais dados
+        const hasLocked = episodes.some(e => e.locked);
+        if (!hasLocked) return `<div class="pf-next-banner pf-series-ended">
+            <i class="fas fa-flag-checkered"></i>
+            <div><strong>Fim dos capítulos disponíveis</strong>
+            <span>Você chegou ao último capítulo disponível no momento.</span></div>
+        </div>`;
+        return '';
+    }
+    const releaseStr = nextEp.release_iso
+        ? _fmtDate(nextEp.release_iso)
+        : (nextEp.air_date ? _fmtDate(nextEp.air_date) : '');
+    return `<div class="pf-next-banner">
+        <i class="fas fa-hourglass-half"></i>
+        <div>
+            <strong>Próximo capítulo: ${nextEp.episode || ''}</strong>
+            ${releaseStr ? `<span>Disponível a partir de <b>${releaseStr}</b></span>` : '<span>Em breve</span>'}
+        </div>
+    </div>`;
 }
 
 // =====================
@@ -591,6 +668,32 @@ function injectFooter() {
     .pf-ep-play{color:#444;font-size:.72rem;flex-shrink:0;transition:color .15s;}
     .pf-episode-item:hover .pf-ep-play{color:#e50914;}
     .pf-live-dot{color:#e50914;font-size:.72rem;margin-left:4px;}
+
+    /* Episódios com schedule (thumbnail, sinopse, convidados) */
+    .pf-ep-rich{align-items:flex-start !important;padding:10px 13px 12px !important;}
+    .pf-ep-still{width:96px;height:58px;object-fit:cover;border-radius:5px;flex-shrink:0;background:#111;}
+    .pf-still-placeholder{width:96px;height:58px;border-radius:5px;background:#1a1a1a;display:flex;align-items:center;justify-content:center;color:#333;font-size:1.2rem;flex-shrink:0;}
+    .pf-ep-airdate{font-size:.68rem;color:#555;margin-top:2px;}
+    .pf-ep-overview{font-size:.74rem;color:#888;line-height:1.5;margin-top:4px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+    .pf-ep-guests{display:flex;flex-wrap:wrap;gap:5px;margin-top:6px;}
+    .pf-guest-tag{display:flex;align-items:center;gap:4px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.09);border-radius:20px;padding:2px 8px 2px 4px;font-size:.65rem;color:#aaa;}
+    .pf-guest-tag img{width:18px;height:18px;border-radius:50%;object-fit:cover;}
+
+    /* Episódios bloqueados */
+    .pf-ep-locked{cursor:default !important;opacity:.75;}
+    .pf-ep-locked:hover{background:rgba(255,255,255,.035) !important;border-color:rgba(255,255,255,.04) !important;}
+    .pf-ep-release{font-size:.7rem;color:#e50914;margin-top:3px;display:flex;align-items:center;gap:4px;}
+    .pf-ep-lock{color:#555;font-size:.85rem;flex-shrink:0;margin-left:auto;}
+
+    /* Banner de próximo episódio */
+    .pf-next-banner{display:flex;align-items:center;gap:12px;padding:12px 14px;margin:8px 0 4px;background:linear-gradient(135deg,rgba(229,9,20,.08),rgba(229,9,20,.04));border:1px solid rgba(229,9,20,.2);border-radius:8px;}
+    .pf-next-banner i{color:#e50914;font-size:1.1rem;flex-shrink:0;}
+    .pf-next-banner div{display:flex;flex-direction:column;gap:2px;}
+    .pf-next-banner strong{font-size:.82rem;color:#eee;}
+    .pf-next-banner span{font-size:.75rem;color:#888;}
+    .pf-next-banner span b{color:#ccc;}
+    .pf-series-ended{background:linear-gradient(135deg,rgba(70,211,105,.06),rgba(70,211,105,.02)) !important;border-color:rgba(70,211,105,.2) !important;}
+    .pf-series-ended i{color:#46d369 !important;}
 
     /* Temporadas colapsáveis */
     .pf-season-block{margin-bottom:5px;border-radius:7px;overflow:hidden;border:1px solid rgba(255,255,255,.06);}
