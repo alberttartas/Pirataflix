@@ -1,0 +1,28 @@
+{
+  "_comentario": "Mapeamento TMDB — edite este arquivo para corrigir qualquer título.",
+  "_formato": {
+    "slug_ou_nome_da_pasta": {
+      "tmdb_id": 12345,
+      "type": "tv ou movie",
+      "search": "nome alternativo para busca (opcional se tmdb_id informado)"
+    }
+  },
+
+  "one_piece":                     { "tmdb_id": 37854,   "type": "tv" },
+  "boku_no_hero_academia_dublado": { "tmdb_id": 65930,   "type": "tv" },
+  "naruto_shippuden":              { "tmdb_id": 1535,    "type": "tv" },
+  "naruto_classico":               { "tmdb_id": 46260,   "type": "tv" },
+  "dragon_ball_z":                 { "tmdb_id": 12971,   "type": "tv" },
+  "dragon_ball_gt":                { "tmdb_id": 12979,   "type": "tv" },
+  "dragon_ball_daima":             { "tmdb_id": 246641,  "type": "tv" },
+  "jujutsu_kaisen":                { "tmdb_id": 95479,   "type": "tv" },
+  "sousou_no_frieren":             { "tmdb_id": 209867,  "type": "tv" },
+  "dandandan":                     { "tmdb_id": 246804,  "type": "tv" },
+  "spy_x_family":                  { "tmdb_id": 120089,  "type": "tv" },
+  "ataque_dos_titans":             { "tmdb_id": 1429,    "type": "tv" },
+  "ivencivel":                     { "tmdb_id": 95557,   "type": "tv" },
+  "tres_gracas":                   { "tmdb_id": 289996,  "type": "tv" },
+  "princesa_mononoke_dublado":     { "tmdb_id": 128,     "type": "movie" },
+  "lilo_stitch_filme":             { "tmdb_id": 11544,   "type": "movie" },
+  "spy_x_family_filme":            { "tmdb_id": 1064213, "type": "movie" }
+}

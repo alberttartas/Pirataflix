@@ -74,6 +74,43 @@ def extract_episode_number(title):
             pass
     return None
 
+def normalize_tv_group(raw_group):
+    """Mapeia grupos M3U em inglês para categorias PT-BR."""
+    g = (raw_group or '').strip()
+    mapping = {
+        'General':        '📺 Geral',
+        'Movies':         '🎬 Filmes',
+        'Entertainment':  '🎭 Entretenimento',
+        'Religious':      '✝️ Religioso',
+        'News':           '📰 Notícias',
+        'Kids':           '🧸 Infantil',
+        'Music':          '🎵 Música',
+        'Series':         '📺 Séries',
+        'Sports':         '⚽ Esportes',
+        'Education':      '📚 Educação',
+        'Documentary':    '🎥 Documentário',
+        'Legislative':    '🏛️ Legislativo',
+        'Culture':        '🎨 Cultura',
+        'Comedy':         '😂 Comédia',
+        'Animation':      '🎨 Animação',
+        'Outdoor':        '🌿 Natureza',
+        'Science':        '🔬 Ciência',
+        'Shop':           '🛍️ Shopping',
+        'Cooking':        '🍳 Culinária',
+        'Travel':         '✈️ Viagem',
+        'Business':       '💼 Negócios',
+        'Weather':        '🌦️ Clima',
+        'Auto':           '🚗 Automóvel',
+        'Lifestyle':      '💅 Lifestyle',
+        'Classic':        '🎞️ Clássicos',
+        'Family':         '👨‍👩‍👧 Família',
+        'Undefined':      '📺 Geral',
+        '📺 TV Ao Vivo':  '📺 Geral',
+    }
+    # Lidar com grupos compostos como "Animation;Kids"
+    first = g.split(';')[0].strip()
+    return mapping.get(first, mapping.get(g, '📺 Geral'))
+
 def parse_m3u(m3u_file):
     """Faz parse de arquivo M3U e extrai números de episódios"""
     episodes = []
@@ -575,62 +612,75 @@ TMDB_API_KEY = '6862f118a59693b921840e5bbbdabb74'
 TMDB_BASE    = 'https://api.themoviedb.org/3'
 TMDB_IMG     = 'https://image.tmdb.org/t/p/w500'
 
-# Mapeamento manual para títulos que o TMDB não acha corretamente
-# Formato: 'titulo_no_sistema': {'search': 'titulo para buscar', 'type': 'movie'/'tv', 'tmdb_id': id_opcional}
-TMDB_TITLE_MAP = {
-    'tres_gracas':               {'search': 'Três Graças', 'type': 'tv', 'tmdb_id': 289996},
-    'tres gracas':               {'search': 'Três Graças', 'type': 'tv', 'tmdb_id': 289996},
-    'princesa mononoke dublado': {'search': 'Princess Mononoke', 'type': 'movie'},
-    'princesa mononoke':         {'search': 'Princess Mononoke', 'type': 'movie'},
-    'lilo stitch filme':         {'search': 'Lilo & Stitch', 'type': 'movie', 'year': '2002'},
-    'lilo stitch':               {'search': 'Lilo & Stitch', 'type': 'movie', 'year': '2002'},
-    'lilo & stitch filme':       {'search': 'Lilo & Stitch', 'type': 'movie', 'year': '2002'},
-    'spy x family filme':        {'search': 'Spy x Family Code: White', 'type': 'movie'},
-    'boku no hero academia dublado': {'search': 'My Hero Academia', 'type': 'tv'},
-    'ataque dos titans':         {'search': 'Attack on Titan', 'type': 'tv'},
-    'sousou no frieren':         {'search': 'Frieren: Beyond Journey\'s End', 'type': 'tv'},
-    'dragon ball daima':         {'search': 'Dragon Ball Daima', 'type': 'tv'},
-    'invencivel':                {'search': 'Invincible', 'type': 'tv'},
-    'dandandan':                 {'search': 'DAN DA DAN', 'type': 'tv'},
-}
+def _load_tmdb_map() -> dict:
+    """Carrega tmdb_map.json da raiz — edite esse arquivo para mapear títulos."""
+    import unicodedata as _ud
+    map_path = Path(__file__).parent / 'tmdb_map.json'
+    if not map_path.exists():
+        return {}
+    try:
+        raw = json.loads(map_path.read_text(encoding='utf-8'))
+        return {k: v for k, v in raw.items() if not k.startswith('_')}
+    except Exception as e:
+        print(f"   ⚠️  tmdb_map.json com erro: {e}")
+        return {}
+
+TMDB_MAP = _load_tmdb_map()
+
+def _resolve_tmdb(title: str) -> dict | None:
+    """Procura o título (slug, normalizado, com espaços) no TMDB_MAP."""
+    import unicodedata as _ud
+    key = title.lower().strip()
+    key_ascii = _ud.normalize('NFKD', key).encode('ASCII', 'ignore').decode('ASCII')
+    key_ascii = re.sub(r'[^\w\s]', '', key_ascii).strip()
+    key_slug  = re.sub(r'\s+', '_', key_ascii)
+    for k in (key, key_ascii, key_slug):
+        if k in TMDB_MAP:
+            return TMDB_MAP[k]
+    return None
+
 
 def fetch_tmdb_metadata(title, media_type='movie'):
-    """Busca metadados do TMDB: poster, sinopse, ano, gêneros, nota."""
+    """Busca metadados do TMDB: poster, sinopse, ano, gêneros, nota.
+    Se tmdb_id estiver no mapeamento, busca diretamente pelo ID (resultado exato).
+    """
     import urllib.request, urllib.parse, time
 
-    # Verificar mapeamento manual primeiro
-    title_key = title.lower().strip()
-    # Normalizar: remover acentos e caracteres especiais para lookup
-    import unicodedata as _ud
-    title_key_norm = _ud.normalize('NFKD', title_key).encode('ASCII', 'ignore').decode('ASCII')
-    title_key_norm = re.sub(r'[^\w\s]', '', title_key_norm).strip()
-
-    mapped = TMDB_TITLE_MAP.get(title_key) or TMDB_TITLE_MAP.get(title_key_norm)
+    mapped = _resolve_tmdb(title)
     if mapped:
-        search_title = mapped['search']
-        media_type   = mapped.get('type', media_type)
-    else:
-        search_title = title
+        media_type = mapped.get('type', media_type)
 
     try:
-        query = urllib.parse.quote(search_title)
-        url   = f"{TMDB_BASE}/search/{media_type}?api_key={TMDB_API_KEY}&query={query}&language=pt-BR"
-        req   = urllib.request.Request(url, headers={'User-Agent': 'Pirataflix/1.0'})
-
-        with urllib.request.urlopen(req, timeout=8) as r:
-            data = json.loads(r.read())
-        results = data.get('results', [])
-        if not results:
-            # tentar em inglês
-            url2 = f"{TMDB_BASE}/search/{media_type}?api_key={TMDB_API_KEY}&query={query}"
-            req2 = urllib.request.Request(url2, headers={'User-Agent': 'Pirataflix/1.0'})
-            with urllib.request.urlopen(req2, timeout=8) as r2:
-                data = json.loads(r2.read())
+        # ── Busca por ID direto (resultado garantido) ──────────────
+        if mapped and mapped.get('tmdb_id'):
+            tmdb_id  = mapped['tmdb_id']
+            url_item = f"{TMDB_BASE}/{media_type}/{tmdb_id}?api_key={TMDB_API_KEY}&language=pt-BR"
+            req_item = urllib.request.Request(url_item, headers={'User-Agent': 'Pirataflix/1.0'})
+            with urllib.request.urlopen(req_item, timeout=8) as r:
+                item = json.loads(r.read())
+            if item.get('status_code'):  # erro da API
+                return {}
+        # ── Busca por texto ────────────────────────────────────────
+        else:
+            search_title = mapped['search'] if mapped and mapped.get('search') else title
+            query = urllib.parse.quote(search_title)
+            url   = f"{TMDB_BASE}/search/{media_type}?api_key={TMDB_API_KEY}&query={query}&language=pt-BR"
+            req   = urllib.request.Request(url, headers={'User-Agent': 'Pirataflix/1.0'})
+            with urllib.request.urlopen(req, timeout=8) as r:
+                data = json.loads(r.read())
             results = data.get('results', [])
-        if not results:
-            return {}
-        item   = results[0]
-        tmdb_id = item.get('id', '')
+            if not results:
+                url2 = f"{TMDB_BASE}/search/{media_type}?api_key={TMDB_API_KEY}&query={query}"
+                req2 = urllib.request.Request(url2, headers={'User-Agent': 'Pirataflix/1.0'})
+                with urllib.request.urlopen(req2, timeout=8) as r2:
+                    data = json.loads(r2.read())
+                results = data.get('results', [])
+            if not results:
+                return {}
+            item    = results[0]
+            tmdb_id = item.get('id', '')
+
+        tmdb_id = item.get('id', tmdb_id if mapped else '')
         poster  = (TMDB_IMG + item['poster_path']) if item.get('poster_path') else ''
         # Backdrop em alta resolução (w1280)
         backdrop = ('https://image.tmdb.org/t/p/w1280' + item['backdrop_path']) if item.get('backdrop_path') else ''
@@ -888,42 +938,6 @@ def enrich_episode_schedule(output):
 
     print("✅ Agenda de episódios concluída!")
 
-
-    """Mapeia grupos M3U em inglês para categorias PT-BR."""
-    g = (raw_group or '').strip()
-    mapping = {
-        'General':        '📺 Geral',
-        'Movies':         '🎬 Filmes',
-        'Entertainment':  '🎭 Entretenimento',
-        'Religious':      '✝️ Religioso',
-        'News':           '📰 Notícias',
-        'Kids':           '🧸 Infantil',
-        'Music':          '🎵 Música',
-        'Series':         '📺 Séries',
-        'Sports':         '⚽ Esportes',
-        'Education':      '📚 Educação',
-        'Documentary':    '🎥 Documentário',
-        'Legislative':    '🏛️ Legislativo',
-        'Culture':        '🎨 Cultura',
-        'Comedy':         '😂 Comédia',
-        'Animation':      '🎨 Animação',
-        'Outdoor':        '🌿 Natureza',
-        'Science':        '🔬 Ciência',
-        'Shop':           '🛍️ Shopping',
-        'Cooking':        '🍳 Culinária',
-        'Travel':         '✈️ Viagem',
-        'Business':       '💼 Negócios',
-        'Weather':        '🌦️ Clima',
-        'Auto':           '🚗 Automóvel',
-        'Lifestyle':      '💅 Lifestyle',
-        'Classic':        '🎞️ Clássicos',
-        'Family':         '👨‍👩‍👧 Família',
-        'Undefined':      '📺 Geral',
-        '📺 TV Ao Vivo':  '📺 Geral',
-    }
-    # Lidar com grupos compostos como "Animation;Kids"
-    first = g.split(';')[0].strip()
-    return mapping.get(first, mapping.get(g, '📺 Geral'))
 
 
 def generate_pwa_files(web_dir):
