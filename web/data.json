@@ -23697,7 +23697,7 @@
               "locked": false
             },
             {
-              "title": "TGRACAS-117",
+              "title": "TGRACAS-118",
               "url": "https://cdn-novflix.com/storage1/TGRACAS/TGRACAS-118.mp4",
               "episode": 117,
               "air_date": "2026-03-04",
@@ -23705,18 +23705,7 @@
               "still": "https://image.tmdb.org/t/p/w400/m5YkLC998mZpAT4j4Z7QWqTvjug.jpg",
               "guest_stars": [],
               "locked": false
-            },
-            {
-              "title": "Capítulo 118",
-              "url": "",
-              "episode": 118,
-              "air_date": "2026-03-05",
-              "overview": "",
-              "still": "",
-              "guest_stars": [],
-              "locked": false,
-              "release_iso": "2026-03-05T05:00:00"
-            },
+            },           
             {
               "title": "TGRACAS-119",
               "url": "https://cdn-novflix.com/storage1/TGRACAS/TGRACAS-119.mp4",
