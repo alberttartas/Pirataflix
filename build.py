@@ -554,6 +554,9 @@ def build_vod_with_direct_capas():
     if items_sem_meta:
         enrich_with_tmdb(output)
 
+    # Enriquecer episódios com schedule para títulos configurados
+    enrich_episode_schedule(output)
+
     with open(json_path, "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
     print(f"\n✅ JSON final salvo com metadados TMDB")
@@ -575,6 +578,8 @@ TMDB_IMG     = 'https://image.tmdb.org/t/p/w500'
 # Mapeamento manual para títulos que o TMDB não acha corretamente
 # Formato: 'titulo_no_sistema': {'search': 'titulo para buscar', 'type': 'movie'/'tv', 'tmdb_id': id_opcional}
 TMDB_TITLE_MAP = {
+    'tres_gracas':               {'search': 'Três Graças', 'type': 'tv', 'tmdb_id': 289996},
+    'tres gracas':               {'search': 'Três Graças', 'type': 'tv', 'tmdb_id': 289996},
     'princesa mononoke dublado': {'search': 'Princess Mononoke', 'type': 'movie'},
     'princesa mononoke':         {'search': 'Princess Mononoke', 'type': 'movie'},
     'lilo stitch filme':         {'search': 'Lilo & Stitch', 'type': 'movie', 'year': '2002'},
@@ -731,7 +736,159 @@ def enrich_with_tmdb(output):
             time.sleep(0.26)   # respeitar rate limit TMDB (40 req/10s)
     print("✅ TMDB concluído!")
 
-def normalize_tv_group(raw_group):
+# =========================
+# AGENDA DE EPISÓDIOS (TMDB)
+# Títulos que devem ter schedule completo com lock/unlock por data
+# =========================
+EPISODE_SCHEDULE_TITLES = {
+    # slug_do_titulo : tmdb_id (série)
+    'tres_gracas': 289996,
+}
+# Delay de liberação: servidor leva ~5h após meia-noite do air_date
+SCHEDULE_RELEASE_DELAY_HOURS = 5  # libera às 05:00 BRT do dia do air_date
+
+def fetch_episode_schedule(tmdb_id: int, season: int = 1) -> list[dict]:
+    """Busca dados por episódio de uma temporada: air_date, overview, still, guest_stars."""
+    import urllib.request, json, time as _time
+    BASE = 'https://api.themoviedb.org/3'
+    IMG  = 'https://image.tmdb.org/t/p/w400'
+
+    url = f"{BASE}/tv/{tmdb_id}/season/{season}?api_key={TMDB_API_KEY}&language=pt-BR"
+    try:
+        req = urllib.request.Request(url, headers={'User-Agent': 'Pirataflix/1.0'})
+        with urllib.request.urlopen(req, timeout=10) as r:
+            data = json.loads(r.read())
+    except Exception as e:
+        print(f"   ⚠️ Erro ao buscar schedule TMDB id={tmdb_id} s{season}: {e}")
+        return []
+
+    episodes = []
+    for ep in data.get('episodes', []):
+        still = (IMG + ep['still_path']) if ep.get('still_path') else ''
+        guests = []
+        for g in ep.get('guest_stars', [])[:4]:
+            photo = ('https://image.tmdb.org/t/p/w185' + g['profile_path']) if g.get('profile_path') else ''
+            guests.append({'name': g.get('name',''), 'character': g.get('character',''), 'photo': photo})
+        episodes.append({
+            'ep_number':   ep.get('episode_number', 0),
+            'air_date':    ep.get('air_date', ''),       # 'YYYY-MM-DD'
+            'overview':    ep.get('overview', ''),
+            'still':       still,
+            'guest_stars': guests,
+        })
+        _time.sleep(0.05)
+    return episodes
+
+def enrich_episode_schedule(output):
+    """Enriquece episódios de títulos configurados com schedule do TMDB."""
+    import time as _time
+    from datetime import datetime, timezone, timedelta
+
+    if not TMDB_API_KEY or TMDB_API_KEY == 'SUA_CHAVE_AQUI':
+        return
+
+    # Data/hora atual em Brasília (UTC-3)
+    now_br = datetime.now(timezone.utc) - timedelta(hours=3)
+
+    for category in ['novelas', 'series']:
+        for item in output.get(category, []):
+            item_slug = slugify(item.get('title', ''))
+            tmdb_id   = EPISODE_SCHEDULE_TITLES.get(item_slug)
+            if not tmdb_id:
+                continue
+
+            print(f"\n📅 Buscando agenda de episódios: {item['title']} (TMDB {tmdb_id})")
+
+            # Determinar temporadas existentes
+            seasons = item.get('seasons', [])
+            if not seasons and item.get('episodes'):
+                seasons = [{'season': 1, 'episodes': item['episodes']}]
+
+            for season_obj in seasons:
+                season_num    = season_obj.get('season', 1)
+                season_eps    = season_obj.get('episodes', [])
+                tmdb_eps      = fetch_episode_schedule(tmdb_id, season_num)
+                tmdb_by_num   = {e['ep_number']: e for e in tmdb_eps}
+
+                enriched = []
+                for local_ep in season_eps:
+                    ep_num  = local_ep.get('episode', len(enriched) + 1)
+                    tmdb_ep = tmdb_by_num.get(ep_num, {})
+                    ep      = dict(local_ep)
+
+                    air_date_str = tmdb_ep.get('air_date', '')
+                    locked       = False
+                    release_dt   = None
+
+                    if air_date_str:
+                        try:
+                            air_dt     = datetime.strptime(air_date_str, '%Y-%m-%d')
+                            # Libera às 05:00 BRT do dia do air_date (00:00 + 5h do servidor)
+                            release_dt = datetime(
+                                air_dt.year, air_dt.month, air_dt.day,
+                                tzinfo=timezone(timedelta(hours=-3))
+                            ) + timedelta(hours=SCHEDULE_RELEASE_DELAY_HOURS)
+                            if now_br < release_dt:
+                                locked = True
+                        except Exception:
+                            pass
+
+                    ep['air_date']    = air_date_str
+                    ep['overview']    = tmdb_ep.get('overview', '')
+                    ep['still']       = tmdb_ep.get('still', '')
+                    ep['guest_stars'] = tmdb_ep.get('guest_stars', [])
+                    ep['locked']      = locked
+                    if locked and release_dt:
+                        ep['release_iso'] = release_dt.strftime('%Y-%m-%dT%H:%M:%S')
+                    enriched.append(ep)
+                    print(f"   {'🔒' if locked else '✅'} Ep {ep_num:03d} | {air_date_str} | {'BLOQUEADO' if locked else 'disponível'}")
+
+                # Inserir episódios futuros que ainda não têm URL no m3u
+                ep_nums_locais = {e.get('episode', 0) for e in season_eps}
+                for ep_num, tmdb_ep in sorted(tmdb_by_num.items()):
+                    if ep_num in ep_nums_locais:
+                        continue
+                    air_date_str = tmdb_ep.get('air_date', '')
+                    locked       = True
+                    release_dt   = None
+                    if air_date_str:
+                        try:
+                            air_dt     = datetime.strptime(air_date_str, '%Y-%m-%d')
+                            release_dt = datetime(
+                                air_dt.year, air_dt.month, air_dt.day,
+                                tzinfo=timezone(timedelta(hours=-3))
+                            ) + timedelta(hours=SCHEDULE_RELEASE_DELAY_HOURS)
+                            if now_br >= release_dt:
+                                locked = False  # deveria estar disponível mas não tem URL ainda
+                        except Exception:
+                            pass
+                    ep = {
+                        'title':       f'Capítulo {ep_num}',
+                        'url':         '',
+                        'episode':     ep_num,
+                        'air_date':    air_date_str,
+                        'overview':    tmdb_ep.get('overview', ''),
+                        'still':       tmdb_ep.get('still', ''),
+                        'guest_stars': tmdb_ep.get('guest_stars', []),
+                        'locked':      locked,
+                    }
+                    if release_dt:
+                        ep['release_iso'] = release_dt.strftime('%Y-%m-%dT%H:%M:%S')
+                    enriched.append(ep)
+                    print(f"   🔒 Ep {ep_num:03d} | {air_date_str} | SEM URL — futuro")
+
+                enriched.sort(key=lambda e: e.get('episode', 0))
+                season_obj['episodes'] = enriched
+
+            # Atualizar item.episodes se temporada única
+            if len(seasons) == 1:
+                item['episodes'] = seasons[0]['episodes']
+            item['has_schedule'] = True
+            _time.sleep(0.3)
+
+    print("✅ Agenda de episódios concluída!")
+
+
     """Mapeia grupos M3U em inglês para categorias PT-BR."""
     g = (raw_group or '').strip()
     mapping = {
