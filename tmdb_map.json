@@ -26,5 +26,7 @@
   "lilo_stitch_filme":             { "tmdb_id": 11544,   "type": "movie" },
   "spy_x_family_filme":            { "tmdb_id": 1064213, "type": "movie" },
   "cabocla":                         { "tmdb_id": 42928, "type": "tv" }
+  "historias_novo_testamento":     { "tmdb_id": 212879, "type": "tv" }
 }
+
 
