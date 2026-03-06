@@ -2,8 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 consolidar_data.py — Consolida filmes, séries e canais de TV no data.json
-Mantém categorias de TV separadas por grupo
-Versão corrigida com mapeamento completo de grupos
+VERSÃO CORRIGIDA - Força a inclusão de canais de TV
 """
 
 import json
@@ -17,488 +16,198 @@ print("=" * 60)
 # Categorias base do VOD
 CATS_VOD = ['filmes', 'series', 'novelas', 'animes', 'infantil']
 
-# Categorias de TV que viram subcategorias no data.json
-# Chave: nome PT-BR (igual ao normalizar_grupo), Valor: chave no data.json
+# Categorias de TV
 TV_CATS = {
-    '📺 Geral':           'tv_geral',
-    '📰 Notícias':        'tv_noticias',
-    '⚽ Esportes':        'tv_esportes',
-    '🎬 Filmes':          'tv_filmes',
-    '📺 Séries':          'tv_series',
-    '💖 Novelas':         'tv_novelas',      # NOVA CATEGORIA
-    '👻 Animes':          'tv_animes',       # NOVA CATEGORIA
-    '🎭 Entretenimento':  'tv_entretenimento',
-    '✝️ Religioso':       'tv_religioso',
-    '🧸 Infantil':        'tv_infantil',
-    '🎵 Música':          'tv_musica',
-    '📚 Educação':        'tv_educacao',
-    '🎥 Documentário':    'tv_documentario',
-    '🌿 Natureza':        'tv_natureza',
-    '🎨 Animação':        'tv_animacao',
-    '😂 Comédia':         'tv_comedia',
-    '🎨 Cultura':         'tv_cultura',
-    '🏛️ Legislativo':     'tv_legislativo',
-    '🔬 Ciência':         'tv_ciencia',
-    '🛍️ Shopping':        'tv_shopping',
-    '🍳 Culinária':       'tv_culinaria',
-    '✈️ Viagem':          'tv_viagem',
-    '🚗 Automóvel':       'tv_automovel',
-    '💅 Lifestyle':       'tv_lifestyle',
-    '🎞️ Clássicos':       'tv_classicos',
-    '👨‍👩‍👧 Família':        'tv_familia',
-    '💼 Negócios':        'tv_negocios',
-    '🌦️ Clima':           'tv_clima',
+    '📺 Geral': 'tv_geral',
+    '📰 Notícias': 'tv_noticias',
+    '⚽ Esportes': 'tv_esportes',
+    '🎬 Filmes': 'tv_filmes',
+    '📺 Séries': 'tv_series',
+    '💖 Novelas': 'tv_novelas',
+    '👻 Animes': 'tv_animes',
+    '🎭 Entretenimento': 'tv_entretenimento',
+    '✝️ Religioso': 'tv_religioso',
+    '🧸 Infantil': 'tv_infantil',
+    '🎵 Música': 'tv_musica',
+    '📚 Educação': 'tv_educacao',
+    '🎥 Documentário': 'tv_documentario',
+    '🌿 Natureza': 'tv_natureza',
+    '🎨 Animação': 'tv_animacao',
+    '😂 Comédia': 'tv_comedia',
+    '🎨 Cultura': 'tv_cultura',
+    '🏛️ Legislativo': 'tv_legislativo',
+    '🔬 Ciência': 'tv_ciencia',
+    '🛍️ Shopping': 'tv_shopping',
+    '🍳 Culinária': 'tv_culinaria',
+    '✈️ Viagem': 'tv_viagem',
+    '🚗 Automóvel': 'tv_automovel',
+    '💅 Lifestyle': 'tv_lifestyle',
+    '🎞️ Clássicos': 'tv_classicos',
+    '👨‍👩‍👧 Família': 'tv_familia',
+    '💼 Negócios': 'tv_negocios',
+    '🌦️ Clima': 'tv_clima',
 }
 
-# Chave legada que o site usa para TV ao vivo
 TV_LEGACY_KEY = 'tv'
 
-
 def carregar_json(path: Path) -> list | dict:
-    """Carrega arquivo JSON com tratamento de erro"""
     if path.exists():
         try:
             return json.loads(path.read_text(encoding='utf-8'))
-        except json.JSONDecodeError as e:
-            print(f"   ⚠️ Erro de sintaxe JSON em {path.name}: {e}")
-            return [] if path.suffix == '.json' and 'channels' in path.name else {}
         except Exception as e:
             print(f"   ⚠️ Erro ao ler {path.name}: {e}")
-            return [] if path.suffix == '.json' and 'channels' in path.name else {}
-    return [] if path.suffix == '.json' and 'channels' in path.name else {}
+    return [] if 'channels' in str(path) else {}
 
-
-def coletar_urls_vod(data: dict) -> set[str]:
-    """Coleta todas as URLs de filmes e séries"""
-    urls = set()
-    for cat in CATS_VOD:
-        for item in data.get(cat, []):
-            for ep in item.get('episodes', []):
-                if ep.get('url'): urls.add(ep['url'])
-            for season in item.get('seasons', []):
-                for ep in season.get('episodes', []):
-                    if ep.get('url'): urls.add(ep['url'])
-    return urls
-
-
-def coletar_urls_tv(data: dict) -> set[str]:
-    """Coleta todas as URLs de canais de TV"""
-    urls = set()
-    # Chave legada
-    for canal in data.get(TV_LEGACY_KEY, []):
-        _extrair_urls_canal(canal, urls)
-    # Subcategorias
-    for chave in TV_CATS.values():
-        for canal in data.get(chave, []):
-            _extrair_urls_canal(canal, urls)
-    return urls
-
-
-def _extrair_urls_canal(canal: dict, urls: set):
-    """Extrai URLs de um canal"""
-    if canal.get('url'):     
-        urls.add(canal['url'])
-    for ep in canal.get('episodes', []):
-        if ep.get('url'):    
-            urls.add(ep['url'])
-
-
-def normalizar_grupo_completo(raw: str) -> str:
-    """
-    Versão unificada da normalização de grupos
-    Converte qualquer string de grupo para o formato PT-BR com emojis
-    """
-    if not raw or not isinstance(raw, str):
+def normalizar_grupo_simples(raw: str) -> str:
+    """Versão simplificada para não perder canais"""
+    if not raw:
         return '📺 Geral'
     
-    # Mapeamento completo de termos para categorias
-    MAP_COMPLETO = {
-        # Geral / Indefinido
-        'geral': '📺 Geral',
-        'general': '📺 Geral',
-        'undefined': '📺 Geral',
-        'variados': '📺 Geral',
-        'outros': '📺 Geral',
-        
-        # Entretenimento
-        'entretenimento': '🎭 Entretenimento',
-        'entertainment': '🎭 Entretenimento',
-        'variedades': '🎭 Entretenimento',
-        'variety': '🎭 Entretenimento',
-        'show': '🎭 Entretenimento',
-        'talkshow': '🎭 Entretenimento',
-        
-        # Filmes
-        'filmes': '🎬 Filmes',
-        'movies': '🎬 Filmes',
-        'filme': '🎬 Filmes',
-        'movie': '🎬 Filmes',
-        'cinema': '🎬 Filmes',
-        
-        # Séries
-        'series': '📺 Séries',
-        'serie': '📺 Séries',
-        
-        # Novelas
-        'novelas': '💖 Novelas',
-        'novela': '💖 Novelas',
-        'soap': '💖 Novelas',
-        'telenovela': '💖 Novelas',
-        
-        # Animes
-        'animes': '👻 Animes',
-        'anime': '👻 Animes',
-        'animação japonesa': '👻 Animes',
-        'japanese animation': '👻 Animes',
-        
-        # Esportes
-        'esportes': '⚽ Esportes',
-        'sports': '⚽ Esportes',
-        'futebol': '⚽ Esportes',
-        'sport': '⚽ Esportes',
-        'basquete': '⚽ Esportes',
-        'volei': '⚽ Esportes',
-        
-        # Notícias
-        'notícias': '📰 Notícias',
-        'noticias': '📰 Notícias',
-        'news': '📰 Notícias',
-        'jornalismo': '📰 Notícias',
-        'jornal': '📰 Notícias',
-        
-        # Religioso
-        'religioso': '✝️ Religioso',
-        'religiosa': '✝️ Religioso',
-        'religious': '✝️ Religioso',
-        'católica': '✝️ Religioso',
-        'evangélica': '✝️ Religioso',
-        'catolico': '✝️ Religioso',
-        'evangelico': '✝️ Religioso',
-        'gospel': '✝️ Religioso',
-        'cristão': '✝️ Religioso',
-        'crista': '✝️ Religioso',
-        
-        # Educação
-        'educação': '📚 Educação',
-        'educacao': '📚 Educação',
-        'education': '📚 Educação',
-        'educativo': '📚 Educação',
-        'educativa': '📚 Educação',
-        'aprendizado': '📚 Educação',
-        
-        # Música
-        'música': '🎵 Música',
-        'musica': '🎵 Música',
-        'music': '🎵 Música',
-        'musical': '🎵 Música',
-        'videoclipes': '🎵 Música',
-        'clipes': '🎵 Música',
-        
-        # Cultura
-        'cultura': '🎨 Cultura',
-        'culture': '🎨 Cultura',
-        'artes': '🎨 Cultura',
-        'arte': '🎨 Cultura',
-        
-        # Documentário
-        'documentário': '🎥 Documentário',
-        'documentario': '🎥 Documentário',
-        'documentary': '🎥 Documentário',
-        'doc': '🎥 Documentário',
-        
-        # Natureza
-        'natureza': '🌿 Natureza',
-        'nature': '🌿 Natureza',
-        'outdoor': '🌿 Natureza',
-        'animais': '🌿 Natureza',
-        'animais selvagens': '🌿 Natureza',
-        'wildlife': '🌿 Natureza',
-        
-        # Legislativo
-        'legislativo': '🏛️ Legislativo',
-        'legislative': '🏛️ Legislativo',
-        'política': '🏛️ Legislativo',
-        'politica': '🏛️ Legislativo',
-        'camara': '🏛️ Legislativo',
-        'senado': '🏛️ Legislativo',
-        'governo': '🏛️ Legislativo',
-        'publico': '🏛️ Legislativo',
-        
-        # Comédia
-        'comédia': '😂 Comédia',
-        'comedia': '😂 Comédia',
-        'comedy': '😂 Comédia',
-        'humor': '😂 Comédia',
-        'stand-up': '😂 Comédia',
-        
-        # Shopping
-        'shopping': '🛍️ Shopping',
-        'shop': '🛍️ Shopping',
-        'compras': '🛍️ Shopping',
-        'vendas': '🛍️ Shopping',
-        'telecompras': '🛍️ Shopping',
-        
-        # Culinária
-        'culinária': '🍳 Culinária',
-        'culinaria': '🍳 Culinária',
-        'cooking': '🍳 Culinária',
-        'gastronomia': '🍳 Culinária',
-        'receitas': '🍳 Culinária',
-        'comida': '🍳 Culinária',
-        
-        # Viagem
-        'viagem': '✈️ Viagem',
-        'travel': '✈️ Viagem',
-        'turismo': '✈️ Viagem',
-        'viagens': '✈️ Viagem',
-        
-        # Automóvel
-        'automóvel': '🚗 Automóvel',
-        'automovel': '🚗 Automóvel',
-        'auto': '🚗 Automóvel',
-        'carros': '🚗 Automóvel',
-        'motors': '🚗 Automóvel',
-        'automotive': '🚗 Automóvel',
-        
-        # Ciência
-        'ciência': '🔬 Ciência',
-        'ciencia': '🔬 Ciência',
-        'science': '🔬 Ciência',
-        'cientifico': '🔬 Ciência',
-        'tecnologia': '🔬 Ciência',
-        'tech': '🔬 Ciência',
-        
-        # Clássicos
-        'clássicos': '🎞️ Clássicos',
-        'classicos': '🎞️ Clássicos',
-        'classic': '🎞️ Clássicos',
-        'retro': '🎞️ Clássicos',
-        
-        # Família
-        'família': '👨‍👩‍👧 Família',
-        'familia': '👨‍👩‍👧 Família',
-        'family': '👨‍👩‍👧 Família',
-        'familiar': '👨‍👩‍👧 Família',
-        
-        # Negócios
-        'negócios': '💼 Negócios',
-        'negocios': '💼 Negócios',
-        'business': '💼 Negócios',
-        'economia': '💼 Negócios',
-        'finanças': '💼 Negócios',
-        
-        # Clima
-        'clima': '🌦️ Clima',
-        'weather': '🌦️ Clima',
-        'tempo': '🌦️ Clima',
-        'meteorologia': '🌦️ Clima',
-        
-        # Lifestyle
-        'lifestyle': '💅 Lifestyle',
-        'estilo': '💅 Lifestyle',
-        'moda': '💅 Lifestyle',
-        'beleza': '💅 Lifestyle',
-        
-        # Animação
-        'animação': '🎨 Animação',
-        'animacao': '🎨 Animação',
-        'animation': '🎨 Animação',
-        'desenhos': '🎨 Animação',
-        
-        # Infantil
-        'infantil': '🧸 Infantil',
-        'kids': '🧸 Infantil',
-        'infantojuvenil': '🧸 Infantil',
-        'crianças': '🧸 Infantil',
-        'criancas': '🧸 Infantil',
-    }
+    raw_lower = raw.lower()
     
-    texto = raw.lower().strip()
+    # Mapeamento direto
+    if 'notícia' in raw_lower or 'news' in raw_lower:
+        return '📰 Notícias'
+    if 'esporte' in raw_lower or 'sport' in raw_lower:
+        return '⚽ Esportes'
+    if 'filme' in raw_lower or 'movie' in raw_lower:
+        return '🎬 Filmes'
+    if 'série' in raw_lower or 'series' in raw_lower:
+        return '📺 Séries'
+    if 'novela' in raw_lower or 'soap' in raw_lower:
+        return '💖 Novelas'
+    if 'anime' in raw_lower:
+        return '👻 Animes'
+    if 'infantil' in raw_lower or 'kids' in raw_lower:
+        return '🧸 Infantil'
+    if 'religioso' in raw_lower or 'religious' in raw_lower:
+        return '✝️ Religioso'
+    if 'educação' in raw_lower or 'education' in raw_lower:
+        return '📚 Educação'
+    if 'música' in raw_lower or 'music' in raw_lower:
+        return '🎵 Música'
+    if 'cultura' in raw_lower:
+        return '🎨 Cultura'
+    if 'documentário' in raw_lower or 'documentary' in raw_lower:
+        return '🎥 Documentário'
+    if 'natureza' in raw_lower or 'nature' in raw_lower:
+        return '🌿 Natureza'
+    if 'animação' in raw_lower or 'animation' in raw_lower:
+        return '🎨 Animação'
+    if 'comédia' in raw_lower or 'comedy' in raw_lower:
+        return '😂 Comédia'
+    if 'legislativo' in raw_lower:
+        return '🏛️ Legislativo'
+    if 'shopping' in raw_lower:
+        return '🛍️ Shopping'
+    if 'culinária' in raw_lower or 'cooking' in raw_lower:
+        return '🍳 Culinária'
+    if 'viagem' in raw_lower or 'travel' in raw_lower:
+        return '✈️ Viagem'
+    if 'automóvel' in raw_lower or 'auto' in raw_lower:
+        return '🚗 Automóvel'
+    if 'ciência' in raw_lower or 'science' in raw_lower:
+        return '🔬 Ciência'
+    if 'clássico' in raw_lower or 'classic' in raw_lower:
+        return '🎞️ Clássicos'
+    if 'família' in raw_lower or 'family' in raw_lower:
+        return '👨‍👩‍👧 Família'
+    if 'negócio' in raw_lower or 'business' in raw_lower:
+        return '💼 Negócios'
+    if 'clima' in raw_lower or 'weather' in raw_lower:
+        return '🌦️ Clima'
+    if 'lifestyle' in raw_lower:
+        return '💅 Lifestyle'
     
-    # Verificar correspondências exatas primeiro
-    if texto in MAP_COMPLETO:
-        return MAP_COMPLETO[texto]
-    
-    # Verificar se o texto começa com algum termo do mapa
-    for termo, categoria in MAP_COMPLETO.items():
-        if texto.startswith(termo) or termo in texto:
-            return categoria
-    
-    # Verificar grupos compostos separados por ; | ,
-    separadores = [';', '|', ',', '/', '-']
-    for sep in separadores:
-        if sep in texto:
-            partes = [p.strip() for p in texto.split(sep)]
-            for parte in partes:
-                if parte in MAP_COMPLETO:
-                    return MAP_COMPLETO[parte]
-                for termo, categoria in MAP_COMPLETO.items():
-                    if termo in parte:
-                        return categoria
-    
-    # Verificar palavras-chave especiais para canais brasileiros
-    if 'globo' in texto or 'sbt' in texto or 'record' in texto or 'band' in texto:
-        return '📺 Geral'
-    
-    # Se não encontrou nada
     return '📺 Geral'
 
-
 def consolidate():
-    """Função principal de consolidação"""
-    base_dir      = Path(__file__).parent
-    web_dir       = base_dir / 'web'
-    data_json     = web_dir / 'data.json'
+    base_dir = Path(__file__).parent
+    web_dir = base_dir / 'web'
+    data_json = web_dir / 'data.json'
     channels_json = web_dir / 'channels.json'
 
-    # ── Criar diretório web se não existir ────────────────────
     web_dir.mkdir(exist_ok=True)
 
-    # ── Carregar data.json existente ──────────────────────────
+    # Carregar dados existentes
     data_antigo = carregar_json(data_json)
     if not isinstance(data_antigo, dict):
         data_antigo = {}
 
-    # Estrutura base
-    data: dict = {cat: data_antigo.get(cat, []) for cat in CATS_VOD}
+    # Inicializar estrutura
+    data = {}
+    for cat in CATS_VOD:
+        data[cat] = data_antigo.get(cat, [])
     
-    # Preservar TV legada e subcategorias existentes
-    data[TV_LEGACY_KEY] = data_antigo.get(TV_LEGACY_KEY, [])
+    # Inicializar categorias de TV
+    data[TV_LEGACY_KEY] = []
     for chave in TV_CATS.values():
-        data[chave] = data_antigo.get(chave, [])
+        data[chave] = []
 
-    total_vod = sum(len(data[c]) for c in CATS_VOD)
-    print(f"📂 VOD carregado: {total_vod} itens")
+    print(f"📂 VOD carregado: {sum(len(data[c]) for c in CATS_VOD)} itens")
 
-    # ── Carregar channels.json ────────────────────────────────
-    tv_channels: list[dict] = carregar_json(channels_json)
+    # Carregar channels.json
+    tv_channels = carregar_json(channels_json)
     if not isinstance(tv_channels, list):
         tv_channels = []
     print(f"📺 channels.json: {len(tv_channels)} canais")
 
-    # ── Coletar URLs já existentes ────────────────────────────
-    urls_vod = coletar_urls_vod(data)
-    urls_tv  = coletar_urls_tv(data)
-    print(f"🔍 URLs VOD: {len(urls_vod)} | URLs TV existentes: {len(urls_tv)}")
-
-    # ── Separar canais por categoria ──────────────────────────
-    # Inicializar acumuladores por subcategoria
-    por_cat: dict[str, list] = {chave: [] for chave in TV_CATS.values()}
-    legado: list = []
-
-    novos = dup_vod = dup_tv = 0
+    # Distribuir canais por categoria
+    canais_por_categoria = {chave: [] for chave in TV_CATS.values()}
+    canais_sem_categoria = []
+    urls_processadas = set()
 
     for canal in tv_channels:
         url = canal.get('url', '')
-        if not url:
+        if not url or url in urls_processadas:
             continue
             
-        # Verificar duplicatas
-        if url in urls_vod:
-            dup_vod += 1
-            continue
-        if url in urls_tv:
-            dup_tv += 1
-            continue
-
-        # Normalizar grupo usando a função completa
-        grupo_raw = canal.get('group', canal.get('group_raw', ''))
-        grupo_pt = normalizar_grupo_completo(grupo_raw)
+        urls_processadas.add(url)
         
-        # Garantir que o grupo está no formato correto
+        # Normalizar grupo
+        grupo_raw = canal.get('group', canal.get('group_raw', ''))
+        grupo_pt = normalizar_grupo_simples(grupo_raw)
         canal['group'] = grupo_pt
         
-        # Se o canal já tem group_raw, manter para referência
-        if 'group_raw' not in canal and grupo_raw:
-            canal['group_raw'] = grupo_raw
-
-        # Verificar se o grupo está mapeado em TV_CATS
+        # Adicionar à categoria correspondente
         chave_cat = TV_CATS.get(grupo_pt)
         if chave_cat:
-            por_cat[chave_cat].append(canal)
+            canais_por_categoria[chave_cat].append(canal)
         else:
-            # Se não tem categoria específica, vai para legado
-            legado.append(canal)
-            print(f"   ⚠️ Grupo não mapeado: '{grupo_pt}' (raw: '{grupo_raw}')")
+            canais_sem_categoria.append(canal)
 
-        urls_tv.add(url)
-        novos += 1
-
-    # ── Mesclar com existentes (sem duplicar) ─────────────────
-    for chave, lista in por_cat.items():
-        # Evitar duplicatas dentro da mesma categoria
-        urls_existentes = {c['url'] for c in data.get(chave, []) if c.get('url')}
-        for canal in lista:
-            if canal['url'] not in urls_existentes:
-                data[chave].append(canal)
-                urls_existentes.add(canal['url'])
-
-    # Legado vai para tv_geral
-    urls_geral = {c['url'] for c in data.get('tv_geral', []) if c.get('url')}
-    for canal in legado:
-        if canal['url'] not in urls_geral:
-            data['tv_geral'].append(canal)
-            urls_geral.add(canal['url'])
-
-    # ── Criar lista unificada para TV_LEGACY_KEY ──────────────
-    todos_tv: list[dict] = []
-    seen_urls: set[str] = set()
+    # Adicionar aos dados finais
+    for chave, canais in canais_por_categoria.items():
+        data[chave] = canais
+        print(f"   📺 {chave}: {len(canais)} canais")
     
-    # Primeiro adicionar canais das categorias específicas
-    for chave in TV_CATS.values():
-        for canal in data.get(chave, []):
-            u = canal.get('url', '')
-            if u and u not in seen_urls:
-                seen_urls.add(u)
-                # Garantir que o grupo está presente
-                if 'group' not in canal:
-                    canal['group'] = '📺 Geral'
-                todos_tv.append(canal)
-    
-    # Depois adicionar legado (tv_geral) se não estiver já incluído
-    for canal in data.get('tv_geral', []):
-        u = canal.get('url', '')
-        if u and u not in seen_urls:
-            seen_urls.add(u)
-            if 'group' not in canal:
-                canal['group'] = '📺 Geral'
-            todos_tv.append(canal)
-    
-    data[TV_LEGACY_KEY] = todos_tv
+    data['tv_geral'].extend(canais_sem_categoria)
+    print(f"   📺 tv_geral: {len(canais_sem_categoria)} canais")
 
-    # ── Remover categorias vazias ─────────────────────────────
+    # Criar lista unificada para compatibilidade
+    todos_canais = []
+    urls_unificadas = set()
+    
     for chave in list(TV_CATS.values()) + ['tv_geral']:
-        if chave in data and not data[chave]:
-            del data[chave]
+        for canal in data.get(chave, []):
+            url = canal.get('url', '')
+            if url and url not in urls_unificadas:
+                urls_unificadas.add(url)
+                todos_canais.append(canal)
+    
+    data[TV_LEGACY_KEY] = todos_canais
 
-    # ── Resultado ─────────────────────────────────────────────
     print(f"\n📊 RESULTADO:")
-    print(f"   ✅ Novos canais adicionados: {novos}")
-    print(f"   ⚠️  Duplicados com VOD: {dup_vod}")
-    print(f"   ⚠️  Duplicados na TV: {dup_tv}")
-    
-    print(f"\n📺 CANAIS POR CATEGORIA:")
-    categorias_com_canais = []
-    for grupo_pt, chave in sorted(TV_CATS.items()):
-        qtd = len(data.get(chave, []))
-        if qtd:
-            print(f"   {grupo_pt}: {qtd}")
-            categorias_com_canais.append((grupo_pt, qtd))
-    
-    qtd_geral = len(data.get('tv_geral', []))
-    if qtd_geral:
-        print(f"   📺 Geral (não categorizados): {qtd_geral}")
-    
-    print(f"   Total TV (unificado): {len(data[TV_LEGACY_KEY])}")
+    print(f"   ✅ Total canais processados: {len(urls_processadas)}")
+    print(f"   📺 Total na TV unificada: {len(todos_canais)}")
 
-    # ── Salvar ────────────────────────────────────────────────
+    # Salvar
     try:
         data_json.write_text(
-            json.dumps(data, ensure_ascii=False, indent=2), 
+            json.dumps(data, ensure_ascii=False, indent=2),
             encoding='utf-8'
         )
         
-        # Calcular total de itens
         total_itens = sum(len(data.get(c, [])) for c in CATS_VOD)
         total_itens += len(data.get(TV_LEGACY_KEY, []))
         
@@ -508,7 +217,6 @@ def consolidate():
         
     except Exception as e:
         print(f"\n❌ Erro ao salvar data.json: {e}")
-
 
 if __name__ == '__main__':
     consolidate()
