@@ -76,7 +76,7 @@
     {
       "id": "princesa_mononoke_dublado",
       "title": "Princesa Mononoke Dublado",
-      "poster": "https://image.tmdb.org/t/p/w500/7EadOwHmyQgOnlghRiWBygNtnjl.jpg",
+      "poster": "/Pirataflix/assets/Capas/princesa mononoke.jpg",
       "episodes": [
         {
           "title": "Princesa Mononoke (Dublado) Ep 01",
@@ -84,63 +84,7 @@
           "episode": 1
         }
       ],
-      "type": "movie",
-      "local_poster": "/Pirataflix/assets/Capas/princesa mononoke.jpg",
-      "posters": [
-        "https://image.tmdb.org/t/p/w500/7EadOwHmyQgOnlghRiWBygNtnjl.jpg",
-        "https://image.tmdb.org/t/p/w500/cMYCDADoLKLbB83g4WnJegaZimC.jpg",
-        "https://image.tmdb.org/t/p/w500/kifrm5sCZNMa1GsSAANg040Hay5.jpg",
-        "https://image.tmdb.org/t/p/w500/pdtzEreKvKAlqa2YEBaGwiA45V8.jpg",
-        "https://image.tmdb.org/t/p/w500/9RLmX3ATWzDRgXAa3PTrmBt4OU2.jpg",
-        "https://image.tmdb.org/t/p/w500/jHWmNr7m544fJ8eItsfNk8fs2Ed.jpg",
-        "https://image.tmdb.org/t/p/w500/69xbqgRjota6pe5YKZnWvYHE3WG.jpg"
-      ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/gl0jzn4BupSbL2qMVeqrjKkF9Js.jpg",
-      "overview": "Um príncipe infectado por uma doença sabe que irá morrer, a menos que encontre a cura. Sendo a sua última esperança, segue para o leste e, durante o caminho, encontra animais da floresta lutando contra a sua exploração, liderados pela princesa Mononoke.",
-      "year": "1997",
-      "rating": 8.3,
-      "cast": [
-        {
-          "name": "松田洋治",
-          "character": "Ashitaka (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/42WeHwCymsgJh3mLAyknCdRcef8.jpg"
-        },
-        {
-          "name": "石田ゆり子",
-          "character": "San / Kaya (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/cADoBCi603Chz2IaxcwWT2mNwCf.jpg"
-        },
-        {
-          "name": "田中裕子",
-          "character": "Eboshi Gozen (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/fMonAnp3OQ16FmGy5SGhEJRcuVI.jpg"
-        },
-        {
-          "name": "小林薫",
-          "character": "Jikobo (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/zpnQ8L6SpyT8pI5vgbpKqXyMYoj.jpg"
-        },
-        {
-          "name": "西村雅彥",
-          "character": "Kouroku (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/qk7nO5RWFr2f3VeJNpf7sgsbsXR.jpg"
-        },
-        {
-          "name": "Tsunehiko Kamijô",
-          "character": "Gonza (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/v2poQi0qYEWdTaMf2pVTWmcdwZp.jpg"
-        },
-        {
-          "name": "美輪明宏",
-          "character": "Mrs. Moro (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/pCfBeLJigKnUWOAy7hsdBR7K0UV.jpg"
-        },
-        {
-          "name": "森光子",
-          "character": "Mrs. Hii (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/x9LpdNvssR13XRyP5P3jwrQmg4s.jpg"
-        }
-      ]
+      "type": "movie"
     },
     {
       "id": "ainda_estou_aqui",
@@ -12768,6 +12712,11 @@
       "backdrop": "https://image.tmdb.org/t/p/w1280/60U3KQzCcNKOdk1ADnQO8xYZaXv.jpg",
       "overview": "Ambientada em Vila da Mata, em 1918, a trama gira em torno da disputa por terras entre dois coronéis e do amor entre Luís Jerônimo e a cabocla Zuca, noiva do destemido Tobias.",
       "year": "2004",
+      "genres": [
+        "Novela",
+        "Drama",
+        "Comédia"
+      ],
       "rating": 7.2,
       "cast": [
         {
@@ -27503,6 +27452,10 @@
       "backdrop": "https://image.tmdb.org/t/p/w1280/bsnzAWs9MITfYgsQ8jp1SQ3AyHI.jpg",
       "overview": "Lígia, Gerluce e Joélly — três mulheres de diferentes gerações da mesma família — cujas vidas são marcadas por um ponto em comum: todas enfrentaram uma gravidez na adolescência e foram abandonadas por seus respectivos companheiros.",
       "year": "2025",
+      "genres": [
+        "Novela",
+        "Drama"
+      ],
       "rating": 7.8,
       "cast": [
         {
@@ -40282,7 +40235,7 @@
     {
       "id": "naruto_shippuden",
       "title": "Naruto Shippuden",
-      "poster": "/Pirataflix/assets/Capas/naruto_shippuden.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/nRJmByfK9XdtOY73VArcN8KpKVs.jpg",
       "seasons": [
         {
           "season": 1,
@@ -45283,12 +45236,73 @@
         }
       ],
       "type": "series",
-      "category": "animes"
+      "category": "animes",
+      "local_poster": "/Pirataflix/assets/Capas/naruto_shippuden.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/nRJmByfK9XdtOY73VArcN8KpKVs.jpg",
+        "https://image.tmdb.org/t/p/w500/71mASgFgSiPl9QUexVH8BubU0lD.jpg",
+        "https://image.tmdb.org/t/p/w500/kV27j3Nz4d5z8u6mN3EJw9RiLg2.jpg",
+        "https://image.tmdb.org/t/p/w500/hKkY4Hf5tDKCwVzzeo42vp1RxPQ.jpg",
+        "https://image.tmdb.org/t/p/w500/rmibYhCE5Ie2l4PIU1rrhDv2qAb.jpg",
+        "https://image.tmdb.org/t/p/w500/uYDKFLf8N5Vz2hkJfhn1voLBMOY.jpg",
+        "https://image.tmdb.org/t/p/w500/m6nUbk6R7hHDS3hjHatrA6hxv8T.jpg"
+      ],
+      "backdrop": "https://image.tmdb.org/t/p/w1280/z0YhJvomqedHF85bplUJEotkN5l.jpg",
+      "overview": "Naruto Shippuden ocorre 2 anos e meio após Naruto ter deixado a vila para treinar com Jiraiya. Após seu retorno, Naruto descobre que seus amigos  shinobi's o superaram na classificação, e ele caiu para trás. No  entanto, com apenas 6 meses para resgatar Sasuke, Naruto tem de  enfrentar inimigos ainda mais perigosos. O plano da Akatsuki se revela  lentamente e os perigos surgem mais do que nunca!",
+      "year": "2007",
+      "genres": [
+        "Animação",
+        "Ação & Aventura",
+        "Sci-Fi & Fantasia"
+      ],
+      "rating": 8.5,
+      "cast": [
+        {
+          "name": "竹内順子",
+          "character": "Naruto Uzumaki (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/zNjrblq3xS1idpCsmSl5P5eTon7.jpg"
+        },
+        {
+          "name": "Noriaki Sugiyama",
+          "character": "Sasuke Uchiha (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/szqqQ8T0gzuSxjU2rnWcthsaSJT.jpg"
+        },
+        {
+          "name": "中村千絵",
+          "character": "Sakura Haruno (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/evB6vKUbm0CKgBcgikPeFXdwd29.jpg"
+        },
+        {
+          "name": "Kazuhiko Inoue",
+          "character": "Kakashi Hatake (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/3BpYtYRiLAmTNbCm2LXlXnkMRit.jpg"
+        },
+        {
+          "name": "Showtaro Morikubo",
+          "character": "Shikamaru Nara (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/mSTqMg8fls9pJO3Qwe47nawJ4vX.jpg"
+        },
+        {
+          "name": "Satoshi Hino",
+          "character": "Sai (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/8ZJIiwIVF2zDyyFr7oXewj0eEuu.jpg"
+        },
+        {
+          "name": "Akira Ishida",
+          "character": "Gaara (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/jnW2Gn2NlR2uwOCeyOuzypnTmkH.jpg"
+        },
+        {
+          "name": "石川英郎",
+          "character": "Itachi Uchiha (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/gEjEDNGt3CHsyzFQdNqewZVbh0.jpg"
+        }
+      ]
     },
     {
       "id": "dragon_ball_gt",
       "title": "Dragon Ball Gt",
-      "poster": "/Pirataflix/assets/Capas/dragon_ball_gt.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/kxXsfMR9lQr3Gem6aDFbvmyRyqd.jpg",
       "seasons": [
         {
           "season": 1,
@@ -45940,54 +45954,72 @@
       ],
       "type": "series",
       "category": "animes",
-      "year": "2007",
+      "local_poster": "/Pirataflix/assets/Capas/dragon_ball_gt.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/kxXsfMR9lQr3Gem6aDFbvmyRyqd.jpg",
+        "https://image.tmdb.org/t/p/w500/rLHhDpv6rrhuzBjNzaMRNv2fng.jpg",
+        "https://image.tmdb.org/t/p/w500/l1nOGq0e689viyziACqSSFLuwbg.jpg",
+        "https://image.tmdb.org/t/p/w500/621kwKHFsA0JYnHPmvzwdRw0dbr.jpg",
+        "https://image.tmdb.org/t/p/w500/mwXRvTce1TxgkNBAq6O4jeVrZD1.jpg",
+        "https://image.tmdb.org/t/p/w500/fzH3xKyIvLnq1paTrjecNyWQmRh.jpg",
+        "https://image.tmdb.org/t/p/w500/5Fv5dOR0PP6THmBLztv2hbKaDqm.jpg"
+      ],
+      "backdrop": "https://image.tmdb.org/t/p/w1280/4XfjLB6mGUx9z42oFJ8IaDmkdv3.jpg",
+      "overview": "A história se passa 10 anos após o final da saga Z, Goku reencontra vilões de sua infância, que estão roubando as esferas do dragão que estão no templo do kamisama, goku descobre o que eles estão tramando e por um engano, pilaf deseja que Shenlong transforme Goku em criança, agora as esferas se espalharam pelo universo e goku e seus amigos tem apenas um ano para encontrar todas, antes que a terra exploda. Eles embarcam numa aventura em busca das 7 esferas do dragão.",
+      "year": "1996",
+      "genres": [
+        "Animação",
+        "Ação & Aventura",
+        "Sci-Fi & Fantasia"
+      ],
+      "rating": 7.7,
       "cast": [
         {
-          "name": "Heart Evangelista",
-          "character": "Carissa De Leon / Alicia Puyat-Roldan",
-          "profile": "https://image.tmdb.org/t/p/w185/pVrC6TStPyB1brwfmBl92SVd0Ds.jpg"
+          "name": "Masako Nozawa",
+          "character": "Son Gohan / Son Goku / Son Goten (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/jxbXdejmPoiKnNoQz7Dkb80qC26.jpg"
         },
         {
-          "name": "Geoff Eigenmann",
-          "character": "Mendez Pedrosa",
-          "profile": "https://image.tmdb.org/t/p/w185/5XZCjwDCt1FnqoPLafA7ScpvIVz.jpg"
+          "name": "皆口裕子",
+          "character": "Pan / Videl (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/bEv0ho89VNgWkCCmT2GdNjMAuvZ.jpg"
         },
         {
-          "name": "TJ Trinidad",
-          "character": "Dr. Hugo Roldan",
-          "profile": "https://image.tmdb.org/t/p/w185/glAVrRekOZw9Sy6nsX2kCcKBzX7.jpg"
+          "name": "草尾毅",
+          "character": "Trunks (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/gDiYLUdl9zXXJmhE0bAuB1Jm3FJ.jpg"
         },
         {
-          "name": "Katya Santos",
-          "character": "Morita Ponce",
-          "profile": "https://image.tmdb.org/t/p/w185/oOEHYLbJKZRvluYzqFJwrFpJ1pc.jpg"
+          "name": "島田敏",
+          "character": "Son Para / Sūgorō (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/5jJgMyFAP3GgQtFxP2qe0oE4LHk.jpg"
         },
         {
-          "name": "Cherry Pie Picache",
-          "character": "Rose Ponce",
-          "profile": "https://image.tmdb.org/t/p/w185/4OCSQQ0iMggxKrfhd0NPMxbBssQ.jpg"
+          "name": "Atsushi Kisaichi",
+          "character": "Oob (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/ArLyOaCrGpeTUnzLJTEaGOhvUdU.jpg"
         },
         {
-          "name": "Eva Darren",
-          "character": "Aling Azon",
-          "profile": "https://image.tmdb.org/t/p/w185/lCa2fFT8G0RyuOBngLnLmtWyy7N.jpg"
+          "name": "Ryo Horikawa",
+          "character": "Vegeta (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/vZ69WQJfR5D2xow5FkddduRjq6c.jpg"
         },
         {
-          "name": "Shamaine Buencamino",
-          "character": "Timotea De Leon",
-          "profile": "https://image.tmdb.org/t/p/w185/azNT9bphgxVw5FGd8DeXIgJ875I.jpg"
+          "name": "Toshio Furukawa",
+          "character": "Piccolo (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/zZjO0NxIbEhYW3507gXVnvWeRkG.jpg"
         },
         {
-          "name": "Marissa Delgado",
-          "character": "Kapitana",
-          "profile": "https://image.tmdb.org/t/p/w185/1dPSNIeTwuwR7TQQYO26PkojRLv.jpg"
+          "name": "Miki Ito",
+          "character": "Android 18 (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/6osSzjWq1MZ0XznG3UZHpB81lJF.jpg"
         }
       ]
     },
     {
       "id": "boku_no_hero_academia_dublado",
       "title": "Boku No Hero Academia (dublado)",
-      "poster": "https://image.tmdb.org/t/p/w500/cfESQ8y8oNAeLuRbs7NkW7Qjwhy.jpg",
+      "poster": "/Pirataflix/assets/Capas/boku_no_hero_academia_dublado.jpg",
       "seasons": [
         {
           "season": 1,
@@ -47688,28 +47720,7 @@
         }
       ],
       "type": "series",
-      "category": "animes",
-      "local_poster": "/Pirataflix/assets/Capas/boku_no_hero_academia_dublado.jpg",
-      "posters": [
-        "https://image.tmdb.org/t/p/w500/cfESQ8y8oNAeLuRbs7NkW7Qjwhy.jpg",
-        "https://image.tmdb.org/t/p/w500/peJKJn9rEzQP9FViI3suQloTIo7.jpg",
-        "https://image.tmdb.org/t/p/w500/sAMUjKXOswJ9StXtXVh2XKpPFa2.jpg",
-        "https://image.tmdb.org/t/p/w500/phuYuzqWW9ru8EA3HVjE9W2Rr3M.jpg",
-        "https://image.tmdb.org/t/p/w500/2Wyp24DxrnXaWAyTJClBPjLgIuI.jpg",
-        "https://image.tmdb.org/t/p/w500/sSELYoag7grJVTnEFWfTvWXCjGT.jpg",
-        "https://image.tmdb.org/t/p/w500/wlz8Pqr23JQUGYA8DSZ8byV0rce.jpg"
-      ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/6wSSyRNeF9vBJ1h29nuw3vG9hZI.jpg",
-      "overview": "Por toda a sua vida, Izuku sonhou ser um herói — um objetivo ambicioso para qualquer um, mas especialmente desafiador para um garoto sem superpoderes. Isso mesmo: em um mundo onde 80% da população tem algum tipo de Dom especial, Izuku teve a má sorte de nascer completamente normal. Mas isso não vai impedi-lo de se matricular em uma das academias de herois mais prestigiosas do mundo.",
-      "year": "2016",
-      "rating": 8.6,
-      "cast": [
-        {
-          "name": "Daiki Yamashita",
-          "character": "Izuku Midoriya (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/rQNdJdZewk7VGP16ZNbpfJ9ZeMd.jpg"
-        }
-      ]
+      "category": "animes"
     },
     {
       "id": "sousou_no_frieren",
@@ -47901,6 +47912,11 @@
       "backdrop": "https://image.tmdb.org/t/p/w1280/rBOnrVlck7BIlGeWVlzYiZeg4l2.jpg",
       "overview": "Décadas depois de derrotar o Rei Demônio, a elfa Frieren vai ao funeral de um amigo e começa uma jornada de autoconhecimento.",
       "year": "2023",
+      "genres": [
+        "Animação",
+        "Ação & Aventura",
+        "Drama"
+      ],
       "rating": 8.8,
       "cast": [
         {
@@ -48852,6 +48868,11 @@
       "backdrop": "https://image.tmdb.org/t/p/w1280/rqbCbjB19amtOtFQbb3K2lgm2zv.jpg",
       "overview": "Titãs estão quase exterminando a raça humana. Porém alguns estão dispostos a formar um exército de ataque aos seres assassinos. O jovem Eren, após ver sua mãe ser devorada por um titã, decide que não deixará nenhum deles vivo e buscará sua vingança completa.",
       "year": "2013",
+      "genres": [
+        "Animação",
+        "Sci-Fi & Fantasia",
+        "Ação & Aventura"
+      ],
       "rating": 8.7,
       "cast": [
         {
@@ -49122,6 +49143,11 @@
       "backdrop": "https://image.tmdb.org/t/p/w1280/lysUnU6V0VfcthDbviuVlIqgHOR.jpg",
       "overview": "Há décadas, as nações de Ostania e Westalis promovem uma guerra fria sem fim. Para investigar os movimentos do presidente de um importante partido político, Westalis mobiliza Twilight, seu melhor agente, a montar uma família falsa e se infiltrar nos eventos sociais promovidos pela escola do filho do político. Mas por um acaso do destino, Twilight acaba adotando Anya, uma jovem com poderes telepáticos, e se \"casando\" com Yor, uma assassina profissional! Sem saberem das identidades uns dos outros, este trio incomum vai embarcar em aventuras cheias de surpresas para garantir a paz mundial.",
       "year": "2022",
+      "genres": [
+        "Animação",
+        "Ação & Aventura",
+        "Comédia"
+      ],
       "rating": 8.5,
       "cast": [
         {
@@ -49149,7 +49175,7 @@
     {
       "id": "dandandan",
       "title": "Dandandan",
-      "poster": "https://image.tmdb.org/t/p/w500/bXtD4o9SwXhVKtQQfO8cvKm95yT.jpg",
+      "poster": "/Pirataflix/assets/Capas/dandandan.jpg",
       "seasons": [
         {
           "season": 1,
@@ -49283,20 +49309,12 @@
         }
       ],
       "type": "series",
-      "category": "animes",
-      "local_poster": "/Pirataflix/assets/Capas/dandandan.jpg",
-      "posters": [
-        "https://image.tmdb.org/t/p/w500/bXtD4o9SwXhVKtQQfO8cvKm95yT.jpg",
-        "https://image.tmdb.org/t/p/w500/iYulZX0ifFz9ZeKpDwAN44ADKyz.jpg",
-        "https://image.tmdb.org/t/p/w500/mp4gx0u08Io4zoTykcC3AD9TXgu.jpg"
-      ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/4oxNZt2tEQStdiFVsUTCRmFbg4M.jpg",
-      "year": "2024"
+      "category": "animes"
     },
     {
       "id": "one_piece",
       "title": "One Piece",
-      "poster": "https://image.tmdb.org/t/p/w500/9ltisibeD4gzqjM1AzmQwCdyirQ.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/aesLt9fsKSA6KCgGxA60VVxjtLk.jpg",
       "seasons": [
         {
           "season": 1,
@@ -57280,58 +57298,51 @@
       "category": "animes",
       "local_poster": "/Pirataflix/assets/Capas/one_piece.jpg",
       "posters": [
-        "https://image.tmdb.org/t/p/w500/9ltisibeD4gzqjM1AzmQwCdyirQ.jpg",
-        "https://image.tmdb.org/t/p/w500/uiIB9ctqZFbfRXXimtpmZb5dusi.jpg",
-        "https://image.tmdb.org/t/p/w500/cMD9Ygz11zjJzAovURpO75Qg7rT.jpg",
-        "https://image.tmdb.org/t/p/w500/e3NBGiAifW9Xt8xD5tpARskjccO.jpg",
-        "https://image.tmdb.org/t/p/w500/uStT6g4khexdKPyaiosp0fj3zEz.jpg",
-        "https://image.tmdb.org/t/p/w500/gJI77i79KnRuc9mGPKADPZWAE8O.jpg",
-        "https://image.tmdb.org/t/p/w500/6vTQZmHplnfc10hEXv1PsTiCz54.jpg"
+        "https://image.tmdb.org/t/p/w500/aesLt9fsKSA6KCgGxA60VVxjtLk.jpg",
+        "https://image.tmdb.org/t/p/w500/rVX05xRKS5JhEYQFObCi4lAnZT4.jpg",
+        "https://image.tmdb.org/t/p/w500/lXl3ZbY5TksOdt6eYgdyg6vsnFW.jpg",
+        "https://image.tmdb.org/t/p/w500/yEtSBgugED8XyhqjcKgF6j2zDMf.jpg",
+        "https://image.tmdb.org/t/p/w500/mik4odDfAXQrabV4VA4X4IDtBXF.jpg",
+        "https://image.tmdb.org/t/p/w500/g2JdWEbm1FOQMDCff06luyiozGn.jpg"
       ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/2rmK7mnchw9Xr3XdiTFSxTTLXqv.jpg",
-      "overview": "Houve um homem que conquistou tudo aquilo que o mundo tinha a oferecer, o lendário Rei dos Piratas, Gold Roger. Capturado e condenado à execução pelo Governo Mundial, suas últimas palavras lançaram legiões aos mares. \"Meu tesouro? Se quiserem, podem pegá-lo. Procurem-no! Ele contém tudo que este mundo pode oferecer!\". Foi a revelação do maior tesouro, o One Piece, cobiçado por homens de todo o mundo, sonhando com fama e riqueza imensuráveis... Assim começou a Grande Era dos Piratas!",
-      "year": "1999",
-      "rating": 8.7,
+      "backdrop": "https://image.tmdb.org/t/p/w1280/qD211Hb5XwFxrszzBBe5EUYJerh.jpg",
+      "overview": "O jovem pirata Monkey D. Luffy veste o chapéu de palha e, com sua tripulação atrapalhada, zarpa em uma jornada épica nesta adaptação em live-action do popular mangá.",
+      "year": "2023",
+      "genres": [
+        "Ação & Aventura",
+        "Sci-Fi & Fantasia"
+      ],
+      "rating": 8.1,
       "cast": [
         {
-          "name": "Mayumi Tanaka",
-          "character": "Monkey D. Luffy (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/by4t1tYtEXsfbFj9TvOjozBmQla.jpg"
+          "name": "Iñaki Godoy",
+          "character": "Monkey D. Luffy",
+          "profile": "https://image.tmdb.org/t/p/w185/93Z6KuFpqoDD1xN5kuswYQzbWe6.jpg"
         },
         {
-          "name": "Kazuya Nakai",
-          "character": "Roronoa Zoro (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/cOHSa0FBrG3u9P6g8A56sInkvod.jpg"
+          "name": "Emily Rudd",
+          "character": "Nami",
+          "profile": "https://image.tmdb.org/t/p/w185/y23GTdDPcryBVtSWjY9q2O9nzwV.jpg"
         },
         {
-          "name": "Akemi Okamura",
-          "character": "Nami (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/qEwVfsrA23SCzRZMSlghw2sHctQ.jpg"
+          "name": "新田真剣佑",
+          "character": "Roronoa Zoro",
+          "profile": "https://image.tmdb.org/t/p/w185/bacZSFemex2oUexBccrbIksGxGz.jpg"
         },
         {
-          "name": "Kappei Yamaguchi",
-          "character": "Usopp (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/mJyxKRZxLv9D7LH5KcNSkjSKYOB.jpg"
+          "name": "Jacob Gibson",
+          "character": "Usopp",
+          "profile": "https://image.tmdb.org/t/p/w185/c6uP24uFslQ3hnEgqPkojAbYuZn.jpg"
         },
         {
-          "name": "Hiroaki Hirata",
-          "character": "Sanji (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/mMWEdlssJm3TVuXW4Wb7pQeX20Z.jpg"
+          "name": "Jeff Ward",
+          "character": "Buggy the Clown",
+          "profile": "https://image.tmdb.org/t/p/w185/55Vj8VuALnptdxjJYCH6EdPyR0j.jpg"
         },
         {
-          "name": "Ikue Otani",
-          "character": "Tony Tony Chopper (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/my8LBLQ4MsK4hRz1PAATIqtieaI.jpg"
-        },
-        {
-          "name": "Yuriko Yamaguchi",
-          "character": "Nico Robin (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/vNKJ6IykLF2uwGBe8AtjDe8LZ3.jpg"
-        },
-        {
-          "name": "Kazuki Yao",
-          "character": "Franky (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/kjETB1FaDaGozGjdq4Hu1UjrQDf.jpg"
+          "name": "Taz Skylar",
+          "character": "Sanji",
+          "profile": "https://image.tmdb.org/t/p/w185/3EXMkfzB8EXn3ZJPJvK6OfPWLfz.jpg"
         }
       ]
     },
@@ -58893,6 +58904,11 @@
       "backdrop": "https://image.tmdb.org/t/p/w1280/ydf1CeiBLfdxiyNTpskM0802TKl.jpg",
       "overview": "Dragon Ball Z (ドラゴンボールZ, Doragon Bōru Zetto) foi uma série de animação produzida pela Toei Animation. Baseada na série de mangá Dragon Ball escrita por Akira Toriyama, Dragon Ball Z corresponde aos volumes 17 ao 42 do mangá que foi publicado na revista, Weekly Shonen Jump, de 1988 a 1995, e estreou no Japão na Fuji TV em 26 de abril de 1989, e terminou dia 31 de janeiro de 1996 com o total de 291 episódios, antes de ser dublada em diversos territórios ao redor do mundo, incluindo Estados Unidos, Austrália, Europa, Índia e Brasil. A série já foi exibida em mais de 80 países ao redor do mundo.",
       "year": "1989",
+      "genres": [
+        "Animação",
+        "Sci-Fi & Fantasia",
+        "Ação & Aventura"
+      ],
       "rating": 8.4,
       "cast": [
         {
@@ -59332,12 +59348,17 @@
       "backdrop": "https://image.tmdb.org/t/p/w1280/gmECX1DvFgdUPjtio2zaL8BPYPu.jpg",
       "overview": "Sofrimento, arrependimento, vergonha: os sentimentos negativos dos humanos tornam-se Maldições, causando terríveis acidentes que podem levar até mesmo à morte. E pra piorar, Maldições só podem ser exorcizadas por outras Maldições. Certo dia, para salvar amigos que estavam sendo atacados por Maldições, Yuji Itadori engole o dedo do Ryomen-Sukuna, absorvendo sua Maldição. Ele então decide se matricular no Colégio Técnico de Feitiçaria de Tóquio, uma organização que combate as Maldições... e assim começa a heróica lenda do garoto que tornou-se uma Maldição para exorcizar uma Maldição.",
       "year": "2020",
+      "genres": [
+        "Animação",
+        "Ação & Aventura",
+        "Sci-Fi & Fantasia"
+      ],
       "rating": 8.6
     },
     {
       "id": "dragon_ball_daima",
       "title": "Dragon Ball Daima",
-      "poster": "/Pirataflix/assets/Capas/dragon_ball_daima.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/qlLJvJO8rsltmnWWbKgT13hP90I.jpg",
       "seasons": [
         {
           "season": 1,
@@ -59549,7 +59570,24 @@
       ],
       "type": "series",
       "category": "animes",
-      "year": "2024"
+      "local_poster": "/Pirataflix/assets/Capas/dragon_ball_daima.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/8tpLyWAmYhe1D0d62gV3CWFDu2f.jpg",
+        "https://image.tmdb.org/t/p/w500/qlLJvJO8rsltmnWWbKgT13hP90I.jpg",
+        "https://image.tmdb.org/t/p/w500/73rGI735Tzf5ohSBh4rE06uyVyD.jpg",
+        "https://image.tmdb.org/t/p/w500/lMULbSFZNXUC87MqOZQ4SSV9DXI.jpg",
+        "https://image.tmdb.org/t/p/w500/svAf41ljs9p0TOAVD8gNvOCOd77.jpg",
+        "https://image.tmdb.org/t/p/w500/cIDPZMGsiVHkHA6HPJmEmGcgyyw.jpg"
+      ],
+      "backdrop": "https://image.tmdb.org/t/p/w1280/oUmWLyeko3kYdUr8DBLIsxwcugl.jpg",
+      "overview": "Goku e companhia viviam pacificamente quando de repente ficaram pequenos por causa de uma conspiração! Quando eles descobrem que o motivo para isso pode estar no \"Mundo dos Demônios\", um misterioso Majin chamado Glorio aparece para eles.",
+      "year": "2024",
+      "genres": [
+        "Animação",
+        "Ação & Aventura",
+        "Comédia"
+      ],
+      "rating": 8.2
     },
     {
       "id": "monster_rancher",
@@ -62335,6 +62373,11 @@
       "backdrop": "https://image.tmdb.org/t/p/w1280/mpsYIytXhDXjI9yYC1Fp1S3PxsS.jpg",
       "overview": "Momentos antes do nascimento de Naruto Uzumaki, um enorme demônio conhecido como o Kyuubi, a Raposa de Nove Caudas, atacou o vilarejo da folha oculta Konoha, causando destruição. Para pôr fim à devastação de Kyuubi, o líder da aldeia, o quarto Hokage, sacrificou sua vida e selou o monstruoso animal dentro do recém-nascido Naruto. Agora, Naruto é um ninja hiperativo e cabeça dura que ainda vivem em Konoha. Evitado pelos demais habitantes por causa da Kyuubi dentro dele, Naruto se esforça para encontrar seu lugar na aldeia, enquanto o seu ardente desejo de se tornar o Hokage de Konoha o leva a conhecer alguns grandes novos amigos, e também alguns inimigos mortais.",
       "year": "2002",
+      "genres": [
+        "Animação",
+        "Ação & Aventura",
+        "Sci-Fi & Fantasia"
+      ],
       "rating": 8.4,
       "cast": [
         {
@@ -62535,6 +62578,11 @@
       "backdrop": "https://image.tmdb.org/t/p/w1280/dfmPbyeZZSz3bekeESvMJaH91gS.jpg",
       "overview": "Uma animação de super-heróis para adultos e conta a história de Mark Grayson, de 17 anos, um cara como qualquer outro de sua idade, exceto que seu pai é o super-herói mais poderoso do planeta, Omni-Man. Porém, à medida que Mark desenvolve seus próprios poderes, ele descobre que o legado de seu pai pode não ser tão heroico quanto parece.",
       "year": "2021",
+      "genres": [
+        "Animação",
+        "Sci-Fi & Fantasia",
+        "Ação & Aventura"
+      ],
       "rating": 8.6,
       "cast": [
         {
