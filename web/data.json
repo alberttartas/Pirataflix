@@ -587,7 +587,7 @@
         "Drama",
         "Crime"
       ],
-      "rating": 7.2,
+      "rating": 7.3,
       "cast": [
         {
           "name": "Felix Kramer",
@@ -1872,7 +1872,13 @@
               "air_date": "2026-03-02",
               "overview": "Beja toma uma decisão por causa da promessa feita por Antônio a seu pai. A extorsão de Botelhinho traz consequências para Honorato e Carminha.",
               "still": "https://image.tmdb.org/t/p/w400/yoQMwVwPu9Kxpca3xlGhP31gL85.jpg",
-              "guest_stars": [],
+              "guest_stars": [
+                {
+                  "name": "Joana Solnado",
+                  "character": "Maria Bernarda Alves",
+                  "photo": "https://image.tmdb.org/t/p/w185/k798mk0GXr0XLE6NPjPneww7UOJ.jpg"
+                }
+              ],
               "locked": false
             },
             {
@@ -2543,7 +2549,13 @@
           "air_date": "2026-03-02",
           "overview": "Beja toma uma decisão por causa da promessa feita por Antônio a seu pai. A extorsão de Botelhinho traz consequências para Honorato e Carminha.",
           "still": "https://image.tmdb.org/t/p/w400/yoQMwVwPu9Kxpca3xlGhP31gL85.jpg",
-          "guest_stars": [],
+          "guest_stars": [
+            {
+              "name": "Joana Solnado",
+              "character": "Maria Bernarda Alves",
+              "photo": "https://image.tmdb.org/t/p/w185/k798mk0GXr0XLE6NPjPneww7UOJ.jpg"
+            }
+          ],
           "locked": false
         },
         {
@@ -24721,7 +24733,7 @@
               "url": "https://cdn-novflix.com/storage1/TGRACAS/TGRACAS-116.mp4",
               "episode": 116,
               "air_date": "2026-03-03",
-              "overview": "",
+              "overview": "Joélly pede ajuda a Gerluce para trazer a filha de volta. Paulinho avisa que Raul pode ter de responder pelo crime na Justiça. Samira avisa a Edilberto que deixará o Brasil por um tempo. Juquinha mostra a Paulinho a foto da máscara de Clóvis, igual à usada pelos ladrões que levaram As Três Graças. Jairo avisa que o Juiz autorizou a prisão de Samira. Ferette confronta Samira.",
               "still": "https://image.tmdb.org/t/p/w400/7HwksSxpriGAhdb54uUYy5jvG2W.jpg",
               "guest_stars": [],
               "locked": false
@@ -24731,8 +24743,8 @@
               "url": "https://cdn-novflix.com/storage1/TGRACAS/TGRACAS-117.mp4",
               "episode": 117,
               "air_date": "2026-03-04",
-              "overview": "",
-              "still": "https://image.tmdb.org/t/p/w400/m5YkLC998mZpAT4j4Z7QWqTvjug.jpg",
+              "overview": "Ferette aconselha Samira a deixar o país. Angélico registra quando Viviane afirma que não quer mais saber de Leonardo. Jairo orienta Paulinho a tomar cuidado com Ferette. Ferette manda Vicente tirar a vida de Paulinho. Raul pede ajuda ao pastor Albérico. Arminda encontra o passaporte europeu de Samira, e fica à espera da mulher pronta para matá-la.",
+              "still": "https://image.tmdb.org/t/p/w400/xkysJlYb2FZF9YKUhWLwCo52Fod.jpg",
               "guest_stars": [],
               "locked": false
             },
@@ -24741,8 +24753,8 @@
               "url": "https://cdn-novflix.com/storage1/TGRACAS/TGRACAS-118.mp4",
               "episode": 118,
               "air_date": "2026-03-05",
-              "overview": "",
-              "still": "",
+              "overview": "Samira pede para Raul encontrá-la no aeroporto, e ameaça Joélly. Gerluce avisa a Paulinho que Samira conseguiu fugir do país. Kasper pede ajuda a Stephane para obter As Três Graças. Zenilda orienta Rogério e sua equipe a fazer a denúncia anônima da Casa da Farinha.",
+              "still": "https://image.tmdb.org/t/p/w400/y6OmiLKSo2vkb13BrXzBdhFvdao.jpg",
               "guest_stars": [],
               "locked": false
             },
@@ -24754,8 +24766,7 @@
               "overview": "",
               "still": "",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-03-06T21:00:00"
+              "locked": false
             },
             {
               "title": "TGRACAS-120",
@@ -26843,7 +26854,7 @@
           "url": "https://cdn-novflix.com/storage1/TGRACAS/TGRACAS-116.mp4",
           "episode": 116,
           "air_date": "2026-03-03",
-          "overview": "",
+          "overview": "Joélly pede ajuda a Gerluce para trazer a filha de volta. Paulinho avisa que Raul pode ter de responder pelo crime na Justiça. Samira avisa a Edilberto que deixará o Brasil por um tempo. Juquinha mostra a Paulinho a foto da máscara de Clóvis, igual à usada pelos ladrões que levaram As Três Graças. Jairo avisa que o Juiz autorizou a prisão de Samira. Ferette confronta Samira.",
           "still": "https://image.tmdb.org/t/p/w400/7HwksSxpriGAhdb54uUYy5jvG2W.jpg",
           "guest_stars": [],
           "locked": false
@@ -26853,8 +26864,8 @@
           "url": "https://cdn-novflix.com/storage1/TGRACAS/TGRACAS-117.mp4",
           "episode": 117,
           "air_date": "2026-03-04",
-          "overview": "",
-          "still": "https://image.tmdb.org/t/p/w400/m5YkLC998mZpAT4j4Z7QWqTvjug.jpg",
+          "overview": "Ferette aconselha Samira a deixar o país. Angélico registra quando Viviane afirma que não quer mais saber de Leonardo. Jairo orienta Paulinho a tomar cuidado com Ferette. Ferette manda Vicente tirar a vida de Paulinho. Raul pede ajuda ao pastor Albérico. Arminda encontra o passaporte europeu de Samira, e fica à espera da mulher pronta para matá-la.",
+          "still": "https://image.tmdb.org/t/p/w400/xkysJlYb2FZF9YKUhWLwCo52Fod.jpg",
           "guest_stars": [],
           "locked": false
         },
@@ -26863,8 +26874,8 @@
           "url": "https://cdn-novflix.com/storage1/TGRACAS/TGRACAS-118.mp4",
           "episode": 118,
           "air_date": "2026-03-05",
-          "overview": "",
-          "still": "",
+          "overview": "Samira pede para Raul encontrá-la no aeroporto, e ameaça Joélly. Gerluce avisa a Paulinho que Samira conseguiu fugir do país. Kasper pede ajuda a Stephane para obter As Três Graças. Zenilda orienta Rogério e sua equipe a fazer a denúncia anônima da Casa da Farinha.",
+          "still": "https://image.tmdb.org/t/p/w400/y6OmiLKSo2vkb13BrXzBdhFvdao.jpg",
           "guest_stars": [],
           "locked": false
         },
@@ -26876,8 +26887,7 @@
           "overview": "",
           "still": "",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-03-06T21:00:00"
+          "locked": false
         },
         {
           "title": "TGRACAS-120",
@@ -47765,7 +47775,7 @@
     {
       "id": "sousou_no_frieren",
       "title": "Sousou No Frieren",
-      "poster": "https://image.tmdb.org/t/p/w500/d9IuDqPWoUYukwblQhqV00jlCzZ.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/qykTIEJQF8cunKD0CKOqab15wns.jpg",
       "seasons": [
         {
           "season": 1,
@@ -47942,6 +47952,7 @@
       "category": "animes",
       "local_poster": "/Pirataflix/assets/Capas/sousou_no_frieren.jpg",
       "posters": [
+        "https://image.tmdb.org/t/p/w500/qykTIEJQF8cunKD0CKOqab15wns.jpg",
         "https://image.tmdb.org/t/p/w500/dqZENchTd7lp5zht7BdlqM7RBhD.jpg",
         "https://image.tmdb.org/t/p/w500/2IGeAnIbToKIalm624kd0OVD7Iv.jpg",
         "https://image.tmdb.org/t/p/w500/cHhJzdUGcEBq6av4wr9jsIvUITH.jpg",
@@ -62839,7 +62850,7 @@
         "https://image.tmdb.org/t/p/w500/k5UALlcA0EnviaCUn2wMjOWYiOO.jpg",
         "https://image.tmdb.org/t/p/w500/sQIKgdjJRIKC88xZLTHaEfYWd1e.jpg"
       ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/ukzJIPKTTSUzdr7jQoGKdrvZGk7.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/jIArNHIekrCSVgdMbKPAXpPY03Y.jpg",
       "overview": "Uma animação sobre uma típica família dos Estados Unidos. Homer é o pai de família nada saudável ou inteligente, que adora beber cerveja. Marge é a esposa e mãe de família dedicada. Bart é o filho de 10 anos, que não leva a escola a sério e tem orgulho disso. Lisa é a garota de 8 anos, um gênio não apreciado. E Maggie é a bebê que não larga a chupeta.",
       "year": "1989",
       "genres": [
