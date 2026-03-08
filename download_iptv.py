@@ -11,6 +11,7 @@ import os
 import shutil
 from pathlib import Path
 from datetime import datetime
+from utils import normalize_tv_group
 
 print("=" * 60)
 print("🚀 DOWNLOAD IPTV — CATEGORIAS SEPARADAS")
@@ -37,73 +38,7 @@ FONTES = [
 # =============================================================
 # MAPEAMENTO DE GRUPOS → CATEGORIAS PT-BR
 # =============================================================
-GROUP_MAP = {
-    # Geral / indefinido
-    'undefined':          '📺 Geral',
-    'general':            '📺 Geral',
-    '':                   '📺 Geral',
 
-    # Entretenimento
-    'entertainment':      '🎭 Entretenimento',
-    'comedy':             '😂 Comédia',
-    'culture':            '🎨 Cultura',
-    'lifestyle':          '💅 Lifestyle',
-    'classic':            '🎞️ Clássicos',
-    'family':             '👨‍👩‍👧 Família',
-
-    # Filmes / Séries
-    'movies':             '🎬 Filmes',
-    'series':             '📺 Séries',
-    'animation':          '🎨 Animação',
-
-    # Notícias
-    'news':               '📰 Notícias',
-    'legislative':        '🏛️ Legislativo',
-    'business':           '💼 Negócios',
-    'weather':            '🌦️ Clima',
-
-    # Esportes
-    'sports':             '⚽ Esportes',
-
-    # Religião / Educação
-    'religious':          '✝️ Religioso',
-    'education':          '📚 Educação',
-    'science':            '🔬 Ciência',
-
-    # Música
-    'music':              '🎵 Música',
-
-    # Documentário / Natureza
-    'documentary':        '🎥 Documentário',
-    'outdoor':            '🌿 Natureza',
-
-    # Infantil
-    'kids':               '🧸 Infantil',
-
-    # Outros
-    'shop':               '🛍️ Shopping',
-    'cooking':            '🍳 Culinária',
-    'travel':             '✈️ Viagem',
-    'auto':               '🚗 Automóvel',
-
-    # Grupos do Ramys
-    'lame | brazil vip':  '📺 Geral',
-    'brazil':             '📺 Geral',
-    'brasil':             '📺 Geral',
-}
-
-def normalizar_grupo(raw: str) -> str:
-    """Converte group-title em categoria PT-BR."""
-    g = (raw or '').strip()
-    # Tentar lookup direto (case-insensitive, pegar parte antes de ';' ou '|')
-    chave = g.lower().split(';')[0].split('|')[0].strip()
-    if chave in GROUP_MAP:
-        return GROUP_MAP[chave]
-    # Tentar substring
-    for k, v in GROUP_MAP.items():
-        if k and k in chave:
-            return v
-    return '📺 Geral'
 
 
 def testar_conexao():
@@ -203,7 +138,7 @@ def salvar_por_categoria(canais: list[dict], pasta_tv: Path):
     # Agrupar
     por_cat: dict[str, list] = {}
     for c in canais:
-        cat = normalizar_grupo(c['group_raw'])
+        cat = normalize_tv_group(c['group_raw'])
         por_cat.setdefault(cat, []).append(c)
 
     # Limpar arquivos antigos de categoria
@@ -247,7 +182,7 @@ def criar_channels_json(canais: list[dict], web_dir: Path):
     for c in canais:
         if c['url'] in urls_existentes:
             continue
-        cat = normalizar_grupo(c['group_raw'])
+        cat = normalize_tv_group(c['group_raw'])
         canal_id = c['tvg_id'] or re.sub(r'[^\w]', '_', c['title'].lower()).strip('_')
         existentes.append({
             'id':       canal_id,
@@ -317,9 +252,9 @@ def main():
     criar_channels_json(unicos, web_dir)
 
     print("\n" + "=" * 60)
-    cats_resumo = {normalizar_grupo(c['group_raw']): 0 for c in unicos}
+    cats_resumo = {normalize_tv_group(c['group_raw']): 0 for c in unicos}
     for c in unicos:
-        cats_resumo[normalizar_grupo(c['group_raw'])] += 1
+        cats_resumo[normalize_tv_group(c['group_raw'])] += 1
     for cat, qtd in sorted(cats_resumo.items(), key=lambda x: -x[1]):
         print(f"   {cat}: {qtd}")
     print("=" * 60)

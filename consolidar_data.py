@@ -8,6 +8,7 @@ VERSÃO CORRIGIDA - Força a inclusão de canais de TV
 import json
 import re
 from pathlib import Path
+from utils import normalize_tv_group
 
 print("=" * 60)
 print("🔄 CONSOLIDANDO DADOS NO DATA.JSON")
@@ -58,10 +59,6 @@ def carregar_json(path: Path) -> list | dict:
             print(f"   ⚠️ Erro ao ler {path.name}: {e}")
     return [] if 'channels' in str(path) else {}
 
-def normalizar_grupo_simples(raw: str) -> str:
-    """Versão simplificada para não perder canais"""
-    if not raw:
-        return '📺 Geral'
     
     raw_lower = raw.lower()
     
@@ -166,7 +163,7 @@ def consolidate():
         
         # Normalizar grupo
         grupo_raw = canal.get('group', canal.get('group_raw', ''))
-        grupo_pt = normalizar_grupo_simples(grupo_raw)
+        grupo_pt = normalize_tv_group(grupo_raw)
         canal['group'] = grupo_pt
         
         # Adicionar à categoria correspondente
