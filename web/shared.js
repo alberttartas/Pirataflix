@@ -656,16 +656,7 @@ function injectFooter() {
     document.body.appendChild(footer);
 }
 
-// =====================
-// CSS INJETADO
-// =====================
-(function() {
-    if (document.getElementById('pirataflix-shared-css')) return;
-    const s = document.createElement('style');
-    s.id = 'pirataflix-shared-css';
-    s.textContent = `/* (mesmo CSS do seu arquivo original) */`;
-    document.head.appendChild(s);
-})();
+// CSS do modal → web/style.css (classes pf-*)
 
 // =====================
 // INIT
