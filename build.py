@@ -1042,3 +1042,6 @@ def generate_html_with_correct_paths(base_dir, data):
 
 
 
+
+if __name__ == '__main__':
+    build_vod_with_direct_capas()
