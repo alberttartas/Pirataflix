@@ -7,28 +7,177 @@
       "search": "nome alternativo para busca (opcional se tmdb_id informado)"
     }
   },
-
-  "one_piece":                     { "tmdb_id": 37854,   "type": "tv" },
-  "boku_no_hero_academia_dublado": { "tmdb_id": 65930,   "type": "tv" },
-  "naruto_shippuden":              { "tmdb_id": 1535,    "type": "tv" },
-  "naruto_classico":               { "tmdb_id": 46260,   "type": "tv" },
-  "dragon_ball_z":                 { "tmdb_id": 12971,   "type": "tv" },
-  "dragon_ball_gt":                { "tmdb_id": 12979,   "type": "tv" },
-  "dragon_ball_daima":             { "tmdb_id": 246641,  "type": "tv" },
-  "jujutsu_kaisen":                { "tmdb_id": 95479,   "type": "tv" },
-  "sousou_no_frieren":             { "tmdb_id": 209867,  "type": "tv" },
-  "dandandan":                     { "tmdb_id": 246804,  "type": "tv" },
-  "spy_x_family":                  { "tmdb_id": 120089,  "type": "tv" },
-  "ataque_dos_titans":             { "tmdb_id": 1429,    "type": "tv" },
-  "invincible":                     { "tmdb_id": 95557,   "type": "tv" },
-  "tres_gracas":                   { "tmdb_id": 289996,  "type": "tv" },
-  "princesa_mononoke_dublado":     { "tmdb_id": 128,     "type": "movie" },
-  "lilo_stitch_live_action":         { "tmdb_id": 552524,   "type": "movie" },
-  "spy_x_family_codigo_branco":     { "tmdb_id": 1062807, "type": "movie" },
-  "cabocla":                         { "tmdb_id": 42928, "type": "tv" },
-  "historias_novo_testamento":   {  "tmdb_id": 212879,  "type": "tv",  "search": "Historias del Nuevo Testamento"}  
+  "one_piece": {
+    "tmdb_id": 37854,
+    "type": "tv"
+  },
+  "boku_no_hero_academia_dublado": {
+    "tmdb_id": 65930,
+    "type": "tv"
+  },
+  "naruto_shippuden": {
+    "tmdb_id": 1535,
+    "type": "tv"
+  },
+  "naruto_classico": {
+    "tmdb_id": 46260,
+    "type": "tv"
+  },
+  "dragon_ball_z": {
+    "tmdb_id": 12971,
+    "type": "tv"
+  },
+  "dragon_ball_gt": {
+    "tmdb_id": 12979,
+    "type": "tv"
+  },
+  "dragon_ball_daima": {
+    "tmdb_id": 246641,
+    "type": "tv"
+  },
+  "jujutsu_kaisen": {
+    "tmdb_id": 95479,
+    "type": "tv"
+  },
+  "sousou_no_frieren": {
+    "tmdb_id": 209867,
+    "type": "tv"
+  },
+  "dandandan": {
+    "tmdb_id": 246804,
+    "type": "tv"
+  },
+  "spy_x_family": {
+    "tmdb_id": 120089,
+    "type": "tv"
+  },
+  "ataque_dos_titans": {
+    "tmdb_id": 1429,
+    "type": "tv"
+  },
+  "invincible": {
+    "tmdb_id": 95557,
+    "type": "tv"
+  },
+  "tres_gracas": {
+    "tmdb_id": 289996,
+    "type": "tv"
+  },
+  "princesa_mononoke_dublado": {
+    "tmdb_id": 128,
+    "type": "movie"
+  },
+  "lilo_stitch_live_action": {
+    "tmdb_id": 552524,
+    "type": "movie"
+  },
+  "spy_x_family_codigo_branco": {
+    "tmdb_id": 1062807,
+    "type": "movie"
+  },
+  "cabocla": {
+    "tmdb_id": 42928,
+    "type": "tv"
+  },
+  "historias_novo_testamento": {
+    "tmdb_id": 212879,
+    "type": "tv",
+    "search": "Historias del Nuevo Testamento"
+  },
+  "unfamiliar": {
+    "tmdb_id": 246413,
+    "type": "tv"
+  },
+  "todo_mundo_odeia_o_chris": {
+    "tmdb_id": 1395,
+    "type": "tv",
+    "search": "Everybody Hates Chris"
+  },
+  "bridgerton": {
+    "tmdb_id": 113988,
+    "type": "tv"
+  },
+  "rainhas_da_grana": {
+    "tmdb_id": 289996,
+    "type": "tv"
+  },
+  "os_donos_do_jogo": {
+    "tmdb_id": 72523,
+    "type": "tv"
+  },
+  "paraiso_tropical": {
+    "tmdb_id": 33345,
+    "type": "tv"
+  },
+  "totalmente_demais": {
+    "tmdb_id": 63175,
+    "type": "tv"
+  },
+  "cordel_encantado": {
+    "tmdb_id": 45202,
+    "type": "tv"
+  },
+  "cobras_e_lagartos": {
+    "tmdb_id": 33060,
+    "type": "tv"
+  },
+  "marimar": {
+    "tmdb_id": 13730,
+    "type": "tv",
+    "search": "Marimar"
+  },
+  "salve_jorge": {
+    "tmdb_id": 55266,
+    "type": "tv"
+  },
+  "a_caverna_encantada": {
+    "tmdb_id": 63550,
+    "type": "tv"
+  },
+  "a_usurpadora": {
+    "tmdb_id": 15917,
+    "type": "tv",
+    "search": "La Usurpadora"
+  },
+  "tieta": {
+    "tmdb_id": 30540,
+    "type": "tv"
+  },
+  "verdades_secretas_2": {
+    "tmdb_id": 134173,
+    "type": "tv"
+  },
+  "chocolate_com_pimenta": {
+    "tmdb_id": 18161,
+    "type": "tv"
+  },
+  "verdades_secretas": {
+    "tmdb_id": 62688,
+    "type": "tv"
+  },
+  "maria_do_bairro": {
+    "tmdb_id": 31635,
+    "type": "tv",
+    "search": "María la del Barrio"
+  },
+  "renascer": {
+    "tmdb_id": 72765,
+    "type": "tv"
+  },
+  "o_beijo_do_vampiro": {
+    "tmdb_id": 34058,
+    "type": "tv"
+  },
+  "avenida_brasil": {
+    "tmdb_id": 46420,
+    "type": "tv"
+  },
+  "caminho_das_indias": {
+    "tmdb_id": 37053,
+    "type": "tv"
+  },
+  "pe_na_jaca": {
+    "tmdb_id": 32900,
+    "type": "tv"
+  }
 }
-
-
-
-
