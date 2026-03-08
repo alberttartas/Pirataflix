@@ -7,7 +7,6 @@ on:
     branches: [ main ]
     paths:
       - 'download_iptv.py'
-      - 'consolidar_data.py'
       - 'build.py'
       - 'utils.py'
       - 'tmdb_map.json'
@@ -43,7 +42,6 @@ jobs:
       - name: Executar pipeline
         run: |
           python download_iptv.py
-          python consolidar_data.py
           python build.py
       - name: Configurar Git
         run: |
@@ -52,7 +50,7 @@ jobs:
       - name: Commit automático
         id: git-check
         run: |
-          git add iptv_playlists/ web/ input_auto/ || true
+          git add iptv_playlists/ web/ input_auto/ input/ || true
           git restore --staged web/integrate-player.js 2>/dev/null || true
           if git diff --staged --quiet; then
             echo "changed=false" >> $GITHUB_OUTPUT
