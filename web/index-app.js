@@ -355,29 +355,3 @@
     // Iniciar
     loadData();
 })();
-</script>
-
-    <!-- PWA: Service Worker + Botão Instalar -->
-    <script>
-    if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function() {
-            navigator.serviceWorker.register('./sw.js').catch(function() {});
-        });
-    }
-    var _pwaPrompt;
-    window.addEventListener('beforeinstallprompt', function(e) {
-        e.preventDefault();
-        _pwaPrompt = e;
-        var btn = document.getElementById('pwa-install-btn');
-        if (btn) btn.style.display = 'flex';
-    });
-    window.addEventListener('appinstalled', function() {
-        var btn = document.getElementById('pwa-install-btn');
-        if (btn) btn.style.display = 'none';
-        _pwaPrompt = null;
-    });
-    function installPWA() {
-        if (!_pwaPrompt) return;
-        _pwaPrompt.prompt();
-        _pwaPrompt.userChoice.then(function() { _pwaPrompt = null; });
-    }
