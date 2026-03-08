@@ -9,7 +9,11 @@ on:
       - 'download_iptv.py'
       - 'consolidar_data.py'
       - 'build.py'
+      - 'utils.py'
+      - 'tmdb_map.json'
+      - 'input/**'
       - 'input_auto/**'
+      - 'assets/Capas/**'
 permissions:
   contents: write
   pages: write
