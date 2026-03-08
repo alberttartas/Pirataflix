@@ -619,55 +619,7 @@ main {
 }
 
 /* Modal */
-.modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.9);
-    z-index: 2000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-}
-
-.modal-content {
-    background-color: var(--dark);
-    border-radius: var(--border-radius);
-    width: 100%;
-    max-width: 900px;
-    max-height: 90vh;
-    overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.modal-header {
-    padding: 20px 30px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.close-btn {
-    background: none;
-    border: none;
-    color: var(--gray);
-    font-size: 2rem;
-    cursor: pointer;
-    line-height: 1;
-    transition: var(--transition);
-}
-
-.close-btn:hover {
-    color: var(--primary);
-}
-
-.modal-body {
-    padding: 30px;
-}
+/* Modal → ver bloco #modal abaixo */
 
 .player-placeholder {
     background-color: var(--dark-light);
@@ -1450,10 +1402,30 @@ footer {
 .pf-live-dot { color: #e50914; font-size: .75rem; animation: pf-pulse 1.4s infinite; }
 
 /* ---------- FOOTER ---------- */
-#pf-global-footer { background: #0f0f0f; border-top: 1px solid rgba(255,255,255,.07); margin-top: 60px; }
-.pf-footer-inner { max-width: 900px; margin: 0 auto; padding: 28px 24px; text-align: center; }
-.pf-footer-copy { color: #e5e5e5; font-size: .9rem; margin-bottom: 6px; }
-.pf-footer-disclaimer { color: #555; font-size: .78rem; line-height: 1.5; }
+#pf-global-footer {
+    background-color: var(--dark-light);
+    border-top: 1px solid rgba(255,255,255,.1);
+    padding: 30px 40px 20px;
+    margin-top: 60px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.pf-footer-inner {
+    max-width: 1600px;
+    margin: 0 auto;
+    text-align: center;
+}
+.pf-footer-copy {
+    color: var(--gray-light);
+    font-size: .95rem;
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+.pf-footer-copy strong { color: var(--primary); }
+.pf-footer-disclaimer {
+    color: var(--gray);
+    font-size: .85rem;
+    line-height: 1.6;
+}
 
 /* ---------- SEARCH ---------- */
 #search-modal { display: none; position: fixed; inset: 0; z-index: 2000; }
