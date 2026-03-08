@@ -577,7 +577,8 @@
         "https://image.tmdb.org/t/p/w500/n8CWRI8k1pLT1HAmIy0mAerDJmc.jpg",
         "https://image.tmdb.org/t/p/w500/OvNMzIOJIzDlouhZVqCHRE6HlL.jpg",
         "https://image.tmdb.org/t/p/w500/1mCU3UEnGItOp7heoDdwRCtpmod.jpg",
-        "https://image.tmdb.org/t/p/w500/DZRZVh3uPSFkOF4udkVqD95hdk.jpg"
+        "https://image.tmdb.org/t/p/w500/DZRZVh3uPSFkOF4udkVqD95hdk.jpg",
+        "https://image.tmdb.org/t/p/w500/hdEQWvSbDQsbdseeYjUS0NgrfT2.jpg"
       ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/qDq3dG4ElRohih5fUGNQRLHuBaC.jpg",
       "overview": "Quando o passado bate à porta de um casal de ex-espiões, o maior desafio não são as perseguições, os tiroteios e as brigas... é contar a verdade um ao outro.",
@@ -1227,7 +1228,7 @@
         {
           "name": "Ruth Gemmell",
           "character": "Lady Violet Bridgerton",
-          "profile": "https://image.tmdb.org/t/p/w185/lq8W1V45lIWAhpgjb7ezYB3B79p.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/hPtU8FTFMOneRQg7LQQdkeakJOe.jpg"
         },
         {
           "name": "Luke Thompson",
@@ -24763,9 +24764,15 @@
               "url": "https://cdn-novflix.com/storage1/TGRACAS/TGRACAS-119.mp4",
               "episode": 119,
               "air_date": "2026-03-06",
-              "overview": "",
-              "still": "",
-              "guest_stars": [],
+              "overview": "Viviane recebe flores de um admirador anônimo, e depois descobre que foi Angélico. Luciano grava um vídeo de Consuelo conversando com Viviane e envia para Macedo. Stephane comunica a Bagdá que Kasper quer fazer uma exposição com as obras do líder da Chacrinha, em troca de um favor. Bagdá apavora Joaquim e Misael ao confrontá-los sobre As Três Graças.",
+              "still": "https://image.tmdb.org/t/p/w400/8rGf6FdlwzPcUHZi9mur30uUhLT.jpg",
+              "guest_stars": [
+                {
+                  "name": "Clara Choveaux",
+                  "character": "Stephanie Klaus",
+                  "photo": "https://image.tmdb.org/t/p/w185/isP7hCRXQB4iqWrlbJUFz3I6fQE.jpg"
+                }
+              ],
               "locked": false
             },
             {
@@ -24775,9 +24782,14 @@
               "air_date": "2026-03-07",
               "overview": "",
               "still": "",
-              "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-03-07T21:00:00"
+              "guest_stars": [
+                {
+                  "name": "Clara Choveaux",
+                  "character": "Stephanie Klaus",
+                  "photo": "https://image.tmdb.org/t/p/w185/isP7hCRXQB4iqWrlbJUFz3I6fQE.jpg"
+                }
+              ],
+              "locked": false
             },
             {
               "title": "TGRACAS-121",
@@ -26884,9 +26896,15 @@
           "url": "https://cdn-novflix.com/storage1/TGRACAS/TGRACAS-119.mp4",
           "episode": 119,
           "air_date": "2026-03-06",
-          "overview": "",
-          "still": "",
-          "guest_stars": [],
+          "overview": "Viviane recebe flores de um admirador anônimo, e depois descobre que foi Angélico. Luciano grava um vídeo de Consuelo conversando com Viviane e envia para Macedo. Stephane comunica a Bagdá que Kasper quer fazer uma exposição com as obras do líder da Chacrinha, em troca de um favor. Bagdá apavora Joaquim e Misael ao confrontá-los sobre As Três Graças.",
+          "still": "https://image.tmdb.org/t/p/w400/8rGf6FdlwzPcUHZi9mur30uUhLT.jpg",
+          "guest_stars": [
+            {
+              "name": "Clara Choveaux",
+              "character": "Stephanie Klaus",
+              "photo": "https://image.tmdb.org/t/p/w185/isP7hCRXQB4iqWrlbJUFz3I6fQE.jpg"
+            }
+          ],
           "locked": false
         },
         {
@@ -26896,9 +26914,14 @@
           "air_date": "2026-03-07",
           "overview": "",
           "still": "",
-          "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-03-07T21:00:00"
+          "guest_stars": [
+            {
+              "name": "Clara Choveaux",
+              "character": "Stephanie Klaus",
+              "photo": "https://image.tmdb.org/t/p/w185/isP7hCRXQB4iqWrlbJUFz3I6fQE.jpg"
+            }
+          ],
+          "locked": false
         },
         {
           "title": "TGRACAS-121",
