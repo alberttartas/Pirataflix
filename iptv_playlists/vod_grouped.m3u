@@ -20727,14 +20727,8 @@ https://cdn-s01.mywallpaper-4k-image.net/stream/s/scooby-doo-cade-voce-dublado/2
 #EXTINF:-1 group-title="🧸 Infantil" tvg-id="SCOOBY_DOO_T01" tvg-logo="https://image.tmdb.org/t/p/w500/75ZldxGKFQDRHFn2G6FngCvlVzu.jpg",Ep 25 - Scooby Doo 25
 https://cdn-s01.mywallpaper-4k-image.net/stream/s/scooby-doo-cade-voce-dublado/25.mp4/index.m3u8
 
-#EXTINF:-1 group-title="📺 Geral" tvg-id="1001NOITES.BR@SD" tvg-logo="https://i.imgur.com/dWA9y2J.png",1001 Noites (720p) [Not 24/7]
-https://cdn.jmvstream.com/w/LVW-8155/ngrp:LVW8155_41E1ciuCvO_all/playlist.m3u8
-
 #EXTINF:-1 group-title="📺 Geral" tvg-id="ADESSOTV.BR@SD" tvg-logo="https://i.postimg.cc/3J4hysL3/adessotv.png",Adesso TV (720p)
 https://cdn.jmvstream.com/w/LVW-9715/LVW9715_12B26T62tm/playlist.m3u8
-
-#EXTINF:-1 group-title="📺 Geral" tvg-id="AGROBRASILTV.BR@SD" tvg-logo="https://i.imgur.com/aNkP7Zd.png",AgroBrasil TV (720p) [Not 24/7]
-http://45.162.230.234:1935/agrobrasiltv/agrobrasiltv/playlist.m3u8
 
 #EXTINF:-1 group-title="📺 Geral" tvg-id="ALPHACHANNEL.BR@SD" tvg-logo="https://i.imgur.com/c1QqslA.png",Alpha Channel (720p)
 https://5b01a3d32b65c.streamlock.net:1936/tvalpha/tvalpha/playlist.m3u8
@@ -20742,35 +20736,17 @@ https://5b01a3d32b65c.streamlock.net:1936/tvalpha/tvalpha/playlist.m3u8
 #EXTINF:-1 group-title="📺 Geral" tvg-id="AMAZONSAT.BR@SD" tvg-logo="https://i.imgur.com/7rjCS5i.png",Amazon Sat (1080p)
 https://amazonsat.brasilstream.com.br/hls/amazonsat/index.m3u8
 
-#EXTINF:-1 group-title="📺 Geral" tvg-id="BDCTV.BR@SD" tvg-logo="https://i.imgur.com/6ckHV6k.jpeg",BDC TV (576p)
-https://video01.kshost.com.br/bdctv/bdctv/playlist.m3u8
-
-#EXTINF:-1 group-title="📺 Geral" tvg-id="BETPLUTOTV.US@BRAZIL" tvg-logo="https://i.imgur.com/Kq9WKZg.png",BET Pluto TV
-https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5ff768b6a4c8b80008498610/master.m3u8?appName=web&appVersion=9.19.0&deviceDNT=0&deviceId=8ee99fa9-8924-42ef-bf8b-617216b5b280&deviceMake=firefox&deviceModel=web&deviceType=web&deviceVersion=147.0.0&serverSideAds=false&sid=4e259889-45f7-4d45-a10d-1d3eb4ec63ba
-
 #EXTINF:-1 group-title="📺 Geral" tvg-id="BOASNOVAS.BR@SD" tvg-logo="https://i.imgur.com/ZqhizdP.png",Boas Novas (1080p)
 https://cdn.jmvstream.com/w/LVW-9375/LVW9375_6i0wPBCHYc/playlist.m3u8
 
-#EXTINF:-1 group-title="📺 Geral" tvg-id="CABOFRIOTV.BR@SD" tvg-logo="https://i.imgur.com/mPi6Wp3.png",Cabo Frio TV (720p)
-https://59f2354c05961.streamlock.net:1443/ararutv/_definst_/ararutv/playlist.m3u8
-
 #EXTINF:-1 group-title="📺 Geral" tvg-id="CANAL25JUNDIAI.BR@SD" tvg-logo="https://i.imgur.com/7igGMwH.png",Canal 25 Jundiaí (404p) [Not 24/7]
 https://stream01.msolutionbrasil.com.br/hls/canal25/live.m3u8
-
-#EXTINF:-1 group-title="📺 Geral" tvg-id="CANALDOCRIADOR.BR@SD" tvg-logo="https://i.imgur.com/k29So6X.png",Canal do Criador (1080p)
-https://607d2a1a47b1f.streamlock.net/crur/smil:canaldocriador.smil/playlist.m3u8
-
-#EXTINF:-1 group-title="📺 Geral" tvg-id="CANALGOV.BR@SD" tvg-logo="https://i.imgur.com/rHPY0Yv.png",Canal Gov (720p)
-https://canalgov-stream.ebc.com.br/index.m3u8
 
 #EXTINF:-1 group-title="📺 Geral" tvg-id="CANALLIBRAS.BR@SD" tvg-logo="https://i.imgur.com/LnWWKzP.png",Canal Libras (720p)
 https://canallibras-stream.ebc.com.br/mux_video_ts/index-1.m3u8
 
 #EXTINF:-1 group-title="📺 Geral" tvg-id="CANALRICOS.BR@SD" tvg-logo="https://i.imgur.com/hs2YVJ3.png",Canal Ricos (480p)
 https://5d82644094cc0.streamlock.net/ricostv/ricostv/playlist.m3u8
-
-#EXTINF:-1 group-title="📺 Geral" tvg-id="CANALRURAL.BR@SD" tvg-logo="https://i.imgur.com/w9R9IIX.png",Canal Rural (1080p)
-https://607d2a1a47b1f.streamlock.net/crur/smil:canalrural.smil/playlist.m3u8
 
 #EXTINF:-1 group-title="📺 Geral" tvg-id="CATVE2.BR@SD" tvg-logo="https://i.imgur.com/qiVfsfB.png",Catve2 (720p)
 https://5b33b873179a2.streamlock.net:1443/catve2/catve2/playlist.m3u8
@@ -20781,14 +20757,8 @@ https://5b33b873179a2.streamlock.net:1443/radiocamera/livestream/playlist.m3u8
 #EXTINF:-1 group-title="📺 Geral" tvg-id="CATVEMASTERTV.BR@SD" tvg-logo="https://i.imgur.com/4m7Iazm.png",Catve Master TV (720p) [Not 24/7]
 https://5b33b873179a2.streamlock.net:1443/mastertv/livestream/playlist.m3u8
 
-#EXTINF:-1 group-title="📺 Geral" tvg-id="CHROMATV.BR@SD" tvg-logo="https://i.imgur.com/SnaIMgj.png",Chroma TV (480p)
-https://5c483b9d1019c.streamlock.net/8054/8054/playlist.m3u8
-
 #EXTINF:-1 group-title="📺 Geral" tvg-id="COMBRASIL.BR@SD" tvg-logo="https://i.imgur.com/GrjGwKM.png",COM Brasil (1080p) [Not 24/7]
 https://br5093.streamingdevideo.com.br/abc/abc/playlist.m3u8
-
-#EXTINF:-1 group-title="📺 Geral" tvg-id="CONECTAMAISTV.BR@SD" tvg-logo="https://i.imgur.com/qHwTWlz.png",Conecta+ TV (720p)
-http://189.14.239.62:1935/webtv/livestream1/playlist.m3u8
 
 #EXTINF:-1 group-title="📺 Geral" tvg-id="CONECTVBRASIL.BR@SD" tvg-logo="https://i.imgur.com/XN6jjMR.png",ConecTV Brasil (720p)
 https://stream01.msolutionbrasil.com.br/hls/conectv/live.m3u8
@@ -20802,20 +20772,11 @@ http://www.portalcultura.com.br/playerhtml/funtelpa/tv_funtelpa/playlist.m3u8
 #EXTINF:-1 group-title="📺 Geral" tvg-id="DEMAISTV.BR@SD" tvg-logo="https://i.imgur.com/Md3xibE.png",Demais TV (720p)
 https://stmv1.samcast.com.br/demaistv6503/demaistv6503/playlist.m3u8
 
-#EXTINF:-1 group-title="📺 Geral" tvg-id="ELEMENTALCHANNEL.BR@SD" tvg-logo="https://i.imgur.com/8upyApg.png",Elemental Channel (1080p)
-https://5d82644094cc0.streamlock.net/8116/8116/playlist.m3u8
-
-#EXTINF:-1 group-title="📺 Geral" tvg-id="ELYTV.BR@SD" tvg-logo="https://i.imgur.com/1eHNe91.png",ElyTV (360p)
-https://stmv1.srvsite.com/ely/ely/playlist.m3u8
-
 #EXTINF:-1 group-title="📺 Geral" tvg-id="EUTV.BR@SD" tvg-logo="https://i.imgur.com/8PxpamC.png",EUTV (720p)
 https://cdn.jmvstream.com/w/LVW-8719/LVW8719_AcLVAxWy5J/playlist.m3u8
 
 #EXTINF:-1 group-title="📺 Geral" tvg-id="FALALITORAL.BR@SD" tvg-logo="https://i.imgur.com/NF6PL8O.png",Fala Litoral (480p)
 https://5c483b9d1019c.streamlock.net/falalitoraltv/falalitoraltv/playlist.m3u8
-
-#EXTINF:-1 group-title="📺 Geral" tvg-id="LOADING.BR@SD" tvg-logo="https://i.imgur.com/R0aflu1.png",Loading (720p)
-https://stmv1.srvif.com/loadingtv/loadingtv/playlist.m3u8
 
 #EXTINF:-1 group-title="📺 Geral" tvg-id="MKKWEBTV.BR@SD" tvg-logo="https://i.imgur.com/A8Yhtid.png",MKK Web TV (720p) [Not 24/7]
 https://video01.logicahost.com.br/mkkwebtv/mkkwebtv/playlist.m3u8
@@ -20825,12 +20786,6 @@ http://wz3.dnip.com.br:1935/novaeratv/novaeratv.sdp/live.m3u8
 
 #EXTINF:-1 group-title="📺 Geral" tvg-id="PLAYTV.BR@SD" tvg-logo="https://i.imgur.com/Ikrj3lk.png",Play TV (720p)
 https://playtv.mediastreaming.com.br/play/live.stream/playlist.m3u8
-
-#EXTINF:-1 group-title="📺 Geral" tvg-id="PLUTOTVANIME.US@BRAZIL" tvg-logo="https://i.imgur.com/bvbn8pa.png",Pluto TV Anime
-https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5f12136385bccc00070142ed/master.m3u8?appName=web&appVersion=9.19.0&deviceDNT=0&deviceId=8ee99fa9-8924-42ef-bf8b-617216b5b280&deviceMake=firefox&deviceModel=web&deviceType=web&deviceVersion=147.0.0&serverSideAds=false&sid=1c24686e-ebe5-48c3-93bb-0343b4009dae
-
-#EXTINF:-1 group-title="📺 Geral" tvg-id="PLUTOTVRETRO.US@BRAZIL" tvg-logo="https://i.imgur.com/wztO3GM.png",Pluto TV Retrô
-https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5f1212ad1728050007a523b8/master.m3u8?appName=web&appVersion=9.19.0&deviceDNT=0&deviceId=8ee99fa9-8924-42ef-bf8b-617216b5b280&deviceMake=firefox&deviceModel=web&deviceType=web&deviceVersion=147.0.0&serverSideAds=false&sid=c87fa106-af6f-4844-9828-d2ce71829bc9
 
 #EXTINF:-1 group-title="📺 Geral" tvg-id="PRIMERTV.BR@SD" tvg-logo="https://i.imgur.com/PMptSP3.png",Primer TV (1080p)
 http://200.194.238.229:8383/live/primer/playlist.m3u8
@@ -20864,9 +20819,6 @@ https://playplusspo-lh.akamaihd.net/i/pp_sp@350176/index_720_av-p.m3u8
 
 #EXTINF:-1 group-title="📺 Geral" tvg-id="RECORDTVINTERIORSP.BR@SD" tvg-logo="https://i.imgur.com/VcHy0fu.png",RecordTV Interior SP
 http://200.77.176.130:8000/udp/224.0.0.4:49152
-
-#EXTINF:-1 group-title="📺 Geral" tvg-id="REDENGT.BR@SD" tvg-logo="https://i.imgur.com/ZFN1R4B.png",Rede NGT (1080p)
-https://isaocorp.cloudecast.com/ngt/index.m3u8
 
 #EXTINF:-1 group-title="📺 Geral" tvg-id="REDERC.BR@SD" tvg-logo="https://i.imgur.com/y9dqo3f.png",Rede RC (720p) [Not 24/7]
 http://tv02.logicahost.com.br:1935/rederc/rederc/live.m3u8
@@ -20907,9 +20859,6 @@ https://5b7f3c45ab7c2.streamlock.net/arapuan/ngrp:arapuan_all/playlist.m3u8
 #EXTINF:-1 group-title="📺 Geral" tvg-id="TVARATU.BR@SD" tvg-logo="https://i.imgur.com/LCETtuk.png",TV Aratu (720p)
 https://cdn.jmvstream.com/w/LVW-8379/LVW8379_rIq6ZYiIiA/playlist.m3u8
 
-#EXTINF:-1 group-title="📺 Geral" tvg-id="TVASSEMBLEIACEARA.BR@SD" tvg-logo="https://i.imgur.com/UPa1tjs.png",TV Assembléia Ceará (720p)
-https://jjn5dkk9bd.zoeweb.tv/z404-live/stream/playlist.m3u8
-
 #EXTINF:-1 group-title="📺 Geral" tvg-id="TVBIRIGUI.BR@SD" tvg-logo="https://i.imgur.com/z7VlNLR.png",TV Birigui (640p)
 https://59f2354c05961.streamlock.net:1443/tvdigitalbirigui/_definst_/tvdigitalbirigui/playlist.m3u8
 
@@ -20921,15 +20870,6 @@ https://5ad482a77183d.streamlock.net/operacaotbomt.com/operacaotbomt.com/playlis
 
 #EXTINF:-1 group-title="📺 Geral" tvg-id="TVBRICSPORTUGUESE.BR@SD" tvg-logo="https://i.imgur.com/vLpm8tN.png",TV BRICS Portuguese (1080p)
 https://porbrics.mediacdn.ru/cdn/brics/portuguese/playlist.m3u8
-
-#EXTINF:-1 group-title="📺 Geral" tvg-id="TVCAMARA.BR@SD" tvg-logo="https://i.imgur.com/Sdou1Ab.png",TV Câmara (1080p)
-https://stream3.camara.gov.br/tv1/manifest.m3u8
-
-#EXTINF:-1 group-title="📺 Geral" tvg-id="TVCAMARA2.BR@SD" tvg-logo="https://i.imgur.com/dHrUG1R.png",TV Câmara 2 (1080p) [Not 24/7]
-https://stream3.camara.gov.br/tv2/manifest.m3u8
-
-#EXTINF:-1 group-title="📺 Geral" tvg-id="TVCAMARASALVADOR.BR@SD" tvg-logo="https://i.imgur.com/VEXEzSx.png",TV Câmara Salvador (288p) [Not 24/7]
-https://596639ebdd89b.streamlock.net/8114/8114/playlist.m3u8
 
 #EXTINF:-1 group-title="📺 Geral" tvg-id="TVCANCAONOVA.BR@SD" tvg-logo="https://i.imgur.com/OaM9hkH.png",TV Cancao Nova (720p)
 https://5c65286fc6ace.streamlock.net/cancaonova/CancaoNova.stream_720p/playlist.m3u8
@@ -20949,12 +20889,6 @@ https://5c483b9d1019c.streamlock.net/8186/8186/playlist.m3u8
 #EXTINF:-1 group-title="📺 Geral" tvg-id="TVCULTURA.BR@SD" tvg-logo="https://i.ibb.co/nm0jXMM/cultura-3x.png",TV Cultura
 https://player-tvcultura.stream.uol.com.br/live/tvcultura.m3u8
 
-#EXTINF:-1 group-title="📺 Geral" tvg-id="TVCURUCA.BR@SD" tvg-logo="https://i.imgur.com/JdCKNZ4.png",TV Curuça (360p)
-https://stmv1.srvif.com/tvcurucasp/tvcurucasp/playlist.m3u8
-
-#EXTINF:-1 group-title="📺 Geral" tvg-id="TVDASARTES.BR@SD" tvg-logo="https://i.imgur.com/fSWaiKt.png",TV das Artes (360p)
-http://tv02.logicahost.com.br:1935/tvdasartes/tvdasartes/playlist.m3u8
-
 #EXTINF:-1 group-title="📺 Geral" tvg-id="TVDESTAK.BR@SD" tvg-logo="https://i.imgur.com/YoCVrav.png",TV Destak (360p)
 http://tv02.logicahost.com.br:1935/pascoal/pascoal/live.m3u8
 
@@ -20964,20 +20898,11 @@ https://5ad482a77183d.streamlock.net/marliomelohotmail.com/marliomelohotmail.com
 #EXTINF:-1 group-title="📺 Geral" tvg-id="TVDIFUSORALESTE.BR@SD" tvg-logo="https://i.imgur.com/hEd25Cr.png",TV Difusora Leste (1080p)
 https://stream.amsolution.net.br:8443/live/60d0a8ea6b884/index.m3u8
 
-#EXTINF:-1 group-title="📺 Geral" tvg-id="TVDIGITALBIRIGUI.BR@SD" tvg-logo="https://i.imgur.com/B5ZTMzY.png",TV Digital Biriguí (640p)
-http://wse01.logicahost.com.br:1935/tvdigitalbirigui/_definst_/tvdigitalbirigui/playlist.m3u8
-
-#EXTINF:-1 group-title="📺 Geral" tvg-id="TVEMPIRE.BR@SD" tvg-logo="https://i.imgur.com/tT1NVfV.png",TV Empire Magazine (720p)
-https://5d82644094cc0.streamlock.net/empiremagazinetv/empiremagazinetv/playlist.m3u8
-
 #EXTINF:-1 group-title="📺 Geral" tvg-id="TVENCONTRODASAGUAS.BR@SD" tvg-logo="https://www.lyngsat.com/logo/tv/tt/tv-encontro-das-aguas-br.png",TV Encontro das Aguas
 https://stmv7.samcast.com.br/sistemaencontrodasaguas/sistemaencontrodasaguas/playlist.m3u8
 
 #EXTINF:-1 group-title="📺 Geral" tvg-id="TVFUTURO.BR@SD" tvg-logo="https://i.imgur.com/xonrNBf.png",TV Futuro (1080p)
 https://tv02.zas.media:1936/tvfuturo/tvfuturo/playlist.m3u8
-
-#EXTINF:-1 group-title="📺 Geral" tvg-id="TVGRANDENATAL.BR@SD" tvg-logo="https://i.imgur.com/MTuErdw.png",TV Grande Natal (1080p)
-http://tvgrandenatalhd.duckdns.org:8080/hls/live.m3u8
 
 #EXTINF:-1 group-title="📺 Geral" tvg-id="TVGRAOPARA.BR@SD" tvg-logo="https://i.imgur.com/1drg0E9.png",TV Grao Pará (720p)
 https://video01.kshost.com.br:4443/moises3834/moises3834/playlist.m3u8
@@ -20990,9 +20915,6 @@ https://v8.ciclano.io:1443/tvinterlagos/_definst_/tvinterlagos/playlist.m3u8
 
 #EXTINF:-1 group-title="📺 Geral" tvg-id="TVLIBERDADE.BR@SD" tvg-logo="https://i.imgur.com/W6bHHqE.png",TV Liberdade (720p) [Not 24/7]
 https://srv1.paineldevideo.com/liberdaderadioetv/liberdaderadioetv/playlist.m3u8
-
-#EXTINF:-1 group-title="📺 Geral" tvg-id="TVLIFEAMERICA.BR@HD" tvg-logo="https://i.imgur.com/HZI0ilU.png",TV Life America (720p)
-https://streaming.cloudecast.com/hls/tvlifeamerica/index.m3u8
 
 #EXTINF:-1 group-title="📺 Geral" tvg-id="TVMAISMARICA.BR@SD" tvg-logo="https://i.imgur.com/lgCRX7q.png",TV Mais Maricá (1080p)
 https://5cf4a2c2512a2.streamlock.net/tvmaismarica/tvmaismarica/playlist.m3u8
@@ -21030,9 +20952,6 @@ https://5cf4a2c2512a2.streamlock.net/tvsuldeminas/tvsuldeminas/playlist.m3u8
 #EXTINF:-1 group-title="📺 Geral" tvg-id="TVTHATHI.BR@SD" tvg-logo="https://i.imgur.com/w9yKTxE.png",TV Thathi (720p) [Not 24/7]
 https://cdn-grupo-10049.ciclano.io:1443/grupo-10049/grupo-10049/playlist.m3u8
 
-#EXTINF:-1 group-title="📺 Geral" tvg-id="TVVICOSA.BR@SD" tvg-logo="https://i.imgur.com/TZF55f9.png",TV Viçosa (480p)
-http://wz4.dnip.com.br/fratevitv/fratevitv.sdp/playlist.m3u8
-
 #EXTINF:-1 group-title="📺 Geral" tvg-id="TVVILAREAL.BR@SD" tvg-logo="https://i.imgur.com/Z1uWe7g.png",TV Vila Real (720p)
 https://cdn.jmvstream.com/w/LVW-10841/LVW10841_mT77z9o2cP/playlist.m3u8
 
@@ -21066,23 +20985,14 @@ http://cdn.tvmatic.net/tiktok.m3u8
 #EXTINF:-1 group-title="📺 Geral" tvg-id="TVNBN.BR@SD" tvg-logo="https://i.imgur.com/zoHBxn1.png",TVNBN (720p)
 https://cdn.jmvstream.com/w/LVW-8410/LVW8410_uiZOVm6vz1/playlist.m3u8
 
-#EXTINF:-1 group-title="📺 Geral" tvg-id="VRTCHANNEL.BR@SD" tvg-logo="https://i.imgur.com/crszh3d.png",VRT Channel (720p)
-https://sistemavrt.vrtchannel.tv.br:3473/stream/play.m3u8
-
 #EXTINF:-1 group-title="📺 Geral" tvg-id="VV8TV.BR@SD" tvg-logo="https://i.imgur.com/TxHWAeD.png",VV8 TV (720p)
 https://video01.kshost.com.br/seap8272/seap8272/playlist.m3u8
 
 #EXTINF:-1 group-title="📺 Geral" tvg-id="5_ON_PLUTO_TV" tvg-logo="",5 on Pluto TV
 https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/623c492627cb540007ca55c7/master.m3u8?appName=web&appVersion=9.19.0&deviceDNT=0&deviceId=07998d5d-dd4a-4bcc-84be-58dcbcec76b7&deviceMake=firefox&deviceModel=web&deviceType=web&deviceVersion=147.0.0&serverSideAds=false&sid=1f5b7179-6a0b-4bf2-aa5b-88f8c82eca61
 
-#EXTINF:-1 group-title="📺 Geral" tvg-id="30ADARCIZZLEOFFSHORE.US@SD" tvg-logo="https://i.imgur.com/Q4l2uao.png",30A Darcizzle Offshore (720p)
-https://30a-tv.com/darcizzle.m3u8
-
 #EXTINF:-1 group-title="📺 Geral" tvg-id="AE_CRIME_360" tvg-logo="",A&E Crime 360
 https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/6000a5a9e767980007b497ca/master.m3u8?appName=web&appVersion=9.19.0&deviceDNT=0&deviceId=affbdbfa-5fa3-48af-8369-57c005daef42&deviceMake=firefox&deviceModel=web&deviceType=web&deviceVersion=147.0.0&serverSideAds=false&sid=b4584867-4b85-4499-94f2-24d49adabde7
-
-#EXTINF:-1 group-title="📺 Geral" tvg-id="AE.US@EAST" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/A%26E_Network_logo.svg/512px-A%26E_Network_logo.svg.png",A&E East (720p) [Not 24/7]
-https://tvpass.org/live/AEEast/hd
 
 #EXTINF:-1 group-title="📺 Geral" tvg-id="ACAPULCO_SHORE_PLUTO_TV" tvg-logo="",Acapulco Shore Pluto TV
 https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/61a52615cbef2500072876e2/master.m3u8?appName=web&appVersion=9.19.0&deviceDNT=0&deviceId=610c8f98-68e8-48e7-9cc5-5dd3fefdcab5&deviceMake=firefox&deviceModel=web&deviceType=web&deviceVersion=147.0.0&serverSideAds=false&sid=8b869c7d-5e82-4fc2-8ba4-b945d67c9988
@@ -21114,9 +21024,6 @@ https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/6
 #EXTINF:-1 group-title="📺 Geral" tvg-id="BEST_OF_MTV" tvg-logo="",Best of MTV
 https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/632afdf820e83e000710ea12/master.m3u8?appName=web&appVersion=9.19.0&deviceDNT=0&deviceId=ef438a77-24b9-40a1-9b9b-e24ca3052bea&deviceMake=firefox&deviceModel=web&deviceType=web&deviceVersion=147.0.0&serverSideAds=false&sid=c9e13e8d-7029-46ce-97b6-d0a04d3ff64e
 
-#EXTINF:-1 group-title="📺 Geral" tvg-id="BETPLUTOTV.US@US" tvg-logo="https://i.imgur.com/Kq9WKZg.png",BET Pluto TV
-https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5ca670f6593a5d78f0e85aed/master.m3u8?appName=web&appVersion=9.19.0&deviceDNT=0&deviceId=affbdbfa-5fa3-48af-8369-57c005daef42&deviceMake=firefox&deviceModel=web&deviceType=web&deviceVersion=147.0.0&serverSideAds=false&sid=d1e7ed6c-ccdf-4736-a3e3-6995cf46b655
-
 #EXTINF:-1 group-title="📺 Geral" tvg-id="BEYOND_HISTORY" tvg-logo="",Beyond History
 https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/62fb9844db5a4a0007ebc2a3/master.m3u8?appName=web&appVersion=9.19.0&deviceDNT=0&deviceId=32de4823-7501-4845-ba26-8699462954dd&deviceMake=firefox&deviceModel=web&deviceType=web&deviceVersion=147.0.0&serverSideAds=false&sid=7b4da6a1-404a-4281-9f18-e196291fd52e
 
@@ -21132,9 +21039,6 @@ https://btmug.zerocdn.org/hls/stream.m3u8
 #EXTINF:-1 group-title="📺 Geral" tvg-id="BTNTV.RW@SD" tvg-logo="https://i.imgur.com/WmaP8zP.png",BTN TV (480p)
 https://tv.btnrwanda.com:3086/live/btnlive.m3u8
 
-#EXTINF:-1 group-title="📺 Geral" tvg-id="CMALAYALAMTV.CA@SD" tvg-logo="https://i.imgur.com/rpg0bQA.png",C Malayalam TV (1080p)
-https://2-fss-2.streamhoster.com/pl_120/206508-3261972-1/playlist.m3u8
-
 #EXTINF:-1 group-title="📺 Geral" tvg-id="TELEMAX.GT@SD" tvg-logo="https://i.imgur.com/HisGao7.png",Canal 32 Telemax (720p) [Not 24/7]
 https://cdn.streamhispanatv.net:3824/live/telemaxlive.m3u8
 
@@ -21147,8 +21051,8 @@ https://content.uplynk.com/channel/328d1434fb51476cb6567c74d5b2cc70.m3u8
 #EXTINF:-1 group-title="📺 Geral" tvg-id="CC_PLUTO_TV" tvg-logo="",CC Pluto TV
 http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5d4947590ba40f75dc29c26b/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=bc835741-4b91-11ef-8a44-83c5e90e038f&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&serverSideAds=false&sid=721a40d1-d225-4d76-8eca-b394d067e650
 
-#EXTINF:-1 group-title="📺 Geral" tvg-id="CFMTVCHANNEL98.US@SD" tvg-logo="https://i.imgur.com/LGs524I.png",CFM TV Channel 98 (360p)
-https://cdn3.wowza.com/5/djRwZmQvTEJidmZD/cityftmyers/G2083_002/playlist.m3u8
+#EXTINF:-1 group-title="📺 Geral" tvg-id="CEACOMTV.BO@SD" tvg-logo="https://i.imgur.com/hutdRfk.png",CEACOM TV [Not 24/7]
+https://eu1.servers10.com:8081/ceacom/index.m3u8
 
 #EXTINF:-1 group-title="📺 Geral" tvg-id="CHEF_VS_CHEF_BY_FOOD_NETWORK" tvg-logo="",Chef vs Chef by Food Network
 https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/68bb16a500a2f063fdf89f8c/master.m3u8?appName=web&appVersion=9.19.0&deviceDNT=0&deviceId=affbdbfa-5fa3-48af-8369-57c005daef42&deviceMake=firefox&deviceModel=web&deviceType=web&deviceVersion=147.0.0&serverSideAds=false&sid=4c9b263c-813b-4809-9e70-2174a3897598
@@ -21210,9 +21114,6 @@ https://cdn3.wowza.com/5/UWpORHhLSEs5SkJs/costamesa/G0075_002/playlist.m3u8
 #EXTINF:-1 group-title="📺 Geral" tvg-id="CROMTV.DO@SD" tvg-logo="https://i.imgur.com/jk1lkOV.png",CromTV (1080p) [Not 24/7]
 https://fox.hostlagarto.com:8081/cromtv/tracks-v1a1/mono.m3u8
 
-#EXTINF:-1 group-title="📺 Geral" tvg-id="CTNTVCONNETICUT.US@SD" tvg-logo="https://i.imgur.com/pb0TFQt.jpg",CT-N TV Conneticut (720p) [Not 24/7]
-http://video.ct-n.com/live/ctnstream/playlist_DVR.m3u8
-
 #EXTINF:-1 group-title="📺 Geral" tvg-id="DAZN_DARTS_X_PLUTO_TV" tvg-logo="",DAZN Darts x Pluto TV
 http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/64b67f0424ade50008a3be17/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=1b1d3ca3-4b81-11ef-a8ac-e146e4e7be02&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&serverSideAds=false&sid=172fcc6d-73c3-48c9-86a8-04885a2af742
 
@@ -21243,9 +21144,6 @@ https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/6
 #EXTINF:-1 group-title="📺 Geral" tvg-id="DMTVMALANG.ID@SD" tvg-logo="https://i.imgur.com/3iC41QX.png",DM TV Malang
 https://e.siar.us/live/dmtv.m3u8
 
-#EXTINF:-1 group-title="📺 Geral" tvg-id="DREAMTV.MN@SD" tvg-logo="https://i.imgur.com/YPbvzgV.png",Dream TV (720p)
-https://cdn4.skygo.mn/live/disk1/Dreambox/HLSv3-FTA/Dreambox.m3u8
-
 #EXTINF:-1 group-title="📺 Geral" tvg-id="DURANGALDEKOTELEBISTA.ES@SD" tvg-logo="https://i.imgur.com/qdlW6cg.png",Durangaldeko Telebista (576p)
 https://nlb2-live.emitstream.com/hls/5f9asjsehd7gmyxsdpzu/master.m3u8
 
@@ -21261,9 +21159,6 @@ https://reflect-fairfield-ca.cablecast.tv/live-8/live/live.m3u8
 #EXTINF:-1 group-title="📺 Geral" tvg-id="FILAMTVNETWORK.US@HD" tvg-logo="https://i.imgur.com/nRiApdI.png",FilAmTV Network
 https://streams.comclark.com/pknsd/filamtv/playlist.m3u8
 
-#EXTINF:-1 group-title="📺 Geral" tvg-id="CITYOFFORTPIERCE.US@SD" tvg-logo="https://i.imgur.com/2ChoSsi.png",Fort Pierce Live Stream (Fort Pierce FL) (720p)
-https://edge-f.swagit.com/live/fortpiercefl/live-1-a/playlist.m3u8
-
 #EXTINF:-1 group-title="📺 Geral" tvg-id="KTVUDT1.US@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Fox_Networks_Group_US_logo.svg/512px-Fox_Networks_Group_US_logo.svg.png",FOX 2 San Francisco CA (KTVU) (720p)
 https://aegis-cloudfront-1.tubi.video/8d9284ec-c451-4e51-a1d4-d16e5c8972af/index.m3u8
 
@@ -21278,9 +21173,6 @@ https://pubads.g.doubleclick.net/ssai/event/1kItNgwtQUe54NjjBiiTGg/master.m3u8
 
 #EXTINF:-1 group-title="📺 Geral" tvg-id="FOX_LOCAL_SEATTLE" tvg-logo="",FOX LOCAL Seattle
 https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/667f36eda1d7ad00085f588e/master.m3u8?appName=web&appVersion=9.19.0&deviceDNT=0&deviceId=affbdbfa-5fa3-48af-8369-57c005daef42&deviceMake=firefox&deviceModel=web&deviceType=web&deviceVersion=147.0.0&serverSideAds=false&sid=cfb26854-978e-4538-acf4-e6cfc53db71f
-
-#EXTINF:-1 group-title="📺 Geral" tvg-id="FOXSOUL.US@SD" tvg-logo="https://i.imgur.com/YIamDGn.png",Fox Soul (1080p)
-https://fox-foxsoul-samsungus.amagi.tv/playlist.m3u8
 
 #EXTINF:-1 group-title="📺 Geral" tvg-id="FOX_SPORTS" tvg-logo="",FOX Sports
 https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5a74b8e1e22a61737979c6bf/master.m3u8?appName=web&appVersion=9.19.0&deviceDNT=0&deviceId=affbdbfa-5fa3-48af-8369-57c005daef42&deviceMake=firefox&deviceModel=web&deviceType=web&deviceVersion=147.0.0&serverSideAds=false&sid=50cbf169-27f9-4fe6-9459-d10036223805
@@ -21300,9 +21192,6 @@ https://tvpass.org/live/FoxSports2/hd
 #EXTINF:-1 group-title="📺 Geral" tvg-id="GAMTVCR.CR@SD" tvg-logo="https://i.ibb.co/xFCS7wM/GAMTVCR.png",GAMTV.cr (720p)
 https://v2.azulstream.com:8081/gamtv/gamtv/index.m3u8
 
-#EXTINF:-1 group-title="📺 Geral" tvg-id="GARSHOMTV.UK@SD" tvg-logo="https://i.imgur.com/KnbwUyb.png",Garshom TV (360p) [Not 24/7]
-https://og2qd3aal7an-hls-live.5centscdn.com/garshomtv/d0dbe915091d400bd8ee7f27f0791303.sdp/playlist.m3u8
-
 #EXTINF:-1 group-title="📺 Geral" tvg-id="GLOBOTV.HN@SD" tvg-logo="https://i.imgur.com/hxGvZ77.png",Globo TV (1080p) [Not 24/7]
 https://panel.dattalive.com/8122/8122/playlist.m3u8
 
@@ -21311,9 +21200,6 @@ https://stream.streaming4u.hu/GloboTV/index.m3u8
 
 #EXTINF:-1 group-title="📺 Geral" tvg-id="GTNTV.KE@SD" tvg-logo="https://i.imgur.com/CSCZW6L.png",GTN TV (1080p) [Not 24/7]
 https://goliveafrica.media:9998/live/644e07abdc1d3/index.m3u8
-
-#EXTINF:-1 group-title="📺 Geral" tvg-id="HAMAIKATELEBISTA.ES@SD" tvg-logo="https://i.imgur.com/HR3G3Ie.png",Hamaika Telebista (1080p)
-https://cdn3.wowza.com/1/RERMR282dnU5eE5Z/OHY0dVFs/hls/live/playlist.m3u8
 
 #EXTINF:-1 group-title="📺 Geral" tvg-id="HISTORY_AND_WARFARE_NOW_1080P" tvg-logo="",History and Warfare Now (1080p)
 https://d28gzbv9fhdm3h.cloudfront.net/playlist/amg00376-magellantv-historyandwarfarenowaunzin-samsungau/playlist.m3u8
@@ -21345,29 +21231,11 @@ https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/6
 #EXTINF:-1 group-title="📺 Geral" tvg-id="JAMTV.IR@SD" tvg-logo="https://i.ibb.co/WpjKp2z4/jam.png",Jam TV [Geo-blocked]
 https://hidden-mud-9dcf.nhhwkiszzzvcuojxdo.workers.dev/?url=https://live-azd1113.telewebion.com/ek/jam/live/1080p/index.m3u8
 
-#EXTINF:-1 group-title="📺 Geral" tvg-id="KHUSHBOOBANGLA.IN@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_KHUSHBOO_BANGLA/images/LOGO_HD/image.png",Khushboo Bangla (720p)
-https://cdn-4.pishow.tv/live/1473/master.m3u8
-
 #EXTINF:-1 group-title="📺 Geral" tvg-id="KSBYDT1.US@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/NBC_logo_2022_%28vertical%29.svg/512px-NBC_logo_2022_%28vertical%29.svg.png",KSBY News San Louis Obispo CA (720p)
 https://content.uplynk.com/channel/5545aa8a7e5a480d85fd1cff8d0cf610.m3u8
 
-#EXTINF:-1 group-title="📺 Geral" tvg-id="KURDMAXSHOW.IQ@SD" tvg-logo="https://i.imgur.com/XTmyGmL.png",KurdMax Show (720p)
-https://6476e46b58f91.streamlock.net/liveTrans/SHOWS123/playlist.m3u8
-
-#EXTINF:-1 group-title="📺 Geral" tvg-id="KURDMAXSORANI.IQ@SD" tvg-logo="https://i.imgur.com/JkK8HG8.png",KurdMax Sorani (1080p)
-https://6476e46b58f91.streamlock.net/liveTrans/KURDS2211/playlist.m3u8
-
-#EXTINF:-1 group-title="📺 Geral" tvg-id="LEOMAX24.RU@SD" tvg-logo="https://i.imgur.com/qU9ohQu.png",Leomax 24 (1080p)
-https://tvshops.bonus-tv.ru/cdn/shop24/playlist.m3u8
-
 #EXTINF:-1 group-title="📺 Geral" tvg-id="LIMTV.PY@SD" tvg-logo="https://i.imgur.com/CALoCyo.png",LIM TV (720p)
 https://tv.invasivamedia.com/hls/limtv.m3u8
-
-#EXTINF:-1 group-title="📺 Geral" tvg-id="LOGOPLUTOTV.US@SD" tvg-logo="https://i.imgur.com/GtNgJ28.png",Logo Pluto TV
-https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5ce5a8954311f992edbe1da2/master.m3u8?appName=web&appVersion=9.19.0&deviceDNT=0&deviceId=affbdbfa-5fa3-48af-8369-57c005daef42&deviceMake=firefox&deviceModel=web&deviceType=web&deviceVersion=147.0.0&serverSideAds=false&sid=7a4f0ec5-1121-49bf-bdc9-921f05b36c60
-
-#EXTINF:-1 group-title="📺 Geral" tvg-id="MAHAAMAX.IN@SD" tvg-logo="https://objectstorage.ap-mumbai-1.oraclecloud.com/p/7Eg7LPw1gBcncVDrfwf__7yyrg13awaU6DmMk4gutavGYZgoAuAziv8e0aSEdU4G/n/bmaqqlwez184/b/GTPL_CHANNEL_LOGO/o/gtpl/MAHAA+MAX+LOGO.png",Mahaa Max (1080p)
-https://d8wpu6ewxtzy0.cloudfront.net/mahaamaxx/index.m3u8
 
 #EXTINF:-1 group-title="📺 Geral" tvg-id="MAIS_MASTERCHEF_BRASIL" tvg-logo="",Mais MasterChef Brasil
 https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/681111be5e0764e297fb200e/master.m3u8?appName=web&appVersion=9.19.0&deviceDNT=0&deviceId=8ee99fa9-8924-42ef-bf8b-617216b5b280&deviceMake=firefox&deviceModel=web&deviceType=web&deviceVersion=147.0.0&serverSideAds=false&sid=3d71ccfd-ece4-4c00-a0a3-7804c6c9d459
@@ -21377,12 +21245,6 @@ https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/6
 
 #EXTINF:-1 group-title="📺 Geral" tvg-id="MAX_RUBY" tvg-logo="",Max & Ruby
 https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/62fb6a4feb32e8000708f4d0/master.m3u8?appName=web&appVersion=9.19.0&deviceDNT=0&deviceId=32de4823-7501-4845-ba26-8699462954dd&deviceMake=firefox&deviceModel=web&deviceType=web&deviceVersion=147.0.0&serverSideAds=false&sid=b13e4d19-076f-4d67-89b2-590286fe902f
-
-#EXTINF:-1 group-title="📺 Geral" tvg-id="MAXIVISIONTV.GT@SD" tvg-logo="https://i.imgur.com/UC8WrEN.jpg",Maxivisión TV (720p)
-https://video03.logicahost.com.br/maxivisiontv/maxivisiontv/playlist.m3u8
-
-#EXTINF:-1 group-title="📺 Geral" tvg-id="MAXTV.CO@HD" tvg-logo="https://gia.tv/streams/pstream/209851.png",MaxTV [Not 24/7]
-https://inliveserver.com:1936/8078/8078/playlist.m3u8
 
 #EXTINF:-1 group-title="📺 Geral" tvg-id="MAXTV.CH@SD" tvg-logo="https://i.postimg.cc/02YKz58q/maxtv.png",MaxTV/Dieu TV (1080p)
 https://cdn.katapy.io/cache/stream/katapytv/dieu/playlist.m3u8
@@ -21398,9 +21260,6 @@ https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/6
 
 #EXTINF:-1 group-title="📺 Geral" tvg-id="MMTV.MV@SD" tvg-logo="https://i.imgur.com/21tpl5b.png",MMTV (1080p)
 https://sendlive.online/hls/mmtv.m3u8
-
-#EXTINF:-1 group-title="📺 Geral" tvg-id="MARUTAMTV.IN@SD" tvg-logo="https://i.imgur.com/cFNw4Af.png",MNTV (1080p)
-https://mntv.livebox.co.in/mntvhls/live.m3u8
 
 #EXTINF:-1 group-title="📺 Geral" tvg-id="MODERN_MARVELS_BY_HISTORY" tvg-logo="",Modern Marvels by HISTORY
 https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/65775d29dfed030008cb3db2/master.m3u8?appName=web&appVersion=9.19.0&deviceDNT=0&deviceId=affbdbfa-5fa3-48af-8369-57c005daef42&deviceMake=firefox&deviceModel=web&deviceType=web&deviceVersion=147.0.0&serverSideAds=false&sid=2919065d-9116-493e-b537-8bb2d3d970cc
@@ -21420,9 +21279,6 @@ https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/6
 #EXTINF:-1 group-title="📺 Geral" tvg-id="MTV_1080P" tvg-logo="",MTV (1080p)
 https://shls-live-enc.edgenextcdn.net/out/v1/45ad6fbe1f7149ad9f05f8aefc38f6c0/index.m3u8
 
-#EXTINF:-1 group-title="📺 Geral" tvg-id="MTV.FR@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/MTV_2021_%28brand_version%29.svg/512px-MTV_2021_%28brand_version%29.svg.png",MTV (1080p)
-https://viamotionhsi.netplus.ch/live/eds/mtvfrance/browser-HLS8/mtvfrance.m3u8
-
 #EXTINF:-1 group-title="📺 Geral" tvg-id="MTVLEBANON.LB@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/7/75/Murr_tv.png",MTV (1080p) [Not 24/7]
 https://hms.pfs.gdn/v1/broadcast/mtv/playlist.m3u8
 
@@ -21434,9 +21290,6 @@ https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5
 
 #EXTINF:-1 group-title="📺 Geral" tvg-id="MTV_ARE_YOU_THE_ONE" tvg-logo="",MTV Are You The One?
 https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/642e9da3c91e10000884e80f/master.m3u8?appName=web&appVersion=9.19.0&deviceDNT=0&deviceId=7089727d-21c4-4175-9100-a14521359b66&deviceMake=firefox&deviceModel=web&deviceType=web&deviceVersion=147.0.0&serverSideAds=false&sid=4a96f0f7-178c-4c7b-ba7d-6748253a02ee
-
-#EXTINF:-1 group-title="📺 Geral" tvg-id="MTVAVA.FI@SD" tvg-logo="https://i.imgur.com/WxNCiAk.png",MTV Ava (720p)
-https://live-fi.tvkaista.net/ava/live.m3u8
 
 #EXTINF:-1 group-title="📺 Geral" tvg-id="MTV_AWKWARD" tvg-logo="",MTV Awkward
 https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/642ea097e0789d000834ae7c/master.m3u8?appName=web&appVersion=9.19.0&deviceDNT=0&deviceId=7089727d-21c4-4175-9100-a14521359b66&deviceMake=firefox&deviceModel=web&deviceType=web&deviceVersion=147.0.0&serverSideAds=false&sid=02e0e9fa-fb31-4561-a357-9c573a3b37ac
@@ -21579,12 +21432,6 @@ http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5c
 #EXTINF:-1 group-title="📺 Geral" tvg-id="MTV_PLUTO_TV" tvg-logo="",MTV Pluto TV
 https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5fab088b3279760007d4e4fd/master.m3u8?appName=web&appVersion=9.19.0&deviceDNT=0&deviceId=610c8f98-68e8-48e7-9cc5-5dd3fefdcab5&deviceMake=firefox&deviceModel=web&deviceType=web&deviceVersion=147.0.0&serverSideAds=false&sid=9820bda5-6478-4599-ba78-f039fa0229cb
 
-#EXTINF:-1 group-title="📺 Geral" tvg-id="MTVPLUTOTV.US@AUSTRIA" tvg-logo="https://i.imgur.com/WsQRCmZ.png",MTV Pluto TV
-http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5caf325764025859afdd6c4d/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=1b1eea50-4b81-11ef-a8ac-e146e4e7be02&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&serverSideAds=false&sid=d91aa96f-4975-4e0e-ae56-4a7f2e2383b7
-
-#EXTINF:-1 group-title="📺 Geral" tvg-id="MTVPLUTOTV.US@US" tvg-logo="https://i.imgur.com/WsQRCmZ.png",MTV Pluto TV
-https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5ca672f515a62078d2ec0ad2/master.m3u8?appName=web&appVersion=9.19.0&deviceDNT=0&deviceId=affbdbfa-5fa3-48af-8369-57c005daef42&deviceMake=firefox&deviceModel=web&deviceType=web&deviceVersion=147.0.0&serverSideAds=false&sid=fd86539f-1db9-4ebf-a4a9-98719841c444
-
 #EXTINF:-1 group-title="📺 Geral" tvg-id="MTV_REALITY" tvg-logo="",MTV Reality
 https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/6493f4f566e485000853d640/master.m3u8?appName=web&appVersion=9.19.0&deviceDNT=0&deviceId=c01994e4-e1a1-4951-a355-2a30aa511907&deviceMake=firefox&deviceModel=web&deviceType=web&deviceVersion=147.0.0&serverSideAds=false&sid=0c9103db-59de-40fb-a1c9-5bcd71acd8c0
 
@@ -21645,9 +21492,6 @@ https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/6
 #EXTINF:-1 group-title="📺 Geral" tvg-id="MTV_RIDICULOUSNESS" tvg-logo="",MTV Ridiculousness
 https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/62cda0dfddc1040008fccacc/master.m3u8?appName=web&appVersion=9.19.0&deviceDNT=0&deviceId=ef438a77-24b9-40a1-9b9b-e24ca3052bea&deviceMake=firefox&deviceModel=web&deviceType=web&deviceVersion=147.0.0&serverSideAds=false&sid=169a52db-bde1-4ab8-844d-0022a9c6198b
 
-#EXTINF:-1 group-title="📺 Geral" tvg-id="MTVRIDICULOUSNESS.US@AUSTRIA" tvg-logo="https://i.imgur.com/GIKkbjT.png",MTV Ridiculousness
-http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5f9847fd513250000728a9a5/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=1b1eea52-4b81-11ef-a8ac-e146e4e7be02&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&serverSideAds=false&sid=f7637460-bb95-4ce8-9c82-0af6b2f51601
-
 #EXTINF:-1 group-title="📺 Geral" tvg-id="MTV_ROCKS" tvg-logo="",MTV Rocks
 https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/66a01e07d2d50d0008100d6a/master.m3u8?appName=web&appVersion=9.19.0&deviceDNT=0&deviceId=8ee99fa9-8924-42ef-bf8b-617216b5b280&deviceMake=firefox&deviceModel=web&deviceType=web&deviceVersion=147.0.0&serverSideAds=false&sid=76e579b2-bc09-466e-9f4c-a6a29856ce94
 
@@ -21701,9 +21545,6 @@ https://raw.githubusercontent.com/UzunMuhalefet/streams/refs/heads/main/myvideo-
 
 #EXTINF:-1 group-title="📺 Geral" tvg-id="MTV_VERGUENZA_AJENA" tvg-logo="",MTV Vergüenza ajena
 https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/63eb9495a8b227000841bf64/master.m3u8?appName=web&appVersion=9.19.0&deviceDNT=0&deviceId=13a07cf5-9cd9-48a5-8101-764fc4a1e908&deviceMake=firefox&deviceModel=web&deviceType=web&deviceVersion=147.0.0&serverSideAds=false&sid=eb485a3d-cdf7-4008-a002-c0bf57b8542b
-
-#EXTINF:-1 group-title="📺 Geral" tvg-id="NETMAXTV.GR@SD" tvg-logo="https://i.imgur.com/dLvRD4k.png",Netmax TV (720p) [Not 24/7]
-http://live.netmaxtv.com:8080/live/live/playlist.m3u8
 
 #EXTINF:-1 group-title="📺 Geral" tvg-id="NICK_JR_CLUB" tvg-logo="",Nick Jr Club
 https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/648055a3ee5cc40008af7bfa/master.m3u8?appName=web&appVersion=9.19.0&deviceDNT=0&deviceId=c01994e4-e1a1-4951-a355-2a30aa511907&deviceMake=firefox&deviceModel=web&deviceType=web&deviceVersion=147.0.0&serverSideAds=false&sid=198e1178-bd4a-4159-8a08-0e56bca4a15f
@@ -21776,9 +21617,6 @@ https://cdn.streamhispanatv.net:3210/live/nimtvgtlive.m3u8
 
 #EXTINF:-1 group-title="📺 Geral" tvg-id="OFTVOFFENBACH.DE@SD" tvg-logo="https://i.imgur.com/WAcxCJr.png",OF-TV Offenbach (720p)
 https://5864df9ceac85.streamlock.net/germanpictures-live/_definst_/mp4:streamschedule/playlist.m3u8
-
-#EXTINF:-1 group-title="📺 Geral" tvg-id="OMANTVCULTURAL.OM@SD" tvg-logo="https://i.imgur.com/b38wNPK.png",Oman Althakafia (1080p)
-https://partwota.cdn.mgmlcdn.com/omcultural/smil:omcultural.stream.smil/chunklist.m3u8
 
 #EXTINF:-1 group-title="📺 Geral" tvg-id="OPENROTTERDAMTV.NL@SD" tvg-logo="https://i.imgur.com/nWahRAb.png",Open Rotterdam (480p) [Not 24/7]
 https://ms2.mx-cd.net/tv/141-573555/OPEN_Rotterdam.smil/playlist.m3u8
@@ -21876,9 +21714,6 @@ https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/6
 #EXTINF:-1 group-title="📺 Geral" tvg-id="PLUTO_TV_ANIME" tvg-logo="",Pluto TV Anime
 https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5dcde17bf6591d0009839e02/master.m3u8?appName=web&appVersion=9.19.0&deviceDNT=0&deviceId=610c8f98-68e8-48e7-9cc5-5dd3fefdcab5&deviceMake=firefox&deviceModel=web&deviceType=web&deviceVersion=147.0.0&serverSideAds=false&sid=08cb6d7a-7dce-4b9a-b97f-2a1038d3360e
 
-#EXTINF:-1 group-title="📺 Geral" tvg-id="PLUTOTVANIME.US@AUSTRIA" tvg-logo="https://i.imgur.com/bvbn8pa.png",Pluto TV Anime
-http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/608181d420fc8500075f612a/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=1b1f5f82-4b81-11ef-a8ac-e146e4e7be02&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&serverSideAds=false&sid=95e1f29c-bf6d-41bb-9fce-486049aaae5d
-
 #EXTINF:-1 group-title="📺 Geral" tvg-id="PLUTO_TV_ANIME_MOVIES" tvg-logo="",Pluto TV Anime Movies
 https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/67ed8f7e443f0671bc2b2368/master.m3u8?appName=web&appVersion=9.19.0&deviceDNT=0&deviceId=affbdbfa-5fa3-48af-8369-57c005daef42&deviceMake=firefox&deviceModel=web&deviceType=web&deviceVersion=147.0.0&serverSideAds=false&sid=01f7312e-fde2-49de-a06f-7b2c3d9f68d9
 
@@ -21890,9 +21725,6 @@ https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5
 
 #EXTINF:-1 group-title="📺 Geral" tvg-id="PLUTO_TV_AVENTURE" tvg-logo="",Pluto TV Aventure
 https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/611e7811eb9daf000764cbfd/master.m3u8?appName=web&appVersion=9.19.0&deviceDNT=0&deviceId=af957bbe-0438-4805-a305-7c8656f00195&deviceMake=firefox&deviceModel=web&deviceType=web&deviceVersion=147.0.0&serverSideAds=false&sid=1018445e-32b7-4b28-acb0-1d5e6c31480b
-
-#EXTINF:-1 group-title="📺 Geral" tvg-id="PLUTOTVBACKCOUNTRY.US@SD" tvg-logo="https://i.imgur.com/KnlQzs7.png",Pluto TV Backcountry
-https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5cabdf1437b88b26947346b2/master.m3u8?appName=web&appVersion=9.19.0&deviceDNT=0&deviceId=affbdbfa-5fa3-48af-8369-57c005daef42&deviceMake=firefox&deviceModel=web&deviceType=web&deviceVersion=147.0.0&serverSideAds=false&sid=1f9bf269-fe37-45f5-9d59-66e8ce88f171
 
 #EXTINF:-1 group-title="📺 Geral" tvg-id="PLUTO_TV_BANG_BANG" tvg-logo="",Pluto TV Bang Bang
 https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/663b9dc7cb3ea10008f1a0ce/master.m3u8?appName=web&appVersion=9.19.0&deviceDNT=0&deviceId=8ee99fa9-8924-42ef-bf8b-617216b5b280&deviceMake=firefox&deviceModel=web&deviceType=web&deviceVersion=147.0.0&serverSideAds=false&sid=aca1f17a-89f9-4d70-b02b-b23e31907c2e
@@ -22221,9 +22053,6 @@ http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5d
 #EXTINF:-1 group-title="📺 Geral" tvg-id="PLUTO_TV_FOREVER_KIDS" tvg-logo="",Pluto TV Forever Kids
 https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/691ddf2a3ae32cf55263476d/master.m3u8?appName=web&appVersion=9.19.0&deviceDNT=0&deviceId=13a07cf5-9cd9-48a5-8101-764fc4a1e908&deviceMake=firefox&deviceModel=web&deviceType=web&deviceVersion=147.0.0&serverSideAds=false&sid=ecb5270d-6b25-4cef-b5fe-30c77f1ac724
 
-#EXTINF:-1 group-title="📺 Geral" tvg-id="PLUTOTVGAMESHOWS.US@SD" tvg-logo="https://i.imgur.com/JXZEg2e.png",Pluto TV Game Shows
-https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/6036e7c385749f00075dbd3b/master.m3u8?appName=web&appVersion=9.19.0&deviceDNT=0&deviceId=affbdbfa-5fa3-48af-8369-57c005daef42&deviceMake=firefox&deviceModel=web&deviceType=web&deviceVersion=147.0.0&serverSideAds=false&sid=b5a7ff07-f51a-4f35-9623-a01ba3d2061e
-
 #EXTINF:-1 group-title="📺 Geral" tvg-id="PLUTO_TV_GAMING_POR_UBISOFT" tvg-logo="",Pluto TV Gaming por Ubisoft
 https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/64c815e8a1c6130008fef928/master.m3u8?appName=web&appVersion=9.19.0&deviceDNT=0&deviceId=8ee99fa9-8924-42ef-bf8b-617216b5b280&deviceMake=firefox&deviceModel=web&deviceType=web&deviceVersion=147.0.0&serverSideAds=false&sid=10593084-c005-4254-b753-194ac16307be
 
@@ -22488,9 +22317,6 @@ https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5
 #EXTINF:-1 group-title="📺 Geral" tvg-id="PLUTO_TV_NATURE" tvg-logo="",Pluto TV Nature
 http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5be1c3f9851dd5632e2c91b2/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=bc85a131-4b91-11ef-8a44-83c5e90e038f&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&serverSideAds=false&sid=9fa0a69a-a988-40a1-8f47-da6f6159bf5c
 
-#EXTINF:-1 group-title="📺 Geral" tvg-id="PLUTOTVNATURE.US@AUSTRIA" tvg-logo="https://i.imgur.com/PtWUmss.png",Pluto TV Nature
-http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5be1c3f9851dd5632e2c91b2/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=1b1ffbc1-4b81-11ef-a8ac-e146e4e7be02&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&serverSideAds=false&sid=e79c49d9-6474-4184-9d9d-a3633162a2cc
-
 #EXTINF:-1 group-title="📺 Geral" tvg-id="PLUTO_TV_NEGOCIO_FECHADO" tvg-logo="",Pluto TV Negócio Fechado
 https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/64ad7394798def00087b2bfe/master.m3u8?appName=web&appVersion=9.19.0&deviceDNT=0&deviceId=8ee99fa9-8924-42ef-bf8b-617216b5b280&deviceMake=firefox&deviceModel=web&deviceType=web&deviceVersion=147.0.0&serverSideAds=false&sid=a80bcc43-945d-4e40-a924-6b2d707cf3dc
 
@@ -22610,9 +22436,6 @@ https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/6
 
 #EXTINF:-1 group-title="📺 Geral" tvg-id="PLUTO_TV_REALITY" tvg-logo="",Pluto TV Reality
 https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5dcde197f6591d0009839e04/master.m3u8?appName=web&appVersion=9.19.0&deviceDNT=0&deviceId=610c8f98-68e8-48e7-9cc5-5dd3fefdcab5&deviceMake=firefox&deviceModel=web&deviceType=web&deviceVersion=147.0.0&serverSideAds=false&sid=cca9b359-2f81-401e-be6b-a279ea931d1e
-
-#EXTINF:-1 group-title="📺 Geral" tvg-id="PLUTOTVREALITY.US@US" tvg-logo="https://i.imgur.com/OvN7FCv.png",Pluto TV Reality
-https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5d8bf0b06d2d855ee15115e3/master.m3u8?appName=web&appVersion=9.19.0&deviceDNT=0&deviceId=affbdbfa-5fa3-48af-8369-57c005daef42&deviceMake=firefox&deviceModel=web&deviceType=web&deviceVersion=147.0.0&serverSideAds=false&sid=db361d66-1d4a-437a-a224-9dd542cf8260
 
 #EXTINF:-1 group-title="📺 Geral" tvg-id="PLUTO_TV_RECORD_NEWS" tvg-logo="",Pluto TV Record News
 https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/6102e04e9ab1db0007a980a1/master.m3u8?appName=web&appVersion=9.19.0&deviceDNT=0&deviceId=8ee99fa9-8924-42ef-bf8b-617216b5b280&deviceMake=firefox&deviceModel=web&deviceType=web&deviceVersion=147.0.0&serverSideAds=false&sid=042474bb-ca34-426a-8c0f-cf4325d4eaaf
@@ -23031,9 +22854,6 @@ https://rrr.sz.xlcdn.com/?account=ndc_mediagroep&file=NDC3&output=playlist.m3u8&
 #EXTINF:-1 group-title="📺 Geral" tvg-id="PODRADIO_PA_PLUTO_TV" tvg-logo="",PodRadio på Pluto TV
 https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/67f79fdb3481170e68c0bc38/master.m3u8?appName=web&appVersion=9.19.0&deviceDNT=0&deviceId=78b29450-7022-4485-b983-23f30e23925f&deviceMake=firefox&deviceModel=web&deviceType=web&deviceVersion=147.0.0&serverSideAds=false&sid=3f486aca-d4f8-4986-8f22-917913c10516
 
-#EXTINF:-1 group-title="📺 Geral" tvg-id="POWERMAXRADIOTV.AR@SD" tvg-logo="https://i.ibb.co/qgZLYDj/channels4-profile-6.jpg",Power Max Radio TV (720p)
-https://videostream.shockmedia.com.ar:19360/radio1045/radio1045.m3u8
-
 #EXTINF:-1 group-title="📺 Geral" tvg-id="PROSIEBENMAXX.DE@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/ProSieben_MAXX_Logo.svg/512px-ProSieben_MAXX_Logo.svg.png",ProSieben Maxx (576p)
 http://79.232.88.203:9981/stream/channelid/1038721938
 
@@ -23073,9 +22893,6 @@ https://live.leveex.hr/hls/live.m3u8
 #EXTINF:-1 group-title="📺 Geral" tvg-id="SERIES_BY_PLUTO_TV" tvg-logo="",Series by Pluto TV
 https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5f8ed2d1c34c2300073bf02c/master.m3u8?appName=web&appVersion=9.19.0&deviceDNT=0&deviceId=af957bbe-0438-4805-a305-7c8656f00195&deviceMake=firefox&deviceModel=web&deviceType=web&deviceVersion=147.0.0&serverSideAds=false&sid=459b5c87-c616-4b12-ba2d-e0cf4f107393
 
-#EXTINF:-1 group-title="📺 Geral" tvg-id="SHOPPINGNT.KR@SD" tvg-logo="https://i.imgur.com/BgbJp5X.png",Shopping NT (720p)
-https://live.shoppingntmall.com/live/10011.m3u8
-
 #EXTINF:-1 group-title="📺 Geral" tvg-id="SILKUNIVERSAL.GE@SD" tvg-logo="https://i.imgur.com/z0XHsPE.png",Silk Universal
 http://dvrfl05.bozztv.com/gin-silkuniversal/index.m3u8
 
@@ -23088,17 +22905,11 @@ https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/6
 #EXTINF:-1 group-title="📺 Geral" tvg-id="SMTV.ID@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/id/6/6e/Logo_SMTV_Sumedang.png",SMTV (720p) [Not 24/7]
 http://122.248.43.242:1935/SMTV/_definst_/myStream/playlist.m3u8
 
-#EXTINF:-1 group-title="📺 Geral" tvg-id="SONYAATH.IN@SD" tvg-logo="https://i.imgur.com/q4AwVq9.png",Sony Aath (576p)
-http://103.229.254.25:7001/play/a07a/index.m3u8
-
 #EXTINF:-1 group-title="📺 Geral" tvg-id="SONYCANALESCAPEPERFECTO.US@SD" tvg-logo="https://i.imgur.com/ohE9IgP.png",Sony Canal Escape Perfecto
 https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/605e479d5b8229000763e697/master.m3u8?appName=web&appVersion=9.19.0&deviceDNT=0&deviceId=affbdbfa-5fa3-48af-8369-57c005daef42&deviceMake=firefox&deviceModel=web&deviceType=web&deviceVersion=147.0.0&serverSideAds=false&sid=daee8d76-90a6-40d1-be5d-d4b6fa17612f
 
 #EXTINF:-1 group-title="📺 Geral" tvg-id="SONYCHANNEL.AR@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Sony_Channel_Logo.png/512px-Sony_Channel_Logo.png",Sony Channel (1080p)
 http://38.183.182.166:8000/play/a0vg/index.m3u8
-
-#EXTINF:-1 group-title="📺 Geral" tvg-id="SONYENTERTAINMENTTELEVISION.IN@HD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SET_HD/images/LOGO_HD/image.png",Sony Entertainment Television HD (720p)
-http://217.20.112.199/sethd/index.m3u8
 
 #EXTINF:-1 group-title="📺 Geral" tvg-id="SONYKALHINDI.US@SD" tvg-logo="https://i.imgur.com/9Qq8DKh.png",Sony KAL Hindi (1080p)
 https://wurlsonypicturestv.global.transmit.live/hls/68deeb1c0238cda82df543dd/v1/spt_sonykal_1/lg_us/latest/main/hls/playlist.m3u8
@@ -23114,15 +22925,6 @@ https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/6
 
 #EXTINF:-1 group-title="📺 Geral" tvg-id="SONY_ONE_SHARK_TANK_MEXICO" tvg-logo="",Sony One Shark Tank México
 https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/6647c02422494d000804b13a/master.m3u8?appName=web&appVersion=9.19.0&deviceDNT=0&deviceId=610c8f98-68e8-48e7-9cc5-5dd3fefdcab5&deviceMake=firefox&deviceModel=web&deviceType=web&deviceVersion=147.0.0&serverSideAds=false&sid=21e09ebe-efad-4225-aa28-448439b4de7a
-
-#EXTINF:-1 group-title="📺 Geral" tvg-id="SONYPAL.IN@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_PAL/images/LOGO_HD/image.png",SONY PAL (576p)
-http://103.78.149.54:8000/play/a016/index.m3u8
-
-#EXTINF:-1 group-title="📺 Geral" tvg-id="SONYSAB.IN@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_SAB/images/LOGO_HD/image.png",Sony SAB (720p)
-http://103.229.254.25:7001/play/a09s/index.m3u8
-
-#EXTINF:-1 group-title="📺 Geral" tvg-id="SONYSAB.IN@HD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_SAB/images/LOGO_HD/image.png",Sony SAB HD (1080p)
-http://103.229.254.25:7001/play/a0db/index.m3u8
 
 #EXTINF:-1 group-title="📺 Geral" tvg-id="STORAGE_WARS_BY_AE" tvg-logo="",Storage Wars by A&E
 https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/6887aaf4e3703b7d42b71a1e/master.m3u8?appName=web&appVersion=9.19.0&deviceDNT=0&deviceId=affbdbfa-5fa3-48af-8369-57c005daef42&deviceMake=firefox&deviceModel=web&deviceType=web&deviceVersion=147.0.0&serverSideAds=false&sid=41fe0799-3631-4b88-a25c-94db1efb80c6
@@ -23144,9 +22946,6 @@ http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5f
 
 #EXTINF:-1 group-title="📺 Geral" tvg-id="TELEMAX.AR@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Telemax_Argentina_%282018%29.png/512px-Telemax_Argentina_%282018%29.png",Telemax
 https://stream-gtlc.telecentro.net.ar/hls/telemaxhls/main.m3u8
-
-#EXTINF:-1 group-title="📺 Geral" tvg-id="TELEMAX.DO@SD" tvg-logo="https://i.imgur.com/QvKmjvV.png",Telemax (1080p) [Not 24/7]
-https://mlb.essastream.com:8081/telemax/tracks-v1a1/mono.m3u8
 
 #EXTINF:-1 group-title="📺 Geral" tvg-id="XEWHTDT.MX@SD" tvg-logo="https://i.imgur.com/klhTyDU.png",Telemax (XEWH-TDT) (1080p)
 https://s5.mexside.net:1936/telemax/telemax/playlist.m3u8
@@ -23186,15 +22985,6 @@ https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/6
 
 #EXTINF:-1 group-title="📺 Geral" tvg-id="TVSENADO.CL@SD" tvg-logo="https://i.imgur.com/CNUZ6ig.png",TV Senado (360p)
 https://janus-tv-ply.senado.cl/playlist/playlist.m3u8
-
-#EXTINF:-1 group-title="📺 Geral" tvg-id="TVMAX.PA@SD" tvg-logo="https://i.imgur.com/XcrkfGh.png",TVMAX (720p)
-https://bcovlive-a.akamaihd.net/74f665e9ff8447639d4de4b8b458d8ae/us-east-1/6058004209001/playlist_dvr.m3u8
-
-#EXTINF:-1 group-title="📺 Geral" tvg-id="TVRCULTURAL.RO@SD" tvg-logo="https://i.imgur.com/U9i70C9.png",TVR Cultural
-https://tvr-cultural.lg.mncdn.com/tvrcultural/smil:tvrcultural.smil/chunklist_b5160000.m3u8
-
-#EXTINF:-1 group-title="📺 Geral" tvg-id="TWEEDEKAMERMAXVANDERSTOELZAAL.NL@SD" tvg-logo="https://i.imgur.com/X9fezZ8.png",Tweede Kamer: Max van der Stoelzaal (1080p) [Not 24/7]
-https://livestreaming.b67buv2.tweedekamer.nl/live/maxvanderstoelzaal/index.m3u8?hd=1&keyframes=1&subtitles=live
 
 #EXTINF:-1 group-title="📺 Geral" tvg-id="UMTV.MX@SD" tvg-logo="https://i.imgur.com/sjxVdPh.png",UMTV (1080p) [Not 24/7]
 https://60417ddeaf0d9.streamlock.net/montemorelos/videomontemorelos/playlist.m3u8
@@ -23264,12 +23054,6 @@ https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/6
 
 #EXTINF:-1 group-title="📺 Geral" tvg-id="MTVVOLGOGRAD.RU@SD" tvg-logo="https://i.imgur.com/pdCAUrP.png",МТВ (Волгоград) (720p) [Not 24/7]
 http://hls.volgograd1vtv.cdnvideo.ru/volgograd1vtv/volgograd1vtv.sdp/playlist.m3u8
-
-#EXTINF:-1 group-title="📺 Geral" tvg-id="TNT4INTERNATIONAL.RU@SD" tvg-logo="https://i.imgur.com/SjdOaya.png",ТНТ4 International
-https://cdn4.skygo.mn/live/disk1/TNT4/HLSv3-FTA/TNT4.m3u8
-
-#EXTINF:-1 group-title="📺 Geral" tvg-id="TNTINTERNATIONAL.RU@SD" tvg-logo="https://i.imgur.com/l0RGbRI.png",ТНТ International
-https://cdn4.skygo.mn/live/disk1/THT/HLSv3-FTA/THT.m3u8
 
 #EXTINF:-1 group-title="📺 Geral" tvg-id="ANIMAX_544P" tvg-logo="",Animax (544p)
 http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=bs15
@@ -23463,9 +23247,6 @@ https://cdn.jmvstream.com/w/LVW-9591/LVW9591_PmXtgATnaS/playlist.m3u8
 #EXTINF:-1 group-title="📺 Geral" tvg-id="RECORDNEWS.BR@SD" tvg-logo="https://i.imgur.com/HZDRG0K.png",Record News (720p) [Geo-blocked]
 https://playplusnews-lh.akamaihd.net/i/pp_nws@377849/master.m3u8
 
-#EXTINF:-1 group-title="📺 Geral" tvg-id="STZTV.BR@SD" tvg-logo="https://i.imgur.com/SeF2I7q.png",STZ TV (1080p)
-https://cdn.live.br1.jmvstream.com/webtv/AVJ-12952/playlist/playlist.m3u8
-
 #EXTINF:-1 group-title="📺 Geral" tvg-id="TCM10HD.BR@SD" tvg-logo="https://i.imgur.com/aMuMVvB.png",TCM 10 HD (1080p)
 https://live.tcm10.com.br/tcm10hd/stream.m3u8
 
@@ -23481,12 +23262,6 @@ https://5ad482a77183d.streamlock.net/rodrigotvbrusque.com.br/5d880199c902eb4a1e8
 #EXTINF:-1 group-title="📺 Geral" tvg-id="TVDOPOVO.BR@SD" tvg-logo="https://i.imgur.com/58EQ5qX.png",TV do Povo (540p)
 https://video01.logicahost.com.br/tvdopovo1/tvdopovo1/playlist.m3u8
 
-#EXTINF:-1 group-title="📺 Geral" tvg-id="TVMODELO.BR@SD" tvg-logo="https://play-lh.googleusercontent.com/7kD2A0jUqWrVMxd_15RAPt9S0P9pxPMpNEc9dHOSl8Bi0DOMVlQHijXaL7ppUC5F46g",TV Modelo (720p)
-https://video09.logicahost.com.br/tvmodelo/tvmodelo/playlist.m3u
-
-#EXTINF:-1 group-title="📺 Geral" tvg-id="TVPARAENSE.BR@HD" tvg-logo="https://duckduckgo.com/i/e408ea02.png",TV Paraense (720p)
-https://video09.logicahost.com.br/tvparaense/tvparaense/playlist.m3u
-
 #EXTINF:-1 group-title="📺 Geral" tvg-id="TVSIMCACHOEIRO.BR@SD" tvg-logo="https://i.imgur.com/t5oUK3C.png",TV Sim Cachoeiro (720p)
 https://5cf4a2c2512a2.streamlock.net/8104/8104/playlist.m3u8
 
@@ -23496,9 +23271,6 @@ https://5cf4a2c2512a2.streamlock.net/8132/8132/playlist.m3u8
 #EXTINF:-1 group-title="📺 Geral" tvg-id="TVSIMSAOMATEUS.BR@SD" tvg-logo="https://i.imgur.com/t5oUK3C.png",TV Sim São Mateus (720p)
 https://5cf4a2c2512a2.streamlock.net/8236/8236/playlist.m3u8
 
-#EXTINF:-1 group-title="📺 Geral" tvg-id="TVZOOM.BR@SD" tvg-logo="https://i.imgur.com/jCGrjf5.png",TV Zoom (720p)
-https://cdn.jmvstream.com/w/LVW-9730/LVW9730_LmUwslM8jt/playlist.m3u8
-
 #EXTINF:-1 group-title="📺 Geral" tvg-id="TVIDEONEWS.BR@SD" tvg-logo="https://i.imgur.com/vstHOYx.png",TVídeoNews (720p) [Not 24/7]
 https://video01.logicahost.com.br/tvideonews/tvideonews/playlist.m3u8
 
@@ -23507,9 +23279,6 @@ https://hlspackager.akamaized.net/live/DB/ALYAUM_TV/HLS/ALYAUM_TV.m3u8
 
 #EXTINF:-1 group-title="📺 Geral" tvg-id="BFMTV.FR@SD" tvg-logo="https://i.imgur.com/YJCcczD.png",BFM TV (576p)
 https://live-cdn-stream-euw1.bfmtv.bct.nextradiotv.com/master.m3u8
-
-#EXTINF:-1 group-title="📺 Geral" tvg-id="CEACOMTV.BO@SD" tvg-logo="https://i.imgur.com/hutdRfk.png",CEACOM TV [Not 24/7]
-https://eu1.servers10.com:8081/ceacom/index.m3u8
 
 #EXTINF:-1 group-title="📺 Geral" tvg-id="DIMTV.TR@SD" tvg-logo="https://i.imgur.com/X4QFDhk.png",DİM TV (720p) [Geo-blocked]
 https://live.artidijitalmedya.com/artidijital_dimtv/dimtv/playlist.m3u8
@@ -23751,9 +23520,6 @@ http://103.78.149.54:8000/play/a01p/index.m3u8
 #EXTINF:-1 group-title="📺 Geral" tvg-id="UNIVERSALCINEMA.US@SD" tvg-logo="https://i.imgur.com/XxfET68.png",Universal Cinema (480p)
 http://190.2.212.209:8050/play/a0q3
 
-#EXTINF:-1 group-title="📺 Geral" tvg-id="UNIVERSALCOMEDY.US@SD" tvg-logo="https://i.imgur.com/avBL8pQ.png",Universal Comedy (480p)
-http://190.2.212.209:8050/play/a0q4
-
 #EXTINF:-1 group-title="📺 Geral" tvg-id="ZEEBISKOPE.IN@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_BISKOPE/images/LOGO_HD/LOGO_HD_image.png",Zee Biskope (576p)
 http://103.78.149.54:8000/play/a00x/index.m3u8
 
@@ -23819,6 +23585,156 @@ https://483a1e90c18641c9a6d27becd41ad892.mediatailor.us-west-2.amazonaws.com/v1/
 
 #EXTINF:-1 group-title="📺 Geral" tvg-id="UNIVERSALCRIME.US@EAST" tvg-logo="https://i.imgur.com/OwSlGMu.png",Universal Crime
 https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/6549341853fc9700083901ac/master.m3u8?appName=web&appVersion=9.19.0&deviceDNT=0&deviceId=affbdbfa-5fa3-48af-8369-57c005daef42&deviceMake=firefox&deviceModel=web&deviceType=web&deviceVersion=147.0.0&serverSideAds=false&sid=8ecd73be-5fa9-442a-8146-6956f827a572
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="BDCTV.BR@SD" tvg-logo="https://i.imgur.com/6ckHV6k.jpeg",BDC TV (576p)
+https://video01.kshost.com.br/bdctv/bdctv/playlist.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="BETPLUTOTV.US@BRAZIL" tvg-logo="https://i.imgur.com/Kq9WKZg.png",BET Pluto TV
+https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5ff768b6a4c8b80008498610/master.m3u8?appName=web&appVersion=9.19.0&deviceDNT=0&deviceId=8ee99fa9-8924-42ef-bf8b-617216b5b280&deviceMake=firefox&deviceModel=web&deviceType=web&deviceVersion=147.0.0&serverSideAds=false&sid=4e259889-45f7-4d45-a10d-1d3eb4ec63ba
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="CABOFRIOTV.BR@SD" tvg-logo="https://i.imgur.com/mPi6Wp3.png",Cabo Frio TV (720p)
+https://59f2354c05961.streamlock.net:1443/ararutv/_definst_/ararutv/playlist.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="CHROMATV.BR@SD" tvg-logo="https://i.imgur.com/SnaIMgj.png",Chroma TV (480p)
+https://5c483b9d1019c.streamlock.net/8054/8054/playlist.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="CONECTAMAISTV.BR@SD" tvg-logo="https://i.imgur.com/qHwTWlz.png",Conecta+ TV (720p)
+http://189.14.239.62:1935/webtv/livestream1/playlist.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="ELEMENTALCHANNEL.BR@SD" tvg-logo="https://i.imgur.com/8upyApg.png",Elemental Channel (1080p)
+https://5d82644094cc0.streamlock.net/8116/8116/playlist.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="ELYTV.BR@SD" tvg-logo="https://i.imgur.com/1eHNe91.png",ElyTV (360p)
+https://stmv1.srvsite.com/ely/ely/playlist.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="LOADING.BR@SD" tvg-logo="https://i.imgur.com/R0aflu1.png",Loading (720p)
+https://stmv1.srvif.com/loadingtv/loadingtv/playlist.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="PLUTOTVANIME.US@BRAZIL" tvg-logo="https://i.imgur.com/bvbn8pa.png",Pluto TV Anime
+https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5f12136385bccc00070142ed/master.m3u8?appName=web&appVersion=9.19.0&deviceDNT=0&deviceId=8ee99fa9-8924-42ef-bf8b-617216b5b280&deviceMake=firefox&deviceModel=web&deviceType=web&deviceVersion=147.0.0&serverSideAds=false&sid=1c24686e-ebe5-48c3-93bb-0343b4009dae
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="PLUTOTVRETRO.US@BRAZIL" tvg-logo="https://i.imgur.com/wztO3GM.png",Pluto TV Retrô
+https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5f1212ad1728050007a523b8/master.m3u8?appName=web&appVersion=9.19.0&deviceDNT=0&deviceId=8ee99fa9-8924-42ef-bf8b-617216b5b280&deviceMake=firefox&deviceModel=web&deviceType=web&deviceVersion=147.0.0&serverSideAds=false&sid=c87fa106-af6f-4844-9828-d2ce71829bc9
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="REDENGT.BR@SD" tvg-logo="https://i.imgur.com/ZFN1R4B.png",Rede NGT (1080p)
+https://isaocorp.cloudecast.com/ngt/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="TVCURUCA.BR@SD" tvg-logo="https://i.imgur.com/JdCKNZ4.png",TV Curuça (360p)
+https://stmv1.srvif.com/tvcurucasp/tvcurucasp/playlist.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="TVDIGITALBIRIGUI.BR@SD" tvg-logo="https://i.imgur.com/B5ZTMzY.png",TV Digital Biriguí (640p)
+http://wse01.logicahost.com.br:1935/tvdigitalbirigui/_definst_/tvdigitalbirigui/playlist.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="TVEMPIRE.BR@SD" tvg-logo="https://i.imgur.com/tT1NVfV.png",TV Empire Magazine (720p)
+https://5d82644094cc0.streamlock.net/empiremagazinetv/empiremagazinetv/playlist.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="TVGRANDENATAL.BR@SD" tvg-logo="https://i.imgur.com/MTuErdw.png",TV Grande Natal (1080p)
+http://tvgrandenatalhd.duckdns.org:8080/hls/live.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="TVMODELO.BR@SD" tvg-logo="https://play-lh.googleusercontent.com/7kD2A0jUqWrVMxd_15RAPt9S0P9pxPMpNEc9dHOSl8Bi0DOMVlQHijXaL7ppUC5F46g",TV Modelo (720p)
+https://video09.logicahost.com.br/tvmodelo/tvmodelo/playlist.m3u
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="TVPARAENSE.BR@HD" tvg-logo="https://duckduckgo.com/i/e408ea02.png",TV Paraense (720p)
+https://video09.logicahost.com.br/tvparaense/tvparaense/playlist.m3u
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="TVVICOSA.BR@SD" tvg-logo="https://i.imgur.com/TZF55f9.png",TV Viçosa (480p)
+http://wz4.dnip.com.br/fratevitv/fratevitv.sdp/playlist.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="TVZOOM.BR@SD" tvg-logo="https://i.imgur.com/jCGrjf5.png",TV Zoom (720p)
+https://cdn.jmvstream.com/w/LVW-9730/LVW9730_LmUwslM8jt/playlist.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="VRTCHANNEL.BR@SD" tvg-logo="https://i.imgur.com/crszh3d.png",VRT Channel (720p)
+https://sistemavrt.vrtchannel.tv.br:3473/stream/play.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="AE.US@EAST" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/A%26E_Network_logo.svg/512px-A%26E_Network_logo.svg.png",A&E East (720p) [Not 24/7]
+https://tvpass.org/live/AEEast/hd
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="BETPLUTOTV.US@US" tvg-logo="https://i.imgur.com/Kq9WKZg.png",BET Pluto TV
+https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5ca670f6593a5d78f0e85aed/master.m3u8?appName=web&appVersion=9.19.0&deviceDNT=0&deviceId=affbdbfa-5fa3-48af-8369-57c005daef42&deviceMake=firefox&deviceModel=web&deviceType=web&deviceVersion=147.0.0&serverSideAds=false&sid=d1e7ed6c-ccdf-4736-a3e3-6995cf46b655
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="DREAMTV.MN@SD" tvg-logo="https://i.imgur.com/YPbvzgV.png",Dream TV (720p)
+https://cdn4.skygo.mn/live/disk1/Dreambox/HLSv3-FTA/Dreambox.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="KHUSHBOOBANGLA.IN@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_KHUSHBOO_BANGLA/images/LOGO_HD/image.png",Khushboo Bangla (720p)
+https://cdn-4.pishow.tv/live/1473/master.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="KURDMAXSHOW.IQ@SD" tvg-logo="https://i.imgur.com/XTmyGmL.png",KurdMax Show (720p)
+https://6476e46b58f91.streamlock.net/liveTrans/SHOWS123/playlist.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="KURDMAXSORANI.IQ@SD" tvg-logo="https://i.imgur.com/JkK8HG8.png",KurdMax Sorani (1080p)
+https://6476e46b58f91.streamlock.net/liveTrans/KURDS2211/playlist.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="LOGOPLUTOTV.US@SD" tvg-logo="https://i.imgur.com/GtNgJ28.png",Logo Pluto TV
+https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5ce5a8954311f992edbe1da2/master.m3u8?appName=web&appVersion=9.19.0&deviceDNT=0&deviceId=affbdbfa-5fa3-48af-8369-57c005daef42&deviceMake=firefox&deviceModel=web&deviceType=web&deviceVersion=147.0.0&serverSideAds=false&sid=7a4f0ec5-1121-49bf-bdc9-921f05b36c60
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="MAHAAMAX.IN@SD" tvg-logo="https://objectstorage.ap-mumbai-1.oraclecloud.com/p/7Eg7LPw1gBcncVDrfwf__7yyrg13awaU6DmMk4gutavGYZgoAuAziv8e0aSEdU4G/n/bmaqqlwez184/b/GTPL_CHANNEL_LOGO/o/gtpl/MAHAA+MAX+LOGO.png",Mahaa Max (1080p)
+https://d8wpu6ewxtzy0.cloudfront.net/mahaamaxx/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="MAXIVISIONTV.GT@SD" tvg-logo="https://i.imgur.com/UC8WrEN.jpg",Maxivisión TV (720p)
+https://video03.logicahost.com.br/maxivisiontv/maxivisiontv/playlist.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="MAXTV.CO@HD" tvg-logo="https://gia.tv/streams/pstream/209851.png",MaxTV [Not 24/7]
+https://inliveserver.com:1936/8078/8078/playlist.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="MARUTAMTV.IN@SD" tvg-logo="https://i.imgur.com/cFNw4Af.png",MNTV (1080p)
+https://mntv.livebox.co.in/mntvhls/live.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="MTV.FR@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/MTV_2021_%28brand_version%29.svg/512px-MTV_2021_%28brand_version%29.svg.png",MTV (1080p)
+https://viamotionhsi.netplus.ch/live/eds/mtvfrance/browser-HLS8/mtvfrance.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="MTVAVA.FI@SD" tvg-logo="https://i.imgur.com/WxNCiAk.png",MTV Ava (720p)
+https://live-fi.tvkaista.net/ava/live.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="MTVPLUTOTV.US@AUSTRIA" tvg-logo="https://i.imgur.com/WsQRCmZ.png",MTV Pluto TV
+http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5caf325764025859afdd6c4d/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=1b1eea50-4b81-11ef-a8ac-e146e4e7be02&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&serverSideAds=false&sid=d91aa96f-4975-4e0e-ae56-4a7f2e2383b7
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="MTVPLUTOTV.US@US" tvg-logo="https://i.imgur.com/WsQRCmZ.png",MTV Pluto TV
+https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5ca672f515a62078d2ec0ad2/master.m3u8?appName=web&appVersion=9.19.0&deviceDNT=0&deviceId=affbdbfa-5fa3-48af-8369-57c005daef42&deviceMake=firefox&deviceModel=web&deviceType=web&deviceVersion=147.0.0&serverSideAds=false&sid=fd86539f-1db9-4ebf-a4a9-98719841c444
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="MTVRIDICULOUSNESS.US@AUSTRIA" tvg-logo="https://i.imgur.com/GIKkbjT.png",MTV Ridiculousness
+http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5f9847fd513250000728a9a5/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=1b1eea52-4b81-11ef-a8ac-e146e4e7be02&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&serverSideAds=false&sid=f7637460-bb95-4ce8-9c82-0af6b2f51601
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="NETMAXTV.GR@SD" tvg-logo="https://i.imgur.com/dLvRD4k.png",Netmax TV (720p) [Not 24/7]
+http://live.netmaxtv.com:8080/live/live/playlist.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="PLUTOTVANIME.US@AUSTRIA" tvg-logo="https://i.imgur.com/bvbn8pa.png",Pluto TV Anime
+http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/608181d420fc8500075f612a/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=1b1f5f82-4b81-11ef-a8ac-e146e4e7be02&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&serverSideAds=false&sid=95e1f29c-bf6d-41bb-9fce-486049aaae5d
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="PLUTOTVGAMESHOWS.US@SD" tvg-logo="https://i.imgur.com/JXZEg2e.png",Pluto TV Game Shows
+https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/6036e7c385749f00075dbd3b/master.m3u8?appName=web&appVersion=9.19.0&deviceDNT=0&deviceId=affbdbfa-5fa3-48af-8369-57c005daef42&deviceMake=firefox&deviceModel=web&deviceType=web&deviceVersion=147.0.0&serverSideAds=false&sid=b5a7ff07-f51a-4f35-9623-a01ba3d2061e
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="PLUTOTVREALITY.US@US" tvg-logo="https://i.imgur.com/OvN7FCv.png",Pluto TV Reality
+https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5d8bf0b06d2d855ee15115e3/master.m3u8?appName=web&appVersion=9.19.0&deviceDNT=0&deviceId=affbdbfa-5fa3-48af-8369-57c005daef42&deviceMake=firefox&deviceModel=web&deviceType=web&deviceVersion=147.0.0&serverSideAds=false&sid=db361d66-1d4a-437a-a224-9dd542cf8260
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="POWERMAXRADIOTV.AR@SD" tvg-logo="https://i.ibb.co/qgZLYDj/channels4-profile-6.jpg",Power Max Radio TV (720p)
+https://videostream.shockmedia.com.ar:19360/radio1045/radio1045.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="SONYAATH.IN@SD" tvg-logo="https://i.imgur.com/q4AwVq9.png",Sony Aath (576p)
+http://103.229.254.25:7001/play/a07a/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="SONYENTERTAINMENTTELEVISION.IN@HD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SET_HD/images/LOGO_HD/image.png",Sony Entertainment Television HD (720p)
+http://217.20.112.199/sethd/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="SONYPAL.IN@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_PAL/images/LOGO_HD/image.png",SONY PAL (576p)
+http://103.78.149.54:8000/play/a016/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="SONYSAB.IN@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_SAB/images/LOGO_HD/image.png",Sony SAB (720p)
+http://103.229.254.25:7001/play/a09s/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="SONYSAB.IN@HD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_SAB/images/LOGO_HD/image.png",Sony SAB HD (1080p)
+http://103.229.254.25:7001/play/a0db/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="TELEMAX.DO@SD" tvg-logo="https://i.imgur.com/QvKmjvV.png",Telemax (1080p) [Not 24/7]
+https://mlb.essastream.com:8081/telemax/tracks-v1a1/mono.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="TVMAX.PA@SD" tvg-logo="https://i.imgur.com/XcrkfGh.png",TVMAX (720p)
+https://bcovlive-a.akamaihd.net/74f665e9ff8447639d4de4b8b458d8ae/us-east-1/6058004209001/playlist_dvr.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="TNT4INTERNATIONAL.RU@SD" tvg-logo="https://i.imgur.com/SjdOaya.png",ТНТ4 International
+https://cdn4.skygo.mn/live/disk1/TNT4/HLSv3-FTA/TNT4.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="TNTINTERNATIONAL.RU@SD" tvg-logo="https://i.imgur.com/l0RGbRI.png",ТНТ International
+https://cdn4.skygo.mn/live/disk1/THT/HLSv3-FTA/THT.m3u8
 
 #EXTINF:-1 group-title="📺 Geral" tvg-id="DESPERTARTV.BR@HD" tvg-logo="https://res.cloudinary.com/dpkehkbpv/image/upload/v1721839192/logo/mixtv/despertar_tv_ieb2l3.png",Despertar TV (720p)
 https://cdn.live.br1.jmvstream.com/webtv/pejexypz/playlist/playlist.m3u8
@@ -23937,15 +23853,6 @@ https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5
 #EXTINF:-1 group-title="📺 Geral" tvg-id="TURMADAMONICA.US@BRAZIL" tvg-logo="https://i.imgur.com/nrvPPrW.png",Turma da Mônica
 https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5f997e44949bc70007a6941e/master.m3u8?appName=web&appVersion=9.19.0&deviceDNT=0&deviceId=8ee99fa9-8924-42ef-bf8b-617216b5b280&deviceMake=firefox&deviceModel=web&deviceType=web&deviceVersion=147.0.0&serverSideAds=false&sid=e79e465c-ce68-4801-a0e2-cead4952a6fd
 
-#EXTINF:-1 group-title="📺 Geral" tvg-id="CARTOONCLASSICS.PL@FAST" tvg-logo="https://images-3.rakuten.tv/storage/global-live-channel/translation/artwork/3227c06e-333b-4b1b-b657-3e3ab99ebd06-width200-quality90.jpeg",Cartoon Classics
-https://d3s7x6kmqcnb6b.cloudfront.net/d/distro001a/D6NOXKW7TYP8TG7YMYZH/hls3/now,-1m/m.m3u8?ads.vf=7TNIxrkadpW
-
-#EXTINF:-1 group-title="📺 Geral" tvg-id="GOLDENEAGLECARTOON.CN@SD" tvg-logo="https://i.imgur.com/xfVHrKQ.png",Golden Eagle Cartoon
-http://1.24.190.98:10080/hls/51/index.m3u8
-
-#EXTINF:-1 group-title="📺 Geral" tvg-id="JAPANIMTV.BE@SD" tvg-logo="https://static-cdn.jtvnw.net/jtv_user_pictures/6b97e19f-4243-4d48-b794-ff8cf54d795f-profile_image-300x300.png",Japanim TV (1080p)
-https://foxkidstv.be:3369/stream/play.m3u8
-
 #EXTINF:-1 group-title="📺 Geral" tvg-id="JIAJIACARTOON.CN@SD" tvg-logo="https://i.imgur.com/0TLG3Xk.png",JiaJia Cartoon
 http://49.113.179.174:4022/udp/238.125.0.158:5140
 
@@ -23966,12 +23873,6 @@ http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5e
 
 #EXTINF:-1 group-title="📺 Geral" tvg-id="NICKPLUTOTV.US@US" tvg-logo="https://i.imgur.com/N7rQyzN.png",Nick Pluto TV
 https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5ca673e0d0bd6c2689c94ce3livestitch/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=6c2a5108-30d3-11ef-9cf5-e9ddff8ff496&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&profilesFromStream=true&serverSideAds=false&sid=5730720c-9e54-41d9-b73d-eab8fdac7291
-
-#EXTINF:-1 group-title="📺 Geral" tvg-id="NICKCOMEDYCENTRALPLUS1.DE@HD" tvg-logo="https://i.imgur.com/08ZUI9k.png",Nick/Comedy Central +1 HD (1080p)
-https://viamotionhsi.netplus.ch/live/eds/comedycentralnick/browser-HLS8/comedycentralnick.m3u8
-
-#EXTINF:-1 group-title="📺 Geral" tvg-id="NICKELODEON.EE@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Nickelodeon_2023_logo_%28outline%29.svg/1200px-Nickelodeon_2023_logo_%28outline%29.svg.png",Nickelodeon (576p)
-http://195.64.140.147:10121/121
 
 #EXTINF:-1 group-title="📺 Geral" tvg-id="NICKELODEON.FR@SD" tvg-logo="https://i.imgur.com/E84jnP8.png",Nickelodeon
 http://151.80.18.177:86/Nickelodeon_FR/index.m3u8
@@ -23997,9 +23898,6 @@ http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/65
 #EXTINF:-1 group-title="📺 Geral" tvg-id="NICKTOONS.UK@SD" tvg-logo="https://i.postimg.cc/mZjCjNc5/nicktoons.png",Nicktoons (576p)
 https://a1xs.vip/100054
 
-#EXTINF:-1 group-title="📺 Geral" tvg-id="SONYYAY.IN@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_YAY/images/LOGO_HD/image.png",Sony Yay! (576p)
-http://103.229.254.25:7001/play/a0cl/index.m3u8
-
 #EXTINF:-1 group-title="📺 Geral" tvg-id="TNTKIDSTV.BA@SD" tvg-logo="https://i.imgur.com/irTDbpn.png",TNT Kids (288p)
 https://restreamer1.tnt.ba/hls/tntkids.m3u8
 
@@ -24008,9 +23906,6 @@ http://49.113.179.174:4022/udp/238.125.4.28:5140
 
 #EXTINF:-1 group-title="📺 Geral" tvg-id="ZBCARTOON.IN@HD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/zbcatun.png",ZB Cartoon (1080p)
 https://server.zillarbarta.com/zbcatun/video.m3u8
-
-#EXTINF:-1 group-title="📺 Geral" tvg-id="YOUMANCARTOONCHANNEL.CN@SD" tvg-logo="https://i.imgur.com/GZInf2W.png",优漫卡通 (576p)
-http://183.207.249.15/PLTV/4/224/3221225933/index.m3u8
 
 #EXTINF:-1 group-title="📺 Geral" tvg-id="KPOPTVPLAY.BR@SD" tvg-logo="https://i.imgur.com/Tf0vweF.png",KpopTV Play (576p)
 https://giatv.bozztv.com/giatv/giatv-kpoptvplay/kpoptvplay/playlist.m3u8
@@ -24117,26 +24012,17 @@ https://player.internetaovivo.com:8443/live_tvmackenzieabr/tvmackenzieabr/playli
 #EXTINF:-1 group-title="📺 Geral" tvg-id="TVUFG.BR@SD" tvg-logo="https://i.imgur.com/Yp3dbJo.png",TV UFG (720p) [Not 24/7]
 http://flash.softhost.com.br:1935/ufg/tvufgweb/playlist.m3u8
 
-#EXTINF:-1 group-title="📺 Geral" tvg-id="TVERS.BR@SD" tvg-logo="https://i.imgur.com/MQ6lJpS.png",TVE RS (1080p)
-https://streaming.procergs.com.br:8443/tve/stve/playlist.m3u8
-
-#EXTINF:-1 group-title="📺 Geral" tvg-id="UNISULTV.BR@SD" tvg-logo="https://i.imgur.com/N0TvAFz.png",UNISUL TV (720p)
-https://sitetv.brasilstream.com.br/hls/sitetv/index.m3u8?token=
-
 #EXTINF:-1 group-title="📺 Geral" tvg-id="UNITVPORTOALEGRE.BR@SD" tvg-logo="https://i.imgur.com/GmA5uuk.png",UniTV Porto Alegre (480p)
 http://unitvaovivo.ufrgs.br:8080/live.ogg
-
-#EXTINF:-1 group-title="📺 Geral" tvg-id="ASHARQDISCOVERY.SA@SD" tvg-logo="https://i.imgur.com/Czxi7yk.png",Asharq Discovery (1080p)
-https://svs.itworkscdn.net/asharqdiscoverylive/asharqd.smil/playlist_dvr.m3u8
-
-#EXTINF:-1 group-title="📺 Geral" tvg-id="LICEUMTV.HU@SD" tvg-logo="https://i.imgur.com/Hf122ZD.png",Liceum TV (576p)
-http://193.225.32.62:8890/live.m3u8
 
 #EXTINF:-1 group-title="📺 Geral" tvg-id="NBS.KR@SD" tvg-logo="https://i.imgur.com/pOSroOE.png",NBS Korea Agricultural Broadcasting (720p)
 https://media.joycorp.co.kr:4443/live/ngrp:live_all/playlist.m3u8
 
 #EXTINF:-1 group-title="📺 Geral" tvg-id="PLUTOTVINVESTIGACAO.US@BRAZIL" tvg-logo="https://i.imgur.com/JlQq0YJ.png",Pluto TV Investigação
 https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5f32cf37c9ff2b00082adbc8/master.m3u8?appName=web&appVersion=9.19.0&deviceDNT=0&deviceId=8ee99fa9-8924-42ef-bf8b-617216b5b280&deviceMake=firefox&deviceModel=web&deviceType=web&deviceVersion=147.0.0&serverSideAds=false&sid=9230624f-ba09-4e40-986c-9feb91bcbde3
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="ASHARQDISCOVERY.SA@SD" tvg-logo="https://i.imgur.com/Czxi7yk.png",Asharq Discovery (1080p)
+https://svs.itworkscdn.net/asharqdiscoverylive/asharqd.smil/playlist_dvr.m3u8
 
 #EXTINF:-1 group-title="📺 Geral" tvg-id="AUTENTICHISTORY.DE@SD" tvg-logo="https://d3b6luslimvglo.cloudfront.net/images/79/rlaxximages/channels-rescaled/icon-white/autentichistory_white.png",Autentic History (1080p)
 https://9e754fa707344ccca6d84955c8fcaf36.mediatailor.us-east-1.amazonaws.com/v1/master/44f73ba4d03e9607dcd9bebdcb8494d86964f1d8/RlaxxTV-eu_AutenticHistory/playlist.m3u8
@@ -24174,6 +24060,24 @@ https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5
 #EXTINF:-1 group-title="📺 Geral" tvg-id="CNDFILMDISCOVERYCHANNEL.CN@SD" tvg-logo="https://i.imgur.com/2FJfPDx.png",发现之旅 (576p)
 http://125.210.152.18:9090/live/FXZL_750.m3u8
 
+#EXTINF:-1 group-title="📺 Geral" tvg-id="AGROBRASILTV.BR@SD" tvg-logo="https://i.imgur.com/aNkP7Zd.png",AgroBrasil TV (720p) [Not 24/7]
+http://45.162.230.234:1935/agrobrasiltv/agrobrasiltv/playlist.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="CANALDOCRIADOR.BR@SD" tvg-logo="https://i.imgur.com/k29So6X.png",Canal do Criador (1080p)
+https://607d2a1a47b1f.streamlock.net/crur/smil:canaldocriador.smil/playlist.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="CANALRURAL.BR@SD" tvg-logo="https://i.imgur.com/w9R9IIX.png",Canal Rural (1080p)
+https://607d2a1a47b1f.streamlock.net/crur/smil:canalrural.smil/playlist.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="30ADARCIZZLEOFFSHORE.US@SD" tvg-logo="https://i.imgur.com/Q4l2uao.png",30A Darcizzle Offshore (720p)
+https://30a-tv.com/darcizzle.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="PLUTOTVBACKCOUNTRY.US@SD" tvg-logo="https://i.imgur.com/KnlQzs7.png",Pluto TV Backcountry
+https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5cabdf1437b88b26947346b2/master.m3u8?appName=web&appVersion=9.19.0&deviceDNT=0&deviceId=affbdbfa-5fa3-48af-8369-57c005daef42&deviceMake=firefox&deviceModel=web&deviceType=web&deviceVersion=147.0.0&serverSideAds=false&sid=1f9bf269-fe37-45f5-9d59-66e8ce88f171
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="PLUTOTVNATURE.US@AUSTRIA" tvg-logo="https://i.imgur.com/PtWUmss.png",Pluto TV Nature
+http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5be1c3f9851dd5632e2c91b2/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=1b1ffbc1-4b81-11ef-a8ac-e146e4e7be02&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&serverSideAds=false&sid=e79c49d9-6474-4184-9d9d-a3633162a2cc
+
 #EXTINF:-1 group-title="📺 Geral" tvg-id="GEEKDOT.BR@SD" tvg-logo="https://i.imgur.com/jML1u4O.png",Geekdot (720p)
 https://stream.ichibantv.com:3764/hybrid/play.m3u8
 
@@ -24189,11 +24093,29 @@ https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5
 #EXTINF:-1 group-title="📺 Geral" tvg-id="ANIMAXASIA.SG@INDIA" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Animax.png/512px-Animax.png",Animax Asia India (1080p) [Geo-blocked]
 https://amg02159-kcglobal-amg02159c1-samsung-in-521.playouts.now.amagi.tv/playlist/amg02159-kcglobal-animax-samsungin/playlist.m3u8
 
+#EXTINF:-1 group-title="📺 Geral" tvg-id="CARTOONCLASSICS.PL@FAST" tvg-logo="https://images-3.rakuten.tv/storage/global-live-channel/translation/artwork/3227c06e-333b-4b1b-b657-3e3ab99ebd06-width200-quality90.jpeg",Cartoon Classics
+https://d3s7x6kmqcnb6b.cloudfront.net/d/distro001a/D6NOXKW7TYP8TG7YMYZH/hls3/now,-1m/m.m3u8?ads.vf=7TNIxrkadpW
+
 #EXTINF:-1 group-title="📺 Geral" tvg-id="DREAMWORKSCHANNELASIA.US@VIETNAM" tvg-logo="https://upload.wikimedia.org/wikipedia/fr/thumb/5/55/1024px-DreamWorks_Animation_SKG_logo_with_fishing_boy.png/330px-1024px-DreamWorks_Animation_SKG_logo_with_fishing_boy.png",DreamWorks Channel Asia Vietnam (1080p)
 https://tv.ddns.vn/tv/dreamworks/index.m3u8
 
+#EXTINF:-1 group-title="📺 Geral" tvg-id="GOLDENEAGLECARTOON.CN@SD" tvg-logo="https://i.imgur.com/xfVHrKQ.png",Golden Eagle Cartoon
+http://1.24.190.98:10080/hls/51/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="JAPANIMTV.BE@SD" tvg-logo="https://static-cdn.jtvnw.net/jtv_user_pictures/6b97e19f-4243-4d48-b794-ff8cf54d795f-profile_image-300x300.png",Japanim TV (1080p)
+https://foxkidstv.be:3369/stream/play.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="NICKELODEON.EE@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Nickelodeon_2023_logo_%28outline%29.svg/1200px-Nickelodeon_2023_logo_%28outline%29.svg.png",Nickelodeon (576p)
+http://195.64.140.147:10121/121
+
 #EXTINF:-1 group-title="📺 Geral" tvg-id="ANIMEALLDAY.US@US" tvg-logo="https://i.imgur.com/bYZtd0G.png",Pluto TV Anime
 https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/62a2e8d8a1c8650007e95bac/master.m3u8?appName=web&appVersion=9.19.0&deviceDNT=0&deviceId=affbdbfa-5fa3-48af-8369-57c005daef42&deviceMake=firefox&deviceModel=web&deviceType=web&deviceVersion=147.0.0&serverSideAds=false&sid=5986314d-1e42-49ea-a9fe-01332b159247
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="SONYYAY.IN@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_YAY/images/LOGO_HD/image.png",Sony Yay! (576p)
+http://103.229.254.25:7001/play/a0cl/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="YOUMANCARTOONCHANNEL.CN@SD" tvg-logo="https://i.imgur.com/GZInf2W.png",优漫卡通 (576p)
+http://183.207.249.15/PLTV/4/224/3221225933/index.m3u8
 
 #EXTINF:-1 group-title="📺 Geral" tvg-id="KURIAKOSKIDS.PT@SD" tvg-logo="https://i.imgur.com/SRX6EPY.png",Kuriakos Kids (1080p)
 https://w2.manasat.com/kkids/smil:kkids.smil/playlist.m3u8
@@ -24213,11 +24135,80 @@ http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5d
 #EXTINF:-1 group-title="📺 Geral" tvg-id="COMEDYCENTRALPLUTOTV.US@US" tvg-logo="https://i.imgur.com/9y6TtjF.png",Comedy Central Pluto TV
 https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5ca671f215a62078d2ec0abf/master.m3u8?appName=web&appVersion=9.19.0&deviceDNT=0&deviceId=affbdbfa-5fa3-48af-8369-57c005daef42&deviceMake=firefox&deviceModel=web&deviceType=web&deviceVersion=147.0.0&serverSideAds=false&sid=1e45676c-95a4-4ca6-99a8-e5a62013dc2a
 
+#EXTINF:-1 group-title="📺 Geral" tvg-id="NICKCOMEDYCENTRALPLUS1.DE@HD" tvg-logo="https://i.imgur.com/08ZUI9k.png",Nick/Comedy Central +1 HD (1080p)
+https://viamotionhsi.netplus.ch/live/eds/comedycentralnick/browser-HLS8/comedycentralnick.m3u8
+
 #EXTINF:-1 group-title="📺 Geral" tvg-id="PLUTOTVCOMEDY.US@US" tvg-logo="https://i.imgur.com/MTVrbd5.png",Pluto TV Comedy
 https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5a4d3a00ad95e4718ae8d8db/master.m3u8?appName=web&appVersion=9.19.0&deviceDNT=0&deviceId=affbdbfa-5fa3-48af-8369-57c005daef42&deviceMake=firefox&deviceModel=web&deviceType=web&deviceVersion=147.0.0&serverSideAds=false&sid=34b9bb59-78d2-4352-acde-512537c30af1
 
 #EXTINF:-1 group-title="📺 Geral" tvg-id="PLUTOTVSITCOMS.US@AUSTRIA" tvg-logo="https://i.imgur.com/YzrUL8P.png",Pluto TV Sitcoms
 http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5d767ab2b456c8cf265ce921/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=1b2022d4-4b81-11ef-a8ac-e146e4e7be02&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&serverSideAds=false&sid=f2671c6a-031c-4fa0-bb07-e94c2b5d08db
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="UNIVERSALCOMEDY.US@SD" tvg-logo="https://i.imgur.com/avBL8pQ.png",Universal Comedy (480p)
+http://190.2.212.209:8050/play/a0q4
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="STZTV.BR@SD" tvg-logo="https://i.imgur.com/SeF2I7q.png",STZ TV (1080p)
+https://cdn.live.br1.jmvstream.com/webtv/AVJ-12952/playlist/playlist.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="TVDASARTES.BR@SD" tvg-logo="https://i.imgur.com/fSWaiKt.png",TV das Artes (360p)
+http://tv02.logicahost.com.br:1935/tvdasartes/tvdasartes/playlist.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="TVLIFEAMERICA.BR@HD" tvg-logo="https://i.imgur.com/HZI0ilU.png",TV Life America (720p)
+https://streaming.cloudecast.com/hls/tvlifeamerica/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="TVERS.BR@SD" tvg-logo="https://i.imgur.com/MQ6lJpS.png",TVE RS (1080p)
+https://streaming.procergs.com.br:8443/tve/stve/playlist.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="UNISULTV.BR@SD" tvg-logo="https://i.imgur.com/N0TvAFz.png",UNISUL TV (720p)
+https://sitetv.brasilstream.com.br/hls/sitetv/index.m3u8?token=
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="CMALAYALAMTV.CA@SD" tvg-logo="https://i.imgur.com/rpg0bQA.png",C Malayalam TV (1080p)
+https://2-fss-2.streamhoster.com/pl_120/206508-3261972-1/playlist.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="FOXSOUL.US@SD" tvg-logo="https://i.imgur.com/YIamDGn.png",Fox Soul (1080p)
+https://fox-foxsoul-samsungus.amagi.tv/playlist.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="GARSHOMTV.UK@SD" tvg-logo="https://i.imgur.com/KnbwUyb.png",Garshom TV (360p) [Not 24/7]
+https://og2qd3aal7an-hls-live.5centscdn.com/garshomtv/d0dbe915091d400bd8ee7f27f0791303.sdp/playlist.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="HAMAIKATELEBISTA.ES@SD" tvg-logo="https://i.imgur.com/HR3G3Ie.png",Hamaika Telebista (1080p)
+https://cdn3.wowza.com/1/RERMR282dnU5eE5Z/OHY0dVFs/hls/live/playlist.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="LICEUMTV.HU@SD" tvg-logo="https://i.imgur.com/Hf122ZD.png",Liceum TV (576p)
+http://193.225.32.62:8890/live.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="OMANTVCULTURAL.OM@SD" tvg-logo="https://i.imgur.com/b38wNPK.png",Oman Althakafia (1080p)
+https://partwota.cdn.mgmlcdn.com/omcultural/smil:omcultural.stream.smil/chunklist.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="TVRCULTURAL.RO@SD" tvg-logo="https://i.imgur.com/U9i70C9.png",TVR Cultural
+https://tvr-cultural.lg.mncdn.com/tvrcultural/smil:tvrcultural.smil/chunklist_b5160000.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="CANALGOV.BR@SD" tvg-logo="https://i.imgur.com/rHPY0Yv.png",Canal Gov (720p)
+https://canalgov-stream.ebc.com.br/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="TVASSEMBLEIACEARA.BR@SD" tvg-logo="https://i.imgur.com/UPa1tjs.png",TV Assembléia Ceará (720p)
+https://jjn5dkk9bd.zoeweb.tv/z404-live/stream/playlist.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="TVCAMARA.BR@SD" tvg-logo="https://i.imgur.com/Sdou1Ab.png",TV Câmara (1080p)
+https://stream3.camara.gov.br/tv1/manifest.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="TVCAMARA2.BR@SD" tvg-logo="https://i.imgur.com/dHrUG1R.png",TV Câmara 2 (1080p) [Not 24/7]
+https://stream3.camara.gov.br/tv2/manifest.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="TVCAMARASALVADOR.BR@SD" tvg-logo="https://i.imgur.com/VEXEzSx.png",TV Câmara Salvador (288p) [Not 24/7]
+https://596639ebdd89b.streamlock.net/8114/8114/playlist.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="CFMTVCHANNEL98.US@SD" tvg-logo="https://i.imgur.com/LGs524I.png",CFM TV Channel 98 (360p)
+https://cdn3.wowza.com/5/djRwZmQvTEJidmZD/cityftmyers/G2083_002/playlist.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="CTNTVCONNETICUT.US@SD" tvg-logo="https://i.imgur.com/pb0TFQt.jpg",CT-N TV Conneticut (720p) [Not 24/7]
+http://video.ct-n.com/live/ctnstream/playlist_DVR.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="CITYOFFORTPIERCE.US@SD" tvg-logo="https://i.imgur.com/2ChoSsi.png",Fort Pierce Live Stream (Fort Pierce FL) (720p)
+https://edge-f.swagit.com/live/fortpiercefl/live-1-a/playlist.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="TWEEDEKAMERMAXVANDERSTOELZAAL.NL@SD" tvg-logo="https://i.imgur.com/X9fezZ8.png",Tweede Kamer: Max van der Stoelzaal (1080p) [Not 24/7]
+https://livestreaming.b67buv2.tweedekamer.nl/live/maxvanderstoelzaal/index.m3u8?hd=1&keyframes=1&subtitles=live
 
 #EXTINF:-1 group-title="📺 Geral" tvg-id="PLUTOTVSCIENCE.US@AUSTRIA" tvg-logo="https://i.imgur.com/uhunRoU.png",Pluto TV Science
 http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5d767b4889bca2ce7b73ef2e/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=1b2022d1-4b81-11ef-a8ac-e146e4e7be02&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&serverSideAds=false&sid=d9359c6b-8339-43a0-b9ee-5200b879ac5f
@@ -24233,6 +24224,15 @@ https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/6
 
 #EXTINF:-1 group-title="📺 Geral" tvg-id="SHANDONGTVAGRICULTURALSCIENCECHANNEL.CN@SD" tvg-logo="https://i.imgur.com/EY2zH06.png",山东农科 (406p) [Geo-blocked]
 http://livealone302.iqilu.com/iqilu/nkpd.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="1001NOITES.BR@SD" tvg-logo="https://i.imgur.com/dWA9y2J.png",1001 Noites (720p) [Not 24/7]
+https://cdn.jmvstream.com/w/LVW-8155/ngrp:LVW8155_41E1ciuCvO_all/playlist.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="LEOMAX24.RU@SD" tvg-logo="https://i.imgur.com/qU9ohQu.png",Leomax 24 (1080p)
+https://tvshops.bonus-tv.ru/cdn/shop24/playlist.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="SHOPPINGNT.KR@SD" tvg-logo="https://i.imgur.com/BgbJp5X.png",Shopping NT (720p)
+https://live.shoppingntmall.com/live/10011.m3u8
 
 #EXTINF:-1 group-title="📺 Geral" tvg-id="TASTEMADEBRASIL.US@BRAZIL" tvg-logo="https://i.imgur.com/FPy4zF4.png",Tastemade
 https://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5fd1419a3b4f4b000773ba85/master.m3u8?appName=web&appVersion=9.19.0&deviceDNT=0&deviceId=8ee99fa9-8924-42ef-bf8b-617216b5b280&deviceMake=firefox&deviceModel=web&deviceType=web&deviceVersion=147.0.0&serverSideAds=false&sid=c3436a14-95dd-4f4e-9123-34cd08c8b57c
