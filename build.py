@@ -4,6 +4,7 @@ import re
 import unicodedata
 from pathlib import Path
 from datetime import datetime, timedelta
+from utils import normalize_tv_group
 
 # =========================
 # FUNÇÕES AUXILIARES
@@ -74,42 +75,30 @@ def extract_episode_number(title):
             pass
     return None
 
-def normalize_tv_group(raw_group):
-    """Mapeia grupos M3U em inglês para categorias PT-BR."""
-    g = (raw_group or '').strip()
-    mapping = {
-        'General':        '📺 Geral',
-        'Movies':         '🎬 Filmes',
-        'Entertainment':  '🎭 Entretenimento',
-        'Religious':      '✝️ Religioso',
-        'News':           '📰 Notícias',
-        'Kids':           '🧸 Infantil',
-        'Music':          '🎵 Música',
-        'Series':         '📺 Séries',
-        'Sports':         '⚽ Esportes',
-        'Education':      '📚 Educação',
-        'Documentary':    '🎥 Documentário',
-        'Legislative':    '🏛️ Legislativo',
-        'Culture':        '🎨 Cultura',
-        'Comedy':         '😂 Comédia',
-        'Animation':      '🎨 Animação',
-        'Outdoor':        '🌿 Natureza',
-        'Science':        '🔬 Ciência',
-        'Shop':           '🛍️ Shopping',
-        'Cooking':        '🍳 Culinária',
-        'Travel':         '✈️ Viagem',
-        'Business':       '💼 Negócios',
-        'Weather':        '🌦️ Clima',
-        'Auto':           '🚗 Automóvel',
-        'Lifestyle':      '💅 Lifestyle',
-        'Classic':        '🎞️ Clássicos',
-        'Family':         '👨‍👩‍👧 Família',
-        'Undefined':      '📺 Geral',
-        '📺 TV Ao Vivo':  '📺 Geral',
-    }
-    # Lidar com grupos compostos como "Animation;Kids"
-    first = g.split(';')[0].strip()
-    return mapping.get(first, mapping.get(g, '📺 Geral'))
+
+def clean_episode_title(raw_title, episode_num, prefix='Ep', is_chapter=False):
+    """Formata título de episódio removendo prefixos redundantes. Elimina duplicação de código."""
+    if raw_title and raw_title not in (f'Episódio {episode_num}', f'Capítulo {episode_num}'):
+        if is_chapter:
+            titulo_limpo = re.sub(r'^Cap[ií]tulo\s*\d+\s*-\s*', '', raw_title, flags=re.IGNORECASE)
+        else:
+            titulo_limpo = re.sub(r'^E\d+\s*-\s*', '', raw_title, flags=re.IGNORECASE)
+            titulo_limpo = re.sub(r'^Epis[oó]dio\s*\d+\s*-\s*', '', titulo_limpo, flags=re.IGNORECASE)
+        return titulo_limpo.strip() or raw_title
+    return None
+
+
+def normalize_poster_url(poster, base_url):
+    """Normaliza URL de poster para URL absoluta. Elimina duplicação no EPG."""
+    if not poster:
+        return poster
+    if poster.startswith('/'):
+        return f"{base_url}{poster}"
+    if not poster.startswith('http'):
+        return f"{base_url}/{poster}"
+    return poster
+
+
 
 def parse_m3u(m3u_file):
     """Faz parse de arquivo M3U e extrai números de episódios"""
@@ -310,24 +299,22 @@ def generate_m3u_with_grouping(data, output_dir):
                 tvg_name = f"{serie['title']} - Temporada {season_num}"
                 for ep in season.get("episodes", []):
                     episode_num = ep.get("episode", 0)
-                    if "title" in ep and ep["title"] and ep["title"] != f"Episódio {episode_num}":
-                        titulo_limpo = re.sub(r'^E\d+\s*-\s*', '', ep["title"], flags=re.IGNORECASE)
-                        titulo_limpo = re.sub(r'^Episódio\s*\d+\s*-\s*', '', titulo_limpo, flags=re.IGNORECASE)
-                        episode_title = f"S{season_num:02d}E{episode_num:02d} - {titulo_limpo}"
-                    else:
-                        episode_title = f"S{season_num:02d}E{episode_num:02d}"
+                    titulo_limpo = clean_episode_title(ep.get("title"), episode_num)
+                    episode_title = (
+                        f"S{season_num:02d}E{episode_num:02d} - {titulo_limpo}"
+                        if titulo_limpo else f"S{season_num:02d}E{episode_num:02d}"
+                    )
                     add_item(title=episode_title, url=ep["url"], group="📺 Séries",
                              logo=serie.get("poster", ""), tvg_id=tvg_id, tvg_name=tvg_name)
         elif serie.get("episodes"):
             tvg_id = f"{serie_id}_T01"
             for ep in serie["episodes"]:
                 episode_num = ep.get("episode", 0)
-                if "title" in ep and ep["title"] and ep["title"] != f"Episódio {episode_num}":
-                    titulo_limpo = re.sub(r'^E\d+\s*-\s*', '', ep["title"], flags=re.IGNORECASE)
-                    titulo_limpo = re.sub(r'^Episódio\s*\d+\s*-\s*', '', titulo_limpo, flags=re.IGNORECASE)
-                    episode_title = f"Ep {episode_num:02d} - {titulo_limpo}"
-                else:
-                    episode_title = f"Ep {episode_num:02d}"
+                titulo_limpo = clean_episode_title(ep.get("title"), episode_num)
+                episode_title = (
+                    f"Ep {episode_num:02d} - {titulo_limpo}"
+                    if titulo_limpo else f"Ep {episode_num:02d}"
+                )
                 add_item(title=episode_title, url=ep["url"], group="📺 Séries",
                          logo=serie.get("poster", ""), tvg_id=tvg_id, tvg_name=serie["title"])
 
@@ -340,11 +327,11 @@ def generate_m3u_with_grouping(data, output_dir):
                 tvg_name = f"{novela['title']} - Temporada {season_num}"
                 for ep in season.get("episodes", []):
                     episode_num = ep.get("episode", 0)
-                    if "title" in ep and ep["title"] and ep["title"] != f"Capítulo {episode_num}":
-                        titulo_limpo = re.sub(r'^Capítulo\s*\d+\s*-\s*', '', ep["title"], flags=re.IGNORECASE)
-                        episode_title = f"Cap {episode_num:02d} - {titulo_limpo}"
-                    else:
-                        episode_title = f"Cap {episode_num:02d}"
+                    titulo_limpo = clean_episode_title(ep.get("title"), episode_num, is_chapter=True)
+                    episode_title = (
+                        f"Cap {episode_num:02d} - {titulo_limpo}"
+                        if titulo_limpo else f"Cap {episode_num:02d}"
+                    )
                     add_item(title=episode_title, url=ep["url"], group="📖 Novelas",
                              logo=novela.get("poster", ""), tvg_id=tvg_id, tvg_name=tvg_name)
 
@@ -357,12 +344,11 @@ def generate_m3u_with_grouping(data, output_dir):
                 tvg_name = f"{anime['title']} - Temporada {season_num}"
                 for ep in season.get("episodes", []):
                     episode_num = ep.get("episode", 0)
-                    if "title" in ep and ep["title"] and ep["title"] != f"Episódio {episode_num}":
-                        titulo_limpo = re.sub(r'^E\d+\s*-\s*', '', ep["title"], flags=re.IGNORECASE)
-                        titulo_limpo = re.sub(r'^Episódio\s*\d+\s*-\s*', '', titulo_limpo, flags=re.IGNORECASE)
-                        episode_title = f"Ep {episode_num:02d} - {titulo_limpo}"
-                    else:
-                        episode_title = f"Ep {episode_num:02d}"
+                    titulo_limpo = clean_episode_title(ep.get("title"), episode_num)
+                    episode_title = (
+                        f"Ep {episode_num:02d} - {titulo_limpo}"
+                        if titulo_limpo else f"Ep {episode_num:02d}"
+                    )
                     add_item(title=episode_title, url=ep["url"], group="👻 Animes",
                              logo=anime.get("poster", ""), tvg_id=tvg_id, tvg_name=tvg_name)
 
@@ -374,13 +360,11 @@ def generate_m3u_with_grouping(data, output_dir):
                 tvg_id = f"{infantil_id}_T{season_num:02d}"
                 tvg_name = f"{infantil['title']} - Temporada {season_num}"
                 for ep in season.get("episodes", []):
-                    episode_num = ep.get("episode", 0)
-                    if "title" in ep and ep["title"] and ep["title"] != f"Episódio {episode_num}":
-                        titulo_limpo = re.sub(r'^E\d+\s*-\s*', '', ep["title"], flags=re.IGNORECASE)
-                        titulo_limpo = re.sub(r'^Episódio\s*\d+\s*-\s*', '', titulo_limpo, flags=re.IGNORECASE)
-                        episode_title = f"Ep {episode_num:02d} - {titulo_limpo}"
-                    else:
-                        episode_title = f"Ep {episode_num:02d}"
+                    titulo_limpo = clean_episode_title(ep.get("title"), episode_num)
+                    episode_title = (
+                        f"Ep {episode_num:02d} - {titulo_limpo}"
+                        if titulo_limpo else f"Ep {episode_num:02d}"
+                    )
                     add_item(title=episode_title, url=ep["url"], group="🧸 Infantil",
                              logo=infantil.get("poster", ""), tvg_id=tvg_id, tvg_name=tvg_name)
 
@@ -431,11 +415,7 @@ def generate_epg(data, output_dir):
                 epg += f'  <channel id="{channel_id}">\n'
                 epg += f'    <display-name>{item["title"]}</display-name>\n'
                 if item.get("poster"):
-                    poster_url = item["poster"]
-                    if poster_url.startswith("/"):
-                        poster_url = f"{BASE_URL}{poster_url}"
-                    elif not poster_url.startswith("http"):
-                        poster_url = f"{BASE_URL}/{poster_url}"
+                    poster_url = normalize_poster_url(item["poster"], BASE_URL)
                     epg += f'    <icon src="{poster_url}"/>\n'
                 epg += f'    <url>https://pirataflix-seven.vercel.app/</url>\n'
                 epg += '  </channel>\n'
@@ -447,11 +427,7 @@ def generate_epg(data, output_dir):
                         epg += f'  <channel id="{channel_id}">\n'
                         epg += f'    <display-name>{item["title"]} - Temporada {season_num}</display-name>\n'
                         if item.get("poster"):
-                            poster_url = item["poster"]
-                            if poster_url.startswith("/"):
-                                poster_url = f"{BASE_URL}{poster_url}"
-                            elif not poster_url.startswith("http"):
-                                poster_url = f"{BASE_URL}/{poster_url}"
+                            poster_url = normalize_poster_url(item["poster"], BASE_URL)
                             epg += f'    <icon src="{poster_url}"/>\n'
                         epg += f'    <url>https://pirataflix-seven.vercel.app/</url>\n'
                         epg += '  </channel>\n'
@@ -539,16 +515,19 @@ def build_vod_with_direct_capas():
     web_dir.mkdir(exist_ok=True)
     json_path = web_dir / "data.json"
 
-    if json_path.exists():
+    # Canais de TV sempre recarregados do channels.json com grupos normalizados.
+    # Não reutilizamos data.json anterior para TV — ele pode ter grupos em inglês ou incorretos.
+    channels_path = web_dir / "channels.json"
+    if channels_path.exists():
         try:
-            with open(json_path, 'r', encoding='utf-8') as f:
-                data_existente = json.load(f)
-            tv_canais = data_existente.get('tv', [])
-            if tv_canais:
-                output['tv'] = tv_canais
-                print(f"\n📺 TV carregada do data.json: {len(tv_canais)} canais preservados")
+            with open(channels_path, 'r', encoding='utf-8') as f:
+                tv_canais = json.load(f)
+            for canal in tv_canais:
+                canal['group'] = normalize_tv_group(canal.get('group', ''))
+            output['tv'] = tv_canais
+            print(f"\n📺 TV carregada do channels.json: {len(tv_canais)} canais (grupos normalizados)")
         except Exception as e:
-            print(f"\n⚠️  Erro ao ler data.json existente: {e}")
+            print(f"\n⚠️  Erro ao ler channels.json: {e}")
 
     print("============================================================")
     print("🎬 SISTEMA VOD - CAPAS DIRETAS DA PASTA")
@@ -578,10 +557,6 @@ def build_vod_with_direct_capas():
     print(f"   📺 TV: {len(output.get('tv', []))} canais")
     print(f"   🎬 Filmes: {len(output.get('filmes', []))}")
     print(f"   📺 Séries: {len(output.get('series', []))}")
-
-    # Normalizar grupos dos canais de TV
-    for canal in output.get('tv', []):
-        canal['group'] = normalize_tv_group(canal.get('group', ''))
 
     # Enriquecer com TMDB (só itens sem overview já)
     items_sem_meta = [
@@ -1028,8 +1003,10 @@ self.addEventListener('fetch', e => {
 
 
 def generate_html_with_correct_paths(base_dir, data):
-    """Gera HTML estilo Netflix com carrosséis e navegação"""
-
+    """Gera apenas channels-dict.js com o mapeamento dinâmico de logos.
+    O index.html é agora um arquivo estático (web/index.html).
+    CSS → web/index.css | JS app → web/index-app.js
+    """
     channels_path = base_dir / "web" / "channels.json"
     channels_dict = {}
     if channels_path.exists():
@@ -1046,595 +1023,22 @@ def generate_html_with_correct_paths(base_dir, data):
                         if chave:
                             channels_dict[chave] = logo
 
-    channels_json = json.dumps(channels_dict)
+    channels_js_path = base_dir / "web" / "channels-dict.js"
+    channels_json = json.dumps(channels_dict, ensure_ascii=False)
+    with open(channels_js_path, "w", encoding="utf-8") as f:
+        f.write("// Gerado automaticamente pelo build.py - nao edite manualmente\n")
+        f.write(f"window.channelsDict = {channels_json};\n")
+    print(f"✅ channels-dict.js gerado: {len(channels_dict)} entradas")
 
-    html_template = f'''<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PIRATAFLIX</title>
-    <link rel="icon" type="image/png" href="favicon.png">
-    <!-- PWA -->
-    <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#e50914">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="Pirataflix">
-    <link rel="apple-touch-icon" href="icons/icon-192.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        * {{ margin: 0; padding: 0; box-sizing: border-box; }}
-        body {{ font-family: Arial, sans-serif; background: #141414; color: white; line-height: 1.4; }}
-        .header {{
-            position: fixed; top: 0; left: 0; width: 100%; padding: 20px 50px;
-            background: linear-gradient(to bottom, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
-            z-index: 100; display: flex; justify-content: space-between; align-items: center;
-        }}
-        .logo {{ font-size: 2.5rem; color: #e50914; font-weight: bold; text-decoration: none; }}
-        .nav-links {{ display: flex; gap: 20px; }}
-        .nav-link {{ color: #e5e5e5; text-decoration: none; font-size: 0.9rem; transition: color 0.3s; }}
-        .nav-link:hover {{ color: #fff; }}
-        .main-content {{ padding-top: 80px; }}
-        .category-section {{ margin-bottom: 40px; padding: 0 50px; position: relative; }}
-        .category-header {{ display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }}
-        .category-title {{ font-size: 1.4rem; color: #fff; font-weight: bold; }}
-        .see-all-link {{ color: #e50914; text-decoration: none; font-size: 0.9rem; padding: 5px 10px; border-radius: 3px; transition: background 0.3s; }}
-        .see-all-link:hover {{ background: rgba(229,9,20,0.2); }}
-        .nav_items_module {{ display: flex; gap: 10px; }}
-        .nav-btn {{
-            background: rgba(0,0,0,0.5); color: white; width: 40px; height: 40px;
-            border-radius: 50%; display: flex; align-items: center; justify-content: center;
-            cursor: pointer; transition: background 0.3s; border: 1px solid rgba(255,255,255,0.1);
-        }}
-        .nav-btn:hover {{ background: #e50914; }}
-        .owl-carousel .item-card {{ margin: 0 5px; }}
-        .item-card {{
-            border-radius: 4px; overflow: hidden; transition: transform 0.3s;
-            cursor: pointer; position: relative;
-        }}
-        .item-card:hover {{ transform: scale(1.05); z-index: 10; }}
-        .item-card:hover .item-poster {{ opacity: 0.5; }}
-        .item-card:hover .item-info {{ opacity: 1; }}
-        .item-poster {{ width: 100%; height: 320px; object-fit: cover; display: block; transition: opacity 0.3s; }}
-        .item-info {{
-            position: absolute; bottom: 0; left: 0; right: 0;
-            background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
-            padding: 20px; opacity: 0; transition: opacity 0.3s;
-        }}
-        .item-title {{ font-size: 1rem; margin-bottom: 5px; font-weight: bold; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }}
-        .item-meta {{ font-size: 0.8rem; color: #b3b3b3; }}
-        .loading {{ text-align: center; padding: 100px 20px; color: #e50914; font-size: 1.2rem; }}
-        .error {{ text-align: center; padding: 100px 20px; color: #e50914; }}
-        .modal {{
-            display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.9); z-index: 1000; overflow-y: auto;
-        }}
-        .modal-content {{
-            background: #181818; border-radius: 8px; max-width: 850px;
-            margin: 50px auto; position: relative; overflow: hidden;
-        }}
-        .modal-header {{ position: relative; height: 450px; overflow: hidden; }}
-        .modal-backdrop {{
-            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-            background-size: cover; background-position: center; opacity: 0.4;
-        }}
-        .modal-close {{
-            position: absolute; top: 20px; right: 20px; background: rgba(0,0,0,0.7);
-            border: none; color: white; width: 40px; height: 40px; border-radius: 50%;
-            font-size: 24px; cursor: pointer; z-index: 1001;
-            display: flex; align-items: center; justify-content: center;
-        }}
-        .modal-close:hover {{ background: #e50914; }}
-        .modal-body {{ padding: 30px; }}
-        .modal-title {{ font-size: 2rem; margin-bottom: 20px; color: #fff; }}
-        .modal-meta {{ display: flex; gap: 20px; margin-bottom: 20px; color: #b3b3b3; }}
-        .episodes-section {{ margin-top: 30px; }}
-        .episode-list {{ display: grid; gap: 10px; max-height: 400px; overflow-y: auto; }}
-        .episode-item {{
-            background: #2d2d2d; border-radius: 4px; padding: 15px; cursor: pointer;
-            transition: background 0.3s; display: flex; align-items: center; gap: 15px;
-        }}
-        .episode-item:hover {{ background: #3d3d3d; }}
-        .canal-ativo {{ background: #3a0a0a !important; border-left: 3px solid #e50914; }}
-        .episode-number {{
-            background: #e50914; color: white; width: 35px; height: 35px;
-            border-radius: 50%; display: flex; align-items: center; justify-content: center;
-            font-weight: bold; flex-shrink: 0;
-        }}
-        .episode-info {{ flex: 1; }}
-        .episode-title {{ font-weight: bold; margin-bottom: 5px; }}
-        .play-button {{
-            background: #e50914; color: white; border: none; padding: 12px 30px;
-            border-radius: 4px; font-size: 1rem; font-weight: bold; cursor: pointer;
-            display: flex; align-items: center; gap: 10px; margin-top: 20px; transition: background 0.3s;
-        }}
-        .play-button:hover {{ background: #f40612; }}
-        @media (max-width: 768px) {{
-            .header {{ padding: 20px; }}
-            .logo {{ font-size: 2rem; }}
-            .category-section {{ padding: 0 20px; }}
-            .item-poster {{ height: 260px; object-fit: cover; }}
-            .modal-content {{ margin: 20px; }}
-            .modal-header {{ height: 300px; }}
-        }}
-        .continue-watching .item-poster {{ height: 180px !important; object-fit: cover; }}
-        .continue-watching .progress-bar-wrap {{
-            position: absolute; bottom: 0; left: 0; width: 100%;
-            height: 4px; background: rgba(255,255,255,0.3); z-index: 3;
-        }}
-        .continue-watching .progress-fill {{ height: 100%; background: #e50914; }}
-        .continue-watching .watch-badge {{
-            position: absolute; top: 10px; left: 10px; background: rgba(0,0,0,0.7);
-            color: #fff; padding: 3px 8px; border-radius: 3px; font-size: 0.7rem;
-            font-weight: bold; z-index: 3; border-left: 3px solid #e50914;
-        }}
-    </style>
-</head>
-<body>
-    <header class="header">
-        <a href="#" class="logo">PIRATAFLIX</a>
-        <nav class="nav-links">
-            <a href="#filmes"          class="nav-link">Filmes</a>
-            <a href="#series"          class="nav-link">Séries</a>
-            <a href="#novelas"         class="nav-link">Novelas</a>
-            <a href="#animes"          class="nav-link">Animes</a>
-            <a href="#infantil"        class="nav-link">Infantil</a>
-            <a href="tv.html"          class="nav-link">TV Ao Vivo</a>
-        </nav>
-    </header>
+    # Garantir que index.html estático existe (não sobrescrever)
+    index_path = base_dir / "web" / "index.html"
+    if not index_path.exists():
+        print("⚠️  web/index.html não encontrado! Verifique o repositório.")
+    else:
+        print(f"✅ index.html estático OK ({index_path.stat().st_size // 1024 + 1}KB)")
 
-    <main class="main-content" id="content">
-        <div class="loading">Carregando catálogo...</div>
-    </main>
-
-    <div class="modal" id="modal">
-        <div class="modal-content">
-            <div class="modal-header" id="modalHeader">
-                <button class="modal-close" id="closeModal"><i class="fas fa-times"></i></button>
-            </div>
-            <div class="modal-body" id="modalBody"></div>
-        </div>
-    </div>
-
-    <script>
-        window.channelsDict = {channels_json};
-    </script>
-
-    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-    <script src="novo-player.js"></script>
-    <link rel="stylesheet" href="tv-player.css">
-    <script src="tv-player.js"></script>
-    <script src="shared.js"></script>
-
-    <script id="app-script">
-(function() {{
-    var RAW_BASE = 'https://raw.githubusercontent.com/alberttartas/Pirataflix/main';
-    var DEFAULT_POSTER = RAW_BASE + '/assets/Capas/default.jpg';
-    window._DEFAULT_POSTER = DEFAULT_POSTER;
-    window.vodData = {{}};
-
-    // =====================
-    // FUNÇÕES AUXILIARES
-    // =====================
-    function item_title_from(category, itemId) {{
-        var items = window.vodData[category];
-        if (!items) return '';
-        var item = (category === 'tv')
-            ? items[parseInt(itemId)]
-            : items.find(function(i) {{ return i.id === itemId; }});
-        return item ? item.title : '';
-    }}
-
-    // =====================
-    // PLAY EPISODE
-    // Não salva progresso — isso é responsabilidade exclusiva do novo-player.js
-    // =====================
-    function playEpisode(url, title, itemId, category, episodeIndex) {{
-        var safeIndex = (typeof episodeIndex === 'number' && !isNaN(episodeIndex)) ? episodeIndex : 0;
-
-        if (category === 'tv') {{
-            if (typeof window.openTVPlayer === 'function') {{
-                window.openTVPlayer(parseInt(itemId));
-            }} else {{
-                window.open(url, '_blank');
-            }}
-            document.getElementById('modal').style.display = 'none';
-            return;
-        }}
-
-        if (typeof window.playWithModernPlayer === 'function') {{
-            window.playWithModernPlayer(url, title, '', itemId, category, safeIndex);
-            document.getElementById('modal').style.display = 'none';
-        }} else {{
-            window.open(url, '_blank');
-        }}
-    }}
-
-    // =====================
-    // PLAY FIRST EPISODE
-    // Lê o índice salvo pelo novo-player.js (fonte única de progresso)
-    // =====================
-    function playFirstEpisode(category, itemId) {{
-        var items = window.vodData[category];
-        if (!items) return;
-
-        var item = (category === 'tv')
-            ? items[parseInt(itemId)]
-            : items.find(function(i) {{ return i.id === itemId; }});
-        if (!item) return;
-
-        // Buscar índice salvo via ContinueWatching (novo-player.js)
-        var episodeIndex = 0;
-        try {{
-            if (window.ContinueWatching) {{
-                var list = window.ContinueWatching.getAll();
-                var entries = Object.values(list).filter(function(e) {{
-                    return e.itemId === itemId && e.category === category;
-                }});
-                if (entries.length > 0) {{
-                    var latest = entries.sort(function(a, b) {{
-                        return (b.timestamp || 0) - (a.timestamp || 0);
-                    }})[0];
-                    if (typeof latest.episodeIndex === 'number' && !isNaN(latest.episodeIndex)) {{
-                        episodeIndex = latest.episodeIndex;
-                    }}
-                }}
-            }}
-        }} catch(e) {{}}
-
-        // Encontrar episódio pelo índice
-        var url = '', title = '';
-
-        if (item.episodes && item.episodes.length > 0) {{
-            var safeIdx = Math.min(episodeIndex, item.episodes.length - 1);
-            url   = item.episodes[safeIdx].url;
-            title = item.title + ' - ' + (item.episodes[safeIdx].title || 'Episódio ' + (safeIdx + 1));
-        }} else if (item.url) {{
-            url   = item.url;
-            title = item.title;
-        }} else if (item.seasons && item.seasons.length > 0) {{
-            var remaining = episodeIndex;
-            var found = false;
-            for (var s = 0; s < item.seasons.length; s++) {{
-                var eps = item.seasons[s].episodes || [];
-                if (remaining < eps.length) {{
-                    url   = eps[remaining].url;
-                    title = item.title + ' - Temp ' + item.seasons[s].season + ' - ' + (eps[remaining].title || 'Episódio ' + (remaining + 1));
-                    found = true;
-                    break;
-                }}
-                remaining -= eps.length;
-            }}
-            if (!found) {{
-                url   = item.seasons[0].episodes[0].url;
-                title = item.title + ' - Temp ' + item.seasons[0].season + ' - Episódio 1';
-                episodeIndex = 0;
-            }}
-        }}
-
-        if (url) {{
-            playEpisode(url, title, itemId, category, episodeIndex);
-        }}
-    }}
-
-    // =====================
-    // CARREGAR DADOS
-    // =====================
-    async function loadData() {{
-        try {{
-            var response = await fetch('data.json');
-            window.vodData = await response.json();
-            displayContent();
-            setTimeout(function() {{
-                if (typeof $.fn.owlCarousel === 'function') {{
-                    initCarousels();
-                }} else {{
-                    initFallbackScroll();
-                }}
-                // Alternância de capas (capa local <-> TMDB)
-                if (typeof window.initPosterRotation === 'function') {{
-                    setTimeout(window.initPosterRotation, 600);
-                }}
-            }}, 500);
-        }} catch (error) {{
-            document.getElementById('content').innerHTML =
-                '<div class="error">Erro ao carregar: ' + error.message + '</div>';
-        }}
-    }}
-
-    // =====================
-    // FALLBACK SCROLL
-    // =====================
-    function initFallbackScroll() {{
-        $('.owl-carousel').css({{ display: 'flex', 'overflow-x': 'auto', gap: '10px' }});
-        $('.owl-carousel .item-card').css({{ flex: '0 0 auto', width: '220px' }});
-    }}
-
-    // =====================
-    // CARROSSÉIS
-    // =====================
-    function initCarousels() {{
-        setTimeout(function() {{
-            $('.owl-carousel').each(function() {{
-                var $c = $(this);
-                var cId = $c.attr('id');
-                var isCont = cId === 'carousel-continue';
-                if (!$c.data('owlCarousel')) {{
-                    $c.owlCarousel({{
-                        items: isCont ? 8 : 7,
-                        margin: isCont ? 8 : 10,
-                        loop: false, nav: false, dots: false,
-                        responsive: {{
-                            0:    {{ items: isCont ? 3 : 2 }},
-                            480:  {{ items: isCont ? 4 : 3 }},
-                            640:  {{ items: isCont ? 5 : 4 }},
-                            768:  {{ items: isCont ? 6 : 5 }},
-                            1024: {{ items: isCont ? 7 : 6 }},
-                            1280: {{ items: isCont ? 8 : 7 }}
-                        }}
-                    }});
-                }}
-                $('.next-' + cId).off('click').on('click', function(e) {{
-                    e.preventDefault(); $c.trigger('next.owl.carousel');
-                }});
-                $('.prev-' + cId).off('click').on('click', function(e) {{
-                    e.preventDefault(); $c.trigger('prev.owl.carousel');
-                }});
-            }});
-        }}, 300);
-    }}
-
-    // =====================
-    // HELPERS
-    // =====================
-    function getPoster(item, category) {{
-        if (category === 'tv') {{
-            if (item.tvg_logo && item.tvg_logo.startsWith('http')) return item.tvg_logo;
-            var key = (item.title || '').toLowerCase().replace(/[^a-z0-9]/g, '');
-            if (window.channelsDict && window.channelsDict[key]) return window.channelsDict[key];
-            return RAW_BASE + '/assets/Capas/tv_default.jpg';
-        }}
-        if (item.poster && item.poster.startsWith('http')) return item.poster;
-        var file = item.poster ? item.poster.split('/').pop() : 'default.jpg';
-        return RAW_BASE + '/assets/Capas/' + file;
-    }}
-
-    function safeImg(poster, altText) {{
-        return '<img src="' + poster + '" alt="' + altText.replace(/"/g, '') +
-               '" class="item-poster" onerror="this.onerror=null;this.src=window._DEFAULT_POSTER">';
-    }}
-
-    // =====================
-    // EXIBIR CONTEÚDO
-    // =====================
-    function displayContent() {{
-        var contentDiv = document.getElementById('content');
-        var html = '';
-
-        // =====================
-        // CONTINUAR ASSISTINDO
-        // Delega inteiramente ao ContinueWatching do novo-player.js (fonte única)
-        // =====================
-        var deduped = [];
-        try {{
-            if (window.ContinueWatching) {{
-                deduped = window.ContinueWatching.getWatchingList();
-            }}
-        }} catch(e) {{ deduped = []; }}
-
-        if (deduped.length > 0) {{
-            html += '<section class="category-section continue-watching">';
-            html += '<div class="category-header">';
-            html += '<h2 class="category-title">⏯️ Continuar Assistindo</h2>';
-            html += '<div class="nav_items_module">';
-            html += '<a class="nav-btn prev-carousel-continue"><i class="fas fa-chevron-left"></i></a>';
-            html += '<a class="nav-btn next-carousel-continue"><i class="fas fa-chevron-right"></i></a>';
-            html += '</div></div>';
-            html += '<div id="carousel-continue" class="owl-carousel">';
-            deduped.forEach(function(item) {{
-                var itemId = item.itemId || item.id;
-                var cat    = item.category;
-                var epIdx  = (typeof item.episodeIndex === 'number') ? item.episodeIndex : 0;
-                var progress = item.progress || (item.duration ? Math.round((item.currentTime / item.duration) * 100) : 0);
-                var timeLeft = '';
-                if (item.duration && item.currentTime) {{
-                    var rem = Math.max(0, item.duration - item.currentTime);
-                    timeLeft = rem > 3600
-                        ? Math.floor(rem / 3600) + 'h ' + Math.floor((rem % 3600) / 60) + 'min restantes'
-                        : Math.floor(rem / 60) + 'min restantes';
-                }}
-                var poster = DEFAULT_POSTER;
-                if (item.poster) {{
-                    poster = item.poster.startsWith('http')
-                        ? item.poster
-                        : (RAW_BASE + '/assets/Capas/' + item.poster.split('/').pop());
-                }}
-                var displayTitle = item.seriesTitle || item.title || '';
-                var epLabel = (item.episode || epIdx > 0) ? ('Ep ' + (item.episode || (epIdx + 1))) : '';
-                html += '<div class="item-card continue-card" data-category="' + cat + '" data-id="' + itemId + '" data-ep="' + epIdx + '">';
-                html += safeImg(poster, displayTitle);
-                html += '<div class="watch-badge">⏯️ Continuar</div>';
-                html += '<div class="progress-bar-wrap"><div class="progress-fill" style="width:' + progress + '%;"></div></div>';
-                html += '<div class="item-info">';
-                html += '<div class="item-title">' + displayTitle + '</div>';
-                html += '<div class="item-meta">' + epLabel + (epLabel && timeLeft ? ' • ' : '') + timeLeft + '</div>';
-                html += '</div></div>';
-            }});
-            html += '</div></section>';
-        }}
-
-        // Categorias normais
-        var categoryOrder = ['filmes', 'series', 'novelas', 'animes', 'infantil', 'tv'];
-        var categoryNames = {{
-            filmes: '🎬 Filmes', series: '📺 Séries', novelas: '💖 Novelas',
-            animes: '👻 Animes', infantil: '🧸 Infantil', tv: '📡 TV AO VIVO'
-        }};
-        var categoryPages = {{
-            filmes: 'filmes.html', series: 'series.html', novelas: 'novelas.html',
-            animes: 'animes.html', infantil: 'infantil.html', tv: 'tv.html'
-        }};
-
-        categoryOrder.forEach(function(category) {{
-            var items = window.vodData[category];
-            if (!items || items.length === 0) return;
-            var carouselId = 'carousel-' + category;
-            html += '<section class="category-section" id="' + category + '">';
-            html += '<div class="category-header">';
-            html += '<h2 class="category-title">' + categoryNames[category] + '</h2>';
-            html += '<div style="display:flex;gap:10px;align-items:center;">';
-            html += '<div class="nav_items_module">';
-            html += '<a class="nav-btn prev-' + carouselId + '"><i class="fas fa-chevron-left"></i></a>';
-            html += '<a class="nav-btn next-' + carouselId + '"><i class="fas fa-chevron-right"></i></a>';
-            html += '</div>';
-            html += '<a href="' + categoryPages[category] + '" class="see-all-link">Ver Tudo <i class="fas fa-arrow-right"></i></a>';
-            html += '</div></div>';
-            html += '<div id="' + carouselId + '" class="owl-carousel">';
-
-            items.forEach(function(item, idx) {{
-                var poster = getPoster(item, category);
-                // Montar lista completa de capas: TMDB posters + capa local
-                var allPosters = [];
-                if (category !== 'tv') {{
-                    var localRaw = item.local_poster || '';
-                    var localUrl = localRaw ? (RAW_BASE + '/assets/Capas/' + localRaw.split('/').pop()) : '';
-                    // Começar com posters TMDB
-                    if (item.posters && item.posters.length) {{
-                        allPosters = item.posters.slice();
-                    }} else if (item.poster && item.poster.startsWith('http')) {{
-                        allPosters = [item.poster];
-                    }}
-                    // Adicionar capa local se existir e não estiver na lista
-                    if (localUrl && allPosters.indexOf(localUrl) === -1) {{
-                        allPosters.push(localUrl);
-                    }}
-                }}
-                var postersJson = allPosters.length > 1 ? JSON.stringify(allPosters).replace(/"/g, '&quot;') : '';
-                var postersAttr = postersJson ? ' data-posters="' + postersJson + '"' : '';
-                var episodeCount = item.episodes ? item.episodes.length : 0;
-                var meta = category === 'filmes' ? 'Filme'
-                         : category === 'tv' ? '📡 Ao Vivo'
-                         : (item.seasons && item.seasons.length > 1) ? item.seasons.length + ' temporadas'
-                         : episodeCount + ' episódios';
-                var itemKey = (category === 'tv') ? String(idx) : item.id;
-                html += '<div class="item-card" data-category="' + category + '" data-id="' + itemKey + '"' + postersAttr + '>';
-                html += safeImg(poster, item.title);
-                html += '<div class="item-info">';
-                html += '<div class="item-title">' + item.title + '</div>';
-                html += '<div class="item-meta">' + meta + '</div>';
-                html += '</div></div>';
-            }});
-
-            html += '</div></section>';
-        }});
-
-        contentDiv.innerHTML = html || '<div class="loading">Nenhum conteúdo encontrado</div>';
-
-        contentDiv.addEventListener('click', function(e) {{
-            var card = e.target.closest('.item-card');
-            if (!card) return;
-            var cat = card.dataset.category;
-            var id  = card.dataset.id;
-            if (!cat || !id) return;
-            if (card.classList.contains('continue-card')) {{
-                var epIdx = parseInt(card.dataset.ep) || 0;
-                window.resumeFromStorage(id, cat, epIdx);
-                return;
-            }}
-            openModal(cat, id);
-        }});
-    }}
-
-    // =====================
-    // MODAL — delegado ao shared.js
-    // =====================
-
-    // =====================
-    // EVENT LISTENERS
-    // =====================
-
-    // Expor funções globalmente
-    // resumeFromStorage: delegado ao novo-player.js
-    // (definido lá, sobrescreve qualquer versão anterior)
-
-    window.playEpisode      = playEpisode;
-    window.playFirstEpisode = playFirstEpisode;
-
-    // Iniciar
-    loadData();
-}})();
-</script>
-
-    <!-- PWA: Service Worker + Botão Instalar -->
-    <script>
-    if ('serviceWorker' in navigator) {{
-        window.addEventListener('load', function() {{
-            navigator.serviceWorker.register('./sw.js').catch(function() {{}});
-        }});
-    }}
-    var _pwaPrompt;
-    window.addEventListener('beforeinstallprompt', function(e) {{
-        e.preventDefault();
-        _pwaPrompt = e;
-        var btn = document.getElementById('pwa-install-btn');
-        if (btn) btn.style.display = 'flex';
-    }});
-    window.addEventListener('appinstalled', function() {{
-        var btn = document.getElementById('pwa-install-btn');
-        if (btn) btn.style.display = 'none';
-        _pwaPrompt = null;
-    }});
-    function installPWA() {{
-        if (!_pwaPrompt) return;
-        _pwaPrompt.prompt();
-        _pwaPrompt.userChoice.then(function() {{ _pwaPrompt = null; }});
-    }}
-    </script>
-    <style>
-    #pwa-install-btn {{
-        display: none; position: fixed; bottom: 24px; right: 24px; z-index: 9999;
-        align-items: center; gap: 8px; background: #e50914; color: white;
-        border: none; border-radius: 30px; padding: 12px 20px; font-size: 14px;
-        font-weight: bold; cursor: pointer; box-shadow: 0 4px 20px rgba(229,9,20,0.5);
-        transition: transform 0.2s, box-shadow 0.2s; font-family: Arial, sans-serif;
-        animation: pulse-pwa 2.5s ease-in-out infinite;
-    }}
-    #pwa-install-btn:hover {{ transform: scale(1.06); animation: none; }}
-    @keyframes pulse-pwa {{
-        0%, 100% {{ box-shadow: 0 4px 20px rgba(229,9,20,0.5); }}
-        50% {{ box-shadow: 0 4px 32px rgba(229,9,20,0.9); }}
-    }}
-    #pwa-install-btn svg {{ width: 18px; height: 18px; fill: white; flex-shrink: 0; }}
-    </style>
-    <button id="pwa-install-btn" onclick="installPWA()" title="Instalar Pirataflix">
-        <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zm-8 2V5h2v6h1.17L12 13.17 9.83 11H11zm-6 7h14v2H5z"/></svg>
-        Instalar App
-    </button>
-
-</body>
-</html>'''
-
-    html_path = base_dir / "web" / "index.html"
-    with open(html_path, "w", encoding="utf-8") as f:
-        f.write(html_template)
-    print(f"✅ HTML gerado com carrosséis e TV: {html_path}")
-
-    # =====================
-    # GERAR ARQUIVOS PWA
-    # =====================
+    # Gerar arquivos PWA (manifest, sw.js, icons)
     generate_pwa_files(base_dir / "web")
-
-
-if __name__ == "__main__":
-    build_vod_with_direct_capas()
-
-
-
 
 
 
