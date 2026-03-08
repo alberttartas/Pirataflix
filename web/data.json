@@ -150,7 +150,7 @@
     {
       "id": "anaconda_2025",
       "title": "Anaconda 2025",
-      "poster": "/Pirataflix/assets/Capas/anaconda_2025.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/hRzpf8QELtzJnMt4SiDoFUmZ9KM.jpg",
       "episodes": [
         {
           "title": "Anaconda (2025)",
@@ -158,7 +158,62 @@
           "episode": 2025
         }
       ],
-      "type": "movie"
+      "type": "movie",
+      "local_poster": "/Pirataflix/assets/Capas/anaconda_2025.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/hRzpf8QELtzJnMt4SiDoFUmZ9KM.jpg",
+        "https://image.tmdb.org/t/p/w500/qxMv3HwAB3XPuwNLMhVRg795Ktp.jpg",
+        "https://image.tmdb.org/t/p/w500/hBxN6dwrANN1ic3a4G9x6JZcR3C.jpg",
+        "https://image.tmdb.org/t/p/w500/5MDnvvkOqthhE5gQebzkcOhD1p5.jpg",
+        "https://image.tmdb.org/t/p/w500/9PBECvTohqOnh9nYr6huoA7UQ4J.jpg",
+        "https://image.tmdb.org/t/p/w500/p9abmxhlhTGRsEyPSDMRfKAs1vM.jpg"
+      ],
+      "backdrop": "https://image.tmdb.org/t/p/w1280/swxhEJsAWms6X1fDZ4HdbvYBSf9.jpg",
+      "overview": "Uma crise de meia-idade inspira Doug e Griff a irem até a floresta amazônica para refazer o filme favorito da juventude, mas tudo muda quando uma anaconda gigante de verdade aparece, transformando o cenário comicamente caótico em uma situação mortal. O filme que eles estão morrendo de vontade de fazer? Pode acabar matando-os.",
+      "year": "2025",
+      "rating": 5.8,
+      "cast": [
+        {
+          "name": "Jack Black",
+          "character": "Doug McCallister",
+          "profile": "https://image.tmdb.org/t/p/w185/59IhgCtiWI5yTfzPhsjzg7GjCjm.jpg"
+        },
+        {
+          "name": "Paul Rudd",
+          "character": "Ronald Griffin Jr.",
+          "profile": "https://image.tmdb.org/t/p/w185/6jtwNOLKy0LdsRAKwZqgYMAfd5n.jpg"
+        },
+        {
+          "name": "Steve Zahn",
+          "character": "Kenny Trent",
+          "profile": "https://image.tmdb.org/t/p/w185/rwrPdKGwXnByxUVMxMf8Y7oswi3.jpg"
+        },
+        {
+          "name": "Thandiwe Newton",
+          "character": "Claire Simons",
+          "profile": "https://image.tmdb.org/t/p/w185/hZQLvxj7nV7pBrRyWTvWVz1CDi8.jpg"
+        },
+        {
+          "name": "Daniela Melchior",
+          "character": "Ana Almeida",
+          "profile": "https://image.tmdb.org/t/p/w185/tjAEB90Sa7DJtyTlDAkzVhPLQin.jpg"
+        },
+        {
+          "name": "Selton Mello",
+          "character": "Santiago",
+          "profile": "https://image.tmdb.org/t/p/w185/sBVDTAAEDJuVBTKzVGA0PrqeD17.jpg"
+        },
+        {
+          "name": "Ice Cube",
+          "character": "Ice Cube",
+          "profile": "https://image.tmdb.org/t/p/w185/9EghwabQ1wIQT4oN69qtPlzqGn4.jpg"
+        },
+        {
+          "name": "Ione Skye",
+          "character": "Malie",
+          "profile": "https://image.tmdb.org/t/p/w185/ye8qsi6fn51HW93c7065Jogbh9p.jpg"
+        }
+      ]
     },
     {
       "id": "princesa_mononoke_dublado",
