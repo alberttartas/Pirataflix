@@ -229,13 +229,12 @@
       "type": "movie",
       "local_poster": "/Pirataflix/assets/Capas/princesa mononoke.jpg",
       "posters": [
-        "https://image.tmdb.org/t/p/w500/7EadOwHmyQgOnlghRiWBygNtnjl.jpg",
         "https://image.tmdb.org/t/p/w500/cMYCDADoLKLbB83g4WnJegaZimC.jpg",
+        "https://image.tmdb.org/t/p/w500/7EadOwHmyQgOnlghRiWBygNtnjl.jpg",
         "https://image.tmdb.org/t/p/w500/kifrm5sCZNMa1GsSAANg040Hay5.jpg",
         "https://image.tmdb.org/t/p/w500/pdtzEreKvKAlqa2YEBaGwiA45V8.jpg",
         "https://image.tmdb.org/t/p/w500/9RLmX3ATWzDRgXAa3PTrmBt4OU2.jpg",
-        "https://image.tmdb.org/t/p/w500/jHWmNr7m544fJ8eItsfNk8fs2Ed.jpg",
-        "https://image.tmdb.org/t/p/w500/69xbqgRjota6pe5YKZnWvYHE3WG.jpg"
+        "https://image.tmdb.org/t/p/w500/jHWmNr7m544fJ8eItsfNk8fs2Ed.jpg"
       ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/gl0jzn4BupSbL2qMVeqrjKkF9Js.jpg",
       "overview": "Um príncipe infectado por uma doença sabe que irá morrer, a menos que encontre a cura. Sendo a sua última esperança, segue para o leste e, durante o caminho, encontra animais da floresta lutando contra a sua exploração, liderados pela princesa Mononoke.",
@@ -427,7 +426,7 @@
     {
       "id": "homem_com_h",
       "title": "Homem Com H",
-      "poster": "https://image.tmdb.org/t/p/w500/xCYgD1N4S9at70p4WdskbVWHgZS.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/c9vcB3ddnErwY9H9H5lNez8a0kr.jpg",
       "episodes": [
         {
           "title": "Homem com H",
@@ -438,61 +437,63 @@
       "type": "movie",
       "local_poster": "/Pirataflix/assets/Capas/homem_com_h.jpg",
       "posters": [
-        "https://image.tmdb.org/t/p/w500/sOed9XD0TS9d0XRSnTiw5tpXIIO.jpg",
-        "https://image.tmdb.org/t/p/w500/oXRqROca0iCJrkOultglQ2gcc0Y.jpg",
-        "https://image.tmdb.org/t/p/w500/xExgeiovpUKl2gvvEkECKky3zUA.jpg",
-        "https://image.tmdb.org/t/p/w500/STOYx9aepaMnmhlGiWoDtkdzs1.jpg",
-        "https://image.tmdb.org/t/p/w500/xCYgD1N4S9at70p4WdskbVWHgZS.jpg",
-        "https://image.tmdb.org/t/p/w500/oL1EMPQxZBpNAsDecFt3A9J7g7c.jpg"
+        "https://image.tmdb.org/t/p/w500/c9vcB3ddnErwY9H9H5lNez8a0kr.jpg",
+        "https://image.tmdb.org/t/p/w500/xVkbKwGnBVNQ122GN5bCTMyPbWz.jpg",
+        "https://image.tmdb.org/t/p/w500/itH4xI6TbJtJSqcZ43B3MkpL1gy.jpg",
+        "https://image.tmdb.org/t/p/w500/yVqDbroZ1UKy8AYu34IbEwRbwZx.jpg",
+        "https://image.tmdb.org/t/p/w500/hScif55YVsysHaM0h6sigf50WfD.jpg",
+        "https://image.tmdb.org/t/p/w500/zULDLrGE42iTiizMJKDoTGbIKlu.jpg",
+        "https://image.tmdb.org/t/p/w500/k9ZA8wZy2Dc3BmwQlutZJDJkwwo.jpg"
       ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/38byjV1A8WpA05xiXl0AXZCnCfv.jpg",
-      "overview": "Dono de uma voz inconfundível e de performances memoráveis, Ney Matogrosso morava com os pais e irmãos na pequena cidade de Bela Vista (MS). Os embates com o pai, que insistia que o menino “virasse homem”, levaram Ney a se afastar da família, antes de enveredar para a vida artística. Anos depois de sair de casa, em São Paulo, estreou como vocalista dos Secos e Molhados, dando início às performances históricas que o definiram como um dos maiores artistas brasileiros da atualidade.",
-      "year": "2025",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/3tpNEbRahT8smy7RraaWa0xg9Gv.jpg",
+      "overview": "Quando uma bala de ouro chega ao quartel-general da inteligência britânica com um \"007\" gravado nela, se acredita que James Bond será o próximo alvo de um assassino profissional que cobra um milhão de dólares por serviço. Assim, Bond vai investigar a situação e acaba descobrindo que o objetivo do matador internacional seqüestrar um cientista, que inventou um conversor solar capaz de resolver a crise de energia no planeta.",
+      "year": "1974",
       "genres": [
-        "Drama",
-        "Música"
+        "Aventura",
+        "Ação",
+        "Suspense"
       ],
-      "rating": 8.1,
+      "rating": 6.5,
       "cast": [
         {
-          "name": "Jesuíta Barbosa",
-          "character": "Ney Matogrosso",
-          "profile": "https://image.tmdb.org/t/p/w185/oaHrZmwIrevxDAmduTbAaHoOXD8.jpg"
+          "name": "Roger Moore",
+          "character": "James Bond",
+          "profile": "https://image.tmdb.org/t/p/w185/6sZGGtq7RHt8Pg6ynUMrPJPuTlj.jpg"
         },
         {
-          "name": "Rômulo Braga",
-          "character": "Antônio Matogrosso",
-          "profile": "https://image.tmdb.org/t/p/w185/pN89wAhp0OZ6bL3yTyMm8iPUwBy.jpg"
+          "name": "Christopher Lee",
+          "character": "Francisco Scaramanga",
+          "profile": "https://image.tmdb.org/t/p/w185/dA26fBr3t7mKqjn3OYW6kbD1LXM.jpg"
         },
         {
-          "name": "Hermila Guedes",
-          "character": "Beíta",
-          "profile": "https://image.tmdb.org/t/p/w185/dJJh7sekL9dl77tviU5yEVXa1qo.jpg"
+          "name": "Britt Ekland",
+          "character": "Mary Goodnight",
+          "profile": "https://image.tmdb.org/t/p/w185/xwqKmseMHCXwLQGxardWgPTtAcW.jpg"
         },
         {
-          "name": "Davi Malizia",
-          "character": "Ney Matogrosso (Criança)",
-          "profile": "https://image.tmdb.org/t/p/w185/fN5UPWhmzZ5S3LpZR1HIJmJwGGi.jpg"
+          "name": "Maud Adams",
+          "character": "Andrea Anders",
+          "profile": "https://image.tmdb.org/t/p/w185/iJMwjbngYgfh4LELSV8HPI9QeJT.jpg"
         },
         {
-          "name": "Jullio Reis",
-          "character": "Cazuza",
-          "profile": "https://image.tmdb.org/t/p/w185/auxzZfwBQdV9kP1T8DLq3Bq3DQm.jpg"
+          "name": "Hervé Villechaize",
+          "character": "Nick Nack",
+          "profile": "https://image.tmdb.org/t/p/w185/9zDzeE1WSBqLcS5DAIQz3UAbDSR.jpg"
         },
         {
-          "name": "Bruno Montaleone",
-          "character": "Marco de Maria",
-          "profile": "https://image.tmdb.org/t/p/w185/eXkQ1K9JMaZsZ3WYv8MVwPX9HRD.jpg"
+          "name": "Clifton James",
+          "character": "Sheriff J.W. Pepper",
+          "profile": "https://image.tmdb.org/t/p/w185/4XRoVhgoeQEZdg4BAKCWRkI1UfR.jpg"
         },
         {
-          "name": "Mauro Soares",
-          "character": "João Ricardo",
-          "profile": "https://image.tmdb.org/t/p/w185/jukccfdQ4Gxwr91u7WuShB9zYR6.jpg"
+          "name": "Richard Loo",
+          "character": "Hai Fat",
+          "profile": "https://image.tmdb.org/t/p/w185/mCQFpDqmxaNMm0A4SKodUuNA92v.jpg"
         },
         {
-          "name": "Bruno Parmera",
-          "character": "Luisinho",
-          "profile": "https://image.tmdb.org/t/p/w185/cc1B7rIBIRL7Ne0T48g5QDwDkPe.jpg"
+          "name": "Soon-Tek Oh",
+          "character": "Lieutenant Hip",
+          "profile": "https://image.tmdb.org/t/p/w185/m2qkVJLmfcNYQe85bJ5iuF6e8ha.jpg"
         }
       ]
     },
@@ -12540,7 +12541,7 @@
               "url": "https://cdn-novflix.com/storage1/TGRACAS/TGRACAS-120.mp4",
               "episode": 120,
               "air_date": "2026-03-07",
-              "overview": "",
+              "overview": "Lucélia não conta a João Rubens que descobriu que As Três Graças original está no ferro-velho. Gerluce comenta com Rogério que teme que Paulinho possa ter perdido a confiança nela. Paulinho, Jairo e Juquinha não encontram vestígios de fabricação de remédios no endereço que seria a Casa de Farinha. Joaquim e Misael contam para Gerluce, Viviane e Júnior que Bagdá descobriu sobre As Três Graças.",
               "still": "",
               "guest_stars": [
                 {
@@ -14672,7 +14673,7 @@
           "url": "https://cdn-novflix.com/storage1/TGRACAS/TGRACAS-120.mp4",
           "episode": 120,
           "air_date": "2026-03-07",
-          "overview": "",
+          "overview": "Lucélia não conta a João Rubens que descobriu que As Três Graças original está no ferro-velho. Gerluce comenta com Rogério que teme que Paulinho possa ter perdido a confiança nela. Paulinho, Jairo e Juquinha não encontram vestígios de fabricação de remédios no endereço que seria a Casa de Farinha. Joaquim e Misael contam para Gerluce, Viviane e Júnior que Bagdá descobriu sobre As Três Graças.",
           "still": "",
           "guest_stars": [
             {
