@@ -44,7 +44,7 @@
     "type": "tv"
   },
   "dandandan": {
-    "tmdb_id": 246804,
+    "tmdb_id": 240411,
     "type": "tv"
   },
   "spy_x_family": {
@@ -85,16 +85,16 @@
     "search": "Historias del Nuevo Testamento"
   },
   "unfamiliar": {
-    "tmdb_id": 246413,
+    "tmdb_id": 274776,
     "type": "tv"
   },
   "todo_mundo_odeia_o_chris": {
-    "tmdb_id": 1395,
+    "tmdb_id": 252,
     "type": "tv",
     "search": "Everybody Hates Chris"
   },
   "bridgerton": {
-    "tmdb_id": 113988,
+    "tmdb_id": 91239,
     "type": "tv"
   },
   "rainhas_da_grana": {
@@ -102,7 +102,7 @@
     "type": "tv"
   },
   "os_donos_do_jogo": {
-    "tmdb_id": 72523,
+    "tmdb_id": 282440,
     "type": "tv"
   },
   "paraiso_tropical": {
@@ -110,7 +110,7 @@
     "type": "tv"
   },
   "totalmente_demais": {
-    "tmdb_id": 63175,
+    "tmdb_id": 84383,
     "type": "tv"
   },
   "cordel_encantado": {
@@ -122,12 +122,12 @@
     "type": "tv"
   },
   "marimar": {
-    "tmdb_id": 13730,
+    "tmdb_id": 12782,
     "type": "tv",
     "search": "Marimar"
   },
   "salve_jorge": {
-    "tmdb_id": 55266,
+    "tmdb_id": 46126,
     "type": "tv"
   },
   "a_caverna_encantada": {
@@ -144,7 +144,7 @@
     "type": "tv"
   },
   "verdades_secretas_2": {
-    "tmdb_id": 134173,
+    "tmdb_id": 136295,
     "type": "tv"
   },
   "chocolate_com_pimenta": {
@@ -152,7 +152,7 @@
     "type": "tv"
   },
   "verdades_secretas": {
-    "tmdb_id": 62688,
+    "tmdb_id": 62917,
     "type": "tv"
   },
   "maria_do_bairro": {
@@ -161,11 +161,11 @@
     "search": "María la del Barrio"
   },
   "renascer": {
-    "tmdb_id": 72765,
+    "tmdb_id": 223365,
     "type": "tv"
   },
   "o_beijo_do_vampiro": {
-    "tmdb_id": 34058,
+    "tmdb_id": 8335,
     "type": "tv"
   },
   "avenida_brasil": {
@@ -177,7 +177,7 @@
     "type": "tv"
   },
   "pe_na_jaca": {
-    "tmdb_id": 32900,
+    "tmdb_id": 50731,
     "type": "tv"
   },
   "anaconda_2025":{
@@ -186,5 +186,6 @@
   }
   
 }
+
 
 
