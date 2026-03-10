@@ -1597,7 +1597,7 @@
                 },
                 {
                   "name": "Levi Asaf",
-                  "character": "Antônio Sampaio (criança)",
+                  "character": "Antônio Felizardo Sampaio (criança)",
                   "photo": "https://image.tmdb.org/t/p/w185/es92F0ACfqTxdd2awn7BU3H6oPB.jpg"
                 }
               ],
@@ -1618,7 +1618,7 @@
                 },
                 {
                   "name": "Levi Asaf",
-                  "character": "Antônio Sampaio (criança)",
+                  "character": "Antônio Felizardo Sampaio (criança)",
                   "photo": "https://image.tmdb.org/t/p/w185/es92F0ACfqTxdd2awn7BU3H6oPB.jpg"
                 },
                 {
@@ -1711,7 +1711,7 @@
                 },
                 {
                   "name": "Levi Asaf",
-                  "character": "Antônio Sampaio (criança)",
+                  "character": "Antônio Felizardo Sampaio (criança)",
                   "photo": "https://image.tmdb.org/t/p/w185/es92F0ACfqTxdd2awn7BU3H6oPB.jpg"
                 },
                 {
@@ -1742,7 +1742,7 @@
                 },
                 {
                   "name": "Levi Asaf",
-                  "character": "Antônio Sampaio (criança)",
+                  "character": "Antônio Felizardo Sampaio (criança)",
                   "photo": "https://image.tmdb.org/t/p/w185/es92F0ACfqTxdd2awn7BU3H6oPB.jpg"
                 },
                 {
@@ -1763,7 +1763,7 @@
               "guest_stars": [
                 {
                   "name": "Elisa Lucinda",
-                  "character": "Flaviana",
+                  "character": "Flaviana Sampaio",
                   "photo": "https://image.tmdb.org/t/p/w185/x1iCvQREawt35bLKLXFXTuNsTOo.jpg"
                 },
                 {
@@ -1841,7 +1841,7 @@
                 },
                 {
                   "name": "Duda Bernardo",
-                  "character": "Maria Sampaio (criança)",
+                  "character": "Maria Felizardo Sampaio (criança)",
                   "photo": ""
                 },
                 {
@@ -2086,10 +2086,20 @@
               "episode": 26,
               "air_date": "2026-03-09",
               "overview": "",
-              "still": "",
-              "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-03-09T21:00:00"
+              "still": "https://image.tmdb.org/t/p/w400/oxW8wmjZuhuQnLdaWeiL9eQmeEH.jpg",
+              "guest_stars": [
+                {
+                  "name": "Manuela Dourado",
+                  "character": "Teresa Tomásia de São José",
+                  "photo": ""
+                },
+                {
+                  "name": "Danielle Olímpia",
+                  "character": "Joana de Deus de São José",
+                  "photo": ""
+                }
+              ],
+              "locked": false
             },
             {
               "title": "Dona Beja Episódio 27",
@@ -2097,10 +2107,30 @@
               "episode": 27,
               "air_date": "2026-03-09",
               "overview": "",
-              "still": "",
-              "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-03-09T21:00:00"
+              "still": "https://image.tmdb.org/t/p/w400/g2cGfymN0atJPhrWrADagvxfYbH.jpg",
+              "guest_stars": [
+                {
+                  "name": "Levi Asaf",
+                  "character": "Antônio Felizardo Sampaio (criança)",
+                  "photo": "https://image.tmdb.org/t/p/w185/es92F0ACfqTxdd2awn7BU3H6oPB.jpg"
+                },
+                {
+                  "name": "Elisa Lucinda",
+                  "character": "Flaviana Sampaio",
+                  "photo": "https://image.tmdb.org/t/p/w185/x1iCvQREawt35bLKLXFXTuNsTOo.jpg"
+                },
+                {
+                  "name": "Manuela Dourado",
+                  "character": "Teresa Tomásia de São José",
+                  "photo": ""
+                },
+                {
+                  "name": "Danielle Olímpia",
+                  "character": "Joana de Deus de São José",
+                  "photo": ""
+                }
+              ],
+              "locked": false
             },
             {
               "title": "Dona Beja Episódio 28",
@@ -2108,10 +2138,20 @@
               "episode": 28,
               "air_date": "2026-03-09",
               "overview": "",
-              "still": "",
-              "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-03-09T21:00:00"
+              "still": "https://image.tmdb.org/t/p/w400/99CNh4tmErk3oj5zkmNhZnspnme.jpg",
+              "guest_stars": [
+                {
+                  "name": "Danielle Olímpia",
+                  "character": "Joana de Deus de São José",
+                  "photo": ""
+                },
+                {
+                  "name": "Manuela Dourado",
+                  "character": "Teresa Tomásia  de São José",
+                  "photo": ""
+                }
+              ],
+              "locked": false
             },
             {
               "title": "Dona Beja Episódio 29",
@@ -2119,10 +2159,20 @@
               "episode": 29,
               "air_date": "2026-03-09",
               "overview": "",
-              "still": "",
-              "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-03-09T21:00:00"
+              "still": "https://image.tmdb.org/t/p/w400/342gUVsUeaaxZuWULEE1pP9ekD5.jpg",
+              "guest_stars": [
+                {
+                  "name": "Manuela Dourado",
+                  "character": "Teresa Tomásia de São José",
+                  "photo": ""
+                },
+                {
+                  "name": "Danielle Olímpia",
+                  "character": "Joana de Deus de São José",
+                  "photo": ""
+                }
+              ],
+              "locked": false
             },
             {
               "title": "Dona Beja Episódio 30",
@@ -2130,10 +2180,30 @@
               "episode": 30,
               "air_date": "2026-03-09",
               "overview": "",
-              "still": "",
-              "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-03-09T21:00:00"
+              "still": "https://image.tmdb.org/t/p/w400/7Hv6GY4qbyMGT9IryTzqWnq4ZOD.jpg",
+              "guest_stars": [
+                {
+                  "name": "Manuela Dourado",
+                  "character": "Teresa Tomásia de São José",
+                  "photo": ""
+                },
+                {
+                  "name": "Danielle Olímpia",
+                  "character": "Joana de Deus de São José",
+                  "photo": ""
+                },
+                {
+                  "name": "Ana Thomé",
+                  "character": "Cecília Felizardo (jovem)",
+                  "photo": ""
+                },
+                {
+                  "name": "Fumassa Alves",
+                  "character": "Paulo Sampaio (jovem)",
+                  "photo": "https://image.tmdb.org/t/p/w185/53XGZiOqAZcm4anltm9uoWLOz8U.jpg"
+                }
+              ],
+              "locked": false
             },
             {
               "title": "Dona Beja Episódio 31",
@@ -2274,7 +2344,7 @@
             },
             {
               "name": "Levi Asaf",
-              "character": "Antônio Sampaio (criança)",
+              "character": "Antônio Felizardo Sampaio (criança)",
               "photo": "https://image.tmdb.org/t/p/w185/es92F0ACfqTxdd2awn7BU3H6oPB.jpg"
             }
           ],
@@ -2295,7 +2365,7 @@
             },
             {
               "name": "Levi Asaf",
-              "character": "Antônio Sampaio (criança)",
+              "character": "Antônio Felizardo Sampaio (criança)",
               "photo": "https://image.tmdb.org/t/p/w185/es92F0ACfqTxdd2awn7BU3H6oPB.jpg"
             },
             {
@@ -2388,7 +2458,7 @@
             },
             {
               "name": "Levi Asaf",
-              "character": "Antônio Sampaio (criança)",
+              "character": "Antônio Felizardo Sampaio (criança)",
               "photo": "https://image.tmdb.org/t/p/w185/es92F0ACfqTxdd2awn7BU3H6oPB.jpg"
             },
             {
@@ -2419,7 +2489,7 @@
             },
             {
               "name": "Levi Asaf",
-              "character": "Antônio Sampaio (criança)",
+              "character": "Antônio Felizardo Sampaio (criança)",
               "photo": "https://image.tmdb.org/t/p/w185/es92F0ACfqTxdd2awn7BU3H6oPB.jpg"
             },
             {
@@ -2440,7 +2510,7 @@
           "guest_stars": [
             {
               "name": "Elisa Lucinda",
-              "character": "Flaviana",
+              "character": "Flaviana Sampaio",
               "photo": "https://image.tmdb.org/t/p/w185/x1iCvQREawt35bLKLXFXTuNsTOo.jpg"
             },
             {
@@ -2518,7 +2588,7 @@
             },
             {
               "name": "Duda Bernardo",
-              "character": "Maria Sampaio (criança)",
+              "character": "Maria Felizardo Sampaio (criança)",
               "photo": ""
             },
             {
@@ -2763,10 +2833,20 @@
           "episode": 26,
           "air_date": "2026-03-09",
           "overview": "",
-          "still": "",
-          "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-03-09T21:00:00"
+          "still": "https://image.tmdb.org/t/p/w400/oxW8wmjZuhuQnLdaWeiL9eQmeEH.jpg",
+          "guest_stars": [
+            {
+              "name": "Manuela Dourado",
+              "character": "Teresa Tomásia de São José",
+              "photo": ""
+            },
+            {
+              "name": "Danielle Olímpia",
+              "character": "Joana de Deus de São José",
+              "photo": ""
+            }
+          ],
+          "locked": false
         },
         {
           "title": "Dona Beja Episódio 27",
@@ -2774,10 +2854,30 @@
           "episode": 27,
           "air_date": "2026-03-09",
           "overview": "",
-          "still": "",
-          "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-03-09T21:00:00"
+          "still": "https://image.tmdb.org/t/p/w400/g2cGfymN0atJPhrWrADagvxfYbH.jpg",
+          "guest_stars": [
+            {
+              "name": "Levi Asaf",
+              "character": "Antônio Felizardo Sampaio (criança)",
+              "photo": "https://image.tmdb.org/t/p/w185/es92F0ACfqTxdd2awn7BU3H6oPB.jpg"
+            },
+            {
+              "name": "Elisa Lucinda",
+              "character": "Flaviana Sampaio",
+              "photo": "https://image.tmdb.org/t/p/w185/x1iCvQREawt35bLKLXFXTuNsTOo.jpg"
+            },
+            {
+              "name": "Manuela Dourado",
+              "character": "Teresa Tomásia de São José",
+              "photo": ""
+            },
+            {
+              "name": "Danielle Olímpia",
+              "character": "Joana de Deus de São José",
+              "photo": ""
+            }
+          ],
+          "locked": false
         },
         {
           "title": "Dona Beja Episódio 28",
@@ -2785,10 +2885,20 @@
           "episode": 28,
           "air_date": "2026-03-09",
           "overview": "",
-          "still": "",
-          "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-03-09T21:00:00"
+          "still": "https://image.tmdb.org/t/p/w400/99CNh4tmErk3oj5zkmNhZnspnme.jpg",
+          "guest_stars": [
+            {
+              "name": "Danielle Olímpia",
+              "character": "Joana de Deus de São José",
+              "photo": ""
+            },
+            {
+              "name": "Manuela Dourado",
+              "character": "Teresa Tomásia  de São José",
+              "photo": ""
+            }
+          ],
+          "locked": false
         },
         {
           "title": "Dona Beja Episódio 29",
@@ -2796,10 +2906,20 @@
           "episode": 29,
           "air_date": "2026-03-09",
           "overview": "",
-          "still": "",
-          "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-03-09T21:00:00"
+          "still": "https://image.tmdb.org/t/p/w400/342gUVsUeaaxZuWULEE1pP9ekD5.jpg",
+          "guest_stars": [
+            {
+              "name": "Manuela Dourado",
+              "character": "Teresa Tomásia de São José",
+              "photo": ""
+            },
+            {
+              "name": "Danielle Olímpia",
+              "character": "Joana de Deus de São José",
+              "photo": ""
+            }
+          ],
+          "locked": false
         },
         {
           "title": "Dona Beja Episódio 30",
@@ -2807,10 +2927,30 @@
           "episode": 30,
           "air_date": "2026-03-09",
           "overview": "",
-          "still": "",
-          "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-03-09T21:00:00"
+          "still": "https://image.tmdb.org/t/p/w400/7Hv6GY4qbyMGT9IryTzqWnq4ZOD.jpg",
+          "guest_stars": [
+            {
+              "name": "Manuela Dourado",
+              "character": "Teresa Tomásia de São José",
+              "photo": ""
+            },
+            {
+              "name": "Danielle Olímpia",
+              "character": "Joana de Deus de São José",
+              "photo": ""
+            },
+            {
+              "name": "Ana Thomé",
+              "character": "Cecília Felizardo (jovem)",
+              "photo": ""
+            },
+            {
+              "name": "Fumassa Alves",
+              "character": "Paulo Sampaio (jovem)",
+              "photo": "https://image.tmdb.org/t/p/w185/53XGZiOqAZcm4anltm9uoWLOz8U.jpg"
+            }
+          ],
+          "locked": false
         },
         {
           "title": "Dona Beja Episódio 31",
@@ -12542,7 +12682,7 @@
               "episode": 120,
               "air_date": "2026-03-07",
               "overview": "Lucélia não conta a João Rubens que descobriu que As Três Graças original está no ferro-velho. Gerluce comenta com Rogério que teme que Paulinho possa ter perdido a confiança nela. Paulinho, Jairo e Juquinha não encontram vestígios de fabricação de remédios no endereço que seria a Casa de Farinha. Joaquim e Misael contam para Gerluce, Viviane e Júnior que Bagdá descobriu sobre As Três Graças.",
-              "still": "",
+              "still": "https://image.tmdb.org/t/p/w400/4UkAwdJBlvQcymTvWzW5dBpla6a.jpg",
               "guest_stars": [
                 {
                   "name": "Clara Choveaux",
@@ -12560,8 +12700,7 @@
               "overview": "",
               "still": "",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-03-09T21:00:00"
+              "locked": false
             },
             {
               "title": "TGRACAS-122",
@@ -14674,7 +14813,7 @@
           "episode": 120,
           "air_date": "2026-03-07",
           "overview": "Lucélia não conta a João Rubens que descobriu que As Três Graças original está no ferro-velho. Gerluce comenta com Rogério que teme que Paulinho possa ter perdido a confiança nela. Paulinho, Jairo e Juquinha não encontram vestígios de fabricação de remédios no endereço que seria a Casa de Farinha. Joaquim e Misael contam para Gerluce, Viviane e Júnior que Bagdá descobriu sobre As Três Graças.",
-          "still": "",
+          "still": "https://image.tmdb.org/t/p/w400/4UkAwdJBlvQcymTvWzW5dBpla6a.jpg",
           "guest_stars": [
             {
               "name": "Clara Choveaux",
@@ -14692,8 +14831,7 @@
           "overview": "",
           "still": "",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-03-09T21:00:00"
+          "locked": false
         },
         {
           "title": "TGRACAS-122",
@@ -15348,7 +15486,7 @@
       "backdrop": "https://image.tmdb.org/t/p/w1280/bsnzAWs9MITfYgsQ8jp1SQ3AyHI.jpg",
       "overview": "Lígia, Gerluce e Joélly — três mulheres de diferentes gerações da mesma família — cujas vidas são marcadas por um ponto em comum: todas enfrentaram uma gravidez na adolescência e foram abandonadas por seus respectivos companheiros.",
       "year": "2025",
-      "rating": 7.8,
+      "rating": 7.9,
       "cast": [
         {
           "name": "Sophie Charlotte",
@@ -61957,7 +62095,7 @@
       "local_poster": "/Pirataflix/assets/Capas/default.jpg",
       "posters": [
         "https://image.tmdb.org/t/p/w500/29myVHhdGoS735ZJ9hblY0pQ3K9.jpg",
-        "https://image.tmdb.org/t/p/w500/jBn4LWlgdsf6xIUYhYBwpctBVsj.jpg",
+        "https://image.tmdb.org/t/p/w500/uPmxchXSXDXTYXe8OKWgmV9TowB.jpg",
         "https://image.tmdb.org/t/p/w500/w9XQ7ehwaxqV6WJSAUE0qLTQHgq.jpg",
         "https://image.tmdb.org/t/p/w500/lxVS24ZhG3WQf3IMbkFIg6olT6A.jpg",
         "https://image.tmdb.org/t/p/w500/yDWJYRAwMNKbIYT8ZB33qy84uzO.jpg",
