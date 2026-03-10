@@ -274,7 +274,7 @@
         {
           "name": "美輪明宏",
           "character": "Mrs. Moro (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/pCfBeLJigKnUWOAy7hsdBR7K0UV.jpg"
+          "profile": ""
         },
         {
           "name": "森光子",
@@ -716,7 +716,7 @@
     {
       "id": "unfamiliar",
       "title": "Unfamiliar",
-      "poster": "https://image.tmdb.org/t/p/w500/xiT0L3EOfsTuz8lj7Z2VXCyOyOJ.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/fX0Kvvo6hj9feqS3JyFpVmscz2Y.jpg",
       "seasons": [
         {
           "season": 1,
@@ -790,14 +790,64 @@
       "category": "series",
       "local_poster": "/Pirataflix/assets/Capas/unfamiliar.jpg",
       "posters": [
-        "https://image.tmdb.org/t/p/w500/xiT0L3EOfsTuz8lj7Z2VXCyOyOJ.jpg"
+        "https://image.tmdb.org/t/p/w500/fX0Kvvo6hj9feqS3JyFpVmscz2Y.jpg",
+        "https://image.tmdb.org/t/p/w500/n8CWRI8k1pLT1HAmIy0mAerDJmc.jpg",
+        "https://image.tmdb.org/t/p/w500/OvNMzIOJIzDlouhZVqCHRE6HlL.jpg",
+        "https://image.tmdb.org/t/p/w500/1mCU3UEnGItOp7heoDdwRCtpmod.jpg",
+        "https://image.tmdb.org/t/p/w500/DZRZVh3uPSFkOF4udkVqD95hdk.jpg",
+        "https://image.tmdb.org/t/p/w500/hdEQWvSbDQsbdseeYjUS0NgrfT2.jpg"
       ],
-      "year": "2020"
+      "backdrop": "https://image.tmdb.org/t/p/w1280/qDq3dG4ElRohih5fUGNQRLHuBaC.jpg",
+      "overview": "Quando o passado bate à porta de um casal de ex-espiões, o maior desafio não são as perseguições, os tiroteios e as brigas... é contar a verdade um ao outro.",
+      "year": "2026",
+      "rating": 7.3,
+      "cast": [
+        {
+          "name": "Felix Kramer",
+          "character": "Simon",
+          "profile": "https://image.tmdb.org/t/p/w185/miTBzoeUCmJZjtkhiXQAwRKlukl.jpg"
+        },
+        {
+          "name": "Susanne Wolff",
+          "character": "Meret",
+          "profile": "https://image.tmdb.org/t/p/w185/sSRzIz5TGJWsvHyMeZluZOxFJKN.jpg"
+        },
+        {
+          "name": "Samuel Finzi",
+          "character": "Josef Koleev",
+          "profile": "https://image.tmdb.org/t/p/w185/pCMO1RAgikPaCt9wTOBnSZ2iM2S.jpg"
+        },
+        {
+          "name": "Natalia Belitski",
+          "character": "Katya Volkova",
+          "profile": "https://image.tmdb.org/t/p/w185/5EPcoDxN0fC7PW3spk8x3r9JkOi.jpg"
+        },
+        {
+          "name": "Andreas Pietschmann",
+          "character": "Jonas Auken",
+          "profile": "https://image.tmdb.org/t/p/w185/72Srjd11dwvovxe1tyUKU0ml04u.jpg"
+        },
+        {
+          "name": "Maja Bons",
+          "character": "Nina Schäfer",
+          "profile": "https://image.tmdb.org/t/p/w185/mWdXOxuMy4IYRYUQiYO0pgDkmjO.jpg"
+        },
+        {
+          "name": "Genija Rykova",
+          "character": "Vera Koleeva",
+          "profile": "https://image.tmdb.org/t/p/w185/qgYyIe0bMhn6TgI1RB8wMMZ2rt5.jpg"
+        },
+        {
+          "name": "Henry Hübchen",
+          "character": "Gregor Klein",
+          "profile": "https://image.tmdb.org/t/p/w185/bfObaQiK6YSoHlPP2bTDHRorL8U.jpg"
+        }
+      ]
     },
     {
       "id": "todo_mundo_odeia_o_chris",
       "title": "Todo Mundo Odeia O Chris",
-      "poster": "https://image.tmdb.org/t/p/w500/sbxqT0TixODWRYzuaw6JFba0KKO.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/dXyy1e3TJ5ut6DRCrQQT3TcsrGU.jpg",
       "seasons": [
         {
           "season": 1,
@@ -1149,65 +1199,59 @@
       "category": "series",
       "local_poster": "/Pirataflix/assets/Capas/todo_mundo_odeia_o_chris.jpg",
       "posters": [
-        "https://image.tmdb.org/t/p/w500/sbxqT0TixODWRYzuaw6JFba0KKO.jpg",
-        "https://image.tmdb.org/t/p/w500/mRvSUuU1VQQkZZ578jKJpcUCuL8.jpg",
-        "https://image.tmdb.org/t/p/w500/s59Cza6iOcNYk0LiYgj1MEg8vS4.jpg",
-        "https://image.tmdb.org/t/p/w500/at17ZravDkBafBWOARjTmyFZOkt.jpg",
-        "https://image.tmdb.org/t/p/w500/oqVgNYitdIYtxJb2sasiU2LRMV8.jpg",
-        "https://image.tmdb.org/t/p/w500/eZp7UDoo0tEyk5yGOs72CJvVOPr.jpg",
-        "https://image.tmdb.org/t/p/w500/bP6WDHNB36QYcidHKjHpfgiOorN.jpg"
+        "https://image.tmdb.org/t/p/w500/dXyy1e3TJ5ut6DRCrQQT3TcsrGU.jpg",
+        "https://image.tmdb.org/t/p/w500/zX0xZnyReJxtGAqDOS3WcsgpOgx.jpg",
+        "https://image.tmdb.org/t/p/w500/4BYXh0cY3AyyUB05CTLVJO5FjCM.jpg",
+        "https://image.tmdb.org/t/p/w500/3FjakKDEuaO8FpR1qJctV6njqYy.jpg",
+        "https://image.tmdb.org/t/p/w500/nYfvhUtbqMGtd5iV9sj2fdEFN5p.jpg",
+        "https://image.tmdb.org/t/p/w500/5rqCyqJWi7LqbuCJyRCNaZtKcHc.jpg"
       ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/5RWAjCYhu3D8Ai2QBYP7GjaxFb3.jpg",
-      "overview": "Um grupo de alunos de uma escola rica de Manhattan parece se safar de tudo, menos de uma blogueira anônima que acompanha cada passo que dão.",
-      "year": "2007",
-      "rating": 8.2,
+      "backdrop": "https://image.tmdb.org/t/p/w1280/qji729gwCW88RpIIWidlaLTul3V.jpg",
+      "overview": "Para Chris, fazer 13 anos não tem nada de maravilhoso. Ele é o único negro da turma do ensino médio, onde tem uma educação medíocre. É amigo de Greg, e é frequentemente abusado por Joey Caruso. Ambos os pais trabalham e ele cuida de seus dois irmãos. Parece trágico, mas é hilário.",
+      "year": "2005",
+      "rating": 8.1,
       "cast": [
         {
-          "name": "Blake Lively",
-          "character": "Serena van der Woodsen",
-          "profile": "https://image.tmdb.org/t/p/w185/rkGVjd6wImtgjOCi0IpeffdEWtb.jpg"
+          "name": "Tyler James Williams",
+          "character": "Chris",
+          "profile": "https://image.tmdb.org/t/p/w185/iuPSybfJYExEgUfSmIdN540gdHp.jpg"
         },
         {
-          "name": "Leighton Meester",
-          "character": "Blair Waldorf",
-          "profile": "https://image.tmdb.org/t/p/w185/6P8sa2eR2wpNkA1n1NVHREaeXPV.jpg"
+          "name": "Tichina Arnold",
+          "character": "Rochelle",
+          "profile": "https://image.tmdb.org/t/p/w185/5Z9UnP5MZswrpHGWMtCm5axQ4RQ.jpg"
         },
         {
-          "name": "Penn Badgley",
-          "character": "Dan Humphrey",
-          "profile": "https://image.tmdb.org/t/p/w185/3ekfkoj3YmRlCtez4OOZoVPiO7a.jpg"
+          "name": "Terry Crews",
+          "character": "Julius",
+          "profile": "https://image.tmdb.org/t/p/w185/pxTY4SglLo5hFcMH00MxPeC5u55.jpg"
         },
         {
-          "name": "Chace Crawford",
-          "character": "Nate Archibald",
-          "profile": "https://image.tmdb.org/t/p/w185/yWZILsr2mBQBCG1LOcCYYshIbts.jpg"
+          "name": "Imani Hakim",
+          "character": "Tonya",
+          "profile": "https://image.tmdb.org/t/p/w185/ccau9npD8M3r1LDdr17lgFzPT0W.jpg"
         },
         {
-          "name": "Ed Westwick",
-          "character": "Chuck Bass",
-          "profile": "https://image.tmdb.org/t/p/w185/sI2M7uu76HUkJk562siAK8vt50.jpg"
+          "name": "Tequan Richmond",
+          "character": "Drew",
+          "profile": "https://image.tmdb.org/t/p/w185/8YBNBO3JdkoVXfoiuCP0wBPVQdo.jpg"
         },
         {
-          "name": "Kaylee DeFer",
-          "character": "Ivy Dickens",
-          "profile": "https://image.tmdb.org/t/p/w185/scGIyqmQC3A1mlWSYGd2STIqMLK.jpg"
+          "name": "Vincent Martella",
+          "character": "Greg Wuliger",
+          "profile": "https://image.tmdb.org/t/p/w185/9vcbTBhKHsGrbZKEg4w9nFBWeQ6.jpg"
         },
         {
-          "name": "Matthew Settle",
-          "character": "Rufus Humphrey",
-          "profile": "https://image.tmdb.org/t/p/w185/69D3JqJslcqJ1lqwcet2zGRAr7n.jpg"
-        },
-        {
-          "name": "Kelly Rutherford",
-          "character": "Lily van der Woodsen",
-          "profile": "https://image.tmdb.org/t/p/w185/qq05zHgR6lunxEOAEwJ7peAJHDN.jpg"
+          "name": "Chris Rock",
+          "character": "Narrator (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/cqI8yQ00GNDV3PAAz5UeLj7vOX0.jpg"
         }
       ]
     },
     {
       "id": "bridgerton",
       "title": "Bridgerton",
-      "poster": "https://image.tmdb.org/t/p/w500/67ujv4O6AalmGu3UaVSNdcw8juT.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/rAKJSFPXv9aFpeZAyr0yNg0HxuP.jpg",
       "seasons": [
         {
           "season": 1,
@@ -1374,42 +1418,58 @@
       "category": "series",
       "local_poster": "/Pirataflix/assets/Capas/Bridgerton.jpg",
       "posters": [
-        "https://image.tmdb.org/t/p/w500/f2PVrphK0u81ES256lw3oAZuF3x.jpg",
-        "https://image.tmdb.org/t/p/w500/qAv0UoAQVZWd6HGc83fsli1aKmo.jpg",
-        "https://image.tmdb.org/t/p/w500/sfQp4Or8lpdJFzCAeS4LtsCsZn6.jpg",
-        "https://image.tmdb.org/t/p/w500/dIBwopapnvmj2Vrkm0Z04frXKXv.jpg",
-        "https://image.tmdb.org/t/p/w500/67ujv4O6AalmGu3UaVSNdcw8juT.jpg",
-        "https://image.tmdb.org/t/p/w500/zfpcoHfDLom1aUkCRtDjT6JWEBZ.jpg"
+        "https://image.tmdb.org/t/p/w500/rAKJSFPXv9aFpeZAyr0yNg0HxuP.jpg",
+        "https://image.tmdb.org/t/p/w500/uXTg565ahu9RwonCX1V2Hex1NU6.jpg",
+        "https://image.tmdb.org/t/p/w500/zCEm0xrRMa5fLCQ9d0nvcw6tvcr.jpg",
+        "https://image.tmdb.org/t/p/w500/dxRdS7dSbSDv0YLdkjbxzIAZHoq.jpg",
+        "https://image.tmdb.org/t/p/w500/v2TL9tcfsFsFY1wM8rhwiQwo01t.jpg",
+        "https://image.tmdb.org/t/p/w500/qaewZKBKmXjb4ZfFBb1LCug6BE8.jpg",
+        "https://image.tmdb.org/t/p/w500/olviL1bDh3UjK3Bao8Y7ypPqE7k.jpg"
       ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/5vUux2vNUTqwCzb7tVcH18XnsF.jpg",
-      "overview": "Jeffrey Dahmer drogou, estuprou e matou 17 rapazes, além de devorar parte dos cadáveres. Conheça seu modus operandi e veja entrevistas com seu pai e com sobreviventes dos crimes.",
-      "year": "2022",
-      "rating": 8.0,
+      "backdrop": "https://image.tmdb.org/t/p/w1280/iVadPLeLVb97RznIGDkswxtBzi6.jpg",
+      "overview": "Um mundo sensual, luxuoso e competitivo da alta sociedade londrina no início do século XIX. Nesse período, a família Bridgerton, composta por oito irmãos, enfrenta o disputado mercado de casamentos, os bailes suntuosos de Mayfair e os palácios aristocráticos de Park Lane.",
+      "year": "2020",
+      "rating": 8.1,
       "cast": [
         {
-          "name": "Evan Peters",
-          "character": "Jeffrey Dahmer",
-          "profile": "https://image.tmdb.org/t/p/w185/m9okq20ca2Md38i2ekJeKs3vTwa.jpg"
+          "name": "Ruth Gemmell",
+          "character": "Lady Violet Bridgerton",
+          "profile": "https://image.tmdb.org/t/p/w185/hPtU8FTFMOneRQg7LQQdkeakJOe.jpg"
         },
         {
-          "name": "Richard Jenkins",
-          "character": "Lionel Dahmer",
-          "profile": "https://image.tmdb.org/t/p/w185/muT3RZG9hiKaKojD751RcQ5tGEy.jpg"
+          "name": "Luke Thompson",
+          "character": "Benedict Bridgerton",
+          "profile": "https://image.tmdb.org/t/p/w185/eKKcujLskhFUdJYlfojLPsbxpwe.jpg"
         },
         {
-          "name": "Molly Ringwald",
-          "character": "Shari Dahmer",
-          "profile": "https://image.tmdb.org/t/p/w185/eXRphPiX18t8C3nCoOuxQFNegqP.jpg"
+          "name": "Yerin Ha",
+          "character": "Sophie Baek",
+          "profile": "https://image.tmdb.org/t/p/w185/8U1zgiMjp7Ilglmu9NggwvDc6xe.jpg"
         },
         {
-          "name": "Michael Learned",
-          "character": "Catherine Dahmer",
-          "profile": "https://image.tmdb.org/t/p/w185/wQQY6IqdmPA6JyUpyAGKN7aVBCF.jpg"
+          "name": "Luke Newton",
+          "character": "Colin Bridgerton",
+          "profile": "https://image.tmdb.org/t/p/w185/hQsWTiBUpE2Jywg8vvvrDLVmG5m.jpg"
         },
         {
-          "name": "Niecy Nash-Betts",
-          "character": "Glenda Cleveland",
-          "profile": "https://image.tmdb.org/t/p/w185/1QblRt1zawcjTHrdXyzAwtdXKYl.jpg"
+          "name": "Claudia Jessie",
+          "character": "Eloise Bridgerton",
+          "profile": "https://image.tmdb.org/t/p/w185/urv0p4Mi81m1jZO8YWF1i9NpLL7.jpg"
+        },
+        {
+          "name": "Florence Hunt",
+          "character": "Hyacinth Bridgerton",
+          "profile": "https://image.tmdb.org/t/p/w185/2PQxOhgqnS4S4JNiAmQtquqgDjF.jpg"
+        },
+        {
+          "name": "Will Tilston",
+          "character": "Gregory Bridgerton",
+          "profile": "https://image.tmdb.org/t/p/w185/fdIByL5EeTImhVHtSPaEMBErF2C.jpg"
+        },
+        {
+          "name": "Adjoa Andoh",
+          "character": "Lady Agatha Danbury",
+          "profile": "https://image.tmdb.org/t/p/w185/4dsLkxU3Vcw1P97JoyGWlbYhV1h.jpg"
         }
       ]
     },
@@ -3131,7 +3191,7 @@
     {
       "id": "os_donos_do_jogo",
       "title": "Os Donos Do Jogo",
-      "poster": "https://image.tmdb.org/t/p/w500/aVmLA24NypvwPkh9BGASQlOLuLu.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/jwPI58JAidRzzbUI0j8uUu2rsyy.jpg",
       "seasons": [
         {
           "season": 1,
@@ -3225,53 +3285,57 @@
       "category": "novelas",
       "local_poster": "/Pirataflix/assets/Capas/os_donos_do_jogo.jpg",
       "posters": [
-        "https://image.tmdb.org/t/p/w500/aVmLA24NypvwPkh9BGASQlOLuLu.jpg",
-        "https://image.tmdb.org/t/p/w500/bJGDE3j2YPo6VqK7biJepbShLZy.jpg"
+        "https://image.tmdb.org/t/p/w500/jwPI58JAidRzzbUI0j8uUu2rsyy.jpg",
+        "https://image.tmdb.org/t/p/w500/yisRO3W0s17yxJ8kGzG9uLPkWJz.jpg",
+        "https://image.tmdb.org/t/p/w500/90dQrWK5jFF1vT7w5AqIFDxufnw.jpg",
+        "https://image.tmdb.org/t/p/w500/timtatSK4kslUWVxda8jiE1r7GI.jpg",
+        "https://image.tmdb.org/t/p/w500/2TqtXFRt1sE6ifbaq8PO7bzA8Ai.jpg",
+        "https://image.tmdb.org/t/p/w500/urfKUODTGNkTSviW0TIlHJcDbqU.jpg"
       ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/oIsR3DFdFQzlWVhKWMe6Va3VAiR.jpg",
-      "overview": "Isolada do resto da sociedade desde que sofreu uma experiência traumática, Hibiki Nukui tem como hobby usar programas de vocalização para criar e publicar músicas na Internet. Um dia, ele recebe um e-mail de algumas garotas do quinto ano que querem conhecê-lo e conversar pessoalmente com ele. Essas três garotas, que cresceram juntas quase como irmãs, lhe pedem ajuda para mostrar sua gratidão às pessoas que tomaram conta delas. O plano? Organizar um show de música num lugar cheio de lembranças.",
-      "year": "2017",
-      "rating": 6.8,
+      "backdrop": "https://image.tmdb.org/t/p/w1280/1b2OYNA3Ikq9BBwk6If8As89bge.jpg",
+      "overview": "Um novato ambiciona liderar o submundo do jogo do bicho no Rio de Janeiro e acaba se envolvendo em uma perigosa rede de traições, luxúria e sangue.",
+      "year": "2025",
+      "rating": 7.5,
       "cast": [
         {
-          "name": "古賀葵",
-          "character": "Sora \"Kuu\" Kaneshiro (Main Character) (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/uVpwheVV4aPROyY1toYv3v5HSPD.jpg"
+          "name": "André Lamoglia",
+          "character": "Profeta Moraes",
+          "profile": "https://image.tmdb.org/t/p/w185/h8jd0NAb11VdxYJmVP0M09LqShg.jpg"
         },
         {
-          "name": "遠藤ゆりか",
-          "character": "Nozomi \"Zomi\" Momijidani (Main Character) (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/Asf48ru5NgGX3PHBDSKVazdlIf9.jpg"
+          "name": "Xamã",
+          "character": "Búfalo",
+          "profile": "https://image.tmdb.org/t/p/w185/qo5jDucaFnha3QvYl0hxIGqifkP.jpg"
         },
         {
-          "name": "大野柚布子",
-          "character": "Jun \"Jun-tan\" Gotou (Main Character) (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/eUcfcgFDHfJjQLpo58rPssIxKRR.jpg"
+          "name": "Mel Maia",
+          "character": "Mirna",
+          "profile": "https://image.tmdb.org/t/p/w185/irVmiratr18o0PIbAXSrSVKdut8.jpg"
         },
         {
-          "name": "井上雄貴",
-          "character": "Kyou Nukui (Main Character) (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/oxkLqVpPJs5CgbqHiBUxoEXPBkX.jpg"
+          "name": "Giullia Buscacio",
+          "character": "Susana",
+          "profile": "https://image.tmdb.org/t/p/w185/mgANp7r9i3BkYM8s3t8A6JMOWN0.jpg"
         },
         {
-          "name": "Kana Hanazawa",
-          "character": "Koume Ogi (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/5bK9ttcRydQBWmyZp7gXDmJYOPF.jpg"
+          "name": "Juliana Paes",
+          "character": "Leila",
+          "profile": "https://image.tmdb.org/t/p/w185/eDj36IQIhgONQ2G4uC9cdZYE42s.jpg"
         },
         {
-          "name": "Kanae Ito",
-          "character": "Sakura Toriumi (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/te4l0fzbfhtKWqNHPYdGZBXMmxt.jpg"
+          "name": "Chico Díaz",
+          "character": "Galego",
+          "profile": "https://image.tmdb.org/t/p/w185/75vzoB7Pm2RXTRI9f1S8BZRtJQP.jpg"
         },
         {
-          "name": "Rina Hidaka",
-          "character": "Kurumi Nukui (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/7JupZGvqcq4dRxiTKpPxzg8NUS4.jpg"
+          "name": "Ruan Aguiar",
+          "character": "Esqueleto",
+          "profile": "https://image.tmdb.org/t/p/w185/j2GjxnTQcACuy9T7T1cCPA5gieY.jpg"
         },
         {
-          "name": "大川透",
-          "character": "Masayoshi Sawatari (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/dkVP18qK730qbki25nogZzBbfuM.jpg"
+          "name": "Igor Fernández",
+          "character": "Sombra",
+          "profile": "https://image.tmdb.org/t/p/w185/fJKsjwHpAQ1kow7imPl1aAjUQFY.jpg"
         }
       ]
     },
@@ -5084,7 +5148,7 @@
     {
       "id": "totalmente_demais",
       "title": "Totalmente Demais",
-      "poster": "https://image.tmdb.org/t/p/w500/oUbANT6vjAFbHvhDQ3cxCZOzPK1.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/97dc3fmnSBvGYTxMZW49FnXr2Wm.jpg",
       "seasons": [
         {
           "season": 1,
@@ -6848,52 +6912,57 @@
       "category": "novelas",
       "local_poster": "/Pirataflix/assets/Capas/totalmente_demais.jpg",
       "posters": [
-        "https://image.tmdb.org/t/p/w500/oUbANT6vjAFbHvhDQ3cxCZOzPK1.jpg",
-        "https://image.tmdb.org/t/p/w500/a5roakc7vI1UlS9tgbfGEomqC7X.jpg",
-        "https://image.tmdb.org/t/p/w500/zzSLL7hsS4G9zUGHkw0i6KiPwpy.jpg",
-        "https://image.tmdb.org/t/p/w500/hr0YvPdFGuiM2IshilUyc8MxbPt.jpg",
-        "https://image.tmdb.org/t/p/w500/q4qhY07lqlqUTujykjjDnHT69WX.jpg",
-        "https://image.tmdb.org/t/p/w500/iNkPnvClmfpaXW3kpzrzeUFanGE.jpg"
+        "https://image.tmdb.org/t/p/w500/2fnrIUhoxXUcmnYyncFj7Rctvju.jpg",
+        "https://image.tmdb.org/t/p/w500/97dc3fmnSBvGYTxMZW49FnXr2Wm.jpg",
+        "https://image.tmdb.org/t/p/w500/htqKuRODBalHQfm0TibcCUfhiMe.jpg",
+        "https://image.tmdb.org/t/p/w500/rkf47HidXAvXDLTrWvZVz6lnrIR.jpg",
+        "https://image.tmdb.org/t/p/w500/zfbqdUyARlOdtlz9m4b8QtgHZYF.jpg",
+        "https://image.tmdb.org/t/p/w500/kso8tNYeW8AFP39wHjroAD3Uh5T.jpg"
       ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/5wM8Dl93mCfxRZMnX5FE1xVXnsZ.jpg",
-      "overview": "Dez anos após o fim da divisão Pré-Crime na polícia de Washington, um dos três metafísicos chamados \"precogs\" tenta levar uma vida normal, enquanto ainda sofre com visões do futuro. Ele conta com a ajuda de uma policial assombrada pelo passado.",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/83u4gkeTANzjyWe3t8lEZ8EIR7.jpg",
+      "overview": "Em um conto de fadas moderno, a novela conta a história de Eliza. A vida da vendedora de flores se transforma quando ela conhece Arthur, dono de uma agência de modelos.",
       "year": "2015",
-      "rating": 6.0,
+      "rating": 7.8,
       "cast": [
         {
-          "name": "Meagan Good",
-          "character": "Lara Vega",
-          "profile": "https://image.tmdb.org/t/p/w185/iwSNBQKKDhEbtNe8I4ROYoYmWqE.jpg"
+          "name": "Marina Ruy Barbosa",
+          "character": "Eliza de Assis Monteiro",
+          "profile": "https://image.tmdb.org/t/p/w185/uTo8wzJ89vi5OBhSW3pt6DayjcF.jpg"
         },
         {
-          "name": "Stark Sands",
-          "character": "Dash",
-          "profile": "https://image.tmdb.org/t/p/w185/1poaqSFQT2ElzyJVbWLhoaXlnq1.jpg"
+          "name": "Juliana Paes",
+          "character": "Carolina Castilho",
+          "profile": "https://image.tmdb.org/t/p/w185/eDj36IQIhgONQ2G4uC9cdZYE42s.jpg"
         },
         {
-          "name": "Nick Zano",
-          "character": "Arthur",
-          "profile": "https://image.tmdb.org/t/p/w185/t47PZJOUehQV4RFOEXoszMiOEjx.jpg"
+          "name": "Fábio Assunção",
+          "character": "Arthur Valmont Carneiro de Alcântara",
+          "profile": "https://image.tmdb.org/t/p/w185/owyB5DjfKjir0OaTXRxUIh8EX6r.jpg"
         },
         {
-          "name": "Daniel London",
-          "character": "Wally",
-          "profile": "https://image.tmdb.org/t/p/w185/feRkUWfs2LpVzULMdkpBHN5JYdM.jpg"
+          "name": "Felipe Simas",
+          "character": "Jonatas Castro",
+          "profile": "https://image.tmdb.org/t/p/w185/emhHtrkhkDfinjr8scpNmw95R71.jpg"
         },
         {
-          "name": "Laura Regan",
-          "character": "Agatha",
-          "profile": "https://image.tmdb.org/t/p/w185/1C7ILmtvA8glzPFb5UmsjHtaRqJ.jpg"
+          "name": "Vivianne Pasmanter",
+          "character": "Liliane de Bocaiuva Monteiro (Lili)",
+          "profile": "https://image.tmdb.org/t/p/w185/lZweJ7bPqK5S5ke6drGCOOQzRQ4.jpg"
         },
         {
-          "name": "Li Jun Li",
-          "character": "Akeela",
-          "profile": "https://image.tmdb.org/t/p/w185/y8hAcbThfxkrSRWhuXl9TsYAggP.jpg"
+          "name": "Humberto Martins",
+          "character": "Germano Monteiro",
+          "profile": "https://image.tmdb.org/t/p/w185/62sBzFEedHlbWUXO4i0wLk6FpyW.jpg"
         },
         {
-          "name": "Wilmer Valderrama",
-          "character": "Will Blake",
-          "profile": "https://image.tmdb.org/t/p/w185/uohkEwMGIGCq4k8P2AiomuKQwYv.jpg"
+          "name": "Juliana Paiva",
+          "character": "Sandra Regina Matoso (Cassandra)",
+          "profile": "https://image.tmdb.org/t/p/w185/hgbx0I0UWHeCf5mU9zM7delWflH.jpg"
+        },
+        {
+          "name": "Daniel Rocha",
+          "character": "Rafael Guerra",
+          "profile": "https://image.tmdb.org/t/p/w185/r4ikKsywcA6BiysS7sBiEQfVjtr.jpg"
         }
       ]
     },
@@ -9685,7 +9754,7 @@
     {
       "id": "marimar",
       "title": "Marimar",
-      "poster": "https://image.tmdb.org/t/p/w500/2ePdL7Y9QzJvvsqdxm1vpLiycfv.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/2lfgLiOVZwMG5rD6RVbR7jYCtmd.jpg",
       "seasons": [
         {
           "season": 1,
@@ -11189,19 +11258,58 @@
       "category": "novelas",
       "local_poster": "/Pirataflix/assets/Capas/marimar.jpg",
       "posters": [
-        "https://image.tmdb.org/t/p/w500/2ePdL7Y9QzJvvsqdxm1vpLiycfv.jpg"
+        "https://image.tmdb.org/t/p/w500/2lfgLiOVZwMG5rD6RVbR7jYCtmd.jpg",
+        "https://image.tmdb.org/t/p/w500/iJ3jf3k56Cy1ImA9t3egPeGKQ2R.jpg",
+        "https://image.tmdb.org/t/p/w500/r0AFBjxrIRfpk5jmoHAgmS8id1f.jpg",
+        "https://image.tmdb.org/t/p/w500/2uYubmyZoLHajkvsnsglZU4W866.jpg",
+        "https://image.tmdb.org/t/p/w500/iCVanUSLJkTvDJbPuE8bsSa8bS0.jpg",
+        "https://image.tmdb.org/t/p/w500/woVcqvuN7gVLvJQFR4XsymA02NA.jpg",
+        "https://image.tmdb.org/t/p/w500/4xpSaTAtmsHwwEoLhHTL5Ut4xuN.jpg"
       ],
-      "year": "1989",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/nDh9cvt64J3gD1wxxxfR85jiEmB.jpg",
+      "overview": "Marimar, uma jovem humilde de uma pequena vila de pescadores, verá sua vida simples mudar para sempre após se apaixonar por Sergio, filho de um fazendeiro muito rico da região.",
+      "year": "1994",
+      "rating": 7.0,
       "cast": [
         {
-          "name": "France Chevrette",
-          "character": "Robin Brizard",
-          "profile": "https://image.tmdb.org/t/p/w185/AexA2SHXtkIfXCor4j9DLuQeyYZ.jpg"
+          "name": "Thalía",
+          "character": "Marimar 'Bella' Pérez Aldama",
+          "profile": "https://image.tmdb.org/t/p/w185/zV0A90HmQSL3Gn3gNs7fIyWUapr.jpg"
         },
         {
-          "name": "Lorraine Auger",
-          "character": "Stella Francoeur",
-          "profile": "https://image.tmdb.org/t/p/w185/mCSsfjBmxxIhGSfny7l90jIhe1n.jpg"
+          "name": "Eduardo Capetillo",
+          "character": "Sergio Santibáñez",
+          "profile": "https://image.tmdb.org/t/p/w185/l2Y2Ia4VP9eq3vlgL6g1Ur0yxsC.jpg"
+        },
+        {
+          "name": "Chantal Andere",
+          "character": "Angélica Narváez de Santibáñez",
+          "profile": "https://image.tmdb.org/t/p/w185/hMlHuxotoDmHjoKDqrR1Vb09gWB.jpg"
+        },
+        {
+          "name": "Alfonso Iturralde",
+          "character": "Renato Santibáñez",
+          "profile": "https://image.tmdb.org/t/p/w185/ylmIWVabmjhEsN8BzqCgvKrt6ie.jpg"
+        },
+        {
+          "name": "René Muñoz",
+          "character": "Padre Porres",
+          "profile": ""
+        },
+        {
+          "name": "Miguel Palmer",
+          "character": "Gustavo Aldama",
+          "profile": ""
+        },
+        {
+          "name": "Ada Carrasco",
+          "character": "Mamá Cruz Olivares de Pérez",
+          "profile": "https://image.tmdb.org/t/p/w185/xDpavBKre0ON6dR4jwkHA9B3r2C.jpg"
+        },
+        {
+          "name": "Tito Guízar",
+          "character": "Papá Pancho Pérez",
+          "profile": "https://image.tmdb.org/t/p/w185/8WZ4xOCtb1lnpj5jPlkOKuzKtOL.jpg"
         }
       ]
     },
@@ -12697,7 +12805,7 @@
               "url": "https://cdn-novflix.com/storage1/TGRACAS/TGRACAS-121.mp4",
               "episode": 121,
               "air_date": "2026-03-09",
-              "overview": "",
+              "overview": "Arminda disfarça quando Paulinho lhe pergunta sobre a Casa de Farinha. Leonardo flagra Viviane no bar com Angélico. Paulinho decide convocar Ferette para depor sobre a denúncia de Arminda. Gerluce avisa a Paulinho que irá depor na delegacia sobre o que sabe da fabricação de remédios falsos. Paulinho indaga Ferette sobre a Casa de Farinha.",
               "still": "",
               "guest_stars": [],
               "locked": false
@@ -14828,7 +14936,7 @@
           "url": "https://cdn-novflix.com/storage1/TGRACAS/TGRACAS-121.mp4",
           "episode": 121,
           "air_date": "2026-03-09",
-          "overview": "",
+          "overview": "Arminda disfarça quando Paulinho lhe pergunta sobre a Casa de Farinha. Leonardo flagra Viviane no bar com Angélico. Paulinho decide convocar Ferette para depor sobre a denúncia de Arminda. Gerluce avisa a Paulinho que irá depor na delegacia sobre o que sabe da fabricação de remédios falsos. Paulinho indaga Ferette sobre a Casa de Farinha.",
           "still": "",
           "guest_stars": [],
           "locked": false
@@ -17274,7 +17382,7 @@
     {
       "id": "salve_jorge",
       "title": "Salve Jorge",
-      "poster": "https://image.tmdb.org/t/p/w500/1JVT5hZMerLn1flYkXGiJOimJYg.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/uyG1iWsAGX7K7o0iTVKGEVT2RPR.jpg",
       "seasons": [
         {
           "season": 1,
@@ -19028,10 +19136,57 @@
       "category": "novelas",
       "local_poster": "/Pirataflix/assets/Capas/salve_jorge.jpg",
       "posters": [
-        "https://image.tmdb.org/t/p/w500/1JVT5hZMerLn1flYkXGiJOimJYg.jpg",
-        "https://image.tmdb.org/t/p/w500/1qO2n4gHyn04krFDxfhPrif8qPE.jpg"
+        "https://image.tmdb.org/t/p/w500/uyG1iWsAGX7K7o0iTVKGEVT2RPR.jpg",
+        "https://image.tmdb.org/t/p/w500/ue98uJc9ymnKQc4w9SxkOuzn0ST.jpg",
+        "https://image.tmdb.org/t/p/w500/ehbB6L0gMU2ILJCScO2036crfEw.jpg",
+        "https://image.tmdb.org/t/p/w500/xWJ3QxMVN4G8arSQyfPVYvnNrX2.jpg"
       ],
-      "year": "2010"
+      "backdrop": "https://image.tmdb.org/t/p/w1280/80TdemQlDHOVTQgRwtR4PwWwgXB.jpg",
+      "overview": "Morena e Théo se conhecem durante a ocupação do Complexo do Alemão e, apesar das diferenças, engatam um romance. A situação se complica quando a jovem é vítima de um golpe e, ao aceitar um emprego fora do país, cai nas mãos de uma quadrilha internacional de tráfico de pessoas.  A novela é ambientada na Turquia e no Rio de Janeiro.",
+      "year": "2012",
+      "rating": 7.2,
+      "cast": [
+        {
+          "name": "Nanda Costa",
+          "character": "Morena Santos Ribeiro",
+          "profile": "https://image.tmdb.org/t/p/w185/xnygyp5PFtqoqU4PBzsnLZoSA1y.jpg"
+        },
+        {
+          "name": "Rodrigo Lombardi",
+          "character": "Capitão Théo Garcia",
+          "profile": "https://image.tmdb.org/t/p/w185/tYqrJJy2QslTPvwvRdzxupJk1Z7.jpg"
+        },
+        {
+          "name": "Cláudia Raia",
+          "character": "Lívia Marini",
+          "profile": "https://image.tmdb.org/t/p/w185/8CtXg9ZbsggMCMIFTyn02wsQYE4.jpg"
+        },
+        {
+          "name": "Totia Meireles",
+          "character": "Wanda Rodrigues / Djanira Araújo / Adalgisa Araújo",
+          "profile": "https://image.tmdb.org/t/p/w185/itSncGtV6x3HAtBib5hTAv3upMH.jpg"
+        },
+        {
+          "name": "Giovanna Antonelli",
+          "character": "Delegada Heloísa Sampaio \"Helô\"",
+          "profile": "https://image.tmdb.org/t/p/w185/ycbdBnoMHTLDc5DL2ATCkefPjzo.jpg"
+        },
+        {
+          "name": "Alexandre Nero",
+          "character": "Detetive Stenio Alencar",
+          "profile": "https://image.tmdb.org/t/p/w185/6VVwyjgprN4Ta5L6dyfWv9YOi7g.jpg"
+        },
+        {
+          "name": "Cléo Pires",
+          "character": "Bianca Faber",
+          "profile": "https://image.tmdb.org/t/p/w185/sLWs0GweYO1pawT9Acplgc3HmwE.jpg"
+        },
+        {
+          "name": "Domingos Montagner",
+          "character": "Zyah Khalid",
+          "profile": "https://image.tmdb.org/t/p/w185/v03eZjp4VpSYqXaXHmbVqLpJIgg.jpg"
+        }
+      ]
     },
     {
       "id": "a_caverna_encantada",
@@ -24734,7 +24889,7 @@
     {
       "id": "verdades_secretas_2",
       "title": "Verdades Secretas 2",
-      "poster": "https://image.tmdb.org/t/p/w500/lVeyy6enXSHxQyT9Ptbjvb0fOKt.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/kM32hmDGTxmqNeT1x8zJExJdDCM.jpg",
       "seasons": [
         {
           "season": 1,
@@ -25258,9 +25413,59 @@
       "category": "novelas",
       "local_poster": "/Pirataflix/assets/Capas/verdades_secretas_2.jpg",
       "posters": [
-        "https://image.tmdb.org/t/p/w500/lVeyy6enXSHxQyT9Ptbjvb0fOKt.jpg"
+        "https://image.tmdb.org/t/p/w500/kM32hmDGTxmqNeT1x8zJExJdDCM.jpg",
+        "https://image.tmdb.org/t/p/w500/s4B1eXbr5CILyczLmCRaxEuYX4O.jpg",
+        "https://image.tmdb.org/t/p/w500/p20gDJQIF9gR94KByQXbHFjFAIi.jpg",
+        "https://image.tmdb.org/t/p/w500/pWXvXuhnjyevNwfkbbvzERdhR7t.jpg",
+        "https://image.tmdb.org/t/p/w500/ebJLw46IxUH2OY6qin8Jns92Ywn.jpg",
+        "https://image.tmdb.org/t/p/w500/wLN4eYIzpErNwW2j1UW44h5NDfV.jpg"
       ],
-      "year": "2019"
+      "backdrop": "https://image.tmdb.org/t/p/w1280/3CHC5GAlTFoFrf6BUgjO8Z9D0QN.jpg",
+      "overview": "Angel está de volta ao submundo da moda e do luxo. Giovanna acredita que Angel matou seu pai e começa uma guerra que envolve Cristiano, um investigador particular.",
+      "year": "2021",
+      "rating": 6.2,
+      "cast": [
+        {
+          "name": "Camila Queiroz",
+          "character": "Angel",
+          "profile": "https://image.tmdb.org/t/p/w185/vI7soPfMSHoPokcB4VNfrdjH9UN.jpg"
+        },
+        {
+          "name": "Ágatha Moreira",
+          "character": "Giovanna (Kika)",
+          "profile": "https://image.tmdb.org/t/p/w185/pHzmciToXz6rJyXhuQVHBWij531.jpg"
+        },
+        {
+          "name": "Rômulo Estrela",
+          "character": "Cristiano Valença",
+          "profile": "https://image.tmdb.org/t/p/w185/2DJbEfF7fNUhSnfqu7Pdj9vFxS2.jpg"
+        },
+        {
+          "name": "Gabriel Braga Nunes",
+          "character": "Percy",
+          "profile": "https://image.tmdb.org/t/p/w185/biltwrakfS7FQ8dUzUFlJmygBXk.jpg"
+        },
+        {
+          "name": "Maria de Medeiros",
+          "character": "Blanche Labelle",
+          "profile": "https://image.tmdb.org/t/p/w185/xDo5mRSKXUZRmcZjUn42ICiyyI8.jpg"
+        },
+        {
+          "name": "Sérgio Guizé",
+          "character": "Ariel Nolasco",
+          "profile": "https://image.tmdb.org/t/p/w185/dikSjKYs9RpQj3ydlvn7RKWnW45.jpg"
+        },
+        {
+          "name": "Rainer Cadete",
+          "character": "Visky Borelli Novaes",
+          "profile": "https://image.tmdb.org/t/p/w185/96FvvD6GKepCqot2q3xYRejZJUx.jpg"
+        },
+        {
+          "name": "Deborah Evelyn",
+          "character": "Betty",
+          "profile": "https://image.tmdb.org/t/p/w185/tk3XXeiCAtpXO0x2tDK9VBKTIIk.jpg"
+        }
+      ]
     },
     {
       "id": "chocolate_com_pimenta",
@@ -27371,7 +27576,7 @@
     {
       "id": "verdades_secretas",
       "title": "Verdades Secretas",
-      "poster": "https://image.tmdb.org/t/p/w500/cFO65xb0xiXKqk5BmgHawCXB1i0.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/js4ME0psGSLwJQs3zbiYN2fhlEE.jpg",
       "seasons": [
         {
           "season": 1,
@@ -28025,57 +28230,57 @@
       "category": "novelas",
       "local_poster": "/Pirataflix/assets/Capas/verdades_secretas.jpg",
       "posters": [
-        "https://image.tmdb.org/t/p/w500/cFO65xb0xiXKqk5BmgHawCXB1i0.jpg",
-        "https://image.tmdb.org/t/p/w500/d3P2mfYVyfzCgfjIv0hTAtaDnGi.jpg",
-        "https://image.tmdb.org/t/p/w500/vqBsgL9nd2v04ZvCqPzwtckDdFD.jpg",
-        "https://image.tmdb.org/t/p/w500/zsaiq8ZclPuneuN7loLEbsh1ANJ.jpg",
-        "https://image.tmdb.org/t/p/w500/l9pWuEPdchbbgwtCrrvCghS4KbJ.jpg",
-        "https://image.tmdb.org/t/p/w500/90mSQajf4STPROA6H7Hh8OvyWdK.jpg"
+        "https://image.tmdb.org/t/p/w500/rw1bnxgPhfzg9EvBlgbtjLkWBzy.jpg",
+        "https://image.tmdb.org/t/p/w500/js4ME0psGSLwJQs3zbiYN2fhlEE.jpg",
+        "https://image.tmdb.org/t/p/w500/eHzLZ3dC2EcXAUkAK2Oq0mJjKQr.jpg",
+        "https://image.tmdb.org/t/p/w500/faRwRQbaxJ0ZAtpLjkSSGXlG3Ze.jpg",
+        "https://image.tmdb.org/t/p/w500/ucfw09rlxRdILflKCcVpdNgR0Ab.jpg",
+        "https://image.tmdb.org/t/p/w500/hlACuXfQMPAK5i5tI4j3c2FZmXU.jpg"
       ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/mmprryb2r0X8u9JkZCnaJIzyYX4.jpg",
-      "overview": "Para impedir um desastre, Kara Danvers revela seus poderes e sua verdadeira identidade: ela é a Supergirl, a protetora de National City e prima do Superman.",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/lU28XFV7ITJLnWAqRJpvK10deA6.jpg",
+      "overview": "Um triângulo amoroso envolvendo mãe e filha é o foco incendiário de Verdades Secretas, que traz como pano de fundo o lado obscuro do mundo da moda e explora os limites de cada um.",
       "year": "2015",
-      "rating": 7.3,
+      "rating": 7.8,
       "cast": [
         {
-          "name": "Melissa Benoist",
-          "character": "Kara Danvers / Supergirl / Kara Zor-El",
-          "profile": "https://image.tmdb.org/t/p/w185/fUPIkDDVmyZPejPu67HyfdDar9W.jpg"
+          "name": "Camila Queiroz",
+          "character": "Arlete / Angel",
+          "profile": "https://image.tmdb.org/t/p/w185/vI7soPfMSHoPokcB4VNfrdjH9UN.jpg"
         },
         {
-          "name": "Chyler Leigh",
-          "character": "Alex Danvers / Sentinel",
-          "profile": "https://image.tmdb.org/t/p/w185/yoL8HbWhnoTVugTV5qLJP8gVpIq.jpg"
+          "name": "Rodrigo Lombardi",
+          "character": "Alexandre Ticiano (Alex)",
+          "profile": "https://image.tmdb.org/t/p/w185/tYqrJJy2QslTPvwvRdzxupJk1Z7.jpg"
         },
         {
-          "name": "David Harewood",
-          "character": "J'onn J'onzz / Martian Manhunter",
-          "profile": "https://image.tmdb.org/t/p/w185/kjWRYwRGQco0C4p2iIh2RV86fi7.jpg"
+          "name": "Drica Moraes",
+          "character": "Carolina Silveira",
+          "profile": "https://image.tmdb.org/t/p/w185/qQO47cN3esrDZn1eXWmzzG08CRI.jpg"
         },
         {
-          "name": "Katie McGrath",
-          "character": "Lena Luthor",
-          "profile": "https://image.tmdb.org/t/p/w185/cq9pc7qFRUKCrkXgsi5mJkb64U5.jpg"
+          "name": "Marieta Severo",
+          "character": "Fanny Richard",
+          "profile": "https://image.tmdb.org/t/p/w185/912AulEGxubRlKsmNYVLrTmOVro.jpg"
         },
         {
-          "name": "Jesse Rath",
-          "character": "Querl 'Brainy' Dox / Brainiac-5",
-          "profile": "https://image.tmdb.org/t/p/w185/9t9BCb3LrV1hrIw0PJoBZOGUHVL.jpg"
+          "name": "Reynaldo Gianecchini",
+          "character": "Anthony Mariano",
+          "profile": "https://image.tmdb.org/t/p/w185/clSbSyERGdQMFFbGaWxRsj9lEBl.jpg"
         },
         {
-          "name": "Nicole Maines",
-          "character": "Nia Nal / Dreamer",
-          "profile": "https://image.tmdb.org/t/p/w185/g0Wv8JJBsHrGbF0ZlDBVIGUifwT.jpg"
+          "name": "Ana Lúcia Torre",
+          "character": "Hilda Brito",
+          "profile": "https://image.tmdb.org/t/p/w185/29RIRV7mIm8twX748UMKzqfg8o1.jpg"
         },
         {
-          "name": "Azie Tesfai",
-          "character": "Kelly Olsen / Guardian",
-          "profile": "https://image.tmdb.org/t/p/w185/fWQtyjPDHArabFap9w4GuDhv7Qf.jpg"
+          "name": "Ágatha Moreira",
+          "character": "Giovanna Lovatelli Ticiano (Kika)",
+          "profile": "https://image.tmdb.org/t/p/w185/pHzmciToXz6rJyXhuQVHBWij531.jpg"
         },
         {
-          "name": "Julie Gonzalo",
-          "character": "Andrea Rojas / Acrata",
-          "profile": "https://image.tmdb.org/t/p/w185/6clO3lFK6dn3lBXe8zZoRNPbERr.jpg"
+          "name": "Gabriel Leone",
+          "character": "Guilherme Lovatelli",
+          "profile": "https://image.tmdb.org/t/p/w185/wvinAoGZiOGczIEtXWFmXGMl0QC.jpg"
         }
       ]
     },
@@ -29948,7 +30153,7 @@
     {
       "id": "renascer",
       "title": "Renascer",
-      "poster": "https://image.tmdb.org/t/p/w500/rEGDqzxKGHDWFozcURWL2sCsdHD.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/kUWvvMkNIf21UUDmHjYw55v6o7C.jpg",
       "seasons": [
         {
           "season": 1,
@@ -31932,39 +32137,62 @@
       "category": "novelas",
       "local_poster": "/Pirataflix/assets/Capas/renascer.jpg",
       "posters": [
-        "https://image.tmdb.org/t/p/w500/rEGDqzxKGHDWFozcURWL2sCsdHD.jpg",
-        "https://image.tmdb.org/t/p/w500/odG09qgBojFo5dZ0eQg5GIxtaT6.jpg"
+        "https://image.tmdb.org/t/p/w500/kUWvvMkNIf21UUDmHjYw55v6o7C.jpg",
+        "https://image.tmdb.org/t/p/w500/7vd7jaZGLBD8rKKLDufctKal84A.jpg",
+        "https://image.tmdb.org/t/p/w500/xon9xbgCFOaqORqQ7g00ZnnOvPL.jpg",
+        "https://image.tmdb.org/t/p/w500/b3jNa6UeL1oZJpqERuBeAZToI1R.jpg"
       ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/A3Ci0sVbxYUik48GWMwM0tktviR.jpg",
-      "year": "2017",
-      "rating": 5.0,
+      "backdrop": "https://image.tmdb.org/t/p/w1280/bEKRyT7WN5TjFKv0JTWI2cyNlak.jpg",
+      "overview": "Entre lendas e mistérios, um homem sem posses e sozinho no mundo finca seu destino aos pés de um jequitibá. Tendo a natureza como testemunha ele renasce e estabelece um pacto que o acompanhará ao longo de toda a sua trajetória.",
+      "year": "2024",
+      "rating": 6.8,
       "cast": [
         {
-          "name": "Elizabeth Copeland",
-          "character": "Commentator",
-          "profile": "https://image.tmdb.org/t/p/w185/i5N195CnGdvPjfitZyqWj7KyttV.jpg"
+          "name": "Marcos Palmeira",
+          "character": "Coronel José Inocêncio (Zé Inocêncio)",
+          "profile": "https://image.tmdb.org/t/p/w185/2Zlh07I2Hxx9bF3xIyzXDRcUNnu.jpg"
         },
         {
-          "name": "Michael Coulthard",
-          "character": "Commentator",
-          "profile": "https://image.tmdb.org/t/p/w185/o3B0sfxEZi5shfihDdHtNqAKnCq.jpg"
+          "name": "Theresa Fonseca",
+          "character": "Mariana Paiva Ferreira",
+          "profile": "https://image.tmdb.org/t/p/w185/sU3hOOF52Kcu243FAC8wJF9LayT.jpg"
         },
         {
-          "name": "Renee Paquette",
-          "character": "Renee Young",
-          "profile": "https://image.tmdb.org/t/p/w185/s6nM77nCMAkQx0qw8bg7nzfckxE.jpg"
+          "name": "Juan Paiva",
+          "character": "João Pedro Inocêncio",
+          "profile": "https://image.tmdb.org/t/p/w185/onMPJqb0PNoKDqZiZctt1zh010w.jpg"
         },
         {
-          "name": "Taynara Melo de Carvalhoc",
-          "character": "",
-          "profile": "https://image.tmdb.org/t/p/w185/yg4KZvQMmzns6NGaOK3ljQ2OBf.jpg"
+          "name": "Vladimir Brichta",
+          "character": "Coronel Egídio",
+          "profile": "https://image.tmdb.org/t/p/w185/xjCVvDv7ntDqPLyvh6AKznwxOkx.jpg"
+        },
+        {
+          "name": "Sophie Charlotte",
+          "character": "Eliana Vieira Inocêncio",
+          "profile": "https://image.tmdb.org/t/p/w185/4oixAp0htfXPMaclXDmhmg8c1wp.jpg"
+        },
+        {
+          "name": "Matheus Nachtergaele",
+          "character": "Norberto dos Reis",
+          "profile": "https://image.tmdb.org/t/p/w185/zgTT5AP7NYa2hN0jUqHIHkNyp2v.jpg"
+        },
+        {
+          "name": "Humberto Carrão",
+          "character": "José Inocêncio (Jovem)",
+          "profile": "https://image.tmdb.org/t/p/w185/xqaUJtNl3XBFMpOF6GVuh3z26hh.jpg"
+        },
+        {
+          "name": "Duda Santos",
+          "character": "Maria Santa Inocêncio (Santinha)",
+          "profile": "https://image.tmdb.org/t/p/w185/qmhyq1khy3kZZoRAUvGbOQfxykg.jpg"
         }
       ]
     },
     {
       "id": "o_beijo_do_vampiro",
       "title": "O Beijo Do Vampiro",
-      "poster": "https://image.tmdb.org/t/p/w500/xWPPcQ1qYgpFfNaNCjt3kbVNpli.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/fQsnoRyA9Fd0Zw6AUldw4sxrYyR.jpg",
       "seasons": [
         {
           "season": 1,
@@ -34128,55 +34356,55 @@
       "category": "novelas",
       "local_poster": "/Pirataflix/assets/Capas/o_beijo_do_vampiro.jpg",
       "posters": [
-        "https://image.tmdb.org/t/p/w500/xWPPcQ1qYgpFfNaNCjt3kbVNpli.jpg",
-        "https://image.tmdb.org/t/p/w500/qIKLdSdiXgSOXrzaEnL0a6weYI5.jpg",
-        "https://image.tmdb.org/t/p/w500/y0pAdIdU85PEDEtt7lJX2y6gUjO.jpg",
-        "https://image.tmdb.org/t/p/w500/pen9L4mkc237dClo3yPBOSRiKLj.jpg"
+        "https://image.tmdb.org/t/p/w500/fQsnoRyA9Fd0Zw6AUldw4sxrYyR.jpg",
+        "https://image.tmdb.org/t/p/w500/sA8onwgwNdqLzHp4rlVzw9NVXt.jpg",
+        "https://image.tmdb.org/t/p/w500/4evXawSpLYZOtUEOmwy0M7LWXaP.jpg",
+        "https://image.tmdb.org/t/p/w500/kPBQnOkXpAAbsIZutWHlnGOkmXt.jpg"
       ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/k02Xamz94nwHWutiOITH0GwUrj5.jpg",
-      "overview": "No primeiro dia de aula do colegial na Academia Kamizono, quatro garotas se encontram enquanto estavam perdidas no vasto campus da academia e se tornam amigas. A história segue a vida escolar delas e de seus colegas.",
-      "year": "2008",
-      "rating": 7.2,
+      "backdrop": "https://image.tmdb.org/t/p/w1280/kNF0czlnSmhT11wFVgZRnRHwEKS.jpg",
+      "overview": "História cheia de mistérios que mescla realidade e fantasia, no mundo sombrio do vampiro Bóris com elementos sobrenaturais, drama e humor.",
+      "year": "2002",
+      "rating": 6.3,
       "cast": [
         {
-          "name": "Yui Horie",
-          "character": "Chie Suzugazaki",
-          "profile": "https://image.tmdb.org/t/p/w185/3TXfhSdsfEqPYi4ww0dBPGhVQm0.jpg"
+          "name": "Tarcísio Meira",
+          "character": "Duque Bóris Vladescu / Igor Pivomar",
+          "profile": "https://image.tmdb.org/t/p/w185/m9FlAAzojrvxPMZd2NCkqAnjGu4.jpg"
         },
         {
-          "name": "根谷美智子",
-          "character": "Tatsuki Iizuka",
-          "profile": "https://image.tmdb.org/t/p/w185/A1mqjatShQZJSTXFdm4fTkQXv83.jpg"
+          "name": "Cláudia Raia",
+          "character": "Mina D'Montmatre",
+          "profile": "https://image.tmdb.org/t/p/w185/8CtXg9ZbsggMCMIFTyn02wsQYE4.jpg"
         },
         {
-          "name": "Aya Hirano",
-          "character": "Ayumi Nonomura",
-          "profile": "https://image.tmdb.org/t/p/w185/zaSJKfuKhw7e4VTnTKnlHBRzjQU.jpg"
+          "name": "Kayky Brito",
+          "character": "José Carlos Gonçalves (Zeca)",
+          "profile": "https://image.tmdb.org/t/p/w185/5pT50y4IytcDZZk6JHqpP0aFJ1w.jpg"
         },
         {
-          "name": "桑島法子",
-          "character": "Tōma Kazamatsuri",
-          "profile": "https://image.tmdb.org/t/p/w185/uZSmoh5jSdLwmkLaCnC3Xju6TTN.jpg"
+          "name": "Flávia Alessandra",
+          "character": "Lívia Gonçalves / Princesa Cecília de Alencastro",
+          "profile": "https://image.tmdb.org/t/p/w185/nteX5A1rQ5qdeXrEEVLzW4ueQMT.jpg"
         },
         {
-          "name": "Fumiko Orikasa",
-          "character": "Torako Kageyama",
-          "profile": "https://image.tmdb.org/t/p/w185/f5d1J13fksa1hK8u7AS95aO8b9.jpg"
+          "name": "Alexandre Borges",
+          "character": "Rodrigo Matos",
+          "profile": "https://image.tmdb.org/t/p/w185/5X51REVHcE8v0Z1qcWwuytKiquQ.jpg"
         },
         {
-          "name": "藤田昌代",
-          "character": "Nene Andō",
-          "profile": "https://image.tmdb.org/t/p/w185/1zaVP4RolNcwnH7uFHyP9jT0yVB.jpg"
+          "name": "Marco Ricca",
+          "character": "Augusto dos Anjos",
+          "profile": "https://image.tmdb.org/t/p/w185/zFZvWNQV90AXicAga6lGQg1AYuy.jpg"
         },
         {
-          "name": "Yuhko Kaida",
-          "character": "Ushio Makunouchi",
-          "profile": "https://image.tmdb.org/t/p/w185/wttsRGyYySLPfNcDtAbNLVizHLx.jpg"
+          "name": "Júlia Lemmertz",
+          "character": "Marta \"Morta\" Brummer",
+          "profile": "https://image.tmdb.org/t/p/w185/2HfOvUwortpjdejiUE60yCBObEr.jpg"
         },
         {
-          "name": "五十嵐浩子",
-          "character": "Koma Kobayashi",
-          "profile": "https://image.tmdb.org/t/p/w185/qBYBE3rSNZVRnV9Cx7XIPAr2CS7.jpg"
+          "name": "Deborah Secco",
+          "character": "Lara Assis",
+          "profile": "https://image.tmdb.org/t/p/w185/vPgTNrcNhBy4nUtCVyjHPNEdman.jpg"
         }
       ]
     },
@@ -38026,7 +38254,7 @@
     {
       "id": "pe_na_jaca",
       "title": "Pe Na Jaca",
-      "poster": "https://image.tmdb.org/t/p/w500/qFh5GpY70An5XOFPa6AxgaoXNdi.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/8ay0yolMrgWfP29ZtFP7AbVeuhj.jpg",
       "seasons": [
         {
           "season": 1,
@@ -39830,19 +40058,53 @@
       "category": "novelas",
       "local_poster": "/Pirataflix/assets/Capas/pe_na_jaca.jpg",
       "posters": [
-        "https://image.tmdb.org/t/p/w500/8y48bdC479vSVkO8u4bCScTeJuN.jpg",
-        "https://image.tmdb.org/t/p/w500/cEziWNr1n1HKAuKhngF2n4engOR.jpg",
-        "https://image.tmdb.org/t/p/w500/qFh5GpY70An5XOFPa6AxgaoXNdi.jpg"
+        "https://image.tmdb.org/t/p/w500/6J5SnU2RfoFKvUwzG6cPBc3BcGI.jpg",
+        "https://image.tmdb.org/t/p/w500/8ay0yolMrgWfP29ZtFP7AbVeuhj.jpg"
       ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/pSCOyP2VKzEmwXmDCjWU0pL0WD7.jpg",
-      "overview": "Apresentada por Morgan Freeman, esta série reúne as mentes mais brilhantes e as melhores ideias científicas em astrofísica, astrobiologia, mecânica quântica, teoria das cordas e outros campos, para revelar a extraordinária verdade do nosso universo.",
-      "year": "2010",
-      "rating": 7.6,
+      "backdrop": "https://image.tmdb.org/t/p/w1280/h3d7B4ic6qKDB5JeI16Th8K9Y7N.jpg",
+      "overview": "Reencontro de amigos de infância desencadeia uma caça à fortuna, temperada por divertidas confusões amorosas.",
+      "year": "2006",
+      "rating": 6.9,
       "cast": [
         {
-          "name": "Morgan Freeman",
-          "character": "Self - Host",
-          "profile": "https://image.tmdb.org/t/p/w185/jPsLqiYGSofU4s6BjrxnefMfabb.jpg"
+          "name": "Marcos Pasquim",
+          "character": "Antônio Carlos Lancelotti (Lance / Tico)",
+          "profile": "https://image.tmdb.org/t/p/w185/fThUuU6mIMiw7ea6UVzJfqqrZA2.jpg"
+        },
+        {
+          "name": "Fernanda Lima",
+          "character": "Maria Botelho Bulhões (Maria Bô)",
+          "profile": "https://image.tmdb.org/t/p/w185/340wDn6wf4wjZ0XAnl33zpZ8xNk.jpg"
+        },
+        {
+          "name": "Murilo Benício",
+          "character": "Arthur Fortuna",
+          "profile": "https://image.tmdb.org/t/p/w185/l8ZZQ1U1kSnfBhx1hEPOTRbu7ln.jpg"
+        },
+        {
+          "name": "Juliana Paes",
+          "character": "Guinevere Ataliba dos Santos Fortuna (Gui)",
+          "profile": "https://image.tmdb.org/t/p/w185/eDj36IQIhgONQ2G4uC9cdZYE42s.jpg"
+        },
+        {
+          "name": "Deborah Secco",
+          "character": "Elizabeth Aparecida Barra (Beth)",
+          "profile": "https://image.tmdb.org/t/p/w185/vPgTNrcNhBy4nUtCVyjHPNEdman.jpg"
+        },
+        {
+          "name": "Flávia Alessandra",
+          "character": "Vanessa Fortuna",
+          "profile": "https://image.tmdb.org/t/p/w185/nteX5A1rQ5qdeXrEEVLzW4ueQMT.jpg"
+        },
+        {
+          "name": "Bruno Garcia",
+          "character": "Juan Arrabal",
+          "profile": "https://image.tmdb.org/t/p/w185/k1qfsIEsXJT9Ml6NKasUoKh96Dp.jpg"
+        },
+        {
+          "name": "Rodrigo Lombardi",
+          "character": "Tadeu Lancelotti",
+          "profile": "https://image.tmdb.org/t/p/w185/tYqrJJy2QslTPvwvRdzxupJk1Z7.jpg"
         }
       ]
     }
@@ -48719,7 +48981,7 @@
     {
       "id": "dandandan",
       "title": "Dandandan",
-      "poster": "https://image.tmdb.org/t/p/w500/bXtD4o9SwXhVKtQQfO8cvKm95yT.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/vtQug1eOyeU2VXIpNoDF1lTlcH4.jpg",
       "seasons": [
         {
           "season": 1,
@@ -48856,12 +49118,40 @@
       "category": "animes",
       "local_poster": "/Pirataflix/assets/Capas/dandandan.jpg",
       "posters": [
-        "https://image.tmdb.org/t/p/w500/bXtD4o9SwXhVKtQQfO8cvKm95yT.jpg",
-        "https://image.tmdb.org/t/p/w500/iYulZX0ifFz9ZeKpDwAN44ADKyz.jpg",
-        "https://image.tmdb.org/t/p/w500/mp4gx0u08Io4zoTykcC3AD9TXgu.jpg"
+        "https://image.tmdb.org/t/p/w500/vtQug1eOyeU2VXIpNoDF1lTlcH4.jpg",
+        "https://image.tmdb.org/t/p/w500/4h2m9BO7milJaCsbKBgKvCX0dOZ.jpg",
+        "https://image.tmdb.org/t/p/w500/6qfZAOEUFIrbUH3JvePclx1nXzz.jpg",
+        "https://image.tmdb.org/t/p/w500/tiF5I6wF6tEUy39gmNtw3G1GYyz.jpg",
+        "https://image.tmdb.org/t/p/w500/sprLXd82pEDyNm5HcLoepxqmkQG.jpg",
+        "https://image.tmdb.org/t/p/w500/ibw0s6SEnd7oqy3CToKZyIAASLB.jpg",
+        "https://image.tmdb.org/t/p/w500/bOPmmOXj33bxVW5DoWabkCLn6vE.jpg"
       ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/4oxNZt2tEQStdiFVsUTCRmFbg4M.jpg",
-      "year": "2024"
+      "backdrop": "https://image.tmdb.org/t/p/w1280/uNTrRKIOyKYISthoeizghtXPEOK.jpg",
+      "overview": "Quando a estudante do ensino médio Momo – que vem de uma família de médiuns e não acredita em alienígenas – encontra Okarun, um garoto obcecado por ocultismo que acredita em extraterrestres, a rivalidade entre os dois coloca a dupla diante de ameaças paranormais reais. Momo descobre seus poderes espirituais, enquanto Okarun ganha habilidades ao ser possuído por uma maldição, o que faz com que se unam para lutar contra yokai, OVNIs e caos de outros mundos.",
+      "year": "2024",
+      "rating": 8.6,
+      "cast": [
+        {
+          "name": "Shion Wakayama",
+          "character": "Momo Ayase (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/b697ggFreuliEfl4TjLgxhJCQXr.jpg"
+        },
+        {
+          "name": "Natsuki Hanae",
+          "character": "Ken 'Okarun' Takakura (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/alTb0DlcPIbcwM08WSmxFai58sd.jpg"
+        },
+        {
+          "name": "Mayumi Tanaka",
+          "character": "Turbo Granny (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/by4t1tYtEXsfbFj9TvOjozBmQla.jpg"
+        },
+        {
+          "name": "Nana Mizuki",
+          "character": "Seiko (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/rQBo7HyjTIqeB7hIofb7uJFhiVs.jpg"
+        }
+      ]
     },
     {
       "id": "one_piece",
@@ -58455,8 +58745,8 @@
         "https://image.tmdb.org/t/p/w500/f2zhRLqwRLrKhEMeIM7Z5buJFo3.jpg",
         "https://image.tmdb.org/t/p/w500/yfyToia25GnvjY7FPAGaCm3lKRc.jpg",
         "https://image.tmdb.org/t/p/w500/dBsDWUcdfbuZwglgyeeQ9ChRoS4.jpg",
-        "https://image.tmdb.org/t/p/w500/i1lMlxir5E4jyeLlqS2bK1Cn3Tt.jpg",
         "https://image.tmdb.org/t/p/w500/6VKOfL6ihwTiB5Vibq6QTfzhxA6.jpg",
+        "https://image.tmdb.org/t/p/w500/i1lMlxir5E4jyeLlqS2bK1Cn3Tt.jpg",
         "https://image.tmdb.org/t/p/w500/jB9l4mp0bzBgzE5y4tvBH6AMeMk.jpg",
         "https://image.tmdb.org/t/p/w500/qNmSRIUsnRsDgm6Lqmc9F9Ye7Jb.jpg"
       ],
