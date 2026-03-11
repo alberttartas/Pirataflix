@@ -712,6 +712,84 @@
   ],
   "series": [
     {
+      "id": "dinossauros",
+      "title": "Dinossauros",
+      "poster": "https://image.tmdb.org/t/p/w500/wdpc2htHKoUX42rQNCmlRQ1dMGn.jpg",
+      "seasons": [
+        {
+          "season": 1,
+          "episodes": [
+            {
+              "title": "Dinossauros T1E01",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/DINOSSAUROS/DINOSSAUROS1x01.mp4",
+              "episode": 1
+            },
+            {
+              "title": "Dinossauros T1E02",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/DINOSSAUROS/DINOSSAUROS1x02.mp4",
+              "episode": 2
+            },
+            {
+              "title": "Dinossauros T1E03",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/DINOSSAUROS/DINOSSAUROS1x03.mp4",
+              "episode": 3
+            },
+            {
+              "title": "Dinossauros T1E04",
+              "url": "https://cdn-novflix.com/storagePSN/SERIES/DINOSSAUROS/DINOSSAUROS1x04.mp4",
+              "episode": 4
+            }
+          ]
+        }
+      ],
+      "episodes": [
+        {
+          "title": "Dinossauros T1E01",
+          "url": "https://cdn-novflix.com/storagePSN/SERIES/DINOSSAUROS/DINOSSAUROS1x01.mp4",
+          "episode": 1
+        },
+        {
+          "title": "Dinossauros T1E02",
+          "url": "https://cdn-novflix.com/storagePSN/SERIES/DINOSSAUROS/DINOSSAUROS1x02.mp4",
+          "episode": 2
+        },
+        {
+          "title": "Dinossauros T1E03",
+          "url": "https://cdn-novflix.com/storagePSN/SERIES/DINOSSAUROS/DINOSSAUROS1x03.mp4",
+          "episode": 3
+        },
+        {
+          "title": "Dinossauros T1E04",
+          "url": "https://cdn-novflix.com/storagePSN/SERIES/DINOSSAUROS/DINOSSAUROS1x04.mp4",
+          "episode": 4
+        }
+      ],
+      "type": "series",
+      "category": "series",
+      "local_poster": "/Pirataflix/assets/Capas/default.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/x37IK9WWhuzi7tgyMT4ff3kiT5X.jpg",
+        "https://image.tmdb.org/t/p/w500/wdpc2htHKoUX42rQNCmlRQ1dMGn.jpg",
+        "https://image.tmdb.org/t/p/w500/j64Q18ABQibT4rsy4Gpz2kU0hJY.jpg",
+        "https://image.tmdb.org/t/p/w500/7QPJy7rynMtATZU47p8HipI6IC2.jpg",
+        "https://image.tmdb.org/t/p/w500/rbJcFZJjzgbv99wU4hSH170dao4.jpg"
+      ],
+      "backdrop": "https://image.tmdb.org/t/p/w1280/zNDB9OaW6zEPTf2AWmrdPQDXIYB.jpg",
+      "overview": "Dos primeiros aos últimos dinossauros, esta série documental fascinante explora seu reinado de 165 milhões de anos na Terra e as forças que moldaram essa evolução.",
+      "year": "2026",
+      "genres": [
+        "Documentário"
+      ],
+      "rating": 7.6,
+      "cast": [
+        {
+          "name": "Morgan Freeman",
+          "character": "Self - Narrator (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/jPsLqiYGSofU4s6BjrxnefMfabb.jpg"
+        }
+      ]
+    },
+    {
       "id": "unfamiliar",
       "title": "Unfamiliar",
       "poster": "https://image.tmdb.org/t/p/w500/fX0Kvvo6hj9feqS3JyFpVmscz2Y.jpg",
