@@ -21,7 +21,7 @@ https://cdn-novflix.com/storagePSN/FILMES/AINDAESTOUAQUI.mp4
 #EXTINF:-1 group-title="🎬 Filmes" tvg-id="SPY_X_FAMILY_CODIGO_BRANCO" tvg-logo="https://image.tmdb.org/t/p/w500/thGaW3UXecNJAEdB6rs8sC45JWv.jpg",Spy X Family Código: Branco
 https://cdn-s01.mywallpaper-4k-image.net/stream/s/spy-x-family-code-white-dublado/01.mp4/index.m3u8
 
-#EXTINF:-1 group-title="🎬 Filmes" tvg-id="HOMEM_COM_H" tvg-logo="https://image.tmdb.org/t/p/w500/c9vcB3ddnErwY9H9H5lNez8a0kr.jpg",Homem Com H
+#EXTINF:-1 group-title="🎬 Filmes" tvg-id="HOMEM_COM_H" tvg-logo="https://image.tmdb.org/t/p/w500/xCYgD1N4S9at70p4WdskbVWHgZS.jpg",Homem Com H
 https://cdn-novflix.com/storagePSN/FILMES/HOMEMCOMH.mp4
 
 #EXTINF:-1 group-title="🎬 Filmes" tvg-id="PREDADOR_TERRAS_SELVAGENS" tvg-logo="https://image.tmdb.org/t/p/w500/7AYPGnLTmU6zDtMMAWqeUkCi7Tw.jpg",Predador Terras Selvagens
@@ -332,6 +332,54 @@ https://cdn-novflix.com/storagePSN/SERIES/BRIDGERTON/BRIDGERTON4x03.mp4
 
 #EXTINF:-1 group-title="📺 Séries" tvg-id="BRIDGERTON_T04" tvg-logo="https://image.tmdb.org/t/p/w500/rAKJSFPXv9aFpeZAyr0yNg0HxuP.jpg",S04E04 - Bridgerton T4E04
 https://cdn-novflix.com/storagePSN/SERIES/BRIDGERTON/BRIDGERTON4x04.mp4
+
+#EXTINF:-1 group-title="📺 Séries" tvg-id="ONE_PIECE_A_SERIE_T01" tvg-logo="https://image.tmdb.org/t/p/w500/aesLt9fsKSA6KCgGxA60VVxjtLk.jpg",S01E01 - One Piece a Serie Episódio 01
+https://cdn-s01.mywallpaper-4k-image.net/stream/o/one-piece-a-serie-dublado/01.mp4/index.m3u8
+
+#EXTINF:-1 group-title="📺 Séries" tvg-id="ONE_PIECE_A_SERIE_T01" tvg-logo="https://image.tmdb.org/t/p/w500/aesLt9fsKSA6KCgGxA60VVxjtLk.jpg",S01E02 - One Piece a Serie Episódio 02
+https://cdn-s01.mywallpaper-4k-image.net/stream/o/one-piece-a-serie-dublado/02.mp4/index.m3u8
+
+#EXTINF:-1 group-title="📺 Séries" tvg-id="ONE_PIECE_A_SERIE_T01" tvg-logo="https://image.tmdb.org/t/p/w500/aesLt9fsKSA6KCgGxA60VVxjtLk.jpg",S01E03 - One Piece a Serie Episódio 03
+https://cdn-s01.mywallpaper-4k-image.net/stream/o/one-piece-a-serie-dublado/03.mp4/index.m3u8
+
+#EXTINF:-1 group-title="📺 Séries" tvg-id="ONE_PIECE_A_SERIE_T01" tvg-logo="https://image.tmdb.org/t/p/w500/aesLt9fsKSA6KCgGxA60VVxjtLk.jpg",S01E04 - One Piece a Serie Episódio 04
+https://cdn-s01.mywallpaper-4k-image.net/stream/o/one-piece-a-serie-dublado/04.mp4/index.m3u8
+
+#EXTINF:-1 group-title="📺 Séries" tvg-id="ONE_PIECE_A_SERIE_T01" tvg-logo="https://image.tmdb.org/t/p/w500/aesLt9fsKSA6KCgGxA60VVxjtLk.jpg",S01E05 - One Piece a Serie Episódio 05
+https://cdn-s01.mywallpaper-4k-image.net/stream/o/one-piece-a-serie-dublado/05.mp4/index.m3u8
+
+#EXTINF:-1 group-title="📺 Séries" tvg-id="ONE_PIECE_A_SERIE_T01" tvg-logo="https://image.tmdb.org/t/p/w500/aesLt9fsKSA6KCgGxA60VVxjtLk.jpg",S01E06 - One Piece a Serie Episódio 06
+https://cdn-s01.mywallpaper-4k-image.net/stream/o/one-piece-a-serie-dublado/06.mp4/index.m3u8
+
+#EXTINF:-1 group-title="📺 Séries" tvg-id="ONE_PIECE_A_SERIE_T01" tvg-logo="https://image.tmdb.org/t/p/w500/aesLt9fsKSA6KCgGxA60VVxjtLk.jpg",S01E07 - One Piece a Serie Episódio 07
+https://cdn-s01.mywallpaper-4k-image.net/stream/o/one-piece-a-serie-dublado/07.mp4/index.m3u8
+
+#EXTINF:-1 group-title="📺 Séries" tvg-id="ONE_PIECE_A_SERIE_T01" tvg-logo="https://image.tmdb.org/t/p/w500/aesLt9fsKSA6KCgGxA60VVxjtLk.jpg",S01E08 - One Piece a Serie Episódio 08
+https://cdn-s01.mywallpaper-4k-image.net/stream/o/one-piece-a-serie-dublado/08.mp4/index.m3u8
+
+#EXTINF:-1 group-title="📺 Séries" tvg-id="ONE_PIECE_A_SERIE_T02" tvg-logo="https://image.tmdb.org/t/p/w500/aesLt9fsKSA6KCgGxA60VVxjtLk.jpg",S02E02 - One Piece A Serie 2 Temporada (Dublado) - Temporada 1 Ep 01
+https://cdn-s01.mywallpaper-4k-image.net/stream/o/one-piece-a-serie-2-temporada-dublado/01.mp4/index.m3u8
+
+#EXTINF:-1 group-title="📺 Séries" tvg-id="ONE_PIECE_A_SERIE_T02" tvg-logo="https://image.tmdb.org/t/p/w500/aesLt9fsKSA6KCgGxA60VVxjtLk.jpg",S02E02 - One Piece A Serie 2 Temporada (Dublado) - Temporada 1 Ep 02
+https://cdn-s01.mywallpaper-4k-image.net/stream/o/one-piece-a-serie-2-temporada-dublado/02.mp4/index.m3u8
+
+#EXTINF:-1 group-title="📺 Séries" tvg-id="ONE_PIECE_A_SERIE_T02" tvg-logo="https://image.tmdb.org/t/p/w500/aesLt9fsKSA6KCgGxA60VVxjtLk.jpg",S02E02 - One Piece A Serie 2 Temporada (Dublado) - Temporada 1 Ep 03
+https://cdn-s01.mywallpaper-4k-image.net/stream/o/one-piece-a-serie-2-temporada-dublado/03.mp4/index.m3u8
+
+#EXTINF:-1 group-title="📺 Séries" tvg-id="ONE_PIECE_A_SERIE_T02" tvg-logo="https://image.tmdb.org/t/p/w500/aesLt9fsKSA6KCgGxA60VVxjtLk.jpg",S02E02 - One Piece A Serie 2 Temporada (Dublado) - Temporada 1 Ep 04
+https://cdn-s01.mywallpaper-4k-image.net/stream/o/one-piece-a-serie-2-temporada-dublado/04.mp4/index.m3u8
+
+#EXTINF:-1 group-title="📺 Séries" tvg-id="ONE_PIECE_A_SERIE_T02" tvg-logo="https://image.tmdb.org/t/p/w500/aesLt9fsKSA6KCgGxA60VVxjtLk.jpg",S02E02 - One Piece A Serie 2 Temporada (Dublado) - Temporada 1 Ep 05
+https://cdn-s01.mywallpaper-4k-image.net/stream/o/one-piece-a-serie-2-temporada-dublado/05.mp4/index.m3u8
+
+#EXTINF:-1 group-title="📺 Séries" tvg-id="ONE_PIECE_A_SERIE_T02" tvg-logo="https://image.tmdb.org/t/p/w500/aesLt9fsKSA6KCgGxA60VVxjtLk.jpg",S02E02 - One Piece A Serie 2 Temporada (Dublado) - Temporada 1 Ep 06
+https://cdn-s01.mywallpaper-4k-image.net/stream/o/one-piece-a-serie-2-temporada-dublado/06.mp4/index.m3u8
+
+#EXTINF:-1 group-title="📺 Séries" tvg-id="ONE_PIECE_A_SERIE_T02" tvg-logo="https://image.tmdb.org/t/p/w500/aesLt9fsKSA6KCgGxA60VVxjtLk.jpg",S02E02 - One Piece A Serie 2 Temporada (Dublado) - Temporada 1 Ep 07
+https://cdn-s01.mywallpaper-4k-image.net/stream/o/one-piece-a-serie-2-temporada-dublado/07.mp4/index.m3u8
+
+#EXTINF:-1 group-title="📺 Séries" tvg-id="ONE_PIECE_A_SERIE_T02" tvg-logo="https://image.tmdb.org/t/p/w500/aesLt9fsKSA6KCgGxA60VVxjtLk.jpg",S02E02 - One Piece A Serie 2 Temporada (Dublado) - Temporada 1 Ep 08
+https://cdn-s01.mywallpaper-4k-image.net/stream/o/one-piece-a-serie-2-temporada-dublado/08.mp4/index.m3u8
 
 #EXTINF:-1 group-title="📺 Séries" tvg-id="RAINHAS_DA_GRANA_T01" tvg-logo="https://image.tmdb.org/t/p/w500/j03RtWsauZNNFdSrHbJoxdX5HYO.jpg",S01E01 - RAINHADAGRANA1x01
 https://cdn-novflix.com/storagePSN/SERIES/RAINHADAGRANA/RAINHADAGRANA1x01.mp4

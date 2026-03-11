@@ -426,7 +426,7 @@
     {
       "id": "homem_com_h",
       "title": "Homem Com H",
-      "poster": "https://image.tmdb.org/t/p/w500/c9vcB3ddnErwY9H9H5lNez8a0kr.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/xCYgD1N4S9at70p4WdskbVWHgZS.jpg",
       "episodes": [
         {
           "title": "Homem com H",
@@ -437,63 +437,61 @@
       "type": "movie",
       "local_poster": "/Pirataflix/assets/Capas/homem_com_h.jpg",
       "posters": [
-        "https://image.tmdb.org/t/p/w500/c9vcB3ddnErwY9H9H5lNez8a0kr.jpg",
-        "https://image.tmdb.org/t/p/w500/xVkbKwGnBVNQ122GN5bCTMyPbWz.jpg",
-        "https://image.tmdb.org/t/p/w500/itH4xI6TbJtJSqcZ43B3MkpL1gy.jpg",
-        "https://image.tmdb.org/t/p/w500/yVqDbroZ1UKy8AYu34IbEwRbwZx.jpg",
-        "https://image.tmdb.org/t/p/w500/hScif55YVsysHaM0h6sigf50WfD.jpg",
-        "https://image.tmdb.org/t/p/w500/zULDLrGE42iTiizMJKDoTGbIKlu.jpg",
-        "https://image.tmdb.org/t/p/w500/k9ZA8wZy2Dc3BmwQlutZJDJkwwo.jpg"
+        "https://image.tmdb.org/t/p/w500/sOed9XD0TS9d0XRSnTiw5tpXIIO.jpg",
+        "https://image.tmdb.org/t/p/w500/oXRqROca0iCJrkOultglQ2gcc0Y.jpg",
+        "https://image.tmdb.org/t/p/w500/xExgeiovpUKl2gvvEkECKky3zUA.jpg",
+        "https://image.tmdb.org/t/p/w500/STOYx9aepaMnmhlGiWoDtkdzs1.jpg",
+        "https://image.tmdb.org/t/p/w500/xCYgD1N4S9at70p4WdskbVWHgZS.jpg",
+        "https://image.tmdb.org/t/p/w500/oL1EMPQxZBpNAsDecFt3A9J7g7c.jpg"
       ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/3tpNEbRahT8smy7RraaWa0xg9Gv.jpg",
-      "overview": "Quando uma bala de ouro chega ao quartel-general da inteligência britânica com um \"007\" gravado nela, se acredita que James Bond será o próximo alvo de um assassino profissional que cobra um milhão de dólares por serviço. Assim, Bond vai investigar a situação e acaba descobrindo que o objetivo do matador internacional seqüestrar um cientista, que inventou um conversor solar capaz de resolver a crise de energia no planeta.",
-      "year": "1974",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/38byjV1A8WpA05xiXl0AXZCnCfv.jpg",
+      "overview": "Dono de uma voz inconfundível e de performances memoráveis, Ney Matogrosso morava com os pais e irmãos na pequena cidade de Bela Vista (MS). Os embates com o pai, que insistia que o menino “virasse homem”, levaram Ney a se afastar da família, antes de enveredar para a vida artística. Anos depois de sair de casa, em São Paulo, estreou como vocalista dos Secos e Molhados, dando início às performances históricas que o definiram como um dos maiores artistas brasileiros da atualidade.",
+      "year": "2025",
       "genres": [
-        "Aventura",
-        "Ação",
-        "Suspense"
+        "Drama",
+        "Música"
       ],
-      "rating": 6.5,
+      "rating": 8.1,
       "cast": [
         {
-          "name": "Roger Moore",
-          "character": "James Bond",
-          "profile": "https://image.tmdb.org/t/p/w185/6sZGGtq7RHt8Pg6ynUMrPJPuTlj.jpg"
+          "name": "Jesuíta Barbosa",
+          "character": "Ney Matogrosso",
+          "profile": "https://image.tmdb.org/t/p/w185/oaHrZmwIrevxDAmduTbAaHoOXD8.jpg"
         },
         {
-          "name": "Christopher Lee",
-          "character": "Francisco Scaramanga",
-          "profile": "https://image.tmdb.org/t/p/w185/dA26fBr3t7mKqjn3OYW6kbD1LXM.jpg"
+          "name": "Rômulo Braga",
+          "character": "Antônio Matogrosso",
+          "profile": "https://image.tmdb.org/t/p/w185/pN89wAhp0OZ6bL3yTyMm8iPUwBy.jpg"
         },
         {
-          "name": "Britt Ekland",
-          "character": "Mary Goodnight",
-          "profile": "https://image.tmdb.org/t/p/w185/xwqKmseMHCXwLQGxardWgPTtAcW.jpg"
+          "name": "Hermila Guedes",
+          "character": "Beíta",
+          "profile": "https://image.tmdb.org/t/p/w185/dJJh7sekL9dl77tviU5yEVXa1qo.jpg"
         },
         {
-          "name": "Maud Adams",
-          "character": "Andrea Anders",
-          "profile": "https://image.tmdb.org/t/p/w185/iJMwjbngYgfh4LELSV8HPI9QeJT.jpg"
+          "name": "Davi Malizia",
+          "character": "Ney Matogrosso (Criança)",
+          "profile": "https://image.tmdb.org/t/p/w185/fN5UPWhmzZ5S3LpZR1HIJmJwGGi.jpg"
         },
         {
-          "name": "Hervé Villechaize",
-          "character": "Nick Nack",
-          "profile": "https://image.tmdb.org/t/p/w185/9zDzeE1WSBqLcS5DAIQz3UAbDSR.jpg"
+          "name": "Jullio Reis",
+          "character": "Cazuza",
+          "profile": "https://image.tmdb.org/t/p/w185/auxzZfwBQdV9kP1T8DLq3Bq3DQm.jpg"
         },
         {
-          "name": "Clifton James",
-          "character": "Sheriff J.W. Pepper",
-          "profile": "https://image.tmdb.org/t/p/w185/4XRoVhgoeQEZdg4BAKCWRkI1UfR.jpg"
+          "name": "Bruno Montaleone",
+          "character": "Marco de Maria",
+          "profile": "https://image.tmdb.org/t/p/w185/eXkQ1K9JMaZsZ3WYv8MVwPX9HRD.jpg"
         },
         {
-          "name": "Richard Loo",
-          "character": "Hai Fat",
-          "profile": "https://image.tmdb.org/t/p/w185/mCQFpDqmxaNMm0A4SKodUuNA92v.jpg"
+          "name": "Mauro Soares",
+          "character": "João Ricardo",
+          "profile": "https://image.tmdb.org/t/p/w185/jukccfdQ4Gxwr91u7WuShB9zYR6.jpg"
         },
         {
-          "name": "Soon-Tek Oh",
-          "character": "Lieutenant Hip",
-          "profile": "https://image.tmdb.org/t/p/w185/m2qkVJLmfcNYQe85bJ5iuF6e8ha.jpg"
+          "name": "Bruno Parmera",
+          "character": "Luisinho",
+          "profile": "https://image.tmdb.org/t/p/w185/cc1B7rIBIRL7Ne0T48g5QDwDkPe.jpg"
         }
       ]
     },
@@ -1470,6 +1468,154 @@
           "name": "Adjoa Andoh",
           "character": "Lady Agatha Danbury",
           "profile": "https://image.tmdb.org/t/p/w185/4dsLkxU3Vcw1P97JoyGWlbYhV1h.jpg"
+        }
+      ]
+    },
+    {
+      "id": "one_piece_a_serie",
+      "title": "One Piece A Serie",
+      "poster": "https://image.tmdb.org/t/p/w500/aesLt9fsKSA6KCgGxA60VVxjtLk.jpg",
+      "seasons": [
+        {
+          "season": 1,
+          "episodes": [
+            {
+              "title": "One Piece a Serie Episódio 01",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/o/one-piece-a-serie-dublado/01.mp4/index.m3u8",
+              "episode": 1
+            },
+            {
+              "title": "One Piece a Serie Episódio 02",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/o/one-piece-a-serie-dublado/02.mp4/index.m3u8",
+              "episode": 2
+            },
+            {
+              "title": "One Piece a Serie Episódio 03",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/o/one-piece-a-serie-dublado/03.mp4/index.m3u8",
+              "episode": 3
+            },
+            {
+              "title": "One Piece a Serie Episódio 04",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/o/one-piece-a-serie-dublado/04.mp4/index.m3u8",
+              "episode": 4
+            },
+            {
+              "title": "One Piece a Serie Episódio 05",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/o/one-piece-a-serie-dublado/05.mp4/index.m3u8",
+              "episode": 5
+            },
+            {
+              "title": "One Piece a Serie Episódio 06",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/o/one-piece-a-serie-dublado/06.mp4/index.m3u8",
+              "episode": 6
+            },
+            {
+              "title": "One Piece a Serie Episódio 07",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/o/one-piece-a-serie-dublado/07.mp4/index.m3u8",
+              "episode": 7
+            },
+            {
+              "title": "One Piece a Serie Episódio 08",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/o/one-piece-a-serie-dublado/08.mp4/index.m3u8",
+              "episode": 8
+            }
+          ]
+        },
+        {
+          "season": 2,
+          "episodes": [
+            {
+              "title": "One Piece A Serie 2 Temporada (Dublado) - Temporada 1 Ep 01",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/o/one-piece-a-serie-2-temporada-dublado/01.mp4/index.m3u8",
+              "episode": 2
+            },
+            {
+              "title": "One Piece A Serie 2 Temporada (Dublado) - Temporada 1 Ep 02",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/o/one-piece-a-serie-2-temporada-dublado/02.mp4/index.m3u8",
+              "episode": 2
+            },
+            {
+              "title": "One Piece A Serie 2 Temporada (Dublado) - Temporada 1 Ep 03",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/o/one-piece-a-serie-2-temporada-dublado/03.mp4/index.m3u8",
+              "episode": 2
+            },
+            {
+              "title": "One Piece A Serie 2 Temporada (Dublado) - Temporada 1 Ep 04",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/o/one-piece-a-serie-2-temporada-dublado/04.mp4/index.m3u8",
+              "episode": 2
+            },
+            {
+              "title": "One Piece A Serie 2 Temporada (Dublado) - Temporada 1 Ep 05",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/o/one-piece-a-serie-2-temporada-dublado/05.mp4/index.m3u8",
+              "episode": 2
+            },
+            {
+              "title": "One Piece A Serie 2 Temporada (Dublado) - Temporada 1 Ep 06",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/o/one-piece-a-serie-2-temporada-dublado/06.mp4/index.m3u8",
+              "episode": 2
+            },
+            {
+              "title": "One Piece A Serie 2 Temporada (Dublado) - Temporada 1 Ep 07",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/o/one-piece-a-serie-2-temporada-dublado/07.mp4/index.m3u8",
+              "episode": 2
+            },
+            {
+              "title": "One Piece A Serie 2 Temporada (Dublado) - Temporada 1 Ep 08",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/o/one-piece-a-serie-2-temporada-dublado/08.mp4/index.m3u8",
+              "episode": 2
+            }
+          ]
+        }
+      ],
+      "type": "series",
+      "category": "series",
+      "local_poster": "/Pirataflix/assets/Capas/one_piece_a_serie.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/blWCPEqDGLBuLB9u89CxP9ORQP4.jpg",
+        "https://image.tmdb.org/t/p/w500/aesLt9fsKSA6KCgGxA60VVxjtLk.jpg",
+        "https://image.tmdb.org/t/p/w500/rVX05xRKS5JhEYQFObCi4lAnZT4.jpg",
+        "https://image.tmdb.org/t/p/w500/lXl3ZbY5TksOdt6eYgdyg6vsnFW.jpg",
+        "https://image.tmdb.org/t/p/w500/yEtSBgugED8XyhqjcKgF6j2zDMf.jpg",
+        "https://image.tmdb.org/t/p/w500/mik4odDfAXQrabV4VA4X4IDtBXF.jpg"
+      ],
+      "backdrop": "https://image.tmdb.org/t/p/w1280/qD211Hb5XwFxrszzBBe5EUYJerh.jpg",
+      "overview": "O jovem pirata Monkey D. Luffy veste o chapéu de palha e, com sua tripulação atrapalhada, zarpa em uma jornada épica nesta adaptação em live-action do popular mangá.",
+      "year": "2023",
+      "genres": [
+        "Ação & Aventura",
+        "Sci-Fi & Fantasia"
+      ],
+      "rating": 8.1,
+      "cast": [
+        {
+          "name": "Iñaki Godoy",
+          "character": "Monkey D. Luffy",
+          "profile": "https://image.tmdb.org/t/p/w185/93Z6KuFpqoDD1xN5kuswYQzbWe6.jpg"
+        },
+        {
+          "name": "Emily Rudd",
+          "character": "Nami",
+          "profile": "https://image.tmdb.org/t/p/w185/y23GTdDPcryBVtSWjY9q2O9nzwV.jpg"
+        },
+        {
+          "name": "新田真剣佑",
+          "character": "Roronoa Zoro",
+          "profile": "https://image.tmdb.org/t/p/w185/bacZSFemex2oUexBccrbIksGxGz.jpg"
+        },
+        {
+          "name": "Jacob Gibson",
+          "character": "Usopp",
+          "profile": "https://image.tmdb.org/t/p/w185/c6uP24uFslQ3hnEgqPkojAbYuZn.jpg"
+        },
+        {
+          "name": "Taz Skylar",
+          "character": "Sanji",
+          "profile": "https://image.tmdb.org/t/p/w185/3EXMkfzB8EXn3ZJPJvK6OfPWLfz.jpg"
+        },
+        {
+          "name": "Charithra Chandran",
+          "character": "Miss Wednesday / Nefertari Vivi",
+          "profile": "https://image.tmdb.org/t/p/w185/xLFgJmfXjd2Nnbjx3ZtavReGwjK.jpg"
         }
       ]
     },
@@ -12806,7 +12952,7 @@
               "episode": 121,
               "air_date": "2026-03-09",
               "overview": "Arminda disfarça quando Paulinho lhe pergunta sobre a Casa de Farinha. Leonardo flagra Viviane no bar com Angélico. Paulinho decide convocar Ferette para depor sobre a denúncia de Arminda. Gerluce avisa a Paulinho que irá depor na delegacia sobre o que sabe da fabricação de remédios falsos. Paulinho indaga Ferette sobre a Casa de Farinha.",
-              "still": "",
+              "still": "https://image.tmdb.org/t/p/w400/GvtZekhucCt7oBDf4ACtcSEvZq.jpg",
               "guest_stars": [],
               "locked": false
             },
@@ -12816,7 +12962,7 @@
               "episode": 122,
               "air_date": "2026-03-10",
               "overview": "",
-              "still": "",
+              "still": "https://image.tmdb.org/t/p/w400/w1Q2IEaMxGxpg71o7upYb5a2i3S.jpg",
               "guest_stars": [],
               "locked": false
             },
@@ -14936,7 +15082,7 @@
           "episode": 121,
           "air_date": "2026-03-09",
           "overview": "Arminda disfarça quando Paulinho lhe pergunta sobre a Casa de Farinha. Leonardo flagra Viviane no bar com Angélico. Paulinho decide convocar Ferette para depor sobre a denúncia de Arminda. Gerluce avisa a Paulinho que irá depor na delegacia sobre o que sabe da fabricação de remédios falsos. Paulinho indaga Ferette sobre a Casa de Farinha.",
-          "still": "",
+          "still": "https://image.tmdb.org/t/p/w400/GvtZekhucCt7oBDf4ACtcSEvZq.jpg",
           "guest_stars": [],
           "locked": false
         },
@@ -14946,7 +15092,7 @@
           "episode": 122,
           "air_date": "2026-03-10",
           "overview": "",
-          "still": "",
+          "still": "https://image.tmdb.org/t/p/w400/w1Q2IEaMxGxpg71o7upYb5a2i3S.jpg",
           "guest_stars": [],
           "locked": false
         },
@@ -15592,7 +15738,7 @@
       "backdrop": "https://image.tmdb.org/t/p/w1280/bsnzAWs9MITfYgsQ8jp1SQ3AyHI.jpg",
       "overview": "Lígia, Gerluce e Joélly — três mulheres de diferentes gerações da mesma família — cujas vidas são marcadas por um ponto em comum: todas enfrentaram uma gravidez na adolescência e foram abandonadas por seus respectivos companheiros.",
       "year": "2025",
-      "rating": 7.9,
+      "rating": 8.2,
       "cast": [
         {
           "name": "Sophie Charlotte",
@@ -62679,7 +62825,7 @@
         {
           "name": "Hank Azaria",
           "character": "Moe Szyslak / Chief Wiggum / Apu / Comic Book Guy / Carl (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/yFDw4b0jucuFWNnGcBPfpYUtn16.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/uON3TWSySIy8wbDhkSzmFTDM6XO.jpg"
         },
         {
           "name": "Harry Shearer",
