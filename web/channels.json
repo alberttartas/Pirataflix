@@ -16635,5 +16635,20 @@
         "title": "AO VIVO"
       }
     ]
+  },
+  {
+    "id": "RedBullTV.at@BR",
+    "type": "tv",
+    "title": "Red Bull TV BR (1080p)",
+    "tvg_id": "RedBullTV.at@BR",
+    "tvg_logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Red_Bull_TV.png",
+    "group": "⚽ Esportes",
+    "url": "https://d03ae6b5c6724c24867e97a3dc04934a.mediatailor.us-west-2.amazonaws.com/v1/master/ba62fe743df0fe93366eba3a257d792884136c7f/LINEAR-1026-WORBBRPTFAST-WHALETVPLUS/1026/hls/master/playlist.m3u8",
+    "episodes": [
+      {
+        "url": "https://d03ae6b5c6724c24867e97a3dc04934a.mediatailor.us-west-2.amazonaws.com/v1/master/ba62fe743df0fe93366eba3a257d792884136c7f/LINEAR-1026-WORBBRPTFAST-WHALETVPLUS/1026/hls/master/playlist.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
   }
 ]
