@@ -1547,3 +1547,8 @@ footer {
     #modalBody { padding: 0 16px 24px; }
     .pf-ep-still { width: 72px; height: 40px; }
 }
+
+/* Hamburger animação → X quando aberto */
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
