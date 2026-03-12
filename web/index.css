@@ -6,9 +6,6 @@
             z-index: 100; display: flex; justify-content: space-between; align-items: center;
         }
         .logo { font-size: 2.5rem; color: #e50914; font-weight: bold; text-decoration: none; }
-        .nav-links { display: flex; gap: 20px; }
-        .nav-link { color: #e5e5e5; text-decoration: none; font-size: 0.9rem; transition: color 0.3s; }
-        .nav-link:hover { color: #fff; }
         .main-content { padding-top: 80px; }
         .category-section { margin-bottom: 40px; padding: 0 50px; position: relative; }
         .category-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
