@@ -24,10 +24,7 @@
 <body>
     <header class="header">
         <a href="#" class="logo">PIRATAFLIX</a>
-        <button class="hamburger" id="menuToggle" aria-label="Menu">
-            <span></span><span></span><span></span>
-        </button>
-        <nav class="nav-links" id="navLinks">
+        <nav class="nav-links">
             <a href="#filmes"          class="nav-link">Filmes</a>
             <a href="#series"          class="nav-link">Séries</a>
             <a href="#novelas"         class="nav-link">Novelas</a>
@@ -107,24 +104,5 @@
         <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zm-8 2V5h2v6h1.17L12 13.17 9.83 11H11zm-6 7h14v2H5z"/></svg>
         Instalar App
     </button>
-
-    <script>
-    (function(){
-        var btn = document.getElementById('menuToggle');
-        var nav = document.getElementById('navLinks');
-        if(btn && nav){
-            btn.addEventListener('click', function(){
-                nav.classList.toggle('open');
-                btn.classList.toggle('open');
-            });
-            document.addEventListener('click', function(e){
-                if(!btn.contains(e.target) && !nav.contains(e.target)){
-                    nav.classList.remove('open');
-                    btn.classList.remove('open');
-                }
-            });
-        }
-    })();
-    </script>
 </body>
 </html>
