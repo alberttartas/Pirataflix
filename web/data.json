@@ -443,11 +443,11 @@
       "local_poster": "/Pirataflix/assets/Capas/spy_x_family.jpg",
       "posters": [
         "https://image.tmdb.org/t/p/w500/xlIQf4y9eB14iYzNN142tROIWON.jpg",
-        "https://image.tmdb.org/t/p/w500/riv537dUuKib4KXC6Rg7CINs4xO.jpg",
         "https://image.tmdb.org/t/p/w500/thGaW3UXecNJAEdB6rs8sC45JWv.jpg",
         "https://image.tmdb.org/t/p/w500/l01GfNS7UFZCW1ePdDXP5vArpxt.jpg",
         "https://image.tmdb.org/t/p/w500/s2nNx9dkt6My4hjXqoYIVX7zrzW.jpg",
-        "https://image.tmdb.org/t/p/w500/fJIC1baT5SCUwSlGOwZrVQ4TTPA.jpg"
+        "https://image.tmdb.org/t/p/w500/fJIC1baT5SCUwSlGOwZrVQ4TTPA.jpg",
+        "https://image.tmdb.org/t/p/w500/zRDQkllBB93flAJXwOtEXmhvWWn.jpg"
       ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/zVDJ4cRgSpHlILSm7kGiklHQ6O7.jpg",
       "overview": "Ele é um espião. Ela uma assassina. Juntos, Loid e Yor mantêm suas vidas duplas enquanto fingem serem a família perfeita. No entanto, sua filha adotiva, Anya, uma telepata, conhece seus empolgantes segredos, sem eles saberem. Usando o pretexto de levar sua família numa viagem de inverno no fim de semana, a tentativa de Loid de progredir em sua missão atual, a Operação Strix, é frustrada quando Anya se envolve por engano e ativa eventos que ameaçam a paz mundial!",
@@ -853,7 +853,7 @@
       "genres": [
         "Documentário"
       ],
-      "rating": 7.6,
+      "rating": 7.7,
       "cast": [
         {
           "name": "Morgan Freeman",
@@ -941,7 +941,6 @@
       "posters": [
         "https://image.tmdb.org/t/p/w500/fX0Kvvo6hj9feqS3JyFpVmscz2Y.jpg",
         "https://image.tmdb.org/t/p/w500/n8CWRI8k1pLT1HAmIy0mAerDJmc.jpg",
-        "https://image.tmdb.org/t/p/w500/OvNMzIOJIzDlouhZVqCHRE6HlL.jpg",
         "https://image.tmdb.org/t/p/w500/1mCU3UEnGItOp7heoDdwRCtpmod.jpg",
         "https://image.tmdb.org/t/p/w500/DZRZVh3uPSFkOF4udkVqD95hdk.jpg",
         "https://image.tmdb.org/t/p/w500/hdEQWvSbDQsbdseeYjUS0NgrfT2.jpg"
@@ -949,7 +948,7 @@
       "backdrop": "https://image.tmdb.org/t/p/w1280/qDq3dG4ElRohih5fUGNQRLHuBaC.jpg",
       "overview": "Quando o passado bate à porta de um casal de ex-espiões, o maior desafio não são as perseguições, os tiroteios e as brigas... é contar a verdade um ao outro.",
       "year": "2026",
-      "rating": 7.3,
+      "rating": 7.2,
       "cast": [
         {
           "name": "Felix Kramer",
@@ -1751,7 +1750,7 @@
         {
           "name": "新田真剣佑",
           "character": "Roronoa Zoro",
-          "profile": "https://image.tmdb.org/t/p/w185/bacZSFemex2oUexBccrbIksGxGz.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/y4FTSASxsO1F61p3hFIPMCeprut.jpg"
         },
         {
           "name": "Jacob Gibson",
@@ -2454,6 +2453,11 @@
                   "name": "Danielle Olímpia",
                   "character": "Joana de Deus de São José",
                   "photo": ""
+                },
+                {
+                  "name": "Bruna Spinola",
+                  "character": "Eulália",
+                  "photo": ""
                 }
               ],
               "locked": false
@@ -2498,13 +2502,13 @@
               "still": "https://image.tmdb.org/t/p/w400/99CNh4tmErk3oj5zkmNhZnspnme.jpg",
               "guest_stars": [
                 {
-                  "name": "Danielle Olímpia",
-                  "character": "Joana de Deus de São José",
+                  "name": "Manuela Dourado",
+                  "character": "Teresa Tomásia de São José",
                   "photo": ""
                 },
                 {
-                  "name": "Manuela Dourado",
-                  "character": "Teresa Tomásia  de São José",
+                  "name": "Danielle Olímpia",
+                  "character": "Joana de Deus de São José",
                   "photo": ""
                 }
               ],
@@ -3201,6 +3205,11 @@
               "name": "Danielle Olímpia",
               "character": "Joana de Deus de São José",
               "photo": ""
+            },
+            {
+              "name": "Bruna Spinola",
+              "character": "Eulália",
+              "photo": ""
             }
           ],
           "locked": false
@@ -3245,13 +3254,13 @@
           "still": "https://image.tmdb.org/t/p/w400/99CNh4tmErk3oj5zkmNhZnspnme.jpg",
           "guest_stars": [
             {
-              "name": "Danielle Olímpia",
-              "character": "Joana de Deus de São José",
+              "name": "Manuela Dourado",
+              "character": "Teresa Tomásia de São José",
               "photo": ""
             },
             {
-              "name": "Manuela Dourado",
-              "character": "Teresa Tomásia  de São José",
+              "name": "Danielle Olímpia",
+              "character": "Joana de Deus de São José",
               "photo": ""
             }
           ],
@@ -13103,7 +13112,7 @@
               "episode": 121,
               "air_date": "2026-03-09",
               "overview": "Arminda disfarça quando Paulinho lhe pergunta sobre a Casa de Farinha. Leonardo flagra Viviane no bar com Angélico. Paulinho decide convocar Ferette para depor sobre a denúncia de Arminda. Gerluce avisa a Paulinho que irá depor na delegacia sobre o que sabe da fabricação de remédios falsos. Paulinho indaga Ferette sobre a Casa de Farinha.",
-              "still": "https://image.tmdb.org/t/p/w400/GvtZekhucCt7oBDf4ACtcSEvZq.jpg",
+              "still": "https://image.tmdb.org/t/p/w400/x2445HRIFWqS56BiMvMg7WZiAoz.jpg",
               "guest_stars": [],
               "locked": false
             },
@@ -13112,8 +13121,8 @@
               "url": "https://cdn-novflix.com/storage1/TGRACAS/TGRACAS-122.mp4",
               "episode": 122,
               "air_date": "2026-03-10",
-              "overview": "",
-              "still": "https://image.tmdb.org/t/p/w400/w1Q2IEaMxGxpg71o7upYb5a2i3S.jpg",
+              "overview": "Paulinho, Juquinha e Jairo tentam driblar o cinismo de Ferette. Gerluce revela a Zenilda que foi ela quem planejou o roubo das Três Graças. Júnior desconfia de que Kasper e Bagdá possam estar mancomunados. Bagdá expulsa Lucélia de sua casa. Vandílson se coloca à disposição de Lucélia. Paulinho entrega uma intimação a Gerluce para depor sobre o sumiço das Três Graças.",
+              "still": "https://image.tmdb.org/t/p/w400/3jpccmi8XQlVZwe6VSLHuEDgUA8.jpg",
               "guest_stars": [],
               "locked": false
             },
@@ -13122,8 +13131,8 @@
               "url": "https://cdn-novflix.com/storage1/TGRACAS/TGRACAS-123.mp4",
               "episode": 123,
               "air_date": "2026-03-11",
-              "overview": "",
-              "still": "",
+              "overview": "Gerluce chega à delegacia para depor. Zenilda tenta conter Gerluce durante seu depoimento. Ferette planeja usar Raul para incriminar Rogério pelos crimes da Fundação. Ferette comunica a Luciano que ele assumirá a farmácia da Chacrinha no lugar de Viviane. A delegada Marisa prende Viviane em flagrante.",
+              "still": "https://image.tmdb.org/t/p/w400/xfOe8aF0v586y4rBQKOhc2sCdJW.jpg",
               "guest_stars": [],
               "locked": false
             },
@@ -13135,8 +13144,7 @@
               "overview": "",
               "still": "",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-03-12T21:00:00"
+              "locked": false
             },
             {
               "title": "TGRACAS-125",
@@ -15232,7 +15240,7 @@
           "episode": 121,
           "air_date": "2026-03-09",
           "overview": "Arminda disfarça quando Paulinho lhe pergunta sobre a Casa de Farinha. Leonardo flagra Viviane no bar com Angélico. Paulinho decide convocar Ferette para depor sobre a denúncia de Arminda. Gerluce avisa a Paulinho que irá depor na delegacia sobre o que sabe da fabricação de remédios falsos. Paulinho indaga Ferette sobre a Casa de Farinha.",
-          "still": "https://image.tmdb.org/t/p/w400/GvtZekhucCt7oBDf4ACtcSEvZq.jpg",
+          "still": "https://image.tmdb.org/t/p/w400/x2445HRIFWqS56BiMvMg7WZiAoz.jpg",
           "guest_stars": [],
           "locked": false
         },
@@ -15241,8 +15249,8 @@
           "url": "https://cdn-novflix.com/storage1/TGRACAS/TGRACAS-122.mp4",
           "episode": 122,
           "air_date": "2026-03-10",
-          "overview": "",
-          "still": "https://image.tmdb.org/t/p/w400/w1Q2IEaMxGxpg71o7upYb5a2i3S.jpg",
+          "overview": "Paulinho, Juquinha e Jairo tentam driblar o cinismo de Ferette. Gerluce revela a Zenilda que foi ela quem planejou o roubo das Três Graças. Júnior desconfia de que Kasper e Bagdá possam estar mancomunados. Bagdá expulsa Lucélia de sua casa. Vandílson se coloca à disposição de Lucélia. Paulinho entrega uma intimação a Gerluce para depor sobre o sumiço das Três Graças.",
+          "still": "https://image.tmdb.org/t/p/w400/3jpccmi8XQlVZwe6VSLHuEDgUA8.jpg",
           "guest_stars": [],
           "locked": false
         },
@@ -15251,8 +15259,8 @@
           "url": "https://cdn-novflix.com/storage1/TGRACAS/TGRACAS-123.mp4",
           "episode": 123,
           "air_date": "2026-03-11",
-          "overview": "",
-          "still": "",
+          "overview": "Gerluce chega à delegacia para depor. Zenilda tenta conter Gerluce durante seu depoimento. Ferette planeja usar Raul para incriminar Rogério pelos crimes da Fundação. Ferette comunica a Luciano que ele assumirá a farmácia da Chacrinha no lugar de Viviane. A delegada Marisa prende Viviane em flagrante.",
+          "still": "https://image.tmdb.org/t/p/w400/xfOe8aF0v586y4rBQKOhc2sCdJW.jpg",
           "guest_stars": [],
           "locked": false
         },
@@ -15264,8 +15272,7 @@
           "overview": "",
           "still": "",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-03-12T21:00:00"
+          "locked": false
         },
         {
           "title": "TGRACAS-125",
@@ -17623,7 +17630,8 @@
         "https://image.tmdb.org/t/p/w500/drFVQFBpWj5Y33zuNDkxGIR6MjJ.jpg",
         "https://image.tmdb.org/t/p/w500/8eVQUnY1nmlnW7UshB06ViFgaIA.jpg",
         "https://image.tmdb.org/t/p/w500/1cTzGGvUH2PMWZQYaXMZNdiMLFO.jpg",
-        "https://image.tmdb.org/t/p/w500/m2zWZH9xeEgd31C630A5y4AwDCq.jpg"
+        "https://image.tmdb.org/t/p/w500/m2zWZH9xeEgd31C630A5y4AwDCq.jpg",
+        "https://image.tmdb.org/t/p/w500/h9EQxpMg4uJpqPzr31RhSw5DPZ9.jpg"
       ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/60U3KQzCcNKOdk1ADnQO8xYZaXv.jpg",
       "overview": "Ambientada em Vila da Mata, em 1918, a trama gira em torno da disputa por terras entre dois coronéis e do amor entre Luís Jerônimo e a cabocla Zuca, noiva do destemido Tobias.",
