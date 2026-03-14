@@ -16650,5 +16650,620 @@
         "title": "AO VIVO"
       }
     ]
+  },
+  {
+    "id": "AdrenalinaPuraTV.us@Brazil",
+    "type": "tv",
+    "title": "Adrenalina Pura TV",
+    "tvg_id": "AdrenalinaPuraTV.us@Brazil",
+    "tvg_logo": "https://i.imgur.com/Pvid2iH.png",
+    "group": "🎬 Filmes",
+    "url": "https://jmp2.uk/plu-61b790b985706b00072cb797.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-61b790b985706b00072cb797.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "BabyFirst.us@Brazil",
+    "type": "tv",
+    "title": "Babyfirst",
+    "tvg_id": "BabyFirst.us@Brazil",
+    "tvg_logo": "https://i.imgur.com/WxLHBwu.png",
+    "group": "🧸 Infantil",
+    "url": "https://jmp2.uk/plu-5f4fb4cf605ddf000748e16f.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-5f4fb4cf605ddf000748e16f.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "BETPlutoTV.us@Brazil",
+    "type": "tv",
+    "title": "BET Pluto TV",
+    "tvg_id": "BETPlutoTV.us@Brazil",
+    "tvg_logo": "https://i.imgur.com/Kq9WKZg.png",
+    "group": "🎭 Entretenimento",
+    "url": "https://jmp2.uk/plu-5ff768b6a4c8b80008498610.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-5ff768b6a4c8b80008498610.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "BMCNews.br@SD",
+    "type": "tv",
+    "title": "BM&C News",
+    "tvg_id": "BMCNews.br@SD",
+    "tvg_logo": "https://i.imgur.com/pOUY2Uz.png",
+    "group": "📰 Notícias",
+    "url": "https://jmp2.uk/plu-666c9c60a7efd40008f552f0.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-666c9c60a7efd40008f552f0.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "ComedyCentralPlutoTV.us@Brazil",
+    "type": "tv",
+    "title": "Comedy Central Pluto TV",
+    "tvg_id": "ComedyCentralPlutoTV.us@Brazil",
+    "tvg_logo": "https://i.imgur.com/9y6TtjF.png",
+    "group": "😂 Comédia",
+    "url": "https://jmp2.uk/plu-5f357e91b18f0b00073583d2.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-5f357e91b18f0b00073583d2.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "ComedyCentralSouthPark.us@Brazil",
+    "type": "tv",
+    "title": "Comedy Central South Park",
+    "tvg_id": "ComedyCentralSouthPark.us@Brazil",
+    "tvg_logo": "https://i.imgur.com/7GKO6Fp.png",
+    "group": "📺 Séries",
+    "url": "https://jmp2.uk/plu-609ae66b359b270007869ff1.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-609ae66b359b270007869ff1.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "FailArmy.us@Brazil",
+    "type": "tv",
+    "title": "FailArmy",
+    "tvg_id": "FailArmy.us@Brazil",
+    "tvg_logo": "https://i.imgur.com/VIpQJxL.png",
+    "group": "😂 Comédia",
+    "url": "https://jmp2.uk/plu-5f5141c1605ddf000748eb1b.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-5f5141c1605ddf000748eb1b.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "FilmesSuspense.us@Brazil",
+    "type": "tv",
+    "title": "Filmes Suspense",
+    "tvg_id": "FilmesSuspense.us@Brazil",
+    "tvg_logo": "https://i.imgur.com/45V9MKk.png",
+    "group": "🎬 Filmes",
+    "url": "https://jmp2.uk/plu-5f171d3442a0500007362f22.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-5f171d3442a0500007362f22.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "KenanKel.us@Brazil",
+    "type": "tv",
+    "title": "Kenan & Kel",
+    "tvg_id": "KenanKel.us@Brazil",
+    "tvg_logo": "https://i.imgur.com/h9dpcgN.png",
+    "group": "📺 Séries",
+    "url": "https://jmp2.uk/plu-5ffcc5130fd98c0007f2e216.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-5ffcc5130fd98c0007f2e216.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "MasterChef.us@Brazil",
+    "type": "tv",
+    "title": "MasterChef",
+    "tvg_id": "MasterChef.us@Brazil",
+    "tvg_logo": "https://i.imgur.com/lOuySbz.png",
+    "group": "📺 Séries",
+    "url": "https://jmp2.uk/plu-6077045b6031bd00078de127.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-6077045b6031bd00078de127.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "MTVBiggestPop.us@Brazil",
+    "type": "tv",
+    "title": "MTV Biggest Pop",
+    "tvg_id": "MTVBiggestPop.us@Brazil",
+    "tvg_logo": "https://i.imgur.com/AOaZmlS.png",
+    "group": "🎵 Música",
+    "url": "https://jmp2.uk/plu-6047fbdbbb776a0007e7f2ff.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-6047fbdbbb776a0007e7f2ff.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "MTVComoEx.us@Brazil",
+    "type": "tv",
+    "title": "MTV Com o Ex",
+    "tvg_id": "MTVComoEx.us@Brazil",
+    "tvg_logo": "https://i.imgur.com/sWqnNPm.png",
+    "group": "📺 Séries",
+    "url": "https://jmp2.uk/plu-61a528267e1b8b0007357920.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-61a528267e1b8b0007357920.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "Naruto.us@Brazil",
+    "type": "tv",
+    "title": "Naruto",
+    "tvg_id": "Naruto.us@Brazil",
+    "tvg_logo": "https://i.imgur.com/M8X3Kvc.png",
+    "group": "🎨 Animação",
+    "url": "https://jmp2.uk/plu-5f6df5a173d7340007c559f7.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-5f6df5a173d7340007c559f7.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "NickClassico.us@Brazil",
+    "type": "tv",
+    "title": "Nickelodeon Clássico",
+    "tvg_id": "NickClassico.us@Brazil",
+    "tvg_logo": "https://i.imgur.com/Crip6wT.png",
+    "group": "🧸 Infantil",
+    "url": "https://jmp2.uk/plu-5f12151794c1800007a8ae63.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-5f12151794c1800007a8ae63.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "OEncantadordeCaes.us@Brazil",
+    "type": "tv",
+    "title": "O Encantador de Cães",
+    "tvg_id": "OEncantadordeCaes.us@Brazil",
+    "tvg_logo": "https://i.imgur.com/sQn6vvh.png",
+    "group": "📚 Educação",
+    "url": "https://jmp2.uk/plu-61099df8cee03b00074b2ecf.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-61099df8cee03b00074b2ecf.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "OReinoInfantil.us@Brazil",
+    "type": "tv",
+    "title": "O Reino Infantil",
+    "tvg_id": "OReinoInfantil.us@Brazil",
+    "tvg_logo": "https://i.imgur.com/qoVxc13.png",
+    "group": "🧸 Infantil",
+    "url": "https://jmp2.uk/plu-5f5c216df68f920007888315.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-5f5c216df68f920007888315.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "PlutoTVAnime.us@Brazil",
+    "type": "tv",
+    "title": "Pluto TV Anime",
+    "tvg_id": "PlutoTVAnime.us@Brazil",
+    "tvg_logo": "https://i.imgur.com/bvbn8pa.png",
+    "group": "🎭 Entretenimento",
+    "url": "https://jmp2.uk/plu-5f12136385bccc00070142ed.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-5f12136385bccc00070142ed.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "PlutoTVAnimeAcao.us@Brazil",
+    "type": "tv",
+    "title": "Pluto TV Anime Ação",
+    "tvg_id": "PlutoTVAnimeAcao.us@Brazil",
+    "tvg_logo": "https://i.imgur.com/d8PpfB3.png",
+    "group": "🎨 Animação",
+    "url": "https://jmp2.uk/plu-604b79c558393100078faeef.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-604b79c558393100078faeef.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "PlutoTVCineClassicos.us@Brazil",
+    "type": "tv",
+    "title": "Pluto TV Cine Clássicos",
+    "tvg_id": "PlutoTVCineClassicos.us@Brazil",
+    "tvg_logo": "https://i.imgur.com/N3UYHFS.png",
+    "group": "🎬 Filmes",
+    "url": "https://jmp2.uk/plu-5fa1612a669ba0000702017b.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-5fa1612a669ba0000702017b.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "PlutoTVCineDrama.us@Brazil",
+    "type": "tv",
+    "title": "Pluto TV Cine Drama",
+    "tvg_id": "PlutoTVCineDrama.us@Brazil",
+    "tvg_logo": "https://i.imgur.com/AQBtheU.png",
+    "group": "🎬 Filmes",
+    "url": "https://jmp2.uk/plu-5f1210d14ae1f80007bafb1d.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-5f1210d14ae1f80007bafb1d.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "PlutoTVCineFamilia.us@Brazil",
+    "type": "tv",
+    "title": "Pluto TV Cine Família",
+    "tvg_id": "PlutoTVCineFamilia.us@Brazil",
+    "tvg_logo": "https://i.imgur.com/r9UhBfV.png",
+    "group": "🎬 Filmes",
+    "url": "https://jmp2.uk/plu-5f171f032cd22e0007f17f3d.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-5f171f032cd22e0007f17f3d.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "PlutoTVCineRomance.us@Brazil",
+    "type": "tv",
+    "title": "Pluto TV Cine Romance",
+    "tvg_id": "PlutoTVCineRomance.us@Brazil",
+    "tvg_logo": "https://i.imgur.com/WXMD53u.png",
+    "group": "🎬 Filmes",
+    "url": "https://jmp2.uk/plu-5f171f988ab9780007fa95ea.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-5f171f988ab9780007fa95ea.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "PlutoTVCineSucessos.us@Brazil",
+    "type": "tv",
+    "title": "Pluto TV Cine Sucessos",
+    "tvg_id": "PlutoTVCineSucessos.us@Brazil",
+    "tvg_logo": "https://i.imgur.com/Tq0SMcl.png",
+    "group": "🎬 Filmes",
+    "url": "https://jmp2.uk/plu-5f120e94a5714d00074576a1.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-5f120e94a5714d00074576a1.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "CineTerror.us@Brazil",
+    "type": "tv",
+    "title": "Pluto TV Cine Terror",
+    "tvg_id": "CineTerror.us@Brazil",
+    "tvg_logo": "https://i.imgur.com/I5XxyLI.png",
+    "group": "🎬 Filmes",
+    "url": "https://jmp2.uk/plu-5f12111c9e6c2c00078ef3bb.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-5f12111c9e6c2c00078ef3bb.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "PlutoTVFiccaoCientifica.us@Brazil",
+    "type": "tv",
+    "title": "Pluto TV Ficção Científica",
+    "tvg_id": "PlutoTVFiccaoCientifica.us@Brazil",
+    "tvg_logo": "https://i.imgur.com/JVEfXbi.png",
+    "group": "🎬 Filmes",
+    "url": "https://jmp2.uk/plu-5fa15ad6367e170007cdd098.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-5fa15ad6367e170007cdd098.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "PlutoTVFilmesAcao.us@Brazil",
+    "type": "tv",
+    "title": "Pluto TV Filmes Ação",
+    "tvg_id": "PlutoTVFilmesAcao.us@Brazil",
+    "tvg_logo": "https://i.imgur.com/HkCV9cQ.png",
+    "group": "🎬 Filmes",
+    "url": "https://jmp2.uk/plu-5f120f41b7d403000783a6d6.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-5f120f41b7d403000783a6d6.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "PlutoTVFilmesNacionais.us@Brazil",
+    "type": "tv",
+    "title": "Pluto TV Filmes Nacionais",
+    "tvg_id": "PlutoTVFilmesNacionais.us@Brazil",
+    "tvg_logo": "https://i.imgur.com/9QTzDJG.png",
+    "group": "🎬 Filmes",
+    "url": "https://jmp2.uk/plu-5f5a545d0dbf7f0007c09408.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-5f5a545d0dbf7f0007c09408.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "PlutoTVInvestigacao.us@Brazil",
+    "type": "tv",
+    "title": "Pluto TV Investigação",
+    "tvg_id": "PlutoTVInvestigacao.us@Brazil",
+    "tvg_logo": "https://i.imgur.com/JlQq0YJ.png",
+    "group": "🎥 Documentário",
+    "url": "https://jmp2.uk/plu-5f32cf37c9ff2b00082adbc8.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-5f32cf37c9ff2b00082adbc8.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "PlutoTVJunior.us@Brazil",
+    "type": "tv",
+    "title": "Pluto TV Junior",
+    "tvg_id": "PlutoTVJunior.us@Brazil",
+    "tvg_logo": "https://i.imgur.com/7sApMZS.png",
+    "group": "🧸 Infantil",
+    "url": "https://jmp2.uk/plu-5f12141b146d760007934ea7.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-5f12141b146d760007934ea7.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "PlutoTVKaraokeporStingray.us@Brazil",
+    "type": "tv",
+    "title": "Pluto TV Karaokê por Stingray",
+    "tvg_id": "PlutoTVKaraokeporStingray.us@Brazil",
+    "tvg_logo": "https://i.imgur.com/rWpLepJ.png",
+    "group": "🎵 Música",
+    "url": "https://jmp2.uk/plu-604b99d633a72b00078e05ad.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-604b99d633a72b00078e05ad.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "PlutoTVMinhaObsessaoFavorita.us@Brazil",
+    "type": "tv",
+    "title": "Pluto TV Minha Obsessão Favorita",
+    "tvg_id": "PlutoTVMinhaObsessaoFavorita.us@Brazil",
+    "tvg_logo": "https://i.imgur.com/ZZuaiqb.png",
+    "group": "📚 Educação",
+    "url": "https://jmp2.uk/plu-61843f5e491af10007f7eefa.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-61843f5e491af10007f7eefa.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "PlutoTVMisterios.us@Brazil",
+    "type": "tv",
+    "title": "Pluto TV Mistérios",
+    "tvg_id": "PlutoTVMisterios.us@Brazil",
+    "tvg_logo": "https://i.imgur.com/gwxX1Y3.png",
+    "group": "📚 Educação",
+    "url": "https://jmp2.uk/plu-5fac52f142044f00078e2a51.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-5fac52f142044f00078e2a51.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "PlutoTVNatureza.us@Brazil",
+    "type": "tv",
+    "title": "Pluto TV Natureza",
+    "tvg_id": "PlutoTVNatureza.us@Brazil",
+    "tvg_logo": "https://i.imgur.com/RuyQQ6M.png",
+    "group": "📚 Educação",
+    "url": "https://jmp2.uk/plu-5f1213ba0ecebc00070e170f.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-5f1213ba0ecebc00070e170f.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "PlutoTVPaisagensporStingray.us@Brazil",
+    "type": "tv",
+    "title": "Pluto TV Paisagens por Stingray",
+    "tvg_id": "PlutoTVPaisagensporStingray.us@Brazil",
+    "tvg_logo": "https://i.imgur.com/6kElzw7.png",
+    "group": "📚 Educação",
+    "url": "https://jmp2.uk/plu-604a8dedbca75b0007b1c753.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-604a8dedbca75b0007b1c753.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "PlutoTVRetro.us@Brazil",
+    "type": "tv",
+    "title": "Pluto TV Retrô",
+    "tvg_id": "PlutoTVRetro.us@Brazil",
+    "tvg_logo": "https://i.imgur.com/wztO3GM.png",
+    "group": "🎭 Entretenimento",
+    "url": "https://jmp2.uk/plu-5f1212ad1728050007a523b8.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-5f1212ad1728050007a523b8.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "PlutoTVShowsporStingray.us@Brazil",
+    "type": "tv",
+    "title": "Pluto TV Shows por Stingray",
+    "tvg_id": "PlutoTVShowsporStingray.us@Brazil",
+    "tvg_logo": "https://i.imgur.com/TrG7Y84.png",
+    "group": "🎵 Música",
+    "url": "https://jmp2.uk/plu-604b91e0692f770007d9f33f.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-604b91e0692f770007d9f33f.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "PlutoTVVidaReal.us@Brazil",
+    "type": "tv",
+    "title": "Pluto TV Vida Real",
+    "tvg_id": "PlutoTVVidaReal.us@Brazil",
+    "tvg_logo": "https://i.imgur.com/dRbBbxP.png",
+    "group": "📚 Educação",
+    "url": "https://jmp2.uk/plu-5f32d4d9ec194100070c7449.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-5f32d4d9ec194100070c7449.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "TastemadeBrasil.us@Brazil",
+    "type": "tv",
+    "title": "Tastemade",
+    "tvg_id": "TastemadeBrasil.us@Brazil",
+    "tvg_logo": "https://i.imgur.com/FPy4zF4.png",
+    "group": "🍳 Culinária",
+    "url": "https://jmp2.uk/plu-5fd1419a3b4f4b000773ba85.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-5fd1419a3b4f4b000773ba85.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "ThePetCollective.us@Brazil",
+    "type": "tv",
+    "title": "The Pet Collective",
+    "tvg_id": "ThePetCollective.us@Brazil",
+    "tvg_logo": "https://i.imgur.com/yH7n2dF.png",
+    "group": "👨‍👩‍👧 Família",
+    "url": "https://jmp2.uk/plu-5f515ebac01c0f00080e8439.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-5f515ebac01c0f00080e8439.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "Tokusato.us@Brazil",
+    "type": "tv",
+    "title": "Tokusato",
+    "tvg_id": "Tokusato.us@Brazil",
+    "tvg_logo": "https://i.imgur.com/tWpjXtl.png",
+    "group": "🎨 Animação",
+    "url": "https://jmp2.uk/plu-5ff609de50ab210008025c1b.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-5ff609de50ab210008025c1b.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "TurmadaMonica.us@Brazil",
+    "type": "tv",
+    "title": "Turma da Mônica",
+    "tvg_id": "TurmadaMonica.us@Brazil",
+    "tvg_logo": "https://i.imgur.com/nrvPPrW.png",
+    "group": "🧸 Infantil",
+    "url": "https://jmp2.uk/plu-5f997e44949bc70007a6941e.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-5f997e44949bc70007a6941e.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
   }
 ]
