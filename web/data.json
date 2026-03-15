@@ -853,7 +853,7 @@
       "genres": [
         "Documentário"
       ],
-      "rating": 7.7,
+      "rating": 7.9,
       "cast": [
         {
           "name": "Morgan Freeman",
@@ -13168,7 +13168,7 @@
               "url": "https://cdn-novflix.com/storage1/TGRACAS/TGRACAS-125.mp4",
               "episode": 125,
               "air_date": "2026-03-13",
-              "overview": "",
+              "overview": "Arminda marca encontro com Joaquim no ferro-velho. Zenilda sente orgulho de Leonardo quando o filho se dispõe a ajudar o grupo de Rogério a acabar com Ferette. Arminda coloca Ferette para dormir com um sonífero dado por Helga. Júnior aceita passar alguns dias na casa de Maggye. Kasper fica assustado quando é convocado por Juquinha a depor sobre o roubo das Três Graças.",
               "still": "",
               "guest_stars": [],
               "locked": false
@@ -13178,11 +13178,10 @@
               "url": "https://cdn-novflix.com/storage1/TGRACAS/TGRACAS-126.mp4",
               "episode": 126,
               "air_date": "2026-03-14",
-              "overview": "",
+              "overview": "Joaquim percebe que foi dopado por Arminda ao constatar que as Três Graças sumiram. Gerluce tranquiliza Viviane. Os policiais notam diferenças nos depoimentos de Kasper e João Rubens. Juquinha encontra um fio de cabelo grisalho na máscara de Kasper. Josefa finge falta de memória em seu depoimento. Josefa confronta Arminda.",
               "still": "",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-03-14T21:00:00"
+              "locked": false
             },
             {
               "title": "TGRACAS-127",
@@ -15312,7 +15311,7 @@
           "url": "https://cdn-novflix.com/storage1/TGRACAS/TGRACAS-125.mp4",
           "episode": 125,
           "air_date": "2026-03-13",
-          "overview": "",
+          "overview": "Arminda marca encontro com Joaquim no ferro-velho. Zenilda sente orgulho de Leonardo quando o filho se dispõe a ajudar o grupo de Rogério a acabar com Ferette. Arminda coloca Ferette para dormir com um sonífero dado por Helga. Júnior aceita passar alguns dias na casa de Maggye. Kasper fica assustado quando é convocado por Juquinha a depor sobre o roubo das Três Graças.",
           "still": "",
           "guest_stars": [],
           "locked": false
@@ -15322,11 +15321,10 @@
           "url": "https://cdn-novflix.com/storage1/TGRACAS/TGRACAS-126.mp4",
           "episode": 126,
           "air_date": "2026-03-14",
-          "overview": "",
+          "overview": "Joaquim percebe que foi dopado por Arminda ao constatar que as Três Graças sumiram. Gerluce tranquiliza Viviane. Os policiais notam diferenças nos depoimentos de Kasper e João Rubens. Juquinha encontra um fio de cabelo grisalho na máscara de Kasper. Josefa finge falta de memória em seu depoimento. Josefa confronta Arminda.",
           "still": "",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-03-14T21:00:00"
+          "locked": false
         },
         {
           "title": "TGRACAS-127",
@@ -59697,7 +59695,14 @@
       "backdrop": "https://image.tmdb.org/t/p/w1280/gmECX1DvFgdUPjtio2zaL8BPYPu.jpg",
       "overview": "Sofrimento, arrependimento, vergonha: os sentimentos negativos dos humanos tornam-se Maldições, causando terríveis acidentes que podem levar até mesmo à morte. E pra piorar, Maldições só podem ser exorcizadas por outras Maldições. Certo dia, para salvar amigos que estavam sendo atacados por Maldições, Yuji Itadori engole o dedo do Ryomen-Sukuna, absorvendo sua Maldição. Ele então decide se matricular no Colégio Técnico de Feitiçaria de Tóquio, uma organização que combate as Maldições... e assim começa a heróica lenda do garoto que tornou-se uma Maldição para exorcizar uma Maldição.",
       "year": "2020",
-      "rating": 8.6
+      "rating": 8.6,
+      "cast": [
+        {
+          "name": "Ahsan Ali Web Designer",
+          "character": "",
+          "profile": "https://image.tmdb.org/t/p/w185/veGMiIIMnFYtsnp2ulKqWdgiOKp.jpg"
+        }
+      ]
     },
     {
       "id": "dragon_ball_daima",
@@ -62747,7 +62752,7 @@
     {
       "id": "invincible",
       "title": "Invincible",
-      "poster": "https://image.tmdb.org/t/p/w500/29myVHhdGoS735ZJ9hblY0pQ3K9.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/qhb7RWU9ad9a5m3HbeRRXzjaMXf.jpg",
       "seasons": [
         {
           "season": 1,
@@ -62889,13 +62894,12 @@
       "category": "animes",
       "local_poster": "/Pirataflix/assets/Capas/default.jpg",
       "posters": [
-        "https://image.tmdb.org/t/p/w500/29myVHhdGoS735ZJ9hblY0pQ3K9.jpg",
-        "https://image.tmdb.org/t/p/w500/uPmxchXSXDXTYXe8OKWgmV9TowB.jpg",
+        "https://image.tmdb.org/t/p/w500/qhb7RWU9ad9a5m3HbeRRXzjaMXf.jpg",
+        "https://image.tmdb.org/t/p/w500/4tblBrslcKSifMVZ3TmtT2ukMor.jpg",
         "https://image.tmdb.org/t/p/w500/w9XQ7ehwaxqV6WJSAUE0qLTQHgq.jpg",
         "https://image.tmdb.org/t/p/w500/lxVS24ZhG3WQf3IMbkFIg6olT6A.jpg",
         "https://image.tmdb.org/t/p/w500/yDWJYRAwMNKbIYT8ZB33qy84uzO.jpg",
-        "https://image.tmdb.org/t/p/w500/bpKYMRKNJoDY3swRNQ3qahSAdr2.jpg",
-        "https://image.tmdb.org/t/p/w500/mRD931fx06zPepHiDlIdPY7qw7z.jpg"
+        "https://image.tmdb.org/t/p/w500/bpKYMRKNJoDY3swRNQ3qahSAdr2.jpg"
       ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/dfmPbyeZZSz3bekeESvMJaH91gS.jpg",
       "overview": "Uma animação de super-heróis para adultos e conta a história de Mark Grayson, de 17 anos, um cara como qualquer outro de sua idade, exceto que seu pai é o super-herói mais poderoso do planeta, Omni-Man. Porém, à medida que Mark desenvolve seus próprios poderes, ele descobre que o legado de seu pai pode não ser tão heroico quanto parece.",
@@ -92460,6 +92464,21 @@
       "episodes": [
         {
           "url": "https://jmp2.uk/plu-5f997e44949bc70007a6941e.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "Nickelodeon.br@SD",
+      "type": "tv",
+      "title": "Nickelodeon",
+      "tvg_id": "Nickelodeon.br@SD",
+      "tvg_logo": "https://i.imgur.com/E84jnP8.png",
+      "group": "🧸 Infantil",
+      "url": "http://x1co.com.br:8080/hls/0/stream.m3u8",
+      "episodes": [
+        {
+          "url": "http://x1co.com.br:8080/hls/0/stream.m3u8",
           "title": "AO VIVO"
         }
       ]
