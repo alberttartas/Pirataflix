@@ -133,7 +133,7 @@
         {
           "name": "Rose Byrne",
           "character": "Moira MacTaggert",
-          "profile": "https://image.tmdb.org/t/p/w185/6YauDiiTBwRGC1xnwspPmNvPWUu.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/4Vd7w19asuBfUGgz0NIuQI5wxIA.jpg"
         },
         {
           "name": "Evan Peters",
@@ -244,7 +244,7 @@
       "backdrop": "https://image.tmdb.org/t/p/w1280/swxhEJsAWms6X1fDZ4HdbvYBSf9.jpg",
       "overview": "Uma crise de meia-idade inspira Doug e Griff a irem até a floresta amazônica para refazer o filme favorito da juventude, mas tudo muda quando uma anaconda gigante de verdade aparece, transformando o cenário comicamente caótico em uma situação mortal. O filme que eles estão morrendo de vontade de fazer? Pode acabar matando-os.",
       "year": "2025",
-      "rating": 5.9,
+      "rating": 5.8,
       "cast": [
         {
           "name": "Jack Black",
@@ -571,7 +571,7 @@
     {
       "id": "predador_terras_selvagens",
       "title": "Predador Terras Selvagens",
-      "poster": "https://image.tmdb.org/t/p/w500/7AYPGnLTmU6zDtMMAWqeUkCi7Tw.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/f3yLlUrJDdDL8d4nxywyotN45SL.jpg",
       "episodes": [
         {
           "title": "Predador: Terras Selvagens",
@@ -582,7 +582,7 @@
       "type": "movie",
       "local_poster": "/Pirataflix/assets/Capas/predador_terras_selvagens.jpg",
       "posters": [
-        "https://image.tmdb.org/t/p/w500/7AYPGnLTmU6zDtMMAWqeUkCi7Tw.jpg",
+        "https://image.tmdb.org/t/p/w500/f3yLlUrJDdDL8d4nxywyotN45SL.jpg",
         "https://image.tmdb.org/t/p/w500/erTRAi241eYF4K8KoGGOI8kFPox.jpg",
         "https://image.tmdb.org/t/p/w500/pHpq9yNUIo6aDoCXEBzjSolywgz.jpg",
         "https://image.tmdb.org/t/p/w500/ef2QSeBkrYhAdfsWGXmp0lvH0T1.jpg",
@@ -845,7 +845,8 @@
         "https://image.tmdb.org/t/p/w500/wdpc2htHKoUX42rQNCmlRQ1dMGn.jpg",
         "https://image.tmdb.org/t/p/w500/j64Q18ABQibT4rsy4Gpz2kU0hJY.jpg",
         "https://image.tmdb.org/t/p/w500/7QPJy7rynMtATZU47p8HipI6IC2.jpg",
-        "https://image.tmdb.org/t/p/w500/rbJcFZJjzgbv99wU4hSH170dao4.jpg"
+        "https://image.tmdb.org/t/p/w500/rbJcFZJjzgbv99wU4hSH170dao4.jpg",
+        "https://image.tmdb.org/t/p/w500/r0rX5Pj5CEb3Jox4t5xdDLwGXYv.jpg"
       ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/8X2R9uLys3SmkRuQAmSI96xxJAF.jpg",
       "overview": "Dos primeiros aos últimos dinossauros, esta série documental fascinante explora seu reinado de 165 milhões de anos na Terra e as forças que moldaram essa evolução.",
@@ -1750,7 +1751,7 @@
         {
           "name": "Mackenyu",
           "character": "Roronoa Zoro",
-          "profile": "https://image.tmdb.org/t/p/w185/y4FTSASxsO1F61p3hFIPMCeprut.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/xfMmGq9ochn6lw8RHTVUewM0Kzf.jpg"
         },
         {
           "name": "Jacob Gibson",
@@ -3447,7 +3448,7 @@
         "Drama",
         "Novela"
       ],
-      "rating": 6.4,
+      "rating": 6.7,
       "cast": [
         {
           "name": "Grazi Massafera",
@@ -12436,7 +12437,7 @@
               "guest_stars": [
                 {
                   "name": "Márcio Vito",
-                  "character": "",
+                  "character": "Pescador",
                   "photo": "https://image.tmdb.org/t/p/w185/xxSJaXeh1r3cCemUmUfGDXaMaX8.jpg"
                 },
                 {
@@ -13169,7 +13170,7 @@
               "episode": 125,
               "air_date": "2026-03-13",
               "overview": "Arminda marca encontro com Joaquim no ferro-velho. Zenilda sente orgulho de Leonardo quando o filho se dispõe a ajudar o grupo de Rogério a acabar com Ferette. Arminda coloca Ferette para dormir com um sonífero dado por Helga. Júnior aceita passar alguns dias na casa de Maggye. Kasper fica assustado quando é convocado por Juquinha a depor sobre o roubo das Três Graças.",
-              "still": "",
+              "still": "https://image.tmdb.org/t/p/w400/j3NXpBVanWnHpVJbZm1WAEAb4bi.jpg",
               "guest_stars": [],
               "locked": false
             },
@@ -13179,8 +13180,14 @@
               "episode": 126,
               "air_date": "2026-03-14",
               "overview": "Joaquim percebe que foi dopado por Arminda ao constatar que as Três Graças sumiram. Gerluce tranquiliza Viviane. Os policiais notam diferenças nos depoimentos de Kasper e João Rubens. Juquinha encontra um fio de cabelo grisalho na máscara de Kasper. Josefa finge falta de memória em seu depoimento. Josefa confronta Arminda.",
-              "still": "",
-              "guest_stars": [],
+              "still": "https://image.tmdb.org/t/p/w400/ictpLhwEYTR08KVwfY1uGARpIup.jpg",
+              "guest_stars": [
+                {
+                  "name": "Márcio Vito",
+                  "character": "Pescador",
+                  "photo": "https://image.tmdb.org/t/p/w185/xxSJaXeh1r3cCemUmUfGDXaMaX8.jpg"
+                }
+              ],
               "locked": false
             },
             {
@@ -14579,7 +14586,7 @@
           "guest_stars": [
             {
               "name": "Márcio Vito",
-              "character": "",
+              "character": "Pescador",
               "photo": "https://image.tmdb.org/t/p/w185/xxSJaXeh1r3cCemUmUfGDXaMaX8.jpg"
             },
             {
@@ -15312,7 +15319,7 @@
           "episode": 125,
           "air_date": "2026-03-13",
           "overview": "Arminda marca encontro com Joaquim no ferro-velho. Zenilda sente orgulho de Leonardo quando o filho se dispõe a ajudar o grupo de Rogério a acabar com Ferette. Arminda coloca Ferette para dormir com um sonífero dado por Helga. Júnior aceita passar alguns dias na casa de Maggye. Kasper fica assustado quando é convocado por Juquinha a depor sobre o roubo das Três Graças.",
-          "still": "",
+          "still": "https://image.tmdb.org/t/p/w400/j3NXpBVanWnHpVJbZm1WAEAb4bi.jpg",
           "guest_stars": [],
           "locked": false
         },
@@ -15322,8 +15329,14 @@
           "episode": 126,
           "air_date": "2026-03-14",
           "overview": "Joaquim percebe que foi dopado por Arminda ao constatar que as Três Graças sumiram. Gerluce tranquiliza Viviane. Os policiais notam diferenças nos depoimentos de Kasper e João Rubens. Juquinha encontra um fio de cabelo grisalho na máscara de Kasper. Josefa finge falta de memória em seu depoimento. Josefa confronta Arminda.",
-          "still": "",
-          "guest_stars": [],
+          "still": "https://image.tmdb.org/t/p/w400/ictpLhwEYTR08KVwfY1uGARpIup.jpg",
+          "guest_stars": [
+            {
+              "name": "Márcio Vito",
+              "character": "Pescador",
+              "photo": "https://image.tmdb.org/t/p/w185/xxSJaXeh1r3cCemUmUfGDXaMaX8.jpg"
+            }
+          ],
           "locked": false
         },
         {
@@ -59695,14 +59708,7 @@
       "backdrop": "https://image.tmdb.org/t/p/w1280/gmECX1DvFgdUPjtio2zaL8BPYPu.jpg",
       "overview": "Sofrimento, arrependimento, vergonha: os sentimentos negativos dos humanos tornam-se Maldições, causando terríveis acidentes que podem levar até mesmo à morte. E pra piorar, Maldições só podem ser exorcizadas por outras Maldições. Certo dia, para salvar amigos que estavam sendo atacados por Maldições, Yuji Itadori engole o dedo do Ryomen-Sukuna, absorvendo sua Maldição. Ele então decide se matricular no Colégio Técnico de Feitiçaria de Tóquio, uma organização que combate as Maldições... e assim começa a heróica lenda do garoto que tornou-se uma Maldição para exorcizar uma Maldição.",
       "year": "2020",
-      "rating": 8.6,
-      "cast": [
-        {
-          "name": "Ahsan Ali Web Designer",
-          "character": "",
-          "profile": "https://image.tmdb.org/t/p/w185/veGMiIIMnFYtsnp2ulKqWdgiOKp.jpg"
-        }
-      ]
+      "rating": 8.6
     },
     {
       "id": "dragon_ball_daima",
@@ -73243,7 +73249,7 @@
         "Comédia",
         "Família"
       ],
-      "rating": 8.1,
+      "rating": 8.2,
       "cast": [
         {
           "name": "Marli Bortoletto",
