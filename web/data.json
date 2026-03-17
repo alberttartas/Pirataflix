@@ -2573,10 +2573,9 @@
               "episode": 31,
               "air_date": "2026-03-16",
               "overview": "",
-              "still": "",
+              "still": "https://image.tmdb.org/t/p/w400/tSZEYzzsa7eW8e8PAlF8lbAn2rS.jpg",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-03-16T21:00:00"
+              "locked": false
             },
             {
               "title": "Dona Beja Episódio 32",
@@ -2584,10 +2583,9 @@
               "episode": 32,
               "air_date": "2026-03-16",
               "overview": "",
-              "still": "",
+              "still": "https://image.tmdb.org/t/p/w400/xGibbqmqJaiKyQuusUUerBXSRXV.jpg",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-03-16T21:00:00"
+              "locked": false
             },
             {
               "title": "Dona Beja Episódio 33",
@@ -2595,10 +2593,9 @@
               "episode": 33,
               "air_date": "2026-03-16",
               "overview": "",
-              "still": "",
+              "still": "https://image.tmdb.org/t/p/w400/cgvpFJHDi5MA6BnE1pVE5gln1Fn.jpg",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-03-16T21:00:00"
+              "locked": false
             },
             {
               "title": "Dona Beja Episódio 34",
@@ -2606,10 +2603,9 @@
               "episode": 34,
               "air_date": "2026-03-16",
               "overview": "",
-              "still": "",
+              "still": "https://image.tmdb.org/t/p/w400/ahKzZBp0N7HpmWDQkEzvBirnee9.jpg",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-03-16T21:00:00"
+              "locked": false
             },
             {
               "title": "Dona Beja Episódio 35",
@@ -2617,10 +2613,9 @@
               "episode": 35,
               "air_date": "2026-03-16",
               "overview": "",
-              "still": "",
+              "still": "https://image.tmdb.org/t/p/w400/beBo5jPlFRA8Z1FmIznOhUfNNO2.jpg",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-03-16T21:00:00"
+              "locked": false
             },
             {
               "title": "Dona Beja Episódio 36",
@@ -3325,10 +3320,9 @@
           "episode": 31,
           "air_date": "2026-03-16",
           "overview": "",
-          "still": "",
+          "still": "https://image.tmdb.org/t/p/w400/tSZEYzzsa7eW8e8PAlF8lbAn2rS.jpg",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-03-16T21:00:00"
+          "locked": false
         },
         {
           "title": "Dona Beja Episódio 32",
@@ -3336,10 +3330,9 @@
           "episode": 32,
           "air_date": "2026-03-16",
           "overview": "",
-          "still": "",
+          "still": "https://image.tmdb.org/t/p/w400/xGibbqmqJaiKyQuusUUerBXSRXV.jpg",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-03-16T21:00:00"
+          "locked": false
         },
         {
           "title": "Dona Beja Episódio 33",
@@ -3347,10 +3340,9 @@
           "episode": 33,
           "air_date": "2026-03-16",
           "overview": "",
-          "still": "",
+          "still": "https://image.tmdb.org/t/p/w400/cgvpFJHDi5MA6BnE1pVE5gln1Fn.jpg",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-03-16T21:00:00"
+          "locked": false
         },
         {
           "title": "Dona Beja Episódio 34",
@@ -3358,10 +3350,9 @@
           "episode": 34,
           "air_date": "2026-03-16",
           "overview": "",
-          "still": "",
+          "still": "https://image.tmdb.org/t/p/w400/ahKzZBp0N7HpmWDQkEzvBirnee9.jpg",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-03-16T21:00:00"
+          "locked": false
         },
         {
           "title": "Dona Beja Episódio 35",
@@ -3369,10 +3360,9 @@
           "episode": 35,
           "air_date": "2026-03-16",
           "overview": "",
-          "still": "",
+          "still": "https://image.tmdb.org/t/p/w400/beBo5jPlFRA8Z1FmIznOhUfNNO2.jpg",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-03-16T21:00:00"
+          "locked": false
         },
         {
           "title": "Dona Beja Episódio 36",
@@ -12524,7 +12514,7 @@
               "episode": 75,
               "air_date": "2026-01-14",
               "overview": "Paulinho ajuda o pastor Albérico a levar Jorginho para o posto médico. Arminda sugere que Zenilda possa estar investigando Ferette. Zenilda diz a Lorena que já sabia do sentimento da filha por Juquinha. Edilberto conta a Ferette que viu Zé Maria com Paulinho. Paulinho conta a Juquinha que descobriu que Feliciano compra obra de arte roubada e negocia com Kasper.",
-              "still": "https://image.tmdb.org/t/p/w400/zJuwKSG9ZdBAsbOBhHdEDMf49Du.jpg",
+              "still": "https://image.tmdb.org/t/p/w400/2gpwd2pVPpQqbu4fhUdvI0Z5PDH.jpg",
               "guest_stars": [],
               "locked": false
             },
@@ -13198,8 +13188,7 @@
               "overview": "",
               "still": "",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-03-16T21:00:00"
+              "locked": false
             },
             {
               "title": "TGRACAS-128",
@@ -14673,7 +14662,7 @@
           "episode": 75,
           "air_date": "2026-01-14",
           "overview": "Paulinho ajuda o pastor Albérico a levar Jorginho para o posto médico. Arminda sugere que Zenilda possa estar investigando Ferette. Zenilda diz a Lorena que já sabia do sentimento da filha por Juquinha. Edilberto conta a Ferette que viu Zé Maria com Paulinho. Paulinho conta a Juquinha que descobriu que Feliciano compra obra de arte roubada e negocia com Kasper.",
-          "still": "https://image.tmdb.org/t/p/w400/zJuwKSG9ZdBAsbOBhHdEDMf49Du.jpg",
+          "still": "https://image.tmdb.org/t/p/w400/2gpwd2pVPpQqbu4fhUdvI0Z5PDH.jpg",
           "guest_stars": [],
           "locked": false
         },
@@ -15347,8 +15336,7 @@
           "overview": "",
           "still": "",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-03-16T21:00:00"
+          "locked": false
         },
         {
           "title": "TGRACAS-128",
