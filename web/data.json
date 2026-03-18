@@ -133,7 +133,7 @@
         {
           "name": "Rose Byrne",
           "character": "Moira MacTaggert",
-          "profile": "https://image.tmdb.org/t/p/w185/4Vd7w19asuBfUGgz0NIuQI5wxIA.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/6YauDiiTBwRGC1xnwspPmNvPWUu.jpg"
         },
         {
           "name": "Evan Peters",
@@ -235,8 +235,8 @@
       "local_poster": "/Pirataflix/assets/Capas/anaconda_2025.jpg",
       "posters": [
         "https://image.tmdb.org/t/p/w500/hRzpf8QELtzJnMt4SiDoFUmZ9KM.jpg",
-        "https://image.tmdb.org/t/p/w500/qxMv3HwAB3XPuwNLMhVRg795Ktp.jpg",
         "https://image.tmdb.org/t/p/w500/hBxN6dwrANN1ic3a4G9x6JZcR3C.jpg",
+        "https://image.tmdb.org/t/p/w500/qxMv3HwAB3XPuwNLMhVRg795Ktp.jpg",
         "https://image.tmdb.org/t/p/w500/5MDnvvkOqthhE5gQebzkcOhD1p5.jpg",
         "https://image.tmdb.org/t/p/w500/9PBECvTohqOnh9nYr6huoA7UQ4J.jpg",
         "https://image.tmdb.org/t/p/w500/p9abmxhlhTGRsEyPSDMRfKAs1vM.jpg"
@@ -12427,7 +12427,7 @@
               "guest_stars": [
                 {
                   "name": "Márcio Vito",
-                  "character": "Pescador",
+                  "character": "Amentas",
                   "photo": "https://image.tmdb.org/t/p/w185/xxSJaXeh1r3cCemUmUfGDXaMaX8.jpg"
                 },
                 {
@@ -13174,7 +13174,7 @@
               "guest_stars": [
                 {
                   "name": "Márcio Vito",
-                  "character": "Pescador",
+                  "character": "Amentas",
                   "photo": "https://image.tmdb.org/t/p/w185/xxSJaXeh1r3cCemUmUfGDXaMaX8.jpg"
                 }
               ],
@@ -13185,9 +13185,25 @@
               "url": "https://cdn-novflix.com/storage1/TGRACAS/TGRACAS-127.mp4",
               "episode": 127,
               "air_date": "2026-03-16",
-              "overview": "",
-              "still": "",
-              "guest_stars": [],
+              "overview": "Josefa avisa a Arminda que não quer mais vê-la. Amintas dá o seu depoimento à polícia sobre como ajudou Rogério. Leonardo aparece embriagado na delegacia, em busca de Viviane. Josefa fica estarrecida ao saber por Gerluce que a cuidadora foi responsável pelo roubo das Três Graças. Arminda e Ferette recebem convite para evento na galeria de Kasper e João Rubens.",
+              "still": "https://image.tmdb.org/t/p/w400/ucdqWU3ncYHAJs0zR5ftjtZxhFz.jpg",
+              "guest_stars": [
+                {
+                  "name": "Márcio Vito",
+                  "character": "Amentas",
+                  "photo": "https://image.tmdb.org/t/p/w185/xxSJaXeh1r3cCemUmUfGDXaMaX8.jpg"
+                },
+                {
+                  "name": "Aline Fanju",
+                  "character": "Delegada Marise",
+                  "photo": "https://image.tmdb.org/t/p/w185/qgtDZavkze6In8ZJbwI796jYaj1.jpg"
+                },
+                {
+                  "name": "Cris Sauma",
+                  "character": "Policial",
+                  "photo": ""
+                }
+              ],
               "locked": false
             },
             {
@@ -13198,8 +13214,7 @@
               "overview": "",
               "still": "",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-03-17T21:00:00"
+              "locked": false
             },
             {
               "title": "TGRACAS-129",
@@ -14575,7 +14590,7 @@
           "guest_stars": [
             {
               "name": "Márcio Vito",
-              "character": "Pescador",
+              "character": "Amentas",
               "photo": "https://image.tmdb.org/t/p/w185/xxSJaXeh1r3cCemUmUfGDXaMaX8.jpg"
             },
             {
@@ -15322,7 +15337,7 @@
           "guest_stars": [
             {
               "name": "Márcio Vito",
-              "character": "Pescador",
+              "character": "Amentas",
               "photo": "https://image.tmdb.org/t/p/w185/xxSJaXeh1r3cCemUmUfGDXaMaX8.jpg"
             }
           ],
@@ -15333,9 +15348,25 @@
           "url": "https://cdn-novflix.com/storage1/TGRACAS/TGRACAS-127.mp4",
           "episode": 127,
           "air_date": "2026-03-16",
-          "overview": "",
-          "still": "",
-          "guest_stars": [],
+          "overview": "Josefa avisa a Arminda que não quer mais vê-la. Amintas dá o seu depoimento à polícia sobre como ajudou Rogério. Leonardo aparece embriagado na delegacia, em busca de Viviane. Josefa fica estarrecida ao saber por Gerluce que a cuidadora foi responsável pelo roubo das Três Graças. Arminda e Ferette recebem convite para evento na galeria de Kasper e João Rubens.",
+          "still": "https://image.tmdb.org/t/p/w400/ucdqWU3ncYHAJs0zR5ftjtZxhFz.jpg",
+          "guest_stars": [
+            {
+              "name": "Márcio Vito",
+              "character": "Amentas",
+              "photo": "https://image.tmdb.org/t/p/w185/xxSJaXeh1r3cCemUmUfGDXaMaX8.jpg"
+            },
+            {
+              "name": "Aline Fanju",
+              "character": "Delegada Marise",
+              "photo": "https://image.tmdb.org/t/p/w185/qgtDZavkze6In8ZJbwI796jYaj1.jpg"
+            },
+            {
+              "name": "Cris Sauma",
+              "character": "Policial",
+              "photo": ""
+            }
+          ],
           "locked": false
         },
         {
@@ -15346,8 +15377,7 @@
           "overview": "",
           "still": "",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-03-17T21:00:00"
+          "locked": false
         },
         {
           "title": "TGRACAS-129",
