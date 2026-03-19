@@ -13211,9 +13211,20 @@
               "url": "https://cdn-novflix.com/storage1/TGRACAS/TGRACAS-128.mp4",
               "episode": 128,
               "air_date": "2026-03-17",
-              "overview": "",
-              "still": "",
-              "guest_stars": [],
+              "overview": "Gerluce fica irada com Joaquim, e é contida por Viviane. Marisa diz a Ferette que encontraram fotos no celular de Viviane, e uma delas mostra Joaquim e Misael junto à escultura das Três Graças. Ferette e Arminda mandam Vicente matar Paulinho e Gerluce. Kasper surpreende a todos, em particular João Rubens, Juquinha, Rogério, Ferette e Arminda, ao revelar a escultura As Três Graças na vernissage.",
+              "still": "https://image.tmdb.org/t/p/w400/dmzHaijZj0ts7azfQb89pUzIrhs.jpg",
+              "guest_stars": [
+                {
+                  "name": "Aline Fanju",
+                  "character": "Delegada Marise",
+                  "photo": "https://image.tmdb.org/t/p/w185/qgtDZavkze6In8ZJbwI796jYaj1.jpg"
+                },
+                {
+                  "name": "Luiz Fernando Guimarães",
+                  "character": "Michelangelo",
+                  "photo": "https://image.tmdb.org/t/p/w185/nk36bPxMgUsfNSbtAZrimu40zB0.jpg"
+                }
+              ],
               "locked": false
             },
             {
@@ -13224,8 +13235,7 @@
               "overview": "",
               "still": "",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-03-18T21:00:00"
+              "locked": false
             },
             {
               "title": "TGRACAS-130",
@@ -15374,9 +15384,20 @@
           "url": "https://cdn-novflix.com/storage1/TGRACAS/TGRACAS-128.mp4",
           "episode": 128,
           "air_date": "2026-03-17",
-          "overview": "",
-          "still": "",
-          "guest_stars": [],
+          "overview": "Gerluce fica irada com Joaquim, e é contida por Viviane. Marisa diz a Ferette que encontraram fotos no celular de Viviane, e uma delas mostra Joaquim e Misael junto à escultura das Três Graças. Ferette e Arminda mandam Vicente matar Paulinho e Gerluce. Kasper surpreende a todos, em particular João Rubens, Juquinha, Rogério, Ferette e Arminda, ao revelar a escultura As Três Graças na vernissage.",
+          "still": "https://image.tmdb.org/t/p/w400/dmzHaijZj0ts7azfQb89pUzIrhs.jpg",
+          "guest_stars": [
+            {
+              "name": "Aline Fanju",
+              "character": "Delegada Marise",
+              "photo": "https://image.tmdb.org/t/p/w185/qgtDZavkze6In8ZJbwI796jYaj1.jpg"
+            },
+            {
+              "name": "Luiz Fernando Guimarães",
+              "character": "Michelangelo",
+              "photo": "https://image.tmdb.org/t/p/w185/nk36bPxMgUsfNSbtAZrimu40zB0.jpg"
+            }
+          ],
           "locked": false
         },
         {
@@ -15387,8 +15408,7 @@
           "overview": "",
           "still": "",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-03-18T21:00:00"
+          "locked": false
         },
         {
           "title": "TGRACAS-130",
@@ -62918,10 +62938,10 @@
       "category": "animes",
       "local_poster": "/Pirataflix/assets/Capas/default.jpg",
       "posters": [
-        "https://image.tmdb.org/t/p/w500/qhb7RWU9ad9a5m3HbeRRXzjaMXf.jpg",
         "https://image.tmdb.org/t/p/w500/4tblBrslcKSifMVZ3TmtT2ukMor.jpg",
-        "https://image.tmdb.org/t/p/w500/w9XQ7ehwaxqV6WJSAUE0qLTQHgq.jpg",
+        "https://image.tmdb.org/t/p/w500/qhb7RWU9ad9a5m3HbeRRXzjaMXf.jpg",
         "https://image.tmdb.org/t/p/w500/lxVS24ZhG3WQf3IMbkFIg6olT6A.jpg",
+        "https://image.tmdb.org/t/p/w500/w9XQ7ehwaxqV6WJSAUE0qLTQHgq.jpg",
         "https://image.tmdb.org/t/p/w500/yDWJYRAwMNKbIYT8ZB33qy84uzO.jpg",
         "https://image.tmdb.org/t/p/w500/bpKYMRKNJoDY3swRNQ3qahSAdr2.jpg"
       ],
