@@ -118,7 +118,7 @@
         {
           "name": "Jennifer Lawrence",
           "character": "Raven / Mystique",
-          "profile": "https://image.tmdb.org/t/p/w185/4rn6zSNjlpH2YtewlVz2YsKRKsZ.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/6WTY6HjXMGxnHilJRVC3eLnu43F.jpg"
         },
         {
           "name": "Nicholas Hoult",
@@ -244,7 +244,7 @@
       "backdrop": "https://image.tmdb.org/t/p/w1280/swxhEJsAWms6X1fDZ4HdbvYBSf9.jpg",
       "overview": "Uma crise de meia-idade inspira Doug e Griff a irem até a floresta amazônica para refazer o filme favorito da juventude, mas tudo muda quando uma anaconda gigante de verdade aparece, transformando o cenário comicamente caótico em uma situação mortal. O filme que eles estão morrendo de vontade de fazer? Pode acabar matando-os.",
       "year": "2025",
-      "rating": 5.8,
+      "rating": 5.9,
       "cast": [
         {
           "name": "Jack Black",
@@ -3438,7 +3438,7 @@
         "Drama",
         "Novela"
       ],
-      "rating": 6.7,
+      "rating": 6.8,
       "cast": [
         {
           "name": "Grazi Massafera",
@@ -13232,8 +13232,8 @@
               "url": "https://cdn-novflix.com/storage1/TGRACAS/TGRACAS-129.mp4",
               "episode": 129,
               "air_date": "2026-03-18",
-              "overview": "",
-              "still": "",
+              "overview": "Kasper deixa claro a Ferette que sabe que o dono da escultura é Rogério. Vicente erra a mira ao atirar em Paulinho e Gerluce e consegue fugir do local. Paulinho conta a Juquinha que atiraram contra ele e Gerluce. Consuelo deduz que foi Bagdá quem pegou a escultura do ferro-velho. Juquinha prende Kasper e João Rubens. Rogério se apresenta como proprietário legal da escultura.",
+              "still": "https://image.tmdb.org/t/p/w400/tJ04SRL3CME4ozBJYFq0G1udzEO.jpg",
               "guest_stars": [],
               "locked": false
             },
@@ -13245,8 +13245,7 @@
               "overview": "",
               "still": "",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-03-19T21:00:00"
+              "locked": false
             },
             {
               "title": "TGRACAS-131",
@@ -15405,8 +15404,8 @@
           "url": "https://cdn-novflix.com/storage1/TGRACAS/TGRACAS-129.mp4",
           "episode": 129,
           "air_date": "2026-03-18",
-          "overview": "",
-          "still": "",
+          "overview": "Kasper deixa claro a Ferette que sabe que o dono da escultura é Rogério. Vicente erra a mira ao atirar em Paulinho e Gerluce e consegue fugir do local. Paulinho conta a Juquinha que atiraram contra ele e Gerluce. Consuelo deduz que foi Bagdá quem pegou a escultura do ferro-velho. Juquinha prende Kasper e João Rubens. Rogério se apresenta como proprietário legal da escultura.",
+          "still": "https://image.tmdb.org/t/p/w400/tJ04SRL3CME4ozBJYFq0G1udzEO.jpg",
           "guest_stars": [],
           "locked": false
         },
@@ -15418,8 +15417,7 @@
           "overview": "",
           "still": "",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-03-19T21:00:00"
+          "locked": false
         },
         {
           "title": "TGRACAS-131",
@@ -47927,7 +47925,7 @@
     {
       "id": "sousou_no_frieren",
       "title": "Sousou No Frieren",
-      "poster": "https://image.tmdb.org/t/p/w500/qykTIEJQF8cunKD0CKOqab15wns.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/d9IuDqPWoUYukwblQhqV00jlCzZ.jpg",
       "seasons": [
         {
           "season": 1,
@@ -48104,7 +48102,6 @@
       "category": "animes",
       "local_poster": "/Pirataflix/assets/Capas/sousou_no_frieren.jpg",
       "posters": [
-        "https://image.tmdb.org/t/p/w500/qykTIEJQF8cunKD0CKOqab15wns.jpg",
         "https://image.tmdb.org/t/p/w500/dqZENchTd7lp5zht7BdlqM7RBhD.jpg",
         "https://image.tmdb.org/t/p/w500/2IGeAnIbToKIalm624kd0OVD7Iv.jpg",
         "https://image.tmdb.org/t/p/w500/cHhJzdUGcEBq6av4wr9jsIvUITH.jpg",
