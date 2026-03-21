@@ -854,7 +854,7 @@
       "genres": [
         "Documentário"
       ],
-      "rating": 7.9,
+      "rating": 8.0,
       "cast": [
         {
           "name": "Morgan Freeman",
@@ -1751,7 +1751,7 @@
         {
           "name": "Mackenyu",
           "character": "Roronoa Zoro",
-          "profile": "https://image.tmdb.org/t/p/w185/xfMmGq9ochn6lw8RHTVUewM0Kzf.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/y4FTSASxsO1F61p3hFIPMCeprut.jpg"
         },
         {
           "name": "Jacob Gibson",
@@ -1877,7 +1877,7 @@
       "backdrop": "https://image.tmdb.org/t/p/w1280/djAGltv1bVw625yYku4CyA42gq0.jpg",
       "overview": "No limite do desespero, cinco amigas decidem que a única saída é formar uma gangue, conseguir armas e começar a assaltar bancos.",
       "year": "2026",
-      "rating": 5.6,
+      "rating": 5.7,
       "cast": [
         {
           "name": "Rebecca Marder",
@@ -2345,23 +2345,7 @@
               "air_date": "2026-03-02",
               "overview": "O jantar na casa de Antônio é interrompido por uma visita surpresa. Antônio faz uma promessa a Sampaio em seu leito de morte.",
               "still": "https://image.tmdb.org/t/p/w400/xVu4tTmuckvtJc5JHOt9ey0Tkld.jpg",
-              "guest_stars": [
-                {
-                  "name": "Manuela Dourado",
-                  "character": "Teresa Tomásia de São José",
-                  "photo": ""
-                },
-                {
-                  "name": "Danielle Olímpia",
-                  "character": "Joana de Deus de São José",
-                  "photo": ""
-                },
-                {
-                  "name": "Lucinha Lins",
-                  "character": "Miss Callen",
-                  "photo": "https://image.tmdb.org/t/p/w185/75xAn5Rvgc902OmAACdg9D6DnYK.jpg"
-                }
-              ],
+              "guest_stars": [],
               "locked": false
             },
             {
@@ -2442,7 +2426,7 @@
               "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-026.mp4",
               "episode": 26,
               "air_date": "2026-03-09",
-              "overview": "",
+              "overview": "Antônio quer assumir sua filha, Teresa, e é ameaçado por Angélica. Beja toma medidas para impedir que Antônio reconheça sua filha.",
               "still": "https://image.tmdb.org/t/p/w400/oxW8wmjZuhuQnLdaWeiL9eQmeEH.jpg",
               "guest_stars": [
                 {
@@ -2468,7 +2452,7 @@
               "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-027.mp4",
               "episode": 27,
               "air_date": "2026-03-09",
-              "overview": "",
+              "overview": "João toma o partido de Antônio e discute com Beja. Com a ajuda de sua irmã, Joana, e Vicente, Teresa descobre a identidade do pai.",
               "still": "https://image.tmdb.org/t/p/w400/g2cGfymN0atJPhrWrADagvxfYbH.jpg",
               "guest_stars": [
                 {
@@ -2499,7 +2483,7 @@
               "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-028.mp4",
               "episode": 28,
               "air_date": "2026-03-09",
-              "overview": "",
+              "overview": "Maria e Eulália colocam em prática o plano de fuga do convento. Ao tentar se passar por Beja, Olívia tem um fim trágico.",
               "still": "https://image.tmdb.org/t/p/w400/99CNh4tmErk3oj5zkmNhZnspnme.jpg",
               "guest_stars": [
                 {
@@ -2520,7 +2504,7 @@
               "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-029.mp4",
               "episode": 29,
               "air_date": "2026-03-09",
-              "overview": "",
+              "overview": "O inspetor Belgard investiga a morte de Olívia. Josefa reencontra Avelino. De volta a Araxá, Maria conhece um novo aliado.",
               "still": "https://image.tmdb.org/t/p/w400/342gUVsUeaaxZuWULEE1pP9ekD5.jpg",
               "guest_stars": [
                 {
@@ -2541,7 +2525,7 @@
               "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-030.mp4",
               "episode": 30,
               "air_date": "2026-03-09",
-              "overview": "",
+              "overview": "Fortunato receita a Teresa um calmante. Uma reunião organizada por Beja e Severina para reunir Candinha e Siá Boa antecede uma tragédia.",
               "still": "https://image.tmdb.org/t/p/w400/7Hv6GY4qbyMGT9IryTzqWnq4ZOD.jpg",
               "guest_stars": [
                 {
@@ -2572,7 +2556,7 @@
               "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-031.mp4",
               "episode": 31,
               "air_date": "2026-03-16",
-              "overview": "",
+              "overview": "O inspetor Belgard investiga as mortes das prostitutas. Após o casamento de Beja e João, os coronéis comemoram com excessos na Chácara do Jatobá.",
               "still": "https://image.tmdb.org/t/p/w400/tSZEYzzsa7eW8e8PAlF8lbAn2rS.jpg",
               "guest_stars": [],
               "locked": false
@@ -2582,7 +2566,7 @@
               "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-032.mp4",
               "episode": 32,
               "air_date": "2026-03-16",
-              "overview": "",
+              "overview": "O triângulo amoroso entre Beja, João e Antônio é notícia no jornal. No leito de morte, Teresa se casa com Botelhinho.",
               "still": "https://image.tmdb.org/t/p/w400/xGibbqmqJaiKyQuusUUerBXSRXV.jpg",
               "guest_stars": [],
               "locked": false
@@ -2592,7 +2576,7 @@
               "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-033.mp4",
               "episode": 33,
               "air_date": "2026-03-16",
-              "overview": "",
+              "overview": "Ceci faz uma revelação inesperada à família, e uma nova morte faz de Beja a principal suspeita.",
               "still": "https://image.tmdb.org/t/p/w400/cgvpFJHDi5MA6BnE1pVE5gln1Fn.jpg",
               "guest_stars": [],
               "locked": false
@@ -2602,7 +2586,7 @@
               "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-034.mp4",
               "episode": 34,
               "air_date": "2026-03-16",
-              "overview": "",
+              "overview": "Ao se descobrir grávida, Joana procura medidas extremas. Ao saber o resultado das eleições, João toma uma decisão definitiva em relação a Beja.",
               "still": "https://image.tmdb.org/t/p/w400/ahKzZBp0N7HpmWDQkEzvBirnee9.jpg",
               "guest_stars": [],
               "locked": false
@@ -2612,7 +2596,7 @@
               "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-035.mp4",
               "episode": 35,
               "air_date": "2026-03-16",
-              "overview": "",
+              "overview": "Durante o Baile de Máscaras, na Chácara do Jatobá, Beja sofre um ataque violento e relembra memórias apagadas da infância.",
               "still": "https://image.tmdb.org/t/p/w400/beBo5jPlFRA8Z1FmIznOhUfNNO2.jpg",
               "guest_stars": [],
               "locked": false
@@ -3092,23 +3076,7 @@
           "air_date": "2026-03-02",
           "overview": "O jantar na casa de Antônio é interrompido por uma visita surpresa. Antônio faz uma promessa a Sampaio em seu leito de morte.",
           "still": "https://image.tmdb.org/t/p/w400/xVu4tTmuckvtJc5JHOt9ey0Tkld.jpg",
-          "guest_stars": [
-            {
-              "name": "Manuela Dourado",
-              "character": "Teresa Tomásia de São José",
-              "photo": ""
-            },
-            {
-              "name": "Danielle Olímpia",
-              "character": "Joana de Deus de São José",
-              "photo": ""
-            },
-            {
-              "name": "Lucinha Lins",
-              "character": "Miss Callen",
-              "photo": "https://image.tmdb.org/t/p/w185/75xAn5Rvgc902OmAACdg9D6DnYK.jpg"
-            }
-          ],
+          "guest_stars": [],
           "locked": false
         },
         {
@@ -3189,7 +3157,7 @@
           "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-026.mp4",
           "episode": 26,
           "air_date": "2026-03-09",
-          "overview": "",
+          "overview": "Antônio quer assumir sua filha, Teresa, e é ameaçado por Angélica. Beja toma medidas para impedir que Antônio reconheça sua filha.",
           "still": "https://image.tmdb.org/t/p/w400/oxW8wmjZuhuQnLdaWeiL9eQmeEH.jpg",
           "guest_stars": [
             {
@@ -3215,7 +3183,7 @@
           "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-027.mp4",
           "episode": 27,
           "air_date": "2026-03-09",
-          "overview": "",
+          "overview": "João toma o partido de Antônio e discute com Beja. Com a ajuda de sua irmã, Joana, e Vicente, Teresa descobre a identidade do pai.",
           "still": "https://image.tmdb.org/t/p/w400/g2cGfymN0atJPhrWrADagvxfYbH.jpg",
           "guest_stars": [
             {
@@ -3246,7 +3214,7 @@
           "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-028.mp4",
           "episode": 28,
           "air_date": "2026-03-09",
-          "overview": "",
+          "overview": "Maria e Eulália colocam em prática o plano de fuga do convento. Ao tentar se passar por Beja, Olívia tem um fim trágico.",
           "still": "https://image.tmdb.org/t/p/w400/99CNh4tmErk3oj5zkmNhZnspnme.jpg",
           "guest_stars": [
             {
@@ -3267,7 +3235,7 @@
           "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-029.mp4",
           "episode": 29,
           "air_date": "2026-03-09",
-          "overview": "",
+          "overview": "O inspetor Belgard investiga a morte de Olívia. Josefa reencontra Avelino. De volta a Araxá, Maria conhece um novo aliado.",
           "still": "https://image.tmdb.org/t/p/w400/342gUVsUeaaxZuWULEE1pP9ekD5.jpg",
           "guest_stars": [
             {
@@ -3288,7 +3256,7 @@
           "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-030.mp4",
           "episode": 30,
           "air_date": "2026-03-09",
-          "overview": "",
+          "overview": "Fortunato receita a Teresa um calmante. Uma reunião organizada por Beja e Severina para reunir Candinha e Siá Boa antecede uma tragédia.",
           "still": "https://image.tmdb.org/t/p/w400/7Hv6GY4qbyMGT9IryTzqWnq4ZOD.jpg",
           "guest_stars": [
             {
@@ -3319,7 +3287,7 @@
           "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-031.mp4",
           "episode": 31,
           "air_date": "2026-03-16",
-          "overview": "",
+          "overview": "O inspetor Belgard investiga as mortes das prostitutas. Após o casamento de Beja e João, os coronéis comemoram com excessos na Chácara do Jatobá.",
           "still": "https://image.tmdb.org/t/p/w400/tSZEYzzsa7eW8e8PAlF8lbAn2rS.jpg",
           "guest_stars": [],
           "locked": false
@@ -3329,7 +3297,7 @@
           "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-032.mp4",
           "episode": 32,
           "air_date": "2026-03-16",
-          "overview": "",
+          "overview": "O triângulo amoroso entre Beja, João e Antônio é notícia no jornal. No leito de morte, Teresa se casa com Botelhinho.",
           "still": "https://image.tmdb.org/t/p/w400/xGibbqmqJaiKyQuusUUerBXSRXV.jpg",
           "guest_stars": [],
           "locked": false
@@ -3339,7 +3307,7 @@
           "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-033.mp4",
           "episode": 33,
           "air_date": "2026-03-16",
-          "overview": "",
+          "overview": "Ceci faz uma revelação inesperada à família, e uma nova morte faz de Beja a principal suspeita.",
           "still": "https://image.tmdb.org/t/p/w400/cgvpFJHDi5MA6BnE1pVE5gln1Fn.jpg",
           "guest_stars": [],
           "locked": false
@@ -3349,7 +3317,7 @@
           "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-034.mp4",
           "episode": 34,
           "air_date": "2026-03-16",
-          "overview": "",
+          "overview": "Ao se descobrir grávida, Joana procura medidas extremas. Ao saber o resultado das eleições, João toma uma decisão definitiva em relação a Beja.",
           "still": "https://image.tmdb.org/t/p/w400/ahKzZBp0N7HpmWDQkEzvBirnee9.jpg",
           "guest_stars": [],
           "locked": false
@@ -3359,7 +3327,7 @@
           "url": "https://cdn-novflix.com/storage2/BEJA/BEJA-035.mp4",
           "episode": 35,
           "air_date": "2026-03-16",
-          "overview": "",
+          "overview": "Durante o Baile de Máscaras, na Chácara do Jatobá, Beja sofre um ataque violento e relembra memórias apagadas da infância.",
           "still": "https://image.tmdb.org/t/p/w400/beBo5jPlFRA8Z1FmIznOhUfNNO2.jpg",
           "guest_stars": [],
           "locked": false
@@ -13242,8 +13210,8 @@
               "url": "https://cdn-novflix.com/storage1/TGRACAS/TGRACAS-130.mp4",
               "episode": 130,
               "air_date": "2026-03-19",
-              "overview": "",
-              "still": "",
+              "overview": "Gerluce afirma ter segredos, e Paulinho ameaça terminar o namoro se a namorada não lhe contar toda a verdade. Bagdá se sente enganado por Kasper. Bagdá conta a Vandílson como pegou As Três Graças do ferro-velho. Kasper foge das perguntas de Paulinho, mas inocenta João Rubens. Ferette orienta Macedo a atacar Paulinho. Lígia acusa Joaquim de estar incriminando Gerluce.",
+              "still": "https://image.tmdb.org/t/p/w400/rfhyE0b4drTEHNVrqjr4zaXegAr.jpg",
               "guest_stars": [],
               "locked": false
             },
@@ -13255,8 +13223,7 @@
               "overview": "",
               "still": "",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-03-20T21:00:00"
+              "locked": false
             },
             {
               "title": "TGRACAS-132",
@@ -15414,8 +15381,8 @@
           "url": "https://cdn-novflix.com/storage1/TGRACAS/TGRACAS-130.mp4",
           "episode": 130,
           "air_date": "2026-03-19",
-          "overview": "",
-          "still": "",
+          "overview": "Gerluce afirma ter segredos, e Paulinho ameaça terminar o namoro se a namorada não lhe contar toda a verdade. Bagdá se sente enganado por Kasper. Bagdá conta a Vandílson como pegou As Três Graças do ferro-velho. Kasper foge das perguntas de Paulinho, mas inocenta João Rubens. Ferette orienta Macedo a atacar Paulinho. Lígia acusa Joaquim de estar incriminando Gerluce.",
+          "still": "https://image.tmdb.org/t/p/w400/rfhyE0b4drTEHNVrqjr4zaXegAr.jpg",
           "guest_stars": [],
           "locked": false
         },
@@ -15427,8 +15394,7 @@
           "overview": "",
           "still": "",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-03-20T21:00:00"
+          "locked": false
         },
         {
           "title": "TGRACAS-132",
@@ -15967,8 +15933,8 @@
         "https://image.tmdb.org/t/p/w500/euLl4ntSW4bJE5QnDk90UKGW2Tp.jpg",
         "https://image.tmdb.org/t/p/w500/nAQWPukHkvcfzsPsqakar0VTXKl.jpg",
         "https://image.tmdb.org/t/p/w500/j3bMUJpgAIsITpN7nlm6Agx5Jvf.jpg",
-        "https://image.tmdb.org/t/p/w500/54HlhxWBCrXf2XAszHbXI9khWoP.jpg",
-        "https://image.tmdb.org/t/p/w500/chOMXzT4jEtBLtsoXniCTXojct.jpg"
+        "https://image.tmdb.org/t/p/w500/fx0q0geBwAwYrcIkRphapZVLaIX.jpg",
+        "https://image.tmdb.org/t/p/w500/54HlhxWBCrXf2XAszHbXI9khWoP.jpg"
       ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/bsnzAWs9MITfYgsQ8jp1SQ3AyHI.jpg",
       "overview": "Lígia, Gerluce e Joélly — três mulheres de diferentes gerações da mesma família — cujas vidas são marcadas por um ponto em comum: todas enfrentaram uma gravidez na adolescência e foram abandonadas por seus respectivos companheiros.",
