@@ -499,7 +499,7 @@
     {
       "id": "homem_com_h",
       "title": "Homem Com H",
-      "poster": "https://image.tmdb.org/t/p/w500/xCYgD1N4S9at70p4WdskbVWHgZS.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/8XLNDeumvz0cXa6sntZJ6p4zfLb.jpg",
       "episodes": [
         {
           "title": "Homem com H",
@@ -510,61 +510,61 @@
       "type": "movie",
       "local_poster": "/Pirataflix/assets/Capas/homem_com_h.jpg",
       "posters": [
-        "https://image.tmdb.org/t/p/w500/sOed9XD0TS9d0XRSnTiw5tpXIIO.jpg",
-        "https://image.tmdb.org/t/p/w500/oXRqROca0iCJrkOultglQ2gcc0Y.jpg",
-        "https://image.tmdb.org/t/p/w500/xExgeiovpUKl2gvvEkECKky3zUA.jpg",
-        "https://image.tmdb.org/t/p/w500/STOYx9aepaMnmhlGiWoDtkdzs1.jpg",
-        "https://image.tmdb.org/t/p/w500/xCYgD1N4S9at70p4WdskbVWHgZS.jpg",
-        "https://image.tmdb.org/t/p/w500/oL1EMPQxZBpNAsDecFt3A9J7g7c.jpg"
+        "https://image.tmdb.org/t/p/w500/gRMalasZEzsZi4w2VFuYusfSfqf.jpg",
+        "https://image.tmdb.org/t/p/w500/bMqKj63kMFaZTHJ7J6s4Seq1jgP.jpg",
+        "https://image.tmdb.org/t/p/w500/f1gYNxMPCpVOwwHY2vXnIzO6Vw4.jpg",
+        "https://image.tmdb.org/t/p/w500/8XLNDeumvz0cXa6sntZJ6p4zfLb.jpg",
+        "https://image.tmdb.org/t/p/w500/drk94ZxRVaGNLtg2kS5MqmVDP1H.jpg",
+        "https://image.tmdb.org/t/p/w500/kUexkZKeKgsyjjfgmzRSZTE5dIB.jpg"
       ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/38byjV1A8WpA05xiXl0AXZCnCfv.jpg",
-      "overview": "Dono de uma voz inconfundível e de performances memoráveis, Ney Matogrosso morava com os pais e irmãos na pequena cidade de Bela Vista (MS). Os embates com o pai, que insistia que o menino “virasse homem”, levaram Ney a se afastar da família, antes de enveredar para a vida artística. Anos depois de sair de casa, em São Paulo, estreou como vocalista dos Secos e Molhados, dando início às performances históricas que o definiram como um dos maiores artistas brasileiros da atualidade.",
-      "year": "2025",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/1fkuBPid72KGS6WmtkEXMftZtkE.jpg",
+      "overview": "Após o envolvimento do filho em um complô nazista, o gângster Tommy Shelby precisa deixar o exílio e voltar a Birmingham para salvar a família e a nação.",
+      "year": "2026",
       "genres": [
-        "Drama",
-        "Música"
+        "Crime",
+        "Drama"
       ],
-      "rating": 8.1,
+      "rating": 7.3,
       "cast": [
         {
-          "name": "Jesuíta Barbosa",
-          "character": "Ney Matogrosso",
-          "profile": "https://image.tmdb.org/t/p/w185/oaHrZmwIrevxDAmduTbAaHoOXD8.jpg"
+          "name": "Cillian Murphy",
+          "character": "Tommy Shelby",
+          "profile": "https://image.tmdb.org/t/p/w185/llkbyWKwpfowZ6C8peBjIV9jj99.jpg"
         },
         {
-          "name": "Rômulo Braga",
-          "character": "Antônio Matogrosso",
-          "profile": "https://image.tmdb.org/t/p/w185/pN89wAhp0OZ6bL3yTyMm8iPUwBy.jpg"
+          "name": "Rebecca Ferguson",
+          "character": "Kaulo / Zelda",
+          "profile": "https://image.tmdb.org/t/p/w185/lJloTOheuQSirSLXNA3JHsrMNfH.jpg"
         },
         {
-          "name": "Hermila Guedes",
-          "character": "Beíta",
-          "profile": "https://image.tmdb.org/t/p/w185/dJJh7sekL9dl77tviU5yEVXa1qo.jpg"
+          "name": "Tim Roth",
+          "character": "John Beckett",
+          "profile": "https://image.tmdb.org/t/p/w185/qSizF2i9gz6c6DbAC5RoIq8sVqX.jpg"
         },
         {
-          "name": "Davi Malizia",
-          "character": "Ney Matogrosso (Criança)",
-          "profile": "https://image.tmdb.org/t/p/w185/fN5UPWhmzZ5S3LpZR1HIJmJwGGi.jpg"
+          "name": "Stephen Graham",
+          "character": "Hayden Stagg",
+          "profile": "https://image.tmdb.org/t/p/w185/yguEO9zFvuccq87kOJpFLsmUgvs.jpg"
         },
         {
-          "name": "Jullio Reis",
-          "character": "Cazuza",
-          "profile": "https://image.tmdb.org/t/p/w185/auxzZfwBQdV9kP1T8DLq3Bq3DQm.jpg"
+          "name": "Sophie Rundle",
+          "character": "Ada Shelby",
+          "profile": "https://image.tmdb.org/t/p/w185/8kZTjHZcvmGo1W53DXM2mjXex2A.jpg"
         },
         {
-          "name": "Bruno Montaleone",
-          "character": "Marco de Maria",
-          "profile": "https://image.tmdb.org/t/p/w185/eXkQ1K9JMaZsZ3WYv8MVwPX9HRD.jpg"
+          "name": "Barry Keoghan",
+          "character": "Duke Shelby",
+          "profile": "https://image.tmdb.org/t/p/w185/ngoitknM6hw8fffLywyvjzy6Iti.jpg"
         },
         {
-          "name": "Mauro Soares",
-          "character": "João Ricardo",
-          "profile": "https://image.tmdb.org/t/p/w185/jukccfdQ4Gxwr91u7WuShB9zYR6.jpg"
+          "name": "Ned Dennehy",
+          "character": "Charlie Strong",
+          "profile": "https://image.tmdb.org/t/p/w185/wTacXk4meFOJRK38rED0lrhlLw3.jpg"
         },
         {
-          "name": "Bruno Parmera",
-          "character": "Luisinho",
-          "profile": "https://image.tmdb.org/t/p/w185/cc1B7rIBIRL7Ne0T48g5QDwDkPe.jpg"
+          "name": "Packy Lee",
+          "character": "Johnny Dogs",
+          "profile": "https://image.tmdb.org/t/p/w185/e3E734NTL7OMCkSDTTixLZr8H4E.jpg"
         }
       ]
     },
@@ -843,10 +843,10 @@
       "posters": [
         "https://image.tmdb.org/t/p/w500/x37IK9WWhuzi7tgyMT4ff3kiT5X.jpg",
         "https://image.tmdb.org/t/p/w500/wdpc2htHKoUX42rQNCmlRQ1dMGn.jpg",
+        "https://image.tmdb.org/t/p/w500/xF4g8SqtikykROz4yezSRvVI60C.jpg",
+        "https://image.tmdb.org/t/p/w500/3i9CO0hltSLU2dLZ8mJAJclRCMe.jpg",
         "https://image.tmdb.org/t/p/w500/j64Q18ABQibT4rsy4Gpz2kU0hJY.jpg",
-        "https://image.tmdb.org/t/p/w500/7QPJy7rynMtATZU47p8HipI6IC2.jpg",
-        "https://image.tmdb.org/t/p/w500/rbJcFZJjzgbv99wU4hSH170dao4.jpg",
-        "https://image.tmdb.org/t/p/w500/r0rX5Pj5CEb3Jox4t5xdDLwGXYv.jpg"
+        "https://image.tmdb.org/t/p/w500/7QPJy7rynMtATZU47p8HipI6IC2.jpg"
       ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/8X2R9uLys3SmkRuQAmSI96xxJAF.jpg",
       "overview": "Dos primeiros aos últimos dinossauros, esta série documental fascinante explora seu reinado de 165 milhões de anos na Terra e as forças que moldaram essa evolução.",
@@ -13211,7 +13211,7 @@
               "episode": 130,
               "air_date": "2026-03-19",
               "overview": "Gerluce afirma ter segredos, e Paulinho ameaça terminar o namoro se a namorada não lhe contar toda a verdade. Bagdá se sente enganado por Kasper. Bagdá conta a Vandílson como pegou As Três Graças do ferro-velho. Kasper foge das perguntas de Paulinho, mas inocenta João Rubens. Ferette orienta Macedo a atacar Paulinho. Lígia acusa Joaquim de estar incriminando Gerluce.",
-              "still": "https://image.tmdb.org/t/p/w400/rfhyE0b4drTEHNVrqjr4zaXegAr.jpg",
+              "still": "https://image.tmdb.org/t/p/w400/yRNHGK2Wj7xbYK0hncOTNwzitNI.jpg",
               "guest_stars": [],
               "locked": false
             },
@@ -13220,9 +13220,15 @@
               "url": "https://cdn-novflix.com/storage1/TGRACAS/TGRACAS-131.mp4",
               "episode": 131,
               "air_date": "2026-03-20",
-              "overview": "",
-              "still": "",
-              "guest_stars": [],
+              "overview": "Paulinho conclui que Ferette mandou matá-lo. Jairo avisa a Paulinho que Kasper e João Rubens foram liberados. Juquinha e Lorena decidem morar juntas. Vandílson avisa a Lucélia que Bagdá roubou a escultura a pedido de Kasper. Lucélia manda a foto que incrimina Kasper para a polícia e para Ferette. Kasper se surpreende quando João Rubens comunica que não quer mais manter seu casamento.",
+              "still": "https://image.tmdb.org/t/p/w400/8zgBLAinnD5nBVqxYyzBxTWrYJ9.jpg",
+              "guest_stars": [
+                {
+                  "name": "Cinnara Leal",
+                  "character": "Médica",
+                  "photo": "https://image.tmdb.org/t/p/w185/25TOicLvGov9Iod34AxiQsFU5Pc.jpg"
+                }
+              ],
               "locked": false
             },
             {
@@ -13233,8 +13239,7 @@
               "overview": "",
               "still": "",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-03-21T21:00:00"
+              "locked": false
             },
             {
               "title": "TGRACAS-133",
@@ -15382,7 +15387,7 @@
           "episode": 130,
           "air_date": "2026-03-19",
           "overview": "Gerluce afirma ter segredos, e Paulinho ameaça terminar o namoro se a namorada não lhe contar toda a verdade. Bagdá se sente enganado por Kasper. Bagdá conta a Vandílson como pegou As Três Graças do ferro-velho. Kasper foge das perguntas de Paulinho, mas inocenta João Rubens. Ferette orienta Macedo a atacar Paulinho. Lígia acusa Joaquim de estar incriminando Gerluce.",
-          "still": "https://image.tmdb.org/t/p/w400/rfhyE0b4drTEHNVrqjr4zaXegAr.jpg",
+          "still": "https://image.tmdb.org/t/p/w400/yRNHGK2Wj7xbYK0hncOTNwzitNI.jpg",
           "guest_stars": [],
           "locked": false
         },
@@ -15391,9 +15396,15 @@
           "url": "https://cdn-novflix.com/storage1/TGRACAS/TGRACAS-131.mp4",
           "episode": 131,
           "air_date": "2026-03-20",
-          "overview": "",
-          "still": "",
-          "guest_stars": [],
+          "overview": "Paulinho conclui que Ferette mandou matá-lo. Jairo avisa a Paulinho que Kasper e João Rubens foram liberados. Juquinha e Lorena decidem morar juntas. Vandílson avisa a Lucélia que Bagdá roubou a escultura a pedido de Kasper. Lucélia manda a foto que incrimina Kasper para a polícia e para Ferette. Kasper se surpreende quando João Rubens comunica que não quer mais manter seu casamento.",
+          "still": "https://image.tmdb.org/t/p/w400/8zgBLAinnD5nBVqxYyzBxTWrYJ9.jpg",
+          "guest_stars": [
+            {
+              "name": "Cinnara Leal",
+              "character": "Médica",
+              "photo": "https://image.tmdb.org/t/p/w185/25TOicLvGov9Iod34AxiQsFU5Pc.jpg"
+            }
+          ],
           "locked": false
         },
         {
@@ -15404,8 +15415,7 @@
           "overview": "",
           "still": "",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-03-21T21:00:00"
+          "locked": false
         },
         {
           "title": "TGRACAS-133",
@@ -92486,6 +92496,21 @@
       "episodes": [
         {
           "url": "http://x1co.com.br:8080/hls/0/stream.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "TVUFOP.br@SD",
+      "type": "tv",
+      "title": "TV UFOP (1080p)",
+      "tvg_id": "TVUFOP.br@SD",
+      "tvg_logo": "https://i.imgur.com/6bRyqmj.png",
+      "group": "🔬 Ciência",
+      "url": "https://app.tvufop.com.br/hls/tvufop.m3u8",
+      "episodes": [
+        {
+          "url": "https://app.tvufop.com.br/hls/tvufop.m3u8",
           "title": "AO VIVO"
         }
       ]
