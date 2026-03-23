@@ -118,7 +118,7 @@
         {
           "name": "Jennifer Lawrence",
           "character": "Raven / Mystique",
-          "profile": "https://image.tmdb.org/t/p/w185/6WTY6HjXMGxnHilJRVC3eLnu43F.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/4rn6zSNjlpH2YtewlVz2YsKRKsZ.jpg"
         },
         {
           "name": "Nicholas Hoult",
@@ -511,20 +511,20 @@
       "local_poster": "/Pirataflix/assets/Capas/homem_com_h.jpg",
       "posters": [
         "https://image.tmdb.org/t/p/w500/gRMalasZEzsZi4w2VFuYusfSfqf.jpg",
-        "https://image.tmdb.org/t/p/w500/bMqKj63kMFaZTHJ7J6s4Seq1jgP.jpg",
         "https://image.tmdb.org/t/p/w500/f1gYNxMPCpVOwwHY2vXnIzO6Vw4.jpg",
+        "https://image.tmdb.org/t/p/w500/bMqKj63kMFaZTHJ7J6s4Seq1jgP.jpg",
+        "https://image.tmdb.org/t/p/w500/hAgk9jXsNB1YVKUXiFf46dxyIyK.jpg",
         "https://image.tmdb.org/t/p/w500/8XLNDeumvz0cXa6sntZJ6p4zfLb.jpg",
-        "https://image.tmdb.org/t/p/w500/drk94ZxRVaGNLtg2kS5MqmVDP1H.jpg",
-        "https://image.tmdb.org/t/p/w500/kUexkZKeKgsyjjfgmzRSZTE5dIB.jpg"
+        "https://image.tmdb.org/t/p/w500/wq5RlmN50N6QcHZngRiVFDBrwwc.jpg"
       ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/1fkuBPid72KGS6WmtkEXMftZtkE.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/aouxo2EaR7QSGBBUNTITuW0lj4z.jpg",
       "overview": "Após o envolvimento do filho em um complô nazista, o gângster Tommy Shelby precisa deixar o exílio e voltar a Birmingham para salvar a família e a nação.",
       "year": "2026",
       "genres": [
         "Crime",
         "Drama"
       ],
-      "rating": 7.3,
+      "rating": 7.4,
       "cast": [
         {
           "name": "Cillian Murphy",
@@ -590,7 +590,7 @@
         "https://image.tmdb.org/t/p/w500/s4LOi1nn6PemZLSG46g3MkwUKyF.jpg",
         "https://image.tmdb.org/t/p/w500/sMybEeAn3aFXsIUUcWPSFXlS6qS.jpg"
       ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/gaKFXcB5J1gz0QqYj8bWIfrPc04.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/82lM4GJ9uuNvNDOEpxFy77uv4Ak.jpg",
       "overview": "No futuro, em um planeta remoto, um jovem Predador, rejeitado por seu clã, encontra em Thia uma aliada improvável e embarca em uma jornada traiçoeira em busca do adversário supremo.",
       "year": "2025",
       "genres": [
@@ -11592,7 +11592,7 @@
               "episode": 1,
               "air_date": "2025-10-20",
               "overview": "Gerluce demonstra preocupação com a possibilidade de Joélly estar grávida. Viviane lembra a Gerluce da amizade que as une. Arminda destrata Claudia e o filho Raul. Joélly percebe que Gerluce conhece o motorista do ônibus de nome Gilmar. Gerluce desconversa quando Joélly se interessa em saber o nome de seu pai. Paulinho não entende o fato de Juquinha querer ser policial.",
-              "still": "https://image.tmdb.org/t/p/w400/pqizjkED9lUppSYj7l7py7KhayM.jpg",
+              "still": "https://image.tmdb.org/t/p/w400/18Iryjb9M48MQelq5hsUiksovIf.jpg",
               "guest_stars": [
                 {
                   "name": "Lena Santos",
@@ -11608,7 +11608,7 @@
               "episode": 2,
               "air_date": "2025-10-21",
               "overview": "Arminda repreende Gerluce com severidade. Josefa conta a história da escultura das Três Graças para Gerluce. Raul fica assustado com a possibilidade de ser pai. Raul relembra como conheceu Joélly, ao entrar na casa de Lígia. Macedo manda Edilberto cuidar de Misael ao ver o viúvo xingando Ferette na porta do evento em homenagem ao dono da fundação. Joélly avisa a Gerluce que seguirá com a gravidez.",
-              "still": "https://image.tmdb.org/t/p/w400/iildBAX97sBLuDRh6gPw1FHL5lU.jpg",
+              "still": "https://image.tmdb.org/t/p/w400/bUGVCNNr4gR822AATVKFuOlCW4Y.jpg",
               "guest_stars": [
                 {
                   "name": "Lena Santos",
@@ -13236,8 +13236,8 @@
               "url": "https://cdn-novflix.com/storage1/TGRACAS/TGRACAS-132.mp4",
               "episode": 132,
               "air_date": "2026-03-21",
-              "overview": "",
-              "still": "",
+              "overview": "Joaquim mente para Paulinho, afirmando que roubou escultura a mando de Arminda. Ferette tem a impressão de que Arminda está defendendo Joaquim. Ferette ordena que Macedo leve Gerluce até ele. Paulinho instala um aparelho de escuta na mesa do ferro-velho. Gerluce acaba associando o rosto de Vicente ao retrato-falado do assassino do pai de Paulinho.",
+              "still": "https://image.tmdb.org/t/p/w400/yrzPpzyhdYGdygqFVyCeidaw15P.jpg",
               "guest_stars": [],
               "locked": false
             },
@@ -13768,7 +13768,7 @@
           "episode": 1,
           "air_date": "2025-10-20",
           "overview": "Gerluce demonstra preocupação com a possibilidade de Joélly estar grávida. Viviane lembra a Gerluce da amizade que as une. Arminda destrata Claudia e o filho Raul. Joélly percebe que Gerluce conhece o motorista do ônibus de nome Gilmar. Gerluce desconversa quando Joélly se interessa em saber o nome de seu pai. Paulinho não entende o fato de Juquinha querer ser policial.",
-          "still": "https://image.tmdb.org/t/p/w400/pqizjkED9lUppSYj7l7py7KhayM.jpg",
+          "still": "https://image.tmdb.org/t/p/w400/18Iryjb9M48MQelq5hsUiksovIf.jpg",
           "guest_stars": [
             {
               "name": "Lena Santos",
@@ -13784,7 +13784,7 @@
           "episode": 2,
           "air_date": "2025-10-21",
           "overview": "Arminda repreende Gerluce com severidade. Josefa conta a história da escultura das Três Graças para Gerluce. Raul fica assustado com a possibilidade de ser pai. Raul relembra como conheceu Joélly, ao entrar na casa de Lígia. Macedo manda Edilberto cuidar de Misael ao ver o viúvo xingando Ferette na porta do evento em homenagem ao dono da fundação. Joélly avisa a Gerluce que seguirá com a gravidez.",
-          "still": "https://image.tmdb.org/t/p/w400/iildBAX97sBLuDRh6gPw1FHL5lU.jpg",
+          "still": "https://image.tmdb.org/t/p/w400/bUGVCNNr4gR822AATVKFuOlCW4Y.jpg",
           "guest_stars": [
             {
               "name": "Lena Santos",
@@ -15412,8 +15412,8 @@
           "url": "https://cdn-novflix.com/storage1/TGRACAS/TGRACAS-132.mp4",
           "episode": 132,
           "air_date": "2026-03-21",
-          "overview": "",
-          "still": "",
+          "overview": "Joaquim mente para Paulinho, afirmando que roubou escultura a mando de Arminda. Ferette tem a impressão de que Arminda está defendendo Joaquim. Ferette ordena que Macedo leve Gerluce até ele. Paulinho instala um aparelho de escuta na mesa do ferro-velho. Gerluce acaba associando o rosto de Vicente ao retrato-falado do assassino do pai de Paulinho.",
+          "still": "https://image.tmdb.org/t/p/w400/yrzPpzyhdYGdygqFVyCeidaw15P.jpg",
           "guest_stars": [],
           "locked": false
         },
@@ -92511,6 +92511,36 @@
       "episodes": [
         {
           "url": "https://app.tvufop.com.br/hls/tvufop.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "NickOnline.br@SD",
+      "type": "tv",
+      "title": "NickOnline (576p)",
+      "tvg_id": "NickOnline.br@SD",
+      "tvg_logo": "https://x1co.com.br/logo.png",
+      "group": "🎨 Animação",
+      "url": "http://x1co.com.br:8080/hls/stream.m3u8",
+      "episodes": [
+        {
+          "url": "http://x1co.com.br:8080/hls/stream.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "OnePiece.us@BR",
+      "type": "tv",
+      "title": "One Piece",
+      "tvg_id": "OnePiece.us@BR",
+      "tvg_logo": "https://i.imgur.com/XsvbAWR.png",
+      "group": "🎨 Animação",
+      "url": "https://jmp2.uk/plu-624b1c8d4321e200073ee421.m3u8",
+      "episodes": [
+        {
+          "url": "https://jmp2.uk/plu-624b1c8d4321e200073ee421.m3u8",
           "title": "AO VIVO"
         }
       ]

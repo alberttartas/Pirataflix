@@ -17295,5 +17295,35 @@
         "title": "AO VIVO"
       }
     ]
+  },
+  {
+    "id": "NickOnline.br@SD",
+    "type": "tv",
+    "title": "NickOnline (576p)",
+    "tvg_id": "NickOnline.br@SD",
+    "tvg_logo": "https://x1co.com.br/logo.png",
+    "group": "🎨 Animação",
+    "url": "http://x1co.com.br:8080/hls/stream.m3u8",
+    "episodes": [
+      {
+        "url": "http://x1co.com.br:8080/hls/stream.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "OnePiece.us@BR",
+    "type": "tv",
+    "title": "One Piece",
+    "tvg_id": "OnePiece.us@BR",
+    "tvg_logo": "https://i.imgur.com/XsvbAWR.png",
+    "group": "🎨 Animação",
+    "url": "https://jmp2.uk/plu-624b1c8d4321e200073ee421.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-624b1c8d4321e200073ee421.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
   }
 ]

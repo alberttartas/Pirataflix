@@ -24513,3 +24513,9 @@ http://x1co.com.br:8080/hls/0/stream.m3u8
 #EXTINF:-1 group-title="🔬 Ciência" tvg-id="TVUFOP.BR@SD" tvg-logo="https://i.imgur.com/6bRyqmj.png",TV UFOP (1080p)
 https://app.tvufop.com.br/hls/tvufop.m3u8
 
+#EXTINF:-1 group-title="🎨 Animação" tvg-id="NICKONLINE.BR@SD" tvg-logo="https://x1co.com.br/logo.png",NickOnline (576p)
+http://x1co.com.br:8080/hls/stream.m3u8
+
+#EXTINF:-1 group-title="🎨 Animação" tvg-id="ONEPIECE.US@BR" tvg-logo="https://i.imgur.com/XsvbAWR.png",One Piece
+https://jmp2.uk/plu-624b1c8d4321e200073ee421.m3u8
+
