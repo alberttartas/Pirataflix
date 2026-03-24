@@ -118,7 +118,7 @@
         {
           "name": "Jennifer Lawrence",
           "character": "Raven / Mystique",
-          "profile": "https://image.tmdb.org/t/p/w185/4rn6zSNjlpH2YtewlVz2YsKRKsZ.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/6WTY6HjXMGxnHilJRVC3eLnu43F.jpg"
         },
         {
           "name": "Nicholas Hoult",
@@ -512,24 +512,24 @@
       "posters": [
         "https://image.tmdb.org/t/p/w500/gRMalasZEzsZi4w2VFuYusfSfqf.jpg",
         "https://image.tmdb.org/t/p/w500/f1gYNxMPCpVOwwHY2vXnIzO6Vw4.jpg",
-        "https://image.tmdb.org/t/p/w500/bMqKj63kMFaZTHJ7J6s4Seq1jgP.jpg",
         "https://image.tmdb.org/t/p/w500/hAgk9jXsNB1YVKUXiFf46dxyIyK.jpg",
         "https://image.tmdb.org/t/p/w500/8XLNDeumvz0cXa6sntZJ6p4zfLb.jpg",
-        "https://image.tmdb.org/t/p/w500/wq5RlmN50N6QcHZngRiVFDBrwwc.jpg"
+        "https://image.tmdb.org/t/p/w500/wq5RlmN50N6QcHZngRiVFDBrwwc.jpg",
+        "https://image.tmdb.org/t/p/w500/kUexkZKeKgsyjjfgmzRSZTE5dIB.jpg"
       ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/aouxo2EaR7QSGBBUNTITuW0lj4z.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/1fkuBPid72KGS6WmtkEXMftZtkE.jpg",
       "overview": "Após o envolvimento do filho em um complô nazista, o gângster Tommy Shelby precisa deixar o exílio e voltar a Birmingham para salvar a família e a nação.",
       "year": "2026",
       "genres": [
         "Crime",
         "Drama"
       ],
-      "rating": 7.4,
+      "rating": 7.5,
       "cast": [
         {
           "name": "Cillian Murphy",
           "character": "Tommy Shelby",
-          "profile": "https://image.tmdb.org/t/p/w185/llkbyWKwpfowZ6C8peBjIV9jj99.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/dm6V24NjjvjMiCtbMkc8Y2WPm2e.jpg"
         },
         {
           "name": "Rebecca Ferguson",
@@ -854,7 +854,7 @@
       "genres": [
         "Documentário"
       ],
-      "rating": 8.0,
+      "rating": 7.9,
       "cast": [
         {
           "name": "Morgan Freeman",
@@ -1575,7 +1575,7 @@
         "https://image.tmdb.org/t/p/w500/qaewZKBKmXjb4ZfFBb1LCug6BE8.jpg",
         "https://image.tmdb.org/t/p/w500/olviL1bDh3UjK3Bao8Y7ypPqE7k.jpg"
       ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/iVadPLeLVb97RznIGDkswxtBzi6.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/6umsRLI7t0ydFwCl0JNEIO0q2LH.jpg",
       "overview": "Um mundo sensual, luxuoso e competitivo da alta sociedade londrina no início do século XIX. Nesse período, a família Bridgerton, composta por oito irmãos, enfrenta o disputado mercado de casamentos, os bailes suntuosos de Mayfair e os palácios aristocráticos de Park Lane.",
       "year": "2020",
       "rating": 8.1,
@@ -2607,10 +2607,9 @@
               "episode": 36,
               "air_date": "2026-03-23",
               "overview": "",
-              "still": "",
+              "still": "https://image.tmdb.org/t/p/w400/36D8RuitpIt9ddpxCB6F1ROM4Hq.jpg",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-03-23T21:00:00"
+              "locked": false
             },
             {
               "title": "Dona Beja Episódio 37",
@@ -2618,10 +2617,9 @@
               "episode": 37,
               "air_date": "2026-03-23",
               "overview": "",
-              "still": "",
+              "still": "https://image.tmdb.org/t/p/w400/glS7mU56BdfP0Sl6e2Qc6DPk0Zw.jpg",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-03-23T21:00:00"
+              "locked": false
             },
             {
               "title": "Dona Beja Episódio 38",
@@ -2629,10 +2627,9 @@
               "episode": 38,
               "air_date": "2026-03-23",
               "overview": "",
-              "still": "",
+              "still": "https://image.tmdb.org/t/p/w400/zS7GWJdlzfz4h1h3HVaKWDIfuuU.jpg",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-03-23T21:00:00"
+              "locked": false
             },
             {
               "title": "Dona Beja Episódio 39",
@@ -2640,10 +2637,9 @@
               "episode": 39,
               "air_date": "2026-03-23",
               "overview": "",
-              "still": "",
+              "still": "https://image.tmdb.org/t/p/w400/meiGBFjxY0x1NnwQCTEWVvAREXv.jpg",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-03-23T21:00:00"
+              "locked": false
             },
             {
               "title": "Dona Beja Episódio 40",
@@ -2651,10 +2647,9 @@
               "episode": 40,
               "air_date": "2026-03-23",
               "overview": "",
-              "still": "",
+              "still": "https://image.tmdb.org/t/p/w400/8PdLc2mC0jMu9l9eGJFwWjIWzEH.jpg",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-03-23T21:00:00"
+              "locked": false
             }
           ]
         }
@@ -3338,10 +3333,9 @@
           "episode": 36,
           "air_date": "2026-03-23",
           "overview": "",
-          "still": "",
+          "still": "https://image.tmdb.org/t/p/w400/36D8RuitpIt9ddpxCB6F1ROM4Hq.jpg",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-03-23T21:00:00"
+          "locked": false
         },
         {
           "title": "Dona Beja Episódio 37",
@@ -3349,10 +3343,9 @@
           "episode": 37,
           "air_date": "2026-03-23",
           "overview": "",
-          "still": "",
+          "still": "https://image.tmdb.org/t/p/w400/glS7mU56BdfP0Sl6e2Qc6DPk0Zw.jpg",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-03-23T21:00:00"
+          "locked": false
         },
         {
           "title": "Dona Beja Episódio 38",
@@ -3360,10 +3353,9 @@
           "episode": 38,
           "air_date": "2026-03-23",
           "overview": "",
-          "still": "",
+          "still": "https://image.tmdb.org/t/p/w400/zS7GWJdlzfz4h1h3HVaKWDIfuuU.jpg",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-03-23T21:00:00"
+          "locked": false
         },
         {
           "title": "Dona Beja Episódio 39",
@@ -3371,10 +3363,9 @@
           "episode": 39,
           "air_date": "2026-03-23",
           "overview": "",
-          "still": "",
+          "still": "https://image.tmdb.org/t/p/w400/meiGBFjxY0x1NnwQCTEWVvAREXv.jpg",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-03-23T21:00:00"
+          "locked": false
         },
         {
           "title": "Dona Beja Episódio 40",
@@ -3382,10 +3373,9 @@
           "episode": 40,
           "air_date": "2026-03-23",
           "overview": "",
-          "still": "",
+          "still": "https://image.tmdb.org/t/p/w400/8PdLc2mC0jMu9l9eGJFwWjIWzEH.jpg",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-03-23T21:00:00"
+          "locked": false
         }
       ],
       "type": "series",
@@ -13249,8 +13239,7 @@
               "overview": "",
               "still": "",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-03-23T21:00:00"
+              "locked": false
             },
             {
               "title": "TGRACAS-134",
@@ -15425,8 +15414,7 @@
           "overview": "",
           "still": "",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-03-23T21:00:00"
+          "locked": false
         },
         {
           "title": "TGRACAS-134",
@@ -49636,7 +49624,7 @@
         "Animação",
         "Sci-Fi & Fantasia"
       ],
-      "rating": 8.2,
+      "rating": 8.3,
       "cast": [
         {
           "name": "Atsumi Tanezaki",
