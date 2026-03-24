@@ -769,11 +769,7 @@ EPISODE_SCHEDULE_TITLES = {
     # slug_do_titulo : tmdb_id (série)
     'tres_gracas': 289996,
     'dona_beja': 152401,
-    'one_piece': 37854,
-    'naruto': 46260,
-    'naruto_shippuden': 31910,
-    'spy_x_family': 120089,
-    'historias_novo_testamento': 212879,
+    'a_nobreza_do_amor': 301557,
     
     }
 # Delay de liberação: servidor leva ~5h após meia-noite do air_date
