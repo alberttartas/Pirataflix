@@ -532,6 +532,11 @@
           "profile": "https://image.tmdb.org/t/p/w185/dm6V24NjjvjMiCtbMkc8Y2WPm2e.jpg"
         },
         {
+          "name": "Barry Keoghan",
+          "character": "Duke Shelby",
+          "profile": "https://image.tmdb.org/t/p/w185/ngoitknM6hw8fffLywyvjzy6Iti.jpg"
+        },
+        {
           "name": "Rebecca Ferguson",
           "character": "Kaulo / Zelda",
           "profile": "https://image.tmdb.org/t/p/w185/lJloTOheuQSirSLXNA3JHsrMNfH.jpg"
@@ -550,11 +555,6 @@
           "name": "Sophie Rundle",
           "character": "Ada Shelby",
           "profile": "https://image.tmdb.org/t/p/w185/8kZTjHZcvmGo1W53DXM2mjXex2A.jpg"
-        },
-        {
-          "name": "Barry Keoghan",
-          "character": "Duke Shelby",
-          "profile": "https://image.tmdb.org/t/p/w185/ngoitknM6hw8fffLywyvjzy6Iti.jpg"
         },
         {
           "name": "Ned Dennehy",
@@ -13331,10 +13331,9 @@
               "episode": 134,
               "air_date": "2026-03-24",
               "overview": "",
-              "still": "",
+              "still": "https://image.tmdb.org/t/p/w400/i2PRwDs9YlMHdmkZWPkRcSZVVak.jpg",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-03-24T21:00:00"
+              "locked": false
             },
             {
               "title": "TGRACAS-135",
@@ -15506,10 +15505,9 @@
           "episode": 134,
           "air_date": "2026-03-24",
           "overview": "",
-          "still": "",
+          "still": "https://image.tmdb.org/t/p/w400/i2PRwDs9YlMHdmkZWPkRcSZVVak.jpg",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-03-24T21:00:00"
+          "locked": false
         },
         {
           "title": "TGRACAS-135",
@@ -17959,8 +17957,7 @@
               "overview": "Alika revela a José e Teresa que Batanga sofreu um golpe de Estado, e que Cayman está morto. Mirinho sonda Tonho sobre Niara e Alika. José afirma que protegerá Alika e Niara de Jendal. Dona Menina alerta Tonho sobre Lúcia/Alika. Niara questiona Alika sobre seus sentimentos por Omar. Em troca da vida de Omar, Soliman diz a Jendal que sabe o paradeiro da família de Cayman no Brasil.\n\nMirinho garante a Virgínia que pedirá sua mão em noivado para Diógenes. Alika e Tonho pensam um no outro. José desabafa com Teresa sobre a desistência do trono de Batanga e suas consequências para Cayman. Dumi tenta convencer Soliman a não revelar o paradeiro de Alika e Niara para Jendal. Dona Menina tem um pressentimento ao ver Tonho e Lúcia/Alika juntos.",
               "still": "",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-03-24T21:00:00"
+              "locked": false
             },
             {
               "title": "A Nobreza do Amor Ep 009",
@@ -19650,8 +19647,7 @@
           "overview": "Alika revela a José e Teresa que Batanga sofreu um golpe de Estado, e que Cayman está morto. Mirinho sonda Tonho sobre Niara e Alika. José afirma que protegerá Alika e Niara de Jendal. Dona Menina alerta Tonho sobre Lúcia/Alika. Niara questiona Alika sobre seus sentimentos por Omar. Em troca da vida de Omar, Soliman diz a Jendal que sabe o paradeiro da família de Cayman no Brasil.\n\nMirinho garante a Virgínia que pedirá sua mão em noivado para Diógenes. Alika e Tonho pensam um no outro. José desabafa com Teresa sobre a desistência do trono de Batanga e suas consequências para Cayman. Dumi tenta convencer Soliman a não revelar o paradeiro de Alika e Niara para Jendal. Dona Menina tem um pressentimento ao ver Tonho e Lúcia/Alika juntos.",
           "still": "",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-03-24T21:00:00"
+          "locked": false
         },
         {
           "title": "A Nobreza do Amor Ep 009",
@@ -78010,7 +78006,7 @@
         "Ação & Aventura",
         "Sci-Fi & Fantasia"
       ],
-      "rating": 7.7,
+      "rating": 7.8,
       "cast": [
         {
           "name": "Andree Vermeulen",
