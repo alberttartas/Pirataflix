@@ -524,7 +524,7 @@
         "Crime",
         "Drama"
       ],
-      "rating": 7.4,
+      "rating": 7.5,
       "cast": [
         {
           "name": "Cillian Murphy",
@@ -38230,7 +38230,7 @@
       "backdrop": "https://image.tmdb.org/t/p/w1280/kNF0czlnSmhT11wFVgZRnRHwEKS.jpg",
       "overview": "História cheia de mistérios que mescla realidade e fantasia, no mundo sombrio do vampiro Bóris com elementos sobrenaturais, drama e humor.",
       "year": "2002",
-      "rating": 6.3,
+      "rating": 6.2,
       "cast": [
         {
           "name": "Tarcísio Meira",
@@ -52840,6 +52840,77 @@
           "name": "Kenichirou Matsuda",
           "character": "Bond Forger (voice)",
           "profile": "https://image.tmdb.org/t/p/w185/YCEXgyl763zg62qhsjhWHRzGkL.jpg"
+        }
+      ]
+    },
+    {
+      "id": "rooster_fighter",
+      "title": "Rooster Fighter",
+      "poster": "https://image.tmdb.org/t/p/w500/iCtbr0sIdaKZjhQH3Wr7hW6A1IU.jpg",
+      "seasons": [
+        {
+          "season": 1,
+          "episodes": [
+            {
+              "title": "Rooster Fighter (Dublado) - Temporada 1 Ep 01",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/r/rooster-fighter-dublado/01.mp4/index.m3u8",
+              "episode": 1
+            },
+            {
+              "title": "Rooster Fighter (Dublado) - Temporada 1 Ep 02",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/r/rooster-fighter-dublado/02.mp4/index.m3u8",
+              "episode": 2
+            }
+          ]
+        }
+      ],
+      "episodes": [
+        {
+          "title": "Rooster Fighter (Dublado) - Temporada 1 Ep 01",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/r/rooster-fighter-dublado/01.mp4/index.m3u8",
+          "episode": 1
+        },
+        {
+          "title": "Rooster Fighter (Dublado) - Temporada 1 Ep 02",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/r/rooster-fighter-dublado/02.mp4/index.m3u8",
+          "episode": 2
+        }
+      ],
+      "type": "series",
+      "category": "animes",
+      "local_poster": "/Pirataflix/assets/Capas/default.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/iCtbr0sIdaKZjhQH3Wr7hW6A1IU.jpg",
+        "https://image.tmdb.org/t/p/w500/8yS49lP737cirdEfkCkMJlCOex2.jpg",
+        "https://image.tmdb.org/t/p/w500/ybfC20URnOX3LWhnTUgNblVooRz.jpg",
+        "https://image.tmdb.org/t/p/w500/mWzG6X1j35OeYvqKsG2DxsZOpmr.jpg",
+        "https://image.tmdb.org/t/p/w500/70pd3WcdCW2z2mJmuRZW0bDlz08.jpg",
+        "https://image.tmdb.org/t/p/w500/jg7MwqXWKKz1w8kSrIDOu5eUweW.jpg"
+      ],
+      "backdrop": "https://image.tmdb.org/t/p/w1280/nTDL4UmMLDBCeMtYh8F1LZtgmLV.jpg",
+      "overview": "Quando criaturas estranhas atacam, Keiji as enfrenta cara a cara com seu grito de guerra: Kokekokko!",
+      "year": "2026",
+      "genres": [
+        "Animação",
+        "Ação & Aventura",
+        "Sci-Fi & Fantasia"
+      ],
+      "rating": 9.1,
+      "cast": [
+        {
+          "name": "Kenta Miyake",
+          "character": "Keiji (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/7YL8vM2KYzPMeQqTpHWmNj6s1AP.jpg"
+        },
+        {
+          "name": "本多真梨子",
+          "character": "Elizabeth (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/29XsXfTmJ6dat7cBvQk6Wc96IC0.jpg"
+        },
+        {
+          "name": "Hikaru Tono",
+          "character": "Sarah (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/mQ3BgehaQKedMbMkpnlz790U4fi.jpg"
         }
       ]
     },
