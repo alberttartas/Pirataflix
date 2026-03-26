@@ -18,7 +18,7 @@ https://download2275.mediafire.com/hq19rknxcddgrK8ET035p_-Jahuo4_VlmTOeCA38xbZhp
 #EXTINF:-1 group-title="🎬 Filmes" tvg-id="PRINCESA_MONONOKE_DUBLADO" tvg-logo="https://image.tmdb.org/t/p/w500/7EadOwHmyQgOnlghRiWBygNtnjl.jpg",Princesa Mononoke Dublado
 https://cdn-s01.mywallpaper-4k-image.net/stream/filmes/p/princesa-mononoke-dublado/01.mp4/index.m3u8
 
-#EXTINF:-1 group-title="🎬 Filmes" tvg-id="AINDA_ESTOU_AQUI" tvg-logo="https://image.tmdb.org/t/p/w500/yY0HDAGfu79cpOLQBgR3kgGZ7HS.jpg",Ainda Estou Aqui
+#EXTINF:-1 group-title="🎬 Filmes" tvg-id="AINDA_ESTOU_AQUI" tvg-logo="https://image.tmdb.org/t/p/w500/zNAw7jK8bwCK56rIW676pdgkwhd.jpg",Ainda Estou Aqui
 https://cdn-novflix.com/storagePSN/FILMES/AINDAESTOUAQUI.mp4
 
 #EXTINF:-1 group-title="🎬 Filmes" tvg-id="SPY_X_FAMILY_CODIGO_BRANCO" tvg-logo="https://image.tmdb.org/t/p/w500/thGaW3UXecNJAEdB6rs8sC45JWv.jpg",Spy X Family Código: Branco
@@ -36,16 +36,16 @@ https://cdn-novflix.com/storagePSN/FILMES/LILOSTITCH2025.mp4
 #EXTINF:-1 group-title="🎬 Filmes" tvg-id="FAMILIA_PERO_NO_MUCHO" tvg-logo="https://image.tmdb.org/t/p/w500/mNAb8OTrlhW5eFwlsPUW3CRXCXh.jpg",Familia Pero No Mucho
 https://cdn-novflix.com/storagePSN/FILMES/FAMILIAPERONOMUCHO.mp4
 
-#EXTINF:-1 group-title="📺 Séries" tvg-id="DINOSSAUROS_T01" tvg-logo="https://image.tmdb.org/t/p/w500/wdpc2htHKoUX42rQNCmlRQ1dMGn.jpg",S01E01 - Dinossauros T1E01
+#EXTINF:-1 group-title="📺 Séries" tvg-id="DINOSSAUROS_T01" tvg-logo="https://image.tmdb.org/t/p/w500/tmho9KQniTBvsPfJMn60CJQ3akM.jpg",S01E01 - Dinossauros T1E01
 https://cdn-novflix.com/storagePSN/SERIES/DINOSSAUROS/DINOSSAUROS1x01.mp4
 
-#EXTINF:-1 group-title="📺 Séries" tvg-id="DINOSSAUROS_T01" tvg-logo="https://image.tmdb.org/t/p/w500/wdpc2htHKoUX42rQNCmlRQ1dMGn.jpg",S01E02 - Dinossauros T1E02
+#EXTINF:-1 group-title="📺 Séries" tvg-id="DINOSSAUROS_T01" tvg-logo="https://image.tmdb.org/t/p/w500/tmho9KQniTBvsPfJMn60CJQ3akM.jpg",S01E02 - Dinossauros T1E02
 https://cdn-novflix.com/storagePSN/SERIES/DINOSSAUROS/DINOSSAUROS1x02.mp4
 
-#EXTINF:-1 group-title="📺 Séries" tvg-id="DINOSSAUROS_T01" tvg-logo="https://image.tmdb.org/t/p/w500/wdpc2htHKoUX42rQNCmlRQ1dMGn.jpg",S01E03 - Dinossauros T1E03
+#EXTINF:-1 group-title="📺 Séries" tvg-id="DINOSSAUROS_T01" tvg-logo="https://image.tmdb.org/t/p/w500/tmho9KQniTBvsPfJMn60CJQ3akM.jpg",S01E03 - Dinossauros T1E03
 https://cdn-novflix.com/storagePSN/SERIES/DINOSSAUROS/DINOSSAUROS1x03.mp4
 
-#EXTINF:-1 group-title="📺 Séries" tvg-id="DINOSSAUROS_T01" tvg-logo="https://image.tmdb.org/t/p/w500/wdpc2htHKoUX42rQNCmlRQ1dMGn.jpg",S01E04 - Dinossauros T1E04
+#EXTINF:-1 group-title="📺 Séries" tvg-id="DINOSSAUROS_T01" tvg-logo="https://image.tmdb.org/t/p/w500/tmho9KQniTBvsPfJMn60CJQ3akM.jpg",S01E04 - Dinossauros T1E04
 https://cdn-novflix.com/storagePSN/SERIES/DINOSSAUROS/DINOSSAUROS1x04.mp4
 
 #EXTINF:-1 group-title="📺 Séries" tvg-id="UNFAMILIAR_T01" tvg-logo="https://image.tmdb.org/t/p/w500/fX0Kvvo6hj9feqS3JyFpVmscz2Y.jpg",S01E01 - UnFamiliar T1E01
@@ -25007,4 +25007,7 @@ http://x1co.com.br:8080/hls/stream.m3u8
 
 #EXTINF:-1 group-title="🎨 Animação" tvg-id="ONEPIECE.US@BR" tvg-logo="https://i.imgur.com/XsvbAWR.png",One Piece
 https://jmp2.uk/plu-624b1c8d4321e200073ee421.m3u8
+
+#EXTINF:-1 group-title="🎨 Animação" tvg-id="NICKONLINE.BR@SD" tvg-logo="https://x1co.com.br/logo.png",NickOnline (576p)
+https://x1co.com.br:8443/hls/stream.m3u8
 
