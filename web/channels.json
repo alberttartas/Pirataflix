@@ -17340,5 +17340,20 @@
         "title": "AO VIVO"
       }
     ]
+  },
+  {
+    "id": "UMATV.br@HD",
+    "type": "tv",
+    "title": "UMA TV",
+    "tvg_id": "UMATV.br@HD",
+    "tvg_logo": "https://i.imgur.com/m0RVb79.png",
+    "group": "🎭 Entretenimento",
+    "url": "https://umatv.nuvemplay.live/hls/stream.m3u8",
+    "episodes": [
+      {
+        "url": "https://umatv.nuvemplay.live/hls/stream.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
   }
 ]
