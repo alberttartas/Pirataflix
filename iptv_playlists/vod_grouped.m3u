@@ -25014,3 +25014,6 @@ https://x1co.com.br:8443/hls/stream.m3u8
 #EXTINF:-1 group-title="🎭 Entretenimento" tvg-id="UMATV.BR@HD" tvg-logo="https://i.imgur.com/m0RVb79.png",UMA TV
 https://umatv.nuvemplay.live/hls/stream.m3u8
 
+#EXTINF:-1 group-title="🧸 Infantil" tvg-id="NICKCLASSICO.US@BRAZIL" tvg-logo="https://i.imgur.com/Crip6wT.png",Nickelodeon Clássico (720p)
+https://jmp2.uk/plu-6824ce10c5d53e1351ceb8d1.m3u8
+

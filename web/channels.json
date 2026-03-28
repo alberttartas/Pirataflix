@@ -17355,5 +17355,20 @@
         "title": "AO VIVO"
       }
     ]
+  },
+  {
+    "id": "NickClassico.us@Brazil",
+    "type": "tv",
+    "title": "Nickelodeon Clássico (720p)",
+    "tvg_id": "NickClassico.us@Brazil",
+    "tvg_logo": "https://i.imgur.com/Crip6wT.png",
+    "group": "🧸 Infantil",
+    "url": "https://jmp2.uk/plu-6824ce10c5d53e1351ceb8d1.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-6824ce10c5d53e1351ceb8d1.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
   }
 ]
