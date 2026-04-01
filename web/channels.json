@@ -17370,5 +17370,20 @@
         "title": "AO VIVO"
       }
     ]
+  },
+  {
+    "id": "CazeTV.br@SD",
+    "type": "tv",
+    "title": "CazeTV (1080i)",
+    "tvg_id": "CazeTV.br@SD",
+    "tvg_logo": "",
+    "group": "⚽ Esportes",
+    "url": "https://dfr80qz435crc.cloudfront.net/MNOP/Amagi/Caze/Caze_TV_BR/Caze_TV.m3u8",
+    "episodes": [
+      {
+        "url": "https://dfr80qz435crc.cloudfront.net/MNOP/Amagi/Caze/Caze_TV_BR/Caze_TV.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
   }
 ]

@@ -2,6 +2,9 @@
 #EXTINF:-1 tvg-id="CanaldoInter.br@SD" tvg-logo="https://i.imgur.com/TQFWEIS.png" group-title="⚽ Esportes",Canal do Inter (720p) [Not 24/7]
 https://video01.soultv.com.br/internacional/internacional/playlist.m3u8
 
+#EXTINF:-1 tvg-id="CazeTV.br@SD" tvg-logo="" group-title="⚽ Esportes",CazeTV (1080i)
+https://dfr80qz435crc.cloudfront.net/MNOP/Amagi/Caze/Caze_TV_BR/Caze_TV.m3u8
+
 #EXTINF:-1 tvg-id="Combate.br@SD" tvg-logo="https://i.imgur.com/ZPYK5jr.png" group-title="⚽ Esportes",Combate Global
 https://stream.ads.ottera.tv/playlist.m3u8?network_id=960
 
