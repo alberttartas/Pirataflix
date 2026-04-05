@@ -17385,5 +17385,20 @@
         "title": "AO VIVO"
       }
     ]
+  },
+  {
+    "id": "ForaTedioTV.br@SD",
+    "type": "tv",
+    "title": "Fora Tedio TV (720p)",
+    "tvg_id": "ForaTedioTV.br@SD",
+    "tvg_logo": "https://i.imgur.com/R9ul4T1.png",
+    "group": "😂 Comédia",
+    "url": "https://stmv2.srvif.com/foratedio/foratedio/playlist.m3u8",
+    "episodes": [
+      {
+        "url": "https://stmv2.srvif.com/foratedio/foratedio/playlist.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
   }
 ]
