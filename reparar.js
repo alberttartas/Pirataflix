@@ -9,7 +9,8 @@ const CACHE_FILE = path.join(__dirname, 'cache.json');
 const HOSTS = [
   'lwqde8tgxh4n76i',
   'crew3b5943fmmi9',
-  'cbb87jx3ss9597i'
+  'cbb87jx3ss9597i',
+  'mcnd3jbm3ye91yu'
 ];
 
 // ----------------------------
