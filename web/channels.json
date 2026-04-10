@@ -17400,5 +17400,20 @@
         "title": "AO VIVO"
       }
     ]
+  },
+  {
+    "id": "NickOnline.br@Feed2",
+    "type": "tv",
+    "title": "NickOnline Feed 2 (576p) [Not 24/7]",
+    "tvg_id": "NickOnline.br@Feed2",
+    "tvg_logo": "https://x1co.com.br:8443/logo.png",
+    "group": "🎨 Animação",
+    "url": "https://x1co.com.br:2083/hls/stream.m3u8",
+    "episodes": [
+      {
+        "url": "https://x1co.com.br:2083/hls/stream.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
   }
 ]
