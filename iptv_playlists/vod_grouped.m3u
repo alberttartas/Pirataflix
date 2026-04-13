@@ -25026,3 +25026,12 @@ https://stmv2.srvif.com/foratedio/foratedio/playlist.m3u8
 #EXTINF:-1 group-title="🎨 Animação" tvg-id="NICKONLINE.BR@FEED2" tvg-logo="https://x1co.com.br:8443/logo.png",NickOnline Feed 2 (576p) [Not 24/7]
 https://x1co.com.br:2083/hls/stream.m3u8
 
+#EXTINF:-1 group-title="🎨 Animação" tvg-id="NICKONLINE.BR@SD" tvg-logo="https://x1co.com.br:8443/logo.png",NickOnline (720p)
+https://x1co.com.br/hls/stream.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="SBTCUIABA.BR@SD" tvg-logo="https://i.imgur.com/EZJWQ3i.png",SBT Cuiaba
+https://video09.logicahost.com.br/sbtcuiaba/sbtcuiaba/playlist.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="TVPAMPA.BR@SD" tvg-logo="https://i.imgur.com/Cnc1Mqo.png",TV Pampa
+https://video04.logicahost.com.br/tvpampa/tvpampa/playlist.m3u8
+
