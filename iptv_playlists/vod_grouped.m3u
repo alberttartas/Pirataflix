@@ -25035,3 +25035,21 @@ https://video09.logicahost.com.br/sbtcuiaba/sbtcuiaba/playlist.m3u8
 #EXTINF:-1 group-title="📺 Geral" tvg-id="TVPAMPA.BR@SD" tvg-logo="https://i.imgur.com/Cnc1Mqo.png",TV Pampa
 https://video04.logicahost.com.br/tvpampa/tvpampa/playlist.m3u8
 
+#EXTINF:-1 group-title="🎨 Animação" tvg-id="NICKTOONSBRASIL.BR@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Nicktoons_logo_%282023%29.svg/330px-Nicktoons_logo_%282023%29.svg.png",NickToons Brasil (480p)
+https://stmv2.srvif.com/nicktoons/nicktoons/playlist.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="REDETVMAIS.BR@SD" tvg-logo="https://i.ibb.co/F0Tm2WP/2103f4c07b851d64b4c96955765a9a95.png",Rede TV! Mais
+https://cdn.live.br1.jmvstream.com/webtv/AVJ-15235/playlist/playlist.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="REDETVPARANA.BR@SD" tvg-logo="https://i.imgur.com/D8R0Af4.png",RedeTV! Parana
+https://tv01.zas.media:1936/redetvparana/redetvparana/playlist.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="SBTNOVAMUTUM.BR@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/pt/d/d0/Logotipo_do_SBT_Nova_Mutum.png",SBT Nova Mutum
+https://video09.logicahost.com.br/sbtmutum/sbtmutum/playlist.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="SBTRONDONOPOLIS.BR@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/pt/d/d5/Logotipo_do_SBT_Rondon%C3%B3polis.png",SBT Rondonopolis
+https://video09.logicahost.com.br/sbtroo/sbtroo/playlist.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="SBTSINOP.BR@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/pt/8/8b/Logotipo_do_SBT_Sinop.png",SBT Sinop
+https://video09.logicahost.com.br/sbtsinop/sbtsinop/playlist.m3u8
+

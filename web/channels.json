@@ -17460,5 +17460,95 @@
         "title": "AO VIVO"
       }
     ]
+  },
+  {
+    "id": "NickToonsBrasil.br@SD",
+    "type": "tv",
+    "title": "NickToons Brasil (480p)",
+    "tvg_id": "NickToonsBrasil.br@SD",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Nicktoons_logo_%282023%29.svg/330px-Nicktoons_logo_%282023%29.svg.png",
+    "group": "🎨 Animação",
+    "url": "https://stmv2.srvif.com/nicktoons/nicktoons/playlist.m3u8",
+    "episodes": [
+      {
+        "url": "https://stmv2.srvif.com/nicktoons/nicktoons/playlist.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "RedeTVMais.br@SD",
+    "type": "tv",
+    "title": "Rede TV! Mais",
+    "tvg_id": "RedeTVMais.br@SD",
+    "tvg_logo": "https://i.ibb.co/F0Tm2WP/2103f4c07b851d64b4c96955765a9a95.png",
+    "group": "📺 Geral",
+    "url": "https://cdn.live.br1.jmvstream.com/webtv/AVJ-15235/playlist/playlist.m3u8",
+    "episodes": [
+      {
+        "url": "https://cdn.live.br1.jmvstream.com/webtv/AVJ-15235/playlist/playlist.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "RedeTVParana.br@SD",
+    "type": "tv",
+    "title": "RedeTV! Parana",
+    "tvg_id": "RedeTVParana.br@SD",
+    "tvg_logo": "https://i.imgur.com/D8R0Af4.png",
+    "group": "📺 Geral",
+    "url": "https://tv01.zas.media:1936/redetvparana/redetvparana/playlist.m3u8",
+    "episodes": [
+      {
+        "url": "https://tv01.zas.media:1936/redetvparana/redetvparana/playlist.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "SBTNovaMutum.br@SD",
+    "type": "tv",
+    "title": "SBT Nova Mutum",
+    "tvg_id": "SBTNovaMutum.br@SD",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/pt/d/d0/Logotipo_do_SBT_Nova_Mutum.png",
+    "group": "📺 Geral",
+    "url": "https://video09.logicahost.com.br/sbtmutum/sbtmutum/playlist.m3u8",
+    "episodes": [
+      {
+        "url": "https://video09.logicahost.com.br/sbtmutum/sbtmutum/playlist.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "SBTRondonopolis.br@SD",
+    "type": "tv",
+    "title": "SBT Rondonopolis",
+    "tvg_id": "SBTRondonopolis.br@SD",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/pt/d/d5/Logotipo_do_SBT_Rondon%C3%B3polis.png",
+    "group": "📺 Geral",
+    "url": "https://video09.logicahost.com.br/sbtroo/sbtroo/playlist.m3u8",
+    "episodes": [
+      {
+        "url": "https://video09.logicahost.com.br/sbtroo/sbtroo/playlist.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "SBTSinop.br@SD",
+    "type": "tv",
+    "title": "SBT Sinop",
+    "tvg_id": "SBTSinop.br@SD",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/pt/8/8b/Logotipo_do_SBT_Sinop.png",
+    "group": "📺 Geral",
+    "url": "https://video09.logicahost.com.br/sbtsinop/sbtsinop/playlist.m3u8",
+    "episodes": [
+      {
+        "url": "https://video09.logicahost.com.br/sbtsinop/sbtsinop/playlist.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
   }
 ]

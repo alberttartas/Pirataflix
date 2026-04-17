@@ -139,6 +139,8 @@ https://jmp2.uk/plu-5f6df5a173d7340007c559f7.m3u8
 https://jmp2.uk/plu-6824ce10c5d53e1351ceb8d1.m3u8
 #EXTINF:-1 tvg-id="NickOnline.br@HD" tvg-logo="https://x1co.com.br:8443/logo.png" group-title="Animation;Kids",NickOnline (720p)
 https://x1co.com.br/hls/stream.m3u8
+#EXTINF:-1 tvg-id="NickToonsBrasil.br@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Nicktoons_logo_%282023%29.svg/330px-Nicktoons_logo_%282023%29.svg.png" group-title="Animation;Kids",NickToons Brasil (480p)
+https://stmv2.srvif.com/nicktoons/nicktoons/playlist.m3u8
 #EXTINF:-1 tvg-id="NovaEraTV.br@SD" tvg-logo="https://i.imgur.com/IK3F9Uq.png" group-title="Undefined",Nova Era TV (1080p) [Not 24/7]
 http://wz3.dnip.com.br:1935/novaeratv/novaeratv.sdp/live.m3u8
 #EXTINF:-1 tvg-id="NovoTempo.br@SD" tvg-logo="" group-title="Religious",Novo Tempo (720p)
@@ -236,8 +238,12 @@ http://tv02.logicahost.com.br:1935/rederc/rederc/live.m3u8
 https://video01.logicahost.com.br/websptv/websptv/playlist.m3u8
 #EXTINF:-1 tvg-id="RedeTVES.br@SD" tvg-logo="https://i.imgur.com/k7vO9Bk.png" group-title="General",Rede TV! ES (1080p)
 https://streaming.cloudecast.com/hls/redetves/index.m3u8
+#EXTINF:-1 tvg-id="RedeTVMais.br@SD" tvg-logo="https://i.ibb.co/F0Tm2WP/2103f4c07b851d64b4c96955765a9a95.png" group-title="General",Rede TV! Mais
+https://cdn.live.br1.jmvstream.com/webtv/AVJ-15235/playlist/playlist.m3u8
 #EXTINF:-1 tvg-id="RedeTV.br@SD" tvg-logo="https://i.imgur.com/ZJgD38F.png" group-title="General",Rede TV! SP (720p) [Not 24/7]
 https://hls.brasilstream.com.br/live/redetv/redetv/playlist.m3u8
+#EXTINF:-1 tvg-id="RedeTVParana.br@SD" tvg-logo="https://i.imgur.com/D8R0Af4.png" group-title="Undefined",RedeTV! Parana
+https://tv01.zas.media:1936/redetvparana/redetvparana/playlist.m3u8
 #EXTINF:-1 tvg-id="RITTV.br@SD" tvg-logo="https://i.imgur.com/Unjs1wi.png" group-title="Religious",RIT TV (1080p)
 https://acesso.ecast.site:3648/live/ritlive.m3u8
 #EXTINF:-1 tvg-id="SantaCeciliaTV.br@SD" tvg-logo="https://i.imgur.com/KxYsq1d.png" group-title="Education",Santa Cecilia TV (1080p)
@@ -246,6 +252,12 @@ https://5fb29de4928ea.streamlock.net/2063/2063/playlist.m3u8
 https://video09.logicahost.com.br/sbtcuiaba/sbtcuiaba/playlist.m3u8
 #EXTINF:-1 tvg-id="SBTInterior.br@SD" tvg-logo="https://i.imgur.com/IkZfa4j.png" group-title="General",SBT Interior (720p)
 https://cdn.jmvstream.com/w/LVW-10801/LVW10801_Xvg4R0u57n/playlist.m3u8
+#EXTINF:-1 tvg-id="SBTNovaMutum.br@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/pt/d/d0/Logotipo_do_SBT_Nova_Mutum.png" group-title="Undefined",SBT Nova Mutum
+https://video09.logicahost.com.br/sbtmutum/sbtmutum/playlist.m3u8
+#EXTINF:-1 tvg-id="SBTRondonopolis.br@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/pt/d/d5/Logotipo_do_SBT_Rondon%C3%B3polis.png" group-title="Undefined",SBT Rondonopolis
+https://video09.logicahost.com.br/sbtroo/sbtroo/playlist.m3u8
+#EXTINF:-1 tvg-id="SBTSinop.br@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/pt/8/8b/Logotipo_do_SBT_Sinop.png" group-title="Undefined",SBT Sinop
+https://video09.logicahost.com.br/sbtsinop/sbtsinop/playlist.m3u8
 #EXTINF:-1 tvg-id="SertaoTV.br@SD" tvg-logo="https://i.imgur.com/b5xOCsC.png" group-title="General",Sertão TV (720p)
 http://wz4.dnip.com.br/sertaotv/sertaotv.sdp/playlist.m3u8
 #EXTINF:-1 tvg-id="SESCTV.br@SD" tvg-logo="https://i.imgur.com/Mu8O6CV.png" group-title="Undefined",SESC TV (1080p)
