@@ -17550,5 +17550,170 @@
         "title": "AO VIVO"
       }
     ]
+  },
+  {
+    "id": "PremiereFC1.br@SD",
+    "type": "tv",
+    "title": "Premiere FC 1",
+    "tvg_id": "PremiereFC1.br@SD",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Premiere_(2017)_logo.png/960px-Premiere_(2017)_logo.png",
+    "group": "⚽ Esportes",
+    "url": "https://stm.sinalmycn.com/20000/video.m3u8?token=EkP2qSi13ckjQRLSIDoxI5rMZsF5rZyEYzqWjxD248ScEUPYQ0",
+    "episodes": [
+      {
+        "url": "https://stm.sinalmycn.com/20000/video.m3u8?token=EkP2qSi13ckjQRLSIDoxI5rMZsF5rZyEYzqWjxD248ScEUPYQ0",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "PremiereFC2.br@SD",
+    "type": "tv",
+    "title": "Premiere FC 2",
+    "tvg_id": "PremiereFC2.br@SD",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Premiere_(2017)_logo.png/960px-Premiere_(2017)_logo.png",
+    "group": "⚽ Esportes",
+    "url": "https://stm.sinalmycn.com/20003/video.m3u8?token=EkP2qSi13ckjQRLSIDoxI5rMZsF5rZyEYzqWjxD248ScEUPYQ0",
+    "episodes": [
+      {
+        "url": "https://stm.sinalmycn.com/20003/video.m3u8?token=EkP2qSi13ckjQRLSIDoxI5rMZsF5rZyEYzqWjxD248ScEUPYQ0",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "PremiereFC3.br@SD",
+    "type": "tv",
+    "title": "Premiere FC 3",
+    "tvg_id": "PremiereFC3.br@SD",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Premiere_(2017)_logo.png/960px-Premiere_(2017)_logo.png",
+    "group": "⚽ Esportes",
+    "url": "https://stm.sinalmycn.com/20006/video.m3u8?token=EkP2qSi13ckjQRLSIDoxI5rMZsF5rZyEYzqWjxD248ScEUPYQ0",
+    "episodes": [
+      {
+        "url": "https://stm.sinalmycn.com/20006/video.m3u8?token=EkP2qSi13ckjQRLSIDoxI5rMZsF5rZyEYzqWjxD248ScEUPYQ0",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "PremiereFC4.br@SD",
+    "type": "tv",
+    "title": "Premiere FC 4",
+    "tvg_id": "PremiereFC4.br@SD",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Premiere_(2017)_logo.png/960px-Premiere_(2017)_logo.png",
+    "group": "⚽ Esportes",
+    "url": "https://stm.sinalmycn.com/20009/video.m3u8?token=EkP2qSi13ckjQRLSIDoxI5rMZsF5rZyEYzqWjxD248ScEUPYQ0",
+    "episodes": [
+      {
+        "url": "https://stm.sinalmycn.com/20009/video.m3u8?token=EkP2qSi13ckjQRLSIDoxI5rMZsF5rZyEYzqWjxD248ScEUPYQ0",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "PremiereFC5.br@SD",
+    "type": "tv",
+    "title": "Premiere FC 5",
+    "tvg_id": "PremiereFC5.br@SD",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Premiere_(2017)_logo.png/960px-Premiere_(2017)_logo.png",
+    "group": "⚽ Esportes",
+    "url": "https://stm.sinalmycn.com/20012/video.m3u8?token=EkP2qSi13ckjQRLSIDoxI5rMZsF5rZyEYzqWjxD248ScEUPYQ0",
+    "episodes": [
+      {
+        "url": "https://stm.sinalmycn.com/20012/video.m3u8?token=EkP2qSi13ckjQRLSIDoxI5rMZsF5rZyEYzqWjxD248ScEUPYQ0",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "PremiereFC6.br@SD",
+    "type": "tv",
+    "title": "Premiere FC 6",
+    "tvg_id": "PremiereFC6.br@SD",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Premiere_(2017)_logo.png/960px-Premiere_(2017)_logo.png",
+    "group": "⚽ Esportes",
+    "url": "https://stm.sinalmycn.com/20015/video.m3u8?token=EkP2qSi13ckjQRLSIDoxI5rMZsF5rZyEYzqWjxD248ScEUPYQ0",
+    "episodes": [
+      {
+        "url": "https://stm.sinalmycn.com/20015/video.m3u8?token=EkP2qSi13ckjQRLSIDoxI5rMZsF5rZyEYzqWjxD248ScEUPYQ0",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "PremiereFC7.br@SD",
+    "type": "tv",
+    "title": "Premiere FC 7",
+    "tvg_id": "PremiereFC7.br@SD",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Premiere_(2017)_logo.png/960px-Premiere_(2017)_logo.png",
+    "group": "⚽ Esportes",
+    "url": "https://stm.sinalmycn.com/20018/video.m3u8?token=EkP2qSi13ckjQRLSIDoxI5rMZsF5rZyEYzqWjxD248ScEUPYQ0",
+    "episodes": [
+      {
+        "url": "https://stm.sinalmycn.com/20018/video.m3u8?token=EkP2qSi13ckjQRLSIDoxI5rMZsF5rZyEYzqWjxD248ScEUPYQ0",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "PremiereFC8.br@SD",
+    "type": "tv",
+    "title": "Premiere FC 8",
+    "tvg_id": "PremiereFC8.br@SD",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Premiere_(2017)_logo.png/960px-Premiere_(2017)_logo.png",
+    "group": "⚽ Esportes",
+    "url": "https://stm.sinalmycn.com/20021/video.m3u8?token=EkP2qSi13ckjQRLSIDoxI5rMZsF5rZyEYzqWjxD248ScEUPYQ0",
+    "episodes": [
+      {
+        "url": "https://stm.sinalmycn.com/20021/video.m3u8?token=EkP2qSi13ckjQRLSIDoxI5rMZsF5rZyEYzqWjxD248ScEUPYQ0",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "SporTV.br@SD",
+    "type": "tv",
+    "title": "SporTV (1280p)",
+    "tvg_id": "SporTV.br@SD",
+    "tvg_logo": "https://i.postimg.cc/gr9x3z71/Spor-TV-2021.png",
+    "group": "⚽ Esportes",
+    "url": "https://stm.sinalmycn.com/21000/video.m3u8?token=EkP2qSi13ckjQRLSIDoxI5rMZsF5rZyEYzqWjxD248ScEUPYQ0",
+    "episodes": [
+      {
+        "url": "https://stm.sinalmycn.com/21000/video.m3u8?token=EkP2qSi13ckjQRLSIDoxI5rMZsF5rZyEYzqWjxD248ScEUPYQ0",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "SporTV2.br@SD",
+    "type": "tv",
+    "title": "SporTV 2 (1280p)",
+    "tvg_id": "SporTV2.br@SD",
+    "tvg_logo": "https://i.imgur.com/pBiUnb2.png",
+    "group": "⚽ Esportes",
+    "url": "https://stm.sinalmycn.com/21003/video.m3u8?token=EkP2qSi13ckjQRLSIDoxI5rMZsF5rZyEYzqWjxD248ScEUPYQ0",
+    "episodes": [
+      {
+        "url": "https://stm.sinalmycn.com/21003/video.m3u8?token=EkP2qSi13ckjQRLSIDoxI5rMZsF5rZyEYzqWjxD248ScEUPYQ0",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "SporTV3.br@SD",
+    "type": "tv",
+    "title": "SporTV 3 (1080p)",
+    "tvg_id": "SporTV3.br@SD",
+    "tvg_logo": "https://i.imgur.com/mWOR8pi.png",
+    "group": "⚽ Esportes",
+    "url": "https://stm.sinalmycn.com/21006/video.m3u8?token=EkP2qSi13ckjQRLSIDoxI5rMZsF5rZyEYzqWjxD248ScEUPYQ0",
+    "episodes": [
+      {
+        "url": "https://stm.sinalmycn.com/21006/video.m3u8?token=EkP2qSi13ckjQRLSIDoxI5rMZsF5rZyEYzqWjxD248ScEUPYQ0",
+        "title": "AO VIVO"
+      }
+    ]
   }
 ]
