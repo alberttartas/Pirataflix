@@ -25086,3 +25086,9 @@ https://stm.sinalmycn.com/21003/video.m3u8?token=EkP2qSi13ckjQRLSIDoxI5rMZsF5rZy
 #EXTINF:-1 group-title="⚽ Esportes" tvg-id="SPORTV3.BR@SD" tvg-logo="https://i.imgur.com/mWOR8pi.png",SporTV 3 (1080p)
 https://stm.sinalmycn.com/21006/video.m3u8?token=EkP2qSi13ckjQRLSIDoxI5rMZsF5rZyEYzqWjxD248ScEUPYQ0
 
+#EXTINF:-1 group-title="⚽ Esportes" tvg-id="SPORTV2ALTERNATIVO.BR@SD" tvg-logo="https://i.imgur.com/aoMlRgP.png",SporTV 2 Alternativo (720p)
+https://stm.sinalmycn.com/19025/video.m3u8
+
+#EXTINF:-1 group-title="⚽ Esportes" tvg-id="SPORTVALTERNATIVO.BR@SD" tvg-logo="https://i.imgur.com/8M5dLEb.png",SporTV Alternativo (720p)
+https://stm.sinalmycn.com/19024/video.m3u8
+
