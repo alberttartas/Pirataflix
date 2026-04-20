@@ -11,6 +11,7 @@ const HOSTS = [
   'crew3b5943fmmi9',
   'cbb87jx3ss9597i',
   'mcnd3jbm3ye91yu'
+  'wscuh2cjilknbj3'
 ];
 
 // ----------------------------
