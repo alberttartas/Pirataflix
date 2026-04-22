@@ -17745,5 +17745,20 @@
         "title": "AO VIVO"
       }
     ]
+  },
+  {
+    "id": "NickOnline.br@SD",
+    "type": "tv",
+    "title": "NickOnline SD (320p)",
+    "tvg_id": "NickOnline.br@SD",
+    "tvg_logo": "https://x1co.com.br:8443/logo.png",
+    "group": "🎨 Animação",
+    "url": "https://sd.x1co.com.br",
+    "episodes": [
+      {
+        "url": "https://sd.x1co.com.br",
+        "title": "AO VIVO"
+      }
+    ]
   }
 ]
