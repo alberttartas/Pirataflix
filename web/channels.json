@@ -17760,5 +17760,35 @@
         "title": "AO VIVO"
       }
     ]
+  },
+  {
+    "id": "NickelodeonWeb.br@SD",
+    "type": "tv",
+    "title": "Nickelodeon Web (576p)",
+    "tvg_id": "NickelodeonWeb.br@SD",
+    "tvg_logo": "https://i.ibb.co/TxV7nwLw/20260420-172534.png",
+    "group": "🎨 Animação",
+    "url": "https://vs20.live.opencaster.com/nickelodeonbrasil_68f1743d/index.m3u8",
+    "episodes": [
+      {
+        "url": "https://vs20.live.opencaster.com/nickelodeonbrasil_68f1743d/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "NickOnlineSpongebob.br@HD",
+    "type": "tv",
+    "title": "NickOnline Spongebob (720p) [Not 24/7]",
+    "tvg_id": "NickOnlineSpongebob.br@HD",
+    "tvg_logo": "https://x1co.com.br/logobob.png",
+    "group": "🎨 Animação",
+    "url": "https://lowa8026-cmyk.github.io/Brazil/NickOnlineSpongebob.m3u8",
+    "episodes": [
+      {
+        "url": "https://lowa8026-cmyk.github.io/Brazil/NickOnlineSpongebob.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
   }
 ]

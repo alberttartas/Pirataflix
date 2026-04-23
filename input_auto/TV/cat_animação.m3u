@@ -8,6 +8,9 @@ https://w2.manasat.com/kkids/smil:kkids.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="Naruto.us@Brazil" tvg-logo="https://i.imgur.com/M8X3Kvc.png" group-title="🎨 Animação",Naruto
 https://jmp2.uk/plu-5f6df5a173d7340007c559f7.m3u8
 
+#EXTINF:-1 tvg-id="NickelodeonWeb.br@SD" tvg-logo="https://i.ibb.co/TxV7nwLw/20260420-172534.png" group-title="🎨 Animação",Nickelodeon Web (576p)
+https://vs20.live.opencaster.com/nickelodeonbrasil_68f1743d/index.m3u8
+
 #EXTINF:-1 tvg-id="NickOnline.br@HD" tvg-logo="https://x1co.com.br:8443/logo.png" group-title="🎨 Animação",NickOnline (720p)
 https://x1co.com.br/hls/stream.m3u8
 
@@ -15,7 +18,7 @@ https://x1co.com.br/hls/stream.m3u8
 https://sd.x1co.com.br
 
 #EXTINF:-1 tvg-id="NickOnlineSpongebob.br@HD" tvg-logo="https://x1co.com.br/logobob.png" group-title="🎨 Animação",NickOnline Spongebob (720p) [Not 24/7]
-https://x1co.com.br:2083/hls/stream.m3u8
+https://lowa8026-cmyk.github.io/Brazil/NickOnlineSpongebob.m3u8
 
 #EXTINF:-1 tvg-id="NickToonsBrasil.br@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Nicktoons_logo_%282023%29.svg/330px-Nicktoons_logo_%282023%29.svg.png" group-title="🎨 Animação",NickToons Brasil (480p)
 https://stmv2.srvif.com/nicktoons/nicktoons/playlist.m3u8
