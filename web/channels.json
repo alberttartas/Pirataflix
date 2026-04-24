@@ -17790,5 +17790,35 @@
         "title": "AO VIVO"
       }
     ]
+  },
+  {
+    "id": "geFast.br@SD",
+    "type": "tv",
+    "title": "ge Fast (1080p)",
+    "tvg_id": "geFast.br@SD",
+    "tvg_logo": "https://i.ibb.co/WGXHDnF/logo-ge-fast.png",
+    "group": "⚽ Esportes",
+    "url": "https://amg00716-globo-amg00716c1-tcl-br-9495.playouts.now.amagi.tv/playlist.m3u8",
+    "episodes": [
+      {
+        "url": "https://amg00716-globo-amg00716c1-tcl-br-9495.playouts.now.amagi.tv/playlist.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "TVACritica.br@SD",
+    "type": "tv",
+    "title": "TV A Critica",
+    "tvg_id": "TVACritica.br@SD",
+    "tvg_logo": "https://i.imgur.com/j51rBro.png",
+    "group": "📺 Geral",
+    "url": "https://cdn.live.br1.jmvstream.com/w/LVW-20715/LVW20715_50E3x2MCm2/playlist.m3u8",
+    "episodes": [
+      {
+        "url": "https://cdn.live.br1.jmvstream.com/w/LVW-20715/LVW20715_50E3x2MCm2/playlist.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
   }
 ]

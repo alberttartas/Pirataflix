@@ -25101,3 +25101,9 @@ https://vs20.live.opencaster.com/nickelodeonbrasil_68f1743d/index.m3u8
 #EXTINF:-1 group-title="🎨 Animação" tvg-id="NICKONLINESPONGEBOB.BR@HD" tvg-logo="https://x1co.com.br/logobob.png",NickOnline Spongebob (720p) [Not 24/7]
 https://lowa8026-cmyk.github.io/Brazil/NickOnlineSpongebob.m3u8
 
+#EXTINF:-1 group-title="⚽ Esportes" tvg-id="GEFAST.BR@SD" tvg-logo="https://i.ibb.co/WGXHDnF/logo-ge-fast.png",ge Fast (1080p)
+https://amg00716-globo-amg00716c1-tcl-br-9495.playouts.now.amagi.tv/playlist.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="TVACRITICA.BR@SD" tvg-logo="https://i.imgur.com/j51rBro.png",TV A Critica
+https://cdn.live.br1.jmvstream.com/w/LVW-20715/LVW20715_50E3x2MCm2/playlist.m3u8
+
