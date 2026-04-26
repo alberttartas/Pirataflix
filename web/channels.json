@@ -17820,5 +17820,20 @@
         "title": "AO VIVO"
       }
     ]
+  },
+  {
+    "id": "GloobWeb.br@SD",
+    "type": "tv",
+    "title": "Gloob Web [Not 24/7]",
+    "tvg_id": "GloobWeb.br@SD",
+    "tvg_logo": "https://i.ibb.co/wrQZXZ01/C-pia-de-Blue-Modern-Simple-Logo.png",
+    "group": "🧸 Infantil",
+    "url": "https://vs20.live.opencaster.com/globiosat_73a904af/index.m3u8",
+    "episodes": [
+      {
+        "url": "https://vs20.live.opencaster.com/globiosat_73a904af/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
   }
 ]
