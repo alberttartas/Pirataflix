@@ -17895,5 +17895,35 @@
         "title": "AO VIVO"
       }
     ]
+  },
+  {
+    "id": "NickOnlineSpongebob.br@HD",
+    "type": "tv",
+    "title": "NickOnline Spongebob (1080p) [Not 24/7]",
+    "tvg_id": "NickOnlineSpongebob.br@HD",
+    "tvg_logo": "https://x1co.com.br/logobob.png",
+    "group": "🎨 Animação",
+    "url": "https://spongebobnew.x1co.com.br/hls/stream.m3u8",
+    "episodes": [
+      {
+        "url": "https://spongebobnew.x1co.com.br/hls/stream.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "PlayTV.br@SD",
+    "type": "tv",
+    "title": "Play TV (720p)",
+    "tvg_id": "PlayTV.br@SD",
+    "tvg_logo": "https://i.imgur.com/Ikrj3lk.png",
+    "group": "📺 Geral",
+    "url": "https://isaocorp.cloudecast.com/playtv/index.m3u8",
+    "episodes": [
+      {
+        "url": "https://isaocorp.cloudecast.com/playtv/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
   }
 ]
