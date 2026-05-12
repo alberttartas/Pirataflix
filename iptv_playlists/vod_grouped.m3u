@@ -25128,3 +25128,6 @@ https://spongebobnew.x1co.com.br/hls/stream.m3u8
 #EXTINF:-1 group-title="📺 Geral" tvg-id="PLAYTV.BR@SD" tvg-logo="https://i.imgur.com/Ikrj3lk.png",Play TV (720p)
 https://isaocorp.cloudecast.com/playtv/index.m3u8
 
+#EXTINF:-1 group-title="🎭 Entretenimento" tvg-id="TVNATAL.BR@SD" tvg-logo="https://i.imgur.com/wqQmQml.png",TV Natal (1080p)
+http://185.228.163.146:8000/play/a01y/index.m3u8
+

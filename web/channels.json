@@ -17925,5 +17925,20 @@
         "title": "AO VIVO"
       }
     ]
+  },
+  {
+    "id": "TVNatal.br@SD",
+    "type": "tv",
+    "title": "TV Natal (1080p)",
+    "tvg_id": "TVNatal.br@SD",
+    "tvg_logo": "https://i.imgur.com/wqQmQml.png",
+    "group": "🎭 Entretenimento",
+    "url": "http://185.228.163.146:8000/play/a01y/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://185.228.163.146:8000/play/a01y/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
   }
 ]
