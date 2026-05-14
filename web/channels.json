@@ -17940,5 +17940,35 @@
         "title": "AO VIVO"
       }
     ]
+  },
+  {
+    "id": "NickOnlineMusic.br@HD",
+    "type": "tv",
+    "title": "NickOnline Music (720p) [Not 24/7]",
+    "tvg_id": "NickOnlineMusic.br@HD",
+    "tvg_logo": "https://x1co.com.br/musiclogo.png",
+    "group": "🎵 Música",
+    "url": "https://two.x1co.com.br/hls/stream.m3u8",
+    "episodes": [
+      {
+        "url": "https://two.x1co.com.br/hls/stream.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "NickOnline.br@SD",
+    "type": "tv",
+    "title": "NickOnline SD (320p) [Not 24/7]",
+    "tvg_id": "NickOnline.br@SD",
+    "tvg_logo": "https://x1co.com.br:8443/logo.png",
+    "group": "🎨 Animação",
+    "url": "https://sdnew.x1co.com.br/hls/stream.m3u8",
+    "episodes": [
+      {
+        "url": "https://sdnew.x1co.com.br/hls/stream.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
   }
 ]
