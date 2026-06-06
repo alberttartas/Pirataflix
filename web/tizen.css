@@ -553,6 +553,67 @@ html, body {
   z-index: 2100;
 }
 
+/* Card "Continuar Assistindo" */
+.card-cw img {
+  height: 230px;
+  object-fit: cover;
+}
+
+.cw-thumb-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Barra de progresso na base da imagem */
+.cw-progress-bar {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 4px;
+  background: rgba(255,255,255,0.25);
+}
+.cw-progress-fill {
+  height: 100%;
+  background: #e50914;
+}
+
+/* Badge com tempo assistido */
+.cw-time-badge {
+  position: absolute;
+  bottom: 8px; right: 6px;
+  background: rgba(0,0,0,0.75);
+  color: #fff;
+  font-size: 0.7rem;
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+/* Ícone play no centro ao focar */
+.cw-play-icon {
+  position: absolute;
+  top: 50%; left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background: rgba(229,9,20,0.85);
+  color: #fff;
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  font-size: 1rem;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+.card-cw:hover .cw-play-icon,
+.card-cw:focus .cw-play-icon {
+  opacity: 1;
+}
+
 /* ── FOCO D-PAD (navegação por controle remoto) ── */
 
 /* Remove o outline padrão feio do browser */
