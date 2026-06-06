@@ -118,6 +118,9 @@
       }
     }
 
+    // Seção "Continuar Assistindo" sempre no topo
+    renderContinueWatching(catalog);
+
     if (cat === 'tv') {
       renderTvGrid(catalog, channels);
     } else {
@@ -140,6 +143,106 @@
       }
       catalog.appendChild(row);
     }
+  }
+
+  // ─── CONTINUAR ASSISTINDO ─────────────────────────────────────────────────
+
+  function cwGetList() {
+    try {
+      var raw  = JSON.parse(localStorage.getItem(CW_KEY)) || {};
+      var seen = {};
+      var keys = Object.keys(raw);
+      for (var i = 0; i < keys.length; i++) {
+        var entry = raw[keys[i]];
+        if (!entry || !entry.itemId || !entry.category) continue;
+        var pct = entry.duration ? (entry.currentTime / entry.duration) * 100 : 0;
+        if (pct < 2 || pct > 95) continue;
+        var dk = entry.itemId + '_' + entry.category;
+        if (!seen[dk] || entry.timestamp > seen[dk].timestamp) seen[dk] = entry;
+      }
+      var list = [];
+      var dks  = Object.keys(seen);
+      for (var di = 0; di < dks.length; di++) list.push(seen[dks[di]]);
+      list.sort(function (a, b) { return (b.timestamp || 0) - (a.timestamp || 0); });
+      return list.slice(0, 10);
+    } catch (e) { return []; }
+  }
+
+  function renderContinueWatching(catalog) {
+    var list = cwGetList();
+    if (!list.length) return;
+
+    var title = document.createElement('div');
+    title.className = 'section-title';
+    title.textContent = '▶ Continuar Assistindo';
+    catalog.appendChild(title);
+
+    var row = document.createElement('div');
+    row.className = 'cards-row';
+    for (var i = 0; i < list.length; i++) {
+      row.appendChild(makeCwCard(list[i]));
+    }
+    catalog.appendChild(row);
+  }
+
+  function makeCwCard(entry) {
+    var card = document.createElement('div');
+    card.className = 'card card-cw';
+    card.setAttribute('tabindex', '0');
+
+    var items = vodData[entry.category] || [];
+    var item  = null;
+    for (var i = 0; i < items.length; i++) {
+      if (items[i].id === entry.itemId || items[i].title === entry.itemId) { item = items[i]; break; }
+    }
+
+    var poster  = item ? getPoster(item, entry.category) : DEFAULT_POSTER;
+    var pct     = entry.duration ? Math.round((entry.currentTime / entry.duration) * 100) : 0;
+    var timeStr = fmtTime(entry.currentTime || 0);
+    var label   = entry.title || (item ? item.title : 'Sem título');
+    // Pegar só o nome da série (antes do " - ")
+    var seriesTitle = label.split(' - ')[0];
+
+    card.innerHTML =
+      '<div class="cw-thumb-wrap">' +
+        '<img src="' + poster + '" alt="" loading="lazy" onerror="this.src=\'' + DEFAULT_POSTER + '\'">' +
+        '<div class="cw-progress-bar"><div class="cw-progress-fill" style="width:' + pct + '%"></div></div>' +
+        '<div class="cw-time-badge">' + timeStr + '</div>' +
+        '<div class="cw-play-icon">▶</div>' +
+      '</div>' +
+      '<div class="card-info">' +
+        '<div class="card-title">' + esc(seriesTitle) + '</div>' +
+        '<div class="card-meta">' + pct + '% assistido</div>' +
+      '</div>';
+
+    card.onclick    = function () { resumeCw(entry); };
+    card.onkeydown  = function (e) { if (e.keyCode === 13 || e.keyCode === 32) resumeCw(entry); };
+    return card;
+  }
+
+  function resumeCw(entry) {
+    var items = vodData[entry.category] || [];
+    var item  = null;
+    for (var i = 0; i < items.length; i++) {
+      if (items[i].id === entry.itemId || items[i].title === entry.itemId) { item = items[i]; break; }
+    }
+
+    if (!item) { playVideo(entry.url, entry.title, entry.itemId, entry.category, 0); return; }
+
+    var epList = getEpList(item);
+    var idx    = entry.episodeIndex || 0;
+    var ep     = epList[idx];
+    var url    = ep ? ep.url : item.url;
+    var title  = ep ? (item.title + ' - ' + (ep.title || 'Ep ' + (idx + 1))) : item.title;
+
+    playVideo(url, title, entry.itemId, entry.category, idx);
+  }
+
+  function fmtTime(s) {
+    if (!s || isNaN(s)) return '0:00';
+    var m = Math.floor(s / 60);
+    var sec = Math.floor(s % 60);
+    return m + ':' + (sec < 10 ? '0' + sec : sec);
   }
 
   function renderTvGrid(catalog, chs) {
@@ -588,6 +691,20 @@
   function closePlayer() {
     destroyHls();
     document.getElementById('player-wrap').style.display = 'none';
+    // Recarrega a seção "Continuar Assistindo" com progresso atualizado
+    var catalog = document.getElementById('catalog');
+    var cwTitle = catalog ? catalog.querySelector('.section-title') : null;
+    if (cwTitle && cwTitle.textContent.indexOf('Continuar') !== -1) {
+      // Remove seção antiga e reinserere atualizada
+      var next = cwTitle.nextSibling;
+      if (next && next.className === 'cards-row') catalog.removeChild(next);
+      catalog.removeChild(cwTitle);
+    }
+    if (catalog) {
+      var frag = document.createDocumentFragment();
+      renderContinueWatching(frag);
+      catalog.insertBefore(frag, catalog.firstChild);
+    }
   }
 
   // ─── CONTROLES DO PLAYER ─────────────────────────────────────────────────
