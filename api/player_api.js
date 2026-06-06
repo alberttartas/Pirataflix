@@ -1,5 +1,5 @@
 /**
- * Pirataflix — Xtream Codes API
+ * Pirataflix — Player API (Xtream Codes)
  * Vercel Serverless Function
  */
 
@@ -55,21 +55,31 @@ function tvGroupId(g) {
   for (let i = 0; i < g.length; i++) h = ((h<<5)-h+g.charCodeAt(i))|0;
   return Math.abs(h) % 9000 + 1000;
 }
+
+/**
+ * Extrai extensão ignorando query params.
+ * Corrigido: antes falhava com /video.mp4?token=xxx
+ */
 function ext(url) {
-  const m = (url||'').match(/\.(mp4|mkv|avi|ts|m3u8|mov|webm)(\?|$)/i);
+  if (!url) return 'mp4';
+  try {
+    const pathname = new URL(url).pathname;
+    const m = pathname.match(/\.(mp4|mkv|avi|ts|m3u8|mov|webm)$/i);
+    if (m) return m[1].toLowerCase();
+  } catch { /* URL relativa, cai no fallback */ }
+  const m = url.match(/\.(mp4|mkv|avi|ts|m3u8|mov|webm)(\?|#|$)/i);
   return m ? m[1].toLowerCase() : 'mp4';
 }
 
 /**
- * Monta a URL de stream que o player vai chamar.
- * Em vez de mandar a URL original (que pode ser Mediafire/CDN com bloqueio),
- * mandamos um proxy endpoint /api/stream?id=STREAM_ID&username=X&password=Y
- * O proxy resolve e faz redirect transparente.
+ * Monta URL de stream apontando para o proxy /api/stream.
+ * O proxy resolve redirects e devolve 302 para a URL final —
+ * o player conecta direto ao CDN, sem timeout na Vercel.
  */
 function streamUrl(originalUrl, streamId, username, password) {
   if (!originalUrl) return '';
   const encoded = encodeURIComponent(originalUrl);
-  return `${SERVER_URL}/api/stream?id=${streamId}&u=${username}&p=${password}&src=${encoded}`;
+  return `${SERVER_URL}/api/stream?id=${streamId}&u=${encodeURIComponent(username)}&p=${encodeURIComponent(password)}&src=${encoded}`;
 }
 
 // ─── Formatadores ─────────────────────────────────────────────────────────────
@@ -118,25 +128,23 @@ function fmtLive(canal, num, username, password) {
   const sid = stableId(canal.tvg_id||canal.title||String(num));
   return {
     num,
-    name:            canal.title||canal.name||'Canal',
-    stream_type:     'live',
-    stream_id:       sid,
-    stream_icon:     canal.tvg_logo||'',
-    epg_channel_id:  canal.tvg_id||'',
-    added:           '',
-    category_id:     String(tvGroupId(canal.group||'TV')),
-    custom_sid:      '',
-    direct_source:   streamUrl(canal.url, sid, username, password),
-    tv_archive:      0,
+    name:                canal.title||canal.name||'Canal',
+    stream_type:         'live',
+    stream_id:           sid,
+    stream_icon:         canal.tvg_logo||'',
+    epg_channel_id:      canal.tvg_id||'',
+    added:               '',
+    category_id:         String(tvGroupId(canal.group||'TV')),
+    custom_sid:          '',
+    direct_source:       streamUrl(canal.url, sid, username, password),
+    tv_archive:          0,
     tv_archive_duration: 0,
   };
 }
 
 /**
- * Monta o objeto episodes no formato correto do protocolo Xtream:
- * { "1": [ {ep}, {ep}, ... ] }   ← chave é o número da temporada
- *
- * Cada episódio tem direct_source apontando para o proxy /api/stream.
+ * Monta objeto episodes no formato Xtream:
+ * { "1": [ {ep}, {ep}, ... ] }  ← chave = número da temporada
  */
 function buildEpisodesObj(item, username, password) {
   const rawSeasons = item.seasons
@@ -160,7 +168,6 @@ function buildEpisodesObj(item, username, password) {
 
     episodes[String(sNum)] = (season.episodes||[]).map((ep, i) => {
       const epNum = ep.episode || (i + 1);
-      // ID único por episódio — essencial para players não quebrarem a lista
       const epId  = stableId((item.id||item.title) + '_s' + sNum + '_e' + epNum);
       return {
         id:                  String(epId),
@@ -179,7 +186,6 @@ function buildEpisodesObj(item, username, password) {
         custom_sid:    '',
         added:         '',
         season:        sNum,
-        // direct_source via proxy para contornar bloqueios de CDN/Mediafire
         direct_source: streamUrl(ep.url, epId, username, password),
         locked:        ep.locked || false,
       };
@@ -202,7 +208,18 @@ module.exports = async function handler(req, res) {
 
   if (username !== VALID_USERNAME || password !== VALID_PASSWORD) {
     return res.status(200).json({
-      user_info: { username, password, message:'Wrong username or password', auth:0, status:'Disabled', exp_date:null, is_trial:'0', active_cons:'0', created_at:'', max_connections:'0', allowed_output_formats:['m3u8','ts','rtmp'] },
+      user_info: {
+        username, password,
+        message:                'Wrong username or password',
+        auth:                   0,
+        status:                 'Disabled',
+        exp_date:               null,
+        is_trial:               '0',
+        active_cons:            '0',
+        created_at:             '',
+        max_connections:        '0',
+        allowed_output_formats: ['m3u8','ts','rtmp'],
+      },
       server_info: serverInfo(),
     });
   }
@@ -211,35 +228,46 @@ module.exports = async function handler(req, res) {
   const channels = loadChannels();
 
   if (!action) {
-    return res.status(200).json({ user_info:userInfo(username,password), server_info:serverInfo() });
+    return res.status(200).json({
+      user_info:   userInfo(username, password),
+      server_info: serverInfo(),
+    });
   }
 
   switch (action) {
 
+    // ── Live TV ──────────────────────────────────────────────────────────────
+
     case 'get_live_categories': {
-      const groups = [...new Set(channels.map(c=>c.group||'TV'))];
-      return ok(res, groups.map(g=>({ category_id:String(tvGroupId(g)), category_name:g, parent_id:0 })));
+      const groups = [...new Set(channels.map(c => c.group||'TV'))];
+      return ok(res, groups.map(g => ({
+        category_id:   String(tvGroupId(g)),
+        category_name: g,
+        parent_id:     0,
+      })));
     }
 
     case 'get_live_streams': {
       let list = channels;
-      if (q.category_id) list = list.filter(c=>String(tvGroupId(c.group||'TV'))===String(q.category_id));
-      return ok(res, list.map((c,i)=>fmtLive(c, i+1, username, password)));
+      if (q.category_id) list = list.filter(c => String(tvGroupId(c.group||'TV')) === String(q.category_id));
+      return ok(res, list.map((c, i) => fmtLive(c, i+1, username, password)));
     }
+
+    // ── VOD (Filmes) ──────────────────────────────────────────────────────────
 
     case 'get_vod_categories':
       return ok(res, VOD_CATEGORIES);
 
     case 'get_vod_streams': {
-      if (q.category_id && q.category_id!=='1') return ok(res,[]);
-      return ok(res, (data.filmes||[]).map((f,i)=>fmtVod(f, i+1, username, password)));
+      if (q.category_id && q.category_id !== '1') return ok(res, []);
+      return ok(res, (data.filmes||[]).map((f, i) => fmtVod(f, i+1, username, password)));
     }
 
     case 'get_vod_info': {
       const vid   = Number(q.vod_id);
-      const filme = (data.filmes||[]).find(f=>stableId(f.id||f.title)===vid);
-      if (!filme) return ok(res,{});
-      const ep  = (filme.episodes||[])[0]||{};
+      const filme = (data.filmes||[]).find(f => stableId(f.id||f.title) === vid);
+      if (!filme) return ok(res, {});
+      const ep  = (filme.episodes||[])[0] || {};
       const sid = stableId(filme.id||filme.title);
       return ok(res, {
         info: {
@@ -270,6 +298,8 @@ module.exports = async function handler(req, res) {
       });
     }
 
+    // ── Séries ────────────────────────────────────────────────────────────────
+
     case 'get_series_categories':
       return ok(res, SERIES_CATEGORIES);
 
@@ -290,26 +320,26 @@ module.exports = async function handler(req, res) {
       const sid = Number(q.series_id);
       let found = null, foundCat = '2';
       for (const [catId, key] of Object.entries(SERIES_CAT_MAP)) {
-        found = (data[key]||[]).find(s=>stableId(s.id||s.title)===sid);
+        found = (data[key]||[]).find(s => stableId(s.id||s.title) === sid);
         if (found) { foundCat = catId; break; }
       }
-      if (!found) return ok(res,{});
+      if (!found) return ok(res, {});
 
       const { seasons, episodes } = buildEpisodesObj(found, username, password);
 
       return ok(res, {
         info: {
-          name:            found.title,
-          cover:           found.poster  ||'',
-          plot:            found.overview||'',
-          cast:            (found.cast||[]).map(c=>c.name).join(', '),
-          genre:           (found.genres||[]).join(', '),
-          releaseDate:     found.year    ||'',
-          rating:          String(found.rating||''),
-          rating_5based:   found.rating ? (found.rating/2).toFixed(1) : '0',
-          backdrop_path:   found.backdrop ? [found.backdrop] : [],
-          backdrop:        found.backdrop||'',
-          category_id:     foundCat,
+          name:          found.title,
+          cover:         found.poster  ||'',
+          plot:          found.overview||'',
+          cast:          (found.cast||[]).map(c=>c.name).join(', '),
+          genre:         (found.genres||[]).join(', '),
+          releaseDate:   found.year    ||'',
+          rating:        String(found.rating||''),
+          rating_5based: found.rating ? (found.rating/2).toFixed(1) : '0',
+          backdrop_path: found.backdrop ? [found.backdrop] : [],
+          backdrop:      found.backdrop||'',
+          category_id:   foundCat,
         },
         seasons,
         episodes,
@@ -317,17 +347,43 @@ module.exports = async function handler(req, res) {
     }
 
     default:
-      return ok(res, { error:`Unknown action: ${action}` });
+      return ok(res, { error: `Unknown action: ${action}` });
   }
 };
 
+// ─── Utilitários ──────────────────────────────────────────────────────────────
+
 function ok(res, data) {
-  res.setHeader('Content-Type','application/json; charset=utf-8');
+  res.setHeader('Content-Type', 'application/json; charset=utf-8');
   res.status(200).json(data);
 }
+
 function serverInfo() {
-  return { url:SERVER_URL, port:'80', https_port:'443', server_protocol:'http', rtmp_port:'1935', timezone:'America/Fortaleza', timestamp_now:Math.floor(Date.now()/1000), time_now:new Date().toISOString().replace('T',' ').slice(0,19), process:'streamdev' };
+  return {
+    url:             SERVER_URL,
+    port:            '80',
+    https_port:      '443',
+    server_protocol: 'http',
+    rtmp_port:       '1935',
+    timezone:        'America/Fortaleza',
+    timestamp_now:   Math.floor(Date.now() / 1000),
+    time_now:        new Date().toISOString().replace('T', ' ').slice(0, 19),
+    process:         'streamdev',
+  };
 }
+
 function userInfo(username, password) {
-  return { username, password, message:'Welcome back!', auth:1, status:'Active', exp_date:null, is_trial:'0', active_cons:'0', created_at:String(Math.floor(Date.now()/1000)), max_connections:'1', allowed_output_formats:['m3u8','ts','rtmp'] };
+  return {
+    username,
+    password,
+    message:                'Welcome back!',
+    auth:                   1,
+    status:                 'Active',
+    exp_date:               null,
+    is_trial:               '0',
+    active_cons:            '0',
+    created_at:             String(Math.floor(Date.now() / 1000)),
+    max_connections:        '1',
+    allowed_output_formats: ['m3u8','ts','rtmp'],
+  };
 }
