@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PIRATAFLIX</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="tizen.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header id="header">
+    <div class="logo">PIRATAFLIX</div>
+    <nav id="nav">
+      <a class="nav-link active" data-cat="filmes">🎬 Filmes</a>
+      <a class="nav-link" data-cat="series">📺 Séries</a>
+      <a class="nav-link" data-cat="novelas">💖 Novelas</a>
+      <a class="nav-link" data-cat="animes">👻 Animes</a>
+      <a class="nav-link" data-cat="infantil">🧸 Infantil</a>
+      <a class="nav-link" data-cat="tv">📡 TV Ao Vivo</a>
+    </nav>
+    <div id="search-wrap">
+      <input type="text" id="search-input" placeholder="Buscar..." autocomplete="off">
+    </div>
+  </header>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main id="main">
+    <div id="loading">Carregando catálogo...</div>
+    <div id="catalog" style="display:none"></div>
+    <div id="no-results" style="display:none">Nenhum resultado encontrado.</div>
+  </main>
+
+  <!-- MODAL DE DETALHES -->
+  <div id="modal" style="display:none">
+    <div id="modal-inner">
+      <button id="modal-close" class="modal-close-btn">✕</button>
+      <div id="modal-backdrop"></div>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- PLAYER DE VÍDEO -->
+  <div id="player-wrap" style="display:none">
+    <video id="player" autoplay playsinline></video>
+    <div id="player-controls">
+      <div id="player-title"></div>
+      <div id="player-bar">
+        <button id="btn-play">⏸</button>
+        <button id="btn-back">⏪ 10s</button>
+        <button id="btn-fwd">10s ⏩</button>
+        <div id="progress-wrap">
+          <div id="progress-fill"></div>
+        </div>
+        <span id="time-label">0:00 / 0:00</span>
+        <button id="btn-fs">⛶</button>
+        <button id="btn-next-ep" style="display:none">PRÓXIMO ▶</button>
+        <button id="btn-close-player">✕</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- HLS.JS — fallback para TVs que não suportam HLS nativo -->
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@1.4.12/dist/hls.min.js"></script>
+
+  <script src="tizen-app.js"></script>
+</body>
+</html>
