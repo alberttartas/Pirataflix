@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    { "source": "/player_api.php", "destination": "/api/player_api" },
+    { "source": "/get.php",        "destination": "/api/player_api" },
+    { "source": "/xmltv.php",      "destination": "/api/xmltv" },
+    { "source": "/(.*)",           "destination": "/$1" }
+  ]
+}
