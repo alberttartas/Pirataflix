@@ -4,5 +4,10 @@
     { "source": "/get.php",        "destination": "/api/player_api" },
     { "source": "/xmltv.php",      "destination": "/api/xmltv" },
     { "source": "/(.*)",           "destination": "/$1" }
-  ]
+  ],
+  "functions": {
+    "api/stream.js": {
+      "maxDuration": 30
+    }
+  }
 }
