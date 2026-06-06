@@ -553,6 +553,77 @@ html, body {
   z-index: 2100;
 }
 
+/* ── FOCO D-PAD (navegação por controle remoto) ── */
+
+/* Remove o outline padrão feio do browser */
+* { outline: none; }
+
+/* Foco em cards */
+.card:focus {
+  border-color: #e50914;
+  -webkit-transform: scale(1.08);
+  transform: scale(1.08);
+  z-index: 20;
+  position: relative;
+  box-shadow: 0 0 0 3px #e50914, 0 8px 24px rgba(229,9,20,0.5);
+}
+
+/* Foco nos links de navegação */
+.nav-link:focus {
+  background: #e50914;
+  color: #fff;
+  border-color: #e50914;
+  box-shadow: 0 0 0 2px #fff;
+}
+
+/* Foco em episódios e canais */
+.ep-item:focus,
+.canal-item:focus {
+  background: #2d2d2d;
+  border-color: #e50914;
+  box-shadow: 0 0 0 2px #e50914;
+}
+
+/* Foco em botões do modal */
+.modal-play-btn:focus,
+.modal-close-btn:focus {
+  box-shadow: 0 0 0 3px #fff;
+}
+
+/* Foco nos season headers */
+.season-header:focus {
+  background: #2d2d2d;
+  box-shadow: 0 0 0 2px #e50914;
+}
+
+/* Foco nos botões do player */
+#player-bar button:focus {
+  background: rgba(255,255,255,0.4);
+  box-shadow: 0 0 0 2px #fff;
+}
+
+/* Foco no input de busca */
+#search-input:focus {
+  border-color: #e50914;
+  background: rgba(255,255,255,0.15);
+  box-shadow: 0 0 0 2px #e50914;
+}
+
+/* Indicador visual de qual card está focado — seta abaixo */
+.card:focus::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #e50914;
+}
+
 /* ── RESPONSIVO BÁSICO ── */
 @media (max-width: 768px) {
   .card { width: 130px; }
