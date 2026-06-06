@@ -914,12 +914,185 @@
     } catch (e) {}
   }
 
+  // ─── FULLSCREEN AUTOMÁTICO ───────────────────────────────────────────────
+  // Tizen exige gesto do usuário para entrar em fullscreen.
+  // Tentamos na primeira interação (clique, tecla, toque).
+
+  var _fsRequested = false;
+
+  function requestAppFullscreen() {
+    if (_fsRequested) return;
+    _fsRequested = true;
+    var el = document.documentElement;
+    var fn = el.requestFullscreen || el.webkitRequestFullscreen || el.mozRequestFullScreen;
+    if (fn) fn.call(el);
+  }
+
+  function bindFullscreenTriggers() {
+    // Tenta assim que o usuário fizer qualquer interação
+    document.addEventListener('click',     requestAppFullscreen, { once: true });
+    document.addEventListener('keydown',   requestAppFullscreen, { once: true });
+    document.addEventListener('touchstart', requestAppFullscreen, { once: true, passive: true });
+  }
+
+  // ─── NAVEGAÇÃO D-PAD (FOCO ESPACIAL) ─────────────────────────────────────
+  //
+  // Como funciona:
+  //  - Todos os elementos clicáveis têm tabindex="0"
+  //  - As setas do controle remoto movem o foco para o elemento
+  //    mais próximo na direção pressionada
+  //  - Enter (keyCode 13) confirma / abre o item focado
+  //  - O elemento focado recebe destaque visual via CSS :focus
+
+  function getFocusableElements() {
+    // Pega todos os elementos navegáveis que estão visíveis
+    var all = document.querySelectorAll(
+      '.card, .nav-link, .ep-item:not(.locked), .canal-item, ' +
+      '.season-header, .modal-play-btn, .modal-close-btn, ' +
+      '#btn-play, #btn-back, #btn-fwd, #btn-fs, #btn-next-ep, #btn-close-player, ' +
+      '#search-input'
+    );
+    var visible = [];
+    for (var i = 0; i < all.length; i++) {
+      var el = all[i];
+      // Ignorar elementos dentro de containers ocultos
+      var rect = el.getBoundingClientRect();
+      if (rect.width > 0 && rect.height > 0) {
+        visible.push(el);
+      }
+    }
+    return visible;
+  }
+
+  function getRect(el) {
+    var r = el.getBoundingClientRect();
+    return {
+      cx: r.left + r.width  / 2,
+      cy: r.top  + r.height / 2,
+      left: r.left, top: r.top,
+      right: r.right, bottom: r.bottom,
+      width: r.width, height: r.height
+    };
+  }
+
+  function findNearest(current, direction) {
+    var elements = getFocusableElements();
+    if (!elements.length) return null;
+
+    var cr = getRect(current);
+    var best = null;
+    var bestScore = Infinity;
+
+    for (var i = 0; i < elements.length; i++) {
+      var el = elements[i];
+      if (el === current) continue;
+
+      var er = getRect(el);
+      var dx = er.cx - cr.cx;
+      var dy = er.cy - cr.cy;
+
+      // Verificar se está na direção certa
+      var inDirection = false;
+      switch (direction) {
+        case 'right': inDirection = dx >  20; break;
+        case 'left':  inDirection = dx < -20; break;
+        case 'down':  inDirection = dy >  10; break;
+        case 'up':    inDirection = dy < -10; break;
+      }
+      if (!inDirection) continue;
+
+      // Score: distância euclidiana + penalidade por desvio lateral
+      var primary, secondary;
+      if (direction === 'left' || direction === 'right') {
+        primary   = Math.abs(dx);
+        secondary = Math.abs(dy);
+      } else {
+        primary   = Math.abs(dy);
+        secondary = Math.abs(dx);
+      }
+      var score = primary + secondary * 2;
+
+      if (score < bestScore) {
+        bestScore = score;
+        best = el;
+      }
+    }
+    return best;
+  }
+
+  function bindDpad() {
+    document.addEventListener('keydown', function (e) {
+      var key = e.keyCode || e.which;
+
+      // Setas — só quando não está no player
+      var playerWrap = document.getElementById('player-wrap');
+      if (playerWrap && playerWrap.style.display !== 'none') return;
+
+      var dir = null;
+      if (key === 37) dir = 'left';
+      if (key === 39) dir = 'right';
+      if (key === 38) dir = 'up';
+      if (key === 40) dir = 'down';
+
+      if (!dir) return;
+
+      var focused = document.activeElement;
+
+      // Se o foco está no search-input, não intercepta as setas
+      if (focused && focused.id === 'search-input') return;
+
+      e.preventDefault();
+
+      // Se nenhum elemento está focado, focar no primeiro card
+      if (!focused || focused === document.body) {
+        var els = getFocusableElements();
+        if (els.length) els[0].focus();
+        return;
+      }
+
+      var next = findNearest(focused, dir);
+      if (next) {
+        next.focus();
+
+        // Scroll automático para manter o item focado visível
+        if (next.scrollIntoView) {
+          next.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+        }
+      }
+    });
+
+    // Enter / OK no controle confirma o elemento focado
+    document.addEventListener('keydown', function (e) {
+      var key = e.keyCode || e.which;
+      if (key !== 13) return;
+
+      var focused = document.activeElement;
+      if (!focused || focused === document.body) return;
+      if (focused.id === 'search-input') return; // Enter no search não precisa
+
+      // Simula clique no elemento focado
+      focused.click();
+    });
+
+    // Ao carregar, focar no primeiro nav-link
+    setTimeout(function () {
+      var first = document.querySelector('.nav-link');
+      if (first) first.focus();
+    }, 800);
+  }
+
   // ─── START ───────────────────────────────────────────────────────────────
 
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
+    document.addEventListener('DOMContentLoaded', function () {
+      init();
+      bindFullscreenTriggers();
+      bindDpad();
+    });
   } else {
     init();
+    bindFullscreenTriggers();
+    bindDpad();
   }
 
 })();
