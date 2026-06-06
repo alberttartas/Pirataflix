@@ -1,20 +1,18 @@
 /**
- * Pirataflix — Stream Proxy
+ * Pirataflix — Stream Proxy (corrigido)
  * /api/stream?id=X&u=USER&p=PASS&src=URL_ENCODED
  *
- * Resolve bloqueios de Mediafire e CDNs que recusam requests diretos de players.
- * Faz redirect 302 com headers de browser para a URL original,
- * ou proxy transparente quando redirect não for suficiente.
+ * Resolve redirects (Mediafire, CDNs) e devolve 302 para a URL final.
+ * O player busca o vídeo diretamente do CDN — sem pipe, sem timeout.
  */
 
-const https  = require('https');
-const http   = require('http');
+const https   = require('https');
+const http    = require('http');
 const { URL } = require('url');
 
 const VALID_USERNAME = process.env.XTREAM_USERNAME || 'pirataflix';
 const VALID_PASSWORD = process.env.XTREAM_PASSWORD || 'pirataflix';
 
-// Headers que simulam um browser real — necessário para Mediafire e cdn-novflix
 const BROWSER_HEADERS = {
   'User-Agent':      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
   'Accept':          'video/webm,video/mp4,video/*;q=0.9,*/*;q=0.8',
@@ -26,34 +24,27 @@ const BROWSER_HEADERS = {
 module.exports = async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin',  '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, HEAD, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Range');
   if (req.method === 'OPTIONS') { res.status(204).end(); return; }
 
   const { u, p, src } = req.query;
 
-  // Autenticação básica
   if (u !== VALID_USERNAME || p !== VALID_PASSWORD) {
-    res.status(403).end('Forbidden');
-    return;
+    return res.status(403).end('Forbidden');
   }
-
-  if (!src) {
-    res.status(400).end('Missing src');
-    return;
-  }
+  if (!src) return res.status(400).end('Missing src');
 
   let originalUrl;
   try {
     originalUrl = decodeURIComponent(src);
-    new URL(originalUrl); // valida
+    new URL(originalUrl); // valida formato
   } catch {
-    res.status(400).end('Invalid src URL');
-    return;
+    return res.status(400).end('Invalid src URL');
   }
 
-  // Para Mediafire: a URL de download já é direta (download2XXX.mediafire.com)
-  // mas bloqueia sem Referer correto. Adicionamos o referer do Mediafire.
   const isMediafire  = originalUrl.includes('mediafire.com');
   const isCdnNovflix = originalUrl.includes('cdn-novflix.com') || originalUrl.includes('novflix');
+  const isGoogleDrive = originalUrl.includes('drive.google.com') || originalUrl.includes('docs.google.com');
 
   const extraHeaders = {};
   if (isMediafire) {
@@ -65,38 +56,95 @@ module.exports = async function handler(req, res) {
     extraHeaders['Origin']  = 'https://cdn-novflix.com';
   }
 
-  const reqHeaders = {
-    ...BROWSER_HEADERS,
-    ...extraHeaders,
-  };
-
-  // Repassa Range se o player mandou (necessário para seek)
-  if (req.headers['range']) {
-    reqHeaders['Range'] = req.headers['range'];
-  }
+  const reqHeaders = { ...BROWSER_HEADERS, ...extraHeaders };
 
   try {
-    await proxyStream(originalUrl, reqHeaders, req, res, 0);
+    // Resolve todos os redirects e obtém a URL final
+    const finalUrl = await resolveRedirects(originalUrl, reqHeaders, 0);
+
+    // Google Drive: precisa de pipe pois requer cookies que o player não tem
+    if (isGoogleDrive) {
+      return await proxyPipe(finalUrl, reqHeaders, req, res, 0);
+    }
+
+    // Para todos os outros: 302 direto ao CDN
+    // O player conecta diretamente — sem timeout na Vercel
+    res.setHeader('Location', finalUrl);
+    res.setHeader('Cache-Control', 'no-store');
+    return res.status(302).end();
+
   } catch (err) {
     if (!res.headersSent) {
-      res.status(502).end('Stream proxy error: ' + err.message);
+      return res.status(502).end('Proxy error: ' + err.message);
     }
   }
 };
 
 /**
- * Faz proxy transparente do stream, seguindo redirects manualmente
- * para manter controle dos headers (fetch/axios perdem Range em redirects).
+ * Segue redirects usando HEAD (não baixa o body).
+ * Retorna a URL final após todos os redirects.
  */
-function proxyStream(url, headers, req, res, redirectCount) {
+function resolveRedirects(url, headers, count) {
   return new Promise((resolve, reject) => {
-    if (redirectCount > 5) { reject(new Error('Too many redirects')); return; }
+    if (count > 10) return reject(new Error('Too many redirects'));
 
     let parsed;
-    try { parsed = new URL(url); }
-    catch (e) { reject(e); return; }
+    try { parsed = new URL(url); } catch (e) { return reject(e); }
 
-    const lib     = parsed.protocol === 'https:' ? https : http;
+    const lib = parsed.protocol === 'https:' ? https : http;
+    const options = {
+      hostname: parsed.hostname,
+      port:     parsed.port || (parsed.protocol === 'https:' ? 443 : 80),
+      path:     parsed.pathname + parsed.search,
+      method:   'HEAD',
+      headers,
+    };
+
+    const proxyReq = lib.request(options, proxyRes => {
+      proxyRes.resume(); // descarta body
+
+      const status = proxyRes.statusCode;
+
+      // Segue redirect
+      if ([301, 302, 303, 307, 308].includes(status) && proxyRes.headers.location) {
+        const location = proxyRes.headers.location;
+        const next = location.startsWith('http')
+          ? location
+          : new URL(location, url).href;
+        return resolve(resolveRedirects(next, headers, count + 1));
+      }
+
+      // Chegou na URL final (200, 206, 403, qualquer outra coisa)
+      // Devolve a URL para o caller fazer o redirect
+      resolve(url);
+    });
+
+    proxyReq.on('error', reject);
+    proxyReq.setTimeout(8000, () => {
+      proxyReq.destroy(new Error('Timeout ao resolver redirect'));
+    });
+    proxyReq.end();
+  });
+}
+
+/**
+ * Proxy com pipe — usado apenas quando o redirect não é suficiente
+ * (ex: Google Drive que exige cookies de sessão).
+ * Segue redirects manualmente mantendo os headers (incluindo Range).
+ */
+function proxyPipe(url, headers, req, res, count) {
+  return new Promise((resolve, reject) => {
+    if (count > 10) return reject(new Error('Too many redirects'));
+
+    let parsed;
+    try { parsed = new URL(url); } catch (e) { return reject(e); }
+
+    // Repassa Range para suporte a seek
+    if (req.headers['range']) {
+      headers = { ...headers, 'Range': req.headers['range'] };
+    }
+
+    const lib = parsed.protocol === 'https:' ? https : http;
     const options = {
       hostname: parsed.hostname,
       port:     parsed.port || (parsed.protocol === 'https:' ? 443 : 80),
@@ -108,17 +156,17 @@ function proxyStream(url, headers, req, res, redirectCount) {
     const proxyReq = lib.request(options, proxyRes => {
       const status = proxyRes.statusCode;
 
-      // Seguir redirects (301/302/303/307/308)
-      if ([301,302,303,307,308].includes(status) && proxyRes.headers.location) {
-        proxyRes.resume(); // descarta o body
-        const nextUrl = proxyRes.headers.location.startsWith('http')
-          ? proxyRes.headers.location
-          : new URL(proxyRes.headers.location, url).href;
-        resolve(proxyStream(nextUrl, headers, req, res, redirectCount + 1));
-        return;
+      // Segue redirect mantendo os headers
+      if ([301, 302, 303, 307, 308].includes(status) && proxyRes.headers.location) {
+        proxyRes.resume();
+        const location = proxyRes.headers.location;
+        const next = location.startsWith('http')
+          ? location
+          : new URL(location, url).href;
+        return resolve(proxyPipe(next, headers, req, res, count + 1));
       }
 
-      // Propaga status e headers relevantes para o player
+      // Propaga status e headers relevantes
       const passHeaders = [
         'content-type', 'content-length', 'content-range',
         'accept-ranges', 'last-modified', 'etag',
@@ -130,12 +178,14 @@ function proxyStream(url, headers, req, res, redirectCount) {
       res.setHeader('Cache-Control', 'no-store');
 
       proxyRes.pipe(res);
-      proxyRes.on('end', resolve);
+      proxyRes.on('end',   resolve);
       proxyRes.on('error', reject);
     });
 
     proxyReq.on('error', reject);
-    proxyReq.setTimeout(15000, () => { proxyReq.destroy(new Error('Timeout')); });
+    proxyReq.setTimeout(15000, () => {
+      proxyReq.destroy(new Error('Timeout no pipe'));
+    });
     proxyReq.end();
   });
 }
