@@ -25155,3 +25155,6 @@ https://sdnew.x1co.com.br/hls/stream.m3u8
 #EXTINF:-1 group-title="📺 Geral" tvg-id="TVFRONTEIRA.BR@SD" tvg-logo="https://i.imgur.com/NtcoW6G.png",TV Fronteira (480i)
 https://tvfronteira.brasilstream.com.br/hls/tvfronteira/index.m3u8
 
+#EXTINF:-1 group-title="🎨 Animação" tvg-id="SLIME.BR@SD" tvg-logo="https://x1co.com.br/slimelogo.png",Slime (576p) [Not 24/7]
+https://slime.x1co.com.br/hls/stream.m3u8
+

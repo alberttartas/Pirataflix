@@ -17985,5 +17985,20 @@
         "title": "AO VIVO"
       }
     ]
+  },
+  {
+    "id": "Slime.br@SD",
+    "type": "tv",
+    "title": "Slime (576p) [Not 24/7]",
+    "tvg_id": "Slime.br@SD",
+    "tvg_logo": "https://x1co.com.br/slimelogo.png",
+    "group": "🎨 Animação",
+    "url": "https://slime.x1co.com.br/hls/stream.m3u8",
+    "episodes": [
+      {
+        "url": "https://slime.x1co.com.br/hls/stream.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
   }
 ]
