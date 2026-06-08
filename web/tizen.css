@@ -7,7 +7,12 @@
    - Sem animações complexas
    ============================================= */
 
-* { margin: 0; padding: 0; -webkit-box-sizing: border-box; box-sizing: border-box; }
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
 html, body {
   background: #141414;
@@ -21,7 +26,9 @@ html, body {
 /* ── HEADER ── */
 #header {
   position: fixed;
-  top: 0; left: 0; right: 0;
+  top: 0;
+  left: 0;
+  right: 0;
   background: #0a0a0a;
   padding: 12px 30px;
   z-index: 500;
@@ -29,6 +36,7 @@ html, body {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
+  -webkit-box-align: center;
   -webkit-align-items: center;
   align-items: center;
   -webkit-flex-wrap: wrap;
@@ -53,6 +61,7 @@ html, body {
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
   gap: 6px;
+  -webkit-box-flex: 1;
   -webkit-flex: 1;
   flex: 1;
 }
@@ -69,8 +78,8 @@ html, body {
   -webkit-transition: background 0.2s;
   transition: background 0.2s;
   display: inline-block;
-  outline: none;
 }
+
 .nav-link:hover,
 .nav-link:focus,
 .nav-link.active {
@@ -83,6 +92,7 @@ html, body {
   -webkit-flex-shrink: 0;
   flex-shrink: 0;
 }
+
 #search-input {
   background: rgba(255,255,255,0.1);
   border: 1px solid rgba(255,255,255,0.2);
@@ -91,8 +101,8 @@ html, body {
   padding: 7px 16px;
   font-size: 0.9rem;
   width: 200px;
-  outline: none;
 }
+
 #search-input:focus {
   border-color: #e50914;
   background: rgba(255,255,255,0.15);
@@ -112,8 +122,6 @@ html, body {
 }
 
 /* ── CATALOG ── */
-#catalog {}
-
 .section-title {
   font-size: 1.3rem;
   color: #e5e5e5;
@@ -125,9 +133,10 @@ html, body {
 
 /* Grade de cards usando float — compatível com Chromium 38 */
 .cards-row {
-  overflow: hidden; /* clearfix */
+  overflow: hidden;
   margin: 0 -8px 8px;
 }
+
 .cards-row:after {
   content: '';
   display: table;
@@ -145,9 +154,8 @@ html, body {
   border: 2px solid transparent;
   -webkit-transition: border-color 0.2s, -webkit-transform 0.2s;
   transition: border-color 0.2s, transform 0.2s;
-  outline: none;
-  /* tabindex para navegação D-pad */
 }
+
 .card:hover,
 .card:focus {
   border-color: #e50914;
@@ -160,6 +168,7 @@ html, body {
 .card img {
   width: 100%;
   height: 230px;
+  -o-object-fit: cover;
   object-fit: cover;
   display: block;
   background: #2a2a2a;
@@ -168,6 +177,7 @@ html, body {
 .card-info {
   padding: 8px 10px 10px;
 }
+
 .card-title {
   font-size: 0.82rem;
   font-weight: bold;
@@ -177,10 +187,12 @@ html, body {
   text-overflow: ellipsis;
   margin-bottom: 4px;
 }
+
 .card-meta {
   font-size: 0.74rem;
   color: #888;
 }
+
 .card-rating {
   color: #ffd700;
 }
@@ -189,8 +201,10 @@ html, body {
 .card-tv {
   width: 180px;
 }
+
 .card-tv img {
   height: 110px;
+  -o-object-fit: contain;
   object-fit: contain;
   padding: 8px;
   background: #111;
@@ -199,7 +213,10 @@ html, body {
 /* ── MODAL ── */
 #modal {
   position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: rgba(0,0,0,0.92);
   z-index: 800;
   overflow-y: auto;
@@ -217,17 +234,19 @@ html, body {
 
 .modal-close-btn {
   position: absolute;
-  top: 12px; right: 12px;
+  top: 12px;
+  right: 12px;
   background: rgba(0,0,0,0.7);
   color: #fff;
   border: none;
-  width: 36px; height: 36px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   font-size: 16px;
   cursor: pointer;
   z-index: 10;
-  outline: none;
 }
+
 .modal-close-btn:hover,
 .modal-close-btn:focus {
   background: #e50914;
@@ -255,6 +274,7 @@ html, body {
 .modal-badges {
   margin-bottom: 10px;
 }
+
 .badge {
   display: inline-block;
   background: rgba(255,255,255,0.12);
@@ -265,8 +285,16 @@ html, body {
   margin-right: 6px;
   margin-bottom: 4px;
 }
-.badge-type { background: rgba(229,9,20,0.3); color: #ff8a8a; }
-.badge-rating { background: rgba(255,193,7,0.2); color: #ffd54f; }
+
+.badge-type {
+  background: rgba(229,9,20,0.3);
+  color: #ff8a8a;
+}
+
+.badge-rating {
+  background: rgba(255,193,7,0.2);
+  color: #ffd54f;
+}
 
 .modal-overview {
   font-size: 0.88rem;
@@ -284,9 +312,9 @@ html, body {
   font-size: 0.95rem;
   font-weight: bold;
   cursor: pointer;
-  outline: none;
   margin-bottom: 20px;
 }
+
 .modal-play-btn:hover,
 .modal-play-btn:focus {
   background: #f40612;
@@ -311,6 +339,7 @@ html, body {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
+  -webkit-box-align: center;
   -webkit-align-items: center;
   align-items: center;
   gap: 12px;
@@ -320,15 +349,16 @@ html, body {
   margin-bottom: 6px;
   cursor: pointer;
   border: 1px solid transparent;
-  outline: none;
   -webkit-transition: background 0.2s;
   transition: background 0.2s;
 }
+
 .ep-item:hover,
 .ep-item:focus {
   background: #2d2d2d;
   border-color: rgba(229,9,20,0.4);
 }
+
 .ep-item.locked {
   opacity: 0.5;
   cursor: default;
@@ -337,22 +367,31 @@ html, body {
 .ep-num {
   -webkit-flex-shrink: 0;
   flex-shrink: 0;
-  width: 32px; height: 32px;
+  width: 32px;
+  height: 32px;
   background: #e50914;
   color: #fff;
   border-radius: 50%;
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
+  -webkit-box-align: center;
   -webkit-align-items: center;
   align-items: center;
+  -webkit-box-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
   font-size: 0.78rem;
   font-weight: bold;
 }
 
-.ep-info { -webkit-flex: 1; flex: 1; min-width: 0; }
+.ep-info {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  min-width: 0;
+}
+
 .ep-title {
   font-size: 0.87rem;
   font-weight: bold;
@@ -361,7 +400,12 @@ html, body {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.ep-date { font-size: 0.74rem; color: #888; margin-top: 2px; }
+
+.ep-date {
+  font-size: 0.74rem;
+  color: #888;
+  margin-top: 2px;
+}
 
 .ep-play {
   -webkit-flex-shrink: 0;
@@ -380,24 +424,43 @@ html, body {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
+  -webkit-box-align: center;
   -webkit-align-items: center;
   align-items: center;
   gap: 10px;
-  outline: none;
   -webkit-transition: background 0.2s;
   transition: background 0.2s;
 }
+
 .season-header:hover,
-.season-header:focus { background: #2d2d2d; }
-.season-label { -webkit-flex: 1; flex: 1; font-weight: bold; color: #e5e5e5; }
-.season-count { font-size: 0.78rem; color: #888; }
-.season-chevron { font-size: 0.75rem; color: #888; }
+.season-header:focus {
+  background: #2d2d2d;
+}
+
+.season-label {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  font-weight: bold;
+  color: #e5e5e5;
+}
+
+.season-count {
+  font-size: 0.78rem;
+  color: #888;
+}
+
+.season-chevron {
+  font-size: 0.75rem;
+  color: #888;
+}
 
 /* Canal TV na lista */
 .canal-item {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
+  -webkit-box-align: center;
   -webkit-align-items: center;
   align-items: center;
   gap: 12px;
@@ -407,40 +470,57 @@ html, body {
   margin-bottom: 6px;
   cursor: pointer;
   border: 1px solid transparent;
-  outline: none;
 }
+
 .canal-item:hover,
 .canal-item:focus {
   background: #2d2d2d;
   border-color: rgba(229,9,20,0.4);
 }
+
 .canal-logo {
-  width: 50px; height: 36px;
+  width: 50px;
+  height: 36px;
+  -o-object-fit: contain;
   object-fit: contain;
   background: #111;
   border-radius: 4px;
   -webkit-flex-shrink: 0;
   flex-shrink: 0;
 }
+
 .canal-name {
   font-size: 0.88rem;
   color: #e5e5e5;
+  -webkit-box-flex: 1;
   -webkit-flex: 1;
   flex: 1;
 }
+
 .live-dot {
   color: #e50914;
   font-size: 0.75rem;
   -webkit-animation: blink 1.4s infinite;
   animation: blink 1.4s infinite;
 }
-@-webkit-keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
-@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
+
+@-webkit-keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
 
 /* ── PLAYER ── */
 #player-wrap {
   position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: #000;
   z-index: 2000;
 }
@@ -450,18 +530,21 @@ html, body {
   height: 100%;
   background: #000;
   display: block;
-  outline: none;
 }
 
 #player-controls {
   position: absolute;
-  bottom: 0; left: 0; right: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0,0,0,0.92)), to(transparent));
   background: linear-gradient(transparent, rgba(0,0,0,0.92));
   padding: 20px 20px 16px;
   opacity: 0;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
 }
+
 #player-controls.visible {
   opacity: 1;
 }
@@ -480,6 +563,7 @@ html, body {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
+  -webkit-box-align: center;
   -webkit-align-items: center;
   align-items: center;
   gap: 10px;
@@ -495,22 +579,35 @@ html, body {
   border-radius: 4px;
   font-size: 0.88rem;
   cursor: pointer;
-  outline: none;
   -webkit-transition: background 0.2s;
   transition: background 0.2s;
   -webkit-flex-shrink: 0;
   flex-shrink: 0;
 }
+
 #player-bar button:hover,
 #player-bar button:focus {
   background: rgba(255,255,255,0.3);
 }
-#btn-close-player { background: rgba(229,9,20,0.5); }
-#btn-close-player:hover { background: #e50914; }
-#btn-next-ep { background: #e50914; }
-#btn-next-ep:hover { background: #f40612; }
+
+#btn-close-player {
+  background: rgba(229,9,20,0.5);
+}
+
+#btn-close-player:hover {
+  background: #e50914;
+}
+
+#btn-next-ep {
+  background: #e50914;
+}
+
+#btn-next-ep:hover {
+  background: #f40612;
+}
 
 #progress-wrap {
+  -webkit-box-flex: 1;
   -webkit-flex: 1;
   flex: 1;
   height: 6px;
@@ -520,6 +617,7 @@ html, body {
   position: relative;
   min-width: 60px;
 }
+
 #progress-fill {
   height: 100%;
   background: #e50914;
@@ -540,9 +638,10 @@ html, body {
 /* Mensagem OSD (overlay no player) */
 .osd-msg {
   position: absolute;
-  top: 50%; left: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   background: rgba(0,0,0,0.75);
   color: #fff;
   font-size: 1.4rem;
@@ -556,6 +655,7 @@ html, body {
 /* Card "Continuar Assistindo" */
 .card-cw img {
   height: 230px;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 
@@ -567,10 +667,13 @@ html, body {
 /* Barra de progresso na base da imagem */
 .cw-progress-bar {
   position: absolute;
-  bottom: 0; left: 0; right: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   height: 4px;
   background: rgba(255,255,255,0.25);
 }
+
 .cw-progress-fill {
   height: 100%;
   background: #e50914;
@@ -579,7 +682,8 @@ html, body {
 /* Badge com tempo assistido */
 .cw-time-badge {
   position: absolute;
-  bottom: 8px; right: 6px;
+  bottom: 8px;
+  right: 6px;
   background: rgba(0,0,0,0.75);
   color: #fff;
   font-size: 0.7rem;
@@ -590,18 +694,22 @@ html, body {
 /* Ícone play no centro ao focar */
 .cw-play-icon {
   position: absolute;
-  top: 50%; left: 50%;
+  top: 50%;
+  left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   background: rgba(229,9,20,0.85);
   color: #fff;
-  width: 44px; height: 44px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
+  -webkit-box-align: center;
   -webkit-align-items: center;
   align-items: center;
+  -webkit-box-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
   font-size: 1rem;
@@ -609,6 +717,7 @@ html, body {
   -webkit-transition: opacity 0.2s;
   transition: opacity 0.2s;
 }
+
 .card-cw:hover .cw-play-icon,
 .card-cw:focus .cw-play-icon {
   opacity: 1;
@@ -616,16 +725,21 @@ html, body {
 
 /* ── FOCO D-PAD (navegação por controle remoto) ── */
 
-/* Remove o outline padrão feio do browser */
-* { outline: none; }
+/* Remove o outline padrão do browser e adiciona estilo consistente */
+:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0 0 3px #e50914, 0 0 0 6px rgba(229,9,20,0.3);
+  box-shadow: 0 0 0 3px #e50914, 0 0 0 6px rgba(229,9,20,0.3);
+  z-index: 9999;
+  position: relative;
+}
 
 /* Foco em cards */
 .card:focus {
   border-color: #e50914;
   -webkit-transform: scale(1.08);
   transform: scale(1.08);
-  z-index: 20;
-  position: relative;
+  -webkit-box-shadow: 0 0 0 3px #e50914, 0 8px 24px rgba(229,9,20,0.5);
   box-shadow: 0 0 0 3px #e50914, 0 8px 24px rgba(229,9,20,0.5);
 }
 
@@ -634,7 +748,6 @@ html, body {
   background: #e50914;
   color: #fff;
   border-color: #e50914;
-  box-shadow: 0 0 0 2px #fff;
 }
 
 /* Foco em episódios e canais */
@@ -642,32 +755,31 @@ html, body {
 .canal-item:focus {
   background: #2d2d2d;
   border-color: #e50914;
-  box-shadow: 0 0 0 2px #e50914;
 }
 
 /* Foco em botões do modal */
 .modal-play-btn:focus,
 .modal-close-btn:focus {
-  box-shadow: 0 0 0 3px #fff;
+  -webkit-box-shadow: 0 0 0 3px #fff, 0 0 0 6px rgba(229,9,20,0.5);
+  box-shadow: 0 0 0 3px #fff, 0 0 0 6px rgba(229,9,20,0.5);
 }
 
 /* Foco nos season headers */
 .season-header:focus {
   background: #2d2d2d;
-  box-shadow: 0 0 0 2px #e50914;
 }
 
 /* Foco nos botões do player */
 #player-bar button:focus {
   background: rgba(255,255,255,0.4);
-  box-shadow: 0 0 0 2px #fff;
+  -webkit-box-shadow: 0 0 0 2px #fff, 0 0 0 4px rgba(229,9,20,0.5);
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px rgba(229,9,20,0.5);
 }
 
 /* Foco no input de busca */
 #search-input:focus {
   border-color: #e50914;
   background: rgba(255,255,255,0.15);
-  box-shadow: 0 0 0 2px #e50914;
 }
 
 /* Indicador visual de qual card está focado — seta abaixo */
@@ -685,18 +797,38 @@ html, body {
   border-top: 8px solid #e50914;
 }
 
+/* Ajuste para não quebrar layout com pseudo-elemento */
+.card:focus {
+  position: relative;
+}
+
 /* ── RESPONSIVO BÁSICO ── */
 @media (max-width: 768px) {
-  .card { width: 130px; }
-  .card img { height: 190px; }
-  #main { padding: 80px 12px 30px; }
-  #header { padding: 10px 14px; }
+  .card {
+    width: 130px;
+  }
+  .card img {
+    height: 190px;
+  }
+  #main {
+    padding: 80px 12px 30px;
+  }
+  #header {
+    padding: 10px 14px;
+  }
 }
 
 @media (max-width: 480px) {
-  .card { width: 110px; margin: 5px; }
-  .card img { height: 160px; }
+  .card {
+    width: 110px;
+    margin: 5px;
+  }
+  .card img {
+    height: 160px;
+  }
 }
+
+/* Garantia de focus visível em todos os elementos interativos */
 .card,
 .nav-link,
 .ep-item,
@@ -706,9 +838,47 @@ html, body {
 .season-header,
 #search-input,
 #player-bar button {
-    outline: none;
+  outline: none;
 }
-:focus {
-    box-shadow: 0 0 0 4px #fff !important;
-    z-index: 9999;
+
+/* Correção para scroll em telas pequenas */
+@media (max-width: 768px) {
+  #modal-body {
+    padding: 15px;
+  }
+  
+  .ep-num {
+    width: 28px;
+    height: 28px;
+    font-size: 0.7rem;
+  }
+  
+  .modal-title {
+    font-size: 1.3rem;
+  }
+}
+
+/* Melhor contraste para textos */
+::selection {
+  background: #e50914;
+  color: #fff;
+}
+
+/* Scrollbar personalizada (opcional, compatível) */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1f1f1f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e50914;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #f40612;
 }
