@@ -1,19 +1,6 @@
 /*
  * PIRATAFLIX — tizen-app.js
  * Compatível com Samsung Tizen (Chromium 38–56)
- *
- * Regras aplicadas:
- *  - SEM const / let  → var
- *  - SEM arrow functions  → function(){}
- *  - SEM template literals  → concatenação
- *  - SEM fetch()  → XMLHttpRequest
- *  - SEM Promise  → callbacks
- *  - SEM CSS Grid  → flexbox/float no CSS
- *  - SEM backdrop-filter
- *  - SEM history.pushState
- *  - SEM ServiceWorker
- *  - SEM Spread operator
- *  - HLS nativo quando disponível, hls.js como fallback
  */
 
 (function () {
@@ -387,6 +374,15 @@
 
     // Bind episódios
     bindEpClicks(body, itemId, cat);
+
+    // Foco no botão de play do modal
+    setTimeout(function () {
+      var playBtn = document.getElementById('modal-play-btn');
+      if (playBtn) {
+        currentFocusIndex = 1;
+        playBtn.focus();
+      }
+    }, 100);
   }
 
   function openTvModal(idx) {
@@ -454,10 +450,23 @@
         el.onkeydown = function (e) { if (e.keyCode === 13) doPlay(); };
       })(canalItems[ci2]);
     }
+
+    // Foco no botão de play do modal
+    setTimeout(function () {
+      var playBtn = document.getElementById('modal-play-btn');
+      if (playBtn) {
+        currentFocusIndex = 1;
+        playBtn.focus();
+      }
+    }, 100);
   }
 
   function closeModal() {
     document.getElementById('modal').style.display = 'none';
+
+    setTimeout(function () {
+      focusIndex(currentFocusIndex);
+    }, 100);
   }
 
   // ─── EPISÓDIOS HTML ───────────────────────────────────────────────────────
@@ -705,6 +714,10 @@
       renderContinueWatching(frag);
       catalog.insertBefore(frag, catalog.firstChild);
     }
+
+    setTimeout(function () {
+      focusIndex(currentFocusIndex);
+    }, 100);
   }
 
   // ─── CONTROLES DO PLAYER ─────────────────────────────────────────────────
@@ -954,6 +967,11 @@
           var cat = link.getAttribute('data-cat');
           document.getElementById('search-input').value = '';
           renderCatalog(cat);
+          
+          setTimeout(function () {
+            currentFocusIndex = 0;
+            focusIndex(0);
+          }, 100);
         };
         link.onkeydown = function (e) {
           if (e.keyCode === 13) link.onclick();
@@ -1053,13 +1071,13 @@
   }
 
   // ────────────────────────────────────────────────────────
-// D-PAD TIZEN (VERSÃO ROBUSTA)
-// Navegação por índice e colunas
-// ────────────────────────────────────────────────────────
+  // D-PAD TIZEN (VERSÃO ROBUSTA)
+  // Navegação por índice e colunas
+  // ────────────────────────────────────────────────────────
 
-var currentFocusIndex = 0;
+  var currentFocusIndex = 0;
 
-function getFocusables() {
+  function getFocusables() {
 
     var modal  = document.getElementById('modal');
     var player = document.getElementById('player-wrap');
@@ -1096,17 +1114,17 @@ function getFocusables() {
             '.card'
         )
     );
-}
+  }
 
-function toArray(nodeList) {
+  function toArray(nodeList) {
     var arr = [];
     for (var i = 0; i < nodeList.length; i++) {
         arr.push(nodeList[i]);
     }
     return arr;
-}
+  }
 
-function focusIndex(idx) {
+  function focusIndex(idx) {
 
     var els = getFocusables();
 
@@ -1124,18 +1142,11 @@ function focusIndex(idx) {
     el.focus();
 
     try {
-        el.scrollIntoView({
-            block: 'center',
-            inline: 'center'
-        });
-    } catch (e) {
-        try {
-            el.scrollIntoView(false);
-        } catch (err) {}
-    }
-}
+        el.scrollIntoView(false);
+    } catch (e) {}
+  }
 
-function getColumns() {
+  function getColumns() {
 
     var width = window.innerWidth;
 
@@ -1145,44 +1156,40 @@ function getColumns() {
     if (width >= 1000) return 6;
 
     return 5;
-}
+  }
 
-function moveFocus(direction) {
+  function moveFocus(direction) {
 
     var els = getFocusables();
 
     if (!els.length) return;
 
     var idx = currentFocusIndex;
+    var focused = els[idx];
 
-    var columns = getColumns();
-
-    switch (direction) {
-
-        case 'left':
-            idx--;
-            break;
-
-        case 'right':
-            idx++;
-            break;
-
-        case 'up':
-            idx -= columns;
-            break;
-
-        case 'down':
-            idx += columns;
-            break;
+    // Navegação especial para itens de menu (nav-links)
+    if (
+        focused &&
+        focused.classList &&
+        focused.classList.contains('nav-link')
+    ) {
+        if (direction === 'left') idx--;
+        if (direction === 'right') idx++;
+    } else {
+        var columns = getColumns();
+        if (direction === 'left') idx--;
+        if (direction === 'right') idx++;
+        if (direction === 'up') idx -= columns;
+        if (direction === 'down') idx += columns;
     }
 
     if (idx < 0) idx = 0;
     if (idx >= els.length) idx = els.length - 1;
 
     focusIndex(idx);
-}
+  }
 
-function bindDpad() {
+  function bindDpad() {
 
     document.addEventListener('keydown', function(e) {
 
@@ -1229,7 +1236,7 @@ function bindDpad() {
             return;
         }
 
-        // Search Input
+        // Search Input - permite navegação normal dentro do campo
         if (
             focused &&
             focused.id === 'search-input'
@@ -1271,7 +1278,8 @@ function bindDpad() {
         }
 
     }, 1000);
-}
+  }
+  
   // ─── START ───────────────────────────────────────────────────────────────
 
   if (document.readyState === 'loading') {
