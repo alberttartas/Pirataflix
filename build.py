@@ -770,6 +770,7 @@ EPISODE_SCHEDULE_TITLES = {
     'tres_gracas': 289996,
     'dona_beja': 152401,
     'a_nobreza_do_amor': 301557,
+    'quem-ama-cuida' : 306956
     
     }
 # Delay de liberação: servidor leva ~5h após meia-noite do air_date
