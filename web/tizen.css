@@ -697,3 +697,18 @@ html, body {
   .card { width: 110px; margin: 5px; }
   .card img { height: 160px; }
 }
+.card,
+.nav-link,
+.ep-item,
+.canal-item,
+.modal-play-btn,
+.modal-close-btn,
+.season-header,
+#search-input,
+#player-bar button {
+    outline: none;
+}
+:focus {
+    box-shadow: 0 0 0 4px #fff !important;
+    z-index: 9999;
+}
