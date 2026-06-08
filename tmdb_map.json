@@ -191,9 +191,12 @@
   "rooster_fighter":{
     "tmdb_id": 259819,
     "type": "tv"
-  }
-  
-  
+  },
+  "berlin-y-la-dama-del-armino":{
+    "tmdb_id": 308014,
+    "type": "tv"
+}
+
 }
 
 
