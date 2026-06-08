@@ -1052,152 +1052,226 @@
     document.addEventListener('touchstart', requestAppFullscreen, { once: true, passive: true });
   }
 
-  // ─── NAVEGAÇÃO D-PAD (FOCO ESPACIAL) ─────────────────────────────────────
-  //
-  // Como funciona:
-  //  - Todos os elementos clicáveis têm tabindex="0"
-  //  - As setas do controle remoto movem o foco para o elemento
-  //    mais próximo na direção pressionada
-  //  - Enter (keyCode 13) confirma / abre o item focado
-  //  - O elemento focado recebe destaque visual via CSS :focus
+  // ────────────────────────────────────────────────────────
+// D-PAD TIZEN (VERSÃO ROBUSTA)
+// Navegação por índice e colunas
+// ────────────────────────────────────────────────────────
 
-  function getFocusableElements() {
-    // Pega todos os elementos navegáveis que estão visíveis
-    var all = document.querySelectorAll(
-      '.card, .nav-link, .ep-item:not(.locked), .canal-item, ' +
-      '.season-header, .modal-play-btn, .modal-close-btn, ' +
-      '#btn-play, #btn-back, #btn-fwd, #btn-fs, #btn-next-ep, #btn-close-player, ' +
-      '#search-input'
+var currentFocusIndex = 0;
+
+function getFocusables() {
+
+    var modal  = document.getElementById('modal');
+    var player = document.getElementById('player-wrap');
+
+    if (modal && modal.style.display !== 'none') {
+        return toArray(
+            modal.querySelectorAll(
+                '.modal-close-btn,' +
+                '.modal-play-btn,' +
+                '.season-header,' +
+                '.ep-item:not(.locked),' +
+                '.canal-item'
+            )
+        );
+    }
+
+    if (player && player.style.display !== 'none') {
+        return toArray(
+            player.querySelectorAll(
+                '#btn-play,' +
+                '#btn-back,' +
+                '#btn-fwd,' +
+                '#btn-fs,' +
+                '#btn-next-ep,' +
+                '#btn-close-player'
+            )
+        );
+    }
+
+    return toArray(
+        document.querySelectorAll(
+            '.nav-link,' +
+            '#search-input,' +
+            '.card'
+        )
     );
-    var visible = [];
-    for (var i = 0; i < all.length; i++) {
-      var el = all[i];
-      // Ignorar elementos dentro de containers ocultos
-      var rect = el.getBoundingClientRect();
-      if (rect.width > 0 && rect.height > 0) {
-        visible.push(el);
-      }
+}
+
+function toArray(nodeList) {
+    var arr = [];
+    for (var i = 0; i < nodeList.length; i++) {
+        arr.push(nodeList[i]);
     }
-    return visible;
-  }
+    return arr;
+}
 
-  function getRect(el) {
-    var r = el.getBoundingClientRect();
-    return {
-      cx: r.left + r.width  / 2,
-      cy: r.top  + r.height / 2,
-      left: r.left, top: r.top,
-      right: r.right, bottom: r.bottom,
-      width: r.width, height: r.height
-    };
-  }
+function focusIndex(idx) {
 
-  function findNearest(current, direction) {
-    var elements = getFocusableElements();
-    if (!elements.length) return null;
+    var els = getFocusables();
 
-    var cr = getRect(current);
-    var best = null;
-    var bestScore = Infinity;
+    if (!els.length) return;
 
-    for (var i = 0; i < elements.length; i++) {
-      var el = elements[i];
-      if (el === current) continue;
+    if (idx < 0) idx = 0;
+    if (idx >= els.length) idx = els.length - 1;
 
-      var er = getRect(el);
-      var dx = er.cx - cr.cx;
-      var dy = er.cy - cr.cy;
+    currentFocusIndex = idx;
 
-      // Verificar se está na direção certa
-      var inDirection = false;
-      switch (direction) {
-        case 'right': inDirection = dx >  20; break;
-        case 'left':  inDirection = dx < -20; break;
-        case 'down':  inDirection = dy >  10; break;
-        case 'up':    inDirection = dy < -10; break;
-      }
-      if (!inDirection) continue;
+    var el = els[idx];
 
-      // Score: distância euclidiana + penalidade por desvio lateral
-      var primary, secondary;
-      if (direction === 'left' || direction === 'right') {
-        primary   = Math.abs(dx);
-        secondary = Math.abs(dy);
-      } else {
-        primary   = Math.abs(dy);
-        secondary = Math.abs(dx);
-      }
-      var score = primary + secondary * 2;
+    if (!el) return;
 
-      if (score < bestScore) {
-        bestScore = score;
-        best = el;
-      }
+    el.focus();
+
+    try {
+        el.scrollIntoView({
+            block: 'center',
+            inline: 'center'
+        });
+    } catch (e) {
+        try {
+            el.scrollIntoView(false);
+        } catch (err) {}
     }
-    return best;
-  }
+}
 
-  function bindDpad() {
-    document.addEventListener('keydown', function (e) {
-      var key = e.keyCode || e.which;
+function getColumns() {
 
-      // Setas — só quando não está no player
-      var playerWrap = document.getElementById('player-wrap');
-      if (playerWrap && playerWrap.style.display !== 'none') return;
+    var width = window.innerWidth;
 
-      var dir = null;
-      if (key === 37) dir = 'left';
-      if (key === 39) dir = 'right';
-      if (key === 38) dir = 'up';
-      if (key === 40) dir = 'down';
+    if (width >= 1900) return 10;
+    if (width >= 1600) return 8;
+    if (width >= 1300) return 7;
+    if (width >= 1000) return 6;
 
-      if (!dir) return;
+    return 5;
+}
 
-      var focused = document.activeElement;
+function moveFocus(direction) {
 
-      // Se o foco está no search-input, não intercepta as setas
-      if (focused && focused.id === 'search-input') return;
+    var els = getFocusables();
 
-      e.preventDefault();
+    if (!els.length) return;
 
-      // Se nenhum elemento está focado, focar no primeiro card
-      if (!focused || focused === document.body) {
-        var els = getFocusableElements();
-        if (els.length) els[0].focus();
-        return;
-      }
+    var idx = currentFocusIndex;
 
-      var next = findNearest(focused, dir);
-      if (next) {
-        next.focus();
+    var columns = getColumns();
 
-        // Scroll automático para manter o item focado visível
-        if (next.scrollIntoView) {
-          next.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+    switch (direction) {
+
+        case 'left':
+            idx--;
+            break;
+
+        case 'right':
+            idx++;
+            break;
+
+        case 'up':
+            idx -= columns;
+            break;
+
+        case 'down':
+            idx += columns;
+            break;
+    }
+
+    if (idx < 0) idx = 0;
+    if (idx >= els.length) idx = els.length - 1;
+
+    focusIndex(idx);
+}
+
+function bindDpad() {
+
+    document.addEventListener('keydown', function(e) {
+
+        var key = e.keyCode || e.which;
+
+        var focused = document.activeElement;
+
+        var modal  = document.getElementById('modal');
+        var player = document.getElementById('player-wrap');
+
+        // BACK TIZEN
+        if (key === 10009 || key === 27) {
+
+            if (player && player.style.display !== 'none') {
+                e.preventDefault();
+                closePlayer();
+                return;
+            }
+
+            if (modal && modal.style.display !== 'none') {
+                e.preventDefault();
+                closeModal();
+                return;
+            }
+
+            return;
         }
-      }
+
+        // ENTER
+        if (key === 13) {
+
+            if (
+                focused &&
+                focused !== document.body &&
+                focused !== document.documentElement
+            ) {
+                e.preventDefault();
+
+                if (typeof focused.click === 'function') {
+                    focused.click();
+                }
+            }
+
+            return;
+        }
+
+        // Search Input
+        if (
+            focused &&
+            focused.id === 'search-input'
+        ) {
+            return;
+        }
+
+        switch (key) {
+
+            case 37:
+                e.preventDefault();
+                moveFocus('left');
+                break;
+
+            case 38:
+                e.preventDefault();
+                moveFocus('up');
+                break;
+
+            case 39:
+                e.preventDefault();
+                moveFocus('right');
+                break;
+
+            case 40:
+                e.preventDefault();
+                moveFocus('down');
+                break;
+        }
     });
 
-    // Enter / OK no controle confirma o elemento focado
-    document.addEventListener('keydown', function (e) {
-      var key = e.keyCode || e.which;
-      if (key !== 13) return;
+    setTimeout(function() {
 
-      var focused = document.activeElement;
-      if (!focused || focused === document.body) return;
-      if (focused.id === 'search-input') return; // Enter no search não precisa
+        var els = getFocusables();
 
-      // Simula clique no elemento focado
-      focused.click();
-    });
+        if (els.length) {
+            currentFocusIndex = 0;
+            focusIndex(0);
+        }
 
-    // Ao carregar, focar no primeiro nav-link
-    setTimeout(function () {
-      var first = document.querySelector('.nav-link');
-      if (first) first.focus();
-    }, 800);
-  }
-
+    }, 1000);
+}
   // ─── START ───────────────────────────────────────────────────────────────
 
   if (document.readyState === 'loading') {
