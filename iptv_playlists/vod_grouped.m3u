@@ -25266,3 +25266,27 @@ https://tvfronteira.brasilstream.com.br/hls/tvfronteira/index.m3u8
 #EXTINF:-1 group-title="🎨 Animação" tvg-id="SLIME.BR@SD" tvg-logo="https://x1co.com.br/slimelogo.png",Slime (576p) [Not 24/7]
 https://slime.x1co.com.br/hls/stream.m3u8
 
+#EXTINF:-1 group-title="📺 Séries" tvg-id="DIFFRENTSTROKESARNOLD.US" tvg-logo="https://i.imgur.com/jkmouY3.png",Diff’rent Strokes Arnold
+https://jmp2.uk/plu-61f1d27a189ed10007b7393e.m3u8
+
+#EXTINF:-1 group-title="📺 Séries" tvg-id="MTVAREYOUTHEONE.US" tvg-logo="https://i.imgur.com/kMB42wV.png",MTV Are you the One?
+https://jmp2.uk/plu-5f6108d8cc331900075e98e4.m3u8
+
+#EXTINF:-1 group-title="🎭 Entretenimento" tvg-id="MTVPLUTOTV.US@BRAZIL" tvg-logo="https://i.imgur.com/WsQRCmZ.png",MTV Pluto TV
+https://jmp2.uk/plu-5f1212fb81e85c00077ae9ef.m3u8
+
+#EXTINF:-1 group-title="🧸 Infantil" tvg-id="NICKJRCLUB.US" tvg-logo="https://i.imgur.com/GCenuyl.png",Nick Jr. Club (720p)
+https://jmp2.uk/plu-6824ce95f09106f4b18f4114.m3u8
+
+#EXTINF:-1 group-title="💅 Lifestyle" tvg-id="PLUTOTVESTILODEVIDA.US" tvg-logo="https://i.imgur.com/SNfys9r.png",Pluto TV Estilo de Vida
+https://jmp2.uk/plu-5dcde0657444a40009cd2422.m3u8
+
+#EXTINF:-1 group-title="🧸 Infantil" tvg-id="PLUTOTVKIDS.US@BRAZIL" tvg-logo="https://i.imgur.com/yVSLWy5.png",Pluto TV Kids
+https://jmp2.uk/plu-5f1214a637c6fd00079c652f.m3u8
+
+#EXTINF:-1 group-title="📚 Educação" tvg-id="PRONTOSOCORROHISTORIASDEEMERGENCIA.US" tvg-logo="https://i.imgur.com/0PkyJ3U.png",Pronto-socorro: Histórias De Emergência
+https://jmp2.uk/plu-61bb72a7bf8c520007a8fd27.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="TVCULTURA.BR" tvg-logo="https://i.ibb.co/nm0jXMM/cultura-3x.png",TV Cultura (720p)
+https://jmp2.uk/plu-62e010e6cd663f0007e57dc8.m3u8
+

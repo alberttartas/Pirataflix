@@ -18000,5 +18000,125 @@
         "title": "AO VIVO"
       }
     ]
+  },
+  {
+    "id": "DiffrentStrokesArnold.us",
+    "type": "tv",
+    "title": "Diff’rent Strokes Arnold",
+    "tvg_id": "DiffrentStrokesArnold.us",
+    "tvg_logo": "https://i.imgur.com/jkmouY3.png",
+    "group": "📺 Séries",
+    "url": "https://jmp2.uk/plu-61f1d27a189ed10007b7393e.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-61f1d27a189ed10007b7393e.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "MTVAreyoutheOne.us",
+    "type": "tv",
+    "title": "MTV Are you the One?",
+    "tvg_id": "MTVAreyoutheOne.us",
+    "tvg_logo": "https://i.imgur.com/kMB42wV.png",
+    "group": "📺 Séries",
+    "url": "https://jmp2.uk/plu-5f6108d8cc331900075e98e4.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-5f6108d8cc331900075e98e4.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "MTVPlutoTV.us@Brazil",
+    "type": "tv",
+    "title": "MTV Pluto TV",
+    "tvg_id": "MTVPlutoTV.us@Brazil",
+    "tvg_logo": "https://i.imgur.com/WsQRCmZ.png",
+    "group": "🎭 Entretenimento",
+    "url": "https://jmp2.uk/plu-5f1212fb81e85c00077ae9ef.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-5f1212fb81e85c00077ae9ef.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "NickJrClub.us",
+    "type": "tv",
+    "title": "Nick Jr. Club (720p)",
+    "tvg_id": "NickJrClub.us",
+    "tvg_logo": "https://i.imgur.com/GCenuyl.png",
+    "group": "🧸 Infantil",
+    "url": "https://jmp2.uk/plu-6824ce95f09106f4b18f4114.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-6824ce95f09106f4b18f4114.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "PlutoTVEstilodeVida.us",
+    "type": "tv",
+    "title": "Pluto TV Estilo de Vida",
+    "tvg_id": "PlutoTVEstilodeVida.us",
+    "tvg_logo": "https://i.imgur.com/SNfys9r.png",
+    "group": "💅 Lifestyle",
+    "url": "https://jmp2.uk/plu-5dcde0657444a40009cd2422.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-5dcde0657444a40009cd2422.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "PlutoTVKids.us@Brazil",
+    "type": "tv",
+    "title": "Pluto TV Kids",
+    "tvg_id": "PlutoTVKids.us@Brazil",
+    "tvg_logo": "https://i.imgur.com/yVSLWy5.png",
+    "group": "🧸 Infantil",
+    "url": "https://jmp2.uk/plu-5f1214a637c6fd00079c652f.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-5f1214a637c6fd00079c652f.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "ProntosocorroHistoriasDeEmergencia.us",
+    "type": "tv",
+    "title": "Pronto-socorro: Histórias De Emergência",
+    "tvg_id": "ProntosocorroHistoriasDeEmergencia.us",
+    "tvg_logo": "https://i.imgur.com/0PkyJ3U.png",
+    "group": "📚 Educação",
+    "url": "https://jmp2.uk/plu-61bb72a7bf8c520007a8fd27.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-61bb72a7bf8c520007a8fd27.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "TVCultura.br",
+    "type": "tv",
+    "title": "TV Cultura (720p)",
+    "tvg_id": "TVCultura.br",
+    "tvg_logo": "https://i.ibb.co/nm0jXMM/cultura-3x.png",
+    "group": "📺 Geral",
+    "url": "https://jmp2.uk/plu-62e010e6cd663f0007e57dc8.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-62e010e6cd663f0007e57dc8.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
   }
 ]
