@@ -8,7 +8,7 @@ http://45.235.0.78/Gloob/playlist.m3u8
 #EXTINF:-1 tvg-id="GloobWeb.br@SD" tvg-logo="https://i.ibb.co/wrQZXZ01/C-pia-de-Blue-Modern-Simple-Logo.png" group-title="🧸 Infantil",Gloob Web [Not 24/7]
 https://vs20.live.opencaster.com/globiosat_73a904af/index.m3u8
 
-#EXTINF:-1 tvg-id="NickJrClub.us" tvg-logo="https://i.imgur.com/GCenuyl.png" group-title="🧸 Infantil",Nick Jr. Club (720p)
+#EXTINF:-1 tvg-id="NickJrClub.us@Brazil" tvg-logo="https://i.imgur.com/GCenuyl.png" group-title="🧸 Infantil",Nick Jr. Club (720p)
 https://jmp2.uk/plu-6824ce95f09106f4b18f4114.m3u8
 
 #EXTINF:-1 tvg-id="NickClassico.us@Brazil" tvg-logo="https://i.imgur.com/Crip6wT.png" group-title="🧸 Infantil",Nickelodeon Clássico (720p)
