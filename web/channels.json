@@ -18120,5 +18120,35 @@
         "title": "AO VIVO"
       }
     ]
+  },
+  {
+    "id": "AratuOn.br@SD",
+    "type": "tv",
+    "title": "Aratu On",
+    "tvg_id": "AratuOn.br@SD",
+    "tvg_logo": "https://i.imgur.com/Ht4jCab.png",
+    "group": "📰 Notícias",
+    "url": "https://cdn.live.br1.jmvstream.com/w/LVW-9359/LVW9359_XSyReL0QVf/playlist.m3u8",
+    "episodes": [
+      {
+        "url": "https://cdn.live.br1.jmvstream.com/w/LVW-9359/LVW9359_XSyReL0QVf/playlist.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "BR8TV.br@SD",
+    "type": "tv",
+    "title": "BR8 TV",
+    "tvg_id": "BR8TV.br@SD",
+    "tvg_logo": "https://i.ibb.co/1QZv2q1/Br8-fb-graph.png",
+    "group": "📰 Notícias",
+    "url": "https://cdn.live.br1.jmvstream.com/w/LVW-11668/ngrp:LVW11668_wiJpjbMrks_all/playlist.m3u8",
+    "episodes": [
+      {
+        "url": "https://cdn.live.br1.jmvstream.com/w/LVW-11668/ngrp:LVW11668_wiJpjbMrks_all/playlist.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
   }
 ]
