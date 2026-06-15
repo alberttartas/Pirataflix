@@ -123,11 +123,197 @@ window.destroyModernPlayer = function() {
     const controls = document.getElementById('custom-controls');
     if (controls) controls.remove();
 };
+// ==========================================
+// 📺 DETECTOR DE URL DO BLOGGER
+// ==========================================
+
+function isBloggerUrl(url) {
+    return url && (url.includes('blogger.com/video.g') || url.includes('googlevideo.com'));
+}
 
 // ==========================================
-// 🎬 PLAYER PRINCIPAL
+// 🎬 PLAYER PARA BLOGGER (IFRAME)
 // ==========================================
+
+function playBloggerVideo(url, title, info = '', itemId = null, category = null, episodeIndex = 0) {
+    // Fechar player anterior se existir
+    window.destroyModernPlayer();
+    
+    const modal = document.getElementById('modernPlayerModal');
+    const closeBtn = document.getElementById('closeModernPlayerFix');
+    const titleEl = document.getElementById('modern-player-title');
+    const infoEl = document.getElementById('modern-player-info');
+    
+    if (!modal) {
+        // Fallback: abrir em nova aba
+        window.open(url, '_blank');
+        return;
+    }
+    
+    if (titleEl) titleEl.textContent = title;
+    if (infoEl) infoEl.textContent = info;
+    modal.style.display = 'flex';
+    
+    const container = document.getElementById('modern-player-container');
+    if (!container) return;
+    
+    const videoId = `${itemId}_${episodeIndex}`;
+    
+    // Container com iframe em vez de video tag
+    container.innerHTML = `
+        <div style="position: relative; width: 100%; height: 100%; background: #000;">
+            <iframe
+                id="blogger-iframe"
+                src="${url}"
+                style="width: 100%; height: 100%; border: none;"
+                allowfullscreen
+                allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+                frameborder="0"
+            ></iframe>
+            <div id="blogger-controls" style="
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background: linear-gradient(transparent, rgba(0,0,0,0.8));
+                padding: 15px 20px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                z-index: 10001;
+                opacity: 0;
+                transition: opacity 0.3s;
+            ">
+                <div style="display: flex; gap: 15px;">
+                    <button id="blogger-back-btn" style="background: rgba(255,255,255,0.2); border: none; color: white; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 14px;">⏪ 10s</button>
+                    <button id="blogger-forward-btn" style="background: rgba(255,255,255,0.2); border: none; color: white; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 14px;">10s ⏩</button>
+                </div>
+                <span id="blogger-time" style="color: white; font-size: 14px;">Blogger Video</span>
+                <button id="blogger-fs-btn" style="background: rgba(255,255,255,0.2); border: none; color: white; padding: 8px 12px; border-radius: 4px; cursor: pointer; font-size: 16px;">⛶</button>
+            </div>
+        </div>
+    `;
+    
+    // Mostrar controles ao mover mouse
+    const controlsDiv = document.getElementById('blogger-controls');
+    const containerDiv = container.querySelector('div');
+    
+    if (containerDiv) {
+        containerDiv.addEventListener('mousemove', () => {
+            if (controlsDiv) controlsDiv.style.opacity = '1';
+            clearTimeout(window.controlsTimeout);
+            window.controlsTimeout = setTimeout(() => {
+                if (controlsDiv) controlsDiv.style.opacity = '0';
+            }, 3000);
+        });
+    }
+    
+    // Botão voltar (-10s)
+    const backBtn = document.getElementById('blogger-back-btn');
+    if (backBtn) {
+        backBtn.onclick = () => {
+            const iframe = document.getElementById('blogger-iframe');
+            if (iframe && iframe.contentWindow) {
+                // Tenta enviar mensagem para o player (se suportar)
+                iframe.contentWindow.postMessage({ event: 'command', func: 'seek', args: -10 }, '*');
+            }
+            showMessage(container, '⏪ -10s');
+        };
+    }
+    
+    // Botão avançar (+10s)
+    const fwdBtn = document.getElementById('blogger-forward-btn');
+    if (fwdBtn) {
+        fwdBtn.onclick = () => {
+            const iframe = document.getElementById('blogger-iframe');
+            if (iframe && iframe.contentWindow) {
+                iframe.contentWindow.postMessage({ event: 'command', func: 'seek', args: 10 }, '*');
+            }
+            showMessage(container, '⏩ +10s');
+        };
+    }
+    
+    // Fullscreen
+    const fsBtn = document.getElementById('blogger-fs-btn');
+    if (fsBtn) {
+        fsBtn.onclick = () => {
+            const containerDiv = container.querySelector('div');
+            if (containerDiv) {
+                if (document.fullscreenElement) {
+                    document.exitFullscreen();
+                } else {
+                    containerDiv.requestFullscreen().catch(() => {});
+                }
+            }
+        };
+    }
+    
+    // Próximo episódio
+    if (itemId && category) {
+        const item = window.vodData?.[category]?.find(i => i.id === itemId);
+        const epList = item ? getEpisodeList(item) : [];
+        
+        if (item && episodeIndex + 1 < epList.length) {
+            const nextBtn = document.createElement('button');
+            nextBtn.innerHTML = 'PRÓXIMO ▶';
+            nextBtn.style.cssText = 'background:#e50914;color:white;border:none;padding:8px 16px;border-radius:4px;font-size:14px;font-weight:bold;cursor:pointer;white-space:nowrap;opacity:0.8;transition:0.2s;margin-left:15px;';
+            nextBtn.onclick = () => {
+                const next = epList[episodeIndex + 1];
+                window.playWithModernPlayer(
+                    next.url,
+                    `${item.title} - ${next.title || 'Episódio ' + (episodeIndex + 2)}`,
+                    `${category} • Ep ${episodeIndex + 2}`,
+                    itemId, category, episodeIndex + 1
+                );
+            };
+            if (controlsDiv) controlsDiv.appendChild(nextBtn);
+        }
+    }
+    
+    // Botão fechar
+    if (closeBtn) {
+        closeBtn.onclick = function() {
+            window.destroyModernPlayer();
+            modal.style.display = 'none';
+        };
+    }
+    
+    // Teclado ESC fecha
+    window.__keyboardHandler = function(e) {
+        if (e.key === 'Escape' || e.keyCode === 27) {
+            window.destroyModernPlayer();
+            modal.style.display = 'none';
+        }
+    };
+    document.addEventListener('keydown', window.__keyboardHandler);
+    
+    // Salvar progresso (não temos timeupdate no iframe, mas salvamos que assistiu)
+    const videoIdKey = `${itemId}_${episodeIndex}`;
+    window.ContinueWatching.save({
+        videoId: videoIdKey,
+        itemId,
+        category,
+        episodeIndex,
+        title,
+        seriesTitle: title?.split(' - ')[0] || title,
+        episode: episodeIndex + 1,
+        currentTime: 0,
+        duration: 1,
+        url,
+        poster: ''
+    });
+}
+
 window.playWithModernPlayer = function(url, title, info = '', itemId = null, category = null, episodeIndex = 0) {
+    // ⭐ DETECTAR BLOGGER - ABRIR EM IFRAME
+    if (isBloggerUrl(url)) {
+        playBloggerVideo(url, title, info, itemId, category, episodeIndex);
+        return;
+    }
+    
+    // ==========================================
+    // CÓDIGO ORIGINAL PARA MP4/HLS
+    // ==========================================
     window.destroyModernPlayer();
 
     const modal     = document.getElementById('modernPlayerModal');
