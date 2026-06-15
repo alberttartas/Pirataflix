@@ -1,357 +1,911 @@
-// Lógica principal da página index - Pirataflix
-(function() {
-    var RAW_BASE = 'https://raw.githubusercontent.com/alberttartas/Pirataflix/main';
-    // window.channelsDict é carregado de channels-dict.js (gerado pelo build.py)
-    var DEFAULT_POSTER = RAW_BASE + '/assets/Capas/default.jpg';
-    window._DEFAULT_POSTER = DEFAULT_POSTER;
-    window.vodData = {};
+/*
+ * PIRATAFLIX — tizen-app.js
+ * Compatível com Samsung Tizen (Chromium 38–56)
+ * COM SUPORTE A BLOGGER (IFRAME)
+ */
 
-    // =====================
-    // FUNÇÕES AUXILIARES
-    // =====================
-    function item_title_from(category, itemId) {
-        var items = window.vodData[category];
-        if (!items) return '';
-        var item = (category === 'tv')
-            ? items[parseInt(itemId)]
-            : items.find(function(i) { return i.id === itemId; });
-        return item ? item.title : '';
-    }
+(function () {
 
-    // =====================
-    // PLAY EPISODE
-    // Não salva progresso — isso é responsabilidade exclusiva do novo-player.js
-    // =====================
-    function playEpisode(url, title, itemId, category, episodeIndex) {
-        var safeIndex = (typeof episodeIndex === 'number' && !isNaN(episodeIndex)) ? episodeIndex : 0;
+  // ─── CONFIG ──────────────────────────────────────────────────────────────
 
-        if (category === 'tv') {
-            if (typeof window.openTVPlayer === 'function') {
-                window.openTVPlayer(parseInt(itemId));
-            } else {
-                window.open(url, '_blank');
-            }
-            document.getElementById('modal').style.display = 'none';
-            return;
-        }
+  var RAW_BASE       = 'https://raw.githubusercontent.com/alberttartas/Pirataflix/main';
+  var DEFAULT_POSTER = RAW_BASE + '/assets/Capas/default.jpg';
+  var TV_POSTER      = RAW_BASE + '/assets/Capas/tv_default.jpg';
 
-        if (typeof window.playWithModernPlayer === 'function') {
-            window.playWithModernPlayer(url, title, '', itemId, category, safeIndex);
-            document.getElementById('modal').style.display = 'none';
-        } else {
-            window.open(url, '_blank');
-        }
-    }
+  var CATS = ['filmes', 'series', 'novelas', 'animes', 'infantil'];
+  var CAT_LABELS = {
+    filmes:   '🎬 Filmes',
+    series:   '📺 Séries',
+    novelas:  '💖 Novelas',
+    animes:   '👻 Animes',
+    infantil: '🧸 Infantil',
+    tv:       '📡 TV Ao Vivo'
+  };
 
-    // =====================
-    // PLAY FIRST EPISODE
-    // Lê o índice salvo pelo novo-player.js (fonte única de progresso)
-    // =====================
-    function playFirstEpisode(category, itemId) {
-        var items = window.vodData[category];
-        if (!items) return;
+  // ─── ESTADO ──────────────────────────────────────────────────────────────
 
-        var item = (category === 'tv')
-            ? items[parseInt(itemId)]
-            : items.find(function(i) { return i.id === itemId; });
-        if (!item) return;
+  var vodData      = {};
+  var channels     = [];
+  var currentCat   = 'filmes';
+  var searchTimer  = null;
 
-        // Buscar índice salvo via ContinueWatching (novo-player.js)
-        var episodeIndex = 0;
+  // Player
+  var playerUrl    = '';
+  var playerTitle  = '';
+  var playerItemId = null;
+  var playerCat    = null;
+  var playerEpIdx  = 0;
+  var hlsInstance  = null;
+  var controlsTimer = null;
+  var progressInterval = null;
+  var isBloggerPlayer = false;  // ⭐ NOVO: detecta se é player Blogger
+
+  // Continue watching
+  var CW_KEY = 'pirataflix_progressos';
+
+  // ─── AJAX HELPER ─────────────────────────────────────────────────────────
+
+  function ajax(url, callback) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', url, true);
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState !== 4) return;
+      if (xhr.status === 200) {
         try {
-            if (window.ContinueWatching) {
-                var list = window.ContinueWatching.getAll();
-                var entries = Object.values(list).filter(function(e) {
-                    return e.itemId === itemId && e.category === category;
-                });
-                if (entries.length > 0) {
-                    var latest = entries.sort(function(a, b) {
-                        return (b.timestamp || 0) - (a.timestamp || 0);
-                    })[0];
-                    if (typeof latest.episodeIndex === 'number' && !isNaN(latest.episodeIndex)) {
-                        episodeIndex = latest.episodeIndex;
-                    }
-                }
-            }
-        } catch(e) {}
-
-        // Encontrar episódio pelo índice
-        var url = '', title = '';
-
-        if (item.episodes && item.episodes.length > 0) {
-            var safeIdx = Math.min(episodeIndex, item.episodes.length - 1);
-            url   = item.episodes[safeIdx].url;
-            title = item.title + ' - ' + (item.episodes[safeIdx].title || 'Episódio ' + (safeIdx + 1));
-        } else if (item.url) {
-            url   = item.url;
-            title = item.title;
-        } else if (item.seasons && item.seasons.length > 0) {
-            var remaining = episodeIndex;
-            var found = false;
-            for (var s = 0; s < item.seasons.length; s++) {
-                var eps = item.seasons[s].episodes || [];
-                if (remaining < eps.length) {
-                    url   = eps[remaining].url;
-                    title = item.title + ' - Temp ' + item.seasons[s].season + ' - ' + (eps[remaining].title || 'Episódio ' + (remaining + 1));
-                    found = true;
-                    break;
-                }
-                remaining -= eps.length;
-            }
-            if (!found) {
-                url   = item.seasons[0].episodes[0].url;
-                title = item.title + ' - Temp ' + item.seasons[0].season + ' - Episódio 1';
-                episodeIndex = 0;
-            }
+          callback(null, JSON.parse(xhr.responseText));
+        } catch (e) {
+          callback(e, null);
         }
+      } else {
+        callback(new Error('HTTP ' + xhr.status), null);
+      }
+    };
+    xhr.send();
+  }
 
-        if (url) {
-            playEpisode(url, title, itemId, category, episodeIndex);
-        }
+  // ⭐ NOVO: DETECTOR DE URL DO BLOGGER
+  function isBloggerUrl(url) {
+    return url && (url.includes('blogger.com/video.g') || url.includes('googlevideo.com'));
+  }
+
+  // ─── INIT ────────────────────────────────────────────────────────────────
+
+  function init() {
+    ajax('data.json', function (err, data) {
+      if (err || !data) {
+        document.getElementById('loading').textContent = 'Erro ao carregar catálogo.';
+        return;
+      }
+      vodData = data;
+
+      ajax('channels.json', function (err2, chs) {
+        channels = (err2 || !chs) ? [] : chs;
+        vodData['tv'] = channels;
+
+        document.getElementById('loading').style.display = 'none';
+        document.getElementById('catalog').style.display = 'block';
+
+        renderCatalog(currentCat);
+        bindNav();
+        bindSearch();
+        bindModal();
+        bindPlayer();
+      });
+    });
+  }
+
+  // ─── RENDER CATÁLOGO ─────────────────────────────────────────────────────
+
+  function renderCatalog(cat) {
+    currentCat = cat;
+    var catalog = document.getElementById('catalog');
+    catalog.innerHTML = '';
+
+    // Atualizar nav
+    var links = document.querySelectorAll('.nav-link');
+    for (var i = 0; i < links.length; i++) {
+      if (links[i].getAttribute('data-cat') === cat) {
+        links[i].className = 'nav-link active';
+      } else {
+        links[i].className = 'nav-link';
+      }
     }
 
-    // =====================
-    // CARREGAR DADOS
-    // =====================
-    async function loadData() {
-        try {
-            var response = await fetch('data.json');
-            window.vodData = await response.json();
-            displayContent();
-            setTimeout(function() {
-                if (typeof $.fn.owlCarousel === 'function') {
-                    initCarousels();
-                } else {
-                    initFallbackScroll();
-                }
-                // Alternância de capas (capa local <-> TMDB)
-                if (typeof window.initPosterRotation === 'function') {
-                    setTimeout(window.initPosterRotation, 600);
-                }
-            }, 500);
-        } catch (error) {
-            document.getElementById('content').innerHTML =
-                '<div class="error">Erro ao carregar: ' + error.message + '</div>';
-        }
+    // Seção "Continuar Assistindo" sempre no topo
+    renderContinueWatching(catalog);
+
+    if (cat === 'tv') {
+      renderTvGrid(catalog, channels);
+    } else {
+      var items = vodData[cat] || [];
+      if (!items.length) {
+        document.getElementById('no-results').style.display = 'block';
+        return;
+      }
+      document.getElementById('no-results').style.display = 'none';
+
+      var title = document.createElement('div');
+      title.className = 'section-title';
+      title.textContent = CAT_LABELS[cat] || cat;
+      catalog.appendChild(title);
+
+      var row = document.createElement('div');
+      row.className = 'cards-row';
+      for (var j = 0; j < items.length; j++) {
+        row.appendChild(makeCard(items[j], cat));
+      }
+      catalog.appendChild(row);
+    }
+  }
+
+  // ─── CONTINUAR ASSISTINDO ─────────────────────────────────────────────────
+
+  function cwGetList() {
+    try {
+      var raw  = JSON.parse(localStorage.getItem(CW_KEY)) || {};
+      var seen = {};
+      var keys = Object.keys(raw);
+      for (var i = 0; i < keys.length; i++) {
+        var entry = raw[keys[i]];
+        if (!entry || !entry.itemId || !entry.category) continue;
+        var pct = entry.duration ? (entry.currentTime / entry.duration) * 100 : 0;
+        if (pct < 2 || pct > 95) continue;
+        var dk = entry.itemId + '_' + entry.category;
+        if (!seen[dk] || entry.timestamp > seen[dk].timestamp) seen[dk] = entry;
+      }
+      var list = [];
+      var dks  = Object.keys(seen);
+      for (var di = 0; di < dks.length; di++) list.push(seen[dks[di]]);
+      list.sort(function (a, b) { return (b.timestamp || 0) - (a.timestamp || 0); });
+      return list.slice(0, 10);
+    } catch (e) { return []; }
+  }
+
+  function renderContinueWatching(catalog) {
+    var list = cwGetList();
+    if (!list.length) return;
+
+    var title = document.createElement('div');
+    title.className = 'section-title';
+    title.textContent = '▶ Continuar Assistindo';
+    catalog.appendChild(title);
+
+    var row = document.createElement('div');
+    row.className = 'cards-row';
+    for (var i = 0; i < list.length; i++) {
+      row.appendChild(makeCwCard(list[i]));
+    }
+    catalog.appendChild(row);
+  }
+
+  function makeCwCard(entry) {
+    var card = document.createElement('div');
+    card.className = 'card card-cw';
+    card.setAttribute('tabindex', '0');
+
+    var items = vodData[entry.category] || [];
+    var item  = null;
+    for (var i = 0; i < items.length; i++) {
+      if (items[i].id === entry.itemId || items[i].title === entry.itemId) { item = items[i]; break; }
     }
 
-    // =====================
-    // FALLBACK SCROLL
-    // =====================
-    function initFallbackScroll() {
-        $('.owl-carousel').css({ display: 'flex', 'overflow-x': 'auto', gap: '10px' });
-        $('.owl-carousel .item-card').css({ flex: '0 0 auto', width: '220px' });
+    var poster  = item ? getPoster(item, entry.category) : DEFAULT_POSTER;
+    var pct     = entry.duration ? Math.round((entry.currentTime / entry.duration) * 100) : 0;
+    var timeStr = fmtTime(entry.currentTime || 0);
+    var label   = entry.title || (item ? item.title : 'Sem título');
+    var seriesTitle = label.split(' - ')[0];
+
+    card.innerHTML =
+      '<div class="cw-thumb-wrap">' +
+        '<img src="' + poster + '" alt="" loading="lazy" onerror="this.src=\'' + DEFAULT_POSTER + '\'">' +
+        '<div class="cw-progress-bar"><div class="cw-progress-fill" style="width:' + pct + '%"></div></div>' +
+        '<div class="cw-time-badge">' + timeStr + '</div>' +
+        '<div class="cw-play-icon">▶</div>' +
+      '</div>' +
+      '<div class="card-info">' +
+        '<div class="card-title">' + esc(seriesTitle) + '</div>' +
+        '<div class="card-meta">' + pct + '% assistido</div>' +
+      '</div>';
+
+    card.onclick    = function () { resumeCw(entry); };
+    card.onkeydown  = function (e) { if (e.keyCode === 13 || e.keyCode === 32) resumeCw(entry); };
+    return card;
+  }
+
+  function resumeCw(entry) {
+    var items = vodData[entry.category] || [];
+    var item  = null;
+    for (var i = 0; i < items.length; i++) {
+      if (items[i].id === entry.itemId || items[i].title === entry.itemId) { item = items[i]; break; }
     }
 
-    // =====================
-    // CARROSSÉIS
-    // =====================
-    function initCarousels() {
-        setTimeout(function() {
-            $('.owl-carousel').each(function() {
-                var $c = $(this);
-                var cId = $c.attr('id');
-                var isCont = cId === 'carousel-continue';
-                if (!$c.data('owlCarousel')) {
-                    $c.owlCarousel({
-                        items: isCont ? 8 : 7,
-                        margin: isCont ? 8 : 10,
-                        loop: false, nav: false, dots: false,
-                        responsive: {
-                            0:    { items: isCont ? 3 : 2 },
-                            480:  { items: isCont ? 4 : 3 },
-                            640:  { items: isCont ? 5 : 4 },
-                            768:  { items: isCont ? 6 : 5 },
-                            1024: { items: isCont ? 7 : 6 },
-                            1280: { items: isCont ? 8 : 7 }
-                        }
-                    });
-                }
-                $('.next-' + cId).off('click').on('click', function(e) {
-                    e.preventDefault(); $c.trigger('next.owl.carousel');
-                });
-                $('.prev-' + cId).off('click').on('click', function(e) {
-                    e.preventDefault(); $c.trigger('prev.owl.carousel');
-                });
-            });
-        }, 300);
+    if (!item) { playVideo(entry.url, entry.title, entry.itemId, entry.category, 0); return; }
+
+    var epList = getEpList(item);
+    var idx    = entry.episodeIndex || 0;
+    var ep     = epList[idx];
+    var url    = ep ? ep.url : item.url;
+    var title  = ep ? (item.title + ' - ' + (ep.title || 'Ep ' + (idx + 1))) : item.title;
+
+    playVideo(url, title, entry.itemId, entry.category, idx);
+  }
+
+  function fmtTime(s) {
+    if (!s || isNaN(s)) return '0:00';
+    var m = Math.floor(s / 60);
+    var sec = Math.floor(s % 60);
+    return m + ':' + (sec < 10 ? '0' + sec : sec);
+  }
+
+  function renderTvGrid(catalog, chs) {
+    if (!chs.length) {
+      document.getElementById('no-results').style.display = 'block';
+      return;
+    }
+    document.getElementById('no-results').style.display = 'none';
+
+    var groups = {};
+    var groupOrder = [];
+    for (var i = 0; i < chs.length; i++) {
+      var g = chs[i].group || 'TV';
+      if (!groups[g]) { groups[g] = []; groupOrder.push(g); }
+      groups[g].push(chs[i]);
     }
 
-    // =====================
-    // HELPERS
-    // =====================
-    function getPoster(item, category) {
-        if (category === 'tv') {
-            if (item.tvg_logo && item.tvg_logo.startsWith('http')) return item.tvg_logo;
-            var key = (item.title || '').toLowerCase().replace(/[^a-z0-9]/g, '');
-            if (window.channelsDict && window.channelsDict[key]) return window.channelsDict[key];
-            return RAW_BASE + '/assets/Capas/tv_default.jpg';
-        }
-        if (item.poster && item.poster.startsWith('http')) return item.poster;
-        var file = item.poster ? item.poster.split('/').pop() : 'default.jpg';
-        return RAW_BASE + '/assets/Capas/' + file;
+    for (var gi = 0; gi < groupOrder.length; gi++) {
+      var gName = groupOrder[gi];
+      var gItems = groups[gName];
+
+      var title = document.createElement('div');
+      title.className = 'section-title';
+      title.textContent = gName;
+      catalog.appendChild(title);
+
+      var row = document.createElement('div');
+      row.className = 'cards-row';
+      for (var ci = 0; ci < gItems.length; ci++) {
+        row.appendChild(makeTvCard(gItems[ci], ci));
+      }
+      catalog.appendChild(row);
+    }
+  }
+
+  // ─── MAKE CARD (ESTILO NETFLIX) ───────────────────────────────────────────
+
+  function makeCard(item, cat) {
+    var card = document.createElement('div');
+    card.className = 'card';
+    card.setAttribute('tabindex', '0');
+
+    var poster = getPoster(item, cat);
+    var year   = item.year   ? item.year   : '';
+    var rating = item.rating ? ('⭐ ' + item.rating) : '';
+
+    card.innerHTML =
+      '<div class="card-image-wrap">' +
+        '<img src="' + poster + '" alt="" loading="lazy" onerror="this.src=\'' + DEFAULT_POSTER + '\'">' +
+        '<div class="card-overlay">' +
+          '<span class="play-icon">▶</span>' +
+        '</div>' +
+      '</div>' +
+      '<div class="card-info">' +
+        '<div class="card-title">' + esc(item.title) + '</div>' +
+        '<div class="card-meta">' +
+          (year ? '<span>' + year + '</span> ' : '') +
+          (rating ? '<span class="card-rating">' + rating + '</span>' : '') +
+        '</div>' +
+      '</div>';
+
+    card.onclick = function () { openModal(cat, item.id || item.title); };
+    card.onkeydown = function (e) {
+      if (e.keyCode === 13 || e.keyCode === 32) openModal(cat, item.id || item.title);
+    };
+    return card;
+  }
+
+  function makeTvCard(canal, idx) {
+    var card = document.createElement('div');
+    card.className = 'card card-tv';
+    card.setAttribute('tabindex', '0');
+
+    var logo = (canal.tvg_logo && canal.tvg_logo.indexOf('http') === 0) ? canal.tvg_logo : TV_POSTER;
+
+    card.innerHTML =
+      '<div class="card-image-wrap">' +
+        '<img src="' + logo + '" alt="" loading="lazy" onerror="this.src=\'' + TV_POSTER + '\'">' +
+        '<div class="card-overlay">' +
+          '<span class="play-icon">▶</span>' +
+        '</div>' +
+      '</div>' +
+      '<div class="card-info">' +
+        '<div class="card-title">' + esc(canal.title || canal.name || 'Canal') + '</div>' +
+        '<div class="card-meta live-meta"><span class="live-dot">●</span> AO VIVO</div>' +
+      '</div>';
+
+    card.onclick = function () { openTvModal(idx); };
+    card.onkeydown = function (e) {
+      if (e.keyCode === 13 || e.keyCode === 32) openTvModal(idx);
+    };
+    return card;
+  }
+
+  // ⭐ NOVO: PLAYER BLOGGER (IFRAME) PARA TIZEN
+  function playBloggerVideo(url, title, itemId, cat, epIdx) {
+    destroyHls();
+    isBloggerPlayer = true;
+
+    var wrap = document.getElementById('player-wrap');
+    var titleEl = document.getElementById('player-title');
+    var videoContainer = document.getElementById('player-video-container');
+
+    titleEl.textContent = title || '';
+
+    // Criar ou recriar container do iframe
+    if (!videoContainer) {
+      videoContainer = document.createElement('div');
+      videoContainer.id = 'player-video-container';
+      videoContainer.style.cssText = 'width:100%;height:100%;position:relative;background:#000;';
+      wrap.insertBefore(videoContainer, wrap.firstChild);
     }
 
-    function safeImg(poster, altText) {
-        return '<img src="' + poster + '" alt="' + altText.replace(/"/g, '') +
-               '" class="item-poster" onerror="this.onerror=null;this.src=window._DEFAULT_POSTER">';
+    videoContainer.innerHTML = '<iframe id="blogger-iframe" src="' + url + '" style="width:100%;height:100%;border:none;" allowfullscreen allow="autoplay; fullscreen; encrypted-media"></iframe>';
+
+    wrap.style.display = 'block';
+    showControls();
+
+    // Salvar progresso (Blogger não tem timeupdate)
+    var videoId = itemId + '_' + epIdx;
+    cwSave({
+      videoId: videoId,
+      itemId: itemId,
+      category: cat,
+      episodeIndex: epIdx,
+      title: title,
+      currentTime: 0,
+      duration: 1,
+      url: url
+    });
+
+    // Próximo episódio
+    setupNextEpisode(itemId, cat, epIdx);
+  }
+
+  function setupNextEpisode(itemId, cat, epIdx) {
+    var item = null;
+    var items = vodData[cat] || [];
+    for (var ii = 0; ii < items.length; ii++) {
+      if (items[ii].id === itemId || items[ii].title === itemId) { item = items[ii]; break; }
     }
-
-    // =====================
-    // EXIBIR CONTEÚDO
-    // =====================
-    function displayContent() {
-        var contentDiv = document.getElementById('content');
-        var html = '';
-
-        // =====================
-        // CONTINUAR ASSISTINDO
-        // Delega inteiramente ao ContinueWatching do novo-player.js (fonte única)
-        // =====================
-        var deduped = [];
-        try {
-            if (window.ContinueWatching) {
-                deduped = window.ContinueWatching.getWatchingList();
-            }
-        } catch(e) { deduped = []; }
-
-        if (deduped.length > 0) {
-            html += '<section class="category-section continue-watching">';
-            html += '<div class="category-header">';
-            html += '<h2 class="category-title">⏯️ Continuar Assistindo</h2>';
-            html += '<div class="nav_items_module">';
-            html += '<a class="nav-btn prev-carousel-continue"><i class="fas fa-chevron-left"></i></a>';
-            html += '<a class="nav-btn next-carousel-continue"><i class="fas fa-chevron-right"></i></a>';
-            html += '</div></div>';
-            html += '<div id="carousel-continue" class="owl-carousel">';
-            deduped.forEach(function(item) {
-                var itemId = item.itemId || item.id;
-                var cat    = item.category;
-                var epIdx  = (typeof item.episodeIndex === 'number') ? item.episodeIndex : 0;
-                var progress = item.progress || (item.duration ? Math.round((item.currentTime / item.duration) * 100) : 0);
-                var timeLeft = '';
-                if (item.duration && item.currentTime) {
-                    var rem = Math.max(0, item.duration - item.currentTime);
-                    timeLeft = rem > 3600
-                        ? Math.floor(rem / 3600) + 'h ' + Math.floor((rem % 3600) / 60) + 'min restantes'
-                        : Math.floor(rem / 60) + 'min restantes';
-                }
-                var poster = DEFAULT_POSTER;
-                if (item.poster) {
-                    poster = item.poster.startsWith('http')
-                        ? item.poster
-                        : (RAW_BASE + '/assets/Capas/' + item.poster.split('/').pop());
-                }
-                var displayTitle = item.seriesTitle || item.title || '';
-                var epLabel = (item.episode || epIdx > 0) ? ('Ep ' + (item.episode || (epIdx + 1))) : '';
-                html += '<div class="item-card continue-card" data-category="' + cat + '" data-id="' + itemId + '" data-ep="' + epIdx + '">';
-                html += safeImg(poster, displayTitle);
-                html += '<div class="watch-badge">⏯️ Continuar</div>';
-                html += '<div class="progress-bar-wrap"><div class="progress-fill" style="width:' + progress + '%;"></div></div>';
-                html += '<div class="item-info">';
-                html += '<div class="item-title">' + displayTitle + '</div>';
-                html += '<div class="item-meta">' + epLabel + (epLabel && timeLeft ? ' • ' : '') + timeLeft + '</div>';
-                html += '</div></div>';
-            });
-            html += '</div></section>';
-        }
-
-        // Categorias normais
-        var categoryOrder = ['filmes', 'series', 'novelas', 'animes', 'infantil', 'tv'];
-        var categoryNames = {
-            filmes: '🎬 Filmes', series: '📺 Séries', novelas: '💖 Novelas',
-            animes: '👻 Animes', infantil: '🧸 Infantil', tv: '📡 TV AO VIVO'
+    var epList = item ? getEpList(item) : [];
+    var nextBtn = document.getElementById('btn-next-ep');
+    if (nextBtn) {
+      if (item && epIdx + 1 < epList.length) {
+        nextBtn.style.display = 'inline-block';
+        var newNext = nextBtn.cloneNode(true);
+        nextBtn.parentNode.replaceChild(newNext, nextBtn);
+        newNext.onclick = function () {
+          var next = epList[epIdx + 1];
+          closePlayer();
+          playVideo(next.url, item.title + ' - ' + (next.title || 'Ep ' + (epIdx + 2)), itemId, cat, epIdx + 1);
         };
-        var categoryPages = {
-            filmes: 'filmes.html', series: 'series.html', novelas: 'novelas.html',
-            animes: 'animes.html', infantil: 'infantil.html', tv: 'tv.html'
-        };
+      } else {
+        nextBtn.style.display = 'none';
+      }
+    }
+  }
 
-        categoryOrder.forEach(function(category) {
-            var items = window.vodData[category];
-            if (!items || items.length === 0) return;
-            var carouselId = 'carousel-' + category;
-            html += '<section class="category-section" id="' + category + '">';
-            html += '<div class="category-header">';
-            html += '<h2 class="category-title">' + categoryNames[category] + '</h2>';
-            html += '<div style="display:flex;gap:10px;align-items:center;">';
-            html += '<div class="nav_items_module">';
-            html += '<a class="nav-btn prev-' + carouselId + '"><i class="fas fa-chevron-left"></i></a>';
-            html += '<a class="nav-btn next-' + carouselId + '"><i class="fas fa-chevron-right"></i></a>';
-            html += '</div>';
-            html += '<a href="' + categoryPages[category] + '" class="see-all-link">Ver Tudo <i class="fas fa-arrow-right"></i></a>';
-            html += '</div></div>';
-            html += '<div id="' + carouselId + '" class="owl-carousel">';
+  // ─── PLAY ─────────────────────────────────────────────────────────────────
 
-            items.forEach(function(item, idx) {
-                var poster = getPoster(item, category);
-                // Montar lista completa de capas: TMDB posters + capa local
-                var allPosters = [];
-                if (category !== 'tv') {
-                    var localRaw = item.local_poster || '';
-                    var localUrl = localRaw ? (RAW_BASE + '/assets/Capas/' + localRaw.split('/').pop()) : '';
-                    // Começar com posters TMDB
-                    if (item.posters && item.posters.length) {
-                        allPosters = item.posters.slice();
-                    } else if (item.poster && item.poster.startsWith('http')) {
-                        allPosters = [item.poster];
-                    }
-                    // Adicionar capa local se existir e não estiver na lista
-                    if (localUrl && allPosters.indexOf(localUrl) === -1) {
-                        allPosters.push(localUrl);
-                    }
-                }
-                var postersJson = allPosters.length > 1 ? JSON.stringify(allPosters).replace(/"/g, '&quot;') : '';
-                var postersAttr = postersJson ? ' data-posters="' + postersJson + '"' : '';
-                var episodeCount = item.episodes ? item.episodes.length : 0;
-                var meta = category === 'filmes' ? 'Filme'
-                         : category === 'tv' ? '📡 Ao Vivo'
-                         : (item.seasons && item.seasons.length > 1) ? item.seasons.length + ' temporadas'
-                         : episodeCount + ' episódios';
-                var itemKey = (category === 'tv') ? String(idx) : item.id;
-                html += '<div class="item-card" data-category="' + category + '" data-id="' + itemKey + '"' + postersAttr + '>';
-                html += safeImg(poster, item.title);
-                html += '<div class="item-info">';
-                html += '<div class="item-title">' + item.title + '</div>';
-                html += '<div class="item-meta">' + meta + '</div>';
-                html += '</div></div>';
-            });
+  function playFirstEpisode(cat, itemId) {
+    var items = vodData[cat] || [];
+    var item  = null;
+    for (var i = 0; i < items.length; i++) {
+      if (items[i].id === itemId || items[i].title === itemId) { item = items[i]; break; }
+    }
+    if (!item) return;
 
-            html += '</div></section>';
-        });
+    var epList = getEpList(item);
+    if (epList.length) {
+      playVideo(epList[0].url, item.title + ' - ' + (epList[0].title || 'Ep 1'), itemId, cat, 0);
+    } else if (item.url) {
+      playVideo(item.url, item.title, itemId, cat, 0);
+    }
+  }
 
-        contentDiv.innerHTML = html || '<div class="loading">Nenhum conteúdo encontrado</div>';
+  function playTvChannel(idx) {
+    var canal = channels[idx];
+    if (!canal) return;
+    var url = (canal.episodes && canal.episodes[0]) ? canal.episodes[0].url : canal.url;
+    if (!url) return;
+    playVideo(url, canal.title || 'Canal ' + (idx + 1), 'tv_' + idx, 'tv', 0);
+  }
 
-        contentDiv.addEventListener('click', function(e) {
-            var card = e.target.closest('.item-card');
-            if (!card) return;
-            var cat = card.dataset.category;
-            var id  = card.dataset.id;
-            if (!cat || !id) return;
-            if (card.classList.contains('continue-card')) {
-                var epIdx = parseInt(card.dataset.ep) || 0;
-                window.resumeFromStorage(id, cat, epIdx);
-                return;
-            }
-            openModal(cat, id);
-        });
+  function playVideo(url, title, itemId, cat, epIdx) {
+    playerUrl    = url;
+    playerTitle  = title;
+    playerItemId = itemId;
+    playerCat    = cat;
+    playerEpIdx  = epIdx || 0;
+
+    var wrap  = document.getElementById('player-wrap');
+    var video = document.getElementById('player');
+    var titleEl = document.getElementById('player-title');
+
+    titleEl.textContent = title || '';
+
+    // ⭐ DETECTAR BLOGGER
+    if (isBloggerUrl(url)) {
+      playBloggerVideo(url, title, itemId, cat, epIdx);
+      return;
     }
 
-    // =====================
-    // MODAL — delegado ao shared.js
-    // =====================
+    isBloggerPlayer = false;
 
-    // =====================
-    // EVENT LISTENERS
-    // =====================
+    // Limpar container de iframe se existir
+    var videoContainer = document.getElementById('player-video-container');
+    if (videoContainer) {
+      videoContainer.innerHTML = '';
+    }
 
-    // Expor funções globalmente
-    // resumeFromStorage: delegado ao novo-player.js
-    // (definido lá, sobrescreve qualquer versão anterior)
+    // Destruir HLS anterior
+    destroyHls();
 
-    window.playEpisode      = playEpisode;
-    window.playFirstEpisode = playFirstEpisode;
+    wrap.style.display = 'block';
 
-    // Iniciar
-    loadData();
-})();
+    // Verificar se é HLS
+    var isHls = url.indexOf('.m3u8') !== -1 || url.indexOf('m3u8') !== -1;
+
+    if (isHls && typeof Hls !== 'undefined' && Hls.isSupported()) {
+      hlsInstance = new Hls({ enableWorker: false });
+      hlsInstance.loadSource(url);
+      hlsInstance.attachMedia(video);
+      hlsInstance.on(Hls.Events.MANIFEST_PARSED, function () {
+        video.play();
+      });
+    } else if (isHls && video.canPlayType('application/vnd.apple.mpegurl')) {
+      video.src = url;
+      video.play();
+    } else {
+      video.src = url;
+      video.play();
+    }
+
+    video.style.display = 'block';
+    video.focus();
+    showControls();
+
+    // Restaurar progresso
+    var videoId = itemId + '_' + epIdx;
+    var saved   = cwGet(videoId);
+    if (saved && saved.currentTime > 5) {
+      video.addEventListener('loadedmetadata', function restorer() {
+        if (saved.currentTime < video.duration - 2) {
+          video.currentTime = saved.currentTime;
+          var m = Math.floor(saved.currentTime / 60);
+          var s = Math.floor(saved.currentTime % 60);
+          showOsd('⏯ Retomando ' + m + ':' + (s < 10 ? '0' + s : s));
+        }
+        video.removeEventListener('loadedmetadata', restorer);
+      });
+    }
+
+    // Progresso periódico
+    if (progressInterval) clearInterval(progressInterval);
+    progressInterval = setInterval(function () {
+      if (!video.duration || video.currentTime < 10) return;
+      cwSave({
+        videoId:      videoId,
+        itemId:       itemId,
+        category:     cat,
+        episodeIndex: epIdx,
+        title:        title,
+        currentTime:  video.currentTime,
+        duration:     video.duration,
+        url:          url
+      });
+    }, 5000);
+
+    setupNextEpisode(itemId, cat, epIdx);
+  }
+
+  function destroyHls() {
+    if (hlsInstance) {
+      hlsInstance.destroy();
+      hlsInstance = null;
+    }
+    var video = document.getElementById('player');
+    if (video) {
+      video.pause();
+      video.src = '';
+      video.load();
+    }
+    if (progressInterval) { clearInterval(progressInterval); progressInterval = null; }
+  }
+
+  function closePlayer() {
+    // Destruir iframe do Blogger
+    var videoContainer = document.getElementById('player-video-container');
+    if (videoContainer) {
+      videoContainer.innerHTML = '';
+    }
+    destroyHls();
+    document.getElementById('player-wrap').style.display = 'none';
+    isBloggerPlayer = false;
+
+    // Recarrega a seção "Continuar Assistindo"
+    var catalog = document.getElementById('catalog');
+    if (catalog) {
+      var cwTitle = catalog.querySelector('.section-title');
+      if (cwTitle && cwTitle.textContent.indexOf('Continuar') !== -1) {
+        var next = cwTitle.nextSibling;
+        if (next && next.className === 'cards-row') catalog.removeChild(next);
+        catalog.removeChild(cwTitle);
+      }
+      var frag = document.createDocumentFragment();
+      renderContinueWatching(frag);
+      catalog.insertBefore(frag, catalog.firstChild);
+    }
+
+    setTimeout(function () {
+      focusIndex(currentFocusIndex);
+    }, 100);
+  }
+
+  // ─── CONTROLES DO PLAYER ─────────────────────────────────────────────────
+
+  function showControls() {
+    var ctrl = document.getElementById('player-controls');
+    ctrl.className = 'visible';
+    if (controlsTimer) clearTimeout(controlsTimer);
+    controlsTimer = setTimeout(function () {
+      if (!isBloggerPlayer) {
+        var video = document.getElementById('player');
+        if (video && !video.paused) ctrl.className = '';
+      } else {
+        ctrl.className = '';
+      }
+    }, 3000);
+  }
+
+  function showOsd(text) {
+    var wrap = document.getElementById('player-wrap');
+    if (!wrap) return;
+    var old = wrap.querySelector('.osd-msg');
+    if (old) old.parentNode.removeChild(old);
+    var msg = document.createElement('div');
+    msg.className = 'osd-msg';
+    msg.textContent = text;
+    wrap.appendChild(msg);
+    setTimeout(function () {
+      if (msg.parentNode) msg.parentNode.removeChild(msg);
+    }, 1200);
+  }
+
+  function fmt(s) {
+    if (!s || isNaN(s)) return '0:00';
+    var m = Math.floor(s / 60);
+    var sec = Math.floor(s % 60);
+    return m + ':' + (sec < 10 ? '0' + sec : sec);
+  }
+
+  // ─── BIND PLAYER ─────────────────────────────────────────────────────────
+
+  function bindPlayer() {
+    var video     = document.getElementById('player');
+    var wrap      = document.getElementById('player-wrap');
+    var progWrap  = document.getElementById('progress-wrap');
+    var progFill  = document.getElementById('progress-fill');
+    var timeLabel = document.getElementById('time-label');
+    var btnPlay   = document.getElementById('btn-play');
+    var btnBack   = document.getElementById('btn-back');
+    var btnFwd    = document.getElementById('btn-fwd');
+    var btnFs     = document.getElementById('btn-fs');
+    var btnClose  = document.getElementById('btn-close-player');
+
+    video.addEventListener('timeupdate', function () {
+      if (isBloggerPlayer) return;
+      if (!video.duration) return;
+      var pct = (video.currentTime / video.duration) * 100;
+      progFill.style.width = pct + '%';
+      timeLabel.textContent = fmt(video.currentTime) + ' / ' + fmt(video.duration);
+    });
+
+    video.addEventListener('play',  function () { if (!isBloggerPlayer) btnPlay.innerHTML = '⏸'; });
+    video.addEventListener('pause', function () { if (!isBloggerPlayer) btnPlay.innerHTML = '▶'; });
+
+    video.addEventListener('ended', function () {
+      if (isBloggerPlayer) return;
+      var item  = null;
+      var items = vodData[playerCat] || [];
+      for (var i = 0; i < items.length; i++) {
+        if (items[i].id === playerItemId || items[i].title === playerItemId) { item = items[i]; break; }
+      }
+      if (item) {
+        var epList = getEpList(item);
+        if (playerEpIdx + 1 < epList.length) {
+          var next = epList[playerEpIdx + 1];
+          playVideo(next.url, item.title + ' - ' + (next.title || 'Ep ' + (playerEpIdx + 2)), playerItemId, playerCat, playerEpIdx + 1);
+          return;
+        }
+      }
+      closePlayer();
+    });
+
+    btnPlay.onclick = function () {
+      if (isBloggerUrl(playerUrl)) return;
+      video.paused ? video.play() : video.pause();
+    };
+    btnBack.onclick = function () {
+      if (isBloggerUrl(playerUrl)) {
+        var iframe = document.getElementById('blogger-iframe');
+        if (iframe && iframe.contentWindow) {
+          iframe.contentWindow.postMessage({ event: 'command', func: 'seek', args: -10 }, '*');
+        }
+        showOsd('⏪ -10s');
+        return;
+      }
+      video.currentTime = Math.max(0, video.currentTime - 10);
+      showOsd('⏪ -10s');
+    };
+    btnFwd.onclick = function () {
+      if (isBloggerUrl(playerUrl)) {
+        var iframe = document.getElementById('blogger-iframe');
+        if (iframe && iframe.contentWindow) {
+          iframe.contentWindow.postMessage({ event: 'command', func: 'seek', args: 10 }, '*');
+        }
+        showOsd('⏩ +10s');
+        return;
+      }
+      video.currentTime = Math.min(video.duration || 0, video.currentTime + 10);
+      showOsd('⏩ +10s');
+    };
+    btnClose.onclick = closePlayer;
+
+    btnFs.onclick = function () {
+      var el = document.getElementById('player-wrap');
+      if (document.fullscreenElement || document.webkitFullscreenElement) {
+        (document.exitFullscreen || document.webkitExitFullscreen).call(document);
+      } else {
+        (el.requestFullscreen || el.webkitRequestFullscreen).call(el);
+      }
+    };
+
+    progWrap.onclick = function (e) {
+      if (isBloggerUrl(playerUrl)) return;
+      var rect = progWrap.getBoundingClientRect();
+      var pct  = (e.clientX - rect.left) / rect.width;
+      if (video.duration) video.currentTime = pct * video.duration;
+    };
+
+    wrap.addEventListener('mousemove', showControls);
+    wrap.addEventListener('touchstart', showControls, { passive: true });
+    video.onclick = function () { showControls(); if (!isBloggerUrl(playerUrl)) video.paused ? video.play() : video.pause(); };
+
+    var touchX = 0;
+    wrap.addEventListener('touchstart', function (e) { touchX = e.touches[0].clientX; }, { passive: true });
+    wrap.addEventListener('touchend', function (e) {
+      var dx = e.changedTouches[0].clientX - touchX;
+      if (Math.abs(dx) > 60) {
+        if (dx > 0) { btnBack.onclick(); }
+        else        { btnFwd.onclick(); }
+      }
+    }, { passive: true });
+
+    document.addEventListener('keydown', function (e) {
+      if (wrap.style.display === 'none') return;
+      var key = e.keyCode || e.which;
+
+      switch (key) {
+        case 32: case 415:
+          e.preventDefault();
+          if (isBloggerUrl(playerUrl)) return;
+          video.paused ? video.play() : video.pause();
+          showControls();
+          break;
+        case 19:
+          e.preventDefault();
+          if (isBloggerUrl(playerUrl)) return;
+          video.pause();
+          showControls();
+          break;
+        case 37: case 412:
+          e.preventDefault();
+          btnBack.onclick();
+          showControls();
+          break;
+        case 39: case 417:
+          e.preventDefault();
+          btnFwd.onclick();
+          showControls();
+          break;
+        case 38:
+          e.preventDefault();
+          video.volume = Math.min(1, video.volume + 0.1);
+          showOsd('🔊 ' + Math.round(video.volume * 100) + '%');
+          showControls();
+          break;
+        case 40:
+          e.preventDefault();
+          video.volume = Math.max(0, video.volume - 0.1);
+          showOsd('🔉 ' + Math.round(video.volume * 100) + '%');
+          showControls();
+          break;
+        case 27: case 10009:
+          e.preventDefault();
+          closePlayer();
+          break;
+      }
+    });
+  }
+
+  // ─── BUSCA ───────────────────────────────────────────────────────────────
+
+  function bindSearch() {
+    var input = document.getElementById('search-input');
+    if (!input) return;
+    input.addEventListener('keyup', function () {
+      if (searchTimer) clearTimeout(searchTimer);
+      var q = input.value;
+      searchTimer = setTimeout(function () { doSearch(q); }, 250);
+    });
+  }
+
+  function doSearch(query) {
+    var catalog   = document.getElementById('catalog');
+    var noResults = document.getElementById('no-results');
+
+    query = (query || '').trim();
+    if (query.length < 2) {
+      renderCatalog(currentCat);
+      return;
+    }
+
+    query = normalizeStr(query);
+    var allCats = CATS.concat(['tv']);
+    var results = [];
+
+    for (var ci = 0; ci < allCats.length; ci++) {
+      var cat   = allCats[ci];
+      var items = vodData[cat] || [];
+      for (var i = 0; i < items.length; i++) {
+        if (normalizeStr(items[i].title || '').indexOf(query) !== -1) {
+          results.push({ item: items[i], cat: cat });
+        }
+      }
+    }
+
+    catalog.innerHTML = '';
+    noResults.style.display = 'none';
+
+    if (!results.length) {
+      noResults.style.display = 'block';
+      return;
+    }
+
+    var title = document.createElement('div');
+    title.className = 'section-title';
+    title.textContent = results.length + ' resultado(s) para "' + query + '"';
+    catalog.appendChild(title);
+
+    var row = document.createElement('div');
+    row.className = 'cards-row';
+    for (var ri = 0; ri < results.length; ri++) {
+      var r = results[ri];
+      if (r.cat === 'tv') {
+        row.appendChild(makeTvCard(r.item, results[ri].idx || ri));
+      } else {
+        row.appendChild(makeCard(r.item, r.cat));
+      }
+    }
+    catalog.appendChild(row);
+  }
+
+  function normalizeStr(s) {
+    return s.toLowerCase()
+      .replace(/[àáâãä]/g, 'a').replace(/[èéêë]/g, 'e')
+      .replace(/[ìíîï]/g, 'i').replace(/[òóôõö]/g, 'o')
+      .replace(/[ùúûü]/g, 'u').replace(/ç/g, 'c').replace(/ñ/g, 'n');
+  }
+
+  // ─── NAV ─────────────────────────────────────────────────────────────────
+
+  function bindNav() {
+    var links = document.querySelectorAll('.nav-link');
+    for (var i = 0; i < links.length; i++) {
+      (function (link) {
+        link.onclick = function () {
+          var cat = link.getAttribute('data-cat');
+          document.getElementById('search-input').value = '';
+          renderCatalog(cat);
+          setTimeout(function () {
+            currentFocusIndex = 0;
+            focusIndex(0);
+          }, 100);
+        };
+        link.onkeydown = function (e) {
+          if (e.keyCode === 13) link.onclick();
+        };
+      })(links[i]);
+    }
+  }
+
+  // ─── MODAL ───────────────────────────────────────────────────────────────
+
+  function openModal(cat, itemId) {
+    var items = vodData[cat] || [];
+    var item = null;
+    for (var i = 0; i < items.length; i++) {
+      if (items[i].id === itemId || items[i].title === itemId) { item = items[i]; break; }
+    }
+    if (!item) return;
+
+    var modal    = document.getElementById('modal');
+    var backdrop = document.getElementById('modal-backdrop');
+    var body     = document.getElementById('modal-body');
+
+    var bgUrl = item.backdrop || getPoster(item, cat);
+    backdrop.style.backgroundImage = 'url(' + bgUrl + ')';
+
+    var typeLabel = CAT_LABELS[cat] || cat;
+    var html = '';
+
+    html += '<div class="modal-title">' + esc(item.title) + '</div>';
+    html += '<div class="modal-badges">';
+    html += '<span class="badge badge-type">' + typeLabel + '</span>';
+    if (item.year)   html += '<span class="badge">📅 ' + item.year + '</span>';
+    if (item.rating) html += '<span class="badge badge-rating">⭐ ' + item.rating + '</span>';
+    html += '</div>';
+
+    if (item.overview) {
+      html += '<p class="modal-overview">' + esc(item.overview) + '</p>';
+    }
+
+    html += '<button class="modal-play-btn" id="modal-play-btn">▶ Assistir</button>';
+
+    if (item.seasons && item.seasons.length) {
+      html += renderSeasons(item, cat);
+    } else if (item.episodes && item.episodes.length) {
+      html += '<div class="modal-section-title">Episódios</div>';
+      html += '<div class="ep-list" id="ep-list-main">';
+      for (var ei = 0; ei < item.episodes.length; ei++) {
+        html += renderEpItem(item.episodes[ei], ei, ei, item.id || item.title, cat);
+      }
+      html += '</div>';
+    }
+
+    body.innerHTML = html;
+    modal.style.display = 'block';
+
+    var playBtn = document.getElementById('modal-play-btn');
+    if (playBtn) {
+      playBtn.onclick = function () {
+        closeModal();
+        playFirstEpisode(cat, itemId);
+      };
+    }
+
+    bindEpClicks(body, itemId, cat);
+
+    setTimeout(function () {
+      var playBtn = document.getElementById('modal-play-btn');
+      if (playBtn) {
+        currentFocusIndex = 1;
+        playBtn.focus();
+      }
+    }, 100);
+  }
+
+  function openTvModal(idx) {
+    var canal = channels[idx];
+    if (!canal) return;
+
+    var modal    = document.getElementById('modal');
+    var backdrop = document.getElementById('modal-backdrop');
+    var body     = document.getElementById('modal-body');
+
+    var logo = (canal.tvg_logo && canal.tvg_logo.indexOf('http') === 0) ? canal.tvg_logo : TV_POSTER;
+    backdrop.style.backgroundImage = 'url(' + logo + ')';
+
+    var html = '';
+    html += '<div class="modal-title">' + esc(canal.title || canal.name) + '</div>';
+    html += '<div class="modal-badges"><span class="
