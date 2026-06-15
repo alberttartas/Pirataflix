@@ -50,7 +50,6 @@ window.ContinueWatching = {
     getAll() {
         try {
             const data = JSON.parse(localStorage.getItem(this.STORAGE_KEY)) || {};
-            // Compatibilidade: se vier array (formato antigo), converter
             if (Array.isArray(data)) {
                 const converted = {};
                 data.forEach(item => {
@@ -65,7 +64,7 @@ window.ContinueWatching = {
 
     save(videoData) {
         if (!videoData.videoId || !videoData.itemId) return;
-        if (videoData.currentTime < 10) return; // Não salvar menos de 10s
+        if (videoData.currentTime < 10) return;
         const all = this.getAll();
         all[videoData.videoId] = {
             ...videoData,
@@ -87,7 +86,6 @@ window.ContinueWatching = {
         localStorage.setItem(this.STORAGE_KEY, JSON.stringify(all));
     },
 
-    // Retorna lista deduplicada por itemId (o mais recente de cada série/filme)
     getWatchingList() {
         const all = this.getAll();
         const unique = {};
@@ -104,9 +102,33 @@ window.ContinueWatching = {
 };
 
 // ==========================================
-// 🔥 DESTRUIR PLAYER
+// 📺 DETECTOR DE URL DO BLOGGER
+// ==========================================
+
+function isBloggerUrl(url) {
+    return url && (url.includes('blogger.com/video.g') || url.includes('googlevideo.com'));
+}
+
+// ==========================================
+// 🔥 DESTRUIR PLAYER (CORRIGIDO)
 // ==========================================
 window.destroyModernPlayer = function() {
+    // 1. Fechar iframe do Blogger (procura por qualquer iframe com ID começando com blogger-iframe)
+    const allIframes = document.querySelectorAll('iframe[id^="blogger-iframe"]');
+    allIframes.forEach(iframe => {
+        iframe.src = 'about:blank';
+        iframe.remove();
+    });
+    
+    // 2. Remover controles do Blogger
+    const bloggerControls = document.getElementById('blogger-controls');
+    if (bloggerControls) bloggerControls.remove();
+    
+    // 3. Remover wrapper do Blogger
+    const bloggerWrapper = document.getElementById('blogger-player-wrapper');
+    if (bloggerWrapper) bloggerWrapper.remove();
+    
+    // 4. Parar vídeo normal
     const video = document.getElementById('current-video');
     if (video) {
         if (onTimeUpdateHandler) {
@@ -117,26 +139,47 @@ window.destroyModernPlayer = function() {
         video.removeAttribute('src');
         video.load();
     }
-    if (window.__playerInterval) { clearInterval(window.__playerInterval); window.__playerInterval = null; }
-    if (window.__keyboardHandler) { document.removeEventListener('keydown', window.__keyboardHandler); window.__keyboardHandler = null; }
-    if (window.controlsTimeout) { clearTimeout(window.controlsTimeout); window.controlsTimeout = null; }
+    
+    // 5. Limpar intervalos
+    if (window.__playerInterval) { 
+        clearInterval(window.__playerInterval); 
+        window.__playerInterval = null; 
+    }
+    
+    // 6. Remover handler de teclado
+    if (window.__keyboardHandler) { 
+        document.removeEventListener('keydown', window.__keyboardHandler); 
+        window.__keyboardHandler = null; 
+    }
+    
+    // 7. Limpar timeout dos controles
+    if (window.controlsTimeout) { 
+        clearTimeout(window.controlsTimeout); 
+        window.controlsTimeout = null; 
+    }
+    
+    // 8. Remover controles customizados
     const controls = document.getElementById('custom-controls');
     if (controls) controls.remove();
+    
+    // 9. Limpar container do player (mas não o innerHTML para não quebrar referências)
+    const container = document.getElementById('modern-player-container');
+    if (container) {
+        // Remove apenas os elementos filhos, não o container em si
+        while (container.firstChild) {
+            container.removeChild(container.firstChild);
+        }
+    }
+    
+    console.log('✅ Player destruído completamente');
 };
-// ==========================================
-// 📺 DETECTOR DE URL DO BLOGGER
-// ==========================================
-
-function isBloggerUrl(url) {
-    return url && (url.includes('blogger.com/video.g') || url.includes('googlevideo.com'));
-}
 
 // ==========================================
-// 🎬 PLAYER PARA BLOGGER (IFRAME)
+// 🎬 PLAYER PARA BLOGGER (IFRAME) - VERSÃO ÚNICA
 // ==========================================
 
 function playBloggerVideo(url, title, info = '', itemId = null, category = null, episodeIndex = 0) {
-    // Fechar player anterior se existir
+    // Fechar player anterior completamente
     window.destroyModernPlayer();
     
     const modal = document.getElementById('modernPlayerModal');
@@ -145,7 +188,6 @@ function playBloggerVideo(url, title, info = '', itemId = null, category = null,
     const infoEl = document.getElementById('modern-player-info');
     
     if (!modal) {
-        // Fallback: abrir em nova aba
         window.open(url, '_blank');
         return;
     }
@@ -157,13 +199,20 @@ function playBloggerVideo(url, title, info = '', itemId = null, category = null,
     const container = document.getElementById('modern-player-container');
     if (!container) return;
     
+    // Garantir que o container está limpo
+    while (container.firstChild) {
+        container.removeChild(container.firstChild);
+    }
+    
+    // Criar um ID único para este iframe
+    const iframeId = 'blogger-iframe-' + Date.now();
     const videoId = `${itemId}_${episodeIndex}`;
     
-    // Container com iframe em vez de video tag
+    // Container com iframe
     container.innerHTML = `
-        <div style="position: relative; width: 100%; height: 100%; background: #000;">
+        <div id="blogger-player-wrapper" style="position: relative; width: 100%; height: 100%; background: #000;">
             <iframe
-                id="blogger-iframe"
+                id="${iframeId}"
                 src="${url}"
                 style="width: 100%; height: 100%; border: none;"
                 allowfullscreen
@@ -185,64 +234,58 @@ function playBloggerVideo(url, title, info = '', itemId = null, category = null,
                 transition: opacity 0.3s;
             ">
                 <div style="display: flex; gap: 15px;">
-                    <button id="blogger-back-btn" style="background: rgba(255,255,255,0.2); border: none; color: white; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 14px;">⏪ 10s</button>
-                    <button id="blogger-forward-btn" style="background: rgba(255,255,255,0.2); border: none; color: white; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 14px;">10s ⏩</button>
+                    <button class="blogger-control-btn" data-seek="-10" style="background: rgba(255,255,255,0.2); border: none; color: white; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 14px;">⏪ 10s</button>
+                    <button class="blogger-control-btn" data-seek="10" style="background: rgba(255,255,255,0.2); border: none; color: white; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 14px;">10s ⏩</button>
                 </div>
-                <span id="blogger-time" style="color: white; font-size: 14px;">Blogger Video</span>
+                <span style="color: white; font-size: 14px;">🎬 ${title.substring(0, 50)}</span>
                 <button id="blogger-fs-btn" style="background: rgba(255,255,255,0.2); border: none; color: white; padding: 8px 12px; border-radius: 4px; cursor: pointer; font-size: 16px;">⛶</button>
             </div>
         </div>
     `;
     
-    // Mostrar controles ao mover mouse
+    // Referência ao iframe
+    const iframe = document.getElementById(iframeId);
     const controlsDiv = document.getElementById('blogger-controls');
-    const containerDiv = container.querySelector('div');
+    const wrapper = document.getElementById('blogger-player-wrapper');
     
-    if (containerDiv) {
-        containerDiv.addEventListener('mousemove', () => {
+    // Mostrar controles ao mover mouse
+    if (wrapper) {
+        wrapper.addEventListener('mousemove', () => {
             if (controlsDiv) controlsDiv.style.opacity = '1';
             clearTimeout(window.controlsTimeout);
             window.controlsTimeout = setTimeout(() => {
-                if (controlsDiv) controlsDiv.style.opacity = '0';
+                if (controlsDiv && controlsDiv.style) controlsDiv.style.opacity = '0';
             }, 3000);
         });
     }
     
-    // Botão voltar (-10s)
-    const backBtn = document.getElementById('blogger-back-btn');
-    if (backBtn) {
-        backBtn.onclick = () => {
-            const iframe = document.getElementById('blogger-iframe');
+    // Botões de controle
+    const controlBtns = document.querySelectorAll('.blogger-control-btn');
+    controlBtns.forEach(btn => {
+        btn.onclick = (e) => {
+            e.stopPropagation();
+            const seek = parseInt(btn.dataset.seek);
             if (iframe && iframe.contentWindow) {
-                // Tenta enviar mensagem para o player (se suportar)
-                iframe.contentWindow.postMessage({ event: 'command', func: 'seek', args: -10 }, '*');
+                iframe.contentWindow.postMessage({
+                    event: 'command',
+                    func: 'seek',
+                    args: seek
+                }, '*');
             }
-            showMessage(container, '⏪ -10s');
+            showMessage(container, seek > 0 ? '⏩ +10s' : '⏪ -10s');
         };
-    }
-    
-    // Botão avançar (+10s)
-    const fwdBtn = document.getElementById('blogger-forward-btn');
-    if (fwdBtn) {
-        fwdBtn.onclick = () => {
-            const iframe = document.getElementById('blogger-iframe');
-            if (iframe && iframe.contentWindow) {
-                iframe.contentWindow.postMessage({ event: 'command', func: 'seek', args: 10 }, '*');
-            }
-            showMessage(container, '⏩ +10s');
-        };
-    }
+    });
     
     // Fullscreen
     const fsBtn = document.getElementById('blogger-fs-btn');
     if (fsBtn) {
         fsBtn.onclick = () => {
-            const containerDiv = container.querySelector('div');
-            if (containerDiv) {
+            const playerWrapper = document.getElementById('blogger-player-wrapper');
+            if (playerWrapper) {
                 if (document.fullscreenElement) {
                     document.exitFullscreen();
                 } else {
-                    containerDiv.requestFullscreen().catch(() => {});
+                    playerWrapper.requestFullscreen().catch(() => {});
                 }
             }
         };
@@ -257,6 +300,8 @@ function playBloggerVideo(url, title, info = '', itemId = null, category = null,
             const nextBtn = document.createElement('button');
             nextBtn.innerHTML = 'PRÓXIMO ▶';
             nextBtn.style.cssText = 'background:#e50914;color:white;border:none;padding:8px 16px;border-radius:4px;font-size:14px;font-weight:bold;cursor:pointer;white-space:nowrap;opacity:0.8;transition:0.2s;margin-left:15px;';
+            nextBtn.onmouseover = () => nextBtn.style.background = '#f40612';
+            nextBtn.onmouseout = () => nextBtn.style.background = '#e50914';
             nextBtn.onclick = () => {
                 const next = epList[episodeIndex + 1];
                 window.playWithModernPlayer(
@@ -270,39 +315,54 @@ function playBloggerVideo(url, title, info = '', itemId = null, category = null,
         }
     }
     
-    // Botão fechar
+    // Botão fechar - CORRIGIDO
     if (closeBtn) {
-        closeBtn.onclick = function() {
+        // Remover eventos anteriores clonando o botão
+        const newCloseBtn = closeBtn.cloneNode(true);
+        closeBtn.parentNode.replaceChild(newCloseBtn, closeBtn);
+        
+        newCloseBtn.onclick = function() {
+            console.log('Fechando player...');
             window.destroyModernPlayer();
             modal.style.display = 'none';
         };
     }
     
-    // Teclado ESC fecha
+    // Teclado ESC fecha - CORRIGIDO
+    if (window.__keyboardHandler) {
+        document.removeEventListener('keydown', window.__keyboardHandler);
+    }
+    
     window.__keyboardHandler = function(e) {
         if (e.key === 'Escape' || e.keyCode === 27) {
+            console.log('ESC pressionado, fechando player...');
             window.destroyModernPlayer();
             modal.style.display = 'none';
         }
     };
     document.addEventListener('keydown', window.__keyboardHandler);
     
-    // Salvar progresso (não temos timeupdate no iframe, mas salvamos que assistiu)
-    const videoIdKey = `${itemId}_${episodeIndex}`;
+    // Salvar que assistiu (marcar como visto)
     window.ContinueWatching.save({
-        videoId: videoIdKey,
-        itemId,
-        category,
-        episodeIndex,
-        title,
+        videoId: videoId,
+        itemId: itemId,
+        category: category,
+        episodeIndex: episodeIndex,
+        title: title,
         seriesTitle: title?.split(' - ')[0] || title,
         episode: episodeIndex + 1,
         currentTime: 0,
         duration: 1,
-        url,
+        url: url,
         poster: ''
     });
+    
+    console.log('🎬 Blogger Video iniciado:', title);
 }
+
+// ==========================================
+// 🎬 PLAYER PRINCIPAL
+// ==========================================
 
 window.playWithModernPlayer = function(url, title, info = '', itemId = null, category = null, episodeIndex = 0) {
     // ⭐ DETECTAR BLOGGER - ABRIR EM IFRAME
@@ -441,6 +501,7 @@ window.playWithModernPlayer = function(url, title, info = '', itemId = null, cat
 // ==========================================
 // 🛠️ HELPERS
 // ==========================================
+
 function getEpisodeList(item) {
     if (item.episodes?.length) return item.episodes;
     if (item.seasons?.length) {
@@ -467,6 +528,7 @@ function showMessage(container, text) {
 // ==========================================
 // 🎮 CONTROLES
 // ==========================================
+
 function addControls(container, video, itemId, category, episodeIndex, title, info) {
     const oldControls = document.getElementById('custom-controls');
     if (oldControls) oldControls.remove();
@@ -490,7 +552,6 @@ function addControls(container, video, itemId, category, episodeIndex, title, in
         z-index:10001;opacity:0;transition:opacity 0.3s;
     `;
 
-    // Mostrar barra ao mover mouse
     container.addEventListener('mousemove', () => {
         bar.style.opacity = '1';
         clearTimeout(window.controlsTimeout);
@@ -499,7 +560,6 @@ function addControls(container, video, itemId, category, episodeIndex, title, in
         }, 3000);
     });
 
-    // Play/Pause
     const playBtn = document.createElement('button');
     playBtn.innerHTML = '⏸️';
     playBtn.style.cssText = 'background:none;border:none;color:white;font-size:28px;cursor:pointer;padding:5px;width:40px;';
@@ -507,15 +567,12 @@ function addControls(container, video, itemId, category, episodeIndex, title, in
     video.addEventListener('play',  () => playBtn.innerHTML = '⏸️');
     video.addEventListener('pause', () => playBtn.innerHTML = '▶️');
 
-    // -10s
     const backBtn = makeCtrlBtn('⏪ 10s');
     backBtn.onclick = () => { video.currentTime = Math.max(0, video.currentTime - 10); showMessage(container, '⏪ -10s'); };
 
-    // +10s
     const fwdBtn = makeCtrlBtn('10s ⏩');
     fwdBtn.onclick = () => { video.currentTime = Math.min(video.duration, video.currentTime + 10); showMessage(container, '⏩ +10s'); };
 
-    // Barra de progresso
     const progressWrap = document.createElement('div');
     progressWrap.style.cssText = 'flex:1;height:5px;background:rgba(255,255,255,0.3);border-radius:5px;cursor:pointer;position:relative;';
     const progressFill = document.createElement('div');
@@ -526,7 +583,6 @@ function addControls(container, video, itemId, category, episodeIndex, title, in
         video.currentTime = ((e.clientX - rect.left) / rect.width) * video.duration;
     });
 
-    // Tempo
     const timeLabel = document.createElement('span');
     timeLabel.style.cssText = 'color:white;font-size:14px;min-width:100px;';
     function fmt(s) {
@@ -534,13 +590,11 @@ function addControls(container, video, itemId, category, episodeIndex, title, in
         return `${Math.floor(s/60)}:${Math.floor(s%60).toString().padStart(2,'0')}`;
     }
 
-    // Fullscreen
     const fsBtn = makeCtrlBtn('⛶', '22px');
     fsBtn.onclick = () => {
         document.fullscreenElement ? document.exitFullscreen() : container.requestFullscreen().catch(() => {});
     };
 
-    // timeupdate unificado
     if (onTimeUpdateHandler) video.removeEventListener('timeupdate', onTimeUpdateHandler);
     onTimeUpdateHandler = () => {
         if (!video.duration) return;
@@ -551,10 +605,8 @@ function addControls(container, video, itemId, category, episodeIndex, title, in
     };
     video.addEventListener('timeupdate', onTimeUpdateHandler);
 
-    // Montar barra
     bar.append(playBtn, backBtn, fwdBtn, progressWrap, timeLabel, fsBtn);
 
-    // Próximo episódio
     if (item && episodeIndex + 1 < epList.length) {
         const nextBtn = document.createElement('button');
         nextBtn.id = 'nextEpisodeBtn';
@@ -603,6 +655,7 @@ function setupTouchControls(container, video) {
 // ==========================================
 // ▶️ RETOMAR DA LISTA "CONTINUAR ASSISTINDO"
 // ==========================================
+
 window.resumeFromStorage = function(itemId, category, episodeIndex) {
     const items = window.vodData?.[category];
     if (!items) return;
@@ -628,6 +681,36 @@ window.resumeFromStorage = function(itemId, category, episodeIndex) {
     if (!url) { window.openModal?.(category, itemId); return; }
     window.playWithModernPlayer(url, title, '', itemId, category, safeIdx);
 };
+
+// ==========================================
+// 🔒 GARANTIR QUE O BOTÃO FECHAR FUNCIONA
+// ==========================================
+
+document.addEventListener('DOMContentLoaded', function() {
+    const closeBtn = document.getElementById('closeModernPlayerFix');
+    const modal = document.getElementById('modernPlayerModal');
+    
+    if (closeBtn && modal) {
+        const newCloseBtn = closeBtn.cloneNode(true);
+        closeBtn.parentNode.replaceChild(newCloseBtn, closeBtn);
+        
+        newCloseBtn.onclick = function() {
+            console.log('Botão fechar clicado');
+            window.destroyModernPlayer();
+            if (modal) modal.style.display = 'none';
+        };
+    }
+    
+    if (modal) {
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                console.log('Backdrop clicado');
+                window.destroyModernPlayer();
+                modal.style.display = 'none';
+            }
+        });
+    }
+});
 
 // Alias para compatibilidade
 window.resumeItem = window.resumeFromStorage;
