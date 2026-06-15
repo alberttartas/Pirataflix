@@ -908,4 +908,402 @@
 
     var html = '';
     html += '<div class="modal-title">' + esc(canal.title || canal.name) + '</div>';
-    html += '<div class="modal-badges"><span class="
+    html += '<div class="modal-badges"><span class="badge badge-type">📡 TV Ao Vivo</span>';
+    if (canal.group) html += '<span class="badge">' + esc(canal.group) + '</span>';
+    html += '</div>';
+    html += '<button class="modal-play-btn" id="modal-play-btn">▶ Assistir ao Vivo</button>';
+
+    var grupo = canal.group || 'TV';
+    var same  = [];
+    for (var i = 0; i < channels.length; i++) {
+      if ((channels[i].group || 'TV') === grupo) same.push({ ch: channels[i], idx: i });
+    }
+
+    if (same.length > 1) {
+      html += '<div class="modal-section-title">Canais — ' + esc(grupo) + '</div>';
+      html += '<div class="ep-list">';
+      for (var si = 0; si < same.length; si++) {
+        var ch = same[si].ch;
+        var ci = same[si].idx;
+        var chLogo = (ch.tvg_logo && ch.tvg_logo.indexOf('http') === 0) ? ch.tvg_logo : TV_POSTER;
+        var isAtivo = ci === idx;
+        html +=
+          '<div class="canal-item" tabindex="0" data-tv-idx="' + ci + '">' +
+            '<img src="' + chLogo + '" class="canal-logo" onerror="this.src=\'' + TV_POSTER + '\'">' +
+            '<span class="canal-name">' + esc(ch.title || ch.name || 'Canal') + '</span>' +
+            (isAtivo ? '<span class="live-dot">● AO VIVO</span>' : '') +
+          '</div>';
+      }
+      html += '</div>';
+    }
+
+    body.innerHTML = html;
+    modal.style.display = 'block';
+
+    var playBtn = document.getElementById('modal-play-btn');
+    if (playBtn) {
+      playBtn.onclick = function () {
+        closeModal();
+        playTvChannel(idx);
+      };
+    }
+
+    var canalItems = body.querySelectorAll('.canal-item');
+    for (var ci2 = 0; ci2 < canalItems.length; ci2++) {
+      (function (el) {
+        var tvIdx = parseInt(el.getAttribute('data-tv-idx'), 10);
+        function doPlay() { closeModal(); playTvChannel(tvIdx); }
+        el.onclick = doPlay;
+        el.onkeydown = function (e) { if (e.keyCode === 13) doPlay(); };
+      })(canalItems[ci2]);
+    }
+
+    setTimeout(function () {
+      var playBtn = document.getElementById('modal-play-btn');
+      if (playBtn) {
+        currentFocusIndex = 1;
+        playBtn.focus();
+      }
+    }, 100);
+  }
+
+  function closeModal() {
+    document.getElementById('modal').style.display = 'none';
+    setTimeout(function () {
+      focusIndex(currentFocusIndex);
+    }, 100);
+  }
+
+  function bindModal() {
+    var closeBtn = document.getElementById('modal-close');
+    var modal    = document.getElementById('modal');
+
+    closeBtn.onclick = closeModal;
+    closeBtn.onkeydown = function (e) { if (e.keyCode === 13) closeModal(); };
+    modal.onclick = function (e) { if (e.target === modal) closeModal(); };
+
+    document.addEventListener('keydown', function (e) {
+      var key = e.keyCode || e.which;
+      if ((key === 27 || key === 10009) && modal.style.display !== 'none') {
+        closeModal();
+      }
+    });
+  }
+
+  // ─── EPISÓDIOS HTML ───────────────────────────────────────────────────────
+
+  function renderSeasons(item, cat) {
+    var html = '<div>';
+    var seasons = item.seasons.slice().sort(function (a, b) { return a.season - b.season; });
+    var offset  = 0;
+
+    for (var si = 0; si < seasons.length; si++) {
+      var s      = seasons[si];
+      var sNum   = s.season || (si + 1);
+      var isLast = si === seasons.length - 1;
+      var colId  = 'season-' + sNum;
+      var eps    = s.episodes || [];
+
+      html +=
+        '<div class="modal-section-title season-header" tabindex="0" data-toggle="' + colId + '">' +
+          '<span class="season-label">🎬 Temporada ' + sNum + '</span>' +
+          '<span class="season-count">' + eps.length + ' ep.</span>' +
+          '<span class="season-chevron">' + (isLast ? '▲' : '▼') + '</span>' +
+        '</div>';
+
+      html += '<div class="ep-list" id="' + colId + '" style="display:' + (isLast ? 'block' : 'none') + '">';
+      for (var ei = 0; ei < eps.length; ei++) {
+        html += renderEpItem(eps[ei], eps[ei].episode || (ei + 1), offset + ei, item.id || item.title, cat);
+      }
+      html += '</div>';
+      offset += eps.length;
+    }
+
+    html += '</div>';
+    return html;
+  }
+
+  function renderEpItem(ep, num, globalIdx, itemId, cat) {
+    var locked  = ep.locked || !ep.url;
+    var title   = ep.title || ('Episódio ' + num);
+    var airdate = ep.air_date || ep.release_iso || '';
+
+    if (locked) {
+      return '<div class="ep-item locked">' +
+        '<div class="ep-num">' + num + '</div>' +
+        '<div class="ep-info">' +
+          '<div class="ep-title">' + esc(title) + '</div>' +
+          (airdate ? '<div class="ep-date">📅 ' + airdate + '</div>' : '<div class="ep-date">Em breve</div>') +
+        '</div>' +
+        '<span>🔒</span>' +
+      '</div>';
+    }
+
+    return '<div class="ep-item" tabindex="0" data-ep-url="' + esc(ep.url) + '" data-ep-title="' + esc(title) + '" data-ep-idx="' + globalIdx + '" data-item-id="' + esc(itemId) + '" data-cat="' + cat + '">' +
+      '<div class="ep-num">' + num + '</div>' +
+      '<div class="ep-info">' +
+        '<div class="ep-title">' + esc(title) + '</div>' +
+        (airdate ? '<div class="ep-date">' + airdate + '</div>' : '') +
+      '</div>' +
+      '<span class="ep-play">▶</span>' +
+    '</div>';
+  }
+
+  function bindEpClicks(container, itemId, cat) {
+    var items = container.querySelectorAll('.ep-item:not(.locked)');
+    for (var i = 0; i < items.length; i++) {
+      (function (el) {
+        function doPlay() {
+          var url   = el.getAttribute('data-ep-url');
+          var title = el.getAttribute('data-ep-title');
+          var idx   = parseInt(el.getAttribute('data-ep-idx'), 10) || 0;
+          var iid   = el.getAttribute('data-item-id');
+          var c     = el.getAttribute('data-cat');
+          closeModal();
+          playVideo(url, title, iid, c, idx);
+        }
+        el.onclick = doPlay;
+        el.onkeydown = function (e) { if (e.keyCode === 13) doPlay(); };
+      })(items[i]);
+    }
+
+    var headers = container.querySelectorAll('.season-header');
+    for (var si = 0; si < headers.length; si++) {
+      (function (h) {
+        h.onclick = function () {
+          var id      = h.getAttribute('data-toggle');
+          var panel   = document.getElementById(id);
+          var chevron = h.querySelector('.season-chevron');
+          if (!panel) return;
+          var open = panel.style.display !== 'none';
+          panel.style.display = open ? 'none' : 'block';
+          if (chevron) chevron.textContent = open ? '▼' : '▲';
+        };
+        h.onkeydown = function (e) { if (e.keyCode === 13) h.onclick(); };
+      })(headers[si]);
+    }
+  }
+
+  // ─── HELPERS ─────────────────────────────────────────────────────────────
+
+  function getPoster(item, cat) {
+    if (cat === 'tv') {
+      if (item.tvg_logo && item.tvg_logo.indexOf('http') === 0) return item.tvg_logo;
+      return TV_POSTER;
+    }
+    if (item.poster && item.poster.indexOf('http') === 0) return item.poster;
+    var file = item.poster ? item.poster.split('/').pop() : 'default.jpg';
+    return RAW_BASE + '/assets/Capas/' + file;
+  }
+
+  function getEpList(item) {
+    if (item.episodes && item.episodes.length) return item.episodes;
+    if (item.seasons && item.seasons.length) {
+      var list = [];
+      for (var i = 0; i < item.seasons.length; i++) {
+        var eps = item.seasons[i].episodes || [];
+        for (var j = 0; j < eps.length; j++) list.push(eps[j]);
+      }
+      return list;
+    }
+    return [];
+  }
+
+  function esc(s) {
+    return String(s || '')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+  }
+
+  // ─── CONTINUE WATCHING ───────────────────────────────────────────────────
+
+  function cwGet(videoId) {
+    try {
+      var data = JSON.parse(localStorage.getItem(CW_KEY)) || {};
+      return data[videoId] || null;
+    } catch (e) { return null; }
+  }
+
+  function cwSave(obj) {
+    try {
+      var data = JSON.parse(localStorage.getItem(CW_KEY)) || {};
+      data[obj.videoId] = obj;
+      localStorage.setItem(CW_KEY, JSON.stringify(data));
+    } catch (e) {}
+  }
+
+  // ─── FULLSCREEN ─────────────────────────────────────────────────────────
+
+  var _fsRequested = false;
+
+  function requestAppFullscreen() {
+    if (_fsRequested) return;
+    _fsRequested = true;
+    var el = document.documentElement;
+    var fn = el.requestFullscreen || el.webkitRequestFullscreen || el.mozRequestFullScreen;
+    if (fn) fn.call(el);
+  }
+
+  function bindFullscreenTriggers() {
+    document.addEventListener('click',     requestAppFullscreen, { once: true });
+    document.addEventListener('keydown',   requestAppFullscreen, { once: true });
+    document.addEventListener('touchstart', requestAppFullscreen, { once: true, passive: true });
+  }
+
+  // ─── D-PAD TIZEN ────────────────────────────────────────────────────────
+
+  var currentFocusIndex = 0;
+
+  function getFocusables() {
+    var modal  = document.getElementById('modal');
+    var player = document.getElementById('player-wrap');
+
+    if (modal && modal.style.display !== 'none') {
+        return toArray(
+            modal.querySelectorAll(
+                '.modal-close-btn,' +
+                '.modal-play-btn,' +
+                '.season-header,' +
+                '.ep-item:not(.locked),' +
+                '.canal-item'
+            )
+        );
+    }
+
+    if (player && player.style.display !== 'none') {
+        return toArray(
+            player.querySelectorAll(
+                '#btn-play,' +
+                '#btn-back,' +
+                '#btn-fwd,' +
+                '#btn-fs,' +
+                '#btn-next-ep,' +
+                '#btn-close-player'
+            )
+        );
+    }
+
+    return toArray(
+        document.querySelectorAll(
+            '.nav-link,' +
+            '#search-input,' +
+            '.card'
+        )
+    );
+  }
+
+  function toArray(nodeList) {
+    var arr = [];
+    for (var i = 0; i < nodeList.length; i++) {
+        arr.push(nodeList[i]);
+    }
+    return arr;
+  }
+
+  function focusIndex(idx) {
+    var els = getFocusables();
+    if (!els.length) return;
+    if (idx < 0) idx = 0;
+    if (idx >= els.length) idx = els.length - 1;
+    currentFocusIndex = idx;
+    var el = els[idx];
+    if (!el) return;
+    el.focus();
+    try { el.scrollIntoView(false); } catch (e) {}
+  }
+
+  function getColumns() {
+    var width = window.innerWidth;
+    if (width >= 1900) return 10;
+    if (width >= 1600) return 8;
+    if (width >= 1300) return 7;
+    if (width >= 1000) return 6;
+    return 5;
+  }
+
+  function moveFocus(direction) {
+    var els = getFocusables();
+    if (!els.length) return;
+    var idx = currentFocusIndex;
+    var focused = els[idx];
+    if (focused && focused.classList && focused.classList.contains('nav-link')) {
+        if (direction === 'left') idx--;
+        if (direction === 'right') idx++;
+    } else {
+        var columns = getColumns();
+        if (direction === 'left') idx--;
+        if (direction === 'right') idx++;
+        if (direction === 'up') idx -= columns;
+        if (direction === 'down') idx += columns;
+    }
+    if (idx < 0) idx = 0;
+    if (idx >= els.length) idx = els.length - 1;
+    focusIndex(idx);
+  }
+
+  function bindDpad() {
+    document.addEventListener('keydown', function(e) {
+      var key = e.keyCode || e.which;
+      var focused = document.activeElement;
+      var modal  = document.getElementById('modal');
+      var player = document.getElementById('player-wrap');
+
+      if (key === 10009 || key === 27) {
+        if (player && player.style.display !== 'none') {
+          e.preventDefault();
+          closePlayer();
+          return;
+        }
+        if (modal && modal.style.display !== 'none') {
+          e.preventDefault();
+          closeModal();
+          return;
+        }
+        return;
+      }
+
+      if (key === 13) {
+        if (focused && focused !== document.body && focused !== document.documentElement) {
+          e.preventDefault();
+          if (typeof focused.click === 'function') focused.click();
+        }
+        return;
+      }
+
+      if (focused && focused.id === 'search-input') return;
+
+      switch (key) {
+        case 37: e.preventDefault(); moveFocus('left'); break;
+        case 38: e.preventDefault(); moveFocus('up'); break;
+        case 39: e.preventDefault(); moveFocus('right'); break;
+        case 40: e.preventDefault(); moveFocus('down'); break;
+      }
+    });
+
+    setTimeout(function() {
+      var els = getFocusables();
+      if (els.length) {
+        currentFocusIndex = 0;
+        focusIndex(0);
+      }
+    }, 1000);
+  }
+
+  // ─── START ───────────────────────────────────────────────────────────────
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function () {
+      init();
+      bindFullscreenTriggers();
+      bindDpad();
+    });
+  } else {
+    init();
+    bindFullscreenTriggers();
+    bindDpad();
+  }
+
+})();
