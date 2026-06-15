@@ -44,7 +44,9 @@
 
   <!-- PLAYER DE VÍDEO -->
   <div id="player-wrap" style="display:none">
-    <video id="player" autoplay playsinline></video>
+    <div id="player-video-container">
+      <video id="player" autoplay playsinline style="display:block; width:100%; height:100%;"></video>
+    </div>
     <div id="player-controls">
       <div id="player-title"></div>
       <div id="player-bar">
@@ -62,7 +64,7 @@
     </div>
   </div>
 
-  <!-- HLS.JS — fallback para TVs que não suportam HLS nativo -->
+  <!-- HLS.JS -->
   <script src="https://cdn.jsdelivr.net/npm/hls.js@1.4.12/dist/hls.min.js"></script>
 
   <script src="tizen-app.js"></script>
