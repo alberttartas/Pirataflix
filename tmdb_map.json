@@ -195,6 +195,10 @@
   "berlin-y-la-dama-del-armino":{
     "tmdb_id": 308014,
     "type": "tv"
+  },
+  "alem-do-tempo":{
+    "tmdb_id": 83595,
+    "type": "tv"
 }
 
 }
