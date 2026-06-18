@@ -20,6 +20,15 @@ https://vs20.live.opencaster.com/nickelodeonbrasil_68f1743d/index.m3u8
 #EXTINF:-1 tvg-id="OnePiece.us@BR" tvg-logo="https://i.imgur.com/XsvbAWR.png" group-title="🎨 Animação",One Piece
 https://jmp2.uk/plu-624b1c8d4321e200073ee421.m3u8
 
+#EXTINF:-1 tvg-id="PlutoTVAnime.us@BR" tvg-logo="https://images.pluto.tv/channels/5f12136385bccc00070142ed/colorLogoPNG_1777595293242.png" group-title="🎨 Animação",Pluto TV Anime
+https://jmp2.uk/plu-5f12136385bccc00070142ed.m3u8
+
+#EXTINF:-1 tvg-id="PlutoTVAnimeAcao.us@BR" tvg-logo="https://images.pluto.tv/channels/604b79c558393100078faeef/colorLogoPNG.png" group-title="🎨 Animação",Pluto TV Anime Ação
+https://jmp2.uk/plu-604b79c558393100078faeef.m3u8
+
+#EXTINF:-1 tvg-id="PlutoTVGamingporUbisoft.us@BR" tvg-logo="https://images.pluto.tv/channels/64c815e8a1c6130008fef928/colorLogoPNG.png" group-title="🎨 Animação",Pluto TV Gaming por Ubisoft (720p)
+https://jmp2.uk/plu-64c815e8a1c6130008fef928.m3u8
+
 #EXTINF:-1 tvg-id="Slime.br@SD" tvg-logo="https://x1co.com.br/slimelogo.png" group-title="🎨 Animação",Slime (576p) [Not 24/7]
 https://slime.x1co.com.br/hls/stream.m3u8
 
