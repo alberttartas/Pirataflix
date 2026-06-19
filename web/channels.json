@@ -18750,5 +18750,20 @@
         "title": "AO VIVO"
       }
     ]
+  },
+  {
+    "id": "RedeBrasil.br@SD",
+    "type": "tv",
+    "title": "Rede Brasil (1080p)",
+    "tvg_id": "RedeBrasil.br@SD",
+    "tvg_logo": "https://i.imgur.com/TXJKwzZ.png",
+    "group": "📺 Geral",
+    "url": "https://redebrasil.nuvemplay.live/hls/stream.m3u8",
+    "episodes": [
+      {
+        "url": "https://redebrasil.nuvemplay.live/hls/stream.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
   }
 ]

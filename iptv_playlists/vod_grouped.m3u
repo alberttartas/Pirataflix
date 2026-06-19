@@ -26277,3 +26277,6 @@ https://jmp2.uk/plu-5f32d432d612e50007e56133.m3u8
 #EXTINF:-1 group-title="🎥 Documentário" tvg-id="SMITHSONIANCHANNELPLUTOTV.US@BR" tvg-logo="https://images.pluto.tv/channels/6298bd10d88ef000073f16b7/colorLogoPNG.png",Smithsonian Channel Pluto TV
 https://jmp2.uk/plu-6298bd10d88ef000073f16b7.m3u8
 
+#EXTINF:-1 group-title="📺 Geral" tvg-id="REDEBRASIL.BR@SD" tvg-logo="https://i.imgur.com/TXJKwzZ.png",Rede Brasil (1080p)
+https://redebrasil.nuvemplay.live/hls/stream.m3u8
+
