@@ -26280,3 +26280,15 @@ https://jmp2.uk/plu-6298bd10d88ef000073f16b7.m3u8
 #EXTINF:-1 group-title="📺 Geral" tvg-id="REDEBRASIL.BR@SD" tvg-logo="https://i.imgur.com/TXJKwzZ.png",Rede Brasil (1080p)
 https://redebrasil.nuvemplay.live/hls/stream.m3u8
 
+#EXTINF:-1 group-title="📺 Geral" tvg-id="CANALOFF.BR@SD" tvg-logo="https://i.imgur.com/1biaLgJ.png",Canal Off (1080p)
+http://170.82.202.31/OFF/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="GLOBOPLAYNOVELAS.BR@SD" tvg-logo="https://i.ibb.co/m5TBCDL2/Globoplay-Novelas-1.png",Globoplay Novelas (1080p)
+http://170.82.202.31/Viva/index.m3u8
+
+#EXTINF:-1 group-title="📰 Notícias" tvg-id="GNT.BR@SD" tvg-logo="https://i.imgur.com/XymcvMy.png",GNT (1080p)
+http://170.82.202.31/GNT/index.m3u8
+
+#EXTINF:-1 group-title="🎵 Música" tvg-id="MCM.FR@SD" tvg-logo="https://i.imgur.com/F5WNCp0.png",MCM (720p)
+http://rezofoot.tv/MCM/index.m3u8
+

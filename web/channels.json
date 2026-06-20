@@ -18765,5 +18765,65 @@
         "title": "AO VIVO"
       }
     ]
+  },
+  {
+    "id": "CanalOff.br@SD",
+    "type": "tv",
+    "title": "Canal Off (1080p)",
+    "tvg_id": "CanalOff.br@SD",
+    "tvg_logo": "https://i.imgur.com/1biaLgJ.png",
+    "group": "📺 Geral",
+    "url": "http://170.82.202.31/OFF/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://170.82.202.31/OFF/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "GloboplayNovelas.br@SD",
+    "type": "tv",
+    "title": "Globoplay Novelas (1080p)",
+    "tvg_id": "GloboplayNovelas.br@SD",
+    "tvg_logo": "https://i.ibb.co/m5TBCDL2/Globoplay-Novelas-1.png",
+    "group": "📺 Geral",
+    "url": "http://170.82.202.31/Viva/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://170.82.202.31/Viva/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "GNT.br@SD",
+    "type": "tv",
+    "title": "GNT (1080p)",
+    "tvg_id": "GNT.br@SD",
+    "tvg_logo": "https://i.imgur.com/XymcvMy.png",
+    "group": "📰 Notícias",
+    "url": "http://170.82.202.31/GNT/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://170.82.202.31/GNT/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "MCM.fr@SD",
+    "type": "tv",
+    "title": "MCM (720p)",
+    "tvg_id": "MCM.fr@SD",
+    "tvg_logo": "https://i.imgur.com/F5WNCp0.png",
+    "group": "🎵 Música",
+    "url": "http://rezofoot.tv/MCM/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://rezofoot.tv/MCM/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
   }
 ]
