@@ -25,17 +25,18 @@
     <header class="header">
         <a href="#" class="logo">PIRATAFLIX</a>
         <nav class="nav-links">
-            <a href="#filmes"          class="nav-link">Filmes</a>
-            <a href="#series"          class="nav-link">Séries</a>
-            <a href="#novelas"         class="nav-link">Novelas</a>
-            <a href="#animes"          class="nav-link">Animes</a>
-            <a href="#infantil"        class="nav-link">Infantil</a>
-            <a href="tv.html"          class="nav-link">TV Ao Vivo</a>
+            <a href="#filmes"   class="nav-link">Filmes</a>
+            <a href="#series"   class="nav-link">Séries</a>
+            <a href="#novelas"  class="nav-link">Novelas</a>
+            <a href="#animes"   class="nav-link">Animes</a>
+            <a href="#infantil" class="nav-link">Infantil</a>
+            <a href="tv.html"   class="nav-link">TV Ao Vivo</a>
         </nav>
     </header>
 
     <main class="main-content" id="content">
         <div class="loading">Carregando catálogo...</div>
+        <!-- index-app.js injeta aqui: <section id="filmes">, <section id="series">, etc. -->
     </main>
 
     <div class="modal" id="modal">
@@ -99,6 +100,7 @@
         50% { box-shadow: 0 4px 32px rgba(229,9,20,0.9); }
     }
     #pwa-install-btn svg { width: 18px; height: 18px; fill: white; flex-shrink: 0; }
+    html { scroll-behavior: smooth; }
     </style>
     <button id="pwa-install-btn" onclick="installPWA()" title="Instalar Pirataflix">
         <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zm-8 2V5h2v6h1.17L12 13.17 9.83 11H11zm-6 7h14v2H5z"/></svg>
