@@ -3,8 +3,17 @@
 #GENERATED-BY:Pirataflix
 #ENCODING:UTF-8
 
+#EXTINF:-1 group-title="🎬 Filmes" tvg-id="RESIDENT_EVIL_1" tvg-logo="https://image.tmdb.org/t/p/w500/aC9RinOuPR6DEgwAZZd9IzUA6Qa.jpg",Resident Evil 1
+https://23rzv4udpdbv8t6.cdn-novflix.com/storageflix/F/resident-evil-o-hospede-maldito.mp4
+
+#EXTINF:-1 group-title="🎬 Filmes" tvg-id="RESIDENT_EVIL_3" tvg-logo="https://image.tmdb.org/t/p/w500/lKdzoUvMsriRrtfK6e5uw2XpXtn.jpg",Resident Evil 3
+https://23rzv4udpdbv8t6.cdn-novflix.com/storageflix/F/resident-evil-3-a-extincao.mp4
+
 #EXTINF:-1 group-title="🎬 Filmes" tvg-id="HOMEM_COM_H" tvg-logo="https://image.tmdb.org/t/p/w500/sOed9XD0TS9d0XRSnTiw5tpXIIO.jpg",Homem Com H
 https://cdn-novflix.com/storagePSN/FILMES/HOMEMCOMH.mp4
+
+#EXTINF:-1 group-title="🎬 Filmes" tvg-id="RESIDENT_EVIL_2" tvg-logo="https://image.tmdb.org/t/p/w500/r8q9pCcpzclyg2NjOt7DRbHRvG9.jpg",Resident Evil 2
+https://23rzv4udpdbv8t6.cdn-novflix.com/storageflix/F/resident-evil-2-apocalipse.mp4
 
 #EXTINF:-1 group-title="🎬 Filmes" tvg-id="FAMILIA_PERO_NO_MUCHO" tvg-logo="https://image.tmdb.org/t/p/w500/mNAb8OTrlhW5eFwlsPUW3CRXCXh.jpg",Familia Pero No Mucho
 https://cdn-novflix.com/storagePSN/FILMES/FAMILIAPERONOMUCHO.mp4
@@ -15,8 +24,17 @@ https://cdn-novflix.com/storagePSN/FILMES/AINDAESTOUAQUI.mp4
 #EXTINF:-1 group-title="🎬 Filmes" tvg-id="ANACONDA_2025" tvg-logo="https://image.tmdb.org/t/p/w500/hRzpf8QELtzJnMt4SiDoFUmZ9KM.jpg",Anaconda 2025
 https://download2275.mediafire.com/hq19rknxcddgrK8ET035p_-Jahuo4_VlmTOeCA38xbZhp0A9r4ICHL9mrh2c4q_L7U3PBVJDETAshpLR0wE3w6dYu5nBP6CB7gVL4_uLbjW9QO529daHCAscGC4AYIrbyIgVVG6u7gkrWc4kvmv7bcQemR2bg4WjPuT-3pHH3YGDkg/2nigubvfwf0su3l/Anaconda.2025-HD.mp4
 
+#EXTINF:-1 group-title="🎬 Filmes" tvg-id="RESIDENT_EVIL_4" tvg-logo="https://image.tmdb.org/t/p/w500/aEXC9SmF3j6fWw3bIQTCe9DNqZQ.jpg",Resident Evil 4
+https://23rzv4udpdbv8t6.cdn-novflix.com/storageflix/F/resident-evil-4-recomeco.mp4
+
+#EXTINF:-1 group-title="🎬 Filmes" tvg-id="PANICO_7" tvg-logo="https://image.tmdb.org/t/p/w500/rEevavl5vebCVEd5imx7D1k8nmV.jpg",Panico 7
+https://23rzv4udpdbv8t6.cdn-novflix.com/storageflix/F/panico-7.mp4
+
 #EXTINF:-1 group-title="🎬 Filmes" tvg-id="X_MEN_APOCALIPSE" tvg-logo="https://image.tmdb.org/t/p/w500/avAUyU5cXk0ASy5yR8FMtO78LRS.jpg",X-men Apocalipse
 https://download2391.mediafire.com/7xu5u5x6n2kgRP9FA3biuuKTzgtP-64H4AoBKFF_XcziJRl_5waV9sX8Xsw50PU1QIa1rba4pSOIVpcIA-SCJlJu_yzA-kouo6QMtTz26bhuH97iShLVUFTWz5uWxLYRmlGK-ip5C4PRJb8gmE9v1IE2qspEJKJIFRd21YcnBkk/8drycenvu4islwu/XMen.Apocalypse-HD.mp4
+
+#EXTINF:-1 group-title="🎬 Filmes" tvg-id="AMOR_E_MONSTROS" tvg-logo="https://image.tmdb.org/t/p/w500/b77MZUZQJjbmyL4CS2EyOBRUngD.jpg",Amor E Monstros
+https://23rzv4udpdbv8t6.cdn-novflix.com/storageflix/F/amor-e-monstros.mp4
 
 #EXTINF:-1 group-title="🎬 Filmes" tvg-id="PRINCESA_MONONOKE_DUBLADO" tvg-logo="https://image.tmdb.org/t/p/w500/7EadOwHmyQgOnlghRiWBygNtnjl.jpg",Princesa Mononoke Dublado
 https://cdn-s01.mywallpaper-4k-image.net/stream/filmes/p/princesa-mononoke-dublado/01.mp4/index.m3u8
@@ -33,8 +51,14 @@ https://cdn-s01.mywallpaper-4k-image.net/stream/a/akira-dublado/01.mp4/index.m3u
 #EXTINF:-1 group-title="🎬 Filmes" tvg-id="PREDADOR_TERRAS_SELVAGENS" tvg-logo="https://image.tmdb.org/t/p/w500/f3yLlUrJDdDL8d4nxywyotN45SL.jpg",Predador Terras Selvagens
 https://download2272.mediafire.com/1yefhdkb1fngZDPJc364qaFKeFRJ0DcvXp9dbnUH_DGHJSBTBnpHoG_Kt3C--ZguHj4ZsEyR_b1ovHYog-G-CRjQPnrG1OhcaTo4TSU-27rpti1gTEBZVXyjU46BHC5fQYu3RkWvtmobjyPe6Neixdntbh2rqCwn2PO8SN6x6-Mvhw/dt52k3ua0s1mac9/Predator.Badlands.2025-HD.mp4
 
+#EXTINF:-1 group-title="🎬 Filmes" tvg-id="RESIDENT_EVIL_5" tvg-logo="https://image.tmdb.org/t/p/w500/tMrLVjpLSvjtQ4Bd7v34SwqQ7bb.jpg",Resident Evil 5
+https://23rzv4udpdbv8t6.cdn-novflix.com/storageflix/F/resident-evil-5-retribuicao.mp4
+
 #EXTINF:-1 group-title="🎬 Filmes" tvg-id="2_COELHOS" tvg-logo="https://image.tmdb.org/t/p/w500/iVX3VNB4Zi0kS1Zw24BKQhiuBtl.jpg",2 Coelhos
 https://vod3.cf.dmcdn.net/sec2(blut8bv28wqADpZFN7q8w3GijtuaC8y79DpoCqOffLBzT0DZhJKEvTi064B0LFTI2DEz-_eLCp1QQPQ1Wj-ZJS4q1TfN6FmJtedeng9fnmGRO9L3hym9ayezb03dY00iIeTtkXkfy9pIrHaLorQ6l0ekxwAkeNGBQXRfvGE94cUGhdfK4tYjAoYUieFFmnHf)/video/247/061/578160742_mp4_h264_aac_hd_1.m3u8#cell=cf3
+
+#EXTINF:-1 group-title="🎬 Filmes" tvg-id="400_CONTRA_1" tvg-logo="https://image.tmdb.org/t/p/w500/vYjpX0uLBCtjJBf42zJk4OxepPx.jpg",400 Contra 1
+https://23rzv4udpdbv8t6.cdn-novflix.com/storageflix/F/400-contra-1-uma-historia-do-crime-organizado.mp4
 
 #EXTINF:-1 group-title="📺 Séries" tvg-id="TODO_MUNDO_ODEIA_O_CHRIS_T01" tvg-logo="https://image.tmdb.org/t/p/w500/dXyy1e3TJ5ut6DRCrQQT3TcsrGU.jpg",S01E01 - CHRIS 1x01
 https://cdn-novflix.com/storagePSN/SERIES/CHRIS/CHRIS1x01.mp4
