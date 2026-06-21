@@ -1,12 +1,5 @@
 // ============================================
 // PIRATAFLIX — index-app.js
-// 1) Carrega data.json + channels.json em window.vodData/channelsDict
-// 2) Renderiza os cards do catálogo (filmes/series/novelas/animes/infantil)
-//    em seções com id = categoria (casando com os <a href="#filmes"> do nav)
-//
-// NÃO abre modal, NÃO faz busca, NÃO monta menu — isso é tudo do shared.js
-// (window.openModal, initSearch, initHamburger, injectFooter), e o player
-// de TV é o tv-player.js (window.openTVPlayer).
 // ============================================
 
 (function() {
