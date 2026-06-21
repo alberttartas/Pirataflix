@@ -18825,5 +18825,50 @@
         "title": "AO VIVO"
       }
     ]
+  },
+  {
+    "id": "BandSports.br@SD",
+    "type": "tv",
+    "title": "Band Sports (1080p)",
+    "tvg_id": "BandSports.br@SD",
+    "tvg_logo": "https://i.imgur.com/EuPvzJe.png",
+    "group": "⚽ Esportes",
+    "url": "https://cdn-5.nxplay.com.br/BAND_SPORTS/index.m3u8",
+    "episodes": [
+      {
+        "url": "https://cdn-5.nxplay.com.br/BAND_SPORTS/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "GloboNews.br@SD",
+    "type": "tv",
+    "title": "GloboNews (720p)",
+    "tvg_id": "GloboNews.br@SD",
+    "tvg_logo": "https://i.imgur.com/3yZyaCm.png",
+    "group": "📰 Notícias",
+    "url": "http://41.205.70.146/GLOBONEWS/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://41.205.70.146/GLOBONEWS/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "TVLatinaSat.br@HD",
+    "type": "tv",
+    "title": "TVLatinaSat (720p)",
+    "tvg_id": "TVLatinaSat.br@HD",
+    "tvg_logo": "https://latinasat.com.br/logo.png",
+    "group": "📺 Geral",
+    "url": "https://www.latinasat.com.br/hls/live/stream/index.m3u8",
+    "episodes": [
+      {
+        "url": "https://www.latinasat.com.br/hls/live/stream/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
   }
 ]

@@ -26292,3 +26292,12 @@ http://170.82.202.31/GNT/index.m3u8
 #EXTINF:-1 group-title="🎵 Música" tvg-id="MCM.FR@SD" tvg-logo="https://i.imgur.com/F5WNCp0.png",MCM (720p)
 http://rezofoot.tv/MCM/index.m3u8
 
+#EXTINF:-1 group-title="⚽ Esportes" tvg-id="BANDSPORTS.BR@SD" tvg-logo="https://i.imgur.com/EuPvzJe.png",Band Sports (1080p)
+https://cdn-5.nxplay.com.br/BAND_SPORTS/index.m3u8
+
+#EXTINF:-1 group-title="📰 Notícias" tvg-id="GLOBONEWS.BR@SD" tvg-logo="https://i.imgur.com/3yZyaCm.png",GloboNews (720p)
+http://41.205.70.146/GLOBONEWS/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="TVLATINASAT.BR@HD" tvg-logo="https://latinasat.com.br/logo.png",TVLatinaSat (720p)
+https://www.latinasat.com.br/hls/live/stream/index.m3u8
+
