@@ -199,6 +199,14 @@
   "alem-do-tempo":{
     "tmdb_id": 83595,
     "type": "tv"
+  },
+  "Resident_Evil_1":{
+    "tmdb_id": 1576,
+    "type": "movie"
+  },
+  "Resident_Evil_4":{
+    "tmdb_id": 35791,
+    "type": "movie"
 }
 
 }
