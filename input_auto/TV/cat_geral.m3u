@@ -158,6 +158,9 @@ https://slbps-ml-sambatech.akamaized.net/samba-live/2472/7424/8a00fe7cc36ac263b2
 #EXTINF:-1 tvg-id="SICTV.br@SD" tvg-logo="https://i.imgur.com/mHxQyB2.png" group-title="📺 Geral",SIC TV (720p)
 https://parecisfmlive.brasilstream.com.br/hls/parecisfmlive/index.m3u8
 
+#EXTINF:-1 tvg-id="SonyChannel.br@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Sony_Channel_Logo.png/960px-Sony_Channel_Logo.png" group-title="📺 Geral",Sony Channel (720p)
+https://cdn-5.nxplay.com.br/SONY_CHANNEL/index.m3u8
+
 #EXTINF:-1 tvg-id="TVACritica.br@SD" tvg-logo="https://i.imgur.com/j51rBro.png" group-title="📺 Geral",TV A Critica
 https://cdn.live.br1.jmvstream.com/w/LVW-20715/LVW20715_50E3x2MCm2/playlist.m3u8
 
@@ -229,6 +232,9 @@ https://tvfronteira.brasilstream.com.br/hls/tvfronteira/index.m3u8
 
 #EXTINF:-1 tvg-id="TVFuturo.br@SD" tvg-logo="https://i.imgur.com/xonrNBf.png" group-title="📺 Geral",TV Futuro (1080p)
 https://tv02.zas.media:1936/tvfuturo/tvfuturo/playlist.m3u8
+
+#EXTINF:-1 tvg-id="TVGloboSaoPaulo.br@SD" tvg-logo="https://i.imgur.com/OoSUg78.png" group-title="📺 Geral",TV Globo Sao Paulo (720p)
+https://cdn-5.nxplay.com.br/GLOBO_SP_TK/index.m3u8
 
 #EXTINF:-1 tvg-id="TVGraoPara.br@SD" tvg-logo="https://i.imgur.com/1drg0E9.png" group-title="📺 Geral",TV Grao Pará (720p)
 https://video01.kshost.com.br:4443/moises3834/moises3834/playlist.m3u8

@@ -20,6 +20,9 @@ https://stream.live.novotempo.com/tv/smil:tvnovotempo.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="RedeGospel.br@SD" tvg-logo="https://i.imgur.com/mttSwgO.png" group-title="✝️ Religioso",Rede Gospel (1080p)
 https://redegospel-aovivo.nuvemplay.live/hls/stream.m3u8
 
+#EXTINF:-1 tvg-id="RedeVida.br@SD" tvg-logo="https://i.imgur.com/mP1qfp2.png" group-title="✝️ Religioso",Rede Vida (576p)
+https://cdn-5.nxplay.com.br/REDE_VIDA/index.m3u8
+
 #EXTINF:-1 tvg-id="RITTV.br@SD" tvg-logo="https://i.imgur.com/Unjs1wi.png" group-title="✝️ Religioso",RIT TV (1080p)
 https://acesso.ecast.site:3648/live/ritlive.m3u8
 

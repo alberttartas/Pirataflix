@@ -18870,5 +18870,65 @@
         "title": "AO VIVO"
       }
     ]
+  },
+  {
+    "id": "BandNews.br@SD",
+    "type": "tv",
+    "title": "BandNews (1080p)",
+    "tvg_id": "BandNews.br@SD",
+    "tvg_logo": "https://i.ibb.co/0jVZBFp/u8ya-iw-R-400x400.jpg",
+    "group": "📰 Notícias",
+    "url": "https://cdn-5.nxplay.com.br/BAND_NEWS/index.m3u8",
+    "episodes": [
+      {
+        "url": "https://cdn-5.nxplay.com.br/BAND_NEWS/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "RedeVida.br@SD",
+    "type": "tv",
+    "title": "Rede Vida (576p)",
+    "tvg_id": "RedeVida.br@SD",
+    "tvg_logo": "https://i.imgur.com/mP1qfp2.png",
+    "group": "✝️ Religioso",
+    "url": "https://cdn-5.nxplay.com.br/REDE_VIDA/index.m3u8",
+    "episodes": [
+      {
+        "url": "https://cdn-5.nxplay.com.br/REDE_VIDA/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "SonyChannel.br@SD",
+    "type": "tv",
+    "title": "Sony Channel (720p)",
+    "tvg_id": "SonyChannel.br@SD",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Sony_Channel_Logo.png/960px-Sony_Channel_Logo.png",
+    "group": "📺 Geral",
+    "url": "https://cdn-5.nxplay.com.br/SONY_CHANNEL/index.m3u8",
+    "episodes": [
+      {
+        "url": "https://cdn-5.nxplay.com.br/SONY_CHANNEL/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "TVGloboSaoPaulo.br@SD",
+    "type": "tv",
+    "title": "TV Globo Sao Paulo (720p)",
+    "tvg_id": "TVGloboSaoPaulo.br@SD",
+    "tvg_logo": "https://i.imgur.com/OoSUg78.png",
+    "group": "📺 Geral",
+    "url": "https://cdn-5.nxplay.com.br/GLOBO_SP_TK/index.m3u8",
+    "episodes": [
+      {
+        "url": "https://cdn-5.nxplay.com.br/GLOBO_SP_TK/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
   }
 ]
