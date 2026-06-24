@@ -18930,5 +18930,155 @@
         "title": "AO VIVO"
       }
     ]
+  },
+  {
+    "id": "Arte1.br@SD",
+    "type": "tv",
+    "title": "Arte 1 (1080p)",
+    "tvg_id": "Arte1.br@SD",
+    "tvg_logo": "https://i.imgur.com/Ivnk7A6.png",
+    "group": "🎨 Cultura",
+    "url": "http://143.14.178.40:7777/Arte_1_HD/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://143.14.178.40:7777/Arte_1_HD/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "Bis.br@SD",
+    "type": "tv",
+    "title": "Bis (1080p)",
+    "tvg_id": "Bis.br@SD",
+    "tvg_logo": "https://i.imgur.com/VUt1lmH.png",
+    "group": "📺 Geral",
+    "url": "http://143.14.178.40:7777/BIS_HD/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://143.14.178.40:7777/BIS_HD/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "GloboNews.br@SD",
+    "type": "tv",
+    "title": "GloboNews (1080p)",
+    "tvg_id": "GloboNews.br@SD",
+    "tvg_logo": "https://i.imgur.com/3yZyaCm.png",
+    "group": "📰 Notícias",
+    "url": "http://143.14.178.40:7777/GloboNews_HD/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://143.14.178.40:7777/GloboNews_HD/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "Gloob.br@SD",
+    "type": "tv",
+    "title": "Gloob (1080p)",
+    "tvg_id": "Gloob.br@SD",
+    "tvg_logo": "https://i.imgur.com/N1BUULh.png",
+    "group": "🧸 Infantil",
+    "url": "http://143.14.178.40:7777/Gloob_HD/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://143.14.178.40:7777/Gloob_HD/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "Gloobinho.br@SD",
+    "type": "tv",
+    "title": "Gloobinho (1080p)",
+    "tvg_id": "Gloobinho.br@SD",
+    "tvg_logo": "https://i.imgur.com/UWkHErt.png",
+    "group": "🧸 Infantil",
+    "url": "http://143.14.178.40:7777/Gloobinho_HD/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://143.14.178.40:7777/Gloobinho_HD/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "Megapix.br@SD",
+    "type": "tv",
+    "title": "Megapix (1080p)",
+    "tvg_id": "Megapix.br@SD",
+    "tvg_logo": "https://i.imgur.com/qTYv5jt.png",
+    "group": "📺 Geral",
+    "url": "http://143.14.178.40:7777/Megapix_HD/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://143.14.178.40:7777/Megapix_HD/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "Multishow.br@SD",
+    "type": "tv",
+    "title": "Multishow (1080p)",
+    "tvg_id": "Multishow.br@SD",
+    "tvg_logo": "https://i.imgur.com/bqVg8nT.png",
+    "group": "🎭 Entretenimento",
+    "url": "http://143.14.178.40:7777/Multishow_HD/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://143.14.178.40:7777/Multishow_HD/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "MusicBoxBrazil.br@SD",
+    "type": "tv",
+    "title": "Music Box Brazil (1080p)",
+    "tvg_id": "MusicBoxBrazil.br@SD",
+    "tvg_logo": "https://i.imgur.com/CDPCF2X.png",
+    "group": "🎵 Música",
+    "url": "http://143.14.178.40:7777/Music_Box_HD/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://143.14.178.40:7777/Music_Box_HD/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "TVGloboSaoPaulo.br@SD",
+    "type": "tv",
+    "title": "TV Globo Sao Paulo (1080p)",
+    "tvg_id": "TVGloboSaoPaulo.br@SD",
+    "tvg_logo": "https://i.imgur.com/OoSUg78.png",
+    "group": "📺 Geral",
+    "url": "http://187.62.68.32:8080/GLOBO/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://187.62.68.32:8080/GLOBO/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "WooHoo.br@SD",
+    "type": "tv",
+    "title": "WooHoo (1080p)",
+    "tvg_id": "WooHoo.br@SD",
+    "tvg_logo": "https://i.imgur.com/me622pa.png",
+    "group": "📺 Geral",
+    "url": "http://143.14.178.40:7777/Woohoo_HD/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://143.14.178.40:7777/Woohoo_HD/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
   }
 ]

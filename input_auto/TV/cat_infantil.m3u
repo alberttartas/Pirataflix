@@ -2,11 +2,14 @@
 #EXTINF:-1 tvg-id="BabyFirst.us@Brazil" tvg-logo="https://i.imgur.com/WxLHBwu.png" group-title="🧸 Infantil",Babyfirst
 https://jmp2.uk/plu-5f4fb4cf605ddf000748e16f.m3u8
 
-#EXTINF:-1 tvg-id="Gloob.br@SD" tvg-logo="https://i.imgur.com/N1BUULh.png" group-title="🧸 Infantil",Gloob (576p)
-http://45.235.0.78/Gloob/playlist.m3u8
+#EXTINF:-1 tvg-id="Gloob.br@SD" tvg-logo="https://i.imgur.com/N1BUULh.png" group-title="🧸 Infantil",Gloob (1080p)
+http://143.14.178.40:7777/Gloob_HD/index.m3u8
 
 #EXTINF:-1 tvg-id="GloobWeb.br@SD" tvg-logo="https://i.ibb.co/wrQZXZ01/C-pia-de-Blue-Modern-Simple-Logo.png" group-title="🧸 Infantil",Gloob Web [Not 24/7]
 https://vs20.live.opencaster.com/globiosat_73a904af/index.m3u8
+
+#EXTINF:-1 tvg-id="Gloobinho.br@SD" tvg-logo="https://i.imgur.com/UWkHErt.png" group-title="🧸 Infantil",Gloobinho (1080p)
+http://143.14.178.40:7777/Gloobinho_HD/index.m3u8
 
 #EXTINF:-1 tvg-id="NickJrClub.us@Brazil" tvg-logo="https://i.imgur.com/GCenuyl.png" group-title="🧸 Infantil",Nick Jr. Club (720p)
 https://jmp2.uk/plu-6824ce95f09106f4b18f4114.m3u8

@@ -3,7 +3,7 @@
 #GENERATED-BY:Pirataflix
 #ENCODING:UTF-8
 
-#EXTINF:-1 group-title="🎬 Filmes" tvg-id="RESIDENT_EVIL_1" tvg-logo="https://image.tmdb.org/t/p/w500/aC9RinOuPR6DEgwAZZd9IzUA6Qa.jpg",Resident Evil 1
+#EXTINF:-1 group-title="🎬 Filmes" tvg-id="RESIDENT_EVIL_1" tvg-logo="https://image.tmdb.org/t/p/w500/oxZX9s92Xr5f7mnFCGyEsB5mCOb.jpg",Resident Evil 1
 https://23rzv4udpdbv8t6.cdn-novflix.com/storageflix/F/resident-evil-o-hospede-maldito.mp4
 
 #EXTINF:-1 group-title="🎬 Filmes" tvg-id="RESIDENT_EVIL_3" tvg-logo="https://image.tmdb.org/t/p/w500/lKdzoUvMsriRrtfK6e5uw2XpXtn.jpg",Resident Evil 3
@@ -26330,4 +26330,34 @@ https://cdn-5.nxplay.com.br/SONY_CHANNEL/index.m3u8
 
 #EXTINF:-1 group-title="📺 Geral" tvg-id="TVGLOBOSAOPAULO.BR@SD" tvg-logo="https://i.imgur.com/OoSUg78.png",TV Globo Sao Paulo (720p)
 https://cdn-5.nxplay.com.br/GLOBO_SP_TK/index.m3u8
+
+#EXTINF:-1 group-title="🎨 Cultura" tvg-id="ARTE1.BR@SD" tvg-logo="https://i.imgur.com/Ivnk7A6.png",Arte 1 (1080p)
+http://143.14.178.40:7777/Arte_1_HD/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="BIS.BR@SD" tvg-logo="https://i.imgur.com/VUt1lmH.png",Bis (1080p)
+http://143.14.178.40:7777/BIS_HD/index.m3u8
+
+#EXTINF:-1 group-title="📰 Notícias" tvg-id="GLOBONEWS.BR@SD" tvg-logo="https://i.imgur.com/3yZyaCm.png",GloboNews (1080p)
+http://143.14.178.40:7777/GloboNews_HD/index.m3u8
+
+#EXTINF:-1 group-title="🧸 Infantil" tvg-id="GLOOB.BR@SD" tvg-logo="https://i.imgur.com/N1BUULh.png",Gloob (1080p)
+http://143.14.178.40:7777/Gloob_HD/index.m3u8
+
+#EXTINF:-1 group-title="🧸 Infantil" tvg-id="GLOOBINHO.BR@SD" tvg-logo="https://i.imgur.com/UWkHErt.png",Gloobinho (1080p)
+http://143.14.178.40:7777/Gloobinho_HD/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="MEGAPIX.BR@SD" tvg-logo="https://i.imgur.com/qTYv5jt.png",Megapix (1080p)
+http://143.14.178.40:7777/Megapix_HD/index.m3u8
+
+#EXTINF:-1 group-title="🎭 Entretenimento" tvg-id="MULTISHOW.BR@SD" tvg-logo="https://i.imgur.com/bqVg8nT.png",Multishow (1080p)
+http://143.14.178.40:7777/Multishow_HD/index.m3u8
+
+#EXTINF:-1 group-title="🎵 Música" tvg-id="MUSICBOXBRAZIL.BR@SD" tvg-logo="https://i.imgur.com/CDPCF2X.png",Music Box Brazil (1080p)
+http://143.14.178.40:7777/Music_Box_HD/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="TVGLOBOSAOPAULO.BR@SD" tvg-logo="https://i.imgur.com/OoSUg78.png",TV Globo Sao Paulo (1080p)
+http://187.62.68.32:8080/GLOBO/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="WOOHOO.BR@SD" tvg-logo="https://i.imgur.com/me622pa.png",WooHoo (1080p)
+http://143.14.178.40:7777/Woohoo_HD/index.m3u8
 
