@@ -26361,3 +26361,6 @@ http://187.62.68.32:8080/GLOBO/index.m3u8
 #EXTINF:-1 group-title="📺 Geral" tvg-id="WOOHOO.BR@SD" tvg-logo="https://i.imgur.com/me622pa.png",WooHoo (1080p)
 http://143.14.178.40:7777/Woohoo_HD/index.m3u8
 
+#EXTINF:-1 group-title="📺 Geral" tvg-id="SOUTV.BR@SD" tvg-logo="https://i.ibb.co/8cKmCNm/ezgif-com-gif-maker.png",SOU TV
+https://video10.logicahost.com.br/soutv/soutv/playlist.m3u8
+

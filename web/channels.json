@@ -19080,5 +19080,20 @@
         "title": "AO VIVO"
       }
     ]
+  },
+  {
+    "id": "SOUTV.br@SD",
+    "type": "tv",
+    "title": "SOU TV",
+    "tvg_id": "SOUTV.br@SD",
+    "tvg_logo": "https://i.ibb.co/8cKmCNm/ezgif-com-gif-maker.png",
+    "group": "📺 Geral",
+    "url": "https://video10.logicahost.com.br/soutv/soutv/playlist.m3u8",
+    "episodes": [
+      {
+        "url": "https://video10.logicahost.com.br/soutv/soutv/playlist.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
   }
 ]
