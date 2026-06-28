@@ -19095,5 +19095,50 @@
         "title": "AO VIVO"
       }
     ]
+  },
+  {
+    "id": "TELE6.bo@SD",
+    "type": "tv",
+    "title": "TELE 6 (720p)",
+    "tvg_id": "TELE6.bo@SD",
+    "tvg_logo": "https://i.imgur.com/p7tt72X.png",
+    "group": "📺 Geral",
+    "url": "https://lbgo.bozztv.com/ssh101/ssh101/tele6/playlist.m3u8",
+    "episodes": [
+      {
+        "url": "https://lbgo.bozztv.com/ssh101/ssh101/tele6/playlist.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "TimesBrasil.br@SD",
+    "type": "tv",
+    "title": "Times Brasil (720p)",
+    "tvg_id": "TimesBrasil.br@SD",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Times_Brasil_CNBC_logo_2025.svg/960px-Times_Brasil_CNBC_logo_2025.svg.png",
+    "group": "📰 Notícias",
+    "url": "https://ssai2-ads.api.leiniao.com/global-adinsertion-api/hls/live/v2/21fdb6dd7491406bba86497a24390a25/playlist.m3u8",
+    "episodes": [
+      {
+        "url": "https://ssai2-ads.api.leiniao.com/global-adinsertion-api/hls/live/v2/21fdb6dd7491406bba86497a24390a25/playlist.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "TVCultura.br@SD",
+    "type": "tv",
+    "title": "TV Cultura (720p)",
+    "tvg_id": "TVCultura.br@SD",
+    "tvg_logo": "https://i.ibb.co/nm0jXMM/cultura-3x.png",
+    "group": "📺 Geral",
+    "url": "https://lbgo.bozztv.com/ssh101/ssh101/tvlafaietehd/playlist.m3u8",
+    "episodes": [
+      {
+        "url": "https://lbgo.bozztv.com/ssh101/ssh101/tvlafaietehd/playlist.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
   }
 ]

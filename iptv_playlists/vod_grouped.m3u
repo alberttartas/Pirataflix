@@ -26364,3 +26364,12 @@ http://143.14.178.40:7777/Woohoo_HD/index.m3u8
 #EXTINF:-1 group-title="📺 Geral" tvg-id="SOUTV.BR@SD" tvg-logo="https://i.ibb.co/8cKmCNm/ezgif-com-gif-maker.png",SOU TV
 https://video10.logicahost.com.br/soutv/soutv/playlist.m3u8
 
+#EXTINF:-1 group-title="📺 Geral" tvg-id="TELE6.BO@SD" tvg-logo="https://i.imgur.com/p7tt72X.png",TELE 6 (720p)
+https://lbgo.bozztv.com/ssh101/ssh101/tele6/playlist.m3u8
+
+#EXTINF:-1 group-title="📰 Notícias" tvg-id="TIMESBRASIL.BR@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Times_Brasil_CNBC_logo_2025.svg/960px-Times_Brasil_CNBC_logo_2025.svg.png",Times Brasil (720p)
+https://ssai2-ads.api.leiniao.com/global-adinsertion-api/hls/live/v2/21fdb6dd7491406bba86497a24390a25/playlist.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="TVCULTURA.BR@SD" tvg-logo="https://i.ibb.co/nm0jXMM/cultura-3x.png",TV Cultura (720p)
+https://lbgo.bozztv.com/ssh101/ssh101/tvlafaietehd/playlist.m3u8
+
