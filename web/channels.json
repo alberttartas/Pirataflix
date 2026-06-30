@@ -19140,5 +19140,515 @@
         "title": "AO VIVO"
       }
     ]
+  },
+  {
+    "id": "AMCLatinAmerica.us@Brazil",
+    "type": "tv",
+    "title": "like Gecko) Chrome/124.0.0.0 Safari/537.36\" group-title=\"Movies\",AMC Latin America Brazil (1080p)",
+    "tvg_id": "AMCLatinAmerica.us@Brazil",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/AMC_logo_2019.svg/960px-AMC_logo_2019.svg.png",
+    "group": "🎬 Filmes",
+    "url": "https://cdn-5.nxplay.com.br/AMC_BRASIL/index.m3u8",
+    "episodes": [
+      {
+        "url": "https://cdn-5.nxplay.com.br/AMC_BRASIL/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "AsTartarugasNinja.us@BR",
+    "type": "tv",
+    "title": "As Tartarugas Ninja (720p)",
+    "tvg_id": "AsTartarugasNinja.us@BR",
+    "tvg_logo": "https://images.pluto.tv/channels/63dd5c904e83e700088fb68a/colorLogoPNG_1768926936698.png",
+    "group": "🧸 Infantil",
+    "url": "https://jmp2.uk/plu-63dd5c904e83e700088fb68a.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-63dd5c904e83e700088fb68a.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "AvatarAlendadeAang.us@BR",
+    "type": "tv",
+    "title": "Avatar: A lenda de Aang",
+    "tvg_id": "AvatarAlendadeAang.us@BR",
+    "tvg_logo": "https://images.pluto.tv/channels/6759eeb1bd523200083b4f29/colorLogoPNG.png",
+    "group": "🧸 Infantil",
+    "url": "https://jmp2.uk/plu-6759eeb1bd523200083b4f29.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-6759eeb1bd523200083b4f29.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "BobEsponjaCalcaQuadrada.us@BR",
+    "type": "tv",
+    "title": "Bob Esponja Calça Quadrada (720p)",
+    "tvg_id": "BobEsponjaCalcaQuadrada.us@BR",
+    "tvg_logo": "https://images.pluto.tv/channels/62545c0b002f4b0007688b61/colorLogoPNG.png",
+    "group": "🧸 Infantil",
+    "url": "https://jmp2.uk/plu-62545c0b002f4b0007688b61.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-62545c0b002f4b0007688b61.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "CSIMiami.us@BR",
+    "type": "tv",
+    "title": "CSI: Miami",
+    "tvg_id": "CSIMiami.us@BR",
+    "tvg_logo": "https://images.pluto.tv/channels/63eb9c5351f5d000085e8d7e/colorLogoPNG.png",
+    "group": "📺 Séries",
+    "url": "https://jmp2.uk/plu-63eb9c5351f5d000085e8d7e.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-63eb9c5351f5d000085e8d7e.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "DespertarTV.br@HD",
+    "type": "tv",
+    "title": "Despertar TV (720p)",
+    "tvg_id": "DespertarTV.br@HD",
+    "tvg_logo": "https://res.cloudinary.com/dpkehkbpv/image/upload/v1721839192/logo/mixtv/despertar_tv_ieb2l3.png",
+    "group": "✝️ Religioso",
+    "url": "https://br.conectmy.com.br/DespertarTV/index.m3u8",
+    "episodes": [
+      {
+        "url": "https://br.conectmy.com.br/DespertarTV/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "DetetivesMedicos.us@BR",
+    "type": "tv",
+    "title": "Detetives Médicos",
+    "tvg_id": "DetetivesMedicos.us@BR",
+    "tvg_logo": "https://images.pluto.tv/channels/638df93ae2f2a3000737c168/colorLogoPNG.png",
+    "group": "🎥 Documentário",
+    "url": "https://jmp2.uk/plu-638df93ae2f2a3000737c168.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-638df93ae2f2a3000737c168.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "J3NEWSTV.br@SD",
+    "type": "tv",
+    "title": "J3NEWS TV",
+    "tvg_id": "J3NEWSTV.br@SD",
+    "tvg_logo": "https://i.imgur.com/lezIQyL.png",
+    "group": "📰 Notícias",
+    "url": "https://video01.brascast.com/d92ebb4f/d92ebb4f/playlist.m3u8",
+    "episodes": [
+      {
+        "url": "https://video01.brascast.com/d92ebb4f/d92ebb4f/playlist.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "JornadanasEstrelasANovaGeracao.us@BR",
+    "type": "tv",
+    "title": "Jornada nas Estrelas A Nova Geração",
+    "tvg_id": "JornadanasEstrelasANovaGeracao.us@BR",
+    "tvg_logo": "https://images.pluto.tv/channels/69162ad79505d0f3b1ebf07d/colorLogoPNG_1766066212478.png",
+    "group": "📺 Séries",
+    "url": "https://jmp2.uk/plu-69162ad79505d0f3b1ebf07d.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-69162ad79505d0f3b1ebf07d.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "JornadanasEstrelasDeepSpaceNine.us@BR",
+    "type": "tv",
+    "title": "Jornada nas Estrelas Deep Space Nine",
+    "tvg_id": "JornadanasEstrelasDeepSpaceNine.us@BR",
+    "tvg_logo": "https://images.pluto.tv/channels/69162af591700f4c4c135c95/colorLogoPNG_1766066526851.png",
+    "group": "📺 Séries",
+    "url": "https://jmp2.uk/plu-69162af591700f4c4c135c95.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-69162af591700f4c4c135c95.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "JornadanasEstrelasVoyager.us@BR",
+    "type": "tv",
+    "title": "Jornada nas Estrelas Voyager",
+    "tvg_id": "JornadanasEstrelasVoyager.us@BR",
+    "tvg_logo": "https://images.pluto.tv/channels/69162b1ef189e235142b17ab/colorLogoPNG_1766150123044.png",
+    "group": "📺 Séries",
+    "url": "https://jmp2.uk/plu-69162b1ef189e235142b17ab.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-69162b1ef189e235142b17ab.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "Loupe.br@SD",
+    "type": "tv",
+    "title": "Loupe (1080p)",
+    "tvg_id": "Loupe.br@SD",
+    "tvg_logo": "https://i.imgur.com/T6tsw0O.png",
+    "group": "💅 Lifestyle",
+    "url": "https://gpa-vja-samsungtvplus-br.otteravision.com/gpa/vja/vja.m3u8",
+    "episodes": [
+      {
+        "url": "https://gpa-vja-samsungtvplus-br.otteravision.com/gpa/vja/vja.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "MacGyver.us@BR",
+    "type": "tv",
+    "title": "MacGyver",
+    "tvg_id": "MacGyver.us@BR",
+    "tvg_logo": "https://images.pluto.tv/channels/63eb9dc84e83e70008abea92/colorLogoPNG.png",
+    "group": "🎞️ Clássicos",
+    "url": "https://jmp2.uk/plu-63eb9dc84e83e70008abea92.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-63eb9dc84e83e70008abea92.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "MTVCatfish.us@BR",
+    "type": "tv",
+    "title": "MTV Catfish (720p)",
+    "tvg_id": "MTVCatfish.us@BR",
+    "tvg_logo": "https://images.pluto.tv/channels/626c2a3502d84a0007cec817/colorLogoPNG.png",
+    "group": "🎭 Entretenimento",
+    "url": "https://jmp2.uk/plu-626c2a3502d84a0007cec817.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-626c2a3502d84a0007cec817.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "MTVDating.us@BR",
+    "type": "tv",
+    "title": "MTV Dating",
+    "tvg_id": "MTVDating.us@BR",
+    "tvg_logo": "https://images.pluto.tv/channels/6851bb3426beced4f2f67ee6/colorLogoPNG_1750686926779.png",
+    "group": "📺 Séries",
+    "url": "https://jmp2.uk/plu-6851bb3426beced4f2f67ee6.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-6851bb3426beced4f2f67ee6.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "MTVJovenseMaes.us@BR",
+    "type": "tv",
+    "title": "MTV Jovens e Mães (720p)",
+    "tvg_id": "MTVJovenseMaes.us@BR",
+    "tvg_logo": "https://images.pluto.tv/channels/620fdc7d8a36fc000710e3ba/colorLogoPNG.png",
+    "group": "🎭 Entretenimento",
+    "url": "https://jmp2.uk/plu-620fdc7d8a36fc000710e3ba.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-620fdc7d8a36fc000710e3ba.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "MTVJustTattooofUs.us@BR",
+    "type": "tv",
+    "title": "MTV Just Tattoo of Us",
+    "tvg_id": "MTVJustTattooofUs.us@BR",
+    "tvg_logo": "https://images.pluto.tv/channels/63988b61c8d285000798a22a/colorLogoPNG.png",
+    "group": "🎭 Entretenimento",
+    "url": "https://jmp2.uk/plu-63988b61c8d285000798a22a.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-63988b61c8d285000798a22a.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "MTVReality.us@BR",
+    "type": "tv",
+    "title": "MTV Reality (720p)",
+    "tvg_id": "MTVReality.us@BR",
+    "tvg_logo": "https://images.pluto.tv/channels/6851bdfc9ac48fde5e07f5ae/colorLogoPNG_1780319925470.png",
+    "group": "🎭 Entretenimento",
+    "url": "https://jmp2.uk/plu-6851bdfc9ac48fde5e07f5ae.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-6851bdfc9ac48fde5e07f5ae.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "MTVRidiculousness.us@BR",
+    "type": "tv",
+    "title": "MTV Ridiculousness (720p)",
+    "tvg_id": "MTVRidiculousness.us@BR",
+    "tvg_logo": "https://images.pluto.tv/channels/68641eb4852dfe78698c3390/colorLogoPNG_1751392300412.png",
+    "group": "🎭 Entretenimento",
+    "url": "https://jmp2.uk/plu-68641eb4852dfe78698c3390.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-68641eb4852dfe78698c3390.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "MTVRocks.us@BR",
+    "type": "tv",
+    "title": "MTV Rocks",
+    "tvg_id": "MTVRocks.us@BR",
+    "tvg_logo": "https://images.pluto.tv/channels/66a01e07d2d50d0008100d6a/colorLogoPNG.png",
+    "group": "🎭 Entretenimento",
+    "url": "https://jmp2.uk/plu-66a01e07d2d50d0008100d6a.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-66a01e07d2d50d0008100d6a.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "MTVDrag.us@BR",
+    "type": "tv",
+    "title": "MTV Rupaul's Drag Race",
+    "tvg_id": "MTVDrag.us@BR",
+    "tvg_logo": "https://images.pluto.tv/channels/645111f1d8436e00081bb2bd/colorLogoPNG.png",
+    "group": "🎭 Entretenimento",
+    "url": "https://jmp2.uk/plu-645111f1d8436e00081bb2bd.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-645111f1d8436e00081bb2bd.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "MTVShore.us@BR",
+    "type": "tv",
+    "title": "MTV Shore",
+    "tvg_id": "MTVShore.us@BR",
+    "tvg_logo": "https://images.pluto.tv/channels/625463563b8ddc0007134aeb/colorLogoPNG.png",
+    "group": "🎭 Entretenimento",
+    "url": "https://jmp2.uk/plu-625463563b8ddc0007134aeb.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-625463563b8ddc0007134aeb.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "NCIS.us@BR",
+    "type": "tv",
+    "title": "NCIS",
+    "tvg_id": "NCIS.us@BR",
+    "tvg_logo": "https://images.pluto.tv/channels/63eb9fdda995710008991c54/colorLogoPNG.png",
+    "group": "📺 Séries",
+    "url": "https://jmp2.uk/plu-63eb9fdda995710008991c54.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-63eb9fdda995710008991c54.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "iCarly.us@BR",
+    "type": "tv",
+    "title": "Nickelodeon iCarly",
+    "tvg_id": "iCarly.us@BR",
+    "tvg_logo": "https://images.pluto.tv/channels/620ff46e0a576e0007dc2f89/colorLogoPNG.png",
+    "group": "📺 Séries",
+    "url": "https://jmp2.uk/plu-620ff46e0a576e0007dc2f89.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-620ff46e0a576e0007dc2f89.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "NickelodeonTeen.us@BR",
+    "type": "tv",
+    "title": "Nickelodeon Teen (720p)",
+    "tvg_id": "NickelodeonTeen.us@BR",
+    "tvg_logo": "https://images.pluto.tv/channels/60f5fabf0721880007cd50e3/colorLogoPNG_1767888207915.png",
+    "group": "🧸 Infantil",
+    "url": "https://jmp2.uk/plu-60f5fabf0721880007cd50e3.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-60f5fabf0721880007cd50e3.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "NickelodeonToons.us@BR",
+    "type": "tv",
+    "title": "Nickelodeon Toons (720p)",
+    "tvg_id": "NickelodeonToons.us@BR",
+    "tvg_logo": "https://images.pluto.tv/channels/645951c0e94c38000802d2cb/colorLogoPNG_1767888119852.png",
+    "group": "🧸 Infantil",
+    "url": "https://jmp2.uk/plu-645951c0e94c38000802d2cb.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-645951c0e94c38000802d2cb.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "Numbers.us@BR",
+    "type": "tv",
+    "title": "Numbers",
+    "tvg_id": "Numbers.us@BR",
+    "tvg_logo": "https://images.pluto.tv/channels/67f960c5441853fe50e7afc1/colorLogoPNG_1747430170532.png",
+    "group": "📺 Séries",
+    "url": "https://jmp2.uk/plu-67f960c5441853fe50e7afc1.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-67f960c5441853fe50e7afc1.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "OggyeasBaratasTontas.us@BR",
+    "type": "tv",
+    "title": "Oggy e as Baratas Tontas",
+    "tvg_id": "OggyeasBaratasTontas.us@BR",
+    "tvg_logo": "https://images.pluto.tv/channels/63221bafdc6e110007b50270/colorLogoPNG.png",
+    "group": "🧸 Infantil",
+    "url": "https://jmp2.uk/plu-63221bafdc6e110007b50270.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-63221bafdc6e110007b50270.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "MTVClassic.us@BR",
+    "type": "tv",
+    "title": "Pluto TV MTV Classic (720p)",
+    "tvg_id": "MTVClassic.us@BR",
+    "tvg_logo": "https://images.pluto.tv/channels/66a01dcb8561260008b0a41d/colorLogoPNG.png",
+    "group": "🎵 Música",
+    "url": "https://jmp2.uk/plu-66a01dcb8561260008b0a41d.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-66a01dcb8561260008b0a41d.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "SBTNacional.br@SD",
+    "type": "tv",
+    "title": "SBT Nacional (720p)",
+    "tvg_id": "SBTNacional.br@SD",
+    "tvg_logo": "https://i.imgur.com/tc1ALuu.png",
+    "group": "📺 Geral",
+    "url": "https://6836041ea1117.streamlock.net/cverde/cverde/playlist.m3u8",
+    "episodes": [
+      {
+        "url": "https://6836041ea1117.streamlock.net/cverde/cverde/playlist.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "SouthParkColecaoCartman.us@BR",
+    "type": "tv",
+    "title": "South Park: Coleção Cartman",
+    "tvg_id": "SouthParkColecaoCartman.us@BR",
+    "tvg_logo": "https://images.pluto.tv/channels/65df71008b24c80008f04281/colorLogoPNG.png",
+    "group": "🎨 Animação",
+    "url": "https://jmp2.uk/plu-65df71008b24c80008f04281.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-65df71008b24c80008f04281.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "SouthParkColecaoKenny.us@BR",
+    "type": "tv",
+    "title": "South Park: Coleção Kenny",
+    "tvg_id": "SouthParkColecaoKenny.us@BR",
+    "tvg_logo": "https://images.pluto.tv/channels/65df704366eec8000898e32f/colorLogoPNG.png",
+    "group": "🎨 Animação",
+    "url": "https://jmp2.uk/plu-65df704366eec8000898e32f.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-65df704366eec8000898e32f.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "SouthParkColecaoKyle.us@BR",
+    "type": "tv",
+    "title": "South Park: Coleção Kyle",
+    "tvg_id": "SouthParkColecaoKyle.us@BR",
+    "tvg_logo": "https://images.pluto.tv/channels/65df713dec9fda0008b7a81d/colorLogoPNG.png",
+    "group": "🎨 Animação",
+    "url": "https://jmp2.uk/plu-65df713dec9fda0008b7a81d.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-65df713dec9fda0008b7a81d.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "SouthParkColecaoStan.us@BR",
+    "type": "tv",
+    "title": "South Park: Coleção Stan",
+    "tvg_id": "SouthParkColecaoStan.us@BR",
+    "tvg_logo": "https://images.pluto.tv/channels/65df70b0f7f0af0008c3b316/colorLogoPNG.png",
+    "group": "🎨 Animação",
+    "url": "https://jmp2.uk/plu-65df70b0f7f0af0008c3b316.m3u8",
+    "episodes": [
+      {
+        "url": "https://jmp2.uk/plu-65df70b0f7f0af0008c3b316.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
   }
 ]
