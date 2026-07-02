@@ -19650,5 +19650,35 @@
         "title": "AO VIVO"
       }
     ]
+  },
+  {
+    "id": "Lke.br@SD",
+    "type": "tv",
+    "title": "L!ke (1080p)",
+    "tvg_id": "Lke.br@SD",
+    "tvg_logo": "https://i.imgur.com/chHsCzB.png",
+    "group": "📺 Geral",
+    "url": "https://cnl-cl.otteravision.com/cnl/cl_h265/cl_h265.m3u8",
+    "episodes": [
+      {
+        "url": "https://cnl-cl.otteravision.com/cnl/cl_h265/cl_h265.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "ODiaTV.br@SD",
+    "type": "tv",
+    "title": "O Dia TV",
+    "tvg_id": "ODiaTV.br@SD",
+    "tvg_logo": "https://i.imgur.com/1LUbAVP.png",
+    "group": "📺 Geral",
+    "url": "https://6836041ea1117.streamlock.net/tvodia/tvodia/playlist.m3u8",
+    "episodes": [
+      {
+        "url": "https://6836041ea1117.streamlock.net/tvodia/tvodia/playlist.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
   }
 ]
