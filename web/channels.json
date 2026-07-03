@@ -19680,5 +19680,35 @@
         "title": "AO VIVO"
       }
     ]
+  },
+  {
+    "id": "PlenitudeTV.br@SD",
+    "type": "tv",
+    "title": "Plenitude TV",
+    "tvg_id": "PlenitudeTV.br@SD",
+    "tvg_logo": "",
+    "group": "✝️ Religioso",
+    "url": "https://strv.painelvox.top/plenitude/plenitude/playlist.m3u8",
+    "episodes": [
+      {
+        "url": "https://strv.painelvox.top/plenitude/plenitude/playlist.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "TVCarioca.br@SD",
+    "type": "tv",
+    "title": "TV Carioca (720p)",
+    "tvg_id": "TVCarioca.br@SD",
+    "tvg_logo": "https://i.imgur.com/mVWydMw.png",
+    "group": "📺 Geral",
+    "url": "https://cdn-tiva-video03-logicahost-com-br.smartbit.co/cariocainternacional1/cariocainternacional1/playlist.m3u8",
+    "episodes": [
+      {
+        "url": "https://cdn-tiva-video03-logicahost-com-br.smartbit.co/cariocainternacional1/cariocainternacional1/playlist.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
   }
 ]

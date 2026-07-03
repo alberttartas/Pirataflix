@@ -26481,3 +26481,9 @@ https://cnl-cl.otteravision.com/cnl/cl_h265/cl_h265.m3u8
 #EXTINF:-1 group-title="📺 Geral" tvg-id="ODIATV.BR@SD" tvg-logo="https://i.imgur.com/1LUbAVP.png",O Dia TV
 https://6836041ea1117.streamlock.net/tvodia/tvodia/playlist.m3u8
 
+#EXTINF:-1 group-title="✝️ Religioso" tvg-id="PLENITUDETV.BR@SD" tvg-logo="",Plenitude TV
+https://strv.painelvox.top/plenitude/plenitude/playlist.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="TVCARIOCA.BR@SD" tvg-logo="https://i.imgur.com/mVWydMw.png",TV Carioca (720p)
+https://cdn-tiva-video03-logicahost-com-br.smartbit.co/cariocainternacional1/cariocainternacional1/playlist.m3u8
+

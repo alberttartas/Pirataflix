@@ -218,6 +218,9 @@ https://porbrics.mediacdn.ru/cdn/brics/portuguese/playlist.m3u8
 #EXTINF:-1 tvg-id="TVCancaoNova.br@SD" tvg-logo="https://i.imgur.com/OaM9hkH.png" group-title="📺 Geral",TV Cancao Nova (720p)
 https://5c65286fc6ace.streamlock.net/cancaonova/CancaoNova.stream_720p/playlist.m3u8
 
+#EXTINF:-1 tvg-id="TVCarioca.br@SD" tvg-logo="https://i.imgur.com/mVWydMw.png" group-title="📺 Geral",TV Carioca (720p)
+https://cdn-tiva-video03-logicahost-com-br.smartbit.co/cariocainternacional1/cariocainternacional1/playlist.m3u8
+
 #EXTINF:-1 tvg-id="TVCidadedePetropolis.br@SD" tvg-logo="https://i.imgur.com/xUs8gHV.png" group-title="📺 Geral",TV Cidade de Petrópolis (1080p) [Not 24/7]
 https://video01.kshost.com.br:4443/inside2133/inside2133/playlist.m3u8
 
