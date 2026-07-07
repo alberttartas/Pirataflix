@@ -19710,5 +19710,65 @@
         "title": "AO VIVO"
       }
     ]
+  },
+  {
+    "id": "ESPN.br@SD",
+    "type": "tv",
+    "title": "ESPN (1080p)",
+    "tvg_id": "ESPN.br@SD",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/ESPN_wordmark.svg/960px-ESPN_wordmark.svg.png",
+    "group": "⚽ Esportes",
+    "url": "http://181.78.197.59:8000/play/a07z/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://181.78.197.59:8000/play/a07z/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "ESPN3.br@SD",
+    "type": "tv",
+    "title": "ESPN 3 (720p)",
+    "tvg_id": "ESPN3.br@SD",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/ESPN3_Logo.png/960px-ESPN3_Logo.png",
+    "group": "⚽ Esportes",
+    "url": "http://181.78.197.59:8000/play/a081/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://181.78.197.59:8000/play/a081/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "ESPN4.br@SD",
+    "type": "tv",
+    "title": "ESPN 4 (1080p)",
+    "tvg_id": "ESPN4.br@SD",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/ESPN_4_logo.svg/960px-ESPN_4_logo.svg.png",
+    "group": "⚽ Esportes",
+    "url": "http://181.78.197.59:8000/play/a07n/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://181.78.197.59:8000/play/a07n/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "NickOnline.br@SD",
+    "type": "tv",
+    "title": "NickOnline (360p)",
+    "tvg_id": "NickOnline.br@SD",
+    "tvg_logo": "https://x1co.com.br/logo.png",
+    "group": "🎨 Animação",
+    "url": "https://x1colegal.com/hls/stream.m3u8",
+    "episodes": [
+      {
+        "url": "https://x1colegal.com/hls/stream.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
   }
 ]
