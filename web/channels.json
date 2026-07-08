@@ -19770,5 +19770,740 @@
         "title": "AO VIVO"
       }
     ]
+  },
+  {
+    "id": "AELatinAmerica.us@Brazil",
+    "type": "tv",
+    "title": "A&E Latin America Brazil (720p)",
+    "tvg_id": "AELatinAmerica.us@Brazil",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/A%26E_Network_logo.svg/960px-A%26E_Network_logo.svg.png",
+    "group": "🎭 Entretenimento",
+    "url": "http://45.162.231.38:7779/AE/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://45.162.231.38:7779/AE/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "AgroCanal.br@SD",
+    "type": "tv",
+    "title": "AgroCanal (720p)",
+    "tvg_id": "AgroCanal.br@SD",
+    "tvg_logo": "https://i.imgur.com/5XyopHf.png",
+    "group": "📚 Educação",
+    "url": "http://45.162.64.114/AGRO_CANAL/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://45.162.64.114/AGRO_CANAL/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "AgroMais.br@SD",
+    "type": "tv",
+    "title": "AgroMais (720p)",
+    "tvg_id": "AgroMais.br@SD",
+    "tvg_logo": "https://i.imgur.com/sFcOZeo.png",
+    "group": "📰 Notícias",
+    "url": "http://167.250.126.140:7777/AGROMAIS-HD/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://167.250.126.140:7777/AGROMAIS-HD/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "AXN.br@SD",
+    "type": "tv",
+    "title": "AXN (720p)",
+    "tvg_id": "AXN.br@SD",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/AXN_logo_%282015%29.svg/960px-AXN_logo_%282015%29.svg.png",
+    "group": "🎬 Filmes",
+    "url": "http://45.162.231.38:7779/AXN/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://45.162.231.38:7779/AXN/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "BabyTV.uk@Brazil",
+    "type": "tv",
+    "title": "BabyTV Brazil (720p)",
+    "tvg_id": "BabyTV.uk@Brazil",
+    "tvg_logo": "https://i.imgur.com/4BDJ5FT.png",
+    "group": "🧸 Infantil",
+    "url": "http://167.250.126.140:7777/BABYTV-HD/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://167.250.126.140:7777/BABYTV-HD/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "BoaVontadeTV.br@SD",
+    "type": "tv",
+    "title": "Boa Vontade TV (720p)",
+    "tvg_id": "BoaVontadeTV.br@SD",
+    "tvg_logo": "https://i.imgur.com/Ms5tSgu.png",
+    "group": "📺 Geral",
+    "url": "http://45.162.231.38:7779/Boa_Vontade_TV/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://45.162.231.38:7779/Boa_Vontade_TV/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "BoxKidsTV.br@SD",
+    "type": "tv",
+    "title": "Box Kids TV (720p)",
+    "tvg_id": "BoxKidsTV.br@SD",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/1/18/Boxkidstv.png",
+    "group": "🧸 Infantil",
+    "url": "http://167.250.126.140:7777/NICKJR-HD/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://167.250.126.140:7777/NICKJR-HD/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "CanaldoBoi.br@SD",
+    "type": "tv",
+    "title": "Canal do Boi (720p)",
+    "tvg_id": "CanaldoBoi.br@SD",
+    "tvg_logo": "https://i.imgur.com/pVM5MhS.png",
+    "group": "📺 Geral",
+    "url": "http://45.162.231.38:7779/Canal_do_Boi/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://45.162.231.38:7779/Canal_do_Boi/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "CanalFutura.br@SD",
+    "type": "tv",
+    "title": "Canal Futura (720p)",
+    "tvg_id": "CanalFutura.br@SD",
+    "tvg_logo": "https://i.imgur.com/LgynEBC.png",
+    "group": "📚 Educação",
+    "url": "http://45.162.64.114/FUTURA/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://45.162.64.114/FUTURA/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "Combate.br@SD",
+    "type": "tv",
+    "title": "Combate (720p)",
+    "tvg_id": "Combate.br@SD",
+    "tvg_logo": "https://i.imgur.com/ZPYK5jr.png",
+    "group": "⚽ Esportes",
+    "url": "http://143.14.134.107:80/167/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://143.14.134.107:80/167/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "Curta.br@SD",
+    "type": "tv",
+    "title": "Curta! (720p)",
+    "tvg_id": "Curta.br@SD",
+    "tvg_logo": "https://i.imgur.com/Rwrh0zU.png",
+    "group": "🎨 Cultura",
+    "url": "http://45.162.231.38:7779/Curta/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://45.162.231.38:7779/Curta/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "DisneyChannel.br@SD",
+    "type": "tv",
+    "title": "Disney Channel (720p)",
+    "tvg_id": "DisneyChannel.br@SD",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Disney_channel_2019.png/960px-Disney_channel_2019.png",
+    "group": "🧸 Infantil",
+    "url": "http://167.250.126.140:7777/DISNEY-HD/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://167.250.126.140:7777/DISNEY-HD/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "DumDum.br@SD",
+    "type": "tv",
+    "title": "DumDum (720p)",
+    "tvg_id": "DumDum.br@SD",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/c/c0/DumDum_logo.svg",
+    "group": "🧸 Infantil",
+    "url": "http://45.162.231.38:7779/ZooMoo/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://45.162.231.38:7779/ZooMoo/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "ELatinAmerica.us@Brazil",
+    "type": "tv",
+    "title": "E! Latin America Brazil (720p)",
+    "tvg_id": "ELatinAmerica.us@Brazil",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/E%21_Logo_2012.svg/500px-E%21_Logo_2012.svg.png",
+    "group": "🎭 Entretenimento",
+    "url": "http://45.162.231.38:7779/E/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://45.162.231.38:7779/E/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "FashionTV.br@SD",
+    "type": "tv",
+    "title": "FashionTV (720p)",
+    "tvg_id": "FashionTV.br@SD",
+    "tvg_logo": "https://i.imgur.com/cZWKyuM.png",
+    "group": "💅 Lifestyle",
+    "url": "http://167.250.126.140:7777/FASHIONTV-HD/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://167.250.126.140:7777/FASHIONTV-HD/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "FishTV.br@SD",
+    "type": "tv",
+    "title": "Fish TV (720p)",
+    "tvg_id": "FishTV.br@SD",
+    "tvg_logo": "https://www.fishtv.com/public/site/images/logos/fishtv.svg",
+    "group": "🌿 Natureza",
+    "url": "http://45.162.231.38:7779/Fish_TV/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://45.162.231.38:7779/Fish_TV/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "Futura.br@SD",
+    "type": "tv",
+    "title": "Futura (720p)",
+    "tvg_id": "Futura.br@SD",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Canal_Futura.png/960px-Canal_Futura.png",
+    "group": "📚 Educação",
+    "url": "http://45.162.231.38:7779/Futura/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://45.162.231.38:7779/Futura/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "FXLatinAmerica.us@Brazil",
+    "type": "tv",
+    "title": "FX Latin America Brazil (720p)",
+    "tvg_id": "FXLatinAmerica.us@Brazil",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/FX_International_logo.svg/960px-FX_International_logo.svg.png",
+    "group": "🎭 Entretenimento",
+    "url": "http://167.250.126.140:7777/FX-HD/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://167.250.126.140:7777/FX-HD/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "History.br@SD",
+    "type": "tv",
+    "title": "History (720p)",
+    "tvg_id": "History.br@SD",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/History_%282021%29.svg/500px-History_%282021%29.svg.png",
+    "group": "🎥 Documentário",
+    "url": "http://177.52.24.163/HISTORY-HD/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://177.52.24.163/HISTORY-HD/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "History2LatinAmerica.us@Brazil",
+    "type": "tv",
+    "title": "History 2 Latin America Brazil (720p)",
+    "tvg_id": "History2LatinAmerica.us@Brazil",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/History2_logo_%282022%29.svg/500px-History2_logo_%282022%29.svg.png",
+    "group": "🎥 Documentário",
+    "url": "http://45.162.231.38:7779/History_2/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://45.162.231.38:7779/History_2/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "ITVBrazil.br@SD",
+    "type": "tv",
+    "title": "ITV Brazil (720p)",
+    "tvg_id": "ITVBrazil.br@SD",
+    "tvg_logo": "https://i.imgur.com/35SLBz0.png",
+    "group": "📚 Educação",
+    "url": "https://video24.mais.uol.com.br/live/6146.m3u8",
+    "episodes": [
+      {
+        "url": "https://video24.mais.uol.com.br/live/6146.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "LifetimeLatinAmerica.us@Brazil",
+    "type": "tv",
+    "title": "Lifetime Latin America Brazil (720p)",
+    "tvg_id": "LifetimeLatinAmerica.us@Brazil",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Logo_Lifetime_2020.svg/960px-Logo_Lifetime_2020.svg.png",
+    "group": "🎭 Entretenimento",
+    "url": "http://45.162.231.38:7779/Lifetime/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://45.162.231.38:7779/Lifetime/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "ModoViagem.br@SD",
+    "type": "tv",
+    "title": "Modo Viagem (720p)",
+    "tvg_id": "ModoViagem.br@SD",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Logotipo_do_Modo_Viagem.svg",
+    "group": "✈️ Viagem",
+    "url": "http://45.162.231.38:7779/Modo_Viagem/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://45.162.231.38:7779/Modo_Viagem/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "MTV.br@SD",
+    "type": "tv",
+    "title": "MTV (720p)",
+    "tvg_id": "MTV.br@SD",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/MTV_2021_%28brand_version%29.svg/960px-MTV_2021_%28brand_version%29.svg.png",
+    "group": "🎭 Entretenimento",
+    "url": "http://45.162.231.38:7779/MTV/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://45.162.231.38:7779/MTV/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "NationalGeographic.br@SD",
+    "type": "tv",
+    "title": "National Geographic (720p)",
+    "tvg_id": "NationalGeographic.br@SD",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",
+    "group": "🎥 Documentário",
+    "url": "http://167.250.126.140:7777/NATGEO-HD/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://167.250.126.140:7777/NATGEO-HD/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "Polishop.br@SD",
+    "type": "tv",
+    "title": "Polishop (720p)",
+    "tvg_id": "Polishop.br@SD",
+    "tvg_logo": "https://i.imgur.com/gnfxeio.png",
+    "group": "🛍️ Shopping",
+    "url": "http://45.162.231.38:7779/Polishop_TV/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://45.162.231.38:7779/Polishop_TV/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "PremiereClubes.br@SD",
+    "type": "tv",
+    "title": "Premiere Clubes (720p)",
+    "tvg_id": "PremiereClubes.br@SD",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Premiere_(2017)_logo.png/960px-Premiere_(2017)_logo.png",
+    "group": "⚽ Esportes",
+    "url": "http://45.162.231.38:7779/Premiere_Clubes/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://45.162.231.38:7779/Premiere_Clubes/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "RBITV.br@SD",
+    "type": "tv",
+    "title": "RBI TV (720p)",
+    "tvg_id": "RBITV.br@SD",
+    "tvg_logo": "https://i.imgur.com/T1wU2HU.png",
+    "group": "📺 Geral",
+    "url": "http://45.162.231.38:7779/RBI/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://45.162.231.38:7779/RBI/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "Record.br@SD",
+    "type": "tv",
+    "title": "Record (720p)",
+    "tvg_id": "Record.br@SD",
+    "tvg_logo": "https://i.imgur.com/sz9gTTr.png",
+    "group": "📺 Geral",
+    "url": "http://45.162.231.38:7779/RECORDTV/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://45.162.231.38:7779/RECORDTV/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "RedeCNTRiodeJaneiro.br@SD",
+    "type": "tv",
+    "title": "Rede CNT Rio de Janeiro (720p)",
+    "tvg_id": "RedeCNTRiodeJaneiro.br@SD",
+    "tvg_logo": "https://i.imgur.com/jcasAmw.png",
+    "group": "📺 Geral",
+    "url": "http://45.162.231.38:7779/CNT/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://45.162.231.38:7779/CNT/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "RedeSeculo21.br@SD",
+    "type": "tv",
+    "title": "Rede Seculo 21 (720p)",
+    "tvg_id": "RedeSeculo21.br@SD",
+    "tvg_logo": "",
+    "group": "✝️ Religioso",
+    "url": "http://45.162.64.114/REDE_SECULO_21/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://45.162.64.114/REDE_SECULO_21/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "RedeTV.br@SD",
+    "type": "tv",
+    "title": "Rede TV! (720p)",
+    "tvg_id": "RedeTV.br@SD",
+    "tvg_logo": "https://i.imgur.com/ZJgD38F.png",
+    "group": "📺 Geral",
+    "url": "http://45.162.231.38:7779/Rede_TV/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://45.162.231.38:7779/Rede_TV/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "RedeVida.br@SD",
+    "type": "tv",
+    "title": "Rede Vida (720p)",
+    "tvg_id": "RedeVida.br@SD",
+    "tvg_logo": "https://i.imgur.com/mP1qfp2.png",
+    "group": "✝️ Religioso",
+    "url": "http://45.162.231.38:7779/Rede_Vida/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://45.162.231.38:7779/Rede_Vida/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "StudioUniversalLatinAmerica.us@Brazil",
+    "type": "tv",
+    "title": "Studio Universal Latin America Brazil (720p)",
+    "tvg_id": "StudioUniversalLatinAmerica.us@Brazil",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/StudioUniversal2016.png/960px-StudioUniversal2016.png",
+    "group": "📺 Geral",
+    "url": "http://45.162.231.38:7779/Studio_Universal/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://45.162.231.38:7779/Studio_Universal/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "TelecineAction.br@SD",
+    "type": "tv",
+    "title": "Telecine Action (720p)",
+    "tvg_id": "TelecineAction.br@SD",
+    "tvg_logo": "https://i.imgur.com/BHYWG0h.png",
+    "group": "🎬 Filmes",
+    "url": "http://45.162.231.38:7779/Telecine_Action/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://45.162.231.38:7779/Telecine_Action/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "TelecineCult.br@SD",
+    "type": "tv",
+    "title": "Telecine Cult (720p)",
+    "tvg_id": "TelecineCult.br@SD",
+    "tvg_logo": "https://i.imgur.com/6GuHXnr.png",
+    "group": "🎬 Filmes",
+    "url": "http://45.162.231.38:7779/Telecine_Cult/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://45.162.231.38:7779/Telecine_Cult/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "TelecineFun.br@SD",
+    "type": "tv",
+    "title": "Telecine Fun (720p)",
+    "tvg_id": "TelecineFun.br@SD",
+    "tvg_logo": "https://i.imgur.com/MO2Ynki.png",
+    "group": "🎬 Filmes",
+    "url": "http://45.162.231.38:7779/Telecine_Fun/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://45.162.231.38:7779/Telecine_Fun/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "TelecinePipoca.br@SD",
+    "type": "tv",
+    "title": "Telecine Pipoca (720p)",
+    "tvg_id": "TelecinePipoca.br@SD",
+    "tvg_logo": "https://i.imgur.com/hW9JYXr.png",
+    "group": "🎬 Filmes",
+    "url": "http://45.162.231.38:7779/Telecine_Pipoca/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://45.162.231.38:7779/Telecine_Pipoca/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "TelecinePremium.br@SD",
+    "type": "tv",
+    "title": "Telecine Premium (720p)",
+    "tvg_id": "TelecinePremium.br@SD",
+    "tvg_logo": "https://i.imgur.com/uVFgIr8.png",
+    "group": "🎬 Filmes",
+    "url": "http://45.162.231.38:7779/Telecine_Premium/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://45.162.231.38:7779/Telecine_Premium/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "TelecineTouch.br@SD",
+    "type": "tv",
+    "title": "Telecine Touch (720p)",
+    "tvg_id": "TelecineTouch.br@SD",
+    "tvg_logo": "https://i.imgur.com/Nky0hRo.png",
+    "group": "🎬 Filmes",
+    "url": "http://45.162.231.38:7779/Telecine_Touch/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://45.162.231.38:7779/Telecine_Touch/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "TerraViva.br@SD",
+    "type": "tv",
+    "title": "Terra Viva (720p)",
+    "tvg_id": "TerraViva.br@SD",
+    "tvg_logo": "https://i.imgur.com/wnYsE3O.png",
+    "group": "🌿 Natureza",
+    "url": "http://45.162.231.38:7779/Terra_Viva/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://45.162.231.38:7779/Terra_Viva/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "TravelBoxBrazil.br@SD",
+    "type": "tv",
+    "title": "Travel Box Brazil (720p)",
+    "tvg_id": "TravelBoxBrazil.br@SD",
+    "tvg_logo": "https://i.imgur.com/3tBJERH.png",
+    "group": "✈️ Viagem",
+    "url": "http://167.250.126.140:7777/TRAVELBOX-HD/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://167.250.126.140:7777/TRAVELBOX-HD/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "TVEvangelizar.br@SD",
+    "type": "tv",
+    "title": "TV Evangelizar (720p)",
+    "tvg_id": "TVEvangelizar.br@SD",
+    "tvg_logo": "https://i.imgur.com/IrYR7Kp.png",
+    "group": "✝️ Religioso",
+    "url": "http://45.162.64.114/EVANGELIZAR/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://45.162.64.114/EVANGELIZAR/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "TVGazeta.br@SD",
+    "type": "tv",
+    "title": "TV Gazeta (720p)",
+    "tvg_id": "TVGazeta.br@SD",
+    "tvg_logo": "https://i.imgur.com/0sksWse.png",
+    "group": "📺 Geral",
+    "url": "http://45.162.64.114/TV_GAZETA/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://45.162.64.114/TV_GAZETA/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "TVJustica.br@SD",
+    "type": "tv",
+    "title": "TV Justica (720p)",
+    "tvg_id": "TVJustica.br@SD",
+    "tvg_logo": "https://i.imgur.com/rOQKiMO.png",
+    "group": "📺 Geral",
+    "url": "http://45.162.231.38:7779/TV_Justica/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://45.162.231.38:7779/TV_Justica/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "TVPaiEterno.br@SD",
+    "type": "tv",
+    "title": "TV Pai Eterno (720p)",
+    "tvg_id": "TVPaiEterno.br@SD",
+    "tvg_logo": "https://i.imgur.com/iuoXchN.png",
+    "group": "✝️ Religioso",
+    "url": "http://45.162.231.38:7779/Pai_Eterno/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://45.162.231.38:7779/Pai_Eterno/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "TVRaTimBum.br@SD",
+    "type": "tv",
+    "title": "TV Ra Tim Bum (576p)",
+    "tvg_id": "TVRaTimBum.br@SD",
+    "tvg_logo": "https://i.imgur.com/JIQwz0w.png",
+    "group": "📺 Geral",
+    "url": "http://45.162.64.114/RA_TIM_BUM/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://45.162.64.114/RA_TIM_BUM/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "TVECultura.br@SD",
+    "type": "tv",
+    "title": "TVE Cultura (720p)",
+    "tvg_id": "TVECultura.br@SD",
+    "tvg_logo": "https://i.imgur.com/FpqoWcB.png",
+    "group": "📺 Geral",
+    "url": "http://45.162.231.38:7779/TVE/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://45.162.231.38:7779/TVE/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "UniversalTVLatinAmerica.us@Brazil",
+    "type": "tv",
+    "title": "Universal TV Latin America Brazil (720p)",
+    "tvg_id": "UniversalTVLatinAmerica.us@Brazil",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Universal_TV_logo.svg/960px-Universal_TV_logo.svg.png",
+    "group": "📺 Geral",
+    "url": "http://45.162.231.38:7779/Universal_TV/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://45.162.231.38:7779/Universal_TV/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
   }
 ]

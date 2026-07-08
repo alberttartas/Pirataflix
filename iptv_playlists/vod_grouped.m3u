@@ -26499,3 +26499,150 @@ http://181.78.197.59:8000/play/a07n/index.m3u8
 #EXTINF:-1 group-title="🎨 Animação" tvg-id="NICKONLINE.BR@SD" tvg-logo="https://x1co.com.br/logo.png",NickOnline (360p)
 https://x1colegal.com/hls/stream.m3u8
 
+#EXTINF:-1 group-title="🎭 Entretenimento" tvg-id="AELATINAMERICA.US@BRAZIL" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/A%26E_Network_logo.svg/960px-A%26E_Network_logo.svg.png",A&E Latin America Brazil (720p)
+http://45.162.231.38:7779/AE/index.m3u8
+
+#EXTINF:-1 group-title="📚 Educação" tvg-id="AGROCANAL.BR@SD" tvg-logo="https://i.imgur.com/5XyopHf.png",AgroCanal (720p)
+http://45.162.64.114/AGRO_CANAL/index.m3u8
+
+#EXTINF:-1 group-title="📰 Notícias" tvg-id="AGROMAIS.BR@SD" tvg-logo="https://i.imgur.com/sFcOZeo.png",AgroMais (720p)
+http://167.250.126.140:7777/AGROMAIS-HD/index.m3u8
+
+#EXTINF:-1 group-title="🎬 Filmes" tvg-id="AXN.BR@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/AXN_logo_%282015%29.svg/960px-AXN_logo_%282015%29.svg.png",AXN (720p)
+http://45.162.231.38:7779/AXN/index.m3u8
+
+#EXTINF:-1 group-title="🧸 Infantil" tvg-id="BABYTV.UK@BRAZIL" tvg-logo="https://i.imgur.com/4BDJ5FT.png",BabyTV Brazil (720p)
+http://167.250.126.140:7777/BABYTV-HD/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="BOAVONTADETV.BR@SD" tvg-logo="https://i.imgur.com/Ms5tSgu.png",Boa Vontade TV (720p)
+http://45.162.231.38:7779/Boa_Vontade_TV/index.m3u8
+
+#EXTINF:-1 group-title="🧸 Infantil" tvg-id="BOXKIDSTV.BR@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/1/18/Boxkidstv.png",Box Kids TV (720p)
+http://167.250.126.140:7777/NICKJR-HD/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="CANALDOBOI.BR@SD" tvg-logo="https://i.imgur.com/pVM5MhS.png",Canal do Boi (720p)
+http://45.162.231.38:7779/Canal_do_Boi/index.m3u8
+
+#EXTINF:-1 group-title="📚 Educação" tvg-id="CANALFUTURA.BR@SD" tvg-logo="https://i.imgur.com/LgynEBC.png",Canal Futura (720p)
+http://45.162.64.114/FUTURA/index.m3u8
+
+#EXTINF:-1 group-title="⚽ Esportes" tvg-id="COMBATE.BR@SD" tvg-logo="https://i.imgur.com/ZPYK5jr.png",Combate (720p)
+http://143.14.134.107:80/167/index.m3u8
+
+#EXTINF:-1 group-title="🎨 Cultura" tvg-id="CURTA.BR@SD" tvg-logo="https://i.imgur.com/Rwrh0zU.png",Curta! (720p)
+http://45.162.231.38:7779/Curta/index.m3u8
+
+#EXTINF:-1 group-title="🧸 Infantil" tvg-id="DISNEYCHANNEL.BR@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Disney_channel_2019.png/960px-Disney_channel_2019.png",Disney Channel (720p)
+http://167.250.126.140:7777/DISNEY-HD/index.m3u8
+
+#EXTINF:-1 group-title="🧸 Infantil" tvg-id="DUMDUM.BR@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/c/c0/DumDum_logo.svg",DumDum (720p)
+http://45.162.231.38:7779/ZooMoo/index.m3u8
+
+#EXTINF:-1 group-title="🎭 Entretenimento" tvg-id="ELATINAMERICA.US@BRAZIL" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/E%21_Logo_2012.svg/500px-E%21_Logo_2012.svg.png",E! Latin America Brazil (720p)
+http://45.162.231.38:7779/E/index.m3u8
+
+#EXTINF:-1 group-title="💅 Lifestyle" tvg-id="FASHIONTV.BR@SD" tvg-logo="https://i.imgur.com/cZWKyuM.png",FashionTV (720p)
+http://167.250.126.140:7777/FASHIONTV-HD/index.m3u8
+
+#EXTINF:-1 group-title="🌿 Natureza" tvg-id="FISHTV.BR@SD" tvg-logo="https://www.fishtv.com/public/site/images/logos/fishtv.svg",Fish TV (720p)
+http://45.162.231.38:7779/Fish_TV/index.m3u8
+
+#EXTINF:-1 group-title="📚 Educação" tvg-id="FUTURA.BR@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Canal_Futura.png/960px-Canal_Futura.png",Futura (720p)
+http://45.162.231.38:7779/Futura/index.m3u8
+
+#EXTINF:-1 group-title="🎭 Entretenimento" tvg-id="FXLATINAMERICA.US@BRAZIL" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/FX_International_logo.svg/960px-FX_International_logo.svg.png",FX Latin America Brazil (720p)
+http://167.250.126.140:7777/FX-HD/index.m3u8
+
+#EXTINF:-1 group-title="🎥 Documentário" tvg-id="HISTORY.BR@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/History_%282021%29.svg/500px-History_%282021%29.svg.png",History (720p)
+http://177.52.24.163/HISTORY-HD/index.m3u8
+
+#EXTINF:-1 group-title="🎥 Documentário" tvg-id="HISTORY2LATINAMERICA.US@BRAZIL" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/History2_logo_%282022%29.svg/500px-History2_logo_%282022%29.svg.png",History 2 Latin America Brazil (720p)
+http://45.162.231.38:7779/History_2/index.m3u8
+
+#EXTINF:-1 group-title="📚 Educação" tvg-id="ITVBRAZIL.BR@SD" tvg-logo="https://i.imgur.com/35SLBz0.png",ITV Brazil (720p)
+https://video24.mais.uol.com.br/live/6146.m3u8
+
+#EXTINF:-1 group-title="🎭 Entretenimento" tvg-id="LIFETIMELATINAMERICA.US@BRAZIL" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Logo_Lifetime_2020.svg/960px-Logo_Lifetime_2020.svg.png",Lifetime Latin America Brazil (720p)
+http://45.162.231.38:7779/Lifetime/index.m3u8
+
+#EXTINF:-1 group-title="✈️ Viagem" tvg-id="MODOVIAGEM.BR@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/ff/Logotipo_do_Modo_Viagem.svg",Modo Viagem (720p)
+http://45.162.231.38:7779/Modo_Viagem/index.m3u8
+
+#EXTINF:-1 group-title="🎭 Entretenimento" tvg-id="MTV.BR@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/MTV_2021_%28brand_version%29.svg/960px-MTV_2021_%28brand_version%29.svg.png",MTV (720p)
+http://45.162.231.38:7779/MTV/index.m3u8
+
+#EXTINF:-1 group-title="🎥 Documentário" tvg-id="NATIONALGEOGRAPHIC.BR@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png",National Geographic (720p)
+http://167.250.126.140:7777/NATGEO-HD/index.m3u8
+
+#EXTINF:-1 group-title="🛍️ Shopping" tvg-id="POLISHOP.BR@SD" tvg-logo="https://i.imgur.com/gnfxeio.png",Polishop (720p)
+http://45.162.231.38:7779/Polishop_TV/index.m3u8
+
+#EXTINF:-1 group-title="⚽ Esportes" tvg-id="PREMIERECLUBES.BR@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Premiere_(2017)_logo.png/960px-Premiere_(2017)_logo.png",Premiere Clubes (720p)
+http://45.162.231.38:7779/Premiere_Clubes/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="RBITV.BR@SD" tvg-logo="https://i.imgur.com/T1wU2HU.png",RBI TV (720p)
+http://45.162.231.38:7779/RBI/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="RECORD.BR@SD" tvg-logo="https://i.imgur.com/sz9gTTr.png",Record (720p)
+http://45.162.231.38:7779/RECORDTV/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="REDECNTRIODEJANEIRO.BR@SD" tvg-logo="https://i.imgur.com/jcasAmw.png",Rede CNT Rio de Janeiro (720p)
+http://45.162.231.38:7779/CNT/index.m3u8
+
+#EXTINF:-1 group-title="✝️ Religioso" tvg-id="REDESECULO21.BR@SD" tvg-logo="",Rede Seculo 21 (720p)
+http://45.162.64.114/REDE_SECULO_21/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="REDETV.BR@SD" tvg-logo="https://i.imgur.com/ZJgD38F.png",Rede TV! (720p)
+http://45.162.231.38:7779/Rede_TV/index.m3u8
+
+#EXTINF:-1 group-title="✝️ Religioso" tvg-id="REDEVIDA.BR@SD" tvg-logo="https://i.imgur.com/mP1qfp2.png",Rede Vida (720p)
+http://45.162.231.38:7779/Rede_Vida/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="STUDIOUNIVERSALLATINAMERICA.US@BRAZIL" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/StudioUniversal2016.png/960px-StudioUniversal2016.png",Studio Universal Latin America Brazil (720p)
+http://45.162.231.38:7779/Studio_Universal/index.m3u8
+
+#EXTINF:-1 group-title="🎬 Filmes" tvg-id="TELECINEACTION.BR@SD" tvg-logo="https://i.imgur.com/BHYWG0h.png",Telecine Action (720p)
+http://45.162.231.38:7779/Telecine_Action/index.m3u8
+
+#EXTINF:-1 group-title="🎬 Filmes" tvg-id="TELECINECULT.BR@SD" tvg-logo="https://i.imgur.com/6GuHXnr.png",Telecine Cult (720p)
+http://45.162.231.38:7779/Telecine_Cult/index.m3u8
+
+#EXTINF:-1 group-title="🎬 Filmes" tvg-id="TELECINEFUN.BR@SD" tvg-logo="https://i.imgur.com/MO2Ynki.png",Telecine Fun (720p)
+http://45.162.231.38:7779/Telecine_Fun/index.m3u8
+
+#EXTINF:-1 group-title="🎬 Filmes" tvg-id="TELECINEPIPOCA.BR@SD" tvg-logo="https://i.imgur.com/hW9JYXr.png",Telecine Pipoca (720p)
+http://45.162.231.38:7779/Telecine_Pipoca/index.m3u8
+
+#EXTINF:-1 group-title="🎬 Filmes" tvg-id="TELECINEPREMIUM.BR@SD" tvg-logo="https://i.imgur.com/uVFgIr8.png",Telecine Premium (720p)
+http://45.162.231.38:7779/Telecine_Premium/index.m3u8
+
+#EXTINF:-1 group-title="🎬 Filmes" tvg-id="TELECINETOUCH.BR@SD" tvg-logo="https://i.imgur.com/Nky0hRo.png",Telecine Touch (720p)
+http://45.162.231.38:7779/Telecine_Touch/index.m3u8
+
+#EXTINF:-1 group-title="🌿 Natureza" tvg-id="TERRAVIVA.BR@SD" tvg-logo="https://i.imgur.com/wnYsE3O.png",Terra Viva (720p)
+http://45.162.231.38:7779/Terra_Viva/index.m3u8
+
+#EXTINF:-1 group-title="✈️ Viagem" tvg-id="TRAVELBOXBRAZIL.BR@SD" tvg-logo="https://i.imgur.com/3tBJERH.png",Travel Box Brazil (720p)
+http://167.250.126.140:7777/TRAVELBOX-HD/index.m3u8
+
+#EXTINF:-1 group-title="✝️ Religioso" tvg-id="TVEVANGELIZAR.BR@SD" tvg-logo="https://i.imgur.com/IrYR7Kp.png",TV Evangelizar (720p)
+http://45.162.64.114/EVANGELIZAR/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="TVGAZETA.BR@SD" tvg-logo="https://i.imgur.com/0sksWse.png",TV Gazeta (720p)
+http://45.162.64.114/TV_GAZETA/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="TVJUSTICA.BR@SD" tvg-logo="https://i.imgur.com/rOQKiMO.png",TV Justica (720p)
+http://45.162.231.38:7779/TV_Justica/index.m3u8
+
+#EXTINF:-1 group-title="✝️ Religioso" tvg-id="TVPAIETERNO.BR@SD" tvg-logo="https://i.imgur.com/iuoXchN.png",TV Pai Eterno (720p)
+http://45.162.231.38:7779/Pai_Eterno/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="TVRATIMBUM.BR@SD" tvg-logo="https://i.imgur.com/JIQwz0w.png",TV Ra Tim Bum (576p)
+http://45.162.64.114/RA_TIM_BUM/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="TVECULTURA.BR@SD" tvg-logo="https://i.imgur.com/FpqoWcB.png",TVE Cultura (720p)
+http://45.162.231.38:7779/TVE/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="UNIVERSALTVLATINAMERICA.US@BRAZIL" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Universal_TV_logo.svg/960px-Universal_TV_logo.svg.png",Universal TV Latin America Brazil (720p)
+http://45.162.231.38:7779/Universal_TV/index.m3u8
+

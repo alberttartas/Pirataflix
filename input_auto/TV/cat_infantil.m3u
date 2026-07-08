@@ -8,8 +8,20 @@ https://jmp2.uk/plu-6759eeb1bd523200083b4f29.m3u8
 #EXTINF:-1 tvg-id="BabyFirst.us@Brazil" tvg-logo="https://i.imgur.com/WxLHBwu.png" group-title="🧸 Infantil",Babyfirst
 https://jmp2.uk/plu-5f4fb4cf605ddf000748e16f.m3u8
 
+#EXTINF:-1 tvg-id="BabyTV.uk@Brazil" tvg-logo="https://i.imgur.com/4BDJ5FT.png" group-title="🧸 Infantil",BabyTV Brazil (720p)
+http://167.250.126.140:7777/BABYTV-HD/index.m3u8
+
 #EXTINF:-1 tvg-id="BobEsponjaCalcaQuadrada.us@BR" tvg-logo="https://images.pluto.tv/channels/62545c0b002f4b0007688b61/colorLogoPNG.png" group-title="🧸 Infantil",Bob Esponja Calça Quadrada (720p)
 https://jmp2.uk/plu-62545c0b002f4b0007688b61.m3u8
+
+#EXTINF:-1 tvg-id="BoxKidsTV.br@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/1/18/Boxkidstv.png" group-title="🧸 Infantil",Box Kids TV (720p)
+http://167.250.126.140:7777/NICKJR-HD/index.m3u8
+
+#EXTINF:-1 tvg-id="DisneyChannel.br@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Disney_channel_2019.png/960px-Disney_channel_2019.png" group-title="🧸 Infantil",Disney Channel (720p)
+http://167.250.126.140:7777/DISNEY-HD/index.m3u8
+
+#EXTINF:-1 tvg-id="DumDum.br@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/c/c0/DumDum_logo.svg" group-title="🧸 Infantil",DumDum (720p)
+http://45.162.231.38:7779/ZooMoo/index.m3u8
 
 #EXTINF:-1 tvg-id="Gloob.br@SD" tvg-logo="https://i.imgur.com/N1BUULh.png" group-title="🧸 Infantil",Gloob (1080p)
 http://143.14.178.40:7777/Gloob_HD/index.m3u8
