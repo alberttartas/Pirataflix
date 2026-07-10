@@ -26646,3 +26646,33 @@ http://45.162.231.38:7779/TVE/index.m3u8
 #EXTINF:-1 group-title="📺 Geral" tvg-id="UNIVERSALTVLATINAMERICA.US@BRAZIL" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Universal_TV_logo.svg/960px-Universal_TV_logo.svg.png",Universal TV Latin America Brazil (720p)
 http://45.162.231.38:7779/Universal_TV/index.m3u8
 
+#EXTINF:-1 group-title="📺 Geral" tvg-id="CANAL25JUNDIAI.BR@SD" tvg-logo="https://i.imgur.com/7igGMwH.png",Canal 25 Jundiai (720p)
+https://cdn-tiva-stream01-msolutionbrasil-com-br.smartbit.co/hls/canal25/live.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="REDEMEIONORTE.BR@SD" tvg-logo="https://i.imgur.com/KVdTi0M.png",Rede Meio Norte (720p)
+https://maystreaming.cloudecast.com/redemeio/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="REDEMETROPOLE.BR@SD" tvg-logo="https://i.imgur.com/qJx9Zvd.png",Rede Metropole (720p)
+https://cdn-tiva-isaocorp-cloudecast-com.smartbit.co/metropole/index.m3u8
+
+#EXTINF:-1 group-title="🎭 Entretenimento" tvg-id="REDEPREMIUMTV.BR@SD" tvg-logo="https://i.imgur.com/jMHaHAR.png",Rede Premium TV (720p)
+https://cdn-tiva-stmv2-samcast-com-br.smartbit.co/leonardo9878/leonardo9878/playlist.m3u8
+
+#EXTINF:-1 group-title="📺 Séries" tvg-id="TNTNOVELAS.US@BRAZIL" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/TNT_Novelas_2025.svg/1920px-TNT_Novelas_2025.svg.png",TNT Novelas Brazil (720p)
+http://167.250.126.140:7777/TBS-HD/index.m3u8
+
+#EXTINF:-1 group-title="🏛️ Legislativo" tvg-id="TVASSEMBLEIAPIAUI.BR@SD" tvg-logo="https://i.imgur.com/eMguSjM.png",TV Assembleia Piaui
+https://stmv1.srvstm.com/piaui8071/piaui8071/playlist.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="TVMON.BR@SD" tvg-logo="https://i.imgur.com/Gjan8rl.png",TV Mon (720p)
+https://cdn-tiva-video10-logicahost-com-br.smartbit.co/tvmon/tvmon/playlist.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="TVSENADO.BR@SD" tvg-logo="https://i.imgur.com/duy6waL.png",TV Senado (720p)
+http://45.162.64.114/TV_SENADO/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="USANETWORKLATINAMERICA.US@BRAZIL" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/USA_Network_logo_%282016%29.svg/960px-USA_Network_logo_%282016%29.svg.png",USA Network Latin America Brazil (720p)
+http://167.250.126.140:7777/SYFY-HD/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="VIVAXTV.BR@SD" tvg-logo="",Vivax TV (720p)
+https://video11.logicahost.com.br/redevivaxtv/redevivaxtv/playlist.m3u8
+

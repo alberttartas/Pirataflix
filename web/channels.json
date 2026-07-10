@@ -20505,5 +20505,155 @@
         "title": "AO VIVO"
       }
     ]
+  },
+  {
+    "id": "Canal25Jundiai.br@SD",
+    "type": "tv",
+    "title": "Canal 25 Jundiai (720p)",
+    "tvg_id": "Canal25Jundiai.br@SD",
+    "tvg_logo": "https://i.imgur.com/7igGMwH.png",
+    "group": "📺 Geral",
+    "url": "https://cdn-tiva-stream01-msolutionbrasil-com-br.smartbit.co/hls/canal25/live.m3u8",
+    "episodes": [
+      {
+        "url": "https://cdn-tiva-stream01-msolutionbrasil-com-br.smartbit.co/hls/canal25/live.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "RedeMeioNorte.br@SD",
+    "type": "tv",
+    "title": "Rede Meio Norte (720p)",
+    "tvg_id": "RedeMeioNorte.br@SD",
+    "tvg_logo": "https://i.imgur.com/KVdTi0M.png",
+    "group": "📺 Geral",
+    "url": "https://maystreaming.cloudecast.com/redemeio/index.m3u8",
+    "episodes": [
+      {
+        "url": "https://maystreaming.cloudecast.com/redemeio/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "RedeMetropole.br@SD",
+    "type": "tv",
+    "title": "Rede Metropole (720p)",
+    "tvg_id": "RedeMetropole.br@SD",
+    "tvg_logo": "https://i.imgur.com/qJx9Zvd.png",
+    "group": "📺 Geral",
+    "url": "https://cdn-tiva-isaocorp-cloudecast-com.smartbit.co/metropole/index.m3u8",
+    "episodes": [
+      {
+        "url": "https://cdn-tiva-isaocorp-cloudecast-com.smartbit.co/metropole/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "RedePremiumTV.br@SD",
+    "type": "tv",
+    "title": "Rede Premium TV (720p)",
+    "tvg_id": "RedePremiumTV.br@SD",
+    "tvg_logo": "https://i.imgur.com/jMHaHAR.png",
+    "group": "🎭 Entretenimento",
+    "url": "https://cdn-tiva-stmv2-samcast-com-br.smartbit.co/leonardo9878/leonardo9878/playlist.m3u8",
+    "episodes": [
+      {
+        "url": "https://cdn-tiva-stmv2-samcast-com-br.smartbit.co/leonardo9878/leonardo9878/playlist.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "TNTNovelas.us@Brazil",
+    "type": "tv",
+    "title": "TNT Novelas Brazil (720p)",
+    "tvg_id": "TNTNovelas.us@Brazil",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/TNT_Novelas_2025.svg/1920px-TNT_Novelas_2025.svg.png",
+    "group": "📺 Séries",
+    "url": "http://167.250.126.140:7777/TBS-HD/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://167.250.126.140:7777/TBS-HD/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "TVAssembleiaPiaui.br@SD",
+    "type": "tv",
+    "title": "TV Assembleia Piaui",
+    "tvg_id": "TVAssembleiaPiaui.br@SD",
+    "tvg_logo": "https://i.imgur.com/eMguSjM.png",
+    "group": "🏛️ Legislativo",
+    "url": "https://stmv1.srvstm.com/piaui8071/piaui8071/playlist.m3u8",
+    "episodes": [
+      {
+        "url": "https://stmv1.srvstm.com/piaui8071/piaui8071/playlist.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "TVMon.br@SD",
+    "type": "tv",
+    "title": "TV Mon (720p)",
+    "tvg_id": "TVMon.br@SD",
+    "tvg_logo": "https://i.imgur.com/Gjan8rl.png",
+    "group": "📺 Geral",
+    "url": "https://cdn-tiva-video10-logicahost-com-br.smartbit.co/tvmon/tvmon/playlist.m3u8",
+    "episodes": [
+      {
+        "url": "https://cdn-tiva-video10-logicahost-com-br.smartbit.co/tvmon/tvmon/playlist.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "TVSenado.br@SD",
+    "type": "tv",
+    "title": "TV Senado (720p)",
+    "tvg_id": "TVSenado.br@SD",
+    "tvg_logo": "https://i.imgur.com/duy6waL.png",
+    "group": "📺 Geral",
+    "url": "http://45.162.64.114/TV_SENADO/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://45.162.64.114/TV_SENADO/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "USANetworkLatinAmerica.us@Brazil",
+    "type": "tv",
+    "title": "USA Network Latin America Brazil (720p)",
+    "tvg_id": "USANetworkLatinAmerica.us@Brazil",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/USA_Network_logo_%282016%29.svg/960px-USA_Network_logo_%282016%29.svg.png",
+    "group": "📺 Geral",
+    "url": "http://167.250.126.140:7777/SYFY-HD/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://167.250.126.140:7777/SYFY-HD/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "VivaxTV.br@SD",
+    "type": "tv",
+    "title": "Vivax TV (720p)",
+    "tvg_id": "VivaxTV.br@SD",
+    "tvg_logo": "",
+    "group": "📺 Geral",
+    "url": "https://video11.logicahost.com.br/redevivaxtv/redevivaxtv/playlist.m3u8",
+    "episodes": [
+      {
+        "url": "https://video11.logicahost.com.br/redevivaxtv/redevivaxtv/playlist.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
   }
 ]
