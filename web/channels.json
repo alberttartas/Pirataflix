@@ -20655,5 +20655,50 @@
         "title": "AO VIVO"
       }
     ]
+  },
+  {
+    "id": "MCMPop.fr@SD",
+    "type": "tv",
+    "title": "MCM Pop",
+    "tvg_id": "MCMPop.fr@SD",
+    "tvg_logo": "https://i.imgur.com/j31lBL7.png",
+    "group": "🎵 Música",
+    "url": "http://rjcf.ofztvxv.top:8080/kang/71267133/99554",
+    "episodes": [
+      {
+        "url": "http://rjcf.ofztvxv.top:8080/kang/71267133/99554",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "SBTNews.br@SD",
+    "type": "tv",
+    "title": "SBT News (720p)",
+    "tvg_id": "SBTNews.br@SD",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/4/42/SBT_News_2025.svg",
+    "group": "📰 Notícias",
+    "url": "http://167.250.126.140:7777/COMEDYCENTRAL-HD/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://167.250.126.140:7777/COMEDYCENTRAL-HD/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "SonyMovies.br@SD",
+    "type": "tv",
+    "title": "Sony Movies (720p)",
+    "tvg_id": "SonyMovies.br@SD",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Sony_Movies_Logo.svg/500px-Sony_Movies_Logo.svg.png",
+    "group": "🎬 Filmes",
+    "url": "http://45.162.64.114/SONY_MOVIES/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://45.162.64.114/SONY_MOVIES/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
   }
 ]

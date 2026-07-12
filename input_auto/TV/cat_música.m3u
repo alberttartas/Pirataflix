@@ -2,6 +2,9 @@
 #EXTINF:-1 tvg-id="KpopTVPlay.br@SD" tvg-logo="https://i.imgur.com/Tf0vweF.png" group-title="🎵 Música",KpopTV Play (576p)
 https://giatv.bozztv.com/giatv/giatv-kpoptvplay/kpoptvplay/playlist.m3u8
 
+#EXTINF:-1 tvg-id="MCMPop.fr@SD" tvg-logo="https://i.imgur.com/j31lBL7.png" group-title="🎵 Música",MCM Pop
+http://rjcf.ofztvxv.top:8080/kang/71267133/99554
+
 #EXTINF:-1 tvg-id="MCMTop.fr" tvg-logo="https://i.imgur.com/EVtWQLd.png" group-title="🎵 Música",MCM Top (720p)
 http://rezofoot.tv/MCM/index.m3u8
 
