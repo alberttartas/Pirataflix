@@ -1,4 +1,7 @@
 #EXTM3U
+#EXTINF:-1 tvg-id="ChefTV.br@SD" tvg-logo="https://i.imgur.com/UYksTee.png" group-title="🍳 Culinária",Chef TV (720p)
+http://45.190.28.50/CHEF_TV/index.m3u8
+
 #EXTINF:-1 tvg-id="PlutoTVKFOOD.us@BR" tvg-logo="https://images.pluto.tv/channels/633ee9ba83c08f00076b60a6/colorLogoPNG.png" group-title="🍳 Culinária",Pluto TV KFOOD
 https://jmp2.uk/plu-633ee9ba83c08f00076b60a6.m3u8
 

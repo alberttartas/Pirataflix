@@ -1,7 +1,4 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="ModoViagem.br@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/ff/Logotipo_do_Modo_Viagem.svg" group-title="✈️ Viagem",Modo Viagem (720p)
-http://45.162.231.38:7779/Modo_Viagem/index.m3u8
-
 #EXTINF:-1 tvg-id="TravelBoxBrazil.br@SD" tvg-logo="https://i.imgur.com/3tBJERH.png" group-title="✈️ Viagem",Travel Box Brazil (720p)
 http://167.250.126.140:7777/TRAVELBOX-HD/index.m3u8
 

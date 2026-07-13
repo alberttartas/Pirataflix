@@ -6,7 +6,7 @@ https://jmp2.uk/plu-61b790b985706b00072cb797.m3u8
 https://cdn-5.nxplay.com.br/AMC_BRASIL/index.m3u8
 
 #EXTINF:-1 tvg-id="AXN.br@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/AXN_logo_%282015%29.svg/960px-AXN_logo_%282015%29.svg.png" group-title="🎬 Filmes",AXN (720p)
-http://45.162.231.38:7779/AXN/index.m3u8
+http://45.190.28.50/AXN_HD/index.m3u8
 
 #EXTINF:-1 tvg-id="ClassiqueTV.br@SD" tvg-logo="https://i.imgur.com/rHxcraT.png" group-title="🎬 Filmes",Classique TV (360p)
 https://stmv1.srvif.com/classique/classique/playlist.m3u8
@@ -78,20 +78,20 @@ https://jmp2.uk/plu-66aa67493a4ad2000806d91b.m3u8
 http://45.162.64.114/SONY_MOVIES/index.m3u8
 
 #EXTINF:-1 tvg-id="TelecineAction.br@SD" tvg-logo="https://i.imgur.com/BHYWG0h.png" group-title="🎬 Filmes",Telecine Action (720p)
-http://45.162.231.38:7779/Telecine_Action/index.m3u8
+http://167.250.126.140:7777/TCACTION-HD/index.m3u8
 
 #EXTINF:-1 tvg-id="TelecineCult.br@SD" tvg-logo="https://i.imgur.com/6GuHXnr.png" group-title="🎬 Filmes",Telecine Cult (720p)
-http://45.162.231.38:7779/Telecine_Cult/index.m3u8
+http://167.250.126.140:7777/TCCULT-HD/index.m3u8
 
 #EXTINF:-1 tvg-id="TelecineFun.br@SD" tvg-logo="https://i.imgur.com/MO2Ynki.png" group-title="🎬 Filmes",Telecine Fun (720p)
-http://45.162.231.38:7779/Telecine_Fun/index.m3u8
+http://167.250.126.140:7777/TCFUN-HD/index.m3u8
 
 #EXTINF:-1 tvg-id="TelecinePipoca.br@SD" tvg-logo="https://i.imgur.com/hW9JYXr.png" group-title="🎬 Filmes",Telecine Pipoca (720p)
-http://45.162.231.38:7779/Telecine_Pipoca/index.m3u8
+http://167.250.126.140:7777/TCPIPOCA-HD/index.m3u8
 
 #EXTINF:-1 tvg-id="TelecinePremium.br@SD" tvg-logo="https://i.imgur.com/uVFgIr8.png" group-title="🎬 Filmes",Telecine Premium (720p)
-http://45.162.231.38:7779/Telecine_Premium/index.m3u8
+http://167.250.126.140:7777/TCPREMIUM-HD/index.m3u8
 
 #EXTINF:-1 tvg-id="TelecineTouch.br@SD" tvg-logo="https://i.imgur.com/Nky0hRo.png" group-title="🎬 Filmes",Telecine Touch (720p)
-http://45.162.231.38:7779/Telecine_Touch/index.m3u8
+http://167.250.126.140:7777/TELECINETOUCH-HD/index.m3u8
 

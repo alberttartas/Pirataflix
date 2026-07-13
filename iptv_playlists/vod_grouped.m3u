@@ -26685,3 +26685,93 @@ http://167.250.126.140:7777/COMEDYCENTRAL-HD/index.m3u8
 #EXTINF:-1 group-title="🎬 Filmes" tvg-id="SONYMOVIES.BR@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Sony_Movies_Logo.svg/500px-Sony_Movies_Logo.svg.png",Sony Movies (720p)
 http://45.162.64.114/SONY_MOVIES/index.m3u8
 
+#EXTINF:-1 group-title="🎭 Entretenimento" tvg-id="ADULTSWIMLATINAMERICA.US@BRAZIL" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Adult_Swim_2003_logo.svg/960px-Adult_Swim_2003_logo.svg.png",Adult Swim Latin America Brazil (720p)
+http://45.190.28.50/TRUTV_HD/index.m3u8
+
+#EXTINF:-1 group-title="🎬 Filmes" tvg-id="AXN.BR@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/AXN_logo_%282015%29.svg/960px-AXN_logo_%282015%29.svg.png",AXN (720p)
+http://45.190.28.50/AXN_HD/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="BAND.BR@SD" tvg-logo="https://i.imgur.com/1r5T6Pw.png",Band (720p)
+http://45.190.28.50/BAND_HD/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="CANALDOBOI.BR@SD" tvg-logo="https://i.imgur.com/pVM5MhS.png",Canal do Boi (720p)
+http://45.162.64.114/CANAL_DO_BOI/index.m3u8
+
+#EXTINF:-1 group-title="🍳 Culinária" tvg-id="CHEFTV.BR@SD" tvg-logo="https://i.imgur.com/UYksTee.png",Chef TV (720p)
+http://45.190.28.50/CHEF_TV/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="CULTURAFAST.BR@SD" tvg-logo="https://eitv6.cdn.broadpeak.io/account351-i1438/channel/53/quadrada_-3-_pequeno-1723832301.png",Cultura Fast (720p)
+https://fpa-gateway.tvcultura.com.br:8181/memfs/606caef0-a290-413d-9f1f-8fcdb3a73831.m3u8
+
+#EXTINF:-1 group-title="🎨 Cultura" tvg-id="CURTA.BR@SD" tvg-logo="https://i.imgur.com/Rwrh0zU.png",Curta! (720p)
+http://167.250.126.140:7777/CURTA!-HD/index.m3u8
+
+#EXTINF:-1 group-title="🧸 Infantil" tvg-id="DUMDUM.BR@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/c/c0/DumDum_logo.svg",DumDum (1080p)
+http://45.190.156.152/ZOOMOO/index.m3u8
+
+#EXTINF:-1 group-title="🌿 Natureza" tvg-id="FISHTV.BR@SD" tvg-logo="https://www.fishtv.com/public/site/images/logos/fishtv.svg",Fish TV (720p)
+http://167.250.126.140:7777/FISHTV-HD/index.m3u8
+
+#EXTINF:-1 group-title="🎭 Entretenimento" tvg-id="PETLOVERSTV.BR@SD" tvg-logo="https://petloverstv.com.br/storage/357/config/yqP4nOugWRxRFCmgLqXF4gRKyM9ybsAOfHgUaqPt.png",Petlovers TV
+https://video04.logicahost.com.br/petloverstv/petloverstv/playlist.m3u8
+
+#EXTINF:-1 group-title="⚽ Esportes" tvg-id="PREMIERECLUBES.BR@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Premiere_(2017)_logo.png/960px-Premiere_(2017)_logo.png",Premiere Clubes (720p)
+http://45.190.156.152/PREMIERE_CLUBES/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="RECORD.BR@SD" tvg-logo="https://i.imgur.com/sz9gTTr.png",Record (720p)
+http://167.250.126.140:7777/RECORDTV-HD/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="REDECNTRIODEJANEIRO.BR@SD" tvg-logo="https://i.imgur.com/jcasAmw.png",Rede CNT Rio de Janeiro (720p)
+http://45.162.64.114/CNT/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="REDETV.BR@SD" tvg-logo="https://i.imgur.com/ZJgD38F.png",Rede TV! (1080p)
+http://45.190.28.50/REDE_TV_HD/index.m3u8
+
+#EXTINF:-1 group-title="✝️ Religioso" tvg-id="REDEVIDA.BR@SD" tvg-logo="https://i.imgur.com/mP1qfp2.png",Rede Vida (720p)
+http://45.190.28.50/REDE_VIDA_HD/index.m3u8
+
+#EXTINF:-1 group-title="🎬 Filmes" tvg-id="TELECINEACTION.BR@SD" tvg-logo="https://i.imgur.com/BHYWG0h.png",Telecine Action (720p)
+http://167.250.126.140:7777/TCACTION-HD/index.m3u8
+
+#EXTINF:-1 group-title="🎬 Filmes" tvg-id="TELECINECULT.BR@SD" tvg-logo="https://i.imgur.com/6GuHXnr.png",Telecine Cult (720p)
+http://167.250.126.140:7777/TCCULT-HD/index.m3u8
+
+#EXTINF:-1 group-title="🎬 Filmes" tvg-id="TELECINEFUN.BR@SD" tvg-logo="https://i.imgur.com/MO2Ynki.png",Telecine Fun (720p)
+http://167.250.126.140:7777/TCFUN-HD/index.m3u8
+
+#EXTINF:-1 group-title="🎬 Filmes" tvg-id="TELECINEPIPOCA.BR@SD" tvg-logo="https://i.imgur.com/hW9JYXr.png",Telecine Pipoca (720p)
+http://167.250.126.140:7777/TCPIPOCA-HD/index.m3u8
+
+#EXTINF:-1 group-title="🎬 Filmes" tvg-id="TELECINEPREMIUM.BR@SD" tvg-logo="https://i.imgur.com/uVFgIr8.png",Telecine Premium (720p)
+http://167.250.126.140:7777/TCPREMIUM-HD/index.m3u8
+
+#EXTINF:-1 group-title="🎬 Filmes" tvg-id="TELECINETOUCH.BR@SD" tvg-logo="https://i.imgur.com/Nky0hRo.png",Telecine Touch (720p)
+http://167.250.126.140:7777/TELECINETOUCH-HD/index.m3u8
+
+#EXTINF:-1 group-title="🌿 Natureza" tvg-id="TERRAVIVA.BR@SD" tvg-logo="https://i.imgur.com/wnYsE3O.png",Terra Viva (720p)
+http://45.162.64.114/TERRAVIVA/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="TVESCOLA.BR@SD" tvg-logo="https://i.imgur.com/OF6aGQj.png",TV Escola (720p)
+http://45.190.28.50/TV_ESCOLA/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="TVGLOBORIODEJANEIRO.BR@SD" tvg-logo="",TV Globo Rio de Janeiro (720p)
+http://45.190.28.50/GLOBO_HD/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="TVJUSTICA.BR@SD" tvg-logo="https://i.imgur.com/rOQKiMO.png",TV Justica (720p)
+http://45.162.64.114/TV_JUSTICA/index.m3u8
+
+#EXTINF:-1 group-title="✝️ Religioso" tvg-id="TVPAIETERNO.BR@SD" tvg-logo="https://i.imgur.com/iuoXchN.png",TV Pai Eterno (720p)
+http://45.162.64.114/TV_PAI_ETERNO/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="TVRATIMBUM.BR@SD" tvg-logo="https://i.imgur.com/JIQwz0w.png",TV Ra Tim Bum (720p)
+http://45.190.28.50/RATIMBUM/index.m3u8
+
+#EXTINF:-1 group-title="🎭 Entretenimento" tvg-id="TVPLUSPET.BR@SD" tvg-logo="https://www.tvmaispet.com.br/images/tvpet-logo.png",TV+Pet
+https://stmv5.samcast.com.br/tvmaispet6354/tvmaispet6354/playlist.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="TVECULTURA.BR@SD" tvg-logo="https://i.imgur.com/FpqoWcB.png",TVE Cultura (720p)
+http://45.190.28.50/TVE/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="USANETWORKLATINAMERICA.US@BRAZIL" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/USA_Network_logo_%282016%29.svg/960px-USA_Network_logo_%282016%29.svg.png",USA Network Latin America Brazil (1080p)
+http://45.190.156.152/USA/index.m3u8
+
