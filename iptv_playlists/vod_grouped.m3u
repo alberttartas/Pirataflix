@@ -26775,3 +26775,96 @@ http://45.190.28.50/TVE/index.m3u8
 #EXTINF:-1 group-title="📺 Geral" tvg-id="USANETWORKLATINAMERICA.US@BRAZIL" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/USA_Network_logo_%282016%29.svg/960px-USA_Network_logo_%282016%29.svg.png",USA Network Latin America Brazil (1080p)
 http://45.190.156.152/USA/index.m3u8
 
+#EXTINF:-1 group-title="📰 Notícias" tvg-id="AGROMAIS.BR@SD" tvg-logo="https://i.imgur.com/sFcOZeo.png",AgroMais (720p)
+http://45.162.64.114/AGROMAIS/index.m3u8
+
+#EXTINF:-1 group-title="🎬 Filmes" tvg-id="AMCLATINAMERICA.US@BRAZIL" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/AMC_logo_2019.svg/960px-AMC_logo_2019.svg.png",AMC Latin America Brazil (1080p)
+http://45.190.156.152/AMC/index.m3u8
+
+#EXTINF:-1 group-title="⚽ Esportes" tvg-id="BANDSPORTS.BR@SD" tvg-logo="https://i.imgur.com/EuPvzJe.png",Band Sports (1080p)
+http://143.14.178.40:7777/Band_Sports_HD/index.m3u8
+
+#EXTINF:-1 group-title="📰 Notícias" tvg-id="BANDNEWS.BR@SD" tvg-logo="https://i.ibb.co/0jVZBFp/u8ya-iw-R-400x400.jpg",BandNews (1080p)
+http://143.14.178.40:7777/Band_News_HD/index.m3u8
+
+#EXTINF:-1 group-title="🧸 Infantil" tvg-id="BOXKIDSTV.BR@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/1/18/Boxkidstv.png",Box Kids TV (720p)
+http://45.190.28.50/BOX_KIDS_HD/index.m3u8
+
+#EXTINF:-1 group-title="📚 Educação" tvg-id="CANALEDUCACAO.BR@SD" tvg-logo="https://i.imgur.com/OOB7nrS.png",Canal Educacao (720p)
+http://45.162.64.114/CANAL_EDUCACAO/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="CANALOFF.BR@SD" tvg-logo="https://i.imgur.com/1biaLgJ.png",Canal Off (1080p)
+http://143.14.178.40:7777/OFF_HD/index.m3u8
+
+#EXTINF:-1 group-title="⚽ Esportes" tvg-id="COMBATE.BR@SD" tvg-logo="https://i.imgur.com/ZPYK5jr.png",Combate (720p)
+http://45.190.156.152/COMBATE/index.m3u8
+
+#EXTINF:-1 group-title="🎭 Entretenimento" tvg-id="CONECTAMAISTV.BR@SD" tvg-logo="https://i.imgur.com/qHwTWlz.png",Conecta Mais TV (720p)
+https://adylnet.streampool.net/10324/live/hls/Conecta/index.m3u8
+
+#EXTINF:-1 group-title="🎨 Cultura" tvg-id="CURTA.BR@SD" tvg-logo="https://i.imgur.com/Rwrh0zU.png",Curta! (720p)
+http://45.190.156.152/CURTA!/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="DEMAISTV.BR@SD" tvg-logo="https://i.imgur.com/Md3xibE.png",Demais TV (720p)
+https://cdn-tiva-stmv1-samcast-com-br.smartbit.co/demaistv6503/demaistv6503/playlist.m3u8
+
+#EXTINF:-1 group-title="💅 Lifestyle" tvg-id="FASHIONTV.BR@SD" tvg-logo="https://i.imgur.com/cZWKyuM.png",FashionTV (720p)
+http://45.190.28.50/FASHION_TV_HD/index.m3u8
+
+#EXTINF:-1 group-title="🌿 Natureza" tvg-id="FISHTV.BR@SD" tvg-logo="https://www.fishtv.com/public/site/images/logos/fishtv.svg",Fish TV (720p)
+http://45.162.64.114/FISH_TV/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="GLOBOPLAYNOVELAS.BR@SD" tvg-logo="https://i.ibb.co/m5TBCDL2/Globoplay-Novelas-1.png",Globoplay Novelas (1080p)
+http://143.14.178.40:7777/Globoplay_Novelas_HD/index.m3u8
+
+#EXTINF:-1 group-title="📰 Notícias" tvg-id="GNT.BR@SD" tvg-logo="https://i.imgur.com/XymcvMy.png",GNT (1080p)
+http://143.14.178.40:7777/GNT_HD/index.m3u8
+
+#EXTINF:-1 group-title="🎥 Documentário" tvg-id="HISTORY.BR@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/History_%282021%29.svg/500px-History_%282021%29.svg.png",History (720p)
+http://45.190.28.50/HISTORY_HD/index.m3u8
+
+#EXTINF:-1 group-title="💼 Negócios" tvg-id="LABORALTV.BR@SD" tvg-logo="https://tv.laboralsst.com.br/logo.png",Laboral TV (360p)
+https://tv.laboralsst.com.br/hls/stream.m3u8
+
+#EXTINF:-1 group-title="✝️ Religioso" tvg-id="NOVOTEMPO.BR@SD" tvg-logo="",Novo Tempo (720p)
+http://45.162.64.114/NOVO_TEMPO/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="PLAYTV.BR@SD" tvg-logo="https://i.imgur.com/Ikrj3lk.png",Play TV (720p)
+http://45.162.64.114/PLAY_TV/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="RECORD.BR@SD" tvg-logo="https://i.imgur.com/sz9gTTr.png",Record (720p)
+http://45.190.28.50/RECORD/index.m3u8
+
+#EXTINF:-1 group-title="📰 Notícias" tvg-id="RECORDNEWS.BR@SD" tvg-logo="https://i.imgur.com/HZDRG0K.png",Record News (720p)
+http://45.162.64.114/RECORD_NEWS/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="SBTNACIONAL.BR@SD" tvg-logo="https://i.imgur.com/tc1ALuu.png",SBT Nacional (720p)
+http://45.190.28.50/SBT_HD/index.m3u8
+
+#EXTINF:-1 group-title="📰 Notícias" tvg-id="SBTNEWS.BR@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/4/42/SBT_News_2025.svg",SBT News (720p)
+http://45.190.156.152/SBT_NEWS/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="SONYCHANNEL.BR@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Sony_Channel_Logo.png/960px-Sony_Channel_Logo.png",Sony Channel (720p)
+http://45.190.28.50/SONY_HD/index.m3u8
+
+#EXTINF:-1 group-title="📰 Notícias" tvg-id="TIMESBRASIL.BR@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Times_Brasil_CNBC_logo_2025.svg/960px-Times_Brasil_CNBC_logo_2025.svg.png",Times Brasil (720p)
+http://45.190.28.50/CNBC/index.m3u8
+
+#EXTINF:-1 group-title="📺 Séries" tvg-id="TNTNOVELAS.US@BRAZIL" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/TNT_Novelas_2025.svg/1920px-TNT_Novelas_2025.svg.png",TNT Novelas Brazil (720p)
+http://45.162.64.114/TNT_NOVELAS/index.m3u8
+
+#EXTINF:-1 group-title="✈️ Viagem" tvg-id="TRAVELBOXBRAZIL.BR@SD" tvg-logo="https://i.imgur.com/3tBJERH.png",Travel Box Brazil (720p)
+http://45.190.28.50/TRAVEL_BOX_HD/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="TVBRASIL.BR@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/TvBrasil2023.png/960px-TvBrasil2023.png",TV Brasil (720p)
+http://45.162.64.114/TV_BRASIL/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="TVCANCAONOVA.BR@SD" tvg-logo="https://i.imgur.com/OaM9hkH.png",TV Cancao Nova (720p)
+http://45.162.64.114/CANCAO_NOVA/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="TVCULTURA.BR@SD" tvg-logo="https://i.ibb.co/nm0jXMM/cultura-3x.png",TV Cultura (720p)
+http://45.162.64.114/TV_CULTURA/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="TVGAZETA.BR@SD" tvg-logo="https://i.imgur.com/0sksWse.png",TV Gazeta (720p)
+http://45.162.64.114/GAZETA/index.m3u8
+

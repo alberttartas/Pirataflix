@@ -12,7 +12,7 @@ http://167.250.126.140:7777/BABYTV-HD/index.m3u8
 https://jmp2.uk/plu-62545c0b002f4b0007688b61.m3u8
 
 #EXTINF:-1 tvg-id="BoxKidsTV.br@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/1/18/Boxkidstv.png" group-title="🧸 Infantil",Box Kids TV (720p)
-http://167.250.126.140:7777/NICKJR-HD/index.m3u8
+http://45.190.28.50/BOX_KIDS_HD/index.m3u8
 
 #EXTINF:-1 tvg-id="DisneyChannel.br@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Disney_channel_2019.png/960px-Disney_channel_2019.png" group-title="🧸 Infantil",Disney Channel (720p)
 http://167.250.126.140:7777/DISNEY-HD/index.m3u8

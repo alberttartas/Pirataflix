@@ -3,7 +3,7 @@
 http://143.14.178.40:7777/Arte_1_HD/index.m3u8
 
 #EXTINF:-1 tvg-id="Curta.br@SD" tvg-logo="https://i.imgur.com/Rwrh0zU.png" group-title="🎨 Cultura",Curta! (720p)
-http://167.250.126.140:7777/CURTA!-HD/index.m3u8
+http://45.190.156.152/CURTA!/index.m3u8
 
 #EXTINF:-1 tvg-id="STZTV.br@SD" tvg-logo="https://i.imgur.com/SeF2I7q.png" group-title="🎨 Cultura",STZ TV (1080p)
 https://cdn.live.br1.jmvstream.com/webtv/AVJ-12952/playlist/playlist.m3u8

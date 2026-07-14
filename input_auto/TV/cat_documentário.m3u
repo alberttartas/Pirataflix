@@ -3,7 +3,7 @@
 https://jmp2.uk/plu-638df93ae2f2a3000737c168.m3u8
 
 #EXTINF:-1 tvg-id="History.br@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/History_%282021%29.svg/500px-History_%282021%29.svg.png" group-title="🎥 Documentário",History (720p)
-http://177.52.24.163/HISTORY-HD/index.m3u8
+http://45.190.28.50/HISTORY_HD/index.m3u8
 
 #EXTINF:-1 tvg-id="History2LatinAmerica.us@Brazil" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/History2_logo_%282022%29.svg/500px-History2_logo_%282022%29.svg.png" group-title="🎥 Documentário",History 2 Latin America Brazil (720p)
 http://45.162.231.38:7779/History_2/index.m3u8
