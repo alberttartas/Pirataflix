@@ -17,9 +17,6 @@ https://arkyvbre1g.zoeweb.tv/fiocruz/fiocruz.stream/playlist.m3u8
 #EXTINF:-1 tvg-id="ISTV.br@SD" tvg-logo="https://i.imgur.com/RUKVrOH.png" group-title="📚 Educação",ISTV (720p) [Not 24/7]
 https://stmv1.srvstm.com/sistema7933/sistema7933/playlist.m3u8
 
-#EXTINF:-1 tvg-id="ITVBrazil.br@SD" tvg-logo="https://i.imgur.com/35SLBz0.png" group-title="📚 Educação",ITV Brazil (720p)
-https://video24.mais.uol.com.br/live/6146.m3u8
-
 #EXTINF:-1 tvg-id="OEncantadordeCaes.us@Brazil" tvg-logo="https://i.imgur.com/sQn6vvh.png" group-title="📚 Educação",O Encantador de Cães
 https://jmp2.uk/plu-61099df8cee03b00074b2ecf.m3u8
 

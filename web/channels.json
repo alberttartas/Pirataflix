@@ -21615,5 +21615,185 @@
         "title": "AO VIVO"
       }
     ]
+  },
+  {
+    "id": "AugeTV.br@SD",
+    "type": "tv",
+    "title": "Auge TV (720p)",
+    "tvg_id": "AugeTV.br@SD",
+    "tvg_logo": "https://m.media-amazon.com/images/I/81UMY8nlXHL._SL500_.png",
+    "group": "📺 Geral",
+    "url": "https://cdn-tiva-video01-logicahost-com-br.smartbit.co/canalaugetv/canalaugetv/playlist.m3u8",
+    "episodes": [
+      {
+        "url": "https://cdn-tiva-video01-logicahost-com-br.smartbit.co/canalaugetv/canalaugetv/playlist.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "BemMelhor.br@SD",
+    "type": "tv",
+    "title": "Bem Melhor (720p)",
+    "tvg_id": "BemMelhor.br@SD",
+    "tvg_logo": "https://www.ubplay.com.br/wp-content/uploads/sites/67/2025/10/capa-site-bemmelhor.png",
+    "group": "📺 Geral",
+    "url": "https://cdn-tiva-video01-logicahost-com-br.smartbit.co/bemmelhor/bemmelhor/playlist.m3u8",
+    "episodes": [
+      {
+        "url": "https://cdn-tiva-video01-logicahost-com-br.smartbit.co/bemmelhor/bemmelhor/playlist.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "CanalSTART.br@SD",
+    "type": "tv",
+    "title": "Canal START (720p)",
+    "tvg_id": "CanalSTART.br@SD",
+    "tvg_logo": "https://storage.googleapis.com/soultv-prod-media/media/brand/Logomarca_CANAL_START_100X100_PNG_CrAzZzP.png",
+    "group": "📺 Geral",
+    "url": "https://cdn-tiva-srv5-zcast-com-br.smartbit.co/canalstart/canalstart/playlist.m3u8",
+    "episodes": [
+      {
+        "url": "https://cdn-tiva-srv5-zcast-com-br.smartbit.co/canalstart/canalstart/playlist.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "LiderTV.br@SD",
+    "type": "tv",
+    "title": "Lider TV (720p)",
+    "tvg_id": "LiderTV.br@SD",
+    "tvg_logo": "https://i0.wp.com/lidertv.com.br/wp-content/uploads/2024/11/cropped-cropped-LOGO-LIDER-EM-BAIXA.png?fit=512%2C228&ssl=1",
+    "group": "📺 Geral",
+    "url": "https://cdn-tiva-video08-logicahost-com-br.smartbit.co/lidertvssp/lidertvssp/playlist.m3u8",
+    "episodes": [
+      {
+        "url": "https://cdn-tiva-video08-logicahost-com-br.smartbit.co/lidertvssp/lidertvssp/playlist.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "NSports.br@SD",
+    "type": "tv",
+    "title": "N Sports (1080p)",
+    "tvg_id": "NSports.br@SD",
+    "tvg_logo": "https://i.imgur.com/7QnJojr.png",
+    "group": "⚽ Esportes",
+    "url": "https://ogc-nsprt-tcl-roku-syndication.otteravision.com/ogc/nsprt/nsprt.m3u8",
+    "episodes": [
+      {
+        "url": "https://ogc-nsprt-tcl-roku-syndication.otteravision.com/ogc/nsprt/nsprt.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "SeriesClassic.br@SD",
+    "type": "tv",
+    "title": "Series Classic (720p)",
+    "tvg_id": "SeriesClassic.br@SD",
+    "tvg_logo": "https://storage.googleapis.com/soultv-prod-media/media/img/mobile/featured/bg_mobile.jpg",
+    "group": "📺 Séries",
+    "url": "https://cdn-tiva-video10-logicahost-com-br.smartbit.co/serieclassic/serieclassic/playlist.m3u8",
+    "episodes": [
+      {
+        "url": "https://cdn-tiva-video10-logicahost-com-br.smartbit.co/serieclassic/serieclassic/playlist.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "TVAdorar.br@SD",
+    "type": "tv",
+    "title": "TV Adorar (720p)",
+    "tvg_id": "TVAdorar.br@SD",
+    "tvg_logo": "https://storage.googleapis.com/soultv-prod-media/media/brand/Logo_Adorar_100x100_s5tW1gW.png",
+    "group": "📺 Geral",
+    "url": "https://cdn-tiva-isaocorp-cloudecast-com.smartbit.co/tvadorar/index.m3u8",
+    "episodes": [
+      {
+        "url": "https://cdn-tiva-isaocorp-cloudecast-com.smartbit.co/tvadorar/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "TVDifusao.br@SD",
+    "type": "tv",
+    "title": "TV Difusao (720p)",
+    "tvg_id": "TVDifusao.br@SD",
+    "tvg_logo": "https://storage.googleapis.com/soultv-prod-media/media/brand/LOGO_TV_DIFUS%C3%83O_100x100px_doiivZN.png",
+    "group": "📺 Geral",
+    "url": "https://tvdsoultv.acessaradios.com.br/tvdsoultv/tvdsoultv.stream/playlist.m3u8",
+    "episodes": [
+      {
+        "url": "https://tvdsoultv.acessaradios.com.br/tvdsoultv/tvdsoultv.stream/playlist.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "TVGazin.br@SD",
+    "type": "tv",
+    "title": "TV Gazin (720p)",
+    "tvg_id": "TVGazin.br@SD",
+    "tvg_logo": "https://tvgazin.com.br/wp-content/uploads/2024/03/logo.png",
+    "group": "📺 Geral",
+    "url": "https://cdn-tiva-video09-logicahost-com-br.smartbit.co/tvgazin/tvgazin/playlist.m3u8",
+    "episodes": [
+      {
+        "url": "https://cdn-tiva-video09-logicahost-com-br.smartbit.co/tvgazin/tvgazin/playlist.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "TVLitoralRN.br@SD",
+    "type": "tv",
+    "title": "TV Litoral RN (720p)",
+    "tvg_id": "TVLitoralRN.br@SD",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/3/3e/TV_LITORAL_RN.jpg",
+    "group": "📺 Geral",
+    "url": "https://5ad482a77183d.streamlock.net/tvnordesteegmail.com/tvnordesteegmail.com/playlist.m3u8",
+    "episodes": [
+      {
+        "url": "https://5ad482a77183d.streamlock.net/tvnordesteegmail.com/tvnordesteegmail.com/playlist.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "TVMeio.br@SD",
+    "type": "tv",
+    "title": "TV Meio (720p)",
+    "tvg_id": "TVMeio.br@SD",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/pt/1/17/Logotipo_da_TV_Meio.png",
+    "group": "📺 Geral",
+    "url": "https://cdn-tiva-maystreaming-cloudecast-com.smartbit.co/redemeio/index.m3u8",
+    "episodes": [
+      {
+        "url": "https://cdn-tiva-maystreaming-cloudecast-com.smartbit.co/redemeio/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "TVPetropolis.br@SD",
+    "type": "tv",
+    "title": "TV Petropolis (720p)",
+    "tvg_id": "TVPetropolis.br@SD",
+    "tvg_logo": "https://web2.petropolis.rj.gov.br/imc/film-commission/uploads/profissional/perfil/785b645d9c574b4d88504a85dbd6ef37.png",
+    "group": "📺 Geral",
+    "url": "https://video02.logicahost.com.br/tvpetropolis/tvpetropolis/playlist.m3u8",
+    "episodes": [
+      {
+        "url": "https://video02.logicahost.com.br/tvpetropolis/tvpetropolis/playlist.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
   }
 ]
