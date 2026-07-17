@@ -21795,5 +21795,95 @@
         "title": "AO VIVO"
       }
     ]
+  },
+  {
+    "id": "AELatinAmerica.us@Brazil",
+    "type": "tv",
+    "title": "A&E Latin America Brazil (720p)",
+    "tvg_id": "AELatinAmerica.us@Brazil",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/A%26E_Network_logo.svg/960px-A%26E_Network_logo.svg.png",
+    "group": "🎭 Entretenimento",
+    "url": "http://45.190.28.50/AE_HD/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://45.190.28.50/AE_HD/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "ELatinAmerica.us@Brazil",
+    "type": "tv",
+    "title": "E! Latin America Brazil (720p)",
+    "tvg_id": "ELatinAmerica.us@Brazil",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/E%21_Logo_2012.svg/500px-E%21_Logo_2012.svg.png",
+    "group": "🎭 Entretenimento",
+    "url": "http://45.190.156.152/E/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://45.190.156.152/E/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "History2LatinAmerica.us@Brazil",
+    "type": "tv",
+    "title": "History 2 Latin America Brazil (720p)",
+    "tvg_id": "History2LatinAmerica.us@Brazil",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/History2_logo_%282022%29.svg/500px-History2_logo_%282022%29.svg.png",
+    "group": "🎥 Documentário",
+    "url": "http://45.190.28.50/H2_HD/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://45.190.28.50/H2_HD/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "StudioUniversalLatinAmerica.us@Brazil",
+    "type": "tv",
+    "title": "Studio Universal Latin America Brazil (720p)",
+    "tvg_id": "StudioUniversalLatinAmerica.us@Brazil",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/StudioUniversal2016.png/960px-StudioUniversal2016.png",
+    "group": "📺 Geral",
+    "url": "http://45.190.156.152/STUDIO_UNIVERSAL/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://45.190.156.152/STUDIO_UNIVERSAL/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "UniversalTVLatinAmerica.us@Brazil",
+    "type": "tv",
+    "title": "Universal TV Latin America Brazil (720p)",
+    "tvg_id": "UniversalTVLatinAmerica.us@Brazil",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Universal_TV_logo.svg/960px-Universal_TV_logo.svg.png",
+    "group": "📺 Geral",
+    "url": "http://45.190.156.152/UNIVERSAL_TV/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://45.190.156.152/UNIVERSAL_TV/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "VEJAPlusTV.br@HD",
+    "type": "tv",
+    "title": "VEJA+ TV (1080p)",
+    "tvg_id": "VEJAPlusTV.br@HD",
+    "tvg_logo": "https://i.imgur.com/n0pxHo4.png",
+    "group": "📰 Notícias",
+    "url": "https://gpa-vja.otteravision.com/gpa/vja/vja.m3u8",
+    "episodes": [
+      {
+        "url": "https://gpa-vja.otteravision.com/gpa/vja/vja.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
   }
 ]

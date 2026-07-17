@@ -213,7 +213,7 @@ http://45.190.28.50/SONY_HD/index.m3u8
 https://video10.logicahost.com.br/soutv/soutv/playlist.m3u8
 
 #EXTINF:-1 tvg-id="StudioUniversalLatinAmerica.us@Brazil" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/StudioUniversal2016.png/960px-StudioUniversal2016.png" group-title="📺 Geral",Studio Universal Latin America Brazil (720p)
-http://45.162.231.38:7779/Studio_Universal/index.m3u8
+http://45.190.156.152/STUDIO_UNIVERSAL/index.m3u8
 
 #EXTINF:-1 tvg-id="TELE6.bo@SD" tvg-logo="https://i.imgur.com/p7tt72X.png" group-title="📺 Geral",TELE 6 (720p)
 https://lbgo.bozztv.com/ssh101/ssh101/tele6/playlist.m3u8
@@ -426,7 +426,7 @@ http://cdn.tvmatic.net/tiktok.m3u8
 https://cdn.jmvstream.com/w/LVW-8410/LVW8410_uiZOVm6vz1/playlist.m3u8
 
 #EXTINF:-1 tvg-id="UniversalTVLatinAmerica.us@Brazil" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Universal_TV_logo.svg/960px-Universal_TV_logo.svg.png" group-title="📺 Geral",Universal TV Latin America Brazil (720p)
-http://45.162.231.38:7779/Universal_TV/index.m3u8
+http://45.190.156.152/UNIVERSAL_TV/index.m3u8
 
 #EXTINF:-1 tvg-id="USANetworkLatinAmerica.us@Brazil" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/USA_Network_logo_%282016%29.svg/960px-USA_Network_logo_%282016%29.svg.png" group-title="📺 Geral",USA Network Latin America Brazil (1080p)
 http://45.190.156.152/USA/index.m3u8
