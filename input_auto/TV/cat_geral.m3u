@@ -71,8 +71,8 @@ https://5a57bda70564a.streamlock.net/conexaotv/conexaotv.sdp/playlist.m3u8
 #EXTINF:-1 tvg-id="CulturaFast.br@SD" tvg-logo="https://eitv6.cdn.broadpeak.io/account351-i1438/channel/53/quadrada_-3-_pequeno-1723832301.png" group-title="📺 Geral",Cultura Fast (720p)
 https://fpa-gateway.tvcultura.com.br:8181/memfs/606caef0-a290-413d-9f1f-8fcdb3a73831.m3u8
 
-#EXTINF:-1 tvg-id="CulturaPara.br@SD" tvg-logo="https://i.imgur.com/5jPEI5c.png" group-title="📺 Geral",Cultura Pará (480p) [Not 24/7]
-http://www.portalcultura.com.br/playerhtml/funtelpa/tv_funtelpa/playlist.m3u8
+#EXTINF:-1 tvg-id="CulturaPara.br@SD" tvg-logo="https://i.imgur.com/5jPEI5c.png" group-title="📺 Geral",Cultura Para (720p)
+http://170.84.165.204:80/CANAL_21_HD/index.m3u8
 
 #EXTINF:-1 tvg-id="DemaisTV.br@SD" tvg-logo="https://i.imgur.com/Md3xibE.png" group-title="📺 Geral",Demais TV (720p)
 https://cdn-tiva-stmv1-samcast-com-br.smartbit.co/demaistv6503/demaistv6503/playlist.m3u8
@@ -151,6 +151,9 @@ http://45.162.64.114/CNT/index.m3u8
 
 #EXTINF:-1 tvg-id="RedeCNTSalvador.br@SD" tvg-logo="https://i.imgur.com/jcasAmw.png" group-title="📺 Geral",Rede CNT Salvador (576i)
 http://168.205.87.198:8555/live/1368/123456/150.m3u8
+
+#EXTINF:-1 tvg-id="RedeFamilia.br@SD" tvg-logo="https://i.imgur.com/7KVFCrQ.png" group-title="📺 Geral",Rede Familia (720p)
+http://168.197.104.22:80/REDE_FAMILIA/index.m3u8
 
 #EXTINF:-1 tvg-id="RedeGlobo.br@SD" tvg-logo="https://i.imgur.com/O02TF2r.png" group-title="📺 Geral",Rede Globo (1080p)
 https://cors-proxy.cooks.fyi/http://hls1.sua.tv/live/globotvbahiafhdbr2/s.m3u8
@@ -361,6 +364,9 @@ https://5a57bda70564a.streamlock.net/tvpasso/tvpasso.sdp/playlist.m3u8
 
 #EXTINF:-1 tvg-id="TVPetropolis.br@SD" tvg-logo="https://web2.petropolis.rj.gov.br/imc/film-commission/uploads/profissional/perfil/785b645d9c574b4d88504a85dbd6ef37.png" group-title="📺 Geral",TV Petropolis (720p)
 https://video02.logicahost.com.br/tvpetropolis/tvpetropolis/playlist.m3u8
+
+#EXTINF:-1 tvg-id="TVProfissao.br@SD" tvg-logo="https://i.imgur.com/c33suOT.png" group-title="📺 Geral",TV Profissao
+https://stmv.webtvninjas.com.br/tvprofissao/tvprofissao/playlist.m3u8
 
 #EXTINF:-1 tvg-id="TVRaTimBum.br@SD" tvg-logo="https://i.imgur.com/JIQwz0w.png" group-title="📺 Geral",TV Ra Tim Bum (720p)
 http://45.190.28.50/RATIMBUM/index.m3u8

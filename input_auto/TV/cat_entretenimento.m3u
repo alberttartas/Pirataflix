@@ -35,6 +35,9 @@ https://stmv1.srvsite.com/ely/ely/playlist.m3u8
 #EXTINF:-1 tvg-id="FXLatinAmerica.us@Brazil" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/FX_International_logo.svg/960px-FX_International_logo.svg.png" group-title="🎭 Entretenimento",FX Latin America Brazil (720p)
 http://167.250.126.140:7777/FX-HD/index.m3u8
 
+#EXTINF:-1 tvg-id="LifetimeLatinAmerica.us@Brazil" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Logo_Lifetime_2020.svg/960px-Logo_Lifetime_2020.svg.png" group-title="🎭 Entretenimento",Lifetime Latin America Brazil (720p)
+http://138.255.2.6:8084/LIFETIME/index.m3u8
+
 #EXTINF:-1 tvg-id="Loading.br@SD" tvg-logo="https://i.imgur.com/R0aflu1.png" group-title="🎭 Entretenimento",Loading (720p)
 https://stmv1.srvif.com/loadingtv/loadingtv/playlist.m3u8
 

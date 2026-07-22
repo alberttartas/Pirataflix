@@ -26922,3 +26922,18 @@ http://45.190.156.152/UNIVERSAL_TV/index.m3u8
 #EXTINF:-1 group-title="📰 Notícias" tvg-id="VEJAPLUSTV.BR@HD" tvg-logo="https://i.imgur.com/n0pxHo4.png",VEJA+ TV (1080p)
 https://gpa-vja.otteravision.com/gpa/vja/vja.m3u8
 
+#EXTINF:-1 group-title="📺 Geral" tvg-id="CULTURAPARA.BR@SD" tvg-logo="https://i.imgur.com/5jPEI5c.png",Cultura Para (720p)
+http://170.84.165.204:80/CANAL_21_HD/index.m3u8
+
+#EXTINF:-1 group-title="📚 Educação" tvg-id="FUTURA.BR@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Canal_Futura.png/960px-Canal_Futura.png",Futura (720p)
+http://168.197.104.22:80/FUTURA/index.m3u8
+
+#EXTINF:-1 group-title="🎭 Entretenimento" tvg-id="LIFETIMELATINAMERICA.US@BRAZIL" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Logo_Lifetime_2020.svg/960px-Logo_Lifetime_2020.svg.png",Lifetime Latin America Brazil (720p)
+http://138.255.2.6:8084/LIFETIME/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="REDEFAMILIA.BR@SD" tvg-logo="https://i.imgur.com/7KVFCrQ.png",Rede Familia (720p)
+http://168.197.104.22:80/REDE_FAMILIA/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="TVPROFISSAO.BR@SD" tvg-logo="https://i.imgur.com/c33suOT.png",TV Profissao
+https://stmv.webtvninjas.com.br/tvprofissao/tvprofissao/playlist.m3u8
+

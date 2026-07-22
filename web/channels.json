@@ -21885,5 +21885,80 @@
         "title": "AO VIVO"
       }
     ]
+  },
+  {
+    "id": "CulturaPara.br@SD",
+    "type": "tv",
+    "title": "Cultura Para (720p)",
+    "tvg_id": "CulturaPara.br@SD",
+    "tvg_logo": "https://i.imgur.com/5jPEI5c.png",
+    "group": "📺 Geral",
+    "url": "http://170.84.165.204:80/CANAL_21_HD/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://170.84.165.204:80/CANAL_21_HD/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "Futura.br@SD",
+    "type": "tv",
+    "title": "Futura (720p)",
+    "tvg_id": "Futura.br@SD",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Canal_Futura.png/960px-Canal_Futura.png",
+    "group": "📚 Educação",
+    "url": "http://168.197.104.22:80/FUTURA/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://168.197.104.22:80/FUTURA/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "LifetimeLatinAmerica.us@Brazil",
+    "type": "tv",
+    "title": "Lifetime Latin America Brazil (720p)",
+    "tvg_id": "LifetimeLatinAmerica.us@Brazil",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Logo_Lifetime_2020.svg/960px-Logo_Lifetime_2020.svg.png",
+    "group": "🎭 Entretenimento",
+    "url": "http://138.255.2.6:8084/LIFETIME/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://138.255.2.6:8084/LIFETIME/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "RedeFamilia.br@SD",
+    "type": "tv",
+    "title": "Rede Familia (720p)",
+    "tvg_id": "RedeFamilia.br@SD",
+    "tvg_logo": "https://i.imgur.com/7KVFCrQ.png",
+    "group": "📺 Geral",
+    "url": "http://168.197.104.22:80/REDE_FAMILIA/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://168.197.104.22:80/REDE_FAMILIA/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "TVProfissao.br@SD",
+    "type": "tv",
+    "title": "TV Profissao",
+    "tvg_id": "TVProfissao.br@SD",
+    "tvg_logo": "https://i.imgur.com/c33suOT.png",
+    "group": "📺 Geral",
+    "url": "https://stmv.webtvninjas.com.br/tvprofissao/tvprofissao/playlist.m3u8",
+    "episodes": [
+      {
+        "url": "https://stmv.webtvninjas.com.br/tvprofissao/tvprofissao/playlist.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
   }
 ]
