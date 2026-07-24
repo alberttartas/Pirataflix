@@ -21960,5 +21960,110 @@
         "title": "AO VIVO"
       }
     ]
+  },
+  {
+    "id": "PlusSBTNovelas.br@SD",
+    "type": "tv",
+    "title": "+SBT Novelas (1080p) [Geo-blocked]",
+    "tvg_id": "PlusSBTNovelas.br@SD",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/pt/thumb/6/60/%2BSBT_2024.svg/960px-%2BSBT_2024.svg.png",
+    "group": "📺 Séries",
+    "url": "https://novelas.maissbt.com/v1/master/215c0da80606fed29372070168106400a6ca7e1a/Novelas_cmaf/index.m3u8",
+    "episodes": [
+      {
+        "url": "https://novelas.maissbt.com/v1/master/215c0da80606fed29372070168106400a6ca7e1a/Novelas_cmaf/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "CinturaoVerde.br@SD",
+    "type": "tv",
+    "title": "Cinturao Verde",
+    "tvg_id": "CinturaoVerde.br@SD",
+    "tvg_logo": "https://eswqkrogupaisirwcsys.supabase.co/storage/v1/object/public/mbc-media/canais/1775688612576-u0628igjimf.png",
+    "group": "📺 Geral",
+    "url": "https://play.redecinturaoverde.com.br/playlist.m3u8",
+    "episodes": [
+      {
+        "url": "https://play.redecinturaoverde.com.br/playlist.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "MBCBrasilTV.br@SD",
+    "type": "tv",
+    "title": "MBC Brasil TV",
+    "tvg_id": "MBCBrasilTV.br@SD",
+    "tvg_logo": "https://eswqkrogupaisirwcsys.supabase.co/storage/v1/object/public/mbc-media/canais/1775702325773-d10vtu076za.png",
+    "group": "📺 Geral",
+    "url": "https://play.mbcbrasil.tv.br/playlist.m3u8",
+    "episodes": [
+      {
+        "url": "https://play.mbcbrasil.tv.br/playlist.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "RCTVBrasil.br@SD",
+    "type": "tv",
+    "title": "RCTV Brasil",
+    "tvg_id": "RCTVBrasil.br@SD",
+    "tvg_logo": "https://eswqkrogupaisirwcsys.supabase.co/storage/v1/object/public/mbc-media/canais/1776378749826-jef0fj1ekwq.png",
+    "group": "📺 Geral",
+    "url": "https://stmv.webtvninjas.com.br/rctv/rctv/playlist.m3u8",
+    "episodes": [
+      {
+        "url": "https://stmv.webtvninjas.com.br/rctv/rctv/playlist.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "SBTKids.br@SD",
+    "type": "tv",
+    "title": "SBT Kids (1080p) [Geo-blocked]",
+    "tvg_id": "SBTKids.br@SD",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/pt/1/19/SBTKids2026.png",
+    "group": "🧸 Infantil",
+    "url": "https://8994803e454548319ffc0775bc04e0c1.mediatailor.us-east-1.amazonaws.com/v1/master/215c0da80606fed29372070168106400a6ca7e1a/SSAI-TVZyn/index.m3u8",
+    "episodes": [
+      {
+        "url": "https://8994803e454548319ffc0775bc04e0c1.mediatailor.us-east-1.amazonaws.com/v1/master/215c0da80606fed29372070168106400a6ca7e1a/SSAI-TVZyn/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "ShowdoMilhao.br@SD",
+    "type": "tv",
+    "title": "Show do Milhao (1080p) [Geo-blocked]",
+    "tvg_id": "ShowdoMilhao.br@SD",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/pt/b/b2/Show_do_Milh%C3%A3o_Logo_2024.webp",
+    "group": "🎭 Entretenimento",
+    "url": "https://d38s7rrdbnh4oy.cloudfront.net/v1/master/215c0da80606fed29372070168106400a6ca7e1a/SSAI-Saudades/index.m3u8",
+    "episodes": [
+      {
+        "url": "https://d38s7rrdbnh4oy.cloudfront.net/v1/master/215c0da80606fed29372070168106400a6ca7e1a/SSAI-Saudades/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "TV3Curitiba.br@SD",
+    "type": "tv",
+    "title": "TV 3 Curitiba",
+    "tvg_id": "TV3Curitiba.br@SD",
+    "tvg_logo": "https://eswqkrogupaisirwcsys.supabase.co/storage/v1/object/public/mbc-media/canais/1776133208960-o2l2f7f02f.png",
+    "group": "📺 Geral",
+    "url": "https://stmv.webtvninjas.com.br/tv3/tv3/playlist.m3u8",
+    "episodes": [
+      {
+        "url": "https://stmv.webtvninjas.com.br/tv3/tv3/playlist.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
   }
 ]
