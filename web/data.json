@@ -4515,6 +4515,154 @@
       ]
     },
     {
+      "id": "ultimo_lance",
+      "title": "Ultimo Lance",
+      "poster": "https://image.tmdb.org/t/p/w500/iEcju8TBN5jmZswIpQXV5YTJB9L.jpg",
+      "seasons": [
+        {
+          "season": 1,
+          "episodes": [
+            {
+              "title": "Jogadaderisco T1E01",
+              "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storagePSN/SERIES/JOGADADERISCO/JOGADADERISCO1x01.mp4",
+              "episode": 1
+            },
+            {
+              "title": "Jogadaderisco T1E02",
+              "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storagePSN/SERIES/JOGADADERISCO/JOGADADERISCO1x02.mp4",
+              "episode": 2
+            },
+            {
+              "title": "Jogadaderisco T1E03",
+              "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storagePSN/SERIES/JOGADADERISCO/JOGADADERISCO1x03.mp4",
+              "episode": 3
+            },
+            {
+              "title": "Jogadaderisco T1E04",
+              "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storagePSN/SERIES/JOGADADERISCO/JOGADADERISCO1x04.mp4",
+              "episode": 4
+            },
+            {
+              "title": "Jogadaderisco T1E05",
+              "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storagePSN/SERIES/JOGADADERISCO/JOGADADERISCO1x05.mp4",
+              "episode": 5
+            },
+            {
+              "title": "Jogadaderisco T1E06",
+              "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storagePSN/SERIES/JOGADADERISCO/JOGADADERISCO1x06.mp4",
+              "episode": 6
+            },
+            {
+              "title": "Jogadaderisco T1E07",
+              "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storagePSN/SERIES/JOGADADERISCO/JOGADADERISCO1x07.mp4",
+              "episode": 7
+            },
+            {
+              "title": "Jogadaderisco T1E08",
+              "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storagePSN/SERIES/JOGADADERISCO/JOGADADERISCO1x08.mp4",
+              "episode": 8
+            }
+          ]
+        }
+      ],
+      "episodes": [
+        {
+          "title": "Jogadaderisco T1E01",
+          "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storagePSN/SERIES/JOGADADERISCO/JOGADADERISCO1x01.mp4",
+          "episode": 1
+        },
+        {
+          "title": "Jogadaderisco T1E02",
+          "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storagePSN/SERIES/JOGADADERISCO/JOGADADERISCO1x02.mp4",
+          "episode": 2
+        },
+        {
+          "title": "Jogadaderisco T1E03",
+          "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storagePSN/SERIES/JOGADADERISCO/JOGADADERISCO1x03.mp4",
+          "episode": 3
+        },
+        {
+          "title": "Jogadaderisco T1E04",
+          "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storagePSN/SERIES/JOGADADERISCO/JOGADADERISCO1x04.mp4",
+          "episode": 4
+        },
+        {
+          "title": "Jogadaderisco T1E05",
+          "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storagePSN/SERIES/JOGADADERISCO/JOGADADERISCO1x05.mp4",
+          "episode": 5
+        },
+        {
+          "title": "Jogadaderisco T1E06",
+          "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storagePSN/SERIES/JOGADADERISCO/JOGADADERISCO1x06.mp4",
+          "episode": 6
+        },
+        {
+          "title": "Jogadaderisco T1E07",
+          "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storagePSN/SERIES/JOGADADERISCO/JOGADADERISCO1x07.mp4",
+          "episode": 7
+        },
+        {
+          "title": "Jogadaderisco T1E08",
+          "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storagePSN/SERIES/JOGADADERISCO/JOGADADERISCO1x08.mp4",
+          "episode": 8
+        }
+      ],
+      "type": "series",
+      "category": "series",
+      "local_poster": "/Pirataflix/assets/Capas/default.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/iEcju8TBN5jmZswIpQXV5YTJB9L.jpg"
+      ],
+      "backdrop": "https://image.tmdb.org/t/p/w1280/swmZEoWpW7tBhaIszLtIE8rgQkO.jpg",
+      "overview": "Mauricio é um ex-jogador que tenta se firmar como agente no milionário mercado do futebol . Em sua nova trajetória, ele precisa lidar com o fantasma do seu fracasso como jogador e com a relação conturbada com o pai.",
+      "year": "2026",
+      "genres": [
+        "Drama"
+      ],
+      "cast": [
+        {
+          "name": "Cauã Reymond",
+          "character": "Maurício",
+          "profile": "https://image.tmdb.org/t/p/w185/iG8EmXJsrqtfIonw9RHOX64aNJ9.jpg"
+        },
+        {
+          "name": "Letícia Colin",
+          "character": "Rita",
+          "profile": "https://image.tmdb.org/t/p/w185/wkXmPDg4OllPFXbpardNkS4ZqJ0.jpg"
+        },
+        {
+          "name": "Mariana Sena",
+          "character": "Cris",
+          "profile": "https://image.tmdb.org/t/p/w185/tTk5VUH8O0hCuEVhCe4ENpqryIh.jpg"
+        },
+        {
+          "name": "Marcos Frota",
+          "character": "Valdemar",
+          "profile": "https://image.tmdb.org/t/p/w185/wF2kyDsxkEzyjbrOun8gr6TSXMK.jpg"
+        },
+        {
+          "name": "Juan Paiva",
+          "character": "Luan",
+          "profile": "https://image.tmdb.org/t/p/w185/onMPJqb0PNoKDqZiZctt1zh010w.jpg"
+        },
+        {
+          "name": "Breno Ferreira",
+          "character": "Geraldo",
+          "profile": "https://image.tmdb.org/t/p/w185/jJgpLUqGSLGH8tcWi0zkAOF24Z.jpg"
+        },
+        {
+          "name": "Cauê Campos",
+          "character": "Vítor",
+          "profile": "https://image.tmdb.org/t/p/w185/2hvXPqOxuMHcdEDgrLXMlxoJnW3.jpg"
+        },
+        {
+          "name": "Marcelo Adnet",
+          "character": "Fernando",
+          "profile": "https://image.tmdb.org/t/p/w185/hCaB1q6CypBdQH1A7xuSehTfUdx.jpg"
+        }
+      ]
+    },
+    {
       "id": "bridgerton",
       "title": "Bridgerton",
       "poster": "https://image.tmdb.org/t/p/w500/eSrfwxnmMffTEI8gHTDde0iWuGB.jpg",
