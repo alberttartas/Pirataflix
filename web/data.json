@@ -716,6 +716,80 @@
       ]
     },
     {
+      "id": "exterminador_do_futuro_destino_sombrio",
+      "title": "Exterminador Do Futuro Destino Sombrio",
+      "poster": "https://image.tmdb.org/t/p/w500/3HsG5V6ZpKYgfwbFqXEYONbqtTt.jpg",
+      "episodes": [
+        {
+          "title": "O Exterminador do Futuro: Destino Sombrio",
+          "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storageflix/F/o-exterminador-do-futuro-6.mp4",
+          "episode": 1
+        }
+      ],
+      "type": "movie",
+      "local_poster": "/Pirataflix/assets/Capas/default.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/3HsG5V6ZpKYgfwbFqXEYONbqtTt.jpg",
+        "https://image.tmdb.org/t/p/w500/vqzNJRH4YyquRiWxCCOH0aXggHI.jpg",
+        "https://image.tmdb.org/t/p/w500/2kn6OO9jjsaFubGkSWXDQOTn64n.jpg",
+        "https://image.tmdb.org/t/p/w500/i8QWXu6dGuTKKerJtnd0A4lUpbv.jpg",
+        "https://image.tmdb.org/t/p/w500/5JYfI1yehkr2ZEXf1Pnm8OTuT24.jpg",
+        "https://image.tmdb.org/t/p/w500/lkzfq2dsBOgGQG8QrDGulFdRCG7.jpg",
+        "https://image.tmdb.org/t/p/w500/zxRQRIwtWYzg2m3dy37KBrc4CCB.jpg"
+      ],
+      "backdrop": "https://image.tmdb.org/t/p/w1280/a6cDxdwaQIFjSkXf7uskg78ZyTq.jpg",
+      "overview": "Décadas após Sarah Connor impedir o Dia do Julgamento, um novo Exterminador letal é enviado para eliminar o futuro líder da resistência. Em uma luta para salvar a humanidade, Sarah Connor, endurecida pela batalha, se une a um aliado inesperado e a um super soldado aprimorado com a missão de parar o Exterminador mais mortal até agora.",
+      "year": "2019",
+      "genres": [
+        "Ficção Científica",
+        "Ação",
+        "Aventura"
+      ],
+      "rating": 6.4,
+      "cast": [
+        {
+          "name": "Linda Hamilton",
+          "character": "Sarah Connor",
+          "profile": "https://image.tmdb.org/t/p/w185/7FNn9Z5xkRS9EFbGL2tpmpph9xV.jpg"
+        },
+        {
+          "name": "Arnold Schwarzenegger",
+          "character": "T-800 / Carl",
+          "profile": "https://image.tmdb.org/t/p/w185/2marNcjIfCUE5Z2HyrcEiJHPbsA.jpg"
+        },
+        {
+          "name": "Mackenzie Davis",
+          "character": "Grace",
+          "profile": "https://image.tmdb.org/t/p/w185/CEpYCoD6erYRYekmFHuQAULLD5.jpg"
+        },
+        {
+          "name": "Natalia Reyes",
+          "character": "Daniella \"Dani\" Ramos",
+          "profile": "https://image.tmdb.org/t/p/w185/9N7FNKUhjtinrNPy8ANvXrB7iEr.jpg"
+        },
+        {
+          "name": "Gabriel Luna",
+          "character": "Gabriel / REV-9",
+          "profile": "https://image.tmdb.org/t/p/w185/bIPORtYxTJPEUJIThbZrpqf4A11.jpg"
+        },
+        {
+          "name": "Diego Boneta",
+          "character": "Diego Ramos",
+          "profile": "https://image.tmdb.org/t/p/w185/hgEcC28oljaPBYi7ONMToQYMHMA.jpg"
+        },
+        {
+          "name": "Ferran Fernández",
+          "character": "Flacco",
+          "profile": "https://image.tmdb.org/t/p/w185/lYfYDqBt8J3cWK98qVNx9yZlkNt.jpg"
+        },
+        {
+          "name": "Tristán Ulloa",
+          "character": "Felipe Gandal",
+          "profile": "https://image.tmdb.org/t/p/w185/sglKcvdU3e8hTy1kOghEbT0GdHS.jpg"
+        }
+      ]
+    },
+    {
       "id": "homem_com_h",
       "title": "Homem Com H",
       "poster": "https://image.tmdb.org/t/p/w500/sOed9XD0TS9d0XRSnTiw5tpXIIO.jpg",
