@@ -789,6 +789,80 @@
       ]
     },
     {
+      "id": "destruicao_final_o_ultimo_refugio",
+      "title": "Destruicao Final O Ultimo Refugio",
+      "poster": "https://image.tmdb.org/t/p/w500/65p4M9Cdkv6YkHMmoTDMxQ8Gur8.jpg",
+      "episodes": [
+        {
+          "title": "Destruição Final: O Último Refúgio",
+          "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storageflix/F/destruicao-final-o-ultimo-refugio.mp4",
+          "episode": 1
+        }
+      ],
+      "type": "movie",
+      "local_poster": "/Pirataflix/assets/Capas/default.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/65p4M9Cdkv6YkHMmoTDMxQ8Gur8.jpg",
+        "https://image.tmdb.org/t/p/w500/bNo2mcvSwIvnx8K6y1euAc1TLVq.jpg",
+        "https://image.tmdb.org/t/p/w500/hAUUVBGprFQXaHuhOFDMKELkH4W.jpg",
+        "https://image.tmdb.org/t/p/w500/2LMko0GtGgcl2wGOmLdeUiUToSn.jpg",
+        "https://image.tmdb.org/t/p/w500/wVu2B58T61LAMiY68hxAA2NLcr9.jpg",
+        "https://image.tmdb.org/t/p/w500/v9w9cl5P3XFhD3u3Aq1xO1EUPBS.jpg",
+        "https://image.tmdb.org/t/p/w500/kPwlinQkY86Vtwzg76oEDhdXXGB.jpg"
+      ],
+      "backdrop": "https://image.tmdb.org/t/p/w1280/2Fk3AB8E9dYIBc2ywJkxk8BTyhc.jpg",
+      "overview": "Quando cientistas descobrem que um cometa atingirá a Terra em poucos dias e provavelmente causará a extinção da humanidade, uma família tenta cruzar o país para chegar a sua única esperança de sobrevivência: um grupo de abrigos subterrâneos em Greenland.",
+      "year": "2020",
+      "genres": [
+        "Suspense",
+        "Ação",
+        "Ficção Científica"
+      ],
+      "rating": 7.1,
+      "cast": [
+        {
+          "name": "Gerard Butler",
+          "character": "John Garrity",
+          "profile": "https://image.tmdb.org/t/p/w185/i54XoxYieuff2w6MwyfwVUBvmR0.jpg"
+        },
+        {
+          "name": "Morena Baccarin",
+          "character": "Allison Garrity",
+          "profile": "https://image.tmdb.org/t/p/w185/4gyHyg6FJ1oFczOm5pmMkdEEo2J.jpg"
+        },
+        {
+          "name": "David Denman",
+          "character": "Ralph Vento",
+          "profile": "https://image.tmdb.org/t/p/w185/4I06ZD8SQ6pU1QYShiUXb711fJW.jpg"
+        },
+        {
+          "name": "Hope Davis",
+          "character": "Judy Vento",
+          "profile": "https://image.tmdb.org/t/p/w185/dJb76YQDFmfJ6ptlvBvx0ZBP44C.jpg"
+        },
+        {
+          "name": "Roger Dale Floyd",
+          "character": "Nathan Garrity",
+          "profile": "https://image.tmdb.org/t/p/w185/qys24ezlOgRom93mq0Gk1vRY5uf.jpg"
+        },
+        {
+          "name": "Scott Glenn",
+          "character": "Dale",
+          "profile": "https://image.tmdb.org/t/p/w185/8DHORod2l6ZFS9KR0gNAAM3WZfI.jpg"
+        },
+        {
+          "name": "Andrew Bachelor",
+          "character": "Colin",
+          "profile": "https://image.tmdb.org/t/p/w185/dReXjimiVOydELw2ASQwRcStkbo.jpg"
+        },
+        {
+          "name": "Merrin Dungey",
+          "character": "Major Breen",
+          "profile": "https://image.tmdb.org/t/p/w185/s04aaVx1AKBik88lfjwAsSm0s2U.jpg"
+        }
+      ]
+    },
+    {
       "id": "x_men_apocalipse",
       "title": "X-men Apocalipse",
       "poster": "https://image.tmdb.org/t/p/w500/avAUyU5cXk0ASy5yR8FMtO78LRS.jpg",
