@@ -29,7 +29,7 @@
         "Crime",
         "Drama"
       ],
-      "rating": 6.8,
+      "rating": 6.9,
       "cast": [
         {
           "name": "Fernando Alves Pinto",
@@ -424,6 +424,79 @@
           "name": "Rodrigo Brassoloto",
           "character": "Neco",
           "profile": "https://image.tmdb.org/t/p/w185/3w5gDHWr2wDPxW9xndm6A5DSBbP.jpg"
+        }
+      ]
+    },
+    {
+      "id": "bob_cuspe_nos_nao_gostamos_de_gente",
+      "title": "Bob Cuspe Nos Nao Gostamos De Gente",
+      "poster": "https://image.tmdb.org/t/p/w500/cdYMR3Pim5qPWmz45Y0KvXVJUDQ.jpg",
+      "episodes": [
+        {
+          "title": "Bob Cuspe: Nós Não Gostamos de Gente",
+          "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storageflix/F/bob-cuspe-nos-nao-gostamos-de-gente.mp4",
+          "episode": 1
+        }
+      ],
+      "type": "movie",
+      "local_poster": "/Pirataflix/assets/Capas/default.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/tpeg7nTGz7dB71vwZGYTeSfahXm.jpg",
+        "https://image.tmdb.org/t/p/w500/tv1JcxHfNtpjZQ4pCkVDpKeSF2W.jpg",
+        "https://image.tmdb.org/t/p/w500/ghKWGamV0m5AvE6sBAHzHU00Uy1.jpg",
+        "https://image.tmdb.org/t/p/w500/cdYMR3Pim5qPWmz45Y0KvXVJUDQ.jpg",
+        "https://image.tmdb.org/t/p/w500/sXr0yu65o1CoXyMhFKr9mPtewXN.jpg",
+        "https://image.tmdb.org/t/p/w500/zGvyBRrf1RTk2MqGUTCuwXcJsCZ.jpg"
+      ],
+      "backdrop": "https://image.tmdb.org/t/p/w1280/9Bedn0SYqOkT3SYmR4etfjNc6la.jpg",
+      "overview": "O filme conta a história de Bob Cuspe, um velho punk tentando escapar de um deserto apocalíptico que na verdade é um purgatório dentro da mente do seu criador, Angeli, um cartunista passando por uma crise autoral.",
+      "year": "2021",
+      "genres": [
+        "Animação",
+        "Documentário",
+        "Ficção Científica"
+      ],
+      "rating": 8.0,
+      "cast": [
+        {
+          "name": "Milhem Cortaz",
+          "character": "Bob Cuspe (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/vA9hgFemy6JHxgjdbQW78xZyAnq.jpg"
+        },
+        {
+          "name": "Angeli",
+          "character": "Angeli (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/mTSSpiKHGi5zFtZwTUHWfe1nRXk.jpg"
+        },
+        {
+          "name": "Paulo Miklos",
+          "character": "Irmãos Kowalski (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/dqsz5celntOcn0whRJxdMcsxteX.jpg"
+        },
+        {
+          "name": "Carol Guaycuru",
+          "character": "Carol (voice)",
+          "profile": ""
+        },
+        {
+          "name": "Laerte Coutinho",
+          "character": "Laerte / Madame L (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/dTfL5LgEWfjj2TV40sjKXfgZcrF.jpg"
+        },
+        {
+          "name": "André Abujamra",
+          "character": "Rhalah Rikota / Pop Star (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/kq1B1dlAMtCXmgWoGirxq8j618l.jpg"
+        },
+        {
+          "name": "Beto Hora",
+          "character": "Toninho Mendes (voice)",
+          "profile": ""
+        },
+        {
+          "name": "Hugo Possolo",
+          "character": "Skrotinhos (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/uYQ8ZmaYdtKAKwDTQltDjwGi5zy.jpg"
         }
       ]
     },
@@ -25818,7 +25891,7 @@
               "episode": 103,
               "air_date": "2026-07-24",
               "overview": "Niara afirma a Teresa que gosta de Onildo, mas não pensa em se envolver romanticamente com outro homem. Malungo chega a Barro Preto e reconhece José. Viriato repreende a forma como Virgínia se refere a Lúcia/Alika. Malungo encontra Alika.",
-              "still": "https://image.tmdb.org/t/p/w400/l6oDasOPXd37CE8ydPgtNZQxWdL.jpg",
+              "still": "https://image.tmdb.org/t/p/w400/oA1QmeMYeDrNL8A6QqS0qX1BS4O.jpg",
               "guest_stars": [],
               "locked": false
             },
@@ -25827,8 +25900,8 @@
               "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-104.mp4",
               "episode": 104,
               "air_date": "2026-07-25",
-              "overview": "Tonho e Alika combinam de se casar no dia da festa da moagem em Barro Preto, e sua família comemora. Virgínia se irrita quando Mirinho se recusa a fugir com ela. Graça incentiva Mirinho a convencer Diógenes a abrir uma agência de seu banco em outra capital. Omar sonha em reencontrar Alika. Tonho revela seus planos de comprar terra para ele e os demais empregados, e Casemiro se emociona com o afilhado. Viriato teme ser expulso da igreja por conta da denúncia de Virgínia. Bartô tem um pesadelo com Veneranda. Mirinho se irrita com o sucesso de Tonho. Niara alerta Alika sobre a viabilidade de seu relacionamento com Tonho. Kênia se impressiona com a gentileza de Binta. Dumi e Ladisa contam a Akin que seu plano para conseguir recursos fracassou. Mirinho implora que Lúcia/Alika não se case com Tonho.",
-              "still": "",
+              "overview": "Malungo garante a Alika que está a seu lado e de Niara, e que não revelará seu paradeiro a Jendal. Geralda sonda Belmira sobre Carrapato. Mirinho se impressiona com a postura de Manoel em relação a Ana Maria. Fátima finge passar mal para influenciar Salma a se casar com Fuad. Fortunato reprova o namoro de Manoel com Ana Maria, e Maria Helena apoia o filho",
+              "still": "https://image.tmdb.org/t/p/w400/vDyO4KRRGCGEhyilmH4G7sYfKlC.jpg",
               "guest_stars": [],
               "locked": false
             },
@@ -27738,7 +27811,7 @@
           "episode": 103,
           "air_date": "2026-07-24",
           "overview": "Niara afirma a Teresa que gosta de Onildo, mas não pensa em se envolver romanticamente com outro homem. Malungo chega a Barro Preto e reconhece José. Viriato repreende a forma como Virgínia se refere a Lúcia/Alika. Malungo encontra Alika.",
-          "still": "https://image.tmdb.org/t/p/w400/l6oDasOPXd37CE8ydPgtNZQxWdL.jpg",
+          "still": "https://image.tmdb.org/t/p/w400/oA1QmeMYeDrNL8A6QqS0qX1BS4O.jpg",
           "guest_stars": [],
           "locked": false
         },
@@ -27747,8 +27820,8 @@
           "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-104.mp4",
           "episode": 104,
           "air_date": "2026-07-25",
-          "overview": "Tonho e Alika combinam de se casar no dia da festa da moagem em Barro Preto, e sua família comemora. Virgínia se irrita quando Mirinho se recusa a fugir com ela. Graça incentiva Mirinho a convencer Diógenes a abrir uma agência de seu banco em outra capital. Omar sonha em reencontrar Alika. Tonho revela seus planos de comprar terra para ele e os demais empregados, e Casemiro se emociona com o afilhado. Viriato teme ser expulso da igreja por conta da denúncia de Virgínia. Bartô tem um pesadelo com Veneranda. Mirinho se irrita com o sucesso de Tonho. Niara alerta Alika sobre a viabilidade de seu relacionamento com Tonho. Kênia se impressiona com a gentileza de Binta. Dumi e Ladisa contam a Akin que seu plano para conseguir recursos fracassou. Mirinho implora que Lúcia/Alika não se case com Tonho.",
-          "still": "",
+          "overview": "Malungo garante a Alika que está a seu lado e de Niara, e que não revelará seu paradeiro a Jendal. Geralda sonda Belmira sobre Carrapato. Mirinho se impressiona com a postura de Manoel em relação a Ana Maria. Fátima finge passar mal para influenciar Salma a se casar com Fuad. Fortunato reprova o namoro de Manoel com Ana Maria, e Maria Helena apoia o filho",
+          "still": "https://image.tmdb.org/t/p/w400/vDyO4KRRGCGEhyilmH4G7sYfKlC.jpg",
           "guest_stars": [],
           "locked": false
         },
