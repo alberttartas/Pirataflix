@@ -375,14 +375,25 @@
     // Bind episódios
     bindEpClicks(body, itemId, cat);
 
-    // Foco no botão de play do modal
+    // Foco inicial inteligente: episódios têm prioridade sobre o botão
+    // "Assistir", e o índice do D-pad é sincronizado com o elemento focado
+    // (evita o foco ficar preso no botão enquanto o controle remoto tenta
+    // navegar pela lista de episódios).
     setTimeout(function () {
-      var playBtn = document.getElementById('modal-play-btn');
-      if (playBtn) {
-        currentFocusIndex = 1;
-        playBtn.focus();
+      var firstEp = body.querySelector('.ep-item:not(.locked)');
+      var els     = getFocusables();
+
+      if (firstEp) {
+        currentFocusIndex = els.indexOf(firstEp);
+        firstEp.focus();
+      } else {
+        var pBtn = document.getElementById('modal-play-btn');
+        if (pBtn) {
+          currentFocusIndex = els.indexOf(pBtn);
+          pBtn.focus();
+        }
       }
-    }, 100);
+    }, 150);
   }
 
   function openTvModal(idx) {
@@ -451,12 +462,13 @@
       })(canalItems[ci2]);
     }
 
-    // Foco no botão de play do modal
+    // Foco no botão de play do modal (sincronizado com o índice do D-pad)
     setTimeout(function () {
-      var playBtn = document.getElementById('modal-play-btn');
-      if (playBtn) {
-        currentFocusIndex = 1;
-        playBtn.focus();
+      var pBtn = document.getElementById('modal-play-btn');
+      if (pBtn) {
+        var els = getFocusables();
+        currentFocusIndex = els.indexOf(pBtn);
+        pBtn.focus();
       }
     }, 100);
   }
@@ -967,7 +979,7 @@
           var cat = link.getAttribute('data-cat');
           document.getElementById('search-input').value = '';
           renderCatalog(cat);
-          
+
           setTimeout(function () {
             currentFocusIndex = 0;
             focusIndex(0);
@@ -1175,6 +1187,21 @@
     ) {
         if (direction === 'left') idx--;
         if (direction === 'right') idx++;
+
+    // Navegação horizontal independente para episódios e canais de TV.
+    // Sem este bloco, "esquerda/direita" dentro da lista de episódios
+    // acaba pulando para a temporada anterior/seguinte, porque o índice
+    // geral mistura botão + cabeçalhos de temporada + episódios.
+    } else if (
+        focused &&
+        focused.classList &&
+        (focused.classList.contains('ep-item') || focused.classList.contains('canal-item'))
+    ) {
+        if (direction === 'left') idx--;
+        if (direction === 'right') idx++;
+        // up/down não usam colunas fictícias dentro da lista de episódios;
+        // deixam o índice como está e o clamp abaixo apenas evita sair da lista.
+
     } else {
         var columns = getColumns();
         if (direction === 'left') idx--;
@@ -1187,6 +1214,19 @@
     if (idx >= els.length) idx = els.length - 1;
 
     focusIndex(idx);
+  }
+
+  // Mantém currentFocusIndex sincronizado sempre que o foco muda por
+  // qualquer outro caminho (clique do mouse, toque, foco automático do
+  // navegador), evitando que o D-pad "perca a posição" depois disso.
+  function bindFocusSync() {
+    document.addEventListener('focusin', function (e) {
+      var els = getFocusables();
+      var idx = els.indexOf(e.target);
+      if (idx >= 0) {
+        currentFocusIndex = idx;
+      }
+    });
   }
 
   function bindDpad() {
@@ -1279,18 +1319,20 @@
 
     }, 1000);
   }
-  
+
   // ─── START ───────────────────────────────────────────────────────────────
 
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', function () {
       init();
       bindFullscreenTriggers();
+      bindFocusSync();
       bindDpad();
     });
   } else {
     init();
     bindFullscreenTriggers();
+    bindFocusSync();
     bindDpad();
   }
 
