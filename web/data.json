@@ -789,6 +789,78 @@
       ]
     },
     {
+      "id": "enterrando_os_mortos",
+      "title": "Enterrando Os Mortos",
+      "poster": "https://image.tmdb.org/t/p/w500/x6H4DtBRIfwTcOIK64R8pSXNpvN.jpg",
+      "episodes": [
+        {
+          "title": "Enterrando os Mortos",
+          "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storageflix/F/enterrando-os-mortos.mp4",
+          "episode": 1
+        }
+      ],
+      "type": "movie",
+      "local_poster": "/Pirataflix/assets/Capas/default.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/xZqo0yPARmyF8TACVNyaOACkYWG.jpg",
+        "https://image.tmdb.org/t/p/w500/qTH4FdiU6NjLqx1soSpPKtxguiM.jpg",
+        "https://image.tmdb.org/t/p/w500/vWOALCjS3cANciJKkG0qV8k1izW.jpg",
+        "https://image.tmdb.org/t/p/w500/igM5XazlLys9xlZUqUdBXR6JbWp.jpg",
+        "https://image.tmdb.org/t/p/w500/x6H4DtBRIfwTcOIK64R8pSXNpvN.jpg",
+        "https://image.tmdb.org/t/p/w500/AaW6mN2WU61xQRxWPZKXRiw8NVb.jpg"
+      ],
+      "backdrop": "https://image.tmdb.org/t/p/w1280/vbkW4KerpshPZnP84w9qwSfYrhu.jpg",
+      "overview": "Um desastre militar catastrófico não apenas trouxe os mortos de volta à vida, como os transformaram em caçadores. Após a declaração do exército de que as criaturas eram lentas e inofensivas, Ava entra numa zona de quarentena a procura de seu marido mas acaba descobrindo a terrível verdade: os mortos-vivos estão se tornando cada vez mais perigos e violentos ao passar de cada segundo.",
+      "year": "2026",
+      "genres": [
+        "Terror",
+        "Suspense"
+      ],
+      "rating": 6.0,
+      "cast": [
+        {
+          "name": "Daisy Ridley",
+          "character": "Ava",
+          "profile": "https://image.tmdb.org/t/p/w185/dnRtM8YBxidAshD76XIMN495Yqc.jpg"
+        },
+        {
+          "name": "Brenton Thwaites",
+          "character": "Clay",
+          "profile": "https://image.tmdb.org/t/p/w185/4jrtVjdIGJpmgevEPRuIIU9HWcO.jpg"
+        },
+        {
+          "name": "Mark Coles Smith",
+          "character": "Riley",
+          "profile": "https://image.tmdb.org/t/p/w185/mFGf5GruME5dnAuKBG1kgzK8PJs.jpg"
+        },
+        {
+          "name": "Matt Whelan",
+          "character": "Mitch",
+          "profile": "https://image.tmdb.org/t/p/w185/qTIe7SblKwxR9DF6iNuVX0pEWIZ.jpg"
+        },
+        {
+          "name": "Chloe Hurst",
+          "character": "Katie Harris",
+          "profile": "https://image.tmdb.org/t/p/w185/h42VtoxnH6onzfcyKSzRXg1gImB.jpg"
+        },
+        {
+          "name": "Kym Jackson",
+          "character": "Lt. Wilkie",
+          "profile": "https://image.tmdb.org/t/p/w185/jQQ1H7CBsA0ItW1m9i1iqvXGHlP.jpg"
+        },
+        {
+          "name": "Holly Hargreaves",
+          "character": "Mrs. Smith",
+          "profile": "https://image.tmdb.org/t/p/w185/2Xp20wUiKN7NrlXJDX9z6spjTOO.jpg"
+        },
+        {
+          "name": "Deanna Cooney",
+          "character": "Bianca",
+          "profile": "https://image.tmdb.org/t/p/w185/b99BCpNIqBWuQyEpESux64WpsU5.jpg"
+        }
+      ]
+    },
+    {
       "id": "destruicao_final_o_ultimo_refugio",
       "title": "Destruicao Final O Ultimo Refugio",
       "poster": "https://image.tmdb.org/t/p/w500/65p4M9Cdkv6YkHMmoTDMxQ8Gur8.jpg",
