@@ -1151,6 +1151,79 @@
       ]
     },
     {
+      "id": "godzilla_rei_dos_monstros",
+      "title": "Godzilla Rei Dos Monstros",
+      "poster": "https://image.tmdb.org/t/p/w500/2umU3r6V4V2gTmSnZJmH61nTorF.jpg",
+      "episodes": [
+        {
+          "title": "Godzilla II: Rei dos Monstros",
+          "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storageflix/F/godzilla-ii-rei-dos-monstros.mp4",
+          "episode": 1
+        }
+      ],
+      "type": "movie",
+      "local_poster": "/Pirataflix/assets/Capas/default.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/2umU3r6V4V2gTmSnZJmH61nTorF.jpg",
+        "https://image.tmdb.org/t/p/w500/mzOHg7Q5q9yUmY0b9Esu8Qe6Nnm.jpg",
+        "https://image.tmdb.org/t/p/w500/1lFKupnghulH7oMRTJRLTXMwgow.jpg",
+        "https://image.tmdb.org/t/p/w500/pU3bnutJU91u3b4IeRPQTOP8jhV.jpg",
+        "https://image.tmdb.org/t/p/w500/fQ40gmFM4p03tXwMxQQKh2cCBW4.jpg",
+        "https://image.tmdb.org/t/p/w500/3DkVy2jqFe3xyYZK5XclS066IhH.jpg",
+        "https://image.tmdb.org/t/p/w500/paDe5Mw0nhsAkcCMsNmMdvJqkNk.jpg"
+      ],
+      "backdrop": "https://image.tmdb.org/t/p/w1280/mzRJpkWPjXdXak0WCc8ZxVH4hug.jpg",
+      "overview": "Membros da agência Monarch enfrentam monstros gigantescos, incluindo o poderoso Godzilla, que entra em choque com Mothra, Rodan e seu maior inimigo, King Ghidorah, o monstro de três cabeças. Essas antigas superespécies disputam a supremacia, deixando a própria existência da humanidade em risco.",
+      "year": "2019",
+      "genres": [
+        "Ficção Científica",
+        "Ação"
+      ],
+      "rating": 6.7,
+      "cast": [
+        {
+          "name": "Kyle Chandler",
+          "character": "Mark Russell",
+          "profile": "https://image.tmdb.org/t/p/w185/66n7XNj1dyYkzCBWR3Lq8Vz4PJ1.jpg"
+        },
+        {
+          "name": "Vera Farmiga",
+          "character": "Emma Russell",
+          "profile": "https://image.tmdb.org/t/p/w185/5Vs7huBmTKftwlsc2BPAntyaQYj.jpg"
+        },
+        {
+          "name": "Millie Bobby Brown",
+          "character": "Madison Russell",
+          "profile": "https://image.tmdb.org/t/p/w185/k9KGzGDVhXKfOGpoN62MNuXL28q.jpg"
+        },
+        {
+          "name": "Ken Watanabe",
+          "character": "Dr. Ishiro Serizawa",
+          "profile": "https://image.tmdb.org/t/p/w185/psAXOYp9SBOXvg6AXzARDedNQ9P.jpg"
+        },
+        {
+          "name": "Ziyi Zhang",
+          "character": "Dr. Ilene Chen / Dr. Ling",
+          "profile": "https://image.tmdb.org/t/p/w185/AeM8e72StFIoEe7wcPQgnQsHtyf.jpg"
+        },
+        {
+          "name": "Bradley Whitford",
+          "character": "Dr. Rick Stanton",
+          "profile": "https://image.tmdb.org/t/p/w185/oeDv2qZWTxELLaNtOIoeG72leNY.jpg"
+        },
+        {
+          "name": "Sally Hawkins",
+          "character": "Dr. Vivienne Graham",
+          "profile": "https://image.tmdb.org/t/p/w185/1dtDq82dM2YQ17lBL4ZKPJo5LKw.jpg"
+        },
+        {
+          "name": "Charles Dance",
+          "character": "Alan Jonah",
+          "profile": "https://image.tmdb.org/t/p/w185/3xHwq5lchAI6mfW0aGQOEijexv6.jpg"
+        }
+      ]
+    },
+    {
       "id": "destruicao_final_2",
       "title": "Destruicao Final 2",
       "poster": "https://image.tmdb.org/t/p/w500/s6nzVekLSd1y0vGjLz8WPfC1Sau.jpg",
