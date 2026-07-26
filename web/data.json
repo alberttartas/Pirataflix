@@ -931,6 +931,79 @@
       ]
     },
     {
+      "id": "destino_especial",
+      "title": "Destino Especial",
+      "poster": "https://image.tmdb.org/t/p/w500/tC5W68X3z23Mvh51r5cUvPRtVIO.jpg",
+      "episodes": [
+        {
+          "title": "Destino Especial",
+          "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storageflix/F/destino-especial.mp4",
+          "episode": 1
+        }
+      ],
+      "type": "movie",
+      "local_poster": "/Pirataflix/assets/Capas/default.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/hgDRq1l4ATxwufWjILKsYtglbI6.jpg",
+        "https://image.tmdb.org/t/p/w500/tC5W68X3z23Mvh51r5cUvPRtVIO.jpg",
+        "https://image.tmdb.org/t/p/w500/hELg3Jr5jl2ouiuUNMSGBKf4Hwk.jpg",
+        "https://image.tmdb.org/t/p/w500/o6gCeg6QMa7HyPTEVqLycQW3LmZ.jpg",
+        "https://image.tmdb.org/t/p/w500/heEe6NFekVHs23OKFtqhovyOMXQ.jpg",
+        "https://image.tmdb.org/t/p/w500/e1yiRvWbGUKPtkYU6XrLUbZuKxA.jpg"
+      ],
+      "backdrop": "https://image.tmdb.org/t/p/w1280/23COMNwqP8q4rWPtLGTBuCD3LnT.jpg",
+      "overview": "Alton (Jaeden Lieberher) é um garoto de oito anos que desenvolve poderes especiais, fazendo com que o pai (Michael Shannon) faça de tudo para protegê-lo. O que começou como uma corrida contra os religiosos extremistas e forças locais da lei, logo a notícia ganha proporções maiores, se espalhando pelos altos níveis do Governo Federal. O pai fará de tudo para proteger Alton e ajudar o mundo a ter um destino que pode mudá-lo para sempre.",
+      "year": "2016",
+      "genres": [
+        "Aventura",
+        "Drama",
+        "Ficção Científica"
+      ],
+      "rating": 6.3,
+      "cast": [
+        {
+          "name": "Michael Shannon",
+          "character": "Roy Tomlin",
+          "profile": "https://image.tmdb.org/t/p/w185/6mMczfjM8CiS1WuBOgo5Xom1TcR.jpg"
+        },
+        {
+          "name": "Jaeden Martell",
+          "character": "Alton Meyer",
+          "profile": "https://image.tmdb.org/t/p/w185/oR7ZJsOHMNFzM1HeugV4a4qCMSF.jpg"
+        },
+        {
+          "name": "Joel Edgerton",
+          "character": "Lucas",
+          "profile": "https://image.tmdb.org/t/p/w185/r2TTDZ8cG5wrZqx7Drz1M95S9z3.jpg"
+        },
+        {
+          "name": "Kirsten Dunst",
+          "character": "Sarah Tomlin",
+          "profile": "https://image.tmdb.org/t/p/w185/yhLKGjuiMMdbGnFrR8AREkCZcVF.jpg"
+        },
+        {
+          "name": "Adam Driver",
+          "character": "Agent Sevier",
+          "profile": "https://image.tmdb.org/t/p/w185/b5w381C8Z33D1iF30KT4k8tJNsk.jpg"
+        },
+        {
+          "name": "David Jensen",
+          "character": "Elden",
+          "profile": "https://image.tmdb.org/t/p/w185/eMKoRn7Xz7Z7JEfBLkZA5pV2k5t.jpg"
+        },
+        {
+          "name": "Sam Shepard",
+          "character": "Calvin Meyer",
+          "profile": "https://image.tmdb.org/t/p/w185/mVR3Le1rSGIbQmld3Ve42RVFcyI.jpg"
+        },
+        {
+          "name": "Scott Haze",
+          "character": "Levi",
+          "profile": "https://image.tmdb.org/t/p/w185/i0k562EpJiuglK2VnUNAh12fZfj.jpg"
+        }
+      ]
+    },
+    {
       "id": "amor_e_monstros",
       "title": "Amor E Monstros",
       "poster": "https://image.tmdb.org/t/p/w500/b77MZUZQJjbmyL4CS2EyOBRUngD.jpg",
