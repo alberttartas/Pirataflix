@@ -428,6 +428,78 @@
       ]
     },
     {
+      "id": "corisco_e_dada",
+      "title": "Corisco E Dada",
+      "poster": "https://image.tmdb.org/t/p/w500/qa7HWucnMJNbufSjeyqxuNtn005.jpg",
+      "episodes": [
+        {
+          "title": "Corisco & Dadá",
+          "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storageflix/F/corisco-e-dada.mp4",
+          "episode": 1
+        }
+      ],
+      "type": "movie",
+      "local_poster": "/Pirataflix/assets/Capas/default.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/qa7HWucnMJNbufSjeyqxuNtn005.jpg",
+        "https://image.tmdb.org/t/p/w500/gDroynOujEWWcyCADqmUQK1vjzw.jpg",
+        "https://image.tmdb.org/t/p/w500/ujFixtbM7RVVBmvLZB5XbSpVMH5.jpg",
+        "https://image.tmdb.org/t/p/w500/diSWq4WKHo0E9XVicn69kfWJd6.jpg",
+        "https://image.tmdb.org/t/p/w500/6Yi6Tmr728FoD5w47Qtwhho5CkH.jpg",
+        "https://image.tmdb.org/t/p/w500/fGChk9Ypb5pi8SJQcrrZtWO12W1.jpg"
+      ],
+      "backdrop": "https://image.tmdb.org/t/p/w1280/5vetlc28baY9pbxovxZleYdV9oV.jpg",
+      "overview": "Sertão baiano: 1927, Capitão Corisco, cangaceiro conhecido como Diabo Loiro, que rapta Dadá, uma menina de 12 anos, condenando-a ao cangaço. Perseguido por Zé Rufino, chefe da polícia volante, o bando percorre o sertão hostil da Bahia: ataques, morte dos filhos, decapitação de Lampião e Maria Bonita, o filme é um mergulho no universo psíquico e social do homem sertanejo, e nas manifestações místicas e culturais do Nordeste as décadas de 20/30.",
+      "year": "1996",
+      "genres": [
+        "Drama",
+        "História"
+      ],
+      "rating": 6.9,
+      "cast": [
+        {
+          "name": "Chico Díaz",
+          "character": "Corisco",
+          "profile": "https://image.tmdb.org/t/p/w185/75vzoB7Pm2RXTRI9f1S8BZRtJQP.jpg"
+        },
+        {
+          "name": "Dira Paes",
+          "character": "Dadá",
+          "profile": "https://image.tmdb.org/t/p/w185/xMUb1GNsUaGazcPm0KhmYfRbMwU.jpg"
+        },
+        {
+          "name": "Antônio Leite",
+          "character": "Zé Rufino",
+          "profile": ""
+        },
+        {
+          "name": "B. de Paiva",
+          "character": "Pai de Dadá",
+          "profile": ""
+        },
+        {
+          "name": "Chico Alves",
+          "character": "Lampião",
+          "profile": ""
+        },
+        {
+          "name": "Denise Milfont",
+          "character": "Maria Bonita",
+          "profile": "https://image.tmdb.org/t/p/w185/sDX3IscKk61vTCGlvpJMuavn71u.jpg"
+        },
+        {
+          "name": "Maira Cariry",
+          "character": "Dadá adolescente",
+          "profile": ""
+        },
+        {
+          "name": "Virginia Cavendish",
+          "character": "Lídia",
+          "profile": "https://image.tmdb.org/t/p/w185/kMol9CsRBTiQ1RPFL2IrTPBHXlC.jpg"
+        }
+      ]
+    },
+    {
       "id": "o_pai_o",
       "title": "O Pai O",
       "poster": "https://image.tmdb.org/t/p/w500/j724bxlzY6ISyHv2XaIxAgOgYqs.jpg",
