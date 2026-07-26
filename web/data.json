@@ -1151,6 +1151,80 @@
       ]
     },
     {
+      "id": "destruicao_final_2",
+      "title": "Destruicao Final 2",
+      "poster": "https://image.tmdb.org/t/p/w500/s6nzVekLSd1y0vGjLz8WPfC1Sau.jpg",
+      "episodes": [
+        {
+          "title": "Destruição Final 2",
+          "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storageflix/F/destruicao-final-2.mp4",
+          "episode": 2
+        }
+      ],
+      "type": "movie",
+      "local_poster": "/Pirataflix/assets/Capas/default.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/s6nzVekLSd1y0vGjLz8WPfC1Sau.jpg",
+        "https://image.tmdb.org/t/p/w500/z2tqCJLsw6uEJ8nJV8BsQXGa3dr.jpg",
+        "https://image.tmdb.org/t/p/w500/oEGnHmRkpNfUsxnh0gOKuTqNeQk.jpg",
+        "https://image.tmdb.org/t/p/w500/o01vb8k00emauEnhmIs7qcnkuPQ.jpg",
+        "https://image.tmdb.org/t/p/w500/wLi73AslQbV5diDDLLIrIe1viPN.jpg",
+        "https://image.tmdb.org/t/p/w500/6MZBOY0hL98edTMAjpfws8gJI7W.jpg",
+        "https://image.tmdb.org/t/p/w500/ydHEzqiPYa4lxoyaf8cfomd4rDO.jpg"
+      ],
+      "backdrop": "https://image.tmdb.org/t/p/w1280/cLFbDVfhllIMybpo2fkGNzehiQG.jpg",
+      "overview": "Tendo encontrado a segurança do bunker da Groenlândia depois que o cometa Clarke dizimou a Terra, a família Garrity deve agora arriscar tudo para embarcar em uma jornada angustiante através do deserto da Europa para encontrar um novo lar.",
+      "year": "2026",
+      "genres": [
+        "Aventura",
+        "Suspense",
+        "Ficção Científica"
+      ],
+      "rating": 6.4,
+      "cast": [
+        {
+          "name": "Gerard Butler",
+          "character": "John Garrity",
+          "profile": "https://image.tmdb.org/t/p/w185/i54XoxYieuff2w6MwyfwVUBvmR0.jpg"
+        },
+        {
+          "name": "Morena Baccarin",
+          "character": "Allison Garrity",
+          "profile": "https://image.tmdb.org/t/p/w185/4gyHyg6FJ1oFczOm5pmMkdEEo2J.jpg"
+        },
+        {
+          "name": "Roman Griffin Davis",
+          "character": "Nathan Garrity",
+          "profile": "https://image.tmdb.org/t/p/w185/jEox6Bq4TlINrnp5EUjqSlDK3eP.jpg"
+        },
+        {
+          "name": "Tommie Earl Jenkins",
+          "character": "General Sharpe",
+          "profile": "https://image.tmdb.org/t/p/w185/6eFBQr5dBHp7KGm4evTENGUHvOT.jpg"
+        },
+        {
+          "name": "Trond Fausa Aurvåg",
+          "character": "Adam Shaw",
+          "profile": "https://image.tmdb.org/t/p/w185/rFWC22ZScaQwA85NBo7l1j9XQdo.jpg"
+        },
+        {
+          "name": "Amber Rose Revah",
+          "character": "Dr Casey Amina",
+          "profile": "https://image.tmdb.org/t/p/w185/cThPovs1j59Vs5iejgLqUZRBchv.jpg"
+        },
+        {
+          "name": "Gina Gangar",
+          "character": "Elizabeth Price",
+          "profile": "https://image.tmdb.org/t/p/w185/kXKKYAUqhcG49tNt7lcUMC2xne7.jpg"
+        },
+        {
+          "name": "Antonio De Lima",
+          "character": "Charles Williams",
+          "profile": ""
+        }
+      ]
+    },
+    {
       "id": "resident_evil_1",
       "title": "Resident Evil 1",
       "poster": "https://image.tmdb.org/t/p/w500/aC9RinOuPR6DEgwAZZd9IzUA6Qa.jpg",
