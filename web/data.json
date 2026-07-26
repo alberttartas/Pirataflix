@@ -428,6 +428,79 @@
       ]
     },
     {
+      "id": "o_pai_o",
+      "title": "O Pai O",
+      "poster": "https://image.tmdb.org/t/p/w500/j724bxlzY6ISyHv2XaIxAgOgYqs.jpg",
+      "episodes": [
+        {
+          "title": "Ó Paí, Ó",
+          "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storageflix/F/o-pai-o.mp4",
+          "episode": 1
+        }
+      ],
+      "type": "movie",
+      "local_poster": "/Pirataflix/assets/Capas/default.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/j724bxlzY6ISyHv2XaIxAgOgYqs.jpg",
+        "https://image.tmdb.org/t/p/w500/alpLRNITM8ZcuxWNPT5jFBYOrlj.jpg",
+        "https://image.tmdb.org/t/p/w500/h6pmmR85KWbGuVzTrrPHAvne8cl.jpg",
+        "https://image.tmdb.org/t/p/w500/p6k1qecHTIMthJa34BwJxDbKxhe.jpg",
+        "https://image.tmdb.org/t/p/w500/isBjMmXiKV3ABiIogycqrcNDROi.jpg",
+        "https://image.tmdb.org/t/p/w500/ng48ljWJkLTNrn9xjZ1E8LwhdzI.jpg"
+      ],
+      "backdrop": "https://image.tmdb.org/t/p/w1280/89f7JlGeKDBQy7txuGznXVwHP1Z.jpg",
+      "overview": "Chico é uma figura marcante do Grupo Teatral dos Grandelinhas, que está a ensaiar a peça \"O Pai Tirano\", mas nutre uma paixão delirante por Tatão, que adora cinema e é namoriscada por Artur. No entanto, tudo muda quando um grande mal-entendido faz crer a Tatão que Chico é um rico fidalgo que abandonou o lar por desentendimentos com o pai...",
+      "year": "1941",
+      "genres": [
+        "Família",
+        "Comédia",
+        "Romance"
+      ],
+      "rating": 7.9,
+      "cast": [
+        {
+          "name": "Vasco Santana",
+          "character": "Mestre José Santana",
+          "profile": "https://image.tmdb.org/t/p/w185/7EDhP54dG1TFzV9xzy6zifwzAw7.jpg"
+        },
+        {
+          "name": "Francisco Ribeiro",
+          "character": "Francisco Mega",
+          "profile": "https://image.tmdb.org/t/p/w185/ju3bXwCsxVbBK9SMetxcYj09lu4.jpg"
+        },
+        {
+          "name": "Leonor Maia",
+          "character": "Tatão",
+          "profile": "https://image.tmdb.org/t/p/w185/qjsu3tinRIV0bAwcx5rIVp4IOY4.jpg"
+        },
+        {
+          "name": "Graça Maria",
+          "character": "Gracinha",
+          "profile": "https://image.tmdb.org/t/p/w185/n0ZGgoB2AexLx5iyNJ6OftI8Ji0.jpg"
+        },
+        {
+          "name": "Arthur Duarte",
+          "character": "Artur de Castro",
+          "profile": "https://image.tmdb.org/t/p/w185/sO1NX6WBzOh949HXAjk1zIvbhEX.jpg"
+        },
+        {
+          "name": "Teresa Gomes",
+          "character": "Teresa",
+          "profile": "https://image.tmdb.org/t/p/w185/2r4yqIKl5YxceYVqXxDIRkoO80O.jpg"
+        },
+        {
+          "name": "Luíza Durão",
+          "character": "Dona Cândida",
+          "profile": "https://image.tmdb.org/t/p/w185/vlfvk8mqf5pA80mZtOOweMhtjIr.jpg"
+        },
+        {
+          "name": "Laura Alves",
+          "character": "Laurinha",
+          "profile": "https://image.tmdb.org/t/p/w185/4R8qqriEJbGlNQxr1jDpNW68QTl.jpg"
+        }
+      ]
+    },
+    {
       "id": "bob_cuspe_nos_nao_gostamos_de_gente",
       "title": "Bob Cuspe Nos Nao Gostamos De Gente",
       "poster": "https://image.tmdb.org/t/p/w500/cdYMR3Pim5qPWmz45Y0KvXVJUDQ.jpg",
