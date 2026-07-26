@@ -660,10 +660,10 @@
         "https://image.tmdb.org/t/p/w500/oXRqROca0iCJrkOultglQ2gcc0Y.jpg",
         "https://image.tmdb.org/t/p/w500/xExgeiovpUKl2gvvEkECKky3zUA.jpg",
         "https://image.tmdb.org/t/p/w500/STOYx9aepaMnmhlGiWoDtkdzs1.jpg",
-        "https://image.tmdb.org/t/p/w500/xCYgD1N4S9at70p4WdskbVWHgZS.jpg",
-        "https://image.tmdb.org/t/p/w500/eknMcRQOkQ02K4PjmBzQcnf22vY.jpg"
+        "https://image.tmdb.org/t/p/w500/vWhWbA4w4Pn8WXo3C7VTOzCattZ.jpg",
+        "https://image.tmdb.org/t/p/w500/xCYgD1N4S9at70p4WdskbVWHgZS.jpg"
       ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/38byjV1A8WpA05xiXl0AXZCnCfv.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/cSlSMAN2iWwmDlEOOUt8PfOIaQa.jpg",
       "overview": "Dono de uma voz inconfundível e de performances memoráveis, Ney Matogrosso morava com os pais e irmãos na pequena cidade de Bela Vista (MS). Os embates com o pai, que insistia que o menino “virasse homem”, levaram Ney a se afastar da família, antes de enveredar para a vida artística. Anos depois de sair de casa, em São Paulo, estreou como vocalista dos Secos e Molhados, dando início às performances históricas que o definiram como um dos maiores artistas brasileiros da atualidade.",
       "year": "2025",
       "genres": [
@@ -4322,7 +4322,7 @@
       "genres": [
         "Documentário"
       ],
-      "rating": 4.6,
+      "rating": 4.5,
       "cast": [
         {
           "name": "Michael Jackson",
@@ -25830,8 +25830,7 @@
               "overview": "Tonho e Alika combinam de se casar no dia da festa da moagem em Barro Preto, e sua família comemora. Virgínia se irrita quando Mirinho se recusa a fugir com ela. Graça incentiva Mirinho a convencer Diógenes a abrir uma agência de seu banco em outra capital. Omar sonha em reencontrar Alika. Tonho revela seus planos de comprar terra para ele e os demais empregados, e Casemiro se emociona com o afilhado. Viriato teme ser expulso da igreja por conta da denúncia de Virgínia. Bartô tem um pesadelo com Veneranda. Mirinho se irrita com o sucesso de Tonho. Niara alerta Alika sobre a viabilidade de seu relacionamento com Tonho. Kênia se impressiona com a gentileza de Binta. Dumi e Ladisa contam a Akin que seu plano para conseguir recursos fracassou. Mirinho implora que Lúcia/Alika não se case com Tonho.",
               "still": "",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-07-25T21:00:00"
+              "locked": false
             },
             {
               "title": "A Nobreza do Amor Ep 105",
@@ -27751,8 +27750,7 @@
           "overview": "Tonho e Alika combinam de se casar no dia da festa da moagem em Barro Preto, e sua família comemora. Virgínia se irrita quando Mirinho se recusa a fugir com ela. Graça incentiva Mirinho a convencer Diógenes a abrir uma agência de seu banco em outra capital. Omar sonha em reencontrar Alika. Tonho revela seus planos de comprar terra para ele e os demais empregados, e Casemiro se emociona com o afilhado. Viriato teme ser expulso da igreja por conta da denúncia de Virgínia. Bartô tem um pesadelo com Veneranda. Mirinho se irrita com o sucesso de Tonho. Niara alerta Alika sobre a viabilidade de seu relacionamento com Tonho. Kênia se impressiona com a gentileza de Binta. Dumi e Ladisa contam a Akin que seu plano para conseguir recursos fracassou. Mirinho implora que Lúcia/Alika não se case com Tonho.",
           "still": "",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-07-25T21:00:00"
+          "locked": false
         },
         {
           "title": "A Nobreza do Amor Ep 105",
