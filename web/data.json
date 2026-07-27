@@ -1882,6 +1882,19 @@
       ]
     },
     {
+      "id": "a_casa_do_dragao_3_ep6",
+      "title": "A Casa Do Dragao 3 Ep6",
+      "poster": "/Pirataflix/assets/Capas/default.jpg",
+      "episodes": [
+        {
+          "title": "A Casa do Dragão 3 - EP 6",
+          "url": "https://edge1-waw-sprintcdn.r66nv9ed.com/hls2/08/11706/rvbdtv0iyn31_x/index-v1-a1.m3u8?t=Q-DYjDoAVkOPu739IVEb5LUUpfZYY5UiXlEBTQkCOFs&s=1785159269&e=10800&f=58532790&srv=1075&asn=13335&sp=5500&p=0&fr=rvbdtv0iyn31",
+          "episode": 6
+        }
+      ],
+      "type": "movie"
+    },
+    {
       "id": "resident_evil_4",
       "title": "Resident Evil 4",
       "poster": "https://image.tmdb.org/t/p/w500/aEXC9SmF3j6fWw3bIQTCe9DNqZQ.jpg",
