@@ -27015,3 +27015,39 @@ https://d38s7rrdbnh4oy.cloudfront.net/v1/master/215c0da80606fed29372070168106400
 #EXTINF:-1 group-title="📺 Geral" tvg-id="TV3CURITIBA.BR@SD" tvg-logo="https://eswqkrogupaisirwcsys.supabase.co/storage/v1/object/public/mbc-media/canais/1776133208960-o2l2f7f02f.png",TV 3 Curitiba
 https://stmv.webtvninjas.com.br/tv3/tv3/playlist.m3u8
 
+#EXTINF:-1 group-title="🎨 Cultura" tvg-id="ARTE1.BR@SD" tvg-logo="https://i.imgur.com/Ivnk7A6.png",Arte 1 (720p)
+http://45.162.64.114/ARTE1/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="BIS.BR@SD" tvg-logo="https://i.imgur.com/VUt1lmH.png",Bis (720p)
+http://167.250.126.140:7777/BIS-HD/index.m3u8
+
+#EXTINF:-1 group-title="⚽ Esportes" tvg-id="COMBATE.BR@SD" tvg-logo="https://i.imgur.com/ZPYK5jr.png",Combate (720p)
+http://143.14.134.107/167/index.m3u8
+
+#EXTINF:-1 group-title="🧸 Infantil" tvg-id="DUMDUM.BR@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/c/c0/DumDum_logo.svg",DumDum (720p)
+http://45.162.64.114/ZOOMOO_KIDS/index.m3u8
+
+#EXTINF:-1 group-title="🎭 Entretenimento" tvg-id="ELATINAMERICA.US@BRAZIL" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/E%21_Logo_2012.svg/500px-E%21_Logo_2012.svg.png",E! Latin America Brazil (720p)
+http://167.250.126.140:7777/E!-HD/index.m3u8
+
+#EXTINF:-1 group-title="🧸 Infantil" tvg-id="GLOOB.BR@SD" tvg-logo="https://i.imgur.com/N1BUULh.png",Gloob (720p)
+http://167.250.126.140:7777/GLOOB-HD/index.m3u8
+
+#EXTINF:-1 group-title="🧸 Infantil" tvg-id="GLOOBINHO.BR@SD" tvg-logo="https://i.imgur.com/UWkHErt.png",Gloobinho (720p)
+http://177.52.24.163/GLOOBINHO-HD/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="MEGAPIX.BR@SD" tvg-logo="https://i.imgur.com/qTYv5jt.png",Megapix (720p)
+http://167.250.126.140:7777/MEGAPIX-HD/index.m3u8
+
+#EXTINF:-1 group-title="🎭 Entretenimento" tvg-id="MULTISHOW.BR@SD" tvg-logo="https://i.imgur.com/bqVg8nT.png",Multishow (720p)
+http://167.250.126.140:7777/MULTISHOW-HD/index.m3u8
+
+#EXTINF:-1 group-title="🎵 Música" tvg-id="MUSICBOXBRAZIL.BR@SD" tvg-logo="https://i.imgur.com/CDPCF2X.png",Music Box Brazil (720p)
+http://45.190.28.50/MUSIC_BOX_HD/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="STUDIOUNIVERSALLATINAMERICA.US@BRAZIL" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/StudioUniversal2016.png/960px-StudioUniversal2016.png",Studio Universal Latin America Brazil (720p)
+http://167.250.126.140:7777/STUDIOUNIVERSAL-HD/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="WOOHOO.BR@SD" tvg-logo="https://i.imgur.com/me622pa.png",WooHoo (720p)
+http://45.162.64.114/WOOHOO/index.m3u8
+

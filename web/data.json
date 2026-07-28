@@ -26581,11 +26581,10 @@
               "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-105.mp4",
               "episode": 105,
               "air_date": "2026-07-27",
-              "overview": "Januário incentiva Tonho a viver seu amor com Lúcia/Alika. José pede que Geralda abrigue Malungo por uma noite, e Onildo se apresenta ao homem. Mirinho pressiona Manoel para falar bem de seu trabalho no banco diante de Casemiro. Manoel disfarça quando Ana Maria o questiona sobre a reação de Fortunato ao seu namoro.\n\nAlika comenta com Niara sua desconfiança de Malungo. Chinua conta a Akin, Ladisa e Dumi sobre a escolha de Jendal por Binta como sua nova rainha. Binta sonda Jendal sobre Alika. Malungo mostra a marca de sua lealdade a José e Cayman. Graça intercede junto a Marta em nome de Virgínia. Kênia pede ajuda a Binta. Tonho propõe se casar com Alika em uma cerimônia conduzida por Dona Menina.",
-              "still": "",
+              "overview": "Januário incentiva Tonho a viver seu amor com Lúcia/Alika. José pede que Geralda abrigue Malungo por uma noite. Manoel disfarça quando Ana Maria o questiona sobre a reação de Fortunato ao seu namoro. Alika comenta com Niara sua desconfiança de Malungo. Malungo mostra a marca de sua lealdade a José e Cayman. Tonho propõe se casar com Alika em uma cerimônia conduzida por Dona Menina.",
+              "still": "https://image.tmdb.org/t/p/w400/sr3ZJkNpQn2sefh4r1Lgt21vfgr.jpg",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-07-27T21:00:00"
+              "locked": false
             },
             {
               "title": "A Nobreza do Amor Ep 106",
@@ -28509,11 +28508,10 @@
           "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-105.mp4",
           "episode": 105,
           "air_date": "2026-07-27",
-          "overview": "Januário incentiva Tonho a viver seu amor com Lúcia/Alika. José pede que Geralda abrigue Malungo por uma noite, e Onildo se apresenta ao homem. Mirinho pressiona Manoel para falar bem de seu trabalho no banco diante de Casemiro. Manoel disfarça quando Ana Maria o questiona sobre a reação de Fortunato ao seu namoro.\n\nAlika comenta com Niara sua desconfiança de Malungo. Chinua conta a Akin, Ladisa e Dumi sobre a escolha de Jendal por Binta como sua nova rainha. Binta sonda Jendal sobre Alika. Malungo mostra a marca de sua lealdade a José e Cayman. Graça intercede junto a Marta em nome de Virgínia. Kênia pede ajuda a Binta. Tonho propõe se casar com Alika em uma cerimônia conduzida por Dona Menina.",
-          "still": "",
+          "overview": "Januário incentiva Tonho a viver seu amor com Lúcia/Alika. José pede que Geralda abrigue Malungo por uma noite. Manoel disfarça quando Ana Maria o questiona sobre a reação de Fortunato ao seu namoro. Alika comenta com Niara sua desconfiança de Malungo. Malungo mostra a marca de sua lealdade a José e Cayman. Tonho propõe se casar com Alika em uma cerimônia conduzida por Dona Menina.",
+          "still": "https://image.tmdb.org/t/p/w400/sr3ZJkNpQn2sefh4r1Lgt21vfgr.jpg",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-07-27T21:00:00"
+          "locked": false
         },
         {
           "title": "A Nobreza do Amor Ep 106",
@@ -66371,7 +66369,6 @@
       "overview": "Uma animação sobre uma típica família dos Estados Unidos. Homer é o pai de família nada saudável ou inteligente, que adora beber cerveja. Marge é a esposa e mãe de família dedicada. Bart é o filho de 10 anos, que não leva a escola a sério e tem orgulho disso. Lisa é a garota de 8 anos, um gênio não apreciado. E Maggie é a bebê que não larga a chupeta.",
       "year": "1989",
       "genres": [
-        "Família",
         "Animação",
         "Comédia"
       ],
@@ -107112,6 +107109,186 @@
       "episodes": [
         {
           "url": "https://stmv.webtvninjas.com.br/tv3/tv3/playlist.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "Arte1.br@SD",
+      "type": "tv",
+      "title": "Arte 1 (720p)",
+      "tvg_id": "Arte1.br@SD",
+      "tvg_logo": "https://i.imgur.com/Ivnk7A6.png",
+      "group": "🎨 Cultura",
+      "url": "http://45.162.64.114/ARTE1/index.m3u8",
+      "episodes": [
+        {
+          "url": "http://45.162.64.114/ARTE1/index.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "Bis.br@SD",
+      "type": "tv",
+      "title": "Bis (720p)",
+      "tvg_id": "Bis.br@SD",
+      "tvg_logo": "https://i.imgur.com/VUt1lmH.png",
+      "group": "📺 Geral",
+      "url": "http://167.250.126.140:7777/BIS-HD/index.m3u8",
+      "episodes": [
+        {
+          "url": "http://167.250.126.140:7777/BIS-HD/index.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "Combate.br@SD",
+      "type": "tv",
+      "title": "Combate (720p)",
+      "tvg_id": "Combate.br@SD",
+      "tvg_logo": "https://i.imgur.com/ZPYK5jr.png",
+      "group": "⚽ Esportes",
+      "url": "http://143.14.134.107/167/index.m3u8",
+      "episodes": [
+        {
+          "url": "http://143.14.134.107/167/index.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "DumDum.br@SD",
+      "type": "tv",
+      "title": "DumDum (720p)",
+      "tvg_id": "DumDum.br@SD",
+      "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/c/c0/DumDum_logo.svg",
+      "group": "🧸 Infantil",
+      "url": "http://45.162.64.114/ZOOMOO_KIDS/index.m3u8",
+      "episodes": [
+        {
+          "url": "http://45.162.64.114/ZOOMOO_KIDS/index.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "ELatinAmerica.us@Brazil",
+      "type": "tv",
+      "title": "E! Latin America Brazil (720p)",
+      "tvg_id": "ELatinAmerica.us@Brazil",
+      "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/E%21_Logo_2012.svg/500px-E%21_Logo_2012.svg.png",
+      "group": "🎭 Entretenimento",
+      "url": "http://167.250.126.140:7777/E!-HD/index.m3u8",
+      "episodes": [
+        {
+          "url": "http://167.250.126.140:7777/E!-HD/index.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "Gloob.br@SD",
+      "type": "tv",
+      "title": "Gloob (720p)",
+      "tvg_id": "Gloob.br@SD",
+      "tvg_logo": "https://i.imgur.com/N1BUULh.png",
+      "group": "🧸 Infantil",
+      "url": "http://167.250.126.140:7777/GLOOB-HD/index.m3u8",
+      "episodes": [
+        {
+          "url": "http://167.250.126.140:7777/GLOOB-HD/index.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "Gloobinho.br@SD",
+      "type": "tv",
+      "title": "Gloobinho (720p)",
+      "tvg_id": "Gloobinho.br@SD",
+      "tvg_logo": "https://i.imgur.com/UWkHErt.png",
+      "group": "🧸 Infantil",
+      "url": "http://177.52.24.163/GLOOBINHO-HD/index.m3u8",
+      "episodes": [
+        {
+          "url": "http://177.52.24.163/GLOOBINHO-HD/index.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "Megapix.br@SD",
+      "type": "tv",
+      "title": "Megapix (720p)",
+      "tvg_id": "Megapix.br@SD",
+      "tvg_logo": "https://i.imgur.com/qTYv5jt.png",
+      "group": "📺 Geral",
+      "url": "http://167.250.126.140:7777/MEGAPIX-HD/index.m3u8",
+      "episodes": [
+        {
+          "url": "http://167.250.126.140:7777/MEGAPIX-HD/index.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "Multishow.br@SD",
+      "type": "tv",
+      "title": "Multishow (720p)",
+      "tvg_id": "Multishow.br@SD",
+      "tvg_logo": "https://i.imgur.com/bqVg8nT.png",
+      "group": "🎭 Entretenimento",
+      "url": "http://167.250.126.140:7777/MULTISHOW-HD/index.m3u8",
+      "episodes": [
+        {
+          "url": "http://167.250.126.140:7777/MULTISHOW-HD/index.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "MusicBoxBrazil.br@SD",
+      "type": "tv",
+      "title": "Music Box Brazil (720p)",
+      "tvg_id": "MusicBoxBrazil.br@SD",
+      "tvg_logo": "https://i.imgur.com/CDPCF2X.png",
+      "group": "🎵 Música",
+      "url": "http://45.190.28.50/MUSIC_BOX_HD/index.m3u8",
+      "episodes": [
+        {
+          "url": "http://45.190.28.50/MUSIC_BOX_HD/index.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "StudioUniversalLatinAmerica.us@Brazil",
+      "type": "tv",
+      "title": "Studio Universal Latin America Brazil (720p)",
+      "tvg_id": "StudioUniversalLatinAmerica.us@Brazil",
+      "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/StudioUniversal2016.png/960px-StudioUniversal2016.png",
+      "group": "📺 Geral",
+      "url": "http://167.250.126.140:7777/STUDIOUNIVERSAL-HD/index.m3u8",
+      "episodes": [
+        {
+          "url": "http://167.250.126.140:7777/STUDIOUNIVERSAL-HD/index.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "WooHoo.br@SD",
+      "type": "tv",
+      "title": "WooHoo (720p)",
+      "tvg_id": "WooHoo.br@SD",
+      "tvg_logo": "https://i.imgur.com/me622pa.png",
+      "group": "📺 Geral",
+      "url": "http://45.162.64.114/WOOHOO/index.m3u8",
+      "episodes": [
+        {
+          "url": "http://45.162.64.114/WOOHOO/index.m3u8",
           "title": "AO VIVO"
         }
       ]
