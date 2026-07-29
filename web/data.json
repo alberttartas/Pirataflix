@@ -5254,7 +5254,7 @@
         {
           "name": "Charithra Chandran",
           "character": "Miss Wednesday / Nefertari Vivi",
-          "profile": "https://image.tmdb.org/t/p/w185/foOl6bn29j7XWSE9m2eYqnUdQuP.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/xLFgJmfXjd2Nnbjx3ZtavReGwjK.jpg"
         }
       ]
     },
@@ -26591,11 +26591,10 @@
               "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-106.mp4",
               "episode": 106,
               "air_date": "2026-07-28",
-              "overview": "Tonho e Alika combinam de se casar no dia da festa da moagem em Barro Preto, e sua família comemora. Virgínia se irrita quando Mirinho se recusa a fugir com ela. Graça incentiva Mirinho a convencer Diógenes a abrir uma agência de seu banco em outra capital. Omar sonha em reencontrar Alika. Tonho revela seus planos de comprar terra para ele e os demais empregados, e Casemiro se emociona com o afilhado.\n\nViriato teme ser expulso da igreja por conta da denúncia de Virgínia. Bartô tem um pesadelo com Veneranda. Mirinho se irrita com o sucesso de Tonho. Niara alerta Alika sobre a viabilidade de seu relacionamento com Tonho. Kênia se impressiona com a gentileza de Binta. Dumi e Ladisa contam a Akin que seu plano para conseguir recursos fracassou. Mirinho implora que Lúcia/Alika não se case com Tonho.",
-              "still": "",
+              "overview": "Tonho e Alika combinam de se casar no dia da festa da moagem em Barro Preto, e sua família comemora. Virgínia se irrita quando Mirinho se recusa a fugir com ela. Graça incentiva Mirinho a convencer Diógenes a abrir uma agência de seu banco em outra capital. Omar sonha em reencontrar Alika. Tonho revela seus planos de comprar terra para ele e os demais empregados.",
+              "still": "https://image.tmdb.org/t/p/w400/yZ5HRzVYmwHZmHtayqS8xpQxAPC.jpg",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-07-28T21:00:00"
+              "locked": false
             },
             {
               "title": "A Nobreza do Amor Ep 107",
@@ -28518,11 +28517,10 @@
           "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-106.mp4",
           "episode": 106,
           "air_date": "2026-07-28",
-          "overview": "Tonho e Alika combinam de se casar no dia da festa da moagem em Barro Preto, e sua família comemora. Virgínia se irrita quando Mirinho se recusa a fugir com ela. Graça incentiva Mirinho a convencer Diógenes a abrir uma agência de seu banco em outra capital. Omar sonha em reencontrar Alika. Tonho revela seus planos de comprar terra para ele e os demais empregados, e Casemiro se emociona com o afilhado.\n\nViriato teme ser expulso da igreja por conta da denúncia de Virgínia. Bartô tem um pesadelo com Veneranda. Mirinho se irrita com o sucesso de Tonho. Niara alerta Alika sobre a viabilidade de seu relacionamento com Tonho. Kênia se impressiona com a gentileza de Binta. Dumi e Ladisa contam a Akin que seu plano para conseguir recursos fracassou. Mirinho implora que Lúcia/Alika não se case com Tonho.",
-          "still": "",
+          "overview": "Tonho e Alika combinam de se casar no dia da festa da moagem em Barro Preto, e sua família comemora. Virgínia se irrita quando Mirinho se recusa a fugir com ela. Graça incentiva Mirinho a convencer Diógenes a abrir uma agência de seu banco em outra capital. Omar sonha em reencontrar Alika. Tonho revela seus planos de comprar terra para ele e os demais empregados.",
+          "still": "https://image.tmdb.org/t/p/w400/yZ5HRzVYmwHZmHtayqS8xpQxAPC.jpg",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-07-28T21:00:00"
+          "locked": false
         },
         {
           "title": "A Nobreza do Amor Ep 107",
@@ -66409,7 +66407,7 @@
     {
       "id": "dragon_ball_z",
       "title": "Dragon Ball Z",
-      "poster": "https://image.tmdb.org/t/p/w500/kbkuYkaFsDwL6cyMgnBf77LczEo.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/oQ5CnVj3TRifXl2bIOri6H6rfNe.jpg",
       "seasons": [
         {
           "season": 1,
@@ -67953,7 +67951,6 @@
       "category": "animes",
       "local_poster": "/Pirataflix/assets/Capas/dragon_ball_z.jpg",
       "posters": [
-        "https://image.tmdb.org/t/p/w500/kbkuYkaFsDwL6cyMgnBf77LczEo.jpg",
         "https://image.tmdb.org/t/p/w500/oQ5CnVj3TRifXl2bIOri6H6rfNe.jpg",
         "https://image.tmdb.org/t/p/w500/dBsDWUcdfbuZwglgyeeQ9ChRoS4.jpg",
         "https://image.tmdb.org/t/p/w500/yfyToia25GnvjY7FPAGaCm3lKRc.jpg",
@@ -67962,7 +67959,7 @@
         "https://image.tmdb.org/t/p/w500/jB9l4mp0bzBgzE5y4tvBH6AMeMk.jpg"
       ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/ydf1CeiBLfdxiyNTpskM0802TKl.jpg",
-      "overview": "Dragon Ball Z (ドラゴンボールZ, Doragon Bōru Zetto) foi uma série de animação produzida pela Toei Animation. Baseada na série de mangá Dragon Ball escrita por Akira Toriyama, Dragon Ball Z corresponde aos volumes 17 ao 42 do mangá que foi publicado na revista, Weekly Shonen Jump, de 1988 a 1995, e estreou no Japão na Fuji TV em 26 de abril de 1989, e terminou dia 31 de janeiro de 1996 com o total de 291 episódios, antes de ser dublada em diversos territórios ao redor do mundo, incluindo Estados Unidos, Austrália, Europa, Índia e Brasil. A série já foi exibida em mais de 80 países ao redor do mundo.",
+      "overview": "Now happily married and with a son, martial arts champion Goku must defend Earth from a series of extraterrestrial invaders bent on destruction.",
       "year": "1989",
       "rating": 8.4,
       "cast": [
@@ -107289,6 +107286,96 @@
       "episodes": [
         {
           "url": "http://45.162.64.114/WOOHOO/index.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "AMCLatinAmerica.us@Brazil",
+      "type": "tv",
+      "title": "AMC Latin America Brazil (720p)",
+      "tvg_id": "AMCLatinAmerica.us@Brazil",
+      "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/AMC_logo_2019.svg/960px-AMC_logo_2019.svg.png",
+      "group": "🎬 Filmes",
+      "url": "http://170.83.49.66:8083/AMCHD/index.m3u8",
+      "episodes": [
+        {
+          "url": "http://170.83.49.66:8083/AMCHD/index.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "ELatinAmerica.us@Brazil",
+      "type": "tv",
+      "title": "E! Latin America Brazil (432p)",
+      "tvg_id": "ELatinAmerica.us@Brazil",
+      "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/E%21_Logo_2012.svg/500px-E%21_Logo_2012.svg.png",
+      "group": "🎭 Entretenimento",
+      "url": "http://145.239.5.177/111/index.m3u8",
+      "episodes": [
+        {
+          "url": "http://145.239.5.177/111/index.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "Megapix.br@SD",
+      "type": "tv",
+      "title": "Megapix (720p)",
+      "tvg_id": "Megapix.br@SD",
+      "tvg_logo": "https://i.imgur.com/qTYv5jt.png",
+      "group": "📺 Geral",
+      "url": "http://177.52.24.163/MEGAPIX-HD/index.m3u8",
+      "episodes": [
+        {
+          "url": "http://177.52.24.163/MEGAPIX-HD/index.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "SBTNews.br@SD",
+      "type": "tv",
+      "title": "SBT News (720p)",
+      "tvg_id": "SBTNews.br@SD",
+      "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/4/42/SBT_News_2025.svg",
+      "group": "📰 Notícias",
+      "url": "https://dai.google.com/linear/hls/event/1XSOdtQ0SH2G8OEmEfGgjQ/master.m3u8",
+      "episodes": [
+        {
+          "url": "https://dai.google.com/linear/hls/event/1XSOdtQ0SH2G8OEmEfGgjQ/master.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "StudioUniversalLatinAmerica.us@Brazil",
+      "type": "tv",
+      "title": "Studio Universal Latin America Brazil (720p)",
+      "tvg_id": "StudioUniversalLatinAmerica.us@Brazil",
+      "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/StudioUniversal2016.png/960px-StudioUniversal2016.png",
+      "group": "📺 Geral",
+      "url": "http://177.52.24.163/STUDIO-UNIVERSAL-HD/index.m3u8",
+      "episodes": [
+        {
+          "url": "http://177.52.24.163/STUDIO-UNIVERSAL-HD/index.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "USANetworkLatinAmerica.us@Brazil",
+      "type": "tv",
+      "title": "USA Network Latin America Brazil (720p)",
+      "tvg_id": "USANetworkLatinAmerica.us@Brazil",
+      "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/USA_Network_logo_%282016%29.svg/960px-USA_Network_logo_%282016%29.svg.png",
+      "group": "📺 Geral",
+      "url": "http://177.52.24.163/USA-HD/index.m3u8",
+      "episodes": [
+        {
+          "url": "http://177.52.24.163/USA-HD/index.m3u8",
           "title": "AO VIVO"
         }
       ]

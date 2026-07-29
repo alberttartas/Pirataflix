@@ -2,8 +2,8 @@
 #EXTINF:-1 tvg-id="AdrenalinaPuraTV.us@Brazil" tvg-logo="https://i.imgur.com/Pvid2iH.png" group-title="🎬 Filmes",Adrenalina Pura TV
 https://jmp2.uk/plu-61b790b985706b00072cb797.m3u8
 
-#EXTINF:-1 tvg-id="AMCLatinAmerica.us@Brazil" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/AMC_logo_2019.svg/960px-AMC_logo_2019.svg.png" group-title="🎬 Filmes",like Gecko) Chrome/124.0.0.0 Safari/537.36" group-title="Movies",AMC Latin America Brazil (1080p)
-https://cdn-5.nxplay.com.br/AMC_BRASIL/index.m3u8
+#EXTINF:-1 tvg-id="AMCLatinAmerica.us@Brazil" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/AMC_logo_2019.svg/960px-AMC_logo_2019.svg.png" group-title="🎬 Filmes",AMC Latin America Brazil (720p)
+http://170.83.49.66:8083/AMCHD/index.m3u8
 
 #EXTINF:-1 tvg-id="AXN.br@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/AXN_logo_%282015%29.svg/960px-AXN_logo_%282015%29.svg.png" group-title="🎬 Filmes",AXN (720p)
 http://45.190.28.50/AXN_HD/index.m3u8
@@ -76,22 +76,4 @@ https://jmp2.uk/plu-66aa67493a4ad2000806d91b.m3u8
 
 #EXTINF:-1 tvg-id="SonyMovies.br@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Sony_Movies_Logo.svg/500px-Sony_Movies_Logo.svg.png" group-title="🎬 Filmes",Sony Movies (720p)
 http://45.162.64.114/SONY_MOVIES/index.m3u8
-
-#EXTINF:-1 tvg-id="TelecineAction.br@SD" tvg-logo="https://i.imgur.com/BHYWG0h.png" group-title="🎬 Filmes",Telecine Action (720p)
-http://167.250.126.140:7777/TCACTION-HD/index.m3u8
-
-#EXTINF:-1 tvg-id="TelecineCult.br@SD" tvg-logo="https://i.imgur.com/6GuHXnr.png" group-title="🎬 Filmes",Telecine Cult (720p)
-http://167.250.126.140:7777/TCCULT-HD/index.m3u8
-
-#EXTINF:-1 tvg-id="TelecineFun.br@SD" tvg-logo="https://i.imgur.com/MO2Ynki.png" group-title="🎬 Filmes",Telecine Fun (720p)
-http://167.250.126.140:7777/TCFUN-HD/index.m3u8
-
-#EXTINF:-1 tvg-id="TelecinePipoca.br@SD" tvg-logo="https://i.imgur.com/hW9JYXr.png" group-title="🎬 Filmes",Telecine Pipoca (720p)
-http://167.250.126.140:7777/TCPIPOCA-HD/index.m3u8
-
-#EXTINF:-1 tvg-id="TelecinePremium.br@SD" tvg-logo="https://i.imgur.com/uVFgIr8.png" group-title="🎬 Filmes",Telecine Premium (720p)
-http://167.250.126.140:7777/TCPREMIUM-HD/index.m3u8
-
-#EXTINF:-1 tvg-id="TelecineTouch.br@SD" tvg-logo="https://i.imgur.com/Nky0hRo.png" group-title="🎬 Filmes",Telecine Touch (720p)
-http://167.250.126.140:7777/TELECINETOUCH-HD/index.m3u8
 

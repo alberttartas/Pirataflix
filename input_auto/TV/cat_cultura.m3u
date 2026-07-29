@@ -2,9 +2,6 @@
 #EXTINF:-1 tvg-id="Arte1.br@SD" tvg-logo="https://i.imgur.com/Ivnk7A6.png" group-title="🎨 Cultura",Arte 1 (720p)
 http://45.162.64.114/ARTE1/index.m3u8
 
-#EXTINF:-1 tvg-id="Curta.br@SD" tvg-logo="https://i.imgur.com/Rwrh0zU.png" group-title="🎨 Cultura",Curta! (720p)
-http://167.250.126.140:7777/CURTA!-HD/index.m3u8
-
 #EXTINF:-1 tvg-id="STZTV.br@SD" tvg-logo="https://i.imgur.com/SeF2I7q.png" group-title="🎨 Cultura",STZ TV (1080p)
 https://cdn.live.br1.jmvstream.com/webtv/AVJ-12952/playlist/playlist.m3u8
 

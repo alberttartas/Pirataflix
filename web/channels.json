@@ -22245,5 +22245,95 @@
         "title": "AO VIVO"
       }
     ]
+  },
+  {
+    "id": "AMCLatinAmerica.us@Brazil",
+    "type": "tv",
+    "title": "AMC Latin America Brazil (720p)",
+    "tvg_id": "AMCLatinAmerica.us@Brazil",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/AMC_logo_2019.svg/960px-AMC_logo_2019.svg.png",
+    "group": "🎬 Filmes",
+    "url": "http://170.83.49.66:8083/AMCHD/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://170.83.49.66:8083/AMCHD/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "ELatinAmerica.us@Brazil",
+    "type": "tv",
+    "title": "E! Latin America Brazil (432p)",
+    "tvg_id": "ELatinAmerica.us@Brazil",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/E%21_Logo_2012.svg/500px-E%21_Logo_2012.svg.png",
+    "group": "🎭 Entretenimento",
+    "url": "http://145.239.5.177/111/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://145.239.5.177/111/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "Megapix.br@SD",
+    "type": "tv",
+    "title": "Megapix (720p)",
+    "tvg_id": "Megapix.br@SD",
+    "tvg_logo": "https://i.imgur.com/qTYv5jt.png",
+    "group": "📺 Geral",
+    "url": "http://177.52.24.163/MEGAPIX-HD/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://177.52.24.163/MEGAPIX-HD/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "SBTNews.br@SD",
+    "type": "tv",
+    "title": "SBT News (720p)",
+    "tvg_id": "SBTNews.br@SD",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/4/42/SBT_News_2025.svg",
+    "group": "📰 Notícias",
+    "url": "https://dai.google.com/linear/hls/event/1XSOdtQ0SH2G8OEmEfGgjQ/master.m3u8",
+    "episodes": [
+      {
+        "url": "https://dai.google.com/linear/hls/event/1XSOdtQ0SH2G8OEmEfGgjQ/master.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "StudioUniversalLatinAmerica.us@Brazil",
+    "type": "tv",
+    "title": "Studio Universal Latin America Brazil (720p)",
+    "tvg_id": "StudioUniversalLatinAmerica.us@Brazil",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/StudioUniversal2016.png/960px-StudioUniversal2016.png",
+    "group": "📺 Geral",
+    "url": "http://177.52.24.163/STUDIO-UNIVERSAL-HD/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://177.52.24.163/STUDIO-UNIVERSAL-HD/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "USANetworkLatinAmerica.us@Brazil",
+    "type": "tv",
+    "title": "USA Network Latin America Brazil (720p)",
+    "tvg_id": "USANetworkLatinAmerica.us@Brazil",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/USA_Network_logo_%282016%29.svg/960px-USA_Network_logo_%282016%29.svg.png",
+    "group": "📺 Geral",
+    "url": "http://177.52.24.163/USA-HD/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://177.52.24.163/USA-HD/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
   }
 ]
