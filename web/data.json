@@ -1847,7 +1847,7 @@
         {
           "name": "Courteney Cox",
           "character": "Gale Weathers",
-          "profile": "https://image.tmdb.org/t/p/w185/qyGgNpvXFGHAxdG4ieFmRL3JiWq.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/cSOORhCRPJiwKghozXVXrOBi3Tp.jpg"
         },
         {
           "name": "Isabel May",
@@ -12313,7 +12313,7 @@
     {
       "id": "alem_do_tempo",
       "title": "Alem Do Tempo",
-      "poster": "https://image.tmdb.org/t/p/w500/ySntcQ597xOKM4nuaJBAZeIck67.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/vSoqTBpNvslaIsNUR0zyZTbjPey.jpg",
       "seasons": [
         {
           "season": 1,
@@ -13937,14 +13937,13 @@
       "category": "novelas",
       "local_poster": "/Pirataflix/assets/Capas/default.jpg",
       "posters": [
-        "https://image.tmdb.org/t/p/w500/ySntcQ597xOKM4nuaJBAZeIck67.jpg",
         "https://image.tmdb.org/t/p/w500/vSoqTBpNvslaIsNUR0zyZTbjPey.jpg",
+        "https://image.tmdb.org/t/p/w500/ySntcQ597xOKM4nuaJBAZeIck67.jpg",
         "https://image.tmdb.org/t/p/w500/hYSlpgcjhXa4LJ01GvcLHV1D3Hu.jpg",
         "https://image.tmdb.org/t/p/w500/806nRtr42FxowSJTWk88IZpWHrS.jpg",
-        "https://image.tmdb.org/t/p/w500/m6xoXaTRdEERnS0peBT1KtkxVS1.jpg",
-        "https://image.tmdb.org/t/p/w500/uhQXTQpzfn8DuCEBBZCx5q0dpij.jpg"
+        "https://image.tmdb.org/t/p/w500/m6xoXaTRdEERnS0peBT1KtkxVS1.jpg"
       ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/chKuEdL9JJ6ZPJPrjLXYiACLFh9.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/wkbgTml2S4LszAjPbkruyC1KvYB.jpg",
       "overview": "A história de amor entre Lívia e Felipe. Almas gêmeas e vidas do século XIX se reencontram 150 anos depois e podem corrigir antigos erros.",
       "year": "2015",
       "genres": [
@@ -26604,8 +26603,7 @@
               "overview": "Mirinho declara seu amor por Lúcia/Alika. Caetana se orgulha das atitudes de Tonho em relação a seu trabalho no engenho. Kênia pede que Chinua lhe dê notícias sobre Dumi. Virgínia ouve uma conversa entre Belmira e Diógenes, e acaba descobrindo que Ritinha é sua irmã. Virgínia ameaça Diógenes para deixar seu trabalho na igreja e dar uma promoção a Mirinho.\n\nBelmira avisa a Viriato que Virgínia não irá mais ajudá-lo. Binta se aproxima de Kênia, que acusa Jendal de tirania. Embriagado, Mirinho garante a Manoel que não deixará Tonho brilhar na festa da moagem, e Sebastião ouve. Mirinho confronta Tonho e afirma que o rapaz não se casará com Lúcia/Alika.",
               "still": "",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-07-29T21:00:00"
+              "locked": false
             },
             {
               "title": "A Nobreza do Amor Ep 108",
@@ -28530,8 +28528,7 @@
           "overview": "Mirinho declara seu amor por Lúcia/Alika. Caetana se orgulha das atitudes de Tonho em relação a seu trabalho no engenho. Kênia pede que Chinua lhe dê notícias sobre Dumi. Virgínia ouve uma conversa entre Belmira e Diógenes, e acaba descobrindo que Ritinha é sua irmã. Virgínia ameaça Diógenes para deixar seu trabalho na igreja e dar uma promoção a Mirinho.\n\nBelmira avisa a Viriato que Virgínia não irá mais ajudá-lo. Binta se aproxima de Kênia, que acusa Jendal de tirania. Embriagado, Mirinho garante a Manoel que não deixará Tonho brilhar na festa da moagem, e Sebastião ouve. Mirinho confronta Tonho e afirma que o rapaz não se casará com Lúcia/Alika.",
           "still": "",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-07-29T21:00:00"
+          "locked": false
         },
         {
           "title": "A Nobreza do Amor Ep 108",
@@ -42471,7 +42468,7 @@
       "backdrop": "https://image.tmdb.org/t/p/w1280/1b2OYNA3Ikq9BBwk6If8As89bge.jpg",
       "overview": "Um novato ambiciona liderar o submundo do jogo do bicho no Rio de Janeiro e acaba se envolvendo em uma perigosa rede de traições, luxúria e sangue.",
       "year": "2025",
-      "rating": 7.7,
+      "rating": 7.8,
       "cast": [
         {
           "name": "André Lamoglia",
@@ -66407,7 +66404,7 @@
     {
       "id": "dragon_ball_z",
       "title": "Dragon Ball Z",
-      "poster": "https://image.tmdb.org/t/p/w500/oQ5CnVj3TRifXl2bIOri6H6rfNe.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/kbkuYkaFsDwL6cyMgnBf77LczEo.jpg",
       "seasons": [
         {
           "season": 1,
@@ -67951,6 +67948,7 @@
       "category": "animes",
       "local_poster": "/Pirataflix/assets/Capas/dragon_ball_z.jpg",
       "posters": [
+        "https://image.tmdb.org/t/p/w500/kbkuYkaFsDwL6cyMgnBf77LczEo.jpg",
         "https://image.tmdb.org/t/p/w500/oQ5CnVj3TRifXl2bIOri6H6rfNe.jpg",
         "https://image.tmdb.org/t/p/w500/dBsDWUcdfbuZwglgyeeQ9ChRoS4.jpg",
         "https://image.tmdb.org/t/p/w500/yfyToia25GnvjY7FPAGaCm3lKRc.jpg",
@@ -67959,7 +67957,7 @@
         "https://image.tmdb.org/t/p/w500/jB9l4mp0bzBgzE5y4tvBH6AMeMk.jpg"
       ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/ydf1CeiBLfdxiyNTpskM0802TKl.jpg",
-      "overview": "Now happily married and with a son, martial arts champion Goku must defend Earth from a series of extraterrestrial invaders bent on destruction.",
+      "overview": "Dragon Ball Z (ドラゴンボールZ, Doragon Bōru Zetto) foi uma série de animação produzida pela Toei Animation. Baseada na série de mangá Dragon Ball escrita por Akira Toriyama, Dragon Ball Z corresponde aos volumes 17 ao 42 do mangá que foi publicado na revista, Weekly Shonen Jump, de 1988 a 1995, e estreou no Japão na Fuji TV em 26 de abril de 1989, e terminou dia 31 de janeiro de 1996 com o total de 291 episódios, antes de ser dublada em diversos territórios ao redor do mundo, incluindo Estados Unidos, Austrália, Europa, Índia e Brasil. A série já foi exibida em mais de 80 países ao redor do mundo.",
       "year": "1989",
       "rating": 8.4,
       "cast": [
@@ -84997,7 +84995,7 @@
         "Animação",
         "Kids"
       ],
-      "rating": 10.0,
+      "rating": 7.5,
       "cast": [
         {
           "name": "Tiffany Hofstetter",
