@@ -5355,7 +5355,8 @@
       "category": "series",
       "local_poster": "/Pirataflix/assets/Capas/default.jpg",
       "posters": [
-        "https://image.tmdb.org/t/p/w500/iEcju8TBN5jmZswIpQXV5YTJB9L.jpg"
+        "https://image.tmdb.org/t/p/w500/iEcju8TBN5jmZswIpQXV5YTJB9L.jpg",
+        "https://image.tmdb.org/t/p/w500/drSGCg2y7o3UH1PIIb5Ck3PPGi5.jpg"
       ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/swmZEoWpW7tBhaIszLtIE8rgQkO.jpg",
       "overview": "Mauricio é um ex-jogador que tenta se firmar como agente no milionário mercado do futebol . Em sua nova trajetória, ele precisa lidar com o fantasma do seu fracasso como jogador e com a relação conturbada com o pai.",
@@ -26600,8 +26601,8 @@
               "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-107.mp4",
               "episode": 107,
               "air_date": "2026-07-29",
-              "overview": "Mirinho declara seu amor por Lúcia/Alika. Caetana se orgulha das atitudes de Tonho em relação a seu trabalho no engenho. Kênia pede que Chinua lhe dê notícias sobre Dumi. Virgínia ouve uma conversa entre Belmira e Diógenes, e acaba descobrindo que Ritinha é sua irmã. Virgínia ameaça Diógenes para deixar seu trabalho na igreja e dar uma promoção a Mirinho.\n\nBelmira avisa a Viriato que Virgínia não irá mais ajudá-lo. Binta se aproxima de Kênia, que acusa Jendal de tirania. Embriagado, Mirinho garante a Manoel que não deixará Tonho brilhar na festa da moagem, e Sebastião ouve. Mirinho confronta Tonho e afirma que o rapaz não se casará com Lúcia/Alika.",
-              "still": "",
+              "overview": "Virgínia ouve uma conversa entre Belmira e Diógenes, e acaba descobrindo que Ritinha é sua irmã. Virgínia ameaça Diógenes para deixar seu trabalho na igreja e dar uma promoção a Mirinho. Belmira avisa a Viriato que Virgínia não irá mais ajudá-lo. Embriagado, Mirinho garante a Manoel que não deixará Tonho brilhar na festa da moagem, e Sebastião ouve. Mirinho confronta Tonho.",
+              "still": "https://image.tmdb.org/t/p/w400/625addEMOjunBytOijYesSxjQBU.jpg",
               "guest_stars": [],
               "locked": false
             },
@@ -26610,11 +26611,10 @@
               "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-108.mp4",
               "episode": 108,
               "air_date": "2026-07-30",
-              "overview": "Embriagado, Mirinho confronta Tonho, que o leva para casa. Mirinho afirma a sua família que ama Lúcia/Alika, e Casemiro tenta se desculpar com Tonho. Virgínia estranha a ausência de Mirinho, e chantageia Diógenes. Alika se surpreende ao saber que Tonho decidiu comprar terras para os dois. Omar chega a Recife. As famílias de Salma e Fuad celebram seu noivado oficial, apesar do desconforto da moça. Binta faz elogios a Jendal.\n\nDumi pergunta a Kênia se ela está pronta para romper de vez com Jendal. Sebastião conta a Virgínia sobre a embriaguez de Mirinho. Virgínia avisa a Mirinho que eles deixarão Barro Preto. Viriato repreende Diógenes por suspender o castigo de Virgínia. Jendal recebe um telegrama de Malungo.",
-              "still": "",
+              "overview": "Embriagado, Mirinho confronta Tonho, que o leva para casa. Mirinho afirma a sua família que ama Lúcia/Alika, e Casemiro tenta se desculpar com Tonho. Alika se surpreende ao saber que Tonho decidiu comprar terras para os dois. Omar chega a Recife. As famílias de Salma e Fuad celebram seu noivado oficial, apesar do desconforto da moça. Sebastião conta a Virgínia sobre a embriaguez de Mirinho.",
+              "still": "https://image.tmdb.org/t/p/w400/npmIM1JLlO4AWGsP4GODEAJ3ZPs.jpg",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-07-30T21:00:00"
+              "locked": false
             },
             {
               "title": "A Nobreza do Amor Ep 109",
@@ -28525,8 +28525,8 @@
           "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-107.mp4",
           "episode": 107,
           "air_date": "2026-07-29",
-          "overview": "Mirinho declara seu amor por Lúcia/Alika. Caetana se orgulha das atitudes de Tonho em relação a seu trabalho no engenho. Kênia pede que Chinua lhe dê notícias sobre Dumi. Virgínia ouve uma conversa entre Belmira e Diógenes, e acaba descobrindo que Ritinha é sua irmã. Virgínia ameaça Diógenes para deixar seu trabalho na igreja e dar uma promoção a Mirinho.\n\nBelmira avisa a Viriato que Virgínia não irá mais ajudá-lo. Binta se aproxima de Kênia, que acusa Jendal de tirania. Embriagado, Mirinho garante a Manoel que não deixará Tonho brilhar na festa da moagem, e Sebastião ouve. Mirinho confronta Tonho e afirma que o rapaz não se casará com Lúcia/Alika.",
-          "still": "",
+          "overview": "Virgínia ouve uma conversa entre Belmira e Diógenes, e acaba descobrindo que Ritinha é sua irmã. Virgínia ameaça Diógenes para deixar seu trabalho na igreja e dar uma promoção a Mirinho. Belmira avisa a Viriato que Virgínia não irá mais ajudá-lo. Embriagado, Mirinho garante a Manoel que não deixará Tonho brilhar na festa da moagem, e Sebastião ouve. Mirinho confronta Tonho.",
+          "still": "https://image.tmdb.org/t/p/w400/625addEMOjunBytOijYesSxjQBU.jpg",
           "guest_stars": [],
           "locked": false
         },
@@ -28535,11 +28535,10 @@
           "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-108.mp4",
           "episode": 108,
           "air_date": "2026-07-30",
-          "overview": "Embriagado, Mirinho confronta Tonho, que o leva para casa. Mirinho afirma a sua família que ama Lúcia/Alika, e Casemiro tenta se desculpar com Tonho. Virgínia estranha a ausência de Mirinho, e chantageia Diógenes. Alika se surpreende ao saber que Tonho decidiu comprar terras para os dois. Omar chega a Recife. As famílias de Salma e Fuad celebram seu noivado oficial, apesar do desconforto da moça. Binta faz elogios a Jendal.\n\nDumi pergunta a Kênia se ela está pronta para romper de vez com Jendal. Sebastião conta a Virgínia sobre a embriaguez de Mirinho. Virgínia avisa a Mirinho que eles deixarão Barro Preto. Viriato repreende Diógenes por suspender o castigo de Virgínia. Jendal recebe um telegrama de Malungo.",
-          "still": "",
+          "overview": "Embriagado, Mirinho confronta Tonho, que o leva para casa. Mirinho afirma a sua família que ama Lúcia/Alika, e Casemiro tenta se desculpar com Tonho. Alika se surpreende ao saber que Tonho decidiu comprar terras para os dois. Omar chega a Recife. As famílias de Salma e Fuad celebram seu noivado oficial, apesar do desconforto da moça. Sebastião conta a Virgínia sobre a embriaguez de Mirinho.",
+          "still": "https://image.tmdb.org/t/p/w400/npmIM1JLlO4AWGsP4GODEAJ3ZPs.jpg",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-07-30T21:00:00"
+          "locked": false
         },
         {
           "title": "A Nobreza do Amor Ep 109",
@@ -47279,7 +47278,9 @@
         "https://image.tmdb.org/t/p/w500/kUWvvMkNIf21UUDmHjYw55v6o7C.jpg",
         "https://image.tmdb.org/t/p/w500/7vd7jaZGLBD8rKKLDufctKal84A.jpg",
         "https://image.tmdb.org/t/p/w500/xon9xbgCFOaqORqQ7g00ZnnOvPL.jpg",
-        "https://image.tmdb.org/t/p/w500/b3jNa6UeL1oZJpqERuBeAZToI1R.jpg"
+        "https://image.tmdb.org/t/p/w500/b3jNa6UeL1oZJpqERuBeAZToI1R.jpg",
+        "https://image.tmdb.org/t/p/w500/er5PxQzjTwaW6L1pZpuOMRON21c.jpg",
+        "https://image.tmdb.org/t/p/w500/fSHF3lIecK58kxgVi5Fd8bleJ5z.jpg"
       ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/bEKRyT7WN5TjFKv0JTWI2cyNlak.jpg",
       "overview": "Entre lendas e mistérios, um homem sem posses e sozinho no mundo finca seu destino aos pés de um jequitibá. Tendo a natureza como testemunha ele renasce e estabelece um pacto que o acompanhará ao longo de toda a sua trajetória.",
@@ -107374,6 +107375,21 @@
       "episodes": [
         {
           "url": "http://177.52.24.163/USA-HD/index.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "ESPN3.br@SD",
+      "type": "tv",
+      "title": "ESPN 3 (1080p)",
+      "tvg_id": "ESPN3.br@SD",
+      "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/ESPN3_Logo.png/960px-ESPN3_Logo.png",
+      "group": "⚽ Esportes",
+      "url": "http://190.83.2.182:8090/ESPN3/index.m3u8",
+      "episodes": [
+        {
+          "url": "http://190.83.2.182:8090/ESPN3/index.m3u8",
           "title": "AO VIVO"
         }
       ]
