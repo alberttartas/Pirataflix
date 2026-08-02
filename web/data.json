@@ -1558,7 +1558,7 @@
         {
           "name": "Millie Bobby Brown",
           "character": "Madison Russell",
-          "profile": "https://image.tmdb.org/t/p/w185/cQoPC18cHBN1zYTbOy5hbpjZ5ls.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/kHO7hdNEVuTnQ0OjjrxP1RcAa0e.jpg"
         },
         {
           "name": "Ken Watanabe",
@@ -8047,7 +8047,9 @@
         "https://image.tmdb.org/t/p/w500/ZfSDNlqXiA8T5bghZMWaEz1sgn.jpg",
         "https://image.tmdb.org/t/p/w500/XoMNsaYs3mVF2JZL9ng1P4kAaZ.jpg",
         "https://image.tmdb.org/t/p/w500/gnqG5Ou3esy5OkhEK5w42vdaq9I.jpg",
-        "https://image.tmdb.org/t/p/w500/mOuC8mgpDdL3IXwL5kvMdWQ4N77.jpg"
+        "https://image.tmdb.org/t/p/w500/mOuC8mgpDdL3IXwL5kvMdWQ4N77.jpg",
+        "https://image.tmdb.org/t/p/w500/q4hwxheSR79vTf3bUIYMDRYZ9MV.jpg",
+        "https://image.tmdb.org/t/p/w500/ycQU3AQQyrOPcyjkNSH8eY9Fy6N.jpg"
       ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/rdeEKPvdDKt5b5lcY3bHsUfrwjU.jpg",
       "overview": "Uma jovem órfã e sua nova família se unem em uma busca de vingança contra os responsáveis por suas tragédias pessoais.",
@@ -26621,8 +26623,8 @@
               "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-109.mp4",
               "episode": 109,
               "air_date": "2026-07-31",
-              "overview": "Jendal se irrita com as notícias de Malungo, que esconde do rei o fato de ter encontrado Alika. Kênia diz a Dumi que está pronta para se unir aos rebeldes contra Jendal. Maria Helena confessa a Dôra o motivo de ter se casado com Fortunato. Com receio das ameaças de Virgínia, Diógenes inventa uma desculpa para promover Mirinho no banco.\n\nMirinho questiona Virgínia sobre as mudanças de comportamento de Diógenes. Viriato tenta dissuadir Bartô da ideia de santificar Veneranda. Mirinho anuncia sua promoção, e Ana Maria se preocupa com o destino de Manoel. Binta ouve uma conversa de Kênia e Chinua e descobre que Jendal mentiu para ela.",
-              "still": "",
+              "overview": "Jendal se irrita com as notícias de Malungo, que esconde do rei o fato de ter encontrado Alika. Kênia diz a Dumi que está pronta para se unir aos rebeldes contra Jendal. Maria Helena confessa a Dôra o motivo de ter se casado com Fortunato. Com receio das ameaças de Virgínia, Diógenes inventa uma desculpa para promover Mirinho no banco.",
+              "still": "https://image.tmdb.org/t/p/w400/9y7aB7vCfeExJTHAPGqz1KDLZgA.jpg",
               "guest_stars": [],
               "locked": false
             },
@@ -26634,8 +26636,7 @@
               "overview": "Binta descobre que Jendal deseja punir Alika com a morte. Kênia pede que Chinua entregue sua carta a Dumi. Mirinho convence Virgínia a adiar o anúncio da data de casamento. Manoel desabafa com Ana Maria sobre a promoção de Mirinho. Tonho e Lúcia/Alika comemoram quando Viriato garante que dará sua bênção à união dos dois, ao lado de Dona Menina.\n\nDumi vibra ao receber a notícia de que Kênia se juntará a ele, Akin e Ladisa. Dona Menina tem um mau pressentimento, e Tonho se aflige. Mirinho se nega a comparecer à festa de noivado de Tonho e Lúcia/Alika. Omar pede informações sobre Lúcia a Mirinho e Virgínia. Tonho e Alika ficam noivos.",
               "still": "",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-08-01T21:00:00"
+              "locked": false
             },
             {
               "title": "A Nobreza do Amor Ep 111",
@@ -28544,8 +28545,8 @@
           "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-109.mp4",
           "episode": 109,
           "air_date": "2026-07-31",
-          "overview": "Jendal se irrita com as notícias de Malungo, que esconde do rei o fato de ter encontrado Alika. Kênia diz a Dumi que está pronta para se unir aos rebeldes contra Jendal. Maria Helena confessa a Dôra o motivo de ter se casado com Fortunato. Com receio das ameaças de Virgínia, Diógenes inventa uma desculpa para promover Mirinho no banco.\n\nMirinho questiona Virgínia sobre as mudanças de comportamento de Diógenes. Viriato tenta dissuadir Bartô da ideia de santificar Veneranda. Mirinho anuncia sua promoção, e Ana Maria se preocupa com o destino de Manoel. Binta ouve uma conversa de Kênia e Chinua e descobre que Jendal mentiu para ela.",
-          "still": "",
+          "overview": "Jendal se irrita com as notícias de Malungo, que esconde do rei o fato de ter encontrado Alika. Kênia diz a Dumi que está pronta para se unir aos rebeldes contra Jendal. Maria Helena confessa a Dôra o motivo de ter se casado com Fortunato. Com receio das ameaças de Virgínia, Diógenes inventa uma desculpa para promover Mirinho no banco.",
+          "still": "https://image.tmdb.org/t/p/w400/9y7aB7vCfeExJTHAPGqz1KDLZgA.jpg",
           "guest_stars": [],
           "locked": false
         },
@@ -28557,8 +28558,7 @@
           "overview": "Binta descobre que Jendal deseja punir Alika com a morte. Kênia pede que Chinua entregue sua carta a Dumi. Mirinho convence Virgínia a adiar o anúncio da data de casamento. Manoel desabafa com Ana Maria sobre a promoção de Mirinho. Tonho e Lúcia/Alika comemoram quando Viriato garante que dará sua bênção à união dos dois, ao lado de Dona Menina.\n\nDumi vibra ao receber a notícia de que Kênia se juntará a ele, Akin e Ladisa. Dona Menina tem um mau pressentimento, e Tonho se aflige. Mirinho se nega a comparecer à festa de noivado de Tonho e Lúcia/Alika. Omar pede informações sobre Lúcia a Mirinho e Virgínia. Tonho e Alika ficam noivos.",
           "still": "",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-08-01T21:00:00"
+          "locked": false
         },
         {
           "title": "A Nobreza do Amor Ep 111",
@@ -30890,7 +30890,9 @@
         "https://image.tmdb.org/t/p/w500/uyG1iWsAGX7K7o0iTVKGEVT2RPR.jpg",
         "https://image.tmdb.org/t/p/w500/xWJ3QxMVN4G8arSQyfPVYvnNrX2.jpg",
         "https://image.tmdb.org/t/p/w500/ue98uJc9ymnKQc4w9SxkOuzn0ST.jpg",
-        "https://image.tmdb.org/t/p/w500/ehbB6L0gMU2ILJCScO2036crfEw.jpg"
+        "https://image.tmdb.org/t/p/w500/ehbB6L0gMU2ILJCScO2036crfEw.jpg",
+        "https://image.tmdb.org/t/p/w500/vISNfAYqL4Tx7YuES9Vt685ZdMh.jpg",
+        "https://image.tmdb.org/t/p/w500/vAAqkSo25mdrTCbaKq8Wvp6PyzA.jpg"
       ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/80TdemQlDHOVTQgRwtR4PwWwgXB.jpg",
       "overview": "Morena e Théo se conhecem durante a ocupação do Complexo do Alemão e, apesar das diferenças, engatam um romance. A situação se complica quando a jovem é vítima de um golpe e, ao aceitar um emprego fora do país, cai nas mãos de uma quadrilha internacional de tráfico de pessoas.  A novela é ambientada na Turquia e no Rio de Janeiro.",
@@ -37135,7 +37137,7 @@
     {
       "id": "marimar",
       "title": "Marimar",
-      "poster": "https://image.tmdb.org/t/p/w500/eLpQpOALo2VydCCMJzfjAdbE4Rg.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/6m1PYxuzTFMJ7QlZTbG5AK1iy6q.jpg",
       "seasons": [
         {
           "season": 1,
@@ -38639,7 +38641,7 @@
       "category": "novelas",
       "local_poster": "/Pirataflix/assets/Capas/marimar.jpg",
       "posters": [
-        "https://image.tmdb.org/t/p/w500/eLpQpOALo2VydCCMJzfjAdbE4Rg.jpg",
+        "https://image.tmdb.org/t/p/w500/6m1PYxuzTFMJ7QlZTbG5AK1iy6q.jpg",
         "https://image.tmdb.org/t/p/w500/iJ3jf3k56Cy1ImA9t3egPeGKQ2R.jpg",
         "https://image.tmdb.org/t/p/w500/r0AFBjxrIRfpk5jmoHAgmS8id1f.jpg",
         "https://image.tmdb.org/t/p/w500/2uYubmyZoLHajkvsnsglZU4W866.jpg",
