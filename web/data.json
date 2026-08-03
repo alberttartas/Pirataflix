@@ -5711,7 +5711,7 @@
       "genres": [
         "Drama"
       ],
-      "rating": 8.5,
+      "rating": 8.4,
       "cast": [
         {
           "name": "Lucas Agrícola",
@@ -26633,8 +26633,8 @@
               "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-110.mp4",
               "episode": 110,
               "air_date": "2026-08-01",
-              "overview": "Binta descobre que Jendal deseja punir Alika com a morte. Kênia pede que Chinua entregue sua carta a Dumi. Mirinho convence Virgínia a adiar o anúncio da data de casamento. Manoel desabafa com Ana Maria sobre a promoção de Mirinho. Tonho e Lúcia/Alika comemoram quando Viriato garante que dará sua bênção à união dos dois, ao lado de Dona Menina.\n\nDumi vibra ao receber a notícia de que Kênia se juntará a ele, Akin e Ladisa. Dona Menina tem um mau pressentimento, e Tonho se aflige. Mirinho se nega a comparecer à festa de noivado de Tonho e Lúcia/Alika. Omar pede informações sobre Lúcia a Mirinho e Virgínia. Tonho e Alika ficam noivos.",
-              "still": "",
+              "overview": "Mirinho questiona Virgínia sobre as mudanças de comportamento de Diógenes. Viriato tenta dissuadir Bartô da ideia de santificar Veneranda. Mirinho anuncia sua promoção, e Ana Maria se preocupa com o destino de Manoel. Binta ouve uma conversa de Kênia e Chinua e descobre que Jendal mentiu para ela.",
+              "still": "https://image.tmdb.org/t/p/w400/eJjmCRsZXSAiTZ9L2npnK6YmBsW.jpg",
               "guest_stars": [],
               "locked": false
             },
@@ -28555,8 +28555,8 @@
           "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-110.mp4",
           "episode": 110,
           "air_date": "2026-08-01",
-          "overview": "Binta descobre que Jendal deseja punir Alika com a morte. Kênia pede que Chinua entregue sua carta a Dumi. Mirinho convence Virgínia a adiar o anúncio da data de casamento. Manoel desabafa com Ana Maria sobre a promoção de Mirinho. Tonho e Lúcia/Alika comemoram quando Viriato garante que dará sua bênção à união dos dois, ao lado de Dona Menina.\n\nDumi vibra ao receber a notícia de que Kênia se juntará a ele, Akin e Ladisa. Dona Menina tem um mau pressentimento, e Tonho se aflige. Mirinho se nega a comparecer à festa de noivado de Tonho e Lúcia/Alika. Omar pede informações sobre Lúcia a Mirinho e Virgínia. Tonho e Alika ficam noivos.",
-          "still": "",
+          "overview": "Mirinho questiona Virgínia sobre as mudanças de comportamento de Diógenes. Viriato tenta dissuadir Bartô da ideia de santificar Veneranda. Mirinho anuncia sua promoção, e Ana Maria se preocupa com o destino de Manoel. Binta ouve uma conversa de Kênia e Chinua e descobre que Jendal mentiu para ela.",
+          "still": "https://image.tmdb.org/t/p/w400/eJjmCRsZXSAiTZ9L2npnK6YmBsW.jpg",
           "guest_stars": [],
           "locked": false
         },
@@ -64866,8 +64866,8 @@
         "https://image.tmdb.org/t/p/w500/uiIB9ctqZFbfRXXimtpmZb5dusi.jpg",
         "https://image.tmdb.org/t/p/w500/cMD9Ygz11zjJzAovURpO75Qg7rT.jpg",
         "https://image.tmdb.org/t/p/w500/e3NBGiAifW9Xt8xD5tpARskjccO.jpg",
-        "https://image.tmdb.org/t/p/w500/uStT6g4khexdKPyaiosp0fj3zEz.jpg",
-        "https://image.tmdb.org/t/p/w500/gJI77i79KnRuc9mGPKADPZWAE8O.jpg"
+        "https://image.tmdb.org/t/p/w500/gJI77i79KnRuc9mGPKADPZWAE8O.jpg",
+        "https://image.tmdb.org/t/p/w500/uStT6g4khexdKPyaiosp0fj3zEz.jpg"
       ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/2rmK7mnchw9Xr3XdiTFSxTTLXqv.jpg",
       "overview": "Houve um homem que conquistou tudo aquilo que o mundo tinha a oferecer, o lendário Rei dos Piratas, Gold Roger. Capturado e condenado à execução pelo Governo Mundial, suas últimas palavras lançaram legiões aos mares. \"Meu tesouro? Se quiserem, podem pegá-lo. Procurem-no! Ele contém tudo que este mundo pode oferecer!\". Foi a revelação do maior tesouro, o One Piece, cobiçado por homens de todo o mundo, sonhando com fama e riqueza imensuráveis... Assim começou a Grande Era dos Piratas!",
@@ -107390,6 +107390,21 @@
       "episodes": [
         {
           "url": "http://190.83.2.182:8090/ESPN3/index.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "MCMTop.fr@SD",
+      "type": "tv",
+      "title": "MCM Top (1080p)",
+      "tvg_id": "MCMTop.fr@SD",
+      "tvg_logo": "https://i.imgur.com/EVtWQLd.png",
+      "group": "🎵 Música",
+      "url": "http://89.33.29.118/MCM/index.m3u8",
+      "episodes": [
+        {
+          "url": "http://89.33.29.118/MCM/index.m3u8",
           "title": "AO VIVO"
         }
       ]

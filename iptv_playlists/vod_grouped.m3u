@@ -27072,3 +27072,6 @@ http://177.52.24.163/USA-HD/index.m3u8
 #EXTINF:-1 group-title="⚽ Esportes" tvg-id="ESPN3.BR@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/ESPN3_Logo.png/960px-ESPN3_Logo.png",ESPN 3 (1080p)
 http://190.83.2.182:8090/ESPN3/index.m3u8
 
+#EXTINF:-1 group-title="🎵 Música" tvg-id="MCMTOP.FR@SD" tvg-logo="https://i.imgur.com/EVtWQLd.png",MCM Top (1080p)
+http://89.33.29.118/MCM/index.m3u8
+
