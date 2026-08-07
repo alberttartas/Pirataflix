@@ -1108,7 +1108,7 @@
         "Terror",
         "Suspense"
       ],
-      "rating": 6.1,
+      "rating": 6.0,
       "cast": [
         {
           "name": "Daisy Ridley",
@@ -4564,7 +4564,7 @@
         {
           "name": "Letícia Colin",
           "character": "Adriana de Morais Brandão",
-          "profile": "https://image.tmdb.org/t/p/w185/wkXmPDg4OllPFXbpardNkS4ZqJ0.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/wZPBMQmSyOSmbD39D9AzJ9O1WLg.jpg"
         },
         {
           "name": "Chay Suede",
@@ -5356,7 +5356,8 @@
       "local_poster": "/Pirataflix/assets/Capas/default.jpg",
       "posters": [
         "https://image.tmdb.org/t/p/w500/iEcju8TBN5jmZswIpQXV5YTJB9L.jpg",
-        "https://image.tmdb.org/t/p/w500/drSGCg2y7o3UH1PIIb5Ck3PPGi5.jpg"
+        "https://image.tmdb.org/t/p/w500/drSGCg2y7o3UH1PIIb5Ck3PPGi5.jpg",
+        "https://image.tmdb.org/t/p/w500/lx6xHMBusZMxW9yJbnCeqXxNpmK.jpg"
       ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/swmZEoWpW7tBhaIszLtIE8rgQkO.jpg",
       "overview": "Mauricio é um ex-jogador que tenta se firmar como agente no milionário mercado do futebol . Em sua nova trajetória, ele precisa lidar com o fantasma do seu fracasso como jogador e com a relação conturbada com o pai.",
@@ -5373,7 +5374,7 @@
         {
           "name": "Letícia Colin",
           "character": "Rita",
-          "profile": "https://image.tmdb.org/t/p/w185/wkXmPDg4OllPFXbpardNkS4ZqJ0.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/wZPBMQmSyOSmbD39D9AzJ9O1WLg.jpg"
         },
         {
           "name": "Mariana Sena",
@@ -25203,7 +25204,7 @@
         {
           "name": "Arlete Salles",
           "character": "Josefa Melo",
-          "profile": "https://image.tmdb.org/t/p/w185/zdtQt4kNa6zZZT8X5Np2GTxEzHP.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/4HcnK4v3Z9OBaex7wnbM8ZANmBX.jpg"
         },
         {
           "name": "Marcos Palmeira",
@@ -26672,11 +26673,10 @@
               "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-114.mp4",
               "episode": 114,
               "air_date": "2026-08-06",
-              "overview": "Binta manipula Jendal para que anule seu casamento com Alika. Diógenes pede que Manoel faça o trabalho de Mirinho em segredo. Tonho se aconselha com Viriato sobre Lúcia/Alika e Omar. Fuad se interessa por Belmira. Salma e Fuad procuram Viriato para marcar a data do casamento. Alika e Teresa enviam dinheiro para Dumi em Batanga.\n\nJendal afirma a Chinua que, mesmo anulando seu casamento, não desistirá de punir Alika com a morte. Virgínia ouve quando Casemiro comenta com Graça sobre a paixão de Mirinho por Lúcia/Alika. Ana Maria conta a Manoel que a promoção de Mirinho foi arquitetada por Diógenes. Virgínia permite que Sebastião a beije. José aprova uma ideia de Omar, que confronta Tonho.",
-              "still": "",
+              "overview": "Diógenes pede que Manoel faça o trabalho de Mirinho em segredo. Tonho se aconselha com Viriato sobre Lúcia/Alika e Omar. Fuad se interessa por Belmira. Salma e Fuad procuram Viriato para marcar a data do casamento. Alika e Teresa enviam dinheiro para Dumi em Batanga. Jendal afirma a Chinua que, mesmo anulando seu casamento, não desistirá de punir Alika com a morte.",
+              "still": "https://image.tmdb.org/t/p/w400/e5vynI6lYZ4JMRvB11XpaypDa85.jpg",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-08-06T21:00:00"
+              "locked": false
             },
             {
               "title": "A Nobreza do Amor Ep 115",
@@ -28601,11 +28601,10 @@
           "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-114.mp4",
           "episode": 114,
           "air_date": "2026-08-06",
-          "overview": "Binta manipula Jendal para que anule seu casamento com Alika. Diógenes pede que Manoel faça o trabalho de Mirinho em segredo. Tonho se aconselha com Viriato sobre Lúcia/Alika e Omar. Fuad se interessa por Belmira. Salma e Fuad procuram Viriato para marcar a data do casamento. Alika e Teresa enviam dinheiro para Dumi em Batanga.\n\nJendal afirma a Chinua que, mesmo anulando seu casamento, não desistirá de punir Alika com a morte. Virgínia ouve quando Casemiro comenta com Graça sobre a paixão de Mirinho por Lúcia/Alika. Ana Maria conta a Manoel que a promoção de Mirinho foi arquitetada por Diógenes. Virgínia permite que Sebastião a beije. José aprova uma ideia de Omar, que confronta Tonho.",
-          "still": "",
+          "overview": "Diógenes pede que Manoel faça o trabalho de Mirinho em segredo. Tonho se aconselha com Viriato sobre Lúcia/Alika e Omar. Fuad se interessa por Belmira. Salma e Fuad procuram Viriato para marcar a data do casamento. Alika e Teresa enviam dinheiro para Dumi em Batanga. Jendal afirma a Chinua que, mesmo anulando seu casamento, não desistirá de punir Alika com a morte.",
+          "still": "https://image.tmdb.org/t/p/w400/e5vynI6lYZ4JMRvB11XpaypDa85.jpg",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-08-06T21:00:00"
+          "locked": false
         },
         {
           "title": "A Nobreza do Amor Ep 115",
