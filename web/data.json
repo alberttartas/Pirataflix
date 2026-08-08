@@ -1036,7 +1036,7 @@
         "Música",
         "História"
       ],
-      "rating": 8.0,
+      "rating": 8.1,
       "cast": [
         {
           "name": "Jesuíta Barbosa",
@@ -3772,7 +3772,7 @@
         "Drama",
         "Novela"
       ],
-      "rating": 7.0,
+      "rating": 7.1,
       "cast": [
         {
           "name": "Grazi Massafera",
@@ -5357,7 +5357,9 @@
       "posters": [
         "https://image.tmdb.org/t/p/w500/iEcju8TBN5jmZswIpQXV5YTJB9L.jpg",
         "https://image.tmdb.org/t/p/w500/drSGCg2y7o3UH1PIIb5Ck3PPGi5.jpg",
-        "https://image.tmdb.org/t/p/w500/lx6xHMBusZMxW9yJbnCeqXxNpmK.jpg"
+        "https://image.tmdb.org/t/p/w500/lx6xHMBusZMxW9yJbnCeqXxNpmK.jpg",
+        "https://image.tmdb.org/t/p/w500/v37HijsLVwpmW5JuSNGpDNz6BM2.jpg",
+        "https://image.tmdb.org/t/p/w500/1nUZDw3g5IeTLJ0wLpkCBJckOxt.jpg"
       ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/swmZEoWpW7tBhaIszLtIE8rgQkO.jpg",
       "overview": "Mauricio é um ex-jogador que tenta se firmar como agente no milionário mercado do futebol . Em sua nova trajetória, ele precisa lidar com o fantasma do seu fracasso como jogador e com a relação conturbada com o pai.",
@@ -26686,8 +26688,7 @@
               "overview": "Omar afirma a Tonho que lutará pelo amor de Alika. Salma repreende Miguel e Fátima por terem sido rudes com Omar. Maria Helena aconselha Manoel sobre seu namoro com Ana Maria. Pressionado, Bakari revela a Jendal que Chinua esteve em terras inimigas.\n\nOmar pede que Alika o acompanhe até a agência bancária. Chinua alerta Dumi, Akin e Ladisa sobre as desconfianças de Jendal, que sonda Pascoal sobre seu conselheiro. Chinua sugere que Kênia reveja sua decisão de se juntar aos rebeldes. Virgínia chantageia Sebastião para que o rapaz descubra tudo sobre Omar.",
               "still": "",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-08-07T21:00:00"
+              "locked": false
             },
             {
               "title": "A Nobreza do Amor Ep 116",
@@ -28614,8 +28615,7 @@
           "overview": "Omar afirma a Tonho que lutará pelo amor de Alika. Salma repreende Miguel e Fátima por terem sido rudes com Omar. Maria Helena aconselha Manoel sobre seu namoro com Ana Maria. Pressionado, Bakari revela a Jendal que Chinua esteve em terras inimigas.\n\nOmar pede que Alika o acompanhe até a agência bancária. Chinua alerta Dumi, Akin e Ladisa sobre as desconfianças de Jendal, que sonda Pascoal sobre seu conselheiro. Chinua sugere que Kênia reveja sua decisão de se juntar aos rebeldes. Virgínia chantageia Sebastião para que o rapaz descubra tudo sobre Omar.",
           "still": "",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-08-07T21:00:00"
+          "locked": false
         },
         {
           "title": "A Nobreza do Amor Ep 116",
@@ -64880,7 +64880,7 @@
       "backdrop": "https://image.tmdb.org/t/p/w1280/2rmK7mnchw9Xr3XdiTFSxTTLXqv.jpg",
       "overview": "Houve um homem que conquistou tudo aquilo que o mundo tinha a oferecer, o lendário Rei dos Piratas, Gold Roger. Capturado e condenado à execução pelo Governo Mundial, suas últimas palavras lançaram legiões aos mares. \"Meu tesouro? Se quiserem, podem pegá-lo. Procurem-no! Ele contém tudo que este mundo pode oferecer!\". Foi a revelação do maior tesouro, o One Piece, cobiçado por homens de todo o mundo, sonhando com fama e riqueza imensuráveis... Assim começou a Grande Era dos Piratas!",
       "year": "1999",
-      "rating": 8.7,
+      "rating": 8.8,
       "cast": [
         {
           "name": "Mayumi Tanaka",
@@ -72977,7 +72977,7 @@
       "backdrop": "https://image.tmdb.org/t/p/w1280/nTDL4UmMLDBCeMtYh8F1LZtgmLV.jpg",
       "overview": "Quando criaturas estranhas atacam, Keiji as enfrenta cara a cara com seu grito de guerra: Kokekokko!",
       "year": "2026",
-      "rating": 8.7,
+      "rating": 8.8,
       "cast": [
         {
           "name": "Kenta Miyake",
@@ -75856,7 +75856,7 @@
         {
           "name": "Tom Kenny",
           "character": "SpongeBob SquarePants (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/dKOxpGnRkIMaPkZSHKIns99WxQa.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/kftXtExrcoTTjyeYmSXJ0Ogr3R7.jpg"
         },
         {
           "name": "Bill Fagerbakke",
