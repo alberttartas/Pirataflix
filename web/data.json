@@ -300,11 +300,11 @@
       "local_poster": "/Pirataflix/assets/Capas/ainda_estou_aqui.jpg",
       "posters": [
         "https://image.tmdb.org/t/p/w500/gZnsMbhCvhzAQlKaVpeFRHYjGyb.jpg",
-        "https://image.tmdb.org/t/p/w500/quSUoX9zBrK7abP20fRf4d5YlXA.jpg",
         "https://image.tmdb.org/t/p/w500/zNAw7jK8bwCK56rIW676pdgkwhd.jpg",
         "https://image.tmdb.org/t/p/w500/yY0HDAGfu79cpOLQBgR3kgGZ7HS.jpg",
-        "https://image.tmdb.org/t/p/w500/b089cRxHzCZqixMNgTz3xQPEKTG.jpg",
-        "https://image.tmdb.org/t/p/w500/qNLMPY3KLrYgTX2QZ5iEwwOqyRz.jpg"
+        "https://image.tmdb.org/t/p/w500/quSUoX9zBrK7abP20fRf4d5YlXA.jpg",
+        "https://image.tmdb.org/t/p/w500/qNLMPY3KLrYgTX2QZ5iEwwOqyRz.jpg",
+        "https://image.tmdb.org/t/p/w500/r7TD7HhzlUYfWIS7ZqSgNxylkXV.jpg"
       ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/j9uruwRe9qM8RnP758dF7ISB8Bj.jpg",
       "overview": "No início da década de 1970, o Brasil enfrenta o endurecimento da ditadura militar. No Rio de Janeiro, a família Paiva – Rubens, Eunice e seus cinco filhos – vive à beira da praia em uma casa de portas abertas para os amigos. Um dia, Rubens Paiva é levado por militares à paisana e desaparece.",
@@ -26004,11 +26004,6 @@
                   "name": "Dhara Lopes",
                   "character": "Imani",
                   "photo": "https://image.tmdb.org/t/p/w185/8d8oGCzzpXbnPQvzkOBT2ZqaJs1.jpg"
-                },
-                {
-                  "name": "Luciano Quirino",
-                  "character": "Pascoal",
-                  "photo": "https://image.tmdb.org/t/p/w185/df09EHWAPKru8tdFSvgruKl69P1.jpg"
                 }
               ],
               "locked": false
@@ -26025,11 +26020,6 @@
                   "name": "Dhara Lopes",
                   "character": "Imani",
                   "photo": "https://image.tmdb.org/t/p/w185/8d8oGCzzpXbnPQvzkOBT2ZqaJs1.jpg"
-                },
-                {
-                  "name": "Luciano Quirino",
-                  "character": "Pascoal",
-                  "photo": "https://image.tmdb.org/t/p/w185/df09EHWAPKru8tdFSvgruKl69P1.jpg"
                 }
               ],
               "locked": false
@@ -26685,8 +26675,8 @@
               "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-115.mp4",
               "episode": 115,
               "air_date": "2026-08-07",
-              "overview": "Omar afirma a Tonho que lutará pelo amor de Alika. Salma repreende Miguel e Fátima por terem sido rudes com Omar. Maria Helena aconselha Manoel sobre seu namoro com Ana Maria. Pressionado, Bakari revela a Jendal que Chinua esteve em terras inimigas.\n\nOmar pede que Alika o acompanhe até a agência bancária. Chinua alerta Dumi, Akin e Ladisa sobre as desconfianças de Jendal, que sonda Pascoal sobre seu conselheiro. Chinua sugere que Kênia reveja sua decisão de se juntar aos rebeldes. Virgínia chantageia Sebastião para que o rapaz descubra tudo sobre Omar.",
-              "still": "",
+              "overview": "Omar afirma a Tonho que lutará pelo amor de Alika. Salma repreende Miguel e Fátima por terem sido rudes com Omar. Maria Helena aconselha Manoel sobre seu namoro com Ana Maria. Pressionado, Bakari revela a Jendal que Chinua esteve em terras inimigas. Omar pede que Alika o acompanhe até a agência bancária. Chinua alerta Dumi, Akin e Ladisa sobre as desconfianças de Jendal.",
+              "still": "https://image.tmdb.org/t/p/w400/6IUlD9hF9tOe2Wh9A0OAiBgTnbU.jpg",
               "guest_stars": [],
               "locked": false
             },
@@ -26696,10 +26686,9 @@
               "episode": 116,
               "air_date": "2026-08-08",
               "overview": "Virgínia promete uma noite de amor com Sebastião em troca de descobrir a relação entre Omar e Lúcia/Alika. Kênia acredita que Binta esteja mesmo ao lado de Jendal, e nega o convite para jantar com os dois. Tonho desabafa com Casemiro e conta que a família de Lúcia/Alika tem uma dívida com Omar. Ana Maria vai à casa de Manoel e é destratada por Fortunato.\n\nJosé e Omar comentam sobre a possível jazida de tungstênio na região. Virgínia provoca Diógenes na frente de Marta. Binta sugere que Jendal envie Kênia para um convento. Omar revela a Adônis que preferiu guardar seu dinheiro no banco por conta dos cangaceiros. Omar e Alika conversam sobre a retomada de Batanga, quando Tonho chega.",
-              "still": "",
+              "still": "https://image.tmdb.org/t/p/w400/y1THomJhYqCkdsIUyHiONLZZlyL.jpg",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-08-08T21:00:00"
+              "locked": false
             },
             {
               "title": "A Nobreza do Amor Ep 117",
@@ -27931,11 +27920,6 @@
               "name": "Dhara Lopes",
               "character": "Imani",
               "photo": "https://image.tmdb.org/t/p/w185/8d8oGCzzpXbnPQvzkOBT2ZqaJs1.jpg"
-            },
-            {
-              "name": "Luciano Quirino",
-              "character": "Pascoal",
-              "photo": "https://image.tmdb.org/t/p/w185/df09EHWAPKru8tdFSvgruKl69P1.jpg"
             }
           ],
           "locked": false
@@ -27952,11 +27936,6 @@
               "name": "Dhara Lopes",
               "character": "Imani",
               "photo": "https://image.tmdb.org/t/p/w185/8d8oGCzzpXbnPQvzkOBT2ZqaJs1.jpg"
-            },
-            {
-              "name": "Luciano Quirino",
-              "character": "Pascoal",
-              "photo": "https://image.tmdb.org/t/p/w185/df09EHWAPKru8tdFSvgruKl69P1.jpg"
             }
           ],
           "locked": false
@@ -28612,8 +28591,8 @@
           "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-115.mp4",
           "episode": 115,
           "air_date": "2026-08-07",
-          "overview": "Omar afirma a Tonho que lutará pelo amor de Alika. Salma repreende Miguel e Fátima por terem sido rudes com Omar. Maria Helena aconselha Manoel sobre seu namoro com Ana Maria. Pressionado, Bakari revela a Jendal que Chinua esteve em terras inimigas.\n\nOmar pede que Alika o acompanhe até a agência bancária. Chinua alerta Dumi, Akin e Ladisa sobre as desconfianças de Jendal, que sonda Pascoal sobre seu conselheiro. Chinua sugere que Kênia reveja sua decisão de se juntar aos rebeldes. Virgínia chantageia Sebastião para que o rapaz descubra tudo sobre Omar.",
-          "still": "",
+          "overview": "Omar afirma a Tonho que lutará pelo amor de Alika. Salma repreende Miguel e Fátima por terem sido rudes com Omar. Maria Helena aconselha Manoel sobre seu namoro com Ana Maria. Pressionado, Bakari revela a Jendal que Chinua esteve em terras inimigas. Omar pede que Alika o acompanhe até a agência bancária. Chinua alerta Dumi, Akin e Ladisa sobre as desconfianças de Jendal.",
+          "still": "https://image.tmdb.org/t/p/w400/6IUlD9hF9tOe2Wh9A0OAiBgTnbU.jpg",
           "guest_stars": [],
           "locked": false
         },
@@ -28623,10 +28602,9 @@
           "episode": 116,
           "air_date": "2026-08-08",
           "overview": "Virgínia promete uma noite de amor com Sebastião em troca de descobrir a relação entre Omar e Lúcia/Alika. Kênia acredita que Binta esteja mesmo ao lado de Jendal, e nega o convite para jantar com os dois. Tonho desabafa com Casemiro e conta que a família de Lúcia/Alika tem uma dívida com Omar. Ana Maria vai à casa de Manoel e é destratada por Fortunato.\n\nJosé e Omar comentam sobre a possível jazida de tungstênio na região. Virgínia provoca Diógenes na frente de Marta. Binta sugere que Jendal envie Kênia para um convento. Omar revela a Adônis que preferiu guardar seu dinheiro no banco por conta dos cangaceiros. Omar e Alika conversam sobre a retomada de Batanga, quando Tonho chega.",
-          "still": "",
+          "still": "https://image.tmdb.org/t/p/w400/y1THomJhYqCkdsIUyHiONLZZlyL.jpg",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-08-08T21:00:00"
+          "locked": false
         },
         {
           "title": "A Nobreza do Amor Ep 117",
@@ -29115,14 +29093,19 @@
           "profile": "https://image.tmdb.org/t/p/w185/dgipo7seoTxVpacvFteG1In3Vv.jpg"
         },
         {
+          "name": "Nicolas Prattes",
+          "character": "Casemiro Bonafé Filho (Mirinho)",
+          "profile": "https://image.tmdb.org/t/p/w185/8QMku7Oe3TxwjW8nq0AVfxL8nIf.jpg"
+        },
+        {
           "name": "Erika Januza",
           "character": "Niara, Rainha de Batanga / Vera dos Santos",
           "profile": "https://image.tmdb.org/t/p/w185/dP64ZXsArRLDCm0fuJpFlP1WmD.jpg"
         },
         {
-          "name": "Nicolas Prattes",
-          "character": "Casemiro Bonafé Filho (Mirinho)",
-          "profile": "https://image.tmdb.org/t/p/w185/8QMku7Oe3TxwjW8nq0AVfxL8nIf.jpg"
+          "name": "Rodrigo Simas",
+          "character": "Omar Soliman",
+          "profile": "https://image.tmdb.org/t/p/w185/rgzPVcXeQIeM2f2yZnUBxZmSExH.jpg"
         },
         {
           "name": "Theresa Fonseca",
@@ -29130,14 +29113,9 @@
           "profile": "https://image.tmdb.org/t/p/w185/sU3hOOF52Kcu243FAC8wJF9LayT.jpg"
         },
         {
-          "name": "Bukassa Kabengele",
-          "character": "Zambi / José dos Santos",
-          "profile": "https://image.tmdb.org/t/p/w185/wg1lFAnr2cYQsIC1DoES6i1VbCx.jpg"
-        },
-        {
-          "name": "Ana Cecília Costa",
-          "character": "Teresa dos Santos",
-          "profile": "https://image.tmdb.org/t/p/w185/rIzbePMsnqgEv9c2gLUR1SDzi3m.jpg"
+          "name": "Zezé Motta",
+          "character": "Maria Amélia (Dona Menina)",
+          "profile": "https://image.tmdb.org/t/p/w185/zj4Lry4VxYdxCBkhQyd4BF5qEUx.jpg"
         }
       ],
       "has_schedule": true
@@ -45296,7 +45274,8 @@
         }
       ],
       "type": "series",
-      "category": "novelas"
+      "category": "novelas",
+      "rating": 6.0
     },
     {
       "id": "renascer",
@@ -75855,7 +75834,7 @@
       "cast": [
         {
           "name": "Tom Kenny",
-          "character": "SpongeBob SquarePants (voice)",
+          "character": "SpongeBob SquarePants / Gary the Snail (voice)",
           "profile": "https://image.tmdb.org/t/p/w185/kftXtExrcoTTjyeYmSXJ0Ogr3R7.jpg"
         },
         {
@@ -75887,6 +75866,11 @@
           "name": "Mr. Lawrence",
           "character": "Plankton / Larry the Lobster (voice)",
           "profile": "https://image.tmdb.org/t/p/w185/gWFgxlREzbaPPdWsQZSCdjrFozy.jpg"
+        },
+        {
+          "name": "Jill Talley",
+          "character": "Karen Plankton (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/x0r43qyI9KNEyb5RsF0MckqxgfM.jpg"
         }
       ]
     },
@@ -81721,7 +81705,7 @@
         "Animação",
         "Comédia"
       ],
-      "rating": 6.9
+      "rating": 7.0
     },
     {
       "id": "historias_novo_testamento",
