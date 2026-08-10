@@ -27075,3 +27075,6 @@ http://190.83.2.182:8090/ESPN3/index.m3u8
 #EXTINF:-1 group-title="🎵 Música" tvg-id="MCMTOP.FR@SD" tvg-logo="https://i.imgur.com/EVtWQLd.png",MCM Top (1080p)
 http://89.33.29.118/MCM/index.m3u8
 
+#EXTINF:-1 group-title="🎨 Animação" tvg-id="NICKONLINEBOBESPONJA.BR@HD" tvg-logo="https://x1colegal.com/nickonlinebobesponja.png",NickOnline Bob Esponja (720p) [Not 24/7]
+https://bob.x1colegal.com/hls/stream.m3u8
+
