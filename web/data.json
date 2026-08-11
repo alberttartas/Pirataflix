@@ -1108,7 +1108,7 @@
         "Terror",
         "Suspense"
       ],
-      "rating": 6.0,
+      "rating": 6.1,
       "cast": [
         {
           "name": "Daisy Ridley",
@@ -1286,7 +1286,7 @@
         {
           "name": "Rose Byrne",
           "character": "Moira MacTaggert",
-          "profile": "https://image.tmdb.org/t/p/w185/wR8YZlrewVW2FixRBrJcxaXU3R1.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/4Vd7w19asuBfUGgz0NIuQI5wxIA.jpg"
         },
         {
           "name": "Evan Peters",
@@ -4593,7 +4593,7 @@
         },
         {
           "name": "Tatá Werneck",
-          "character": "Brigitte Brandão da Costa",
+          "character": "Brigitte Brandão Varella",
           "profile": "https://image.tmdb.org/t/p/w185/nf3dZtRw2E6SSv14YXea65tE9YN.jpg"
         },
         {
@@ -26687,7 +26687,7 @@
               "episode": 116,
               "air_date": "2026-08-08",
               "overview": "Virgínia promete uma noite de amor com Sebastião em troca de descobrir a relação entre Omar e Lúcia/Alika. Tonho desabafa com Casemiro e conta que a família de Lúcia/Alika tem uma dívida com Omar. Ana Maria vai à casa de Manoel e é destratada por Fortunato. Binta sugere que Jendal envie Kênia para um convento. Omar e Alika conversam sobre a retomada de Batanga, quando Tonho chega.",
-              "still": "https://image.tmdb.org/t/p/w400/y1THomJhYqCkdsIUyHiONLZZlyL.jpg",
+              "still": "https://image.tmdb.org/t/p/w400/8Y62gYDJmv913133CU4secGa6iz.jpg",
               "guest_stars": [],
               "locked": false
             },
@@ -26696,11 +26696,10 @@
               "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-117.mp4",
               "episode": 117,
               "air_date": "2026-08-10",
-              "overview": "Sebastião se espanta ao descobrir que Lúcia se chama Alika e que é uma princesa real em Batanga. Binta mente para Jendal sobre Kênia, que se desespera com a possibilidade de ser enviada para um convento. Chinua alerta Dumi sobre as atitudes de Jendal contra Kênia. Ana Maria pede que Casemiro dê um tempo a Manoel antes de confrontar Fortunato. Tonho e Alika reafirmam sua paixão e compromisso um com a outra. Mirinho faz um convite a Omar. Salma ajuda Omar. Alika conversa com Omar sobre as atitudes de Mirinho e Virgínia. Sebastião revela a Virgínia que Lúcia é uma princesa real.",
-              "still": "",
+              "overview": "Tonho se sente excluído diante da conversa de Alika e Omar, e decide deixar a casa da amada. Niara conforta Alika. Mirinho comenta com Casemiro e Graça que Omar parece interessado em Lúcia/Alika. Sebastião conta a Virgínia que Viriato deverá ser absolvido pela igreja. Dona Menina aconselha Tonho a não desistir de seu amor por Lúcia/Alika. Maria Helena lembra de sua história de amor com Murilo.",
+              "still": "https://image.tmdb.org/t/p/w400/iIcKkzeBo4C2jQav9sZgeoBPrdK.jpg",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-08-10T21:00:00"
+              "locked": false
             },
             {
               "title": "A Nobreza do Amor Ep 118",
@@ -28603,7 +28602,7 @@
           "episode": 116,
           "air_date": "2026-08-08",
           "overview": "Virgínia promete uma noite de amor com Sebastião em troca de descobrir a relação entre Omar e Lúcia/Alika. Tonho desabafa com Casemiro e conta que a família de Lúcia/Alika tem uma dívida com Omar. Ana Maria vai à casa de Manoel e é destratada por Fortunato. Binta sugere que Jendal envie Kênia para um convento. Omar e Alika conversam sobre a retomada de Batanga, quando Tonho chega.",
-          "still": "https://image.tmdb.org/t/p/w400/y1THomJhYqCkdsIUyHiONLZZlyL.jpg",
+          "still": "https://image.tmdb.org/t/p/w400/8Y62gYDJmv913133CU4secGa6iz.jpg",
           "guest_stars": [],
           "locked": false
         },
@@ -28612,11 +28611,10 @@
           "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-117.mp4",
           "episode": 117,
           "air_date": "2026-08-10",
-          "overview": "Sebastião se espanta ao descobrir que Lúcia se chama Alika e que é uma princesa real em Batanga. Binta mente para Jendal sobre Kênia, que se desespera com a possibilidade de ser enviada para um convento. Chinua alerta Dumi sobre as atitudes de Jendal contra Kênia. Ana Maria pede que Casemiro dê um tempo a Manoel antes de confrontar Fortunato. Tonho e Alika reafirmam sua paixão e compromisso um com a outra. Mirinho faz um convite a Omar. Salma ajuda Omar. Alika conversa com Omar sobre as atitudes de Mirinho e Virgínia. Sebastião revela a Virgínia que Lúcia é uma princesa real.",
-          "still": "",
+          "overview": "Tonho se sente excluído diante da conversa de Alika e Omar, e decide deixar a casa da amada. Niara conforta Alika. Mirinho comenta com Casemiro e Graça que Omar parece interessado em Lúcia/Alika. Sebastião conta a Virgínia que Viriato deverá ser absolvido pela igreja. Dona Menina aconselha Tonho a não desistir de seu amor por Lúcia/Alika. Maria Helena lembra de sua história de amor com Murilo.",
+          "still": "https://image.tmdb.org/t/p/w400/iIcKkzeBo4C2jQav9sZgeoBPrdK.jpg",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-08-10T21:00:00"
+          "locked": false
         },
         {
           "title": "A Nobreza do Amor Ep 118",
