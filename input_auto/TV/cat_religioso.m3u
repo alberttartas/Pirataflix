@@ -21,7 +21,7 @@ http://45.162.64.114/NOVO_TEMPO/index.m3u8
 https://strv.painelvox.top/plenitude/plenitude/playlist.m3u8
 
 #EXTINF:-1 tvg-id="RedeGospel.br@SD" tvg-logo="https://i.imgur.com/mttSwgO.png" group-title="✝️ Religioso",Rede Gospel (1080p)
-https://redegospel-aovivo.nuvemplay.live/hls/stream.m3u8
+https://cdn.live.br1.jmvstream.com/w/LVW-8719/LVW8719_AcLVAxWy5J/playlist.m3u8
 
 #EXTINF:-1 tvg-id="RedeSeculo21.br@SD" tvg-logo="" group-title="✝️ Religioso",Rede Seculo 21 (720p)
 http://45.162.64.114/REDE_SECULO_21/index.m3u8

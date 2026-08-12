@@ -1,6 +1,6 @@
 #EXTM3U
 #EXTINF:-1 tvg-id="CanalGov.br@SD" tvg-logo="https://i.imgur.com/rHPY0Yv.png" group-title="🏛️ Legislativo",Canal Gov (720p)
-https://canalgov-stream.ebc.com.br/index.m3u8
+http://45.177.114.115/TV_BRASIL_2/index.m3u8
 
 #EXTINF:-1 tvg-id="TVAssembleiaCeara.br@SD" tvg-logo="https://i.imgur.com/UPa1tjs.png" group-title="🏛️ Legislativo",TV Assembléia Ceará (720p)
 https://jjn5dkk9bd.zoeweb.tv/z404-live/stream/playlist.m3u8
