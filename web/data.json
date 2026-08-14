@@ -301,8 +301,8 @@
       "posters": [
         "https://image.tmdb.org/t/p/w500/gZnsMbhCvhzAQlKaVpeFRHYjGyb.jpg",
         "https://image.tmdb.org/t/p/w500/zNAw7jK8bwCK56rIW676pdgkwhd.jpg",
-        "https://image.tmdb.org/t/p/w500/yY0HDAGfu79cpOLQBgR3kgGZ7HS.jpg",
         "https://image.tmdb.org/t/p/w500/quSUoX9zBrK7abP20fRf4d5YlXA.jpg",
+        "https://image.tmdb.org/t/p/w500/yY0HDAGfu79cpOLQBgR3kgGZ7HS.jpg",
         "https://image.tmdb.org/t/p/w500/qNLMPY3KLrYgTX2QZ5iEwwOqyRz.jpg",
         "https://image.tmdb.org/t/p/w500/r7TD7HhzlUYfWIS7ZqSgNxylkXV.jpg"
       ],
@@ -1222,7 +1222,7 @@
         {
           "name": "Merrin Dungey",
           "character": "Major Breen",
-          "profile": "https://image.tmdb.org/t/p/w185/s04aaVx1AKBik88lfjwAsSm0s2U.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/uzN9h2Q3fE92D3CB7V5pCNj2BBP.jpg"
         }
       ]
     },
@@ -5391,11 +5391,6 @@
           "profile": "https://image.tmdb.org/t/p/w185/8p6TPfCoBJHUUXs3DiSisPKAJ4s.jpg"
         },
         {
-          "name": "Juan Paiva",
-          "character": "Luan",
-          "profile": "https://image.tmdb.org/t/p/w185/onMPJqb0PNoKDqZiZctt1zh010w.jpg"
-        },
-        {
           "name": "Breno Ferreira",
           "character": "Geraldo",
           "profile": "https://image.tmdb.org/t/p/w185/jJgpLUqGSLGH8tcWi0zkAOF24Z.jpg"
@@ -5404,6 +5399,11 @@
           "name": "Cauê Campos",
           "character": "Vítor",
           "profile": "https://image.tmdb.org/t/p/w185/2hvXPqOxuMHcdEDgrLXMlxoJnW3.jpg"
+        },
+        {
+          "name": "Juan Paiva",
+          "character": "Luan",
+          "profile": "https://image.tmdb.org/t/p/w185/onMPJqb0PNoKDqZiZctt1zh010w.jpg"
         },
         {
           "name": "Marcelo Adnet",
@@ -26718,7 +26718,7 @@
               "episode": 119,
               "air_date": "2026-08-12",
               "overview": "Virgínia se surpreende ao saber que Alika é uma princesa, e promete a Sebastião que lhe dará sua recompensa. Sebastião confidencia a Onildo que dormiu com Virgínia. Jendal anuncia que seu casamento com Alika foi anulado, e Binta comemora. Kênia se desespera nos braços de Chinua. Omar chega para o jantar oferecido por Graça e Casemiro. Dona Menina incentiva Tonho a pensar em suas terras.",
-              "still": "",
+              "still": "https://image.tmdb.org/t/p/w400/pAGcv4TasXBEtfQNwJxoWCXIlfY.jpg",
               "guest_stars": [],
               "locked": false
             },
@@ -26727,11 +26727,10 @@
               "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-120.mp4",
               "episode": 120,
               "air_date": "2026-08-13",
-              "overview": "Tonho imobiliza Omar, e Alika e sua família se impressionam com o talento do rapaz na luta. Marta repreende Virgínia por encomendar um vestido fora da cidade, e Diógenes protege a filha. Kênia aceita a aliança com Binta, e pede perdão a Jendal. Marta conversa com Viriato sobre o comportamento de Diógenes, e ambos deduzem que Virgínia mentiu sobre a suspensão de sua punição. Belmira tenta despistar Viriato sobre a verdadeira causa da mudança de Diógenes. Casemiro autoriza a busca por tungstênio em suas terras. Binta garante a Jawali que conseguirá neutralizar Kênia. Fuad se aproxima de Belmira, e Geralda desconfia. Salma se encanta com Omar. Alika deixa claro a Omar que não se casará com ele.",
-              "still": "",
+              "overview": "Virgínia afirma que avisará a Jendal sobre o paradeiro de Alika, e Sebastião teme a reação do rei de Batanga. Ladisa consegue despistar Pascoal. Mirinho pede desculpas a Manoel e agradece sua amizade. Virgínia chantageia Diógenes. Maria Helena comenta com Dôra que teme a reação de Fortunato ao descobrir que Murilo estará na cidade. Akin, Ladisa e Dumi celebram o reencontro de Omar e Alika.",
+              "still": "https://image.tmdb.org/t/p/w400/pqwl9VrT0nDVeUY1x7XBK5bwklD.jpg",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-08-13T21:00:00"
+              "locked": false
             },
             {
               "title": "A Nobreza do Amor Ep 121",
@@ -28631,7 +28630,7 @@
           "episode": 119,
           "air_date": "2026-08-12",
           "overview": "Virgínia se surpreende ao saber que Alika é uma princesa, e promete a Sebastião que lhe dará sua recompensa. Sebastião confidencia a Onildo que dormiu com Virgínia. Jendal anuncia que seu casamento com Alika foi anulado, e Binta comemora. Kênia se desespera nos braços de Chinua. Omar chega para o jantar oferecido por Graça e Casemiro. Dona Menina incentiva Tonho a pensar em suas terras.",
-          "still": "",
+          "still": "https://image.tmdb.org/t/p/w400/pAGcv4TasXBEtfQNwJxoWCXIlfY.jpg",
           "guest_stars": [],
           "locked": false
         },
@@ -28640,11 +28639,10 @@
           "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-120.mp4",
           "episode": 120,
           "air_date": "2026-08-13",
-          "overview": "Tonho imobiliza Omar, e Alika e sua família se impressionam com o talento do rapaz na luta. Marta repreende Virgínia por encomendar um vestido fora da cidade, e Diógenes protege a filha. Kênia aceita a aliança com Binta, e pede perdão a Jendal. Marta conversa com Viriato sobre o comportamento de Diógenes, e ambos deduzem que Virgínia mentiu sobre a suspensão de sua punição. Belmira tenta despistar Viriato sobre a verdadeira causa da mudança de Diógenes. Casemiro autoriza a busca por tungstênio em suas terras. Binta garante a Jawali que conseguirá neutralizar Kênia. Fuad se aproxima de Belmira, e Geralda desconfia. Salma se encanta com Omar. Alika deixa claro a Omar que não se casará com ele.",
-          "still": "",
+          "overview": "Virgínia afirma que avisará a Jendal sobre o paradeiro de Alika, e Sebastião teme a reação do rei de Batanga. Ladisa consegue despistar Pascoal. Mirinho pede desculpas a Manoel e agradece sua amizade. Virgínia chantageia Diógenes. Maria Helena comenta com Dôra que teme a reação de Fortunato ao descobrir que Murilo estará na cidade. Akin, Ladisa e Dumi celebram o reencontro de Omar e Alika.",
+          "still": "https://image.tmdb.org/t/p/w400/pqwl9VrT0nDVeUY1x7XBK5bwklD.jpg",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-08-13T21:00:00"
+          "locked": false
         },
         {
           "title": "A Nobreza do Amor Ep 121",
@@ -107588,6 +107586,21 @@
       "episodes": [
         {
           "url": "http://45.177.114.115/TV_RA_TIM_BUM/index.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "LamoreRockShowWebTV.br@SD",
+      "type": "tv",
+      "title": "Lamore Rock Show WebTV (720p)",
+      "tvg_id": "LamoreRockShowWebTV.br@SD",
+      "tvg_logo": "https://www.lamorerockshowwebtv.com.br/wp-content/uploads/2024/11/logo_rockshow.avif",
+      "group": "🎵 Música",
+      "url": "https://a.cdni.live/rodrigo2364/rodrigo2364/playlist.m3u8",
+      "episodes": [
+        {
+          "url": "https://a.cdni.live/rodrigo2364/rodrigo2364/playlist.m3u8",
           "title": "AO VIVO"
         }
       ]
