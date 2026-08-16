@@ -2225,6 +2225,7 @@
       "genres": [
         "Drama"
       ],
+      "rating": 6.0,
       "cast": [
         {
           "name": "Cauã Reymond",
@@ -3229,7 +3230,7 @@
                 {
                   "name": "Othon Bastos",
                   "character": "Juiz",
-                  "photo": "https://image.tmdb.org/t/p/w185/flG2sJc2wWb8Km9pQkxI4Lk5Bnq.jpg"
+                  "photo": "https://image.tmdb.org/t/p/w185/cKZos1GKCQNHbaUqa9byGGl90rq.jpg"
                 }
               ],
               "locked": false
@@ -3250,7 +3251,7 @@
                 {
                   "name": "Othon Bastos",
                   "character": "Juiz",
-                  "photo": "https://image.tmdb.org/t/p/w185/flG2sJc2wWb8Km9pQkxI4Lk5Bnq.jpg"
+                  "photo": "https://image.tmdb.org/t/p/w185/cKZos1GKCQNHbaUqa9byGGl90rq.jpg"
                 }
               ],
               "locked": false
@@ -3266,7 +3267,7 @@
                 {
                   "name": "Othon Bastos",
                   "character": "Juiz",
-                  "photo": "https://image.tmdb.org/t/p/w185/flG2sJc2wWb8Km9pQkxI4Lk5Bnq.jpg"
+                  "photo": "https://image.tmdb.org/t/p/w185/cKZos1GKCQNHbaUqa9byGGl90rq.jpg"
                 }
               ],
               "locked": false
@@ -3318,7 +3319,7 @@
                 {
                   "name": "Othon Bastos",
                   "character": "Juiz",
-                  "photo": "https://image.tmdb.org/t/p/w185/flG2sJc2wWb8Km9pQkxI4Lk5Bnq.jpg"
+                  "photo": "https://image.tmdb.org/t/p/w185/cKZos1GKCQNHbaUqa9byGGl90rq.jpg"
                 }
               ],
               "locked": false
@@ -4120,7 +4121,7 @@
             {
               "name": "Othon Bastos",
               "character": "Juiz",
-              "photo": "https://image.tmdb.org/t/p/w185/flG2sJc2wWb8Km9pQkxI4Lk5Bnq.jpg"
+              "photo": "https://image.tmdb.org/t/p/w185/cKZos1GKCQNHbaUqa9byGGl90rq.jpg"
             }
           ],
           "locked": false
@@ -4141,7 +4142,7 @@
             {
               "name": "Othon Bastos",
               "character": "Juiz",
-              "photo": "https://image.tmdb.org/t/p/w185/flG2sJc2wWb8Km9pQkxI4Lk5Bnq.jpg"
+              "photo": "https://image.tmdb.org/t/p/w185/cKZos1GKCQNHbaUqa9byGGl90rq.jpg"
             }
           ],
           "locked": false
@@ -4157,7 +4158,7 @@
             {
               "name": "Othon Bastos",
               "character": "Juiz",
-              "photo": "https://image.tmdb.org/t/p/w185/flG2sJc2wWb8Km9pQkxI4Lk5Bnq.jpg"
+              "photo": "https://image.tmdb.org/t/p/w185/cKZos1GKCQNHbaUqa9byGGl90rq.jpg"
             }
           ],
           "locked": false
@@ -4209,7 +4210,7 @@
             {
               "name": "Othon Bastos",
               "character": "Juiz",
-              "photo": "https://image.tmdb.org/t/p/w185/flG2sJc2wWb8Km9pQkxI4Lk5Bnq.jpg"
+              "photo": "https://image.tmdb.org/t/p/w185/cKZos1GKCQNHbaUqa9byGGl90rq.jpg"
             }
           ],
           "locked": false
@@ -19992,8 +19993,8 @@
               "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-121.mp4",
               "episode": 121,
               "air_date": "2026-08-14",
-              "overview": "Teresa acredita que Omar não desistirá de Alika, que se preocupa. Ana Maria confronta Manoel sobre o relacionamento dos dois. Mirinho disfarça o constrangimento ao ver Adalgisa, e Virgínia explica que convocou a modista para lhe fazer um vestido. Donato anuncia que voltou a enxergar, e Adônis garante que foi um milagre operado por Veneranda. Chinua se emociona quando Kênia afirma que lutará ao lado do povo de Batanga. Bartô paga Donato por seus serviços de atuação. Alika e Tonho prometem ajudar uma ao outro na realização de seus sonhos no Brasil e em Batanga.",
-              "still": "",
+              "overview": "Tonho imobiliza Omar, e Alika e sua família se impressionam com o talento do rapaz na luta. Marta repreende Virgínia por encomendar um vestido fora da cidade, e Diógenes protege a filha. Kênia aceita a aliança com Binta, e pede perdão a Jendal. Marta conversa com Viriato sobre o comportamento de Diógenes, e ambos deduzem que Virgínia mentiu sobre a suspensão de sua punição.",
+              "still": "https://image.tmdb.org/t/p/w400/4KzZ5PZLuexHjvnPmRMGcjq9N9p.jpg",
               "guest_stars": [],
               "locked": false
             },
@@ -20005,8 +20006,7 @@
               "overview": "Alika sente orgulho ao visitar as terras de Tonho. Adalgisa se insinua para Mirinho, e Marta e Virgínia percebem. Virgínia finge naturalidade diante de Adalgisa e Mirinho, e Marta se surpreende. Viriato alerta Bartô para desistir das artimanhas para transformar Veneranda em santa. Marta confronta Diógenes e diz que o marido parece estar com medo de Virgínia. Alika desabafa com Niara sobre ter lutas diferentes de Tonho. Binta orienta como Kênia deve se vestir para o jantar, e Jendal estranha a aparência da filha.",
               "still": "",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-08-15T21:00:00"
+              "locked": false
             },
             {
               "title": "A Nobreza do Amor Ep 123",
@@ -21903,8 +21903,8 @@
           "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-121.mp4",
           "episode": 121,
           "air_date": "2026-08-14",
-          "overview": "Teresa acredita que Omar não desistirá de Alika, que se preocupa. Ana Maria confronta Manoel sobre o relacionamento dos dois. Mirinho disfarça o constrangimento ao ver Adalgisa, e Virgínia explica que convocou a modista para lhe fazer um vestido. Donato anuncia que voltou a enxergar, e Adônis garante que foi um milagre operado por Veneranda. Chinua se emociona quando Kênia afirma que lutará ao lado do povo de Batanga. Bartô paga Donato por seus serviços de atuação. Alika e Tonho prometem ajudar uma ao outro na realização de seus sonhos no Brasil e em Batanga.",
-          "still": "",
+          "overview": "Tonho imobiliza Omar, e Alika e sua família se impressionam com o talento do rapaz na luta. Marta repreende Virgínia por encomendar um vestido fora da cidade, e Diógenes protege a filha. Kênia aceita a aliança com Binta, e pede perdão a Jendal. Marta conversa com Viriato sobre o comportamento de Diógenes, e ambos deduzem que Virgínia mentiu sobre a suspensão de sua punição.",
+          "still": "https://image.tmdb.org/t/p/w400/4KzZ5PZLuexHjvnPmRMGcjq9N9p.jpg",
           "guest_stars": [],
           "locked": false
         },
@@ -21916,8 +21916,7 @@
           "overview": "Alika sente orgulho ao visitar as terras de Tonho. Adalgisa se insinua para Mirinho, e Marta e Virgínia percebem. Virgínia finge naturalidade diante de Adalgisa e Mirinho, e Marta se surpreende. Viriato alerta Bartô para desistir das artimanhas para transformar Veneranda em santa. Marta confronta Diógenes e diz que o marido parece estar com medo de Virgínia. Alika desabafa com Niara sobre ter lutas diferentes de Tonho. Binta orienta como Kênia deve se vestir para o jantar, e Jendal estranha a aparência da filha.",
           "still": "",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-08-15T21:00:00"
+          "locked": false
         },
         {
           "title": "A Nobreza do Amor Ep 123",
@@ -30340,7 +30339,7 @@
       "backdrop": "https://image.tmdb.org/t/p/w1280/1b2OYNA3Ikq9BBwk6If8As89bge.jpg",
       "overview": "Um novato ambiciona liderar o submundo do jogo do bicho no Rio de Janeiro e acaba se envolvendo em uma perigosa rede de traições, luxúria e sangue.",
       "year": "2025",
-      "rating": 7.9,
+      "rating": 8.0,
       "cast": [
         {
           "name": "André Lamoglia",
