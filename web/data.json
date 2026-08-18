@@ -5059,7 +5059,7 @@
       "genres": [
         "Documentário"
       ],
-      "rating": 4.5,
+      "rating": 4.6,
       "cast": [
         {
           "name": "Michael Jackson",
@@ -20013,11 +20013,10 @@
               "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-123.mp4",
               "episode": 123,
               "air_date": "2026-08-17",
-              "overview": "Bartô paga Donato por seus serviços de atuação. Alika e Tonho prometem ajudar uma ao outro na realização de seus sonhos no Brasil e em Batanga. Alika sente orgulho ao visitar as terras de Tonho. Adalgisa se insinua para Mirinho, e Marta e Virgínia percebem. Virgínia finge naturalidade diante de Adalgisa e Mirinho, e Marta se surpreende. Viriato alerta Bartô para desistir das artimanhas para transformar Veneranda em santa.\n\nMarta confronta Diógenes e diz que o marido parece estar com medo de Virgínia. Alika desabafa com Niara sobre ter lutas diferentes de Tonho. Binta orienta como Kênia deve se vestir para o jantar, e Jendal estranha a aparência da filha.",
-              "still": "",
+              "overview": "Alika sente orgulho ao visitar as terras de Tonho. Adalgisa se insinua para Mirinho, e Marta e Virgínia percebem. Virgínia finge naturalidade diante de Adalgisa e Mirinho, e Marta se surpreende. Marta confronta Diógenes e diz que o marido parece estar com medo de Virgínia. Alika desabafa com Niara sobre ter lutas diferentes de Tonho.",
+              "still": "https://image.tmdb.org/t/p/w400/plZtWgBqORJ3cl77mMTLkDI2FJe.jpg",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-08-17T21:00:00"
+              "locked": false
             },
             {
               "title": "A Nobreza do Amor Ep 124",
@@ -20078,121 +20077,133 @@
               "title": "A Nobreza do Amor Ep 129",
               "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-129.mp4",
               "episode": 129,
-              "air_date": "",
+              "air_date": "2026-08-24",
               "overview": "",
               "still": "",
               "guest_stars": [],
-              "locked": false
+              "locked": true,
+              "release_iso": "2026-08-24T21:00:00"
             },
             {
               "title": "A Nobreza do Amor Ep 130",
               "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-130.mp4",
               "episode": 130,
-              "air_date": "",
+              "air_date": "2026-08-25",
               "overview": "",
               "still": "",
               "guest_stars": [],
-              "locked": false
+              "locked": true,
+              "release_iso": "2026-08-25T21:00:00"
             },
             {
               "title": "A Nobreza do Amor Ep 131",
               "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-131.mp4",
               "episode": 131,
-              "air_date": "",
+              "air_date": "2026-08-26",
               "overview": "",
               "still": "",
               "guest_stars": [],
-              "locked": false
+              "locked": true,
+              "release_iso": "2026-08-26T21:00:00"
             },
             {
               "title": "A Nobreza do Amor Ep 132",
               "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-132.mp4",
               "episode": 132,
-              "air_date": "",
+              "air_date": "2026-08-27",
               "overview": "",
               "still": "",
               "guest_stars": [],
-              "locked": false
+              "locked": true,
+              "release_iso": "2026-08-27T21:00:00"
             },
             {
               "title": "A Nobreza do Amor Ep 133",
               "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-133.mp4",
               "episode": 133,
-              "air_date": "",
+              "air_date": "2026-08-28",
               "overview": "",
               "still": "",
               "guest_stars": [],
-              "locked": false
+              "locked": true,
+              "release_iso": "2026-08-28T21:00:00"
             },
             {
               "title": "A Nobreza do Amor Ep 134",
               "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-134.mp4",
               "episode": 134,
-              "air_date": "",
+              "air_date": "2026-08-29",
               "overview": "",
               "still": "",
               "guest_stars": [],
-              "locked": false
+              "locked": true,
+              "release_iso": "2026-08-29T21:00:00"
             },
             {
               "title": "A Nobreza do Amor Ep 135",
               "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-135.mp4",
               "episode": 135,
-              "air_date": "",
+              "air_date": "2026-08-31",
               "overview": "",
               "still": "",
               "guest_stars": [],
-              "locked": false
+              "locked": true,
+              "release_iso": "2026-08-31T21:00:00"
             },
             {
               "title": "A Nobreza do Amor Ep 136",
               "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-136.mp4",
               "episode": 136,
-              "air_date": "",
+              "air_date": "2026-09-01",
               "overview": "",
               "still": "",
               "guest_stars": [],
-              "locked": false
+              "locked": true,
+              "release_iso": "2026-09-01T21:00:00"
             },
             {
               "title": "A Nobreza do Amor Ep 137",
               "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-137.mp4",
               "episode": 137,
-              "air_date": "",
+              "air_date": "2026-09-02",
               "overview": "",
               "still": "",
               "guest_stars": [],
-              "locked": false
+              "locked": true,
+              "release_iso": "2026-09-02T21:00:00"
             },
             {
               "title": "A Nobreza do Amor Ep 138",
               "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-138.mp4",
               "episode": 138,
-              "air_date": "",
+              "air_date": "2026-09-03",
               "overview": "",
               "still": "",
               "guest_stars": [],
-              "locked": false
+              "locked": true,
+              "release_iso": "2026-09-03T21:00:00"
             },
             {
               "title": "A Nobreza do Amor Ep 139",
               "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-139.mp4",
               "episode": 139,
-              "air_date": "",
+              "air_date": "2026-09-04",
               "overview": "",
               "still": "",
               "guest_stars": [],
-              "locked": false
+              "locked": true,
+              "release_iso": "2026-09-04T21:00:00"
             },
             {
               "title": "A Nobreza do Amor Ep 140",
               "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-140.mp4",
               "episode": 140,
-              "air_date": "",
+              "air_date": "2026-09-05",
               "overview": "",
               "still": "",
               "guest_stars": [],
-              "locked": false
+              "locked": true,
+              "release_iso": "2026-09-05T21:00:00"
             },
             {
               "title": "A Nobreza do Amor Ep 141",
@@ -21929,11 +21940,10 @@
           "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-123.mp4",
           "episode": 123,
           "air_date": "2026-08-17",
-          "overview": "Bartô paga Donato por seus serviços de atuação. Alika e Tonho prometem ajudar uma ao outro na realização de seus sonhos no Brasil e em Batanga. Alika sente orgulho ao visitar as terras de Tonho. Adalgisa se insinua para Mirinho, e Marta e Virgínia percebem. Virgínia finge naturalidade diante de Adalgisa e Mirinho, e Marta se surpreende. Viriato alerta Bartô para desistir das artimanhas para transformar Veneranda em santa.\n\nMarta confronta Diógenes e diz que o marido parece estar com medo de Virgínia. Alika desabafa com Niara sobre ter lutas diferentes de Tonho. Binta orienta como Kênia deve se vestir para o jantar, e Jendal estranha a aparência da filha.",
-          "still": "",
+          "overview": "Alika sente orgulho ao visitar as terras de Tonho. Adalgisa se insinua para Mirinho, e Marta e Virgínia percebem. Virgínia finge naturalidade diante de Adalgisa e Mirinho, e Marta se surpreende. Marta confronta Diógenes e diz que o marido parece estar com medo de Virgínia. Alika desabafa com Niara sobre ter lutas diferentes de Tonho.",
+          "still": "https://image.tmdb.org/t/p/w400/plZtWgBqORJ3cl77mMTLkDI2FJe.jpg",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-08-17T21:00:00"
+          "locked": false
         },
         {
           "title": "A Nobreza do Amor Ep 124",
@@ -21994,121 +22004,133 @@
           "title": "A Nobreza do Amor Ep 129",
           "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-129.mp4",
           "episode": 129,
-          "air_date": "",
+          "air_date": "2026-08-24",
           "overview": "",
           "still": "",
           "guest_stars": [],
-          "locked": false
+          "locked": true,
+          "release_iso": "2026-08-24T21:00:00"
         },
         {
           "title": "A Nobreza do Amor Ep 130",
           "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-130.mp4",
           "episode": 130,
-          "air_date": "",
+          "air_date": "2026-08-25",
           "overview": "",
           "still": "",
           "guest_stars": [],
-          "locked": false
+          "locked": true,
+          "release_iso": "2026-08-25T21:00:00"
         },
         {
           "title": "A Nobreza do Amor Ep 131",
           "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-131.mp4",
           "episode": 131,
-          "air_date": "",
+          "air_date": "2026-08-26",
           "overview": "",
           "still": "",
           "guest_stars": [],
-          "locked": false
+          "locked": true,
+          "release_iso": "2026-08-26T21:00:00"
         },
         {
           "title": "A Nobreza do Amor Ep 132",
           "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-132.mp4",
           "episode": 132,
-          "air_date": "",
+          "air_date": "2026-08-27",
           "overview": "",
           "still": "",
           "guest_stars": [],
-          "locked": false
+          "locked": true,
+          "release_iso": "2026-08-27T21:00:00"
         },
         {
           "title": "A Nobreza do Amor Ep 133",
           "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-133.mp4",
           "episode": 133,
-          "air_date": "",
+          "air_date": "2026-08-28",
           "overview": "",
           "still": "",
           "guest_stars": [],
-          "locked": false
+          "locked": true,
+          "release_iso": "2026-08-28T21:00:00"
         },
         {
           "title": "A Nobreza do Amor Ep 134",
           "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-134.mp4",
           "episode": 134,
-          "air_date": "",
+          "air_date": "2026-08-29",
           "overview": "",
           "still": "",
           "guest_stars": [],
-          "locked": false
+          "locked": true,
+          "release_iso": "2026-08-29T21:00:00"
         },
         {
           "title": "A Nobreza do Amor Ep 135",
           "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-135.mp4",
           "episode": 135,
-          "air_date": "",
+          "air_date": "2026-08-31",
           "overview": "",
           "still": "",
           "guest_stars": [],
-          "locked": false
+          "locked": true,
+          "release_iso": "2026-08-31T21:00:00"
         },
         {
           "title": "A Nobreza do Amor Ep 136",
           "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-136.mp4",
           "episode": 136,
-          "air_date": "",
+          "air_date": "2026-09-01",
           "overview": "",
           "still": "",
           "guest_stars": [],
-          "locked": false
+          "locked": true,
+          "release_iso": "2026-09-01T21:00:00"
         },
         {
           "title": "A Nobreza do Amor Ep 137",
           "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-137.mp4",
           "episode": 137,
-          "air_date": "",
+          "air_date": "2026-09-02",
           "overview": "",
           "still": "",
           "guest_stars": [],
-          "locked": false
+          "locked": true,
+          "release_iso": "2026-09-02T21:00:00"
         },
         {
           "title": "A Nobreza do Amor Ep 138",
           "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-138.mp4",
           "episode": 138,
-          "air_date": "",
+          "air_date": "2026-09-03",
           "overview": "",
           "still": "",
           "guest_stars": [],
-          "locked": false
+          "locked": true,
+          "release_iso": "2026-09-03T21:00:00"
         },
         {
           "title": "A Nobreza do Amor Ep 139",
           "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-139.mp4",
           "episode": 139,
-          "air_date": "",
+          "air_date": "2026-09-04",
           "overview": "",
           "still": "",
           "guest_stars": [],
-          "locked": false
+          "locked": true,
+          "release_iso": "2026-09-04T21:00:00"
         },
         {
           "title": "A Nobreza do Amor Ep 140",
           "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-140.mp4",
           "episode": 140,
-          "air_date": "",
+          "air_date": "2026-09-05",
           "overview": "",
           "still": "",
           "guest_stars": [],
-          "locked": false
+          "locked": true,
+          "release_iso": "2026-09-05T21:00:00"
         },
         {
           "title": "A Nobreza do Amor Ep 141",
@@ -30525,7 +30547,7 @@
                 {
                   "name": "Cosme dos Santos",
                   "character": "Albano Souza",
-                  "photo": ""
+                  "photo": "https://image.tmdb.org/t/p/w185/rCCMLTFro3BJyAq02mvolRfWN79.jpg"
                 }
               ],
               "locked": false
@@ -30541,7 +30563,7 @@
                 {
                   "name": "Cosme dos Santos",
                   "character": "Albano Souza",
-                  "photo": ""
+                  "photo": "https://image.tmdb.org/t/p/w185/rCCMLTFro3BJyAq02mvolRfWN79.jpg"
                 },
                 {
                   "name": "Luciana Paes",
@@ -32828,7 +32850,7 @@
             {
               "name": "Cosme dos Santos",
               "character": "Albano Souza",
-              "photo": ""
+              "photo": "https://image.tmdb.org/t/p/w185/rCCMLTFro3BJyAq02mvolRfWN79.jpg"
             }
           ],
           "locked": false
@@ -32844,7 +32866,7 @@
             {
               "name": "Cosme dos Santos",
               "character": "Albano Souza",
-              "photo": ""
+              "photo": "https://image.tmdb.org/t/p/w185/rCCMLTFro3BJyAq02mvolRfWN79.jpg"
             },
             {
               "name": "Luciana Paes",
