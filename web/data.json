@@ -20043,8 +20043,8 @@
               "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-126.mp4",
               "episode": 126,
               "air_date": "2026-08-20",
-              "overview": "Alika deduz que alguém tirou uma foto dela, e Tonho acredita que foi uma coincidência. Viriato descobre uma carta da mãe de Ritinha entre os pertences de Belmira. Salma desconfia de Fuad, que olha com interesse para Belmira. Dôra e Bartô recebem Carmen e Murilo na festa das bodas de Marta e Diógenes. Carmen se interessa por Adônis, e Geralda não gosta.\n\nFortunato agride Maria Helena ao perceber a presença de Murilo, e Manoel se desespera. Fortunato tranca Maria Helena em seu quarto, e Manoel e Dôra a ajudam. Sebastião garante a Virgínia que conseguiu a foto de Alika. Kênia tenta enviar suas joias aos rebeldes, mas Pascoal intercepta o esquema. Omar se declara para Alika e a beija.",
-              "still": "",
+              "overview": "José aconselha Alika a pensar melhor sobre sua relação com Tonho, a fim de proteger sua missão em Batanga. Jendal se prepara para oficializar o casamento com Binta. Sebastião tira uma foto de Alika. Viriato descobre uma carta da mãe de Ritinha entre os pertences de Belmira. Salma desconfia de Fuad, que olha com interesse para Belmira. Carmen se interessa por Adônis, e Geralda não gosta.",
+              "still": "https://image.tmdb.org/t/p/w400/nwkOBnNygUuM2YD36akblg1DgL0.jpg",
               "guest_stars": [],
               "locked": false
             },
@@ -20056,8 +20056,7 @@
               "overview": "Alika se revolta contra Omar e afirma que não se submeterá a ele em troca de sua ajuda. Tem início a cerimônia de casamento de Jendal e Binta. Maria Helena volta para a festa de Marta e Diógenes, e Murilo lhe dedica uma canção. Manoel sofre com a decisão da mãe. Graça desconfia da proximidade entre Maria Helena e Murilo. Sebastião acerta com o fotógrafo o registro feito de Alika.\n\nPascoal intercepta a fuga de Kênia após o casamento do pai, e Dumi, mesmo ferido pelos soldados, consegue escapar. Viriato confronta Belmira sobre a história de Ritinha. Geralda flagra Adônis com Carmen. Murilo e Maria Helena se beijam. Manoel cuida de Fortunato. Durante sua fuga, Dumi acaba desmaiando.",
               "still": "",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-08-21T21:00:00"
+              "locked": false
             },
             {
               "title": "A Nobreza do Amor Ep 128",
@@ -21967,8 +21966,8 @@
           "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-126.mp4",
           "episode": 126,
           "air_date": "2026-08-20",
-          "overview": "Alika deduz que alguém tirou uma foto dela, e Tonho acredita que foi uma coincidência. Viriato descobre uma carta da mãe de Ritinha entre os pertences de Belmira. Salma desconfia de Fuad, que olha com interesse para Belmira. Dôra e Bartô recebem Carmen e Murilo na festa das bodas de Marta e Diógenes. Carmen se interessa por Adônis, e Geralda não gosta.\n\nFortunato agride Maria Helena ao perceber a presença de Murilo, e Manoel se desespera. Fortunato tranca Maria Helena em seu quarto, e Manoel e Dôra a ajudam. Sebastião garante a Virgínia que conseguiu a foto de Alika. Kênia tenta enviar suas joias aos rebeldes, mas Pascoal intercepta o esquema. Omar se declara para Alika e a beija.",
-          "still": "",
+          "overview": "José aconselha Alika a pensar melhor sobre sua relação com Tonho, a fim de proteger sua missão em Batanga. Jendal se prepara para oficializar o casamento com Binta. Sebastião tira uma foto de Alika. Viriato descobre uma carta da mãe de Ritinha entre os pertences de Belmira. Salma desconfia de Fuad, que olha com interesse para Belmira. Carmen se interessa por Adônis, e Geralda não gosta.",
+          "still": "https://image.tmdb.org/t/p/w400/nwkOBnNygUuM2YD36akblg1DgL0.jpg",
           "guest_stars": [],
           "locked": false
         },
@@ -21980,8 +21979,7 @@
           "overview": "Alika se revolta contra Omar e afirma que não se submeterá a ele em troca de sua ajuda. Tem início a cerimônia de casamento de Jendal e Binta. Maria Helena volta para a festa de Marta e Diógenes, e Murilo lhe dedica uma canção. Manoel sofre com a decisão da mãe. Graça desconfia da proximidade entre Maria Helena e Murilo. Sebastião acerta com o fotógrafo o registro feito de Alika.\n\nPascoal intercepta a fuga de Kênia após o casamento do pai, e Dumi, mesmo ferido pelos soldados, consegue escapar. Viriato confronta Belmira sobre a história de Ritinha. Geralda flagra Adônis com Carmen. Murilo e Maria Helena se beijam. Manoel cuida de Fortunato. Durante sua fuga, Dumi acaba desmaiando.",
           "still": "",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-08-21T21:00:00"
+          "locked": false
         },
         {
           "title": "A Nobreza do Amor Ep 128",
@@ -50209,7 +50207,7 @@
     {
       "id": "sousou_no_frieren",
       "title": "Sousou No Frieren",
-      "poster": "https://image.tmdb.org/t/p/w500/d9IuDqPWoUYukwblQhqV00jlCzZ.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/qykTIEJQF8cunKD0CKOqab15wns.jpg",
       "seasons": [
         {
           "season": 1,
@@ -50386,12 +50384,13 @@
       "category": "animes",
       "local_poster": "/Pirataflix/assets/Capas/sousou_no_frieren.jpg",
       "posters": [
+        "https://image.tmdb.org/t/p/w500/qykTIEJQF8cunKD0CKOqab15wns.jpg",
         "https://image.tmdb.org/t/p/w500/dqZENchTd7lp5zht7BdlqM7RBhD.jpg",
         "https://image.tmdb.org/t/p/w500/cHhJzdUGcEBq6av4wr9jsIvUITH.jpg",
         "https://image.tmdb.org/t/p/w500/4oIkJpy27JnTcf0pdCsUEtJEoOz.jpg",
-        "https://image.tmdb.org/t/p/w500/d9IuDqPWoUYukwblQhqV00jlCzZ.jpg",
         "https://image.tmdb.org/t/p/w500/fa3uCbfUaz5gQrJw9tLPrUc9hWt.jpg",
-        "https://image.tmdb.org/t/p/w500/bYOrD9rjnDsyJESTFbJdgiDXNhb.jpg"
+        "https://image.tmdb.org/t/p/w500/bYOrD9rjnDsyJESTFbJdgiDXNhb.jpg",
+        "https://image.tmdb.org/t/p/w500/aejg5U3xVdGCMsDYCGBwPRg3WhY.jpg"
       ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/rBOnrVlck7BIlGeWVlzYiZeg4l2.jpg",
       "overview": "Após uma missão de 10 anos ao lado do herói Himmel e seu grupo, a poderosa maga Frieren derrotou o Rei Demônio e trouxe paz ao reino. Como uma elfa, Frieren tem uma vida de mais de mil anos pela frente. Ela promete retornar para seus amigos e, assim, parte em uma jornada solitária. 50 anos se passam quando Frieren finalmente volta para visitar Himmel e os outros. Embora ela não tenha envelhecido nada, seus amigos têm pouco tempo de vida restante. É então que Frieren testemunha a morte de Himmel, o que a leva a lamentar não ter passado mais tempo junto dele. Com esse arrependimento em seu coração, ela embarca em uma nova jornada com o objetivo de se conectar e conhecer melhor as pessoas. Ao longo dessa viagem, a elfa Frieren encontrará diversas pessoas e viverá incontáveis aventuras emocionantes!",
