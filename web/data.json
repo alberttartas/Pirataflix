@@ -3303,7 +3303,7 @@
                 {
                   "name": "Cauã Martins",
                   "character": "Heitor",
-                  "photo": "https://image.tmdb.org/t/p/w185/hTGnRNWSgYN5AFHQz52Rzd45ezu.jpg"
+                  "photo": "https://image.tmdb.org/t/p/w185/61srIxRdGlXP4I2mxkAJbEMzgaW.jpg"
                 }
               ],
               "locked": false
@@ -4194,7 +4194,7 @@
             {
               "name": "Cauã Martins",
               "character": "Heitor",
-              "photo": "https://image.tmdb.org/t/p/w185/hTGnRNWSgYN5AFHQz52Rzd45ezu.jpg"
+              "photo": "https://image.tmdb.org/t/p/w185/61srIxRdGlXP4I2mxkAJbEMzgaW.jpg"
             }
           ],
           "locked": false
@@ -20063,8 +20063,8 @@
               "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-128.mp4",
               "episode": 128,
               "air_date": "2026-08-22",
-              "overview": "Akin e Ladisa se preocupam com a demora de Dumi. Pascoal entrega Kênia para Jendal, que volta a castigar a filha a trancando em seu quarto. Murilo convida Maria Helena para fugir com ele. Fortunato descobre que Maria Helena conseguiu se libertar de seus aposentos. Omar desabafa com Onildo, e pede perdão a Alika.\n\nMaria Helena se despede de Manoel e afirma que viajará com Murilo. Fortunato vê Maria Helena partindo com Murilo. Tonho não gosta de ver Omar com Alika. Akin encontra a camisa de Dumi. Sebastião diz a Virgínia que em breve estará com a foto de Alika.",
-              "still": "",
+              "overview": "Akin e Ladisa se preocupam com a demora de Dumi. Pascoal entrega Kênia para Jendal, que volta a castigar a filha a trancando em seu quarto. Murilo convida Maria Helena para fugir com ele. Fortunato descobre que Maria Helena conseguiu se libertar de seus aposentos. Omar desabafa com Onildo, e pede perdão a Alika.",
+              "still": "https://image.tmdb.org/t/p/w400/vnwX2CpTZJojT7GBjVoSvh5h8ur.jpg",
               "guest_stars": [],
               "locked": false
             },
@@ -21985,8 +21985,8 @@
           "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-128.mp4",
           "episode": 128,
           "air_date": "2026-08-22",
-          "overview": "Akin e Ladisa se preocupam com a demora de Dumi. Pascoal entrega Kênia para Jendal, que volta a castigar a filha a trancando em seu quarto. Murilo convida Maria Helena para fugir com ele. Fortunato descobre que Maria Helena conseguiu se libertar de seus aposentos. Omar desabafa com Onildo, e pede perdão a Alika.\n\nMaria Helena se despede de Manoel e afirma que viajará com Murilo. Fortunato vê Maria Helena partindo com Murilo. Tonho não gosta de ver Omar com Alika. Akin encontra a camisa de Dumi. Sebastião diz a Virgínia que em breve estará com a foto de Alika.",
-          "still": "",
+          "overview": "Akin e Ladisa se preocupam com a demora de Dumi. Pascoal entrega Kênia para Jendal, que volta a castigar a filha a trancando em seu quarto. Murilo convida Maria Helena para fugir com ele. Fortunato descobre que Maria Helena conseguiu se libertar de seus aposentos. Omar desabafa com Onildo, e pede perdão a Alika.",
+          "still": "https://image.tmdb.org/t/p/w400/vnwX2CpTZJojT7GBjVoSvh5h8ur.jpg",
           "guest_stars": [],
           "locked": false
         },
@@ -28223,7 +28223,7 @@
     {
       "id": "marimar",
       "title": "Marimar",
-      "poster": "https://image.tmdb.org/t/p/w500/6m1PYxuzTFMJ7QlZTbG5AK1iy6q.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/eoHl6ISwfzVyW68sv7hUfR9MQh.jpg",
       "seasons": [
         {
           "season": 1,
@@ -29727,15 +29727,15 @@
       "category": "novelas",
       "local_poster": "/Pirataflix/assets/Capas/marimar.jpg",
       "posters": [
-        "https://image.tmdb.org/t/p/w500/6m1PYxuzTFMJ7QlZTbG5AK1iy6q.jpg",
-        "https://image.tmdb.org/t/p/w500/iJ3jf3k56Cy1ImA9t3egPeGKQ2R.jpg",
+        "https://image.tmdb.org/t/p/w500/eoHl6ISwfzVyW68sv7hUfR9MQh.jpg",
         "https://image.tmdb.org/t/p/w500/r0AFBjxrIRfpk5jmoHAgmS8id1f.jpg",
+        "https://image.tmdb.org/t/p/w500/52cIavdRQrNmmDBqtSy0Gwn7Sdj.jpg",
         "https://image.tmdb.org/t/p/w500/2uYubmyZoLHajkvsnsglZU4W866.jpg",
-        "https://image.tmdb.org/t/p/w500/iCVanUSLJkTvDJbPuE8bsSa8bS0.jpg",
         "https://image.tmdb.org/t/p/w500/woVcqvuN7gVLvJQFR4XsymA02NA.jpg",
-        "https://image.tmdb.org/t/p/w500/4xpSaTAtmsHwwEoLhHTL5Ut4xuN.jpg"
+        "https://image.tmdb.org/t/p/w500/4xpSaTAtmsHwwEoLhHTL5Ut4xuN.jpg",
+        "https://image.tmdb.org/t/p/w500/3ma4pgUNznyuuVgngedbjt4zGfr.jpg"
       ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/nDh9cvt64J3gD1wxxxfR85jiEmB.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/2ODpaCivLAItQFO6MPwgN7gD728.jpg",
       "overview": "Marimar, uma jovem humilde de uma pequena vila de pescadores, verá sua vida simples mudar para sempre após se apaixonar por Sergio, filho de um fazendeiro muito rico da região.",
       "year": "1994",
       "rating": 7.0,
@@ -49602,7 +49602,7 @@
         "Animação",
         "Sci-Fi & Fantasia"
       ],
-      "rating": 7.7,
+      "rating": 7.6,
       "cast": [
         {
           "name": "Atsumi Tanezaki",
