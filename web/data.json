@@ -3,7 +3,7 @@
     {
       "id": "resident_evil_4",
       "title": "Resident Evil 4",
-      "poster": "https://image.tmdb.org/t/p/w500/aEXC9SmF3j6fWw3bIQTCe9DNqZQ.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/A1aTnlmt0VSfnFXzL3JqHl8l68V.jpg",
       "episodes": [
         {
           "title": "Resident Evil 4: Recomeço",
@@ -14,9 +14,10 @@
       "type": "movie",
       "local_poster": "/Pirataflix/assets/Capas/default.jpg",
       "posters": [
+        "https://image.tmdb.org/t/p/w500/A1aTnlmt0VSfnFXzL3JqHl8l68V.jpg",
         "https://image.tmdb.org/t/p/w500/aEXC9SmF3j6fWw3bIQTCe9DNqZQ.jpg",
-        "https://image.tmdb.org/t/p/w500/6kSCtpGwgHufvlVvmgCkdtBdhfL.jpg",
         "https://image.tmdb.org/t/p/w500/h3euc85AOK0crcPfobAQramu870.jpg",
+        "https://image.tmdb.org/t/p/w500/6kSCtpGwgHufvlVvmgCkdtBdhfL.jpg",
         "https://image.tmdb.org/t/p/w500/cQCESygsQePaNtl8xSOlkOF3rgc.jpg"
       ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/6jnokb9eEklqZlmlzNMiaYnmyeK.jpg",
@@ -2376,7 +2377,7 @@
       "backdrop": "https://image.tmdb.org/t/p/w1280/djAGltv1bVw625yYku4CyA42gq0.jpg",
       "overview": "No limite do desespero, cinco amigas decidem que a única saída é formar uma gangue, conseguir armas e começar a assaltar bancos.",
       "year": "2026",
-      "rating": 6.1,
+      "rating": 6.2,
       "cast": [
         {
           "name": "Rebecca Marder",
@@ -20073,11 +20074,10 @@
               "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-129.mp4",
               "episode": 129,
               "air_date": "2026-08-24",
-              "overview": "",
-              "still": "",
+              "overview": "Maria Helena se despede de Manoel e afirma que viajará com Murilo. Fortunato vê Maria Helena partindo com Murilo. Tonho não gosta de ver Omar com Alika. Akin encontra a camisa de Dumi. Virgínia anseia por enviar a foto de Alika para Jendal. Omar e Salma conversam sobre suas desilusões amorosas. Fátima se confessa com Viriato. Alika conta a Tonho o que se passou entre ela e Omar.",
+              "still": "https://image.tmdb.org/t/p/w400/umNWWCXyv2geGKSYy5D7dg7s73D.jpg",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-08-24T21:00:00"
+              "locked": false
             },
             {
               "title": "A Nobreza do Amor Ep 130",
@@ -21995,11 +21995,10 @@
           "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-129.mp4",
           "episode": 129,
           "air_date": "2026-08-24",
-          "overview": "",
-          "still": "",
+          "overview": "Maria Helena se despede de Manoel e afirma que viajará com Murilo. Fortunato vê Maria Helena partindo com Murilo. Tonho não gosta de ver Omar com Alika. Akin encontra a camisa de Dumi. Virgínia anseia por enviar a foto de Alika para Jendal. Omar e Salma conversam sobre suas desilusões amorosas. Fátima se confessa com Viriato. Alika conta a Tonho o que se passou entre ela e Omar.",
+          "still": "https://image.tmdb.org/t/p/w400/umNWWCXyv2geGKSYy5D7dg7s73D.jpg",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-08-24T21:00:00"
+          "locked": false
         },
         {
           "title": "A Nobreza do Amor Ep 130",
@@ -50383,8 +50382,8 @@
       "local_poster": "/Pirataflix/assets/Capas/sousou_no_frieren.jpg",
       "posters": [
         "https://image.tmdb.org/t/p/w500/qykTIEJQF8cunKD0CKOqab15wns.jpg",
-        "https://image.tmdb.org/t/p/w500/dqZENchTd7lp5zht7BdlqM7RBhD.jpg",
         "https://image.tmdb.org/t/p/w500/cHhJzdUGcEBq6av4wr9jsIvUITH.jpg",
+        "https://image.tmdb.org/t/p/w500/dqZENchTd7lp5zht7BdlqM7RBhD.jpg",
         "https://image.tmdb.org/t/p/w500/4oIkJpy27JnTcf0pdCsUEtJEoOz.jpg",
         "https://image.tmdb.org/t/p/w500/fa3uCbfUaz5gQrJw9tLPrUc9hWt.jpg",
         "https://image.tmdb.org/t/p/w500/bYOrD9rjnDsyJESTFbJdgiDXNhb.jpg",
@@ -80233,7 +80232,7 @@
         "https://image.tmdb.org/t/p/w500/vkkNpWVsDK4kVTY7UlyO7GWtza0.jpg",
         "https://image.tmdb.org/t/p/w500/qu64UV3FMaT53mxNZP60zT4rMAJ.jpg"
       ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/pcc0wEg1Jm9WpHxksCUJmuvC8MB.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/rMqsTrIzOaFnxiL1R2x3E2x6ZZR.jpg",
       "overview": "A Pantera Cor-de-Rosa (The Pink Panther Show, no original em inglês) é uma série animada criada pelos estúdios DePatie-Freleng Enterprises, exibida originalmente entre 1964 e 1980 nos Estados Unidos. A Pantera Cor-de-Rosa foi um personagem criado para fazer apenas uma introdução ao filme Pantera Cor-de-Rosa, de Blake Edwards, com Peter Sellers.  O sucesso foi tão grande com crítica e público que, de personagem coadjuvante, passou a principal. Começou a ter uma série de curta-metragens lançados nos cinemas a partir de 1964 e em 1969, passou a ser exibidos na TV em 1969 no bloco de animação The Pink Panther Show.",
       "year": "1993",
       "genres": [
