@@ -410,7 +410,7 @@
         {
           "name": "Daisy Ridley",
           "character": "Ava",
-          "profile": "https://image.tmdb.org/t/p/w185/dnRtM8YBxidAshD76XIMN495Yqc.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/iVboQmgPC3tYFjezBjrVECJRS8n.jpg"
         },
         {
           "name": "Brenton Thwaites",
@@ -20087,8 +20087,7 @@
               "overview": "",
               "still": "",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-08-25T21:00:00"
+              "locked": false
             },
             {
               "title": "A Nobreza do Amor Ep 131",
@@ -22008,8 +22007,7 @@
           "overview": "",
           "still": "",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-08-25T21:00:00"
+          "locked": false
         },
         {
           "title": "A Nobreza do Amor Ep 131",
@@ -68377,12 +68375,12 @@
       "local_poster": "/Pirataflix/assets/Capas/boku_no_hero_academia_dublado.jpg",
       "posters": [
         "https://image.tmdb.org/t/p/w500/cfESQ8y8oNAeLuRbs7NkW7Qjwhy.jpg",
-        "https://image.tmdb.org/t/p/w500/peJKJn9rEzQP9FViI3suQloTIo7.jpg",
         "https://image.tmdb.org/t/p/w500/phuYuzqWW9ru8EA3HVjE9W2Rr3M.jpg",
         "https://image.tmdb.org/t/p/w500/sSELYoag7grJVTnEFWfTvWXCjGT.jpg",
         "https://image.tmdb.org/t/p/w500/2OyMvEr1vetWGMYCJZc2lFTJZhL.jpg",
         "https://image.tmdb.org/t/p/w500/wlz8Pqr23JQUGYA8DSZ8byV0rce.jpg",
-        "https://image.tmdb.org/t/p/w500/eq68IFhnFPMIjngNn93DWMBKXpt.jpg"
+        "https://image.tmdb.org/t/p/w500/eq68IFhnFPMIjngNn93DWMBKXpt.jpg",
+        "https://image.tmdb.org/t/p/w500/qIKNIkxXYIro6JjNIGyqumrVUKL.jpg"
       ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/ol0H2DGp4ifBHA4JDlCpwJWxnY2.jpg",
       "overview": "Por toda a sua vida, Izuku sonhou ser um herói — um objetivo ambicioso para qualquer um, mas especialmente desafiador para um garoto sem superpoderes. Isso mesmo: em um mundo onde 80% da população tem algum tipo de Dom especial, Izuku teve a má sorte de nascer completamente normal. Mas isso não vai impedi-lo de se matricular em uma das academias de herois mais prestigiosas do mundo.",
@@ -76423,7 +76421,7 @@
         "https://image.tmdb.org/t/p/w500/eTTsOyXm49jixiQJ93L97CCvVBk.jpg",
         "https://image.tmdb.org/t/p/w500/xFUl1CVkOYAqG3zLhLD3Dw1wZM1.jpg"
       ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/aasp5EmwclAQbwfGABWLTNLhjwB.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/3MY7hMWrJ13Xtb1Y4jd7tztyPaZ.jpg",
       "overview": "Uma esponja-do-mar chamada Bob Esponja Calça Quadrada mora com seu caracol de estimação na Fenda do Biquíni, no fundo do oceano. Bob trabalha no Siri Cascudo e, nas horas vagas, vive arrumando confusões com seu melhor amigo, a estrela-do-mar Patrick.",
       "year": "1999",
       "genres": [
