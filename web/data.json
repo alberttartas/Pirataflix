@@ -410,7 +410,7 @@
         {
           "name": "Daisy Ridley",
           "character": "Ava",
-          "profile": "https://image.tmdb.org/t/p/w185/iVboQmgPC3tYFjezBjrVECJRS8n.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/dnRtM8YBxidAshD76XIMN495Yqc.jpg"
         },
         {
           "name": "Brenton Thwaites",
@@ -11930,7 +11930,9 @@
         "https://image.tmdb.org/t/p/w500/fQsnoRyA9Fd0Zw6AUldw4sxrYyR.jpg",
         "https://image.tmdb.org/t/p/w500/sA8onwgwNdqLzHp4rlVzw9NVXt.jpg",
         "https://image.tmdb.org/t/p/w500/4evXawSpLYZOtUEOmwy0M7LWXaP.jpg",
-        "https://image.tmdb.org/t/p/w500/kPBQnOkXpAAbsIZutWHlnGOkmXt.jpg"
+        "https://image.tmdb.org/t/p/w500/kPBQnOkXpAAbsIZutWHlnGOkmXt.jpg",
+        "https://image.tmdb.org/t/p/w500/l7Yrw9smDZDpVegyBjclDioHyVr.jpg",
+        "https://image.tmdb.org/t/p/w500/pPvOsxUkiDALxSvOGlw3OjySBJD.jpg"
       ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/51gsll0qNMwqIU4fjwAHDx5MFTG.jpg",
       "overview": "História cheia de mistérios que mescla realidade e fantasia, no mundo sombrio do vampiro Bóris com elementos sobrenaturais, drama e humor.",
@@ -20104,11 +20106,10 @@
               "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-132.mp4",
               "episode": 132,
               "air_date": "2026-08-27",
-              "overview": "",
-              "still": "",
+              "overview": "Virgínia vibra com a possibilidade de entregar Alika a Jendal. Salma pensa em Omar. Januário comemora a construção de sua casa, nas terras dadas por Tonho. Ciço propõe se unir a Mundica, que o rejeita. Alika descobre que Jendal se casou com Binta, e celebra o fato de finalmente poder se casar com Tonho. Tonho hesita quando Alika afirma que os dois irão para Batanga.",
+              "still": "https://image.tmdb.org/t/p/w400/2zv9CFQL0GYsWrzMSuiwVU8pGyg.jpg",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-08-27T21:00:00"
+              "locked": false
             },
             {
               "title": "A Nobreza do Amor Ep 133",
@@ -22023,11 +22024,10 @@
           "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-132.mp4",
           "episode": 132,
           "air_date": "2026-08-27",
-          "overview": "",
-          "still": "",
+          "overview": "Virgínia vibra com a possibilidade de entregar Alika a Jendal. Salma pensa em Omar. Januário comemora a construção de sua casa, nas terras dadas por Tonho. Ciço propõe se unir a Mundica, que o rejeita. Alika descobre que Jendal se casou com Binta, e celebra o fato de finalmente poder se casar com Tonho. Tonho hesita quando Alika afirma que os dois irão para Batanga.",
+          "still": "https://image.tmdb.org/t/p/w400/2zv9CFQL0GYsWrzMSuiwVU8pGyg.jpg",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-08-27T21:00:00"
+          "locked": false
         },
         {
           "title": "A Nobreza do Amor Ep 133",
@@ -28166,7 +28166,8 @@
         "https://image.tmdb.org/t/p/w500/kUWvvMkNIf21UUDmHjYw55v6o7C.jpg",
         "https://image.tmdb.org/t/p/w500/7vd7jaZGLBD8rKKLDufctKal84A.jpg",
         "https://image.tmdb.org/t/p/w500/xon9xbgCFOaqORqQ7g00ZnnOvPL.jpg",
-        "https://image.tmdb.org/t/p/w500/b3jNa6UeL1oZJpqERuBeAZToI1R.jpg"
+        "https://image.tmdb.org/t/p/w500/b3jNa6UeL1oZJpqERuBeAZToI1R.jpg",
+        "https://image.tmdb.org/t/p/w500/hhIoPtOFaA94i4VBftWgFIawqQb.jpg"
       ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/bEKRyT7WN5TjFKv0JTWI2cyNlak.jpg",
       "overview": "Entre lendas e mistérios, um homem sem posses e sozinho no mundo finca seu destino aos pés de um jequitibá. Tendo a natureza como testemunha ele renasce e estabelece um pacto que o acompanhará ao longo de toda a sua trajetória.",
@@ -43056,7 +43057,8 @@
         "https://image.tmdb.org/t/p/w500/uyG1iWsAGX7K7o0iTVKGEVT2RPR.jpg",
         "https://image.tmdb.org/t/p/w500/xWJ3QxMVN4G8arSQyfPVYvnNrX2.jpg",
         "https://image.tmdb.org/t/p/w500/ue98uJc9ymnKQc4w9SxkOuzn0ST.jpg",
-        "https://image.tmdb.org/t/p/w500/ehbB6L0gMU2ILJCScO2036crfEw.jpg"
+        "https://image.tmdb.org/t/p/w500/ehbB6L0gMU2ILJCScO2036crfEw.jpg",
+        "https://image.tmdb.org/t/p/w500/k2g0NacEd0LzpUtv8UFcstL4dJV.jpg"
       ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/80TdemQlDHOVTQgRwtR4PwWwgXB.jpg",
       "overview": "Morena e Théo se conhecem durante a ocupação do Complexo do Alemão e, apesar das diferenças, engatam um romance. A situação se complica quando a jovem é vítima de um golpe e, ao aceitar um emprego fora do país, cai nas mãos de uma quadrilha internacional de tráfico de pessoas.  A novela é ambientada na Turquia e no Rio de Janeiro.",
@@ -46715,7 +46717,7 @@
     {
       "id": "verdades_secretas",
       "title": "Verdades Secretas",
-      "poster": "https://image.tmdb.org/t/p/w500/faRwRQbaxJ0ZAtpLjkSSGXlG3Ze.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/js4ME0psGSLwJQs3zbiYN2fhlEE.jpg",
       "seasons": [
         {
           "season": 1,
@@ -47371,8 +47373,8 @@
       "posters": [
         "https://image.tmdb.org/t/p/w500/rw1bnxgPhfzg9EvBlgbtjLkWBzy.jpg",
         "https://image.tmdb.org/t/p/w500/hlACuXfQMPAK5i5tI4j3c2FZmXU.jpg",
-        "https://image.tmdb.org/t/p/w500/faRwRQbaxJ0ZAtpLjkSSGXlG3Ze.jpg",
         "https://image.tmdb.org/t/p/w500/js4ME0psGSLwJQs3zbiYN2fhlEE.jpg",
+        "https://image.tmdb.org/t/p/w500/faRwRQbaxJ0ZAtpLjkSSGXlG3Ze.jpg",
         "https://image.tmdb.org/t/p/w500/eHzLZ3dC2EcXAUkAK2Oq0mJjKQr.jpg",
         "https://image.tmdb.org/t/p/w500/ucfw09rlxRdILflKCcVpdNgR0Ab.jpg"
       ],
