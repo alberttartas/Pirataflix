@@ -2595,8 +2595,8 @@
         "https://image.tmdb.org/t/p/w500/uXTg565ahu9RwonCX1V2Hex1NU6.jpg",
         "https://image.tmdb.org/t/p/w500/zCEm0xrRMa5fLCQ9d0nvcw6tvcr.jpg",
         "https://image.tmdb.org/t/p/w500/dxRdS7dSbSDv0YLdkjbxzIAZHoq.jpg",
-        "https://image.tmdb.org/t/p/w500/v2TL9tcfsFsFY1wM8rhwiQwo01t.jpg",
         "https://image.tmdb.org/t/p/w500/qaewZKBKmXjb4ZfFBb1LCug6BE8.jpg",
+        "https://image.tmdb.org/t/p/w500/v2TL9tcfsFsFY1wM8rhwiQwo01t.jpg",
         "https://image.tmdb.org/t/p/w500/olviL1bDh3UjK3Bao8Y7ypPqE7k.jpg"
       ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/6umsRLI7t0ydFwCl0JNEIO0q2LH.jpg",
@@ -20116,11 +20116,10 @@
               "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-133.mp4",
               "episode": 133,
               "air_date": "2026-08-28",
-              "overview": "",
-              "still": "",
+              "overview": "Niara conta a Alika que está gostando de Onildo. Dona Menina aconselha Tonho sobre seu caminho ao lado de Lúcia/Alika. Kênia humilha Pascoal e revela que se entregou a Dumi. Bartô tem um pesadelo com Veneranda. Carrapato procura Belmira e encontra Geralda, que o acolhe em seu quarto. Pascoal desabafa com Binta sobre o comportamento de Kênia, e a rainha o seduz. Ladisa e Akin cuidam de Dumi.",
+              "still": "https://image.tmdb.org/t/p/w400/qcE0V4xHCeV2GYog4Pf4ANBOrqb.jpg",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-08-28T21:00:00"
+              "locked": false
             },
             {
               "title": "A Nobreza do Amor Ep 134",
@@ -22034,11 +22033,10 @@
           "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-133.mp4",
           "episode": 133,
           "air_date": "2026-08-28",
-          "overview": "",
-          "still": "",
+          "overview": "Niara conta a Alika que está gostando de Onildo. Dona Menina aconselha Tonho sobre seu caminho ao lado de Lúcia/Alika. Kênia humilha Pascoal e revela que se entregou a Dumi. Bartô tem um pesadelo com Veneranda. Carrapato procura Belmira e encontra Geralda, que o acolhe em seu quarto. Pascoal desabafa com Binta sobre o comportamento de Kênia, e a rainha o seduz. Ladisa e Akin cuidam de Dumi.",
+          "still": "https://image.tmdb.org/t/p/w400/qcE0V4xHCeV2GYog4Pf4ANBOrqb.jpg",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-08-28T21:00:00"
+          "locked": false
         },
         {
           "title": "A Nobreza do Amor Ep 134",
