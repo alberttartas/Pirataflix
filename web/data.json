@@ -2595,8 +2595,8 @@
         "https://image.tmdb.org/t/p/w500/uXTg565ahu9RwonCX1V2Hex1NU6.jpg",
         "https://image.tmdb.org/t/p/w500/zCEm0xrRMa5fLCQ9d0nvcw6tvcr.jpg",
         "https://image.tmdb.org/t/p/w500/dxRdS7dSbSDv0YLdkjbxzIAZHoq.jpg",
-        "https://image.tmdb.org/t/p/w500/qaewZKBKmXjb4ZfFBb1LCug6BE8.jpg",
         "https://image.tmdb.org/t/p/w500/v2TL9tcfsFsFY1wM8rhwiQwo01t.jpg",
+        "https://image.tmdb.org/t/p/w500/qaewZKBKmXjb4ZfFBb1LCug6BE8.jpg",
         "https://image.tmdb.org/t/p/w500/olviL1bDh3UjK3Bao8Y7ypPqE7k.jpg"
       ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/6umsRLI7t0ydFwCl0JNEIO0q2LH.jpg",
@@ -3776,7 +3776,7 @@
                 {
                   "name": "Eduardo Pelizzari",
                   "character": "Inspetor Maurício Belgard",
-                  "photo": ""
+                  "photo": "https://image.tmdb.org/t/p/w185/zuPXe8XbOia8WBBad6BVbSFvYbN.jpg"
                 }
               ],
               "locked": false
@@ -4667,7 +4667,7 @@
             {
               "name": "Eduardo Pelizzari",
               "character": "Inspetor Maurício Belgard",
-              "photo": ""
+              "photo": "https://image.tmdb.org/t/p/w185/zuPXe8XbOia8WBBad6BVbSFvYbN.jpg"
             }
           ],
           "locked": false
@@ -20126,11 +20126,10 @@
               "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-134.mp4",
               "episode": 134,
               "air_date": "2026-08-29",
-              "overview": "",
-              "still": "",
+              "overview": "Virgínia pede um novo favor a Sebastião. Belmira registra quando Salma fala sobre seu desinteresse no casamento com Fuad. Mirinho descobre que Tonho e Lúcia/Alika marcaram a data de seu casamento. Casemiro conforta Mirinho, que sofre com sua paixão não correspondida por Lúcia/Alika. Manoel despista as perguntas sobre Maria Helena, e comenta com Fortunato. Manoel é ríspido com Ana Maria.",
+              "still": "https://image.tmdb.org/t/p/w400/zd174LG6txtxlfHjH9douN7u6U5.jpg",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-08-29T21:00:00"
+              "locked": false
             },
             {
               "title": "A Nobreza do Amor Ep 135",
@@ -22043,11 +22042,10 @@
           "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-134.mp4",
           "episode": 134,
           "air_date": "2026-08-29",
-          "overview": "",
-          "still": "",
+          "overview": "Virgínia pede um novo favor a Sebastião. Belmira registra quando Salma fala sobre seu desinteresse no casamento com Fuad. Mirinho descobre que Tonho e Lúcia/Alika marcaram a data de seu casamento. Casemiro conforta Mirinho, que sofre com sua paixão não correspondida por Lúcia/Alika. Manoel despista as perguntas sobre Maria Helena, e comenta com Fortunato. Manoel é ríspido com Ana Maria.",
+          "still": "https://image.tmdb.org/t/p/w400/zd174LG6txtxlfHjH9douN7u6U5.jpg",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-08-29T21:00:00"
+          "locked": false
         },
         {
           "title": "A Nobreza do Amor Ep 135",
@@ -49460,7 +49458,7 @@
         {
           "name": "Hank Azaria",
           "character": "Moe Szyslak / Chief Wiggum / Apu / Comic Book Guy / Carl Carlson / Superintendent Chalmers (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/uON3TWSySIy8wbDhkSzmFTDM6XO.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/yFDw4b0jucuFWNnGcBPfpYUtn16.jpg"
         },
         {
           "name": "Harry Shearer",
