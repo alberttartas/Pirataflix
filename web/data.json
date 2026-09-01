@@ -306,7 +306,7 @@
     {
       "id": "x_men_apocalipse",
       "title": "X-men Apocalipse",
-      "poster": "https://image.tmdb.org/t/p/w500/avAUyU5cXk0ASy5yR8FMtO78LRS.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/czKpsvSmpzMoOuuJXGjBHMoH1qq.jpg",
       "episodes": [
         {
           "title": "X-Men: Apocalipse",
@@ -317,13 +317,13 @@
       "type": "movie",
       "local_poster": "/Pirataflix/assets/Capas/x-men_apocalipse.jpg",
       "posters": [
-        "https://image.tmdb.org/t/p/w500/avAUyU5cXk0ASy5yR8FMtO78LRS.jpg",
+        "https://image.tmdb.org/t/p/w500/czKpsvSmpzMoOuuJXGjBHMoH1qq.jpg",
         "https://image.tmdb.org/t/p/w500/ikA8UhYdTGpqbatFa93nIf6noSr.jpg",
         "https://image.tmdb.org/t/p/w500/2mtQwJKVKQrZgTz49Dizb25eOQQ.jpg",
         "https://image.tmdb.org/t/p/w500/qttNmCib9gHhR5q0QoZ3FgmGom9.jpg",
         "https://image.tmdb.org/t/p/w500/wWwJHNloq8d4ZRwnJWEzdOkEjOo.jpg",
         "https://image.tmdb.org/t/p/w500/fVmMiVyYlDo6Cp6Grc8STbLcADo.jpg",
-        "https://image.tmdb.org/t/p/w500/6p4PLOJrg0qtHL3fUGfhsNT6I4M.jpg"
+        "https://image.tmdb.org/t/p/w500/iFK7QzJqneKJH24umJLbahBynhT.jpg"
       ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/sTQNRqLbfCXolrb5CizAW1dj528.jpg",
       "overview": "Apocalipse, o primeiro mutante de todos, consegue retornar à vida após milhares de anos. Agora, ele sai à procura de seguidores para dominar o mundo. Caberá aos X-Men se unirem para impedir os planos do vilão e evitar uma catástofre mundial.",
@@ -1512,7 +1512,7 @@
         {
           "name": "Hope Davis",
           "character": "Judy Vento",
-          "profile": "https://image.tmdb.org/t/p/w185/dJb76YQDFmfJ6ptlvBvx0ZBP44C.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/t2cuZK3D4x2j2DaDbD5lu0SM2Lv.jpg"
         },
         {
           "name": "Roger Dale Floyd",
@@ -20136,11 +20136,10 @@
               "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-135.mp4",
               "episode": 135,
               "air_date": "2026-08-31",
-              "overview": "",
-              "still": "",
+              "overview": "Alika comemora a notícia do apoio da rainha Menemi e planeja seu retorno a Batanga, enquanto Tonho se preocupa. Chinua conta a Kênia que Dumi foi encontrado com vida. Tonho revela a Caetana a verdadeira história de Alika. Omar conversa com Onildo sobre a importância do retorno de Niara e Alika a Batanga. Sebastião encontra a carta sobre Ritinha.",
+              "still": "https://image.tmdb.org/t/p/w400/AaqPwNS1JjIC7wil1fLcis0TRLB.jpg",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-08-31T21:00:00"
+              "locked": false
             },
             {
               "title": "A Nobreza do Amor Ep 136",
@@ -22052,11 +22051,10 @@
           "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-135.mp4",
           "episode": 135,
           "air_date": "2026-08-31",
-          "overview": "",
-          "still": "",
+          "overview": "Alika comemora a notícia do apoio da rainha Menemi e planeja seu retorno a Batanga, enquanto Tonho se preocupa. Chinua conta a Kênia que Dumi foi encontrado com vida. Tonho revela a Caetana a verdadeira história de Alika. Omar conversa com Onildo sobre a importância do retorno de Niara e Alika a Batanga. Sebastião encontra a carta sobre Ritinha.",
+          "still": "https://image.tmdb.org/t/p/w400/AaqPwNS1JjIC7wil1fLcis0TRLB.jpg",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-08-31T21:00:00"
+          "locked": false
         },
         {
           "title": "A Nobreza do Amor Ep 136",
