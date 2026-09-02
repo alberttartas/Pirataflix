@@ -363,7 +363,7 @@
         {
           "name": "Rose Byrne",
           "character": "Moira MacTaggert",
-          "profile": "https://image.tmdb.org/t/p/w185/4Vd7w19asuBfUGgz0NIuQI5wxIA.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/wR8YZlrewVW2FixRBrJcxaXU3R1.jpg"
         },
         {
           "name": "Evan Peters",
@@ -5060,7 +5060,7 @@
       "genres": [
         "Documentário"
       ],
-      "rating": 4.6,
+      "rating": 4.7,
       "cast": [
         {
           "name": "Michael Jackson",
@@ -20149,8 +20149,7 @@
               "overview": "",
               "still": "",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-09-01T21:00:00"
+              "locked": false
             },
             {
               "title": "A Nobreza do Amor Ep 137",
@@ -22064,8 +22063,7 @@
           "overview": "",
           "still": "",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-09-01T21:00:00"
+          "locked": false
         },
         {
           "title": "A Nobreza do Amor Ep 137",
@@ -66617,7 +66615,7 @@
       "backdrop": "https://image.tmdb.org/t/p/w1280/2rmK7mnchw9Xr3XdiTFSxTTLXqv.jpg",
       "overview": "Houve um homem que conquistou tudo aquilo que o mundo tinha a oferecer, o lendário Rei dos Piratas, Gold Roger. Capturado e condenado à execução pelo Governo Mundial, suas últimas palavras lançaram legiões aos mares. \"Meu tesouro? Se quiserem, podem pegá-lo. Procurem-no! Ele contém tudo que este mundo pode oferecer!\". Foi a revelação do maior tesouro, o One Piece, cobiçado por homens de todo o mundo, sonhando com fama e riqueza imensuráveis... Assim começou a Grande Era dos Piratas!",
       "year": "1999",
-      "rating": 8.7,
+      "rating": 8.8,
       "cast": [
         {
           "name": "Mayumi Tanaka",
@@ -78906,6 +78904,21 @@
           "name": "Andree Vermeulen",
           "character": "Ruffnut (voice)",
           "profile": "https://image.tmdb.org/t/p/w185/ekTg2fPNsgSY7FMO937H5xFFCsg.jpg"
+        },
+        {
+          "name": "Jay Baruchel",
+          "character": "Hiccup (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/1GYJeQzPcY9Pfmc3FFsBwClkCv7.jpg"
+        },
+        {
+          "name": "T.J. Miller",
+          "character": "Tuffnut (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/rRrVvBxOkyYM5XdLXimShHR1Itn.jpg"
+        },
+        {
+          "name": "Christopher Mintz-Plasse",
+          "character": "Fishlegs (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/dnj2qyxmPt5JF5uurbXQLegppAx.jpg"
         }
       ]
     },
