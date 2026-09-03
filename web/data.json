@@ -537,8 +537,8 @@
       "type": "movie",
       "local_poster": "/Pirataflix/assets/Capas/default.jpg",
       "posters": [
-        "https://image.tmdb.org/t/p/w500/z0CpCYiaUikJrcftPnb0jYCYmoo.jpg",
         "https://image.tmdb.org/t/p/w500/tphkjmQq8WebuVwNXelmjLUXuPJ.jpg",
+        "https://image.tmdb.org/t/p/w500/z0CpCYiaUikJrcftPnb0jYCYmoo.jpg",
         "https://image.tmdb.org/t/p/w500/9dyFXQwmFHI1gMn2JEczgKD1hwO.jpg",
         "https://image.tmdb.org/t/p/w500/9uybkXhMyH1QqGvoMvnLKqgu9go.jpg",
         "https://image.tmdb.org/t/p/w500/lGzgwbA3XxE6S249aApHLlWufei.jpg",
@@ -1539,7 +1539,7 @@
     {
       "id": "resident_evil_1",
       "title": "Resident Evil 1",
-      "poster": "https://image.tmdb.org/t/p/w500/aC9RinOuPR6DEgwAZZd9IzUA6Qa.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/oxZX9s92Xr5f7mnFCGyEsB5mCOb.jpg",
       "episodes": [
         {
           "title": "Resident Evil: O Hóspede Maldito",
@@ -1550,63 +1550,62 @@
       "type": "movie",
       "local_poster": "/Pirataflix/assets/Capas/default.jpg",
       "posters": [
-        "https://image.tmdb.org/t/p/w500/aC9RinOuPR6DEgwAZZd9IzUA6Qa.jpg",
-        "https://image.tmdb.org/t/p/w500/1x5OaFOo38JAwR5yXxeuvQg3VWH.jpg",
-        "https://image.tmdb.org/t/p/w500/jxBoxz8dKZ8CB1C3lgDqFxzLNQB.jpg",
-        "https://image.tmdb.org/t/p/w500/1WzPySYjKtHJQAcnb5E2l7Lw12Q.jpg",
-        "https://image.tmdb.org/t/p/w500/pOLzp30jgfqg71iWOzpixq4WSkt.jpg",
-        "https://image.tmdb.org/t/p/w500/3wSIagfHnR9vRAPyNjCfGzfgbXK.jpg",
-        "https://image.tmdb.org/t/p/w500/iyaJ1uZIogd3BWkgMVplmG2Cw6V.jpg"
+        "https://image.tmdb.org/t/p/w500/1UKNef590A0ZaMnxsscIcWuK1Em.jpg",
+        "https://image.tmdb.org/t/p/w500/uoXZOT9dGDtrZNgOSOOKOXlV4XT.jpg",
+        "https://image.tmdb.org/t/p/w500/oxZX9s92Xr5f7mnFCGyEsB5mCOb.jpg",
+        "https://image.tmdb.org/t/p/w500/jKso3TUFnPpRFNLnDrgTUK0R9MX.jpg",
+        "https://image.tmdb.org/t/p/w500/1EmUTW2D9Z3bmlDz5PUAK9sFFNk.jpg",
+        "https://image.tmdb.org/t/p/w500/9vJX0Q9LSoOlTio8cTAm2ms0sWz.jpg"
       ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/3JgfNUCoN6pyXlO7wZOJ4PgQgW3.jpg",
-      "overview": "O mortal Vírus-T foi erradicado. Sete anos depois, um passageiro chega aos EUA com os mesmos sintomas deste vírus e zumbis tomam o aeroporto. Surgem dúvidas sobre a erradicação do vírus e o governo manda seus melhores agentes investigarem.",
-      "year": "2008",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/5pGWjnM62Zs0S1xRf3TDL1Xizr.jpg",
+      "overview": "Uma equipe de comando militar composta por civis deve lutar contra mortos-vivos carnívoros, cães mutantes e defesas mortíferas de um super computador, antes que um vírus solto consuma a humanidade, nesta adaptação do sucesso da série de vídeo-games!",
+      "year": "2002",
       "genres": [
-        "Animação",
         "Terror",
-        "Ação"
+        "Ação",
+        "Ficção Científica"
       ],
-      "rating": 6.8,
+      "rating": 6.7,
       "cast": [
         {
-          "name": "Paul Mercier",
-          "character": "Leon S. Kennedy (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/1GcIA6oQ3aaBG8HSfBcCRf6R5DW.jpg"
+          "name": "Milla Jovovich",
+          "character": "Alice",
+          "profile": "https://image.tmdb.org/t/p/w185/usWnHCzbADijULREZYSJ0qfM00y.jpg"
         },
         {
-          "name": "Alyson Court",
-          "character": "Claire Redfield (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/kPeTYEV6vyyAJEsUlomVpiLcd6v.jpg"
+          "name": "Michelle Rodriguez",
+          "character": "Rain",
+          "profile": "https://image.tmdb.org/t/p/w185/wVcbrae4eRqGMFZz8Eh52Dl1biP.jpg"
         },
         {
-          "name": "Laura Bailey",
-          "character": "Angela Miller (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/xrq33v9N78hhmApcfkoYx0TAw1A.jpg"
+          "name": "Eric Mabius",
+          "character": "Matt",
+          "profile": "https://image.tmdb.org/t/p/w185/gfTyV38S5BzV9pZnIducUgo68hK.jpg"
         },
         {
-          "name": "Roger Craig Smith",
-          "character": "Curtis Miller (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/6oE356GbRHAf91Llw7LDpvsAf5L.jpg"
+          "name": "James Purefoy",
+          "character": "Spence",
+          "profile": "https://image.tmdb.org/t/p/w185/nCNyifrD9wOao27A1nT5n4Soxt1.jpg"
         },
         {
-          "name": "Crispin Freeman",
-          "character": "Frederic Downing (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/oqqNzJK7F9ZO6Kft4BwncT6K8hz.jpg"
+          "name": "Martin Crewes",
+          "character": "Kaplan",
+          "profile": "https://image.tmdb.org/t/p/w185/gar5CPEMP5efGF5h36iyqSDvHsB.jpg"
         },
         {
-          "name": "Michael Sorich",
-          "character": "Senator Ron Davis (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/fiuJUfRiESALcUXW7BHsOJ12yfQ.jpg"
+          "name": "Colin Salmon",
+          "character": "One",
+          "profile": "https://image.tmdb.org/t/p/w185/mLlAU6Zl2MIL5znp5UHdX3sVTN7.jpg"
         },
         {
-          "name": "Salli Saffioti",
-          "character": "Ingrid Hunnigan (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/awF13TyorW4Rp5rq10p5XL0Po3m.jpg"
+          "name": "Pasquale Aleardi",
+          "character": "J.D.",
+          "profile": "https://image.tmdb.org/t/p/w185/zY9iu1ObHecBwRmZscIHbhDxiJw.jpg"
         },
         {
-          "name": "Michelle Ruff",
-          "character": "Rani Chawla (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/eX300Qn6TYaYaXdH7x6OmClZqJf.jpg"
+          "name": "Heike Makatsch",
+          "character": "Lisa",
+          "profile": "https://image.tmdb.org/t/p/w185/plwQwvsMG18F3eiD0rWN1Vpw75u.jpg"
         }
       ]
     },
@@ -20146,8 +20145,8 @@
               "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-136.mp4",
               "episode": 136,
               "air_date": "2026-09-01",
-              "overview": "",
-              "still": "",
+              "overview": "Marta descobre a traição de Diógenes ao ler a carta e confronta Virgínia. Tonho explica toda a trajetória de Alika à mãe, reafirmando seu compromisso com ela. Kênia celebra a sobrevivência de Dumi. Onildo convida Niara para um encontro antes da partida, e ela aceita. Adônis flagra Carrapato na pensão com Geralda. Mirinho diz a Manoel que pretende dar um fim em Tonho.",
+              "still": "https://image.tmdb.org/t/p/w400/aLIRfIxLewv4f6teUP5An2O79Ck.jpg",
               "guest_stars": [],
               "locked": false
             },
@@ -20156,11 +20155,10 @@
               "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-137.mp4",
               "episode": 137,
               "air_date": "2026-09-02",
-              "overview": "",
-              "still": "",
+              "overview": "Manoel aconselha Mirinho a esquecer Lúcia/Alika, a fim de não perder Virgínia. Marta afirma que Diógenes deve reconhecer a paternidade de Ritinha. Adônis ameaça contar a Fortunato sobre a presença de Carrapato, caso Geralda não se afaste do cangaceiro. Bartô anuncia um suposto milagre de Veneranda, e Viriato se irrita. Caetana conversa com Dona Menina sobre Tonho e Alika.",
+              "still": "https://image.tmdb.org/t/p/w400/ijHMNSvvXU6yMuUraJULmE2EhkS.jpg",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-09-02T21:00:00"
+              "locked": false
             },
             {
               "title": "A Nobreza do Amor Ep 138",
@@ -22060,8 +22058,8 @@
           "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-136.mp4",
           "episode": 136,
           "air_date": "2026-09-01",
-          "overview": "",
-          "still": "",
+          "overview": "Marta descobre a traição de Diógenes ao ler a carta e confronta Virgínia. Tonho explica toda a trajetória de Alika à mãe, reafirmando seu compromisso com ela. Kênia celebra a sobrevivência de Dumi. Onildo convida Niara para um encontro antes da partida, e ela aceita. Adônis flagra Carrapato na pensão com Geralda. Mirinho diz a Manoel que pretende dar um fim em Tonho.",
+          "still": "https://image.tmdb.org/t/p/w400/aLIRfIxLewv4f6teUP5An2O79Ck.jpg",
           "guest_stars": [],
           "locked": false
         },
@@ -22070,11 +22068,10 @@
           "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-137.mp4",
           "episode": 137,
           "air_date": "2026-09-02",
-          "overview": "",
-          "still": "",
+          "overview": "Manoel aconselha Mirinho a esquecer Lúcia/Alika, a fim de não perder Virgínia. Marta afirma que Diógenes deve reconhecer a paternidade de Ritinha. Adônis ameaça contar a Fortunato sobre a presença de Carrapato, caso Geralda não se afaste do cangaceiro. Bartô anuncia um suposto milagre de Veneranda, e Viriato se irrita. Caetana conversa com Dona Menina sobre Tonho e Alika.",
+          "still": "https://image.tmdb.org/t/p/w400/ijHMNSvvXU6yMuUraJULmE2EhkS.jpg",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-09-02T21:00:00"
+          "locked": false
         },
         {
           "title": "A Nobreza do Amor Ep 138",
@@ -50372,8 +50369,8 @@
       "local_poster": "/Pirataflix/assets/Capas/sousou_no_frieren.jpg",
       "posters": [
         "https://image.tmdb.org/t/p/w500/qykTIEJQF8cunKD0CKOqab15wns.jpg",
-        "https://image.tmdb.org/t/p/w500/cHhJzdUGcEBq6av4wr9jsIvUITH.jpg",
         "https://image.tmdb.org/t/p/w500/dqZENchTd7lp5zht7BdlqM7RBhD.jpg",
+        "https://image.tmdb.org/t/p/w500/cHhJzdUGcEBq6av4wr9jsIvUITH.jpg",
         "https://image.tmdb.org/t/p/w500/4oIkJpy27JnTcf0pdCsUEtJEoOz.jpg",
         "https://image.tmdb.org/t/p/w500/fa3uCbfUaz5gQrJw9tLPrUc9hWt.jpg",
         "https://image.tmdb.org/t/p/w500/bYOrD9rjnDsyJESTFbJdgiDXNhb.jpg",
@@ -68773,10 +68770,10 @@
       "posters": [
         "https://image.tmdb.org/t/p/w500/8R1mMSC1gX1cg5ed7ns49JOEqw3.jpg",
         "https://image.tmdb.org/t/p/w500/mGPwEkHxyErWoX7Z1sk2YuOKtQ8.jpg",
-        "https://image.tmdb.org/t/p/w500/fHpKWq9ayzSk8nSwqRuaAUemRKh.jpg",
         "https://image.tmdb.org/t/p/w500/6qQzMJG27XOJsyAEEIisoJB45j2.jpg",
-        "https://image.tmdb.org/t/p/w500/mJVUZpPR4BdZzLWyP51h8pOU1RO.jpg",
+        "https://image.tmdb.org/t/p/w500/fHpKWq9ayzSk8nSwqRuaAUemRKh.jpg",
         "https://image.tmdb.org/t/p/w500/3yFHMtdhriig4sm1w8oMQfA2gFN.jpg",
+        "https://image.tmdb.org/t/p/w500/mJVUZpPR4BdZzLWyP51h8pOU1RO.jpg",
         "https://image.tmdb.org/t/p/w500/dG6H80X9zF3nA7NiOAs3gmxO6mc.jpg"
       ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/qpin8cASXEVtwhzNsprHYFiOAGk.jpg",
@@ -73526,7 +73523,7 @@
         "https://image.tmdb.org/t/p/w500/cgqwuSfDO1qhXuUmZQahTdweyar.jpg",
         "https://image.tmdb.org/t/p/w500/3upyO2ISjkBHuvPyYV3e8X96Fj8.jpg"
       ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/wxvnnh8rS9ge8296HUpj9BiwM6B.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/dugFpakDXxjDjEUloukNqAx3cjK.jpg",
       "overview": "Coragem é um cão incrivelmente tímido e muito fácil de assustar que precisa defender um velho casal de aposentados de acontecimentos paranormais que ameaçam a segurança e a estabilidade da sua casa.",
       "year": "1999",
       "genres": [
