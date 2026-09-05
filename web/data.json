@@ -570,7 +570,7 @@
         {
           "name": "Rose Byrne",
           "character": "Moira MacTaggert",
-          "profile": "https://image.tmdb.org/t/p/w185/wR8YZlrewVW2FixRBrJcxaXU3R1.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/4Vd7w19asuBfUGgz0NIuQI5wxIA.jpg"
         },
         {
           "name": "Evan Peters",
@@ -1556,7 +1556,7 @@
         "Ação",
         "Animação"
       ],
-      "rating": 7.4,
+      "rating": 7.3,
       "cast": [
         {
           "name": "Paul Mercier",
@@ -33102,8 +33102,8 @@
               "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-138.mp4",
               "episode": 138,
               "air_date": "2026-09-03",
-              "overview": "",
-              "still": "",
+              "overview": "Onildo afirma que irá esperar por Niara e se declara para a rainha. A pedido de Marta, Diógenes passa a dormir no quarto de hóspedes. Kênia planeja usar os ingleses para afastar Binta de seu caminho. Marta repreende o comportamento de Virgínia, que se sente mal. Fuad exige que Salma se afaste de Omar. Bartô comenta com Dôra que entrará em contato com o bispo para santificar Veneranda.",
+              "still": "https://image.tmdb.org/t/p/w400/yXgwEIs76uyFDrzSUrzVglwDSFR.jpg",
               "guest_stars": [],
               "locked": false
             },
@@ -33112,11 +33112,10 @@
               "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-139.mp4",
               "episode": 139,
               "air_date": "2026-09-04",
-              "overview": "",
-              "still": "",
+              "overview": "Mirinho explica ao capanga como encontrar Tonho. Onildo afirma que irá esperar por Niara e se declara para a rainha. Dumi recebe uma carta de Kênia. Jendal pressiona Campbell a revisitar seus acordos. Kênia insinua a Campbell que Jendal e Binta estão se aproximando dos franceses. Tonho é alvo de uma tocaia. Tonho denuncia a Casemiro que Mirinho contratou um matador contra ele.",
+              "still": "https://image.tmdb.org/t/p/w400/8RDYF3Wdnl6hRjYYhtHvmiVWy7l.jpg",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-09-04T21:00:00"
+              "locked": false
             },
             {
               "title": "A Nobreza do Amor Ep 140",
@@ -35014,8 +35013,8 @@
           "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-138.mp4",
           "episode": 138,
           "air_date": "2026-09-03",
-          "overview": "",
-          "still": "",
+          "overview": "Onildo afirma que irá esperar por Niara e se declara para a rainha. A pedido de Marta, Diógenes passa a dormir no quarto de hóspedes. Kênia planeja usar os ingleses para afastar Binta de seu caminho. Marta repreende o comportamento de Virgínia, que se sente mal. Fuad exige que Salma se afaste de Omar. Bartô comenta com Dôra que entrará em contato com o bispo para santificar Veneranda.",
+          "still": "https://image.tmdb.org/t/p/w400/yXgwEIs76uyFDrzSUrzVglwDSFR.jpg",
           "guest_stars": [],
           "locked": false
         },
@@ -35024,11 +35023,10 @@
           "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-139.mp4",
           "episode": 139,
           "air_date": "2026-09-04",
-          "overview": "",
-          "still": "",
+          "overview": "Mirinho explica ao capanga como encontrar Tonho. Onildo afirma que irá esperar por Niara e se declara para a rainha. Dumi recebe uma carta de Kênia. Jendal pressiona Campbell a revisitar seus acordos. Kênia insinua a Campbell que Jendal e Binta estão se aproximando dos franceses. Tonho é alvo de uma tocaia. Tonho denuncia a Casemiro que Mirinho contratou um matador contra ele.",
+          "still": "https://image.tmdb.org/t/p/w400/8RDYF3Wdnl6hRjYYhtHvmiVWy7l.jpg",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-09-04T21:00:00"
+          "locked": false
         },
         {
           "title": "A Nobreza do Amor Ep 140",
@@ -78580,7 +78578,7 @@
         "https://image.tmdb.org/t/p/w500/eTTsOyXm49jixiQJ93L97CCvVBk.jpg",
         "https://image.tmdb.org/t/p/w500/xFUl1CVkOYAqG3zLhLD3Dw1wZM1.jpg"
       ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/3MY7hMWrJ13Xtb1Y4jd7tztyPaZ.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/pv8zQ2MKIZA67VmOfTNktJLmHa5.jpg",
       "overview": "Uma esponja-do-mar chamada Bob Esponja Calça Quadrada mora com seu caracol de estimação na Fenda do Biquíni, no fundo do oceano. Bob trabalha no Siri Cascudo e, nas horas vagas, vive arrumando confusões com seu melhor amigo, a estrela-do-mar Patrick.",
       "year": "1999",
       "genres": [
@@ -107623,6 +107621,96 @@
       "episodes": [
         {
           "url": "https://a.cdni.live/rodrigo2364/rodrigo2364/playlist.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "CanalSaude.br@SD",
+      "type": "tv",
+      "title": "Canal Saude",
+      "tvg_id": "CanalSaude.br@SD",
+      "tvg_logo": "https://i.imgur.com/ht4tUOc.png",
+      "group": "📚 Educação",
+      "url": "https://eitv7.cdn.broadpeak.io/account351-i1495/event/canalsaude/format720p.m3u8",
+      "episodes": [
+        {
+          "url": "https://eitv7.cdn.broadpeak.io/account351-i1495/event/canalsaude/format720p.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "COMBrasil.br@SD",
+      "type": "tv",
+      "title": "COM Brasil (720p)",
+      "tvg_id": "COMBrasil.br@SD",
+      "tvg_logo": "https://i.imgur.com/GrjGwKM.png",
+      "group": "📺 Geral",
+      "url": "https://dfr80qz435crc.cloudfront.net/EFGH/Amagi/NewCo/New_Brasil_BR/New_Brasil.m3u8",
+      "episodes": [
+        {
+          "url": "https://dfr80qz435crc.cloudfront.net/EFGH/Amagi/NewCo/New_Brasil_BR/New_Brasil.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "FonteTV.br@SD",
+      "type": "tv",
+      "title": "Fonte TV",
+      "tvg_id": "FonteTV.br@SD",
+      "tvg_logo": "https://i.imgur.com/7q2BmNc.png",
+      "group": "✝️ Religioso",
+      "url": "https://59fb88a1b1108.streamlock.net/fonte/_definst_/fontetv/chunklist_w1224511652.m3u8",
+      "episodes": [
+        {
+          "url": "https://59fb88a1b1108.streamlock.net/fonte/_definst_/fontetv/chunklist_w1224511652.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "JovemPanNews.br@SD",
+      "type": "tv",
+      "title": "Jovem Pan News (720p)",
+      "tvg_id": "JovemPanNews.br@SD",
+      "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Jovem_Pan_logo_2018.svg/960px-Jovem_Pan_logo_2018.svg.png",
+      "group": "📰 Notícias",
+      "url": "http://45.190.28.50/JP_NEWS/index.m3u8",
+      "episodes": [
+        {
+          "url": "http://45.190.28.50/JP_NEWS/index.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "RedeMinas.br@SD",
+      "type": "tv",
+      "title": "Rede Minas (720p)",
+      "tvg_id": "RedeMinas.br@SD",
+      "tvg_logo": "https://i.imgur.com/MtQWAHv.png",
+      "group": "📚 Educação",
+      "url": "https://8hzcavccys.zoeweb.tv/redeminas/ngrp:redeminas_all/playlist.m3u8",
+      "episodes": [
+        {
+          "url": "https://8hzcavccys.zoeweb.tv/redeminas/ngrp:redeminas_all/playlist.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "TVAparecida.br@SD",
+      "type": "tv",
+      "title": "TV Aparecida (720p)",
+      "tvg_id": "TVAparecida.br@SD",
+      "tvg_logo": "https://i.imgur.com/kxrja0X.png",
+      "group": "✝️ Religioso",
+      "url": "http://45.162.64.114/TV_APARECIDA/index.m3u8",
+      "episodes": [
+        {
+          "url": "http://45.162.64.114/TV_APARECIDA/index.m3u8",
           "title": "AO VIVO"
         }
       ]
