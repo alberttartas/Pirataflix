@@ -168,7 +168,7 @@
         "https://image.tmdb.org/t/p/w500/4HjShcGBsc7ORNVGZewTz5PRIOk.jpg",
         "https://image.tmdb.org/t/p/w500/2gYxGwJDM3mjCYXSZfuVHTcm72v.jpg"
       ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/u8QUvrq24pWB2x1DxCy4ulbKJG5.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/5UgYt4ewCZZeX9HEG1Bk0ts4xu7.jpg",
       "overview": "Las Vegas significa pura diversão sob o sol. Bem... pelo menos o sol ainda brilha por lá. A não ser em algumas áreas, que se parecem com o resto do deserto ou o resto de todo país, onde as pessoas que circulam são zumbis canibais: uma massa de mortos vivos aterrorizando a todos. A nova e melhorada Alice juntamente com a sua turma vai travar a batalha final contra o mal com um único objetivo: transformar os mortos vivos em mortos de verdade.",
       "year": "2007",
       "genres": [
@@ -922,7 +922,7 @@
         {
           "name": "Arnold Schwarzenegger",
           "character": "T-800 / Carl",
-          "profile": "https://image.tmdb.org/t/p/w185/2marNcjIfCUE5Z2HyrcEiJHPbsA.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/dgCABuZp2HBehCT84O4WBp7KIoe.jpg"
         },
         {
           "name": "Mackenzie Davis",
@@ -107733,6 +107733,21 @@
       "episodes": [
         {
           "url": "http://45.162.64.114/TV_APARECIDA/index.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "StudioUniversalLatinAmerica.us@Brazil",
+      "type": "tv",
+      "title": "Studio Universal Latin America Brazil (720p)",
+      "tvg_id": "StudioUniversalLatinAmerica.us@Brazil",
+      "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/StudioUniversal2016.png/960px-StudioUniversal2016.png",
+      "group": "📺 Geral",
+      "url": "http://187.102.210.46/universo/index.m3u8",
+      "episodes": [
+        {
+          "url": "http://187.102.210.46/universo/index.m3u8",
           "title": "AO VIVO"
         }
       ]
