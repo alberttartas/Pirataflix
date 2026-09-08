@@ -33132,11 +33132,10 @@
               "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-141.mp4",
               "episode": 141,
               "air_date": "2026-09-07",
-              "overview": "Bourgade seduz Jendal, que pretende fechar negócio com os franceses a despeito da retaliação de Campbell. Fortunato comenta com Manoel que acredita que foi Mirinho quem mandou matar Tonho. Tonho e Caetana pedem para deixar o engenho, e Casemiro anuncia que quem deve sair de casa é Mirinho. Casemiro expulsa Mirinho de casa, e Graça se desespera.\n\nCaetana decide deixar o engenho e se mudar para as terras de Tonho. Mirinho pede abrigo a Manoel e Fortunato. José desconfia de que o assalto que sofreu também pode ter sido encomendado por Mirinho. Jendal sofre por não conseguir notícias de Alika, e Binta se incomoda com a obsessão do rei por sua ex-esposa. Binta ateia fogo aos pertences de Alika, e Kênia comemora o descontrole da rainha.",
-              "still": "",
+              "overview": "Tonho e Caetana pedem para deixar o engenho, e Casemiro anuncia que quem deve sair de casa é Mirinho. Casemiro expulsa Mirinho de casa, e Graça se desespera. Caetana decide deixar o engenho e se mudar para as terras de Tonho. Mirinho pede abrigo a Manoel e Fortunato. José desconfia de que o assalto que sofreu também pode ter sido encomendado por Mirinho.",
+              "still": "https://image.tmdb.org/t/p/w400/tlAhkvIBLBnC3BcXSF9vbOg51Bu.jpg",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-09-07T21:00:00"
+              "locked": false
             },
             {
               "title": "A Nobreza do Amor Ep 142",
@@ -35054,11 +35053,10 @@
           "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-141.mp4",
           "episode": 141,
           "air_date": "2026-09-07",
-          "overview": "Bourgade seduz Jendal, que pretende fechar negócio com os franceses a despeito da retaliação de Campbell. Fortunato comenta com Manoel que acredita que foi Mirinho quem mandou matar Tonho. Tonho e Caetana pedem para deixar o engenho, e Casemiro anuncia que quem deve sair de casa é Mirinho. Casemiro expulsa Mirinho de casa, e Graça se desespera.\n\nCaetana decide deixar o engenho e se mudar para as terras de Tonho. Mirinho pede abrigo a Manoel e Fortunato. José desconfia de que o assalto que sofreu também pode ter sido encomendado por Mirinho. Jendal sofre por não conseguir notícias de Alika, e Binta se incomoda com a obsessão do rei por sua ex-esposa. Binta ateia fogo aos pertences de Alika, e Kênia comemora o descontrole da rainha.",
-          "still": "",
+          "overview": "Tonho e Caetana pedem para deixar o engenho, e Casemiro anuncia que quem deve sair de casa é Mirinho. Casemiro expulsa Mirinho de casa, e Graça se desespera. Caetana decide deixar o engenho e se mudar para as terras de Tonho. Mirinho pede abrigo a Manoel e Fortunato. José desconfia de que o assalto que sofreu também pode ter sido encomendado por Mirinho.",
+          "still": "https://image.tmdb.org/t/p/w400/tlAhkvIBLBnC3BcXSF9vbOg51Bu.jpg",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-09-07T21:00:00"
+          "locked": false
         },
         {
           "title": "A Nobreza do Amor Ep 142",
@@ -107748,6 +107746,21 @@
       "episodes": [
         {
           "url": "http://187.102.210.46/universo/index.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "Nickelodeon.br@SD",
+      "type": "tv",
+      "title": "Nickelodeon (480p)",
+      "tvg_id": "Nickelodeon.br@SD",
+      "tvg_logo": "https://i.imgur.com/E84jnP8.png",
+      "group": "🧸 Infantil",
+      "url": "https://stmv2.srvif.com/gafeab/gafeab/playlist.m3u8",
+      "episodes": [
+        {
+          "url": "https://stmv2.srvif.com/gafeab/gafeab/playlist.m3u8",
           "title": "AO VIVO"
         }
       ]
