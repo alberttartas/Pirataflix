@@ -21,7 +21,7 @@
         "https://image.tmdb.org/t/p/w500/1EmUTW2D9Z3bmlDz5PUAK9sFFNk.jpg",
         "https://image.tmdb.org/t/p/w500/9vJX0Q9LSoOlTio8cTAm2ms0sWz.jpg"
       ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/5pGWjnM62Zs0S1xRf3TDL1Xizr.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/l5KvxFVOru3Qyf3dl2asNw5g1MD.jpg",
       "overview": "Uma equipe de comando militar composta por civis deve lutar contra mortos-vivos carnívoros, cães mutantes e defesas mortíferas de um super computador, antes que um vírus solto consuma a humanidade, nesta adaptação do sucesso da série de vídeo-games!",
       "year": "2002",
       "genres": [
@@ -33142,11 +33142,10 @@
               "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-142.mp4",
               "episode": 142,
               "air_date": "2026-09-08",
-              "overview": "Didi, Montanha e Carrapato assaltam o Armazém dos Curi. Caetana questiona Tonho sobre sua ida para Batanga. Tonho anuncia a Alika que decidiu permanecer em Barro Preto. Tonho e Alika sofrem com a impossibilidade de seu amor, e decidem se afastar. Graça reclama com Casemiro por Caetana ter deixado o engenho. Mirinho inventa para Marta e Virgínia que foi ele quem decidiu sair da casa de Casemiro. Jawari, Bourgade e Jendal discutem sobre a entrada dos franceses nas minas de Batanga.\n\nViriato comenta com Adônis que Geralda está sofrendo com a partida de Carrapato. Fátima reconhece Donato e deduz que o milagre de Veneranda era falso. Dona Menina se preocupa com a decisão de Tonho de se afastar de Alika. Virgínia passa mal ao saber que deverá dividir sua herança com Ritinha. Marta revela a Teresa que Diógenes é pai de Ritinha. Alika recebe um telegrama de Omar com a data de sua partida para Batanga.",
-              "still": "",
+              "overview": "Caetana decide deixar o engenho e se mudar para as terras de Tonho. Mirinho pede abrigo a Manoel e Fortunato. José desconfia de que o assalto que sofreu também pode ter sido encomendado por Mirinho. Binta ateia fogo aos pertences de Alika, e Kênia comemora o descontrole da rainha. Didi, Montanha e Carrapato assaltam o Armazém dos Curi. Caetana questiona Tonho sobre sua ida para Batanga.",
+              "still": "https://image.tmdb.org/t/p/w400/2G3tTR07MpNd6n8aGuSXijBGRD6.jpg",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-09-08T21:00:00"
+              "locked": false
             },
             {
               "title": "A Nobreza do Amor Ep 143",
@@ -35063,11 +35062,10 @@
           "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-142.mp4",
           "episode": 142,
           "air_date": "2026-09-08",
-          "overview": "Didi, Montanha e Carrapato assaltam o Armazém dos Curi. Caetana questiona Tonho sobre sua ida para Batanga. Tonho anuncia a Alika que decidiu permanecer em Barro Preto. Tonho e Alika sofrem com a impossibilidade de seu amor, e decidem se afastar. Graça reclama com Casemiro por Caetana ter deixado o engenho. Mirinho inventa para Marta e Virgínia que foi ele quem decidiu sair da casa de Casemiro. Jawari, Bourgade e Jendal discutem sobre a entrada dos franceses nas minas de Batanga.\n\nViriato comenta com Adônis que Geralda está sofrendo com a partida de Carrapato. Fátima reconhece Donato e deduz que o milagre de Veneranda era falso. Dona Menina se preocupa com a decisão de Tonho de se afastar de Alika. Virgínia passa mal ao saber que deverá dividir sua herança com Ritinha. Marta revela a Teresa que Diógenes é pai de Ritinha. Alika recebe um telegrama de Omar com a data de sua partida para Batanga.",
-          "still": "",
+          "overview": "Caetana decide deixar o engenho e se mudar para as terras de Tonho. Mirinho pede abrigo a Manoel e Fortunato. José desconfia de que o assalto que sofreu também pode ter sido encomendado por Mirinho. Binta ateia fogo aos pertences de Alika, e Kênia comemora o descontrole da rainha. Didi, Montanha e Carrapato assaltam o Armazém dos Curi. Caetana questiona Tonho sobre sua ida para Batanga.",
+          "still": "https://image.tmdb.org/t/p/w400/2G3tTR07MpNd6n8aGuSXijBGRD6.jpg",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-09-08T21:00:00"
+          "locked": false
         },
         {
           "title": "A Nobreza do Amor Ep 143",
