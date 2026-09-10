@@ -471,7 +471,7 @@
         {
           "name": "Neve Campbell",
           "character": "Sidney Evans",
-          "profile": "https://image.tmdb.org/t/p/w185/zQzNg6Kiufj2VCltprI6jilNtl3.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/xBXiDZJTxGwmDH7Mx9DhSW88ejO.jpg"
         },
         {
           "name": "Courteney Cox",
@@ -812,11 +812,11 @@
       "local_poster": "/Pirataflix/assets/Capas/ainda_estou_aqui.jpg",
       "posters": [
         "https://image.tmdb.org/t/p/w500/gZnsMbhCvhzAQlKaVpeFRHYjGyb.jpg",
-        "https://image.tmdb.org/t/p/w500/zNAw7jK8bwCK56rIW676pdgkwhd.jpg",
         "https://image.tmdb.org/t/p/w500/quSUoX9zBrK7abP20fRf4d5YlXA.jpg",
+        "https://image.tmdb.org/t/p/w500/zNAw7jK8bwCK56rIW676pdgkwhd.jpg",
         "https://image.tmdb.org/t/p/w500/yY0HDAGfu79cpOLQBgR3kgGZ7HS.jpg",
         "https://image.tmdb.org/t/p/w500/qNLMPY3KLrYgTX2QZ5iEwwOqyRz.jpg",
-        "https://image.tmdb.org/t/p/w500/r7TD7HhzlUYfWIS7ZqSgNxylkXV.jpg"
+        "https://image.tmdb.org/t/p/w500/5ORplJWEc3mQJuashJUq36LCBa0.jpg"
       ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/j9uruwRe9qM8RnP758dF7ISB8Bj.jpg",
       "overview": "No início da década de 1970, o Brasil enfrenta o endurecimento da ditadura militar. No Rio de Janeiro, a família Paiva – Rubens, Eunice e seus cinco filhos – vive à beira da praia em uma casa de portas abertas para os amigos. Um dia, Rubens Paiva é levado por militares à paisana e desaparece.",
@@ -3209,7 +3209,7 @@
       "genres": [
         "Drama"
       ],
-      "rating": 5.5,
+      "rating": 6.7,
       "cast": [
         {
           "name": "Cauã Reymond",
@@ -33152,11 +33152,10 @@
               "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-143.mp4",
               "episode": 143,
               "air_date": "2026-09-09",
-              "overview": "Alika, José e Niara decidem seu retorno a Batanga com Omar. Tonho comenta com Januário que está sofrendo com a partida de Alika. Graça é rude com Mundica, e Ana Maria conversa com a amiga. Mundica nota que Ana Maria está desgostosa com Manoel. Mirinho descobre que Maria Helena fugiu com Murilo. Kênia denuncia a Campbell a negociação de Jendal e Binta com os franceses.\n\nNiara informa a Onildo sobre sua partida. Belmira se preocupa com o destino de Ritinha. Virgínia passa mal, e Diógenes e Mirinho desconfiam. Dumi é avisado sobre a chegada de Alika e Omar. Fuad flerta com Belmira. Graça pede perdão a Caetana e implora por sua volta ao engenho. Virgínia acredita que pode estar grávida.",
-              "still": "",
+              "overview": "Fátima reconhece Donato e deduz que o milagre de Veneranda era falso. Dona Menina se preocupa com a decisão de Tonho de se afastar de Alika. Virgínia passa mal ao saber que deverá dividir sua herança com Ritinha. Marta revela a Teresa que Diógenes é pai de Ritinha. Alika recebe um telegrama de Omar com a data de sua partida para Batanga. Alika, José e Niara decidem seu retorno a Batanga com Omar.",
+              "still": "https://image.tmdb.org/t/p/w400/g706dNhco6jhW7NQ7M0I7WbJKIK.jpg",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-09-09T21:00:00"
+              "locked": false
             },
             {
               "title": "A Nobreza do Amor Ep 144",
@@ -35072,11 +35071,10 @@
           "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-143.mp4",
           "episode": 143,
           "air_date": "2026-09-09",
-          "overview": "Alika, José e Niara decidem seu retorno a Batanga com Omar. Tonho comenta com Januário que está sofrendo com a partida de Alika. Graça é rude com Mundica, e Ana Maria conversa com a amiga. Mundica nota que Ana Maria está desgostosa com Manoel. Mirinho descobre que Maria Helena fugiu com Murilo. Kênia denuncia a Campbell a negociação de Jendal e Binta com os franceses.\n\nNiara informa a Onildo sobre sua partida. Belmira se preocupa com o destino de Ritinha. Virgínia passa mal, e Diógenes e Mirinho desconfiam. Dumi é avisado sobre a chegada de Alika e Omar. Fuad flerta com Belmira. Graça pede perdão a Caetana e implora por sua volta ao engenho. Virgínia acredita que pode estar grávida.",
-          "still": "",
+          "overview": "Fátima reconhece Donato e deduz que o milagre de Veneranda era falso. Dona Menina se preocupa com a decisão de Tonho de se afastar de Alika. Virgínia passa mal ao saber que deverá dividir sua herança com Ritinha. Marta revela a Teresa que Diógenes é pai de Ritinha. Alika recebe um telegrama de Omar com a data de sua partida para Batanga. Alika, José e Niara decidem seu retorno a Batanga com Omar.",
+          "still": "https://image.tmdb.org/t/p/w400/g706dNhco6jhW7NQ7M0I7WbJKIK.jpg",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-09-09T21:00:00"
+          "locked": false
         },
         {
           "title": "A Nobreza do Amor Ep 144",
