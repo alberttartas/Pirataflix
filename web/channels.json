@@ -22695,5 +22695,245 @@
         "title": "AO VIVO"
       }
     ]
+  },
+  {
+    "id": "AELatinAmerica.us@Brazil",
+    "type": "tv",
+    "title": "A&E Latin America Brazil (720p)",
+    "tvg_id": "AELatinAmerica.us@Brazil",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/A%26E_Network_logo.svg/960px-A%26E_Network_logo.svg.png",
+    "group": "🎭 Entretenimento",
+    "url": "http://170.83.16.50/AeE/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://170.83.16.50/AeE/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "AdultSwimLatinAmerica.us@Brazil",
+    "type": "tv",
+    "title": "Adult Swim Latin America Brazil (720p)",
+    "tvg_id": "AdultSwimLatinAmerica.us@Brazil",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Adult_Swim_2003_logo.svg/960px-Adult_Swim_2003_logo.svg.png",
+    "group": "🎭 Entretenimento",
+    "url": "http://168.197.104.22/ADULT_SWIM/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://168.197.104.22/ADULT_SWIM/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "AXN.br@SD",
+    "type": "tv",
+    "title": "AXN (720p)",
+    "tvg_id": "AXN.br@SD",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/AXN_logo_%282015%29.svg/960px-AXN_logo_%282015%29.svg.png",
+    "group": "🎬 Filmes",
+    "url": "http://170.83.16.50/AXN/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://170.83.16.50/AXN/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "Band.br@SD",
+    "type": "tv",
+    "title": "Band (720p)",
+    "tvg_id": "Band.br@SD",
+    "tvg_logo": "https://i.imgur.com/1r5T6Pw.png",
+    "group": "📺 Geral",
+    "url": "http://170.84.165.204/BAND_HD/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://170.84.165.204/BAND_HD/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "BoxKidsTV.br@SD",
+    "type": "tv",
+    "title": "Box Kids TV (720p)",
+    "tvg_id": "BoxKidsTV.br@SD",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/1/18/Boxkidstv.png",
+    "group": "🧸 Infantil",
+    "url": "http://170.83.49.66:8083/BOXKIDSHD/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://170.83.49.66:8083/BOXKIDSHD/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "ChefTV.br@SD",
+    "type": "tv",
+    "title": "Chef TV (720p)",
+    "tvg_id": "ChefTV.br@SD",
+    "tvg_logo": "https://i.imgur.com/UYksTee.png",
+    "group": "🍳 Culinária",
+    "url": "http://168.197.104.22/CHEF_TV/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://168.197.104.22/CHEF_TV/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "JovemPanNews.br@SD",
+    "type": "tv",
+    "title": "Jovem Pan News (720p)",
+    "tvg_id": "JovemPanNews.br@SD",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Jovem_Pan_logo_2018.svg/960px-Jovem_Pan_logo_2018.svg.png",
+    "group": "📰 Notícias",
+    "url": "http://170.83.49.66:8083/JOVEMPANNEWSHD/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://170.83.49.66:8083/JOVEMPANNEWSHD/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "LifetimeLatinAmerica.us@Brazil",
+    "type": "tv",
+    "title": "Lifetime Latin America Brazil (720p)",
+    "tvg_id": "LifetimeLatinAmerica.us@Brazil",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Logo_Lifetime_2020.svg/960px-Logo_Lifetime_2020.svg.png",
+    "group": "🎭 Entretenimento",
+    "url": "http://170.83.16.50/LIFETIME/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://170.83.16.50/LIFETIME/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "MusicBoxBrazil.br@SD",
+    "type": "tv",
+    "title": "Music Box Brazil (720p)",
+    "tvg_id": "MusicBoxBrazil.br@SD",
+    "tvg_logo": "https://i.imgur.com/CDPCF2X.png",
+    "group": "🎵 Música",
+    "url": "http://168.197.104.22/MUSIC/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://168.197.104.22/MUSIC/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "Record.br@SD",
+    "type": "tv",
+    "title": "Record (720p)",
+    "tvg_id": "Record.br@SD",
+    "tvg_logo": "https://i.imgur.com/sz9gTTr.png",
+    "group": "📺 Geral",
+    "url": "http://170.84.165.204/Record_HD/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://170.84.165.204/Record_HD/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "RedeGlobo.br@SD",
+    "type": "tv",
+    "title": "Rede Globo (720p)",
+    "tvg_id": "RedeGlobo.br@SD",
+    "tvg_logo": "https://i.imgur.com/O02TF2r.png",
+    "group": "📺 Geral",
+    "url": "https://media2.cdntvms.com.br/tv_morena_dorados/index.m3u8",
+    "episodes": [
+      {
+        "url": "https://media2.cdntvms.com.br/tv_morena_dorados/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "RedeTV.br@SD",
+    "type": "tv",
+    "title": "Rede TV! (720p)",
+    "tvg_id": "RedeTV.br@SD",
+    "tvg_logo": "https://i.imgur.com/ZJgD38F.png",
+    "group": "📺 Geral",
+    "url": "http://45.162.64.114/REDE_TV/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://45.162.64.114/REDE_TV/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "RedeVida.br@SD",
+    "type": "tv",
+    "title": "Rede Vida (720p)",
+    "tvg_id": "RedeVida.br@SD",
+    "tvg_logo": "https://i.imgur.com/mP1qfp2.png",
+    "group": "✝️ Religioso",
+    "url": "http://168.197.104.22/REDE_VIDA/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://168.197.104.22/REDE_VIDA/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "SBTNacional.br@SD",
+    "type": "tv",
+    "title": "SBT Nacional (720p)",
+    "tvg_id": "SBTNacional.br@SD",
+    "tvg_logo": "https://i.imgur.com/tc1ALuu.png",
+    "group": "📺 Geral",
+    "url": "http://170.84.165.204/SBT_HD/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://170.84.165.204/SBT_HD/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "SonyChannel.br@SD",
+    "type": "tv",
+    "title": "Sony Channel (720p)",
+    "tvg_id": "SonyChannel.br@SD",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Sony_Channel_Logo.png/960px-Sony_Channel_Logo.png",
+    "group": "📺 Geral",
+    "url": "http://170.83.16.50/SONY_CHANNEL/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://170.83.16.50/SONY_CHANNEL/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "TravelBoxBrazil.br@SD",
+    "type": "tv",
+    "title": "Travel Box Brazil (720p)",
+    "tvg_id": "TravelBoxBrazil.br@SD",
+    "tvg_logo": "https://i.imgur.com/3tBJERH.png",
+    "group": "✈️ Viagem",
+    "url": "http://168.197.104.22/TRAVEL_BOX_BRASIL/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://168.197.104.22/TRAVEL_BOX_BRASIL/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
   }
 ]

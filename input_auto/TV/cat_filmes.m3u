@@ -6,7 +6,7 @@ https://jmp2.uk/plu-61b790b985706b00072cb797.m3u8
 http://170.83.49.66:8083/AMCHD/index.m3u8
 
 #EXTINF:-1 tvg-id="AXN.br@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/AXN_logo_%282015%29.svg/960px-AXN_logo_%282015%29.svg.png" group-title="🎬 Filmes",AXN (720p)
-http://45.190.28.50/AXN_HD/index.m3u8
+http://170.83.16.50/AXN/index.m3u8
 
 #EXTINF:-1 tvg-id="ClassiqueTV.br@SD" tvg-logo="https://i.imgur.com/rHxcraT.png" group-title="🎬 Filmes",Classique TV (360p)
 https://stmv1.srvif.com/classique/classique/playlist.m3u8

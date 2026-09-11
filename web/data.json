@@ -555,7 +555,7 @@
         {
           "name": "Jennifer Lawrence",
           "character": "Raven / Mystique",
-          "profile": "https://image.tmdb.org/t/p/w185/6WTY6HjXMGxnHilJRVC3eLnu43F.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/mDKMsjOMytyBiy7MHNZTa7gp7wj.jpg"
         },
         {
           "name": "Nicholas Hoult",
@@ -605,7 +605,7 @@
         "https://image.tmdb.org/t/p/w500/s2nNx9dkt6My4hjXqoYIVX7zrzW.jpg",
         "https://image.tmdb.org/t/p/w500/fJIC1baT5SCUwSlGOwZrVQ4TTPA.jpg"
       ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/zVDJ4cRgSpHlILSm7kGiklHQ6O7.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/tKihJpAof64rjw0A8uvKohUVjra.jpg",
       "overview": "Ele é um espião. Ela uma assassina. Juntos, Loid e Yor mantêm suas vidas duplas enquanto fingem serem a família perfeita. No entanto, sua filha adotiva, Anya, uma telepata, conhece seus empolgantes segredos, sem eles saberem. Usando o pretexto de levar sua família numa viagem de inverno no fim de semana, a tentativa de Loid de progredir em sua missão atual, a Operação Strix, é frustrada quando Anya se envolve por engano e ativa eventos que ameaçam a paz mundial!",
       "year": "2023",
       "rating": 7.2,
@@ -33162,11 +33162,10 @@
               "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-144.mp4",
               "episode": 144,
               "air_date": "2026-09-10",
-              "overview": "Marta exige que Virgínia marque uma consulta com Onildo. Alika conta sua história verdadeira a Salma. Salma confirma a Alika que está gostando de Omar, e sofre com a notícia da partida do turco. Niara prepara Ana Maria para assumir seu lugar na escola. Chinua conta a Dumi, Akin e Ladisa sobre a negociação de Jendal com os franceses, e informa que Kênia já avisou a Campbell.\n\nBinta afronta Kênia, e Jendal é duro com a esposa. Binta e Pascoal se beijam. Salma alerta Ana Maria sobre o gênio de Manoel. Mirinho descobre que Tonho e Lúcia/Alika se separaram, e se oferece para viajar com a moça. Caetana volta ao engenho. Onildo confirma a gravidez de Virgínia. Virgínia anuncia a todos que terá um filho de Mirinho, e Sebastião desconfia. Omar se ilumina ao saber que Tonho não irá mais para Batanga.",
-              "still": "",
+              "overview": "Niara informa a Onildo sobre sua partida. Belmira se preocupa com o destino de Ritinha. Virgínia passa mal, e Diógenes e Mirinho desconfiam. Dumi é avisado sobre a chegada de Alika e Omar. Fuad flerta com Belmira. Graça pede perdão a Caetana e implora por sua volta ao engenho. Virgínia acredita que pode estar grávida. Alika conta sua história verdadeira a Salma. Niara prepara Ana Maria.",
+              "still": "https://image.tmdb.org/t/p/w400/fc3oyN2VQsDRLVzjV5Z76P3rDSm.jpg",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-09-10T21:00:00"
+              "locked": false
             },
             {
               "title": "A Nobreza do Amor Ep 145",
@@ -35081,11 +35080,10 @@
           "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-144.mp4",
           "episode": 144,
           "air_date": "2026-09-10",
-          "overview": "Marta exige que Virgínia marque uma consulta com Onildo. Alika conta sua história verdadeira a Salma. Salma confirma a Alika que está gostando de Omar, e sofre com a notícia da partida do turco. Niara prepara Ana Maria para assumir seu lugar na escola. Chinua conta a Dumi, Akin e Ladisa sobre a negociação de Jendal com os franceses, e informa que Kênia já avisou a Campbell.\n\nBinta afronta Kênia, e Jendal é duro com a esposa. Binta e Pascoal se beijam. Salma alerta Ana Maria sobre o gênio de Manoel. Mirinho descobre que Tonho e Lúcia/Alika se separaram, e se oferece para viajar com a moça. Caetana volta ao engenho. Onildo confirma a gravidez de Virgínia. Virgínia anuncia a todos que terá um filho de Mirinho, e Sebastião desconfia. Omar se ilumina ao saber que Tonho não irá mais para Batanga.",
-          "still": "",
+          "overview": "Niara informa a Onildo sobre sua partida. Belmira se preocupa com o destino de Ritinha. Virgínia passa mal, e Diógenes e Mirinho desconfiam. Dumi é avisado sobre a chegada de Alika e Omar. Fuad flerta com Belmira. Graça pede perdão a Caetana e implora por sua volta ao engenho. Virgínia acredita que pode estar grávida. Alika conta sua história verdadeira a Salma. Niara prepara Ana Maria.",
+          "still": "https://image.tmdb.org/t/p/w400/fc3oyN2VQsDRLVzjV5Z76P3rDSm.jpg",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-09-10T21:00:00"
+          "locked": false
         },
         {
           "title": "A Nobreza do Amor Ep 145",
@@ -61366,7 +61364,7 @@
         "https://image.tmdb.org/t/p/w500/kQmxrdNTlDOQHorew1y5aXI3qzk.jpg",
         "https://image.tmdb.org/t/p/w500/sHim6U0ANsbzxcmNRYuIubBVQaz.jpg",
         "https://image.tmdb.org/t/p/w500/hqRb1wyIVsaMukZElPBUXoJPqrR.jpg",
-        "https://image.tmdb.org/t/p/w500/ciNxflunj2ujlVmdJZfpEamERFn.jpg"
+        "https://image.tmdb.org/t/p/w500/i9UAKpCXTB23AdeVLMJBHWykfYw.jpg"
       ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/rqbCbjB19amtOtFQbb3K2lgm2zv.jpg",
       "overview": "Titãs estão quase exterminando a raça humana. Porém alguns estão dispostos a formar um exército de ataque aos seres assassinos. O jovem Eren, após ver sua mãe ser devorada por um titã, decide que não deixará nenhum deles vivo e buscará sua vingança completa.",
@@ -107757,6 +107755,246 @@
       "episodes": [
         {
           "url": "https://stmv2.srvif.com/gafeab/gafeab/playlist.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "AELatinAmerica.us@Brazil",
+      "type": "tv",
+      "title": "A&E Latin America Brazil (720p)",
+      "tvg_id": "AELatinAmerica.us@Brazil",
+      "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/A%26E_Network_logo.svg/960px-A%26E_Network_logo.svg.png",
+      "group": "🎭 Entretenimento",
+      "url": "http://170.83.16.50/AeE/index.m3u8",
+      "episodes": [
+        {
+          "url": "http://170.83.16.50/AeE/index.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "AdultSwimLatinAmerica.us@Brazil",
+      "type": "tv",
+      "title": "Adult Swim Latin America Brazil (720p)",
+      "tvg_id": "AdultSwimLatinAmerica.us@Brazil",
+      "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Adult_Swim_2003_logo.svg/960px-Adult_Swim_2003_logo.svg.png",
+      "group": "🎭 Entretenimento",
+      "url": "http://168.197.104.22/ADULT_SWIM/index.m3u8",
+      "episodes": [
+        {
+          "url": "http://168.197.104.22/ADULT_SWIM/index.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "AXN.br@SD",
+      "type": "tv",
+      "title": "AXN (720p)",
+      "tvg_id": "AXN.br@SD",
+      "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/AXN_logo_%282015%29.svg/960px-AXN_logo_%282015%29.svg.png",
+      "group": "🎬 Filmes",
+      "url": "http://170.83.16.50/AXN/index.m3u8",
+      "episodes": [
+        {
+          "url": "http://170.83.16.50/AXN/index.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "Band.br@SD",
+      "type": "tv",
+      "title": "Band (720p)",
+      "tvg_id": "Band.br@SD",
+      "tvg_logo": "https://i.imgur.com/1r5T6Pw.png",
+      "group": "📺 Geral",
+      "url": "http://170.84.165.204/BAND_HD/index.m3u8",
+      "episodes": [
+        {
+          "url": "http://170.84.165.204/BAND_HD/index.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "BoxKidsTV.br@SD",
+      "type": "tv",
+      "title": "Box Kids TV (720p)",
+      "tvg_id": "BoxKidsTV.br@SD",
+      "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/1/18/Boxkidstv.png",
+      "group": "🧸 Infantil",
+      "url": "http://170.83.49.66:8083/BOXKIDSHD/index.m3u8",
+      "episodes": [
+        {
+          "url": "http://170.83.49.66:8083/BOXKIDSHD/index.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "ChefTV.br@SD",
+      "type": "tv",
+      "title": "Chef TV (720p)",
+      "tvg_id": "ChefTV.br@SD",
+      "tvg_logo": "https://i.imgur.com/UYksTee.png",
+      "group": "🍳 Culinária",
+      "url": "http://168.197.104.22/CHEF_TV/index.m3u8",
+      "episodes": [
+        {
+          "url": "http://168.197.104.22/CHEF_TV/index.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "JovemPanNews.br@SD",
+      "type": "tv",
+      "title": "Jovem Pan News (720p)",
+      "tvg_id": "JovemPanNews.br@SD",
+      "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Jovem_Pan_logo_2018.svg/960px-Jovem_Pan_logo_2018.svg.png",
+      "group": "📰 Notícias",
+      "url": "http://170.83.49.66:8083/JOVEMPANNEWSHD/index.m3u8",
+      "episodes": [
+        {
+          "url": "http://170.83.49.66:8083/JOVEMPANNEWSHD/index.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "LifetimeLatinAmerica.us@Brazil",
+      "type": "tv",
+      "title": "Lifetime Latin America Brazil (720p)",
+      "tvg_id": "LifetimeLatinAmerica.us@Brazil",
+      "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Logo_Lifetime_2020.svg/960px-Logo_Lifetime_2020.svg.png",
+      "group": "🎭 Entretenimento",
+      "url": "http://170.83.16.50/LIFETIME/index.m3u8",
+      "episodes": [
+        {
+          "url": "http://170.83.16.50/LIFETIME/index.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "MusicBoxBrazil.br@SD",
+      "type": "tv",
+      "title": "Music Box Brazil (720p)",
+      "tvg_id": "MusicBoxBrazil.br@SD",
+      "tvg_logo": "https://i.imgur.com/CDPCF2X.png",
+      "group": "🎵 Música",
+      "url": "http://168.197.104.22/MUSIC/index.m3u8",
+      "episodes": [
+        {
+          "url": "http://168.197.104.22/MUSIC/index.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "Record.br@SD",
+      "type": "tv",
+      "title": "Record (720p)",
+      "tvg_id": "Record.br@SD",
+      "tvg_logo": "https://i.imgur.com/sz9gTTr.png",
+      "group": "📺 Geral",
+      "url": "http://170.84.165.204/Record_HD/index.m3u8",
+      "episodes": [
+        {
+          "url": "http://170.84.165.204/Record_HD/index.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "RedeGlobo.br@SD",
+      "type": "tv",
+      "title": "Rede Globo (720p)",
+      "tvg_id": "RedeGlobo.br@SD",
+      "tvg_logo": "https://i.imgur.com/O02TF2r.png",
+      "group": "📺 Geral",
+      "url": "https://media2.cdntvms.com.br/tv_morena_dorados/index.m3u8",
+      "episodes": [
+        {
+          "url": "https://media2.cdntvms.com.br/tv_morena_dorados/index.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "RedeTV.br@SD",
+      "type": "tv",
+      "title": "Rede TV! (720p)",
+      "tvg_id": "RedeTV.br@SD",
+      "tvg_logo": "https://i.imgur.com/ZJgD38F.png",
+      "group": "📺 Geral",
+      "url": "http://45.162.64.114/REDE_TV/index.m3u8",
+      "episodes": [
+        {
+          "url": "http://45.162.64.114/REDE_TV/index.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "RedeVida.br@SD",
+      "type": "tv",
+      "title": "Rede Vida (720p)",
+      "tvg_id": "RedeVida.br@SD",
+      "tvg_logo": "https://i.imgur.com/mP1qfp2.png",
+      "group": "✝️ Religioso",
+      "url": "http://168.197.104.22/REDE_VIDA/index.m3u8",
+      "episodes": [
+        {
+          "url": "http://168.197.104.22/REDE_VIDA/index.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "SBTNacional.br@SD",
+      "type": "tv",
+      "title": "SBT Nacional (720p)",
+      "tvg_id": "SBTNacional.br@SD",
+      "tvg_logo": "https://i.imgur.com/tc1ALuu.png",
+      "group": "📺 Geral",
+      "url": "http://170.84.165.204/SBT_HD/index.m3u8",
+      "episodes": [
+        {
+          "url": "http://170.84.165.204/SBT_HD/index.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "SonyChannel.br@SD",
+      "type": "tv",
+      "title": "Sony Channel (720p)",
+      "tvg_id": "SonyChannel.br@SD",
+      "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Sony_Channel_Logo.png/960px-Sony_Channel_Logo.png",
+      "group": "📺 Geral",
+      "url": "http://170.83.16.50/SONY_CHANNEL/index.m3u8",
+      "episodes": [
+        {
+          "url": "http://170.83.16.50/SONY_CHANNEL/index.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "TravelBoxBrazil.br@SD",
+      "type": "tv",
+      "title": "Travel Box Brazil (720p)",
+      "tvg_id": "TravelBoxBrazil.br@SD",
+      "tvg_logo": "https://i.imgur.com/3tBJERH.png",
+      "group": "✈️ Viagem",
+      "url": "http://168.197.104.22/TRAVEL_BOX_BRASIL/index.m3u8",
+      "episodes": [
+        {
+          "url": "http://168.197.104.22/TRAVEL_BOX_BRASIL/index.m3u8",
           "title": "AO VIVO"
         }
       ]

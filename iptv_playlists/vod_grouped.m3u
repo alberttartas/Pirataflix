@@ -27141,3 +27141,51 @@ http://187.102.210.46/universo/index.m3u8
 #EXTINF:-1 group-title="🧸 Infantil" tvg-id="NICKELODEON.BR@SD" tvg-logo="https://i.imgur.com/E84jnP8.png",Nickelodeon (480p)
 https://stmv2.srvif.com/gafeab/gafeab/playlist.m3u8
 
+#EXTINF:-1 group-title="🎭 Entretenimento" tvg-id="AELATINAMERICA.US@BRAZIL" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/A%26E_Network_logo.svg/960px-A%26E_Network_logo.svg.png",A&E Latin America Brazil (720p)
+http://170.83.16.50/AeE/index.m3u8
+
+#EXTINF:-1 group-title="🎭 Entretenimento" tvg-id="ADULTSWIMLATINAMERICA.US@BRAZIL" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Adult_Swim_2003_logo.svg/960px-Adult_Swim_2003_logo.svg.png",Adult Swim Latin America Brazil (720p)
+http://168.197.104.22/ADULT_SWIM/index.m3u8
+
+#EXTINF:-1 group-title="🎬 Filmes" tvg-id="AXN.BR@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/AXN_logo_%282015%29.svg/960px-AXN_logo_%282015%29.svg.png",AXN (720p)
+http://170.83.16.50/AXN/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="BAND.BR@SD" tvg-logo="https://i.imgur.com/1r5T6Pw.png",Band (720p)
+http://170.84.165.204/BAND_HD/index.m3u8
+
+#EXTINF:-1 group-title="🧸 Infantil" tvg-id="BOXKIDSTV.BR@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/1/18/Boxkidstv.png",Box Kids TV (720p)
+http://170.83.49.66:8083/BOXKIDSHD/index.m3u8
+
+#EXTINF:-1 group-title="🍳 Culinária" tvg-id="CHEFTV.BR@SD" tvg-logo="https://i.imgur.com/UYksTee.png",Chef TV (720p)
+http://168.197.104.22/CHEF_TV/index.m3u8
+
+#EXTINF:-1 group-title="📰 Notícias" tvg-id="JOVEMPANNEWS.BR@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Jovem_Pan_logo_2018.svg/960px-Jovem_Pan_logo_2018.svg.png",Jovem Pan News (720p)
+http://170.83.49.66:8083/JOVEMPANNEWSHD/index.m3u8
+
+#EXTINF:-1 group-title="🎭 Entretenimento" tvg-id="LIFETIMELATINAMERICA.US@BRAZIL" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Logo_Lifetime_2020.svg/960px-Logo_Lifetime_2020.svg.png",Lifetime Latin America Brazil (720p)
+http://170.83.16.50/LIFETIME/index.m3u8
+
+#EXTINF:-1 group-title="🎵 Música" tvg-id="MUSICBOXBRAZIL.BR@SD" tvg-logo="https://i.imgur.com/CDPCF2X.png",Music Box Brazil (720p)
+http://168.197.104.22/MUSIC/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="RECORD.BR@SD" tvg-logo="https://i.imgur.com/sz9gTTr.png",Record (720p)
+http://170.84.165.204/Record_HD/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="REDEGLOBO.BR@SD" tvg-logo="https://i.imgur.com/O02TF2r.png",Rede Globo (720p)
+https://media2.cdntvms.com.br/tv_morena_dorados/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="REDETV.BR@SD" tvg-logo="https://i.imgur.com/ZJgD38F.png",Rede TV! (720p)
+http://45.162.64.114/REDE_TV/index.m3u8
+
+#EXTINF:-1 group-title="✝️ Religioso" tvg-id="REDEVIDA.BR@SD" tvg-logo="https://i.imgur.com/mP1qfp2.png",Rede Vida (720p)
+http://168.197.104.22/REDE_VIDA/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="SBTNACIONAL.BR@SD" tvg-logo="https://i.imgur.com/tc1ALuu.png",SBT Nacional (720p)
+http://170.84.165.204/SBT_HD/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="SONYCHANNEL.BR@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Sony_Channel_Logo.png/960px-Sony_Channel_Logo.png",Sony Channel (720p)
+http://170.83.16.50/SONY_CHANNEL/index.m3u8
+
+#EXTINF:-1 group-title="✈️ Viagem" tvg-id="TRAVELBOXBRAZIL.BR@SD" tvg-logo="https://i.imgur.com/3tBJERH.png",Travel Box Brazil (720p)
+http://168.197.104.22/TRAVEL_BOX_BRASIL/index.m3u8
+
