@@ -1189,7 +1189,7 @@
         "https://image.tmdb.org/t/p/w500/3DkVy2jqFe3xyYZK5XclS066IhH.jpg",
         "https://image.tmdb.org/t/p/w500/paDe5Mw0nhsAkcCMsNmMdvJqkNk.jpg"
       ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/mzRJpkWPjXdXak0WCc8ZxVH4hug.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/uovH5k4BAEPqXqxgwVrTtqH169g.jpg",
       "overview": "Membros da agência Monarch enfrentam monstros gigantescos, incluindo o poderoso Godzilla, que entra em choque com Mothra, Rodan e seu maior inimigo, King Ghidorah, o monstro de três cabeças. Essas antigas superespécies disputam a supremacia, deixando a própria existência da humanidade em risco.",
       "year": "2019",
       "genres": [
@@ -1236,7 +1236,7 @@
         {
           "name": "Charles Dance",
           "character": "Alan Jonah",
-          "profile": "https://image.tmdb.org/t/p/w185/3xHwq5lchAI6mfW0aGQOEijexv6.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/28ElvRC5ftOSzZBFM0cn4XrwH36.jpg"
         }
       ]
     },
@@ -1476,7 +1476,7 @@
         "https://image.tmdb.org/t/p/w500/lGzgwbA3XxE6S249aApHLlWufei.jpg",
         "https://image.tmdb.org/t/p/w500/jVlWSeqbEQbKWxc9PzK7fUADdNO.jpg"
       ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/cHvwgJPaT59H1HiQsvBrGD5I46g.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/6CLNOzMXO9bvapDD8gsdwkJU4wN.jpg",
       "overview": "Joe Brody criou o filho sozinho após a morte da esposa em um acidente na usina nuclear em que ambos trabalhavam, no Japão. Ele nunca aceitou a catástrofe e quinze anos depois continua remoendo o acontecido, tentando encontrar alguma explicação. Ford Brody, agora adulto, é soldado do exército americano e precisa lutar desesperadamente para salvar a população mundial e em especial sua família do gigantesco, inabalável e incrivelmente assustador monstro Godzilla.",
       "year": "2014",
       "genres": [
@@ -3717,7 +3717,7 @@
       "genres": [
         "Documentário"
       ],
-      "rating": 4.7,
+      "rating": 4.6,
       "cast": [
         {
           "name": "Michael Jackson",
@@ -33172,11 +33172,10 @@
               "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-145.mp4",
               "episode": 145,
               "air_date": "2026-09-11",
-              "overview": "Omar tenta confortar Alika e afirma que a guerra precisa ser vencida. Casemiro garante a Graça que não perdoará Mirinho. Onildo aconselha Sebastião a manter em segredo sua noite de amor com Virgínia. Omar diz a Alika que pode ficar ao seu lado. Tonho e Onildo sofrem com a partida de Alika e Niara.\n\nMirinho provoca Tonho por conta de Lúcia/Alika. Ana Maria termina seu namoro com Manoel, e Januário gosta. Omar presenteia Salma, que acaba beijando o rapaz. Jendal assina o acordo para a exploração dos franceses em Batanga. Liderados por Dumi, os rebeldes atingem Jendal com uma lança.",
-              "still": "",
+              "overview": "Binta afronta Kênia, e Jendal é duro com a esposa. Binta e Pascoal se beijam. Salma alerta Ana Maria sobre o gênio de Manoel. Mirinho descobre que Tonho e Lúcia/Alika se separaram, e se oferece para viajar com a moça. Virgínia anuncia a todos que terá um filho de Mirinho, e Sebastião desconfia. Omar se ilumina ao saber que Tonho não irá mais para Batanga.",
+              "still": "https://image.tmdb.org/t/p/w400/hHsBe0RQqwGccrW509zWlwcWjUg.jpg",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-09-11T21:00:00"
+              "locked": false
             },
             {
               "title": "A Nobreza do Amor Ep 146",
@@ -35090,11 +35089,10 @@
           "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-145.mp4",
           "episode": 145,
           "air_date": "2026-09-11",
-          "overview": "Omar tenta confortar Alika e afirma que a guerra precisa ser vencida. Casemiro garante a Graça que não perdoará Mirinho. Onildo aconselha Sebastião a manter em segredo sua noite de amor com Virgínia. Omar diz a Alika que pode ficar ao seu lado. Tonho e Onildo sofrem com a partida de Alika e Niara.\n\nMirinho provoca Tonho por conta de Lúcia/Alika. Ana Maria termina seu namoro com Manoel, e Januário gosta. Omar presenteia Salma, que acaba beijando o rapaz. Jendal assina o acordo para a exploração dos franceses em Batanga. Liderados por Dumi, os rebeldes atingem Jendal com uma lança.",
-          "still": "",
+          "overview": "Binta afronta Kênia, e Jendal é duro com a esposa. Binta e Pascoal se beijam. Salma alerta Ana Maria sobre o gênio de Manoel. Mirinho descobre que Tonho e Lúcia/Alika se separaram, e se oferece para viajar com a moça. Virgínia anuncia a todos que terá um filho de Mirinho, e Sebastião desconfia. Omar se ilumina ao saber que Tonho não irá mais para Batanga.",
+          "still": "https://image.tmdb.org/t/p/w400/hHsBe0RQqwGccrW509zWlwcWjUg.jpg",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-09-11T21:00:00"
+          "locked": false
         },
         {
           "title": "A Nobreza do Amor Ep 146",
