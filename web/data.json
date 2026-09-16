@@ -753,7 +753,7 @@
         "Terror",
         "Suspense"
       ],
-      "rating": 6.1,
+      "rating": 6.2,
       "cast": [
         {
           "name": "Daisy Ridley",
@@ -33202,11 +33202,10 @@
               "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-148.mp4",
               "episode": 148,
               "air_date": "2026-09-15",
-              "overview": "Binta comemora com Pascoal a decisão de Jendal de se abster temporariamente do trono de Batanga para ir ao encontro de Alika. Kênia reforça com Chinua que Alika deve ser avisada sobre a ida de Jendal para o Brasil. Onildo constata que Niara está doente e não poderá viajar. Marta mostra a Teresa o vestido de noiva que desenhou para Virgínia. Vitalino comenta com Ana Maria que Januário gostará da presença da professora em sua casa. Tonho acompanha Alika no hospital, e Onildo informa que o estado de Niara é grave. Jendal parte para o Brasil.",
-              "still": "",
+              "overview": "Mirinho e Virgínia planejam seu casamento e moradia. Viriato sonda Ritinha sobre Diógenes. Oruka informa que o estado de saúde de Jendal inspira cuidados, e diz que os rebeldes não aceitarão que o rei entregue o país para os estrangeiros. Dumi é rendido por Pascoal, e Jendal ordena que homem seja preso. Chinua avisa a Akin e Ladisa que Jendal condenou Dumi à morte.",
+              "still": "https://image.tmdb.org/t/p/w400/kR7LfqrmSbivXCtgWorYcgdd7dC.jpg",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-09-15T21:00:00"
+              "locked": false
             },
             {
               "title": "A Nobreza do Amor Ep 149",
@@ -35117,11 +35116,10 @@
           "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-148.mp4",
           "episode": 148,
           "air_date": "2026-09-15",
-          "overview": "Binta comemora com Pascoal a decisão de Jendal de se abster temporariamente do trono de Batanga para ir ao encontro de Alika. Kênia reforça com Chinua que Alika deve ser avisada sobre a ida de Jendal para o Brasil. Onildo constata que Niara está doente e não poderá viajar. Marta mostra a Teresa o vestido de noiva que desenhou para Virgínia. Vitalino comenta com Ana Maria que Januário gostará da presença da professora em sua casa. Tonho acompanha Alika no hospital, e Onildo informa que o estado de Niara é grave. Jendal parte para o Brasil.",
-          "still": "",
+          "overview": "Mirinho e Virgínia planejam seu casamento e moradia. Viriato sonda Ritinha sobre Diógenes. Oruka informa que o estado de saúde de Jendal inspira cuidados, e diz que os rebeldes não aceitarão que o rei entregue o país para os estrangeiros. Dumi é rendido por Pascoal, e Jendal ordena que homem seja preso. Chinua avisa a Akin e Ladisa que Jendal condenou Dumi à morte.",
+          "still": "https://image.tmdb.org/t/p/w400/kR7LfqrmSbivXCtgWorYcgdd7dC.jpg",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-09-15T21:00:00"
+          "locked": false
         },
         {
           "title": "A Nobreza do Amor Ep 149",
@@ -49461,7 +49459,7 @@
         {
           "name": "Harry Shearer",
           "character": "Ned Flanders / Mr. Burns / Smithers / Principal Skinner / Lenny Leonard (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/wZpovXxQQqP7kxXPy2yj6QMbM55.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/333feu409WQHmS9oIixHxl71qj4.jpg"
         }
       ]
     },
