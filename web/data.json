@@ -753,7 +753,7 @@
         "Terror",
         "Suspense"
       ],
-      "rating": 6.2,
+      "rating": 6.1,
       "cast": [
         {
           "name": "Daisy Ridley",
@@ -33212,11 +33212,10 @@
               "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-149.mp4",
               "episode": 149,
               "air_date": "2026-09-16",
-              "overview": "Todos rezam pela recuperação de Niara. Mirinho vai ao hospital para prestar apoio a Lúcia/Alika, e Tonho se incomoda. Virgínia passa mal ao saber que Mirinho foi novamente atrás de Alika. Onildo anuncia que Niara precisará de uma transfusão de sangue. Aproveitando a ausência de Jendal, Binta ordena que Kênia seja levada para trabalhar na mina, como castigo por sua traição ao rei. Kênia conhece Zuri. Bartô pede que Sebastião entregue a Vera/Niara a medalha com a imagem de Veneranda. Onildo revela que Mirinho é o doador compatível com Vera/Niara.",
-              "still": "",
+              "overview": "Campbell alerta Binta sobre a possibilidade de invasão da Inglaterra a Batanga. Manoel impede que Mirinho cometa um desatino. Virgínia revela a Diógenes que Marta decidiu trabalhar. Jendal recebe a carta de Virgínia e decide ir até o Brasil. Diógenes passeia com Aurelinda e Ritinha, e Geralda estranha. Jendal recebe a carta de Virgínia e decide ir até o Brasil.",
+              "still": "https://image.tmdb.org/t/p/w400/hAqk5U3MRDrPgTjuCFJQcdP5kgt.jpg",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-09-16T21:00:00"
+              "locked": false
             },
             {
               "title": "A Nobreza do Amor Ep 150",
@@ -35126,11 +35125,10 @@
           "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-149.mp4",
           "episode": 149,
           "air_date": "2026-09-16",
-          "overview": "Todos rezam pela recuperação de Niara. Mirinho vai ao hospital para prestar apoio a Lúcia/Alika, e Tonho se incomoda. Virgínia passa mal ao saber que Mirinho foi novamente atrás de Alika. Onildo anuncia que Niara precisará de uma transfusão de sangue. Aproveitando a ausência de Jendal, Binta ordena que Kênia seja levada para trabalhar na mina, como castigo por sua traição ao rei. Kênia conhece Zuri. Bartô pede que Sebastião entregue a Vera/Niara a medalha com a imagem de Veneranda. Onildo revela que Mirinho é o doador compatível com Vera/Niara.",
-          "still": "",
+          "overview": "Campbell alerta Binta sobre a possibilidade de invasão da Inglaterra a Batanga. Manoel impede que Mirinho cometa um desatino. Virgínia revela a Diógenes que Marta decidiu trabalhar. Jendal recebe a carta de Virgínia e decide ir até o Brasil. Diógenes passeia com Aurelinda e Ritinha, e Geralda estranha. Jendal recebe a carta de Virgínia e decide ir até o Brasil.",
+          "still": "https://image.tmdb.org/t/p/w400/hAqk5U3MRDrPgTjuCFJQcdP5kgt.jpg",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-09-16T21:00:00"
+          "locked": false
         },
         {
           "title": "A Nobreza do Amor Ep 150",
@@ -81332,7 +81330,7 @@
         {
           "name": "Don Messick",
           "character": "Gravel Slag (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/iT3okvWCKy6RAdo6dbx09RP0I3p.jpg"
+          "profile": ""
         },
         {
           "name": "Daws Butler",
