@@ -382,8 +382,8 @@
         "https://image.tmdb.org/t/p/w500/yzNQSLlZb7NAkA4C5uADfNDJ7hm.jpg",
         "https://image.tmdb.org/t/p/w500/r8q9pCcpzclyg2NjOt7DRbHRvG9.jpg",
         "https://image.tmdb.org/t/p/w500/dLwriEr0m917mqIbPMmwqdNBKqv.jpg",
-        "https://image.tmdb.org/t/p/w500/zbGj94aRjrHrvNFKbTKad0eSiGq.jpg",
-        "https://image.tmdb.org/t/p/w500/r9j1FEYGGMkZAM47jFeVf4yTlVV.jpg"
+        "https://image.tmdb.org/t/p/w500/jjM1xrlQqTYOsLcVQlEOM2V84jC.jpg",
+        "https://image.tmdb.org/t/p/w500/zbGj94aRjrHrvNFKbTKad0eSiGq.jpg"
       ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/5PJP3NaiH9ZJRzrEHLeqSY5rNxb.jpg",
       "overview": "Depois de escapar com grande dificuldade dos horrores das instalações subterrâneas da Hive, Alice é empurrada de volta para a guerra feroz entre os vivos e os não-mortos. Enquanto a cidade está isolada sob quarentena, Alice se junta a uma pequena equipe de soldados de elite comandada por Valentine e Carlos que tem a missão de resgatar a filha desaparecida do Dr. Ashford, o criador do vírus T-mutante. Será uma emocionante corrida contra o tempo, enquanto o grupo enfrenta hordas de zumbis sedentos de sangue, sanguessugas escondidas, cães mutantes e os mais sinistros inimigos.",
@@ -1629,7 +1629,7 @@
         "Música",
         "História"
       ],
-      "rating": 8.0,
+      "rating": 8.1,
       "cast": [
         {
           "name": "Jesuíta Barbosa",
@@ -2552,7 +2552,7 @@
       "genres": [
         "Drama"
       ],
-      "rating": 8.3,
+      "rating": 8.4,
       "cast": [
         {
           "name": "Lucas Agrícola",
@@ -33235,8 +33235,7 @@
               "overview": "Teresa se preocupa com a decisão de José de ir para Batanga sozinho. Chinua descobre que Binta e Pascoal são amantes. Graça acredita que Ritinha seja filha de Belmira com Diógenes. Januário se aproxima de Ana Maria, e Vitalino gosta. Salma pensa em acompanhar Omar ao hospital para visitar Vera/Niara, mas a presença de Fuad a impede. Tonho chega ao hospital, e Omar se irrita. Pascoal castiga Dumi por tentar se comunicar com Kênia. Chinua e Akin se desesperam com as atitudes de Binta. Sebastião intercepta o telegrama de Chinua para Alika, e Virgínia comemora. Jendal chega a Portugal.",
               "still": "",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-09-18T21:00:00"
+              "locked": false
             },
             {
               "title": "A Nobreza do Amor Ep 152",
@@ -35147,8 +35146,7 @@
           "overview": "Teresa se preocupa com a decisão de José de ir para Batanga sozinho. Chinua descobre que Binta e Pascoal são amantes. Graça acredita que Ritinha seja filha de Belmira com Diógenes. Januário se aproxima de Ana Maria, e Vitalino gosta. Salma pensa em acompanhar Omar ao hospital para visitar Vera/Niara, mas a presença de Fuad a impede. Tonho chega ao hospital, e Omar se irrita. Pascoal castiga Dumi por tentar se comunicar com Kênia. Chinua e Akin se desesperam com as atitudes de Binta. Sebastião intercepta o telegrama de Chinua para Alika, e Virgínia comemora. Jendal chega a Portugal.",
           "still": "",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-09-18T21:00:00"
+          "locked": false
         },
         {
           "title": "A Nobreza do Amor Ep 152",
@@ -39049,7 +39047,7 @@
         "https://image.tmdb.org/t/p/w500/m6xoXaTRdEERnS0peBT1KtkxVS1.jpg",
         "https://image.tmdb.org/t/p/w500/dIzt3ooUd0HFXs6fquxMHmofYuA.jpg"
       ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/wkbgTml2S4LszAjPbkruyC1KvYB.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/chKuEdL9JJ6ZPJPrjLXYiACLFh9.jpg",
       "overview": "A história de amor entre Lívia e Felipe. Almas gêmeas e vidas do século XIX se reencontram 150 anos depois e podem corrigir antigos erros.",
       "year": "2015",
       "genres": [

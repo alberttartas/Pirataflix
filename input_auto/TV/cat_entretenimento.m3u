@@ -5,7 +5,7 @@ http://170.83.16.50/AeE/index.m3u8
 #EXTINF:-1 tvg-id="AdultSwimLatinAmerica.us@Brazil" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Adult_Swim_2003_logo.svg/960px-Adult_Swim_2003_logo.svg.png" group-title="🎭 Entretenimento",Adult Swim Latin America Brazil (720p)
 http://168.197.104.22/ADULT_SWIM/index.m3u8
 
-#EXTINF:-1 tvg-id="BETPlutoTV.us@BR" tvg-logo="https://images.pluto.tv/channels/5ff768b6a4c8b80008498610/colorLogoPNG_1756804608228.png" group-title="🎭 Entretenimento",BET Pluto TV
+#EXTINF:-1 tvg-id="BETPlutoTV.us@BR" tvg-logo="https://images.pluto.tv/channels/5ff768b6a4c8b80008498610/colorLogoPNG_1756804608228.png" group-title="🎭 Entretenimento",BET Pluto TV (United States) BR
 https://jmp2.uk/plu-5ff768b6a4c8b80008498610.m3u8
 
 #EXTINF:-1 tvg-id="Blitstv.br@SD" tvg-logo="https://i.imgur.com/FO4QTRf.jpeg" group-title="🎭 Entretenimento",Blitstv
@@ -32,28 +32,28 @@ http://170.83.16.50/LIFETIME/index.m3u8
 #EXTINF:-1 tvg-id="Loading.br@SD" tvg-logo="https://i.imgur.com/R0aflu1.png" group-title="🎭 Entretenimento",Loading (720p)
 https://stmv1.srvif.com/loadingtv/loadingtv/playlist.m3u8
 
-#EXTINF:-1 tvg-id="MTVCatfish.us@BR" tvg-logo="https://images.pluto.tv/channels/626c2a3502d84a0007cec817/colorLogoPNG.png" group-title="🎭 Entretenimento",MTV Catfish (720p)
+#EXTINF:-1 tvg-id="MTVCatfish.us@BR" tvg-logo="https://images.pluto.tv/channels/626c2a3502d84a0007cec817/colorLogoPNG.png" group-title="🎭 Entretenimento",MTV Catfish (United States) BR (720p)
 https://jmp2.uk/plu-626c2a3502d84a0007cec817.m3u8
 
-#EXTINF:-1 tvg-id="MTVJovenseMaes.us@BR" tvg-logo="https://images.pluto.tv/channels/620fdc7d8a36fc000710e3ba/colorLogoPNG.png" group-title="🎭 Entretenimento",MTV Jovens e Mães (720p)
+#EXTINF:-1 tvg-id="MTVDrag.us@BR" tvg-logo="https://images.pluto.tv/channels/645111f1d8436e00081bb2bd/colorLogoPNG.png" group-title="🎭 Entretenimento",MTV Drag
+https://jmp2.uk/plu-645111f1d8436e00081bb2bd.m3u8
+
+#EXTINF:-1 tvg-id="MTVJovenseMaes.us@BR" tvg-logo="https://images.pluto.tv/channels/620fdc7d8a36fc000710e3ba/colorLogoPNG.png" group-title="🎭 Entretenimento",MTV Jovens e Maes (720p)
 https://jmp2.uk/plu-620fdc7d8a36fc000710e3ba.m3u8
 
-#EXTINF:-1 tvg-id="MTVPlutoTV.us@BR" tvg-logo="https://images.pluto.tv/channels/5f1212fb81e85c00077ae9ef/colorLogoPNG_1759263027326.png" group-title="🎭 Entretenimento",MTV Pluto TV
+#EXTINF:-1 tvg-id="MTVPlutoTV.us@BR" tvg-logo="https://images.pluto.tv/channels/5f1212fb81e85c00077ae9ef/colorLogoPNG_1759263027326.png" group-title="🎭 Entretenimento",MTV Pluto TV (United States) BR
 https://jmp2.uk/plu-5f1212fb81e85c00077ae9ef.m3u8
 
-#EXTINF:-1 tvg-id="MTVReality.us@BR" tvg-logo="https://images.pluto.tv/channels/6851bdfc9ac48fde5e07f5ae/colorLogoPNG_1780319925470.png" group-title="🎭 Entretenimento",MTV Reality (720p)
+#EXTINF:-1 tvg-id="MTVReality.us@BR" tvg-logo="https://images.pluto.tv/channels/6851bdfc9ac48fde5e07f5ae/colorLogoPNG_1780319925470.png" group-title="🎭 Entretenimento",MTV Reality (United States) (720p)
 https://jmp2.uk/plu-6851bdfc9ac48fde5e07f5ae.m3u8
 
 #EXTINF:-1 tvg-id="MTVRocks.us@BR" tvg-logo="https://images.pluto.tv/channels/66a01e07d2d50d0008100d6a/colorLogoPNG.png" group-title="🎭 Entretenimento",MTV Rocks
 https://jmp2.uk/plu-66a01e07d2d50d0008100d6a.m3u8
 
-#EXTINF:-1 tvg-id="MTVDrag.us@BR" tvg-logo="https://images.pluto.tv/channels/645111f1d8436e00081bb2bd/colorLogoPNG.png" group-title="🎭 Entretenimento",MTV Rupaul's Drag Race
-https://jmp2.uk/plu-645111f1d8436e00081bb2bd.m3u8
-
 #EXTINF:-1 tvg-id="MTVShore.us@BR" tvg-logo="https://images.pluto.tv/channels/625463563b8ddc0007134aeb/colorLogoPNG.png" group-title="🎭 Entretenimento",MTV Shore
 https://jmp2.uk/plu-625463563b8ddc0007134aeb.m3u8
 
-#EXTINF:-1 tvg-id="NTV.br@SD" tvg-logo="https://i.imgur.com/n79nkVC.png" group-title="🎭 Entretenimento",NTV (720p)
+#EXTINF:-1 tvg-id="NTV.br@SD" tvg-logo="https://i.imgur.com/n79nkVC.png" group-title="🎭 Entretenimento",NTV (Brazil) (720p)
 https://cdn.livespanel.com/nossatv/nossatv/playlist.m3u8
 
 #EXTINF:-1 tvg-id="PetloversTV.br@SD" tvg-logo="https://petloverstv.com.br/storage/357/config/yqP4nOugWRxRFCmgLqXF4gRKyM9ybsAOfHgUaqPt.png" group-title="🎭 Entretenimento",Petlovers TV
@@ -62,7 +62,7 @@ https://video04.logicahost.com.br/petloverstv/petloverstv/playlist.m3u8
 #EXTINF:-1 tvg-id="PlutoTVCanalUOL.us@BR" tvg-logo="https://images.pluto.tv/channels/64b9370b409629000802d32b/colorLogoPNG.png" group-title="🎭 Entretenimento",Pluto TV Canal UOL (720p)
 https://jmp2.uk/plu-64b9370b409629000802d32b.m3u8
 
-#EXTINF:-1 tvg-id="PlutoTVRetro.us@BR" tvg-logo="https://i.imgur.com/wztO3GM.png" group-title="🎭 Entretenimento",Pluto TV Retrô
+#EXTINF:-1 tvg-id="PlutoTVRetro.us@BR" tvg-logo="https://i.imgur.com/wztO3GM.png" group-title="🎭 Entretenimento",Pluto TV Retro
 https://jmp2.uk/plu-5f1212ad1728050007a523b8.m3u8
 
 #EXTINF:-1 tvg-id="RedeNGT.br@SD" tvg-logo="https://i.imgur.com/ZFN1R4B.png" group-title="🎭 Entretenimento",Rede NGT (1080p)
@@ -74,16 +74,16 @@ https://cdn-tiva-stmv2-samcast-com-br.smartbit.co/leonardo9878/leonardo9878/play
 #EXTINF:-1 tvg-id="ShowdoMilhao.br@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/pt/b/b2/Show_do_Milh%C3%A3o_Logo_2024.webp" group-title="🎭 Entretenimento",Show do Milhao (1080p) [Geo-blocked]
 https://d38s7rrdbnh4oy.cloudfront.net/v1/master/215c0da80606fed29372070168106400a6ca7e1a/SSAI-Saudades/index.m3u8
 
-#EXTINF:-1 tvg-id="TVCuruca.br@SD" tvg-logo="https://i.imgur.com/JdCKNZ4.png" group-title="🎭 Entretenimento",TV Curuça (360p)
+#EXTINF:-1 tvg-id="TVCuruca.br@SD" tvg-logo="https://i.imgur.com/JdCKNZ4.png" group-title="🎭 Entretenimento",TV Curuca (360p)
 https://stmv1.srvif.com/tvcurucasp/tvcurucasp/playlist.m3u8
 
-#EXTINF:-1 tvg-id="TVDigitalBirigui.br@SD" tvg-logo="https://i.imgur.com/B5ZTMzY.png" group-title="🎭 Entretenimento",TV Digital Biriguí (640p)
+#EXTINF:-1 tvg-id="TVDigitalBirigui.br@SD" tvg-logo="https://i.imgur.com/B5ZTMzY.png" group-title="🎭 Entretenimento",TV Digital Birigui (640p)
 http://wse01.logicahost.com.br:1935/tvdigitalbirigui/_definst_/tvdigitalbirigui/playlist.m3u8
 
-#EXTINF:-1 tvg-id="TVEmpire.br@SD" tvg-logo="https://i.imgur.com/tT1NVfV.png" group-title="🎭 Entretenimento",TV Empire Magazine (720p)
+#EXTINF:-1 tvg-id="TVEmpire.br@SD" tvg-logo="https://i.imgur.com/tT1NVfV.png" group-title="🎭 Entretenimento",TV Empire (720p)
 https://5d82644094cc0.streamlock.net/empiremagazinetv/empiremagazinetv/playlist.m3u8
 
-#EXTINF:-1 tvg-id="TVGRANDENATALHDTVBRASIL.br@SD" tvg-logo="https://i.imgur.com/MTuErdw.png" group-title="🎭 Entretenimento",TV Grande Natal (1080p)
+#EXTINF:-1 tvg-id="TVGRANDENATALHDTVBRASIL.br@SD" tvg-logo="https://i.imgur.com/MTuErdw.png" group-title="🎭 Entretenimento",TV GRANDE NATAL HDTV BRASIL (1080p)
 http://tvgrandenatalhd.duckdns.org:8080/hls/live.m3u8
 
 #EXTINF:-1 tvg-id="TVNatal.br@SD" tvg-logo="https://i.imgur.com/wqQmQml.png" group-title="🎭 Entretenimento",TV Natal (1080p)
@@ -92,7 +92,7 @@ http://185.228.163.146:8000/play/a01y/index.m3u8
 #EXTINF:-1 tvg-id="TVParaense.br@HD" tvg-logo="https://duckduckgo.com/i/e408ea02.png" group-title="🎭 Entretenimento",TV Paraense (720p)
 https://video09.logicahost.com.br/tvparaense/tvparaense/playlist.m3u
 
-#EXTINF:-1 tvg-id="TVVicosa.br@SD" tvg-logo="https://i.imgur.com/TZF55f9.png" group-title="🎭 Entretenimento",TV Viçosa (480p)
+#EXTINF:-1 tvg-id="TVVicosa.br@SD" tvg-logo="https://i.imgur.com/TZF55f9.png" group-title="🎭 Entretenimento",TV Vicosa (480p)
 http://wz4.dnip.com.br/fratevitv/fratevitv.sdp/playlist.m3u8
 
 #EXTINF:-1 tvg-id="TVZoom.br@SD" tvg-logo="https://i.imgur.com/jCGrjf5.png" group-title="🎭 Entretenimento",TV Zoom (720p)

@@ -17,16 +17,16 @@ https://eitv7.cdn.broadpeak.io/account351-i1495/event/canalsaude/format720p.m3u8
 #EXTINF:-1 tvg-id="Futura.br@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Canal_Futura.png/960px-Canal_Futura.png" group-title="📚 Educação",Futura (720p)
 http://168.197.104.22/FUTURA/index.m3u8
 
-#EXTINF:-1 tvg-id="ISTV.br@SD" tvg-logo="https://i.imgur.com/RUKVrOH.png" group-title="📚 Educação",ISTV (720p) [Not 24/7]
+#EXTINF:-1 tvg-id="ISTV.br@SD" tvg-logo="https://i.imgur.com/RUKVrOH.png" group-title="📚 Educação",ISTV (Brazil) (720p) [Not 24/7]
 https://stmv1.srvstm.com/sistema7933/sistema7933/playlist.m3u8
 
-#EXTINF:-1 tvg-id="OEncantadordeCaes.us@Brazil" tvg-logo="https://i.imgur.com/sQn6vvh.png" group-title="📚 Educação",O Encantador de Cães
+#EXTINF:-1 tvg-id="OEncantadordeCaes.us@Brazil" tvg-logo="https://i.imgur.com/sQn6vvh.png" group-title="📚 Educação",O Encantador de Caes
 https://jmp2.uk/plu-61099df8cee03b00074b2ecf.m3u8
 
-#EXTINF:-1 tvg-id="PlutoTVMinhaObsessaoFavorita.us@BR" tvg-logo="https://images.pluto.tv/channels/61843f5e491af10007f7eefa/colorLogoPNG.png" group-title="📚 Educação",Pluto TV Minha Obsessão Favorita
+#EXTINF:-1 tvg-id="PlutoTVMinhaObsessaoFavorita.us@BR" tvg-logo="https://images.pluto.tv/channels/61843f5e491af10007f7eefa/colorLogoPNG.png" group-title="📚 Educação",Pluto TV Minha Obsessao Favorita
 https://jmp2.uk/plu-61843f5e491af10007f7eefa.m3u8
 
-#EXTINF:-1 tvg-id="PlutoTVMisterios.us@BR" tvg-logo="https://images.pluto.tv/channels/5fac52f142044f00078e2a51/colorLogoPNG.png" group-title="📚 Educação",Pluto TV Mistérios
+#EXTINF:-1 tvg-id="PlutoTVMisterios.us@BR" tvg-logo="https://images.pluto.tv/channels/5fac52f142044f00078e2a51/colorLogoPNG.png" group-title="📚 Educação",Pluto TV Misterios
 https://jmp2.uk/plu-5fac52f142044f00078e2a51.m3u8
 
 #EXTINF:-1 tvg-id="PlutoTVNatureza.us@BR" tvg-logo="https://images.pluto.tv/channels/5f1213ba0ecebc00070e170f/colorLogoPNG.png" group-title="📚 Educação",Pluto TV Natureza
@@ -38,7 +38,7 @@ https://jmp2.uk/plu-604a8dedbca75b0007b1c753.m3u8
 #EXTINF:-1 tvg-id="PlutoTVVidaReal.us@BR" tvg-logo="https://images.pluto.tv/channels/5f32d4d9ec194100070c7449/colorLogoPNG_1732044921019.png" group-title="📚 Educação",Pluto TV Vida Real
 https://jmp2.uk/plu-5f32d4d9ec194100070c7449.m3u8
 
-#EXTINF:-1 tvg-id="ProntosocorroHistoriasDeEmergencia.us@Brazil" tvg-logo="https://i.imgur.com/0PkyJ3U.png" group-title="📚 Educação",Pronto-socorro: Histórias De Emergência
+#EXTINF:-1 tvg-id="ProntosocorroHistoriasDeEmergencia.us@Brazil" tvg-logo="https://i.imgur.com/0PkyJ3U.png" group-title="📚 Educação",Pronto-socorro: Historias De Emergencia
 https://jmp2.uk/plu-61bb72a7bf8c520007a8fd27.m3u8
 
 #EXTINF:-1 tvg-id="RedeMinas.br@SD" tvg-logo="https://i.imgur.com/MtQWAHv.png" group-title="📚 Educação",Rede Minas (720p)
