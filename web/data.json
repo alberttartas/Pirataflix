@@ -72336,16 +72336,6 @@
       "poster": "https://image.tmdb.org/t/p/w500/8R1mMSC1gX1cg5ed7ns49JOEqw3.jpg",
       "seasons": [
         {
-          "season": 0,
-          "episodes": [
-            {
-              "title": "jujutsu kaisen 0 01",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/j/jujutsu-kaisen-filme-0-dublado/01.mp4/index.m3u8",
-              "episode": 1
-            }
-          ]
-        },
-        {
           "season": 1,
           "episodes": [
             {
@@ -72449,246 +72439,108 @@
               "episode": 20
             }
           ]
+        }
+      ],
+      "episodes": [
+        {
+          "title": "Episódio 1",
+          "url": "https://www.blogger.com/video.g?token=AD6v5dwMQ44cxOTSlH0LRN8OkyxR6_No7DSffs7qBVuwNWSZlaLq0GLk56wAznjN9vxZikKEH55q0YYtT0aTipJbbVwFz8m9vOESTDWZpnp1E0V1mqUxwHWiZ-PhgcJK0apHRikw2g",
+          "episode": 1
         },
         {
-          "season": 2,
-          "episodes": [
-            {
-              "title": "jujutsu kaisen 2 01",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/j/jujutsu-kaisen-2-dublado/01.mp4/index.m3u8",
-              "episode": 1
-            },
-            {
-              "title": "jujutsu kaisen 2 02",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/j/jujutsu-kaisen-2-dublado/02.mp4/index.m3u8",
-              "episode": 2
-            },
-            {
-              "title": "jujutsu kaisen 2 03",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/j/jujutsu-kaisen-2-dublado/03.mp4/index.m3u8",
-              "episode": 3
-            },
-            {
-              "title": "jujutsu kaisen 2 04",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/j/jujutsu-kaisen-2-dublado/04.mp4/index.m3u8",
-              "episode": 4
-            },
-            {
-              "title": "jujutsu kaisen 2 05",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/j/jujutsu-kaisen-2-dublado/05.mp4/index.m3u8",
-              "episode": 5
-            },
-            {
-              "title": "jujutsu kaisen 2 06",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/j/jujutsu-kaisen-2-dublado/06.mp4/index.m3u8",
-              "episode": 6
-            },
-            {
-              "title": "jujutsu kaisen 2 07",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/j/jujutsu-kaisen-2-dublado/07.mp4/index.m3u8",
-              "episode": 7
-            },
-            {
-              "title": "jujutsu kaisen 2 08",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/j/jujutsu-kaisen-2-dublado/08.mp4/index.m3u8",
-              "episode": 8
-            },
-            {
-              "title": "jujutsu kaisen 2 09",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/j/jujutsu-kaisen-2-dublado/09.mp4/index.m3u8",
-              "episode": 9
-            },
-            {
-              "title": "jujutsu kaisen 2 10",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/j/jujutsu-kaisen-2-dublado/10.mp4/index.m3u8",
-              "episode": 10
-            },
-            {
-              "title": "jujutsu kaisen 2 11",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/j/jujutsu-kaisen-2-dublado/11.mp4/index.m3u8",
-              "episode": 11
-            },
-            {
-              "title": "jujutsu kaisen 2 12",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/j/jujutsu-kaisen-2-dublado/12.mp4/index.m3u8",
-              "episode": 12
-            },
-            {
-              "title": "jujutsu kaisen 2 13",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/j/jujutsu-kaisen-2-dublado/13.mp4/index.m3u8",
-              "episode": 13
-            },
-            {
-              "title": "jujutsu kaisen 2 14",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/j/jujutsu-kaisen-2-dublado/14.mp4/index.m3u8",
-              "episode": 14
-            },
-            {
-              "title": "jujutsu kaisen 2 15",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/j/jujutsu-kaisen-2-dublado/15.mp4/index.m3u8",
-              "episode": 15
-            },
-            {
-              "title": "jujutsu kaisen 2 16",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/j/jujutsu-kaisen-2-dublado/16.mp4/index.m3u8",
-              "episode": 16
-            },
-            {
-              "title": "jujutsu kaisen 2 17",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/j/jujutsu-kaisen-2-dublado/17.mp4/index.m3u8",
-              "episode": 17
-            },
-            {
-              "title": "jujutsu kaisen 2 18",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/j/jujutsu-kaisen-2-dublado/18.mp4/index.m3u8",
-              "episode": 18
-            },
-            {
-              "title": "jujutsu kaisen 2 19",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/j/jujutsu-kaisen-2-dublado/19.mp4/index.m3u8",
-              "episode": 19
-            },
-            {
-              "title": "jujutsu kaisen 2 20",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/j/jujutsu-kaisen-2-dublado/20.mp4/index.m3u8",
-              "episode": 20
-            },
-            {
-              "title": "jujutsu kaisen 2 21",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/j/jujutsu-kaisen-2-dublado/21.mp4/index.m3u8",
-              "episode": 21
-            },
-            {
-              "title": "jujutsu kaisen 2 22",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/j/jujutsu-kaisen-2-dublado/22.mp4/index.m3u8",
-              "episode": 22
-            },
-            {
-              "title": "jujutsu kaisen 2 23",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/j/jujutsu-kaisen-2-dublado/23.mp4/index.m3u8",
-              "episode": 23
-            }
-          ]
+          "title": "Episódio 2",
+          "url": "https://www.blogger.com/video.g?token=AD6v5dyQO4BmgmyANnCEeTZLivgKaIMviwZQaLqrzcrKgXrWASq7kN7icrOzaWPfp6b-GR0h3-KTin6Ih_Rx7t0RlcvBB68s8DsKfATSuo2LeIVeETrtKfcyKOtz1XlRujLPruAVIrw",
+          "episode": 2
         },
         {
-          "season": 3,
-          "episodes": [
-            {
-              "title": "jujutsu kaisen 3 01",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/j/jujutsu-kaisen-3-dublado/01.mp4/index.m3u8",
-              "episode": 1
-            },
-            {
-              "title": "jujutsu kaisen 3 02",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/j/jujutsu-kaisen-3-dublado/02.mp4/index.m3u8",
-              "episode": 2
-            },
-            {
-              "title": "jujutsu kaisen 3 03",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/j/jujutsu-kaisen-3-dublado/03.mp4/index.m3u8",
-              "episode": 3
-            },
-            {
-              "title": "jujutsu kaisen 3 04",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/j/jujutsu-kaisen-3-dublado/04.mp4/index.m3u8",
-              "episode": 4
-            },
-            {
-              "title": "jujutsu kaisen 3 05",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/j/jujutsu-kaisen-3-dublado/05.mp4/index.m3u8",
-              "episode": 5
-            },
-            {
-              "title": "jujutsu kaisen 3 06",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/j/jujutsu-kaisen-3-dublado/06.mp4/index.m3u8",
-              "episode": 6
-            },
-            {
-              "title": "jujutsu kaisen 3 07",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/j/jujutsu-kaisen-3-dublado/07.mp4/index.m3u8",
-              "episode": 7
-            },
-            {
-              "title": "jujutsu kaisen 3 08",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/j/jujutsu-kaisen-3-dublado/08.mp4/index.m3u8",
-              "episode": 8
-            },
-            {
-              "title": "jujutsu kaisen 3 09",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/j/jujutsu-kaisen-3-dublado/09.mp4/index.m3u8",
-              "episode": 9
-            },
-            {
-              "title": "jujutsu kaisen 3 10",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/j/jujutsu-kaisen-3-dublado/10.mp4/index.m3u8",
-              "episode": 10
-            },
-            {
-              "title": "jujutsu kaisen 3 11",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/j/jujutsu-kaisen-3-dublado/11.mp4/index.m3u8",
-              "episode": 11
-            },
-            {
-              "title": "jujutsu kaisen 3 12",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/j/jujutsu-kaisen-3-dublado/12.mp4/index.m3u8",
-              "episode": 12
-            },
-            {
-              "title": "jujutsu kaisen 3 13",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/j/jujutsu-kaisen-3-dublado/13.mp4/index.m3u8",
-              "episode": 13
-            },
-            {
-              "title": "jujutsu kaisen 3 14",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/j/jujutsu-kaisen-3-dublado/14.mp4/index.m3u8",
-              "episode": 14
-            },
-            {
-              "title": "jujutsu kaisen 3 15",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/j/jujutsu-kaisen-3-dublado/15.mp4/index.m3u8",
-              "episode": 15
-            },
-            {
-              "title": "jujutsu kaisen 3 16",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/j/jujutsu-kaisen-3-dublado/16.mp4/index.m3u8",
-              "episode": 16
-            },
-            {
-              "title": "jujutsu kaisen 3 17",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/j/jujutsu-kaisen-3-dublado/17.mp4/index.m3u8",
-              "episode": 17
-            },
-            {
-              "title": "jujutsu kaisen 3 18",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/j/jujutsu-kaisen-3-dublado/18.mp4/index.m3u8",
-              "episode": 18
-            },
-            {
-              "title": "jujutsu kaisen 3 19",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/j/jujutsu-kaisen-3-dublado/19.mp4/index.m3u8",
-              "episode": 19
-            },
-            {
-              "title": "jujutsu kaisen 3 20",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/j/jujutsu-kaisen-3-dublado/20.mp4/index.m3u8",
-              "episode": 20
-            },
-            {
-              "title": "jujutsu kaisen 3 21",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/j/jujutsu-kaisen-3-dublado/21.mp4/index.m3u8",
-              "episode": 21
-            },
-            {
-              "title": "jujutsu kaisen 3 22",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/j/jujutsu-kaisen-3-dublado/22.mp4/index.m3u8",
-              "episode": 22
-            },
-            {
-              "title": "jujutsu kaisen 3 23",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/j/jujutsu-kaisen-3-dublado/23.mp4/index.m3u8",
-              "episode": 23
-            }
-          ]
+          "title": "Episódio 3",
+          "url": "https://www.blogger.com/video.g?token=AD6v5dymKp7EeH8zKoe2qYeyZL4x7Bg_MO2dWvfOPtMPMRekoehbsDT37n3Oiz-5Tg_lxaltrH45g3JZL8JC75LShJR7I0r3UUeihia-jR0pOQghc6iISNqyxo7zHkBTrcJXArQ75QwM",
+          "episode": 3
+        },
+        {
+          "title": "Episódio 4",
+          "url": "https://www.blogger.com/video.g?token=AD6v5dyWTFxdIQ_Pk0ePPnQrwGIFHdqs7cedx73DevZGIVYu1JPdpGY9TgijyRFZ9Eqm2Z2Wh8NfbZJL05xCgbDw62VlHSRktNqN40FZA6o1rVHSF5Bk8w-TMWwCMkb7Zm_E_lRP05N0",
+          "episode": 4
+        },
+        {
+          "title": "Episódio 5",
+          "url": "https://www.blogger.com/video.g?token=AD6v5dyNye0_sWyjVjygRB_ICCAiKacEtw1nIiDGhF0zuIyBFBYHAPBxIrM_-V__j9v679VH53yjWD4D7_4Nn4hApsakVn07nmYB_wJgysPy-5Lnud7ckrTxyfkeJdfMyslInup4grM",
+          "episode": 5
+        },
+        {
+          "title": "Episódio 6",
+          "url": "https://www.blogger.com/video.g?token=AD6v5dw44sAOJbjwE92EmKrl4t3lwj3NzwqDlPNX3U-gcY9afmwH50x90QMcD3Ihn2WTw0LOGhHrVVh_fRi_F0WRR_SnegNKeK9al4iQOgX1VQ_86HLatyBkPRZFfvUTgROYNVF097wF",
+          "episode": 6
+        },
+        {
+          "title": "Episódio 7",
+          "url": "https://www.blogger.com/video.g?token=AD6v5dz6WIJMGF-zGiMPHf1YH0_eT58v-OKqIEXO0Rv4r57hrKWKN2tZn_PZX08MIfHP1Ra1mTRVdBaQQluskSblaWdB_plPvrglRK2cH-LlhNkRpQ-70T9-1GhrQONcUfSmJN9HdsjI",
+          "episode": 7
+        },
+        {
+          "title": "Episódio 8",
+          "url": "https://www.blogger.com/video.g?token=AD6v5dwUJTEi2HQkTpZKddn6yQ-kEwiRbGN7RODd01dUCoJCmr5Wt14EVNY9CRL9T2PRLknX-tSwnzHa88UxCHld2PxaV9nmGKQV2-4egDXp1870pY2XVK99o94KI3Jkg5AQOGLRGNJT",
+          "episode": 8
+        },
+        {
+          "title": "Episódio 9",
+          "url": "https://www.blogger.com/video.g?token=AD6v5dxJBRGY9Op-2ax4As7nI_nTAF4Kh5QAc8M1gJhCuExcXay7jKOc0_yQk2JYANTDbRavLiVteNcwa7hRsXfiOLCzSujwzct88o_VoCEO7jPGJW9Ygc7GcRH7WOOj4BzNIEE1s2g",
+          "episode": 9
+        },
+        {
+          "title": "Episódio 10",
+          "url": "https://www.blogger.com/video.g?token=AD6v5dzJ1PVdcS3jA2uu89ciMG5bu8sGGn2t2WmV9GoaU4oGk3v3VckFwsZ-SOj5Ud-iN1AzPEmitHXnuVbPiKvOThdku3IArELyx0nfiS4vsChambGwb-eXjxB8UiHzIAWJQqcj0zFr",
+          "episode": 10
+        },
+        {
+          "title": "Episódio 11",
+          "url": "https://www.blogger.com/video.g?token=AD6v5dzLhnjGZdMuoy32xEausEIzzmAU2p-taXIkqFn-psbVQGjM6cNUSFxy78UD2EmZss8Hst1mNhcJNDAN7nyLKdfjZXdITZdJTvS_UURu_l-0awLdbwZzAMSozgNZe6KVkCwd2rvM",
+          "episode": 11
+        },
+        {
+          "title": "Episódio 12",
+          "url": "https://www.blogger.com/video.g?token=AD6v5dx4UJoSqfW5Y-qRCUMAhSmQOoPsHUhS6jfKOf5_xOe0mr_a8aelLq-CtLxPHD3xFXgE3xu7kU2Vcdo1hsuy1SjO-vYv9r5xuZEboSTTQSNrNyDkYNIWuEdp1T3sI80zZjTQe-Wf",
+          "episode": 12
+        },
+        {
+          "title": "Episódio 13",
+          "url": "https://www.blogger.com/video.g?token=AD6v5dynDKhLjxoC_UUne9fw2MkULFNNqIF-GOQ2IzG-siRdx4KxHnGBo-iBVM11f8zmdhw9ELMssMoLXuEUkdoMJ_2fpht58cSzJTHbYj_5gzWb44NIJQXelTc6qwOgU1brZEDd_nU",
+          "episode": 13
+        },
+        {
+          "title": "Episódio 14",
+          "url": "https://www.blogger.com/video.g?token=AD6v5dwcccfLaNSV9CKfhlSXqhkyNab_kBdFi4rGjUMbJ-n7qqqTy15Ay4KTjvV_Ds2Ylju1x7PC51A6DSMHFw6J_OVYQo5KM_iLp0MI4N47CrF94anhZ3aiKYuj_f91XNOIj43x2FTQ",
+          "episode": 14
+        },
+        {
+          "title": "Episódio 15",
+          "url": "https://www.blogger.com/video.g?token=AD6v5dxXJ9bYr44pUEJfK62VlpYf2MhcSdkEPNN3AfFNylWOk0h-1NIRVpBnm0tSM0lCFgOTYJPG-pAwzKlQYyl1ortYusuk4kLe6O4SjnaM7naoXAYdH4UyVhheddBKxCU4wUJzgDlf",
+          "episode": 15
+        },
+        {
+          "title": "Episódio 16",
+          "url": "https://www.blogger.com/video.g?token=AD6v5dx1PnaewgUL_ngiJCRxzWTFU8N9Bpf3g9zEr3m5hGZtw8QEDiReg7XM9NnOrAcLzcgZl63MsCrhXziAchSFX9VykVWJmo9kjp6a7sWeC592c7UN8qSyyOrQ6Xwc7WLCLSZcUcA",
+          "episode": 16
+        },
+        {
+          "title": "Episódio 17",
+          "url": "https://www.blogger.com/video.g?token=AD6v5dwGxqUQXEoCjK-27P0nhI60at0IWGcIXqD9yZlXJG1fDxy5KoYjNVELUG-FFLmPxFYZTxWt9ICf9yhhQMtdRq8VSgQV-HI8v8o_mCxaN4scrsYcfvzk5LGApF2yBoLRpVJJYlQM",
+          "episode": 17
+        },
+        {
+          "title": "Episódio 18",
+          "url": "https://www.blogger.com/video.g?token=AD6v5dyC-EeX82sKykv4bohZR23aw1SLGorC5REBQNtL_RZhJRfRkYgcQotlcgQ1VDfxniEGFJg3TT7WgpOCIlGP_vrZZLZfAf46qa5ooMUh5ngrn09_FQmMHeafvhg4WnTl8Xt-_g9M",
+          "episode": 18
+        },
+        {
+          "title": "Episódio 19",
+          "url": "https://www.blogger.com/video.g?token=AD6v5dxAqvFoyIsF0z1WSYRTBPkyYHozz8H2da_o48pgUOlgSId-muW1XLACqXQu2tGhjxPbw8bfzPZSc-wxDDP-FiX5ZV-WLz0tIXQmd8CK4BmWPKBfq283sOqzi4nLQRQ188K3rVM",
+          "episode": 19
+        },
+        {
+          "title": "Episódio 20",
+          "url": "https://www.blogger.com/video.g?token=AD6v5dwLvuctvdio_Q1A1aRePK-1-EPuznhubQwvvEmeW3etVlqxOJDrILJSA5KhiOSVsQ7Qkwv75q_v1nbaL6297UcB6oYlLvaJ3E1TxUTwf5fEUXggm_6Rk42IwM2nMwtBiH2Y8cw",
+          "episode": 20
         }
       ],
       "type": "series",
