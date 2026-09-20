@@ -1,6 +1,79 @@
 {
   "filmes": [
     {
+      "id": "o_senhor_dos_aneis_a_guerra_dos_rohirrim",
+      "title": "O Senhor Dos Aneis A Guerra Dos Rohirrim",
+      "poster": "https://image.tmdb.org/t/p/w500/aLOROyUuOum0zztqPiJDCFgFMcw.jpg",
+      "episodes": [
+        {
+          "title": "O Senhor dos Anéis: A Guerra dos Rohirrim",
+          "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storageflix/F/o-senhor-dos-aneis-a-guerra-dos-rohirrim.mp4",
+          "episode": 1
+        }
+      ],
+      "type": "movie",
+      "local_poster": "/Pirataflix/assets/Capas/default.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/aLOROyUuOum0zztqPiJDCFgFMcw.jpg",
+        "https://image.tmdb.org/t/p/w500/23WCoDo6wzBfzbX7BGTNwVUqZfi.jpg",
+        "https://image.tmdb.org/t/p/w500/cXzCOx1hUuU9CfmiEv6rXjb6EqU.jpg",
+        "https://image.tmdb.org/t/p/w500/hE9SAMyMSUGAPsHUGdyl6irv11v.jpg",
+        "https://image.tmdb.org/t/p/w500/qXKFlGX9n66zd4q0oWztPuvRD9D.jpg",
+        "https://image.tmdb.org/t/p/w500/kSoGbVpd1CMBE9sb33Yp7NpgQgd.jpg"
+      ],
+      "backdrop": "https://image.tmdb.org/t/p/w1280/ie8OSgIHEl6yQiGJ90dsyBWOpQA.jpg",
+      "overview": "183 anos antes dos eventos narrados na trilogia original, um ataque repentino de Wulf, um inteligente e implacável lorde Dunlending em busca de vingança pela morte de seu pai, força Helm Hammerhand e seu povo a fazer uma ousada última resistência na antiga fortaleza de Hornburg. Encontrando-se em uma situação cada vez mais desesperadora, Héra, a filha de Helm, deve reunir a vontade de liderar a resistência contra um inimigo mortal que pretende destruí-los totalmente.",
+      "year": "2024",
+      "genres": [
+        "Animação",
+        "Fantasia",
+        "Aventura"
+      ],
+      "rating": 6.5,
+      "cast": [
+        {
+          "name": "Brian Cox",
+          "character": "Helm Hammerhand (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/scSjbFCTRngXlkJRoKptM5kQGw7.jpg"
+        },
+        {
+          "name": "Gaia Wise",
+          "character": "Héra (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/vyjUZOrhto3PKq4PuHG7270cum5.jpg"
+        },
+        {
+          "name": "Luke Pasqualino",
+          "character": "Wulf (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/egwyqohJ3KLag4GUyTzXGngwTc1.jpg"
+        },
+        {
+          "name": "Laurence Ubong Williams",
+          "character": "Fréaláf (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/wKc9PHuuqrFRIAepLm87AUDdvgt.jpg"
+        },
+        {
+          "name": "Lorraine Ashbourne",
+          "character": "Olwyn (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/4cOOwDYkKcCf9G6fdGGDyAR4jru.jpg"
+        },
+        {
+          "name": "Miranda Otto",
+          "character": "Éowyn (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/szME1IBVTLgiKrO5D5wvOGnvUDW.jpg"
+        },
+        {
+          "name": "Shaun Dooley",
+          "character": "Freca (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/uWiw28ARiLkvL6xUjKDLDlSsfkY.jpg"
+        },
+        {
+          "name": "Benjamin Wainwright",
+          "character": "Haleth (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/hdU9RbfcSBUHhUPcPTildubV0bZ.jpg"
+        }
+      ]
+    },
+    {
       "id": "resident_evil_1",
       "title": "Resident Evil 1",
       "poster": "https://image.tmdb.org/t/p/w500/oxZX9s92Xr5f7mnFCGyEsB5mCOb.jpg",
@@ -249,7 +322,7 @@
         "Crime",
         "Drama"
       ],
-      "rating": 6.9,
+      "rating": 6.8,
       "cast": [
         {
           "name": "Fernando Alves Pinto",
@@ -753,7 +826,7 @@
         "Terror",
         "Suspense"
       ],
-      "rating": 6.1,
+      "rating": 6.2,
       "cast": [
         {
           "name": "Daisy Ridley",
@@ -868,19 +941,6 @@
           "profile": "https://image.tmdb.org/t/p/w185/zu3oHbqfqfc6u72wkWq5FCirmgS.jpg"
         }
       ]
-    },
-    {
-      "id": "a_casa_do_dragao_3_ep6",
-      "title": "A Casa Do Dragao 3 Ep6",
-      "poster": "/Pirataflix/assets/Capas/default.jpg",
-      "episodes": [
-        {
-          "title": "A Casa do Dragão 3 - EP 6",
-          "url": "https://ugc-cdn-caching-n3slorkxohfjtdkgfg.cloudwindow-route.com/engine/hls2/01/17886/adtjg95ufnzn_,n,.urlset/index-v1-a1.m3u8?t=PHf6LOkOrnn3iCLO39hmIrbACSZrSOXpfUPHBCN4OXk&s=1785792510&e=14400&f=89431769&node=XiW5cec0hXw2ZUbR38dNrfYLIjxa2UfNT5vzbxCNkaE=&i=201.148&sp=2500&asn=28598&q=n&rq=j7I6IQetTNLIB9qaqVrEsbHify4i5Zh2xVwnQ19K",
-          "episode": 6
-        }
-      ],
-      "type": "movie"
     },
     {
       "id": "exterminador_do_futuro_destino_sombrio",
@@ -49577,7 +49637,7 @@
         {
           "name": "Harry Shearer",
           "character": "Ned Flanders / Mr. Burns / Smithers / Principal Skinner / Lenny Leonard (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/333feu409WQHmS9oIixHxl71qj4.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/wZpovXxQQqP7kxXPy2yj6QMbM55.jpg"
         }
       ]
     },
@@ -59308,6 +59368,142 @@
       "year": "2024"
     },
     {
+      "id": "youjo_senki_dublado",
+      "title": "Youjo Senki Dublado",
+      "poster": "/Pirataflix/assets/Capas/default.jpg",
+      "seasons": [
+        {
+          "season": 1,
+          "episodes": [
+            {
+              "title": "Episódio 1",
+              "url": "https://www.blogger.com/video.g?token=AD6v5dy3TZbqDcOMvNBPG4CR8P0HEm4zUMicn4ZgbXk1RePmZEusdT8lmiH3ArfzE-F2oPchIxBhfGkoZNuS5ZsVf4If1hDnlhk40_q6rhhkPzA17YsSaTsLlqSOD_f49llxW0v1t09w&origin=julhoanimes.blogspot.com",
+              "episode": 1
+            },
+            {
+              "title": "Episódio 2",
+              "url": "https://www.blogger.com/video.g?token=AD6v5dxbJR_moRv4nPSAduO-RsR9VmNmN1VQa1M5BKIHUlz7QiLAoVdQWs8Sf82wIiixvSuSGtjx-pt1o1AM9N_tan8C2vQQw9eC7VL0Rnzu4wJtw4KfCBO5g05DIimSwOxm6E9Ksr8&origin=julhoanimes.blogspot.com",
+              "episode": 2
+            },
+            {
+              "title": "Episódio 3",
+              "url": "https://www.blogger.com/video.g?token=AD6v5dxuJQhoXMA_A_C5L2fFC9ijOOHukSjP8OPVo0KlWrPfNL6HJ8mXdF90CnK0Uh7jdvE1HprFC4wUWDzQMcuC-sWtwEM8uhFTylQSRfdOFIhBHE_wesJTTJsJ5vnPUK2Sf0rax4KD&origin=julhoanimes.blogspot.com",
+              "episode": 3
+            },
+            {
+              "title": "Episódio 4",
+              "url": "https://www.blogger.com/video.g?token=AD6v5dyVLc7TGa9oXDOrrIVT-_TvKYOGZIkw8Xslm2jMVYqqyh7xsi4bAVG9tPAQpUzQR493HvLhIxBachTE6ezmqpydJfKpSYrQBn1YquPc6KzaJPfznlPNlY_4IZfrmzSAgokO5WM9&origin=julhoanimes.blogspot.com",
+              "episode": 4
+            },
+            {
+              "title": "Episódio 5",
+              "url": "https://www.blogger.com/video.g?token=AD6v5dxjCVKK2njvv6Wor31NOF9tfdhhb0DEhUKLnGxYDC3KOUHwFMMkSqCF1mtv6DvlFb7le27PM4OyhS7HgKEQT65D9vo8j5OOBpmckl0xzQlFBv978jwehM1RnrUiL7MiMGHRyyUK&origin=julhoanimes.blogspot.com",
+              "episode": 5
+            },
+            {
+              "title": "Episódio 6",
+              "url": "https://www.blogger.com/video.g?token=AD6v5dzebryTT0ly-f5qVWCoVkxBbFNf3xHGQlRgDLZr-3AJLD3mh7zm1-o6WjbvK-p6DDuvub84KAIonVDezIFM0ayU5_cfesJd5Jg6rqiCZmEzbvZ9-COu-VInF6O_JQGiU4b19Ryi&origin=julhoanimes.blogspot.com",
+              "episode": 6
+            },
+            {
+              "title": "Episódio 7",
+              "url": "https://www.blogger.com/video.g?token=AD6v5dyDWBKjZCX-intpwgq3P2TUyyhv5Vm-GnaVXZUi1K4yF7je2AcKpM79msTdffCMnzpxHR6y9soSK92XOIMj9rQeYEKHMWnTrjvYMBBfQpFFQMn34xanNqAzlTP9S-G948uv94c&origin=julhoanimes.blogspot.com",
+              "episode": 7
+            },
+            {
+              "title": "Episódio 8",
+              "url": "https://www.blogger.com/video.g?token=AD6v5dzogdYc8B0N8oLMRbe6WedYvpn4qCSCm8Ttp-yUO9GnXnpJjmWNifFOgSM5MyB1ihJzd3zMBjsiuihSOlL4sF531fOVsHxVGBw43RHlR5ZOljBDce7JhKhqShzK3DFtBBVH4aAN&origin=julhoanimes.blogspot.com",
+              "episode": 8
+            },
+            {
+              "title": "Episódio 9",
+              "url": "https://www.blogger.com/video.g?token=AD6v5dyUC8h1eHVgOwYe-1G7vUq9JBgTcisaoqwttoLBB2QvvhcN8NR0nUr5EpqMfTAD7bwk52IFxnkKpQsL1K_LnNj9un-_-2ymrODsQlwjw7co-hPlbFFY-J1Ng4v97oS8zasoebP2&origin=julhoanimes.blogspot.com",
+              "episode": 9
+            },
+            {
+              "title": "Episódio 10",
+              "url": "https://www.blogger.com/video.g?token=AD6v5dyy74qdOjA2PhS5tOApDs-qME7W_IAdMnnoppXKrRQNvpRsDakuQ7GFTpcarPlgyWdHVwD6X9hFc3ACt0tkvqBSiXDGAA_05Ah6cNGp6mNUod7fyUROEygwzor35M3dS5BTa5U&origin=julhoanimes.blogspot.com",
+              "episode": 10
+            },
+            {
+              "title": "Episódio 11",
+              "url": "https://www.blogger.com/video.g?token=AD6v5dzjSEJjObRBNs71uypqiPAxHrL2-t-1o6tNhwOdu34dddakN9GsZeyuMDLE-SuTv7hDvgrGtaW_lGWm_s66fB-_6Cqm-bsI6wvRObUsusl-84LGXDb4LVFp3jZpwJ2m5IFlCLo&origin=julhoanimes.blogspot.com",
+              "episode": 11
+            },
+            {
+              "title": "Episódio 12",
+              "url": "https://www.blogger.com/video.g?token=AD6v5dwPSz5fGzmfGSL0ASUsq-WTUHlJ_vZD8dpKB0-G-xlKD7WhlJXHMm8q-fQFeB6fcOz9DOGZ2W72UTBvwK6A09kOaebbrqI5690wR4QvBNM8TeYq920wzJ9NQmpGktZgU-psY6Zk&origin=julhoanimes.blogspot.com",
+              "episode": 12
+            }
+          ]
+        }
+      ],
+      "episodes": [
+        {
+          "title": "Episódio 1",
+          "url": "https://www.blogger.com/video.g?token=AD6v5dy3TZbqDcOMvNBPG4CR8P0HEm4zUMicn4ZgbXk1RePmZEusdT8lmiH3ArfzE-F2oPchIxBhfGkoZNuS5ZsVf4If1hDnlhk40_q6rhhkPzA17YsSaTsLlqSOD_f49llxW0v1t09w&origin=julhoanimes.blogspot.com",
+          "episode": 1
+        },
+        {
+          "title": "Episódio 2",
+          "url": "https://www.blogger.com/video.g?token=AD6v5dxbJR_moRv4nPSAduO-RsR9VmNmN1VQa1M5BKIHUlz7QiLAoVdQWs8Sf82wIiixvSuSGtjx-pt1o1AM9N_tan8C2vQQw9eC7VL0Rnzu4wJtw4KfCBO5g05DIimSwOxm6E9Ksr8&origin=julhoanimes.blogspot.com",
+          "episode": 2
+        },
+        {
+          "title": "Episódio 3",
+          "url": "https://www.blogger.com/video.g?token=AD6v5dxuJQhoXMA_A_C5L2fFC9ijOOHukSjP8OPVo0KlWrPfNL6HJ8mXdF90CnK0Uh7jdvE1HprFC4wUWDzQMcuC-sWtwEM8uhFTylQSRfdOFIhBHE_wesJTTJsJ5vnPUK2Sf0rax4KD&origin=julhoanimes.blogspot.com",
+          "episode": 3
+        },
+        {
+          "title": "Episódio 4",
+          "url": "https://www.blogger.com/video.g?token=AD6v5dyVLc7TGa9oXDOrrIVT-_TvKYOGZIkw8Xslm2jMVYqqyh7xsi4bAVG9tPAQpUzQR493HvLhIxBachTE6ezmqpydJfKpSYrQBn1YquPc6KzaJPfznlPNlY_4IZfrmzSAgokO5WM9&origin=julhoanimes.blogspot.com",
+          "episode": 4
+        },
+        {
+          "title": "Episódio 5",
+          "url": "https://www.blogger.com/video.g?token=AD6v5dxjCVKK2njvv6Wor31NOF9tfdhhb0DEhUKLnGxYDC3KOUHwFMMkSqCF1mtv6DvlFb7le27PM4OyhS7HgKEQT65D9vo8j5OOBpmckl0xzQlFBv978jwehM1RnrUiL7MiMGHRyyUK&origin=julhoanimes.blogspot.com",
+          "episode": 5
+        },
+        {
+          "title": "Episódio 6",
+          "url": "https://www.blogger.com/video.g?token=AD6v5dzebryTT0ly-f5qVWCoVkxBbFNf3xHGQlRgDLZr-3AJLD3mh7zm1-o6WjbvK-p6DDuvub84KAIonVDezIFM0ayU5_cfesJd5Jg6rqiCZmEzbvZ9-COu-VInF6O_JQGiU4b19Ryi&origin=julhoanimes.blogspot.com",
+          "episode": 6
+        },
+        {
+          "title": "Episódio 7",
+          "url": "https://www.blogger.com/video.g?token=AD6v5dyDWBKjZCX-intpwgq3P2TUyyhv5Vm-GnaVXZUi1K4yF7je2AcKpM79msTdffCMnzpxHR6y9soSK92XOIMj9rQeYEKHMWnTrjvYMBBfQpFFQMn34xanNqAzlTP9S-G948uv94c&origin=julhoanimes.blogspot.com",
+          "episode": 7
+        },
+        {
+          "title": "Episódio 8",
+          "url": "https://www.blogger.com/video.g?token=AD6v5dzogdYc8B0N8oLMRbe6WedYvpn4qCSCm8Ttp-yUO9GnXnpJjmWNifFOgSM5MyB1ihJzd3zMBjsiuihSOlL4sF531fOVsHxVGBw43RHlR5ZOljBDce7JhKhqShzK3DFtBBVH4aAN&origin=julhoanimes.blogspot.com",
+          "episode": 8
+        },
+        {
+          "title": "Episódio 9",
+          "url": "https://www.blogger.com/video.g?token=AD6v5dyUC8h1eHVgOwYe-1G7vUq9JBgTcisaoqwttoLBB2QvvhcN8NR0nUr5EpqMfTAD7bwk52IFxnkKpQsL1K_LnNj9un-_-2ymrODsQlwjw7co-hPlbFFY-J1Ng4v97oS8zasoebP2&origin=julhoanimes.blogspot.com",
+          "episode": 9
+        },
+        {
+          "title": "Episódio 10",
+          "url": "https://www.blogger.com/video.g?token=AD6v5dyy74qdOjA2PhS5tOApDs-qME7W_IAdMnnoppXKrRQNvpRsDakuQ7GFTpcarPlgyWdHVwD6X9hFc3ACt0tkvqBSiXDGAA_05Ah6cNGp6mNUod7fyUROEygwzor35M3dS5BTa5U&origin=julhoanimes.blogspot.com",
+          "episode": 10
+        },
+        {
+          "title": "Episódio 11",
+          "url": "https://www.blogger.com/video.g?token=AD6v5dzjSEJjObRBNs71uypqiPAxHrL2-t-1o6tNhwOdu34dddakN9GsZeyuMDLE-SuTv7hDvgrGtaW_lGWm_s66fB-_6Cqm-bsI6wvRObUsusl-84LGXDb4LVFp3jZpwJ2m5IFlCLo&origin=julhoanimes.blogspot.com",
+          "episode": 11
+        },
+        {
+          "title": "Episódio 12",
+          "url": "https://www.blogger.com/video.g?token=AD6v5dwPSz5fGzmfGSL0ASUsq-WTUHlJ_vZD8dpKB0-G-xlKD7WhlJXHMm8q-fQFeB6fcOz9DOGZ2W72UTBvwK6A09kOaebbrqI5690wR4QvBNM8TeYq920wzJ9NQmpGktZgU-psY6Zk&origin=julhoanimes.blogspot.com",
+          "episode": 12
+        }
+      ],
+      "type": "series",
+      "category": "animes"
+    },
+    {
       "id": "dragon_ball_gt",
       "title": "Dragon Ball Gt",
       "poster": "/Pirataflix/assets/Capas/dragon_ball_gt.jpg",
@@ -61694,6 +61890,152 @@
           "profile": "https://image.tmdb.org/t/p/w185/fgcbBLbYNqy4JfVZ5MX8AKrJJl7.jpg"
         }
       ]
+    },
+    {
+      "id": "mao_dublado",
+      "title": "Mao Dublado",
+      "poster": "/Pirataflix/assets/Capas/default.jpg",
+      "seasons": [
+        {
+          "season": 1,
+          "episodes": [
+            {
+              "title": "Episódio 1",
+              "url": "https://www.blogger.com/video.g?token=AD6v5dxQir2Eb3heFinqtWWwx1yapZ7XVjJ4W_kAXUyAvMItr8En6UW9vAg_z3-dvhFpqJiOhR4BOw1-fYHKJY3anxxOMZj7MuuMdDQSYAm79rcCoNP_brAM-KJsuy1IObx2SA_Uds9K&origin=julhoanimes.blogspot.com",
+              "episode": 1
+            },
+            {
+              "title": "Episódio 2",
+              "url": "https://www.blogger.com/video.g?token=AD6v5dykmZiA6mVrqKdeKJwV0rT3ETtwXSE70sqkpJI1HXHKHegIJv95q7ET_QDCbhndfs66oeAiEM6GPZWcpoWqU4cyHjUtOUZK9ESAeqSuVtG7kdnqAOlwtv7YeW2KsFepjJBGrU8&origin=julhoanimes.blogspot.com",
+              "episode": 2
+            },
+            {
+              "title": "Episódio 3",
+              "url": "https://www.blogger.com/video.g?token=AD6v5dz-zvxQPLIUA6EbAOs_0HiVKZQEsxh6wRRLlj2UTR-1m5Arb3O2tfVMwJBhKp3pzccd_rEKAqC9LVV1So2cWG4kHsDuzWyS1NSaeXksAS9hJ52QVxeAzVJ2L2H-S55AYjeuUQf5&origin=julhoanimes.blogspot.com",
+              "episode": 3
+            },
+            {
+              "title": "Episódio 4",
+              "url": "https://www.blogger.com/video.g?token=AD6v5dzDjjX_WCddsbs-15doQqcIUdLSgb2c6yM0gDcW2IwLbHBj09pmeNBgrzA5TTTVoP9DD8EhUMUcR44mVqX81n2lpyPKfNZbVgsJzwss8iHXwqO4NwCRTBtCvwZUXAmAX3WM5PEI&origin=julhoanimes.blogspot.com",
+              "episode": 4
+            },
+            {
+              "title": "Episódio 5",
+              "url": "https://www.blogger.com/video.g?token=AD6v5dxqVijgDWZcuqMW9RcMyUJQ1HmeShll8Hliozo-lNUZKjL0HonLuWKhRmxyi3bMN3keW3om8NvQqbZC5lvHYR40UhBkatYtPSj8jvVeFKch6pH7zIoGIwChBhCuD_AlUgAnmMXZ&origin=julhoanimes.blogspot.com",
+              "episode": 5
+            },
+            {
+              "title": "Episódio 6",
+              "url": "https://www.blogger.com/video.g?token=AD6v5dxbWqgM4gr1uc3CSEqK9Xd-oWqKX_WKoG-KX6dMOXjRDgUZeBiXBD5d9LO36RLZ6VEtLWsibRo-xiBYeRY3hjKVkpB3Ba3i9SofoDDNjcTxw-Pv0FFl9gMyd0l0x8BaBmaFyItg&origin=julhoanimes.blogspot.com",
+              "episode": 6
+            },
+            {
+              "title": "Episódio 7",
+              "url": "https://www.blogger.com/video.g?token=AD6v5dw1qTKqgbcMy2EC4lUw3UUI6Z9d6mGzFmCsIUb46MDihm8Aa2shht-RlDeTMe_E-feusjMUf2lyqCoXPFAKTPJqEuBSFs0PYn3gPoOXOMWyG5QQkZLMe6FSM-VtwtzlN2PyZl8&origin=julhoanimes.blogspot.com",
+              "episode": 7
+            },
+            {
+              "title": "Episódio 8",
+              "url": "https://www.blogger.com/video.g?token=AD6v5dyeQk0rmshZMNbxaCQa_IztRb5Rp3KzEmvFh7Jd_IsH6Gss2VhzldzVh2x0z7ReAK3jfoMO-WffZIEoS__A-1qovNODWaKadaSTAl8fokMxwTpGfFczFLKnbCLcqHKQmNBcgbA&origin=julhoanimes.blogspot.com",
+              "episode": 8
+            },
+            {
+              "title": "Episódio 9",
+              "url": "https://www.blogger.com/video.g?token=AD6v5dzl2rRN1III8L2oMhpVm_b7qSPcTzoANTI59kEYhEd2GyuyxaMXCukLhZirxsuvA-uG3xbMXon1sawO36AvAuSYWzvi3w9fGlXJath6FyaEuXLOMCIA_qoweYVCmL5nkzPQ7KQf&origin=julhoanimes.blogspot.com",
+              "episode": 9
+            },
+            {
+              "title": "Episódio 10",
+              "url": "https://www.blogger.com/video.g?token=AD6v5dxkAW7YkMv2yJbbgx_DNNYQRHppuumidAOdUZtTkpAJP1EktAkh5jtHPtgXFR_bM3nmtEV3ZIRHZqN_iS9jcGBtFJt53-KLWizPOP9CejSNB7BDNaRrp2XEzY4SrjUuLZjQ4o2n&origin=julhoanimes.blogspot.com",
+              "episode": 10
+            },
+            {
+              "title": "Episódio 11",
+              "url": "https://www.blogger.com/video.g?token=AD6v5dw3wIu28xZQm_F8wT9ldz6idcADvMVjDh0wg2WcuLHDPc3p3EFRCdVz6RWlij_BYPiHr3d0-ZpRQGvdesEvwX4sLJfSwnj0gHzss_hPuW66AftZy5L8-agaIrqoEXOhYlNI6Zw&origin=julhoanimes.blogspot.com",
+              "episode": 11
+            },
+            {
+              "title": "Episódio 12",
+              "url": "https://www.blogger.com/video.g?token=AD6v5dypWJgveapNTgpcb0Ulcd4804xss1OtjjusJvAfcj6G1SFaq0QQjwFc6RBfyYk5B3-CLfmHTfpeG617T8FSjEssbz-9lQNrsciO35lLvkNnykvLBobUtOFjfwqzGjRl0TEiSuM&origin=julhoanimes.blogspot.com",
+              "episode": 12
+            },
+            {
+              "title": "Episódio 13",
+              "url": "https://www.blogger.com/video.g?token=AD6v5dyjjHwode-COSDxmdxkceHa_VSLCy5CQIT3gFrifVpAJS-une_jgdNqo2WUg63lb7DFI7WHcbZoh5T8y2o07K_uFxbwlDc3D19Q0-mE5D5NwMIQZj6rYzKVcS7sGG3e6lIyZqk&origin=julhoanimes.blogspot.com",
+              "episode": 13
+            }
+          ]
+        }
+      ],
+      "episodes": [
+        {
+          "title": "Episódio 1",
+          "url": "https://www.blogger.com/video.g?token=AD6v5dxQir2Eb3heFinqtWWwx1yapZ7XVjJ4W_kAXUyAvMItr8En6UW9vAg_z3-dvhFpqJiOhR4BOw1-fYHKJY3anxxOMZj7MuuMdDQSYAm79rcCoNP_brAM-KJsuy1IObx2SA_Uds9K&origin=julhoanimes.blogspot.com",
+          "episode": 1
+        },
+        {
+          "title": "Episódio 2",
+          "url": "https://www.blogger.com/video.g?token=AD6v5dykmZiA6mVrqKdeKJwV0rT3ETtwXSE70sqkpJI1HXHKHegIJv95q7ET_QDCbhndfs66oeAiEM6GPZWcpoWqU4cyHjUtOUZK9ESAeqSuVtG7kdnqAOlwtv7YeW2KsFepjJBGrU8&origin=julhoanimes.blogspot.com",
+          "episode": 2
+        },
+        {
+          "title": "Episódio 3",
+          "url": "https://www.blogger.com/video.g?token=AD6v5dz-zvxQPLIUA6EbAOs_0HiVKZQEsxh6wRRLlj2UTR-1m5Arb3O2tfVMwJBhKp3pzccd_rEKAqC9LVV1So2cWG4kHsDuzWyS1NSaeXksAS9hJ52QVxeAzVJ2L2H-S55AYjeuUQf5&origin=julhoanimes.blogspot.com",
+          "episode": 3
+        },
+        {
+          "title": "Episódio 4",
+          "url": "https://www.blogger.com/video.g?token=AD6v5dzDjjX_WCddsbs-15doQqcIUdLSgb2c6yM0gDcW2IwLbHBj09pmeNBgrzA5TTTVoP9DD8EhUMUcR44mVqX81n2lpyPKfNZbVgsJzwss8iHXwqO4NwCRTBtCvwZUXAmAX3WM5PEI&origin=julhoanimes.blogspot.com",
+          "episode": 4
+        },
+        {
+          "title": "Episódio 5",
+          "url": "https://www.blogger.com/video.g?token=AD6v5dxqVijgDWZcuqMW9RcMyUJQ1HmeShll8Hliozo-lNUZKjL0HonLuWKhRmxyi3bMN3keW3om8NvQqbZC5lvHYR40UhBkatYtPSj8jvVeFKch6pH7zIoGIwChBhCuD_AlUgAnmMXZ&origin=julhoanimes.blogspot.com",
+          "episode": 5
+        },
+        {
+          "title": "Episódio 6",
+          "url": "https://www.blogger.com/video.g?token=AD6v5dxbWqgM4gr1uc3CSEqK9Xd-oWqKX_WKoG-KX6dMOXjRDgUZeBiXBD5d9LO36RLZ6VEtLWsibRo-xiBYeRY3hjKVkpB3Ba3i9SofoDDNjcTxw-Pv0FFl9gMyd0l0x8BaBmaFyItg&origin=julhoanimes.blogspot.com",
+          "episode": 6
+        },
+        {
+          "title": "Episódio 7",
+          "url": "https://www.blogger.com/video.g?token=AD6v5dw1qTKqgbcMy2EC4lUw3UUI6Z9d6mGzFmCsIUb46MDihm8Aa2shht-RlDeTMe_E-feusjMUf2lyqCoXPFAKTPJqEuBSFs0PYn3gPoOXOMWyG5QQkZLMe6FSM-VtwtzlN2PyZl8&origin=julhoanimes.blogspot.com",
+          "episode": 7
+        },
+        {
+          "title": "Episódio 8",
+          "url": "https://www.blogger.com/video.g?token=AD6v5dyeQk0rmshZMNbxaCQa_IztRb5Rp3KzEmvFh7Jd_IsH6Gss2VhzldzVh2x0z7ReAK3jfoMO-WffZIEoS__A-1qovNODWaKadaSTAl8fokMxwTpGfFczFLKnbCLcqHKQmNBcgbA&origin=julhoanimes.blogspot.com",
+          "episode": 8
+        },
+        {
+          "title": "Episódio 9",
+          "url": "https://www.blogger.com/video.g?token=AD6v5dzl2rRN1III8L2oMhpVm_b7qSPcTzoANTI59kEYhEd2GyuyxaMXCukLhZirxsuvA-uG3xbMXon1sawO36AvAuSYWzvi3w9fGlXJath6FyaEuXLOMCIA_qoweYVCmL5nkzPQ7KQf&origin=julhoanimes.blogspot.com",
+          "episode": 9
+        },
+        {
+          "title": "Episódio 10",
+          "url": "https://www.blogger.com/video.g?token=AD6v5dxkAW7YkMv2yJbbgx_DNNYQRHppuumidAOdUZtTkpAJP1EktAkh5jtHPtgXFR_bM3nmtEV3ZIRHZqN_iS9jcGBtFJt53-KLWizPOP9CejSNB7BDNaRrp2XEzY4SrjUuLZjQ4o2n&origin=julhoanimes.blogspot.com",
+          "episode": 10
+        },
+        {
+          "title": "Episódio 11",
+          "url": "https://www.blogger.com/video.g?token=AD6v5dw3wIu28xZQm_F8wT9ldz6idcADvMVjDh0wg2WcuLHDPc3p3EFRCdVz6RWlij_BYPiHr3d0-ZpRQGvdesEvwX4sLJfSwnj0gHzss_hPuW66AftZy5L8-agaIrqoEXOhYlNI6Zw&origin=julhoanimes.blogspot.com",
+          "episode": 11
+        },
+        {
+          "title": "Episódio 12",
+          "url": "https://www.blogger.com/video.g?token=AD6v5dypWJgveapNTgpcb0Ulcd4804xss1OtjjusJvAfcj6G1SFaq0QQjwFc6RBfyYk5B3-CLfmHTfpeG617T8FSjEssbz-9lQNrsciO35lLvkNnykvLBobUtOFjfwqzGjRl0TEiSuM&origin=julhoanimes.blogspot.com",
+          "episode": 12
+        },
+        {
+          "title": "Episódio 13",
+          "url": "https://www.blogger.com/video.g?token=AD6v5dyjjHwode-COSDxmdxkceHa_VSLCy5CQIT3gFrifVpAJS-une_jgdNqo2WUg63lb7DFI7WHcbZoh5T8y2o07K_uFxbwlDc3D19Q0-mE5D5NwMIQZj6rYzKVcS7sGG3e6lIyZqk&origin=julhoanimes.blogspot.com",
+          "episode": 13
+        }
+      ],
+      "type": "series",
+      "category": "animes"
     },
     {
       "id": "dandandan",
@@ -72967,6 +73309,112 @@
           "profile": "https://image.tmdb.org/t/p/w185/YCEXgyl763zg62qhsjhWHRzGkL.jpg"
         }
       ]
+    },
+    {
+      "id": "mushoku_tensei_dublado",
+      "title": "Mushoku Tensei Dublado",
+      "poster": "/Pirataflix/assets/Capas/default.jpg",
+      "seasons": [
+        {
+          "season": 1,
+          "episodes": [
+            {
+              "title": "Episódio 1",
+              "url": "https://www.blogger.com/video.g?token=AD6v5dy66YF5-GzcvymFN0-fiQE7O5mN3z9BJnjw9zQqlhhZ88Vm7e_PQQ34r8ATnnhXtHtI256-1XmyNwX0Fk4fRoNk5X8KlGt3obQDQkm9ODKZAqT35pqsckZGbjOMX1yUD1ho0iB6&origin=julhoanimes.blogspot.com",
+              "episode": 1
+            },
+            {
+              "title": "Episódio 2",
+              "url": "https://www.blogger.com/video.g?token=AD6v5dzU5cig3mWwzFbTqmtQrdzD4cfcIKiKtKOu_HESIDb9qe4I8yAJEp5l7UR3Y7TPnyvkIBasKc1weQ5s7JfnECmmttpeIbL0TJ6y97VFJJ5WL6EcNxTBhu6QWyvdXF31mRVRLBc&origin=julhoanimes.blogspot.com",
+              "episode": 2
+            },
+            {
+              "title": "Episódio 3",
+              "url": "https://www.blogger.com/video.g?token=AD6v5dyWn7WfLKUWaKFfQXM_1DvW1fMAzR2nLyI3FgfvHmpyEG10NKQorJN1vygDBgHm2vPrEJygP0tXxt1DYFRxFb8BdO2fQ0xe1tMwDimOjlp2avlg7vuGRs2fvBXNW9ez_59K1Mw&origin=julhoanimes.blogspot.com",
+              "episode": 3
+            },
+            {
+              "title": "Episódio 4",
+              "url": "https://www.blogger.com/video.g?token=AD6v5dzyHetAWSl4sV3uQoPkdC7jKQCevr8vcqXLCx2PBuUnqADQxRNzOMC5jprXSdEHpgNKjpD3H-GWQV9WPRetgI293FSO2EHDQxuRqyIA6ce33RoNG7gadvcrf0pR5qfW2gT6WF-l&origin=julhoanimes.blogspot.com",
+              "episode": 4
+            },
+            {
+              "title": "Episódio 5",
+              "url": "https://www.blogger.com/video.g?token=AD6v5dzM6kxhiCJEYuUQa7VZ4fQDHqQ5M3_dwhwEEwxa8UME1EhuKRHSwiLjtHHK9brqFvhRSEhz9AD51Zs_IeWWW3b-hApnAM-5JdiJsuE1l770zo06jgZnyu71OlaaDu3A7I0w7NE&origin=julhoanimes.blogspot.com",
+              "episode": 5
+            },
+            {
+              "title": "Episódio 6",
+              "url": "https://www.blogger.com/video.g?token=AD6v5dwuYgHH39Tz87qWjJbGX_c2M5LkF4yI5sCZVQevxYf5-K8QFFFiYTZy17zzAWgNugzV5HIrf4vxv6180tZxcl8FvzC9QqTQISd2bGIEvHMSkb8zXjum2e4FPYTx6EyopXryAxRI&origin=julhoanimes.blogspot.com",
+              "episode": 6
+            },
+            {
+              "title": "Episódio 7",
+              "url": "https://www.blogger.com/video.g?token=AD6v5dxP_5dPcJLbAUjWieNZxS41tEryysctGcCQ32GDwboyE1kQ-jR15JXidrC2y0oO75W1Mv1He8P8pbnAPosHXDRRWsfAFjv6RzvCjIDdbP81iom_VPkeJRULpiaFHgfsPXKQ3xU&origin=julhoanimes.blogspot.com",
+              "episode": 7
+            },
+            {
+              "title": "Episódio 8",
+              "url": "https://www.blogger.com/video.g?token=AD6v5dw71BkTrslHcwV3nhgC-FKrcoe7vVGYOciunG7SgCi2256C5Y6z-kxOBm3FQNRe6k1pWJ1XAbF-C-yyepeY6M4waW55FFqIHwCXoEVK7dYe9P_BJlsCwC4XWExLJAOYGfx1Ar8&origin=julhoanimes.blogspot.com",
+              "episode": 8
+            },
+            {
+              "title": "Episódio 9",
+              "url": "https://www.blogger.com/video.g?token=AD6v5dwMlWTlh_EczxmpiZSP8HdSDkFwCCoLEYl4-JnfZDx5Ja6JEDw6zUjpa12NoQHqieKp2zv7o1vM8I6FBzwqCxHz8t9i-cx6h_SuElIcgem6xaxeNBUIWHpvkfnrPBHXvIg1NJA&origin=julhoanimes.blogspot.com",
+              "episode": 9
+            }
+          ]
+        }
+      ],
+      "episodes": [
+        {
+          "title": "Episódio 1",
+          "url": "https://www.blogger.com/video.g?token=AD6v5dy66YF5-GzcvymFN0-fiQE7O5mN3z9BJnjw9zQqlhhZ88Vm7e_PQQ34r8ATnnhXtHtI256-1XmyNwX0Fk4fRoNk5X8KlGt3obQDQkm9ODKZAqT35pqsckZGbjOMX1yUD1ho0iB6&origin=julhoanimes.blogspot.com",
+          "episode": 1
+        },
+        {
+          "title": "Episódio 2",
+          "url": "https://www.blogger.com/video.g?token=AD6v5dzU5cig3mWwzFbTqmtQrdzD4cfcIKiKtKOu_HESIDb9qe4I8yAJEp5l7UR3Y7TPnyvkIBasKc1weQ5s7JfnECmmttpeIbL0TJ6y97VFJJ5WL6EcNxTBhu6QWyvdXF31mRVRLBc&origin=julhoanimes.blogspot.com",
+          "episode": 2
+        },
+        {
+          "title": "Episódio 3",
+          "url": "https://www.blogger.com/video.g?token=AD6v5dyWn7WfLKUWaKFfQXM_1DvW1fMAzR2nLyI3FgfvHmpyEG10NKQorJN1vygDBgHm2vPrEJygP0tXxt1DYFRxFb8BdO2fQ0xe1tMwDimOjlp2avlg7vuGRs2fvBXNW9ez_59K1Mw&origin=julhoanimes.blogspot.com",
+          "episode": 3
+        },
+        {
+          "title": "Episódio 4",
+          "url": "https://www.blogger.com/video.g?token=AD6v5dzyHetAWSl4sV3uQoPkdC7jKQCevr8vcqXLCx2PBuUnqADQxRNzOMC5jprXSdEHpgNKjpD3H-GWQV9WPRetgI293FSO2EHDQxuRqyIA6ce33RoNG7gadvcrf0pR5qfW2gT6WF-l&origin=julhoanimes.blogspot.com",
+          "episode": 4
+        },
+        {
+          "title": "Episódio 5",
+          "url": "https://www.blogger.com/video.g?token=AD6v5dzM6kxhiCJEYuUQa7VZ4fQDHqQ5M3_dwhwEEwxa8UME1EhuKRHSwiLjtHHK9brqFvhRSEhz9AD51Zs_IeWWW3b-hApnAM-5JdiJsuE1l770zo06jgZnyu71OlaaDu3A7I0w7NE&origin=julhoanimes.blogspot.com",
+          "episode": 5
+        },
+        {
+          "title": "Episódio 6",
+          "url": "https://www.blogger.com/video.g?token=AD6v5dwuYgHH39Tz87qWjJbGX_c2M5LkF4yI5sCZVQevxYf5-K8QFFFiYTZy17zzAWgNugzV5HIrf4vxv6180tZxcl8FvzC9QqTQISd2bGIEvHMSkb8zXjum2e4FPYTx6EyopXryAxRI&origin=julhoanimes.blogspot.com",
+          "episode": 6
+        },
+        {
+          "title": "Episódio 7",
+          "url": "https://www.blogger.com/video.g?token=AD6v5dxP_5dPcJLbAUjWieNZxS41tEryysctGcCQ32GDwboyE1kQ-jR15JXidrC2y0oO75W1Mv1He8P8pbnAPosHXDRRWsfAFjv6RzvCjIDdbP81iom_VPkeJRULpiaFHgfsPXKQ3xU&origin=julhoanimes.blogspot.com",
+          "episode": 7
+        },
+        {
+          "title": "Episódio 8",
+          "url": "https://www.blogger.com/video.g?token=AD6v5dw71BkTrslHcwV3nhgC-FKrcoe7vVGYOciunG7SgCi2256C5Y6z-kxOBm3FQNRe6k1pWJ1XAbF-C-yyepeY6M4waW55FFqIHwCXoEVK7dYe9P_BJlsCwC4XWExLJAOYGfx1Ar8&origin=julhoanimes.blogspot.com",
+          "episode": 8
+        },
+        {
+          "title": "Episódio 9",
+          "url": "https://www.blogger.com/video.g?token=AD6v5dwMlWTlh_EczxmpiZSP8HdSDkFwCCoLEYl4-JnfZDx5Ja6JEDw6zUjpa12NoQHqieKp2zv7o1vM8I6FBzwqCxHz8t9i-cx6h_SuElIcgem6xaxeNBUIWHpvkfnrPBHXvIg1NJA&origin=julhoanimes.blogspot.com",
+          "episode": 9
+        }
+      ],
+      "type": "series",
+      "category": "animes"
     }
   ],
   "infantil": [
