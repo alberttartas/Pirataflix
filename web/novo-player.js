@@ -215,9 +215,9 @@ function playBloggerVideo(url, title, info = '', itemId = null, category = null,
                 id="${iframeId}"
                 src="${url}"
                 style="width: 100%; height: 100%; border: none;"
-                allowfullscreen
+                sandbox="allow-scripts allow-same-origin"
                 allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-                frameborder="0"
+                referrerpolicy="no-referrer-when-downgrade"
             ></iframe>
             <div id="blogger-controls" style="
                 position: absolute;
@@ -232,13 +232,14 @@ function playBloggerVideo(url, title, info = '', itemId = null, category = null,
                 z-index: 10001;
                 opacity: 0;
                 transition: opacity 0.3s;
+                pointer-events: none;
             ">
-                <div style="display: flex; gap: 15px;">
+                <div style="display: flex; gap: 15px; pointer-events: auto;">
                     <button class="blogger-control-btn" data-seek="-10" style="background: rgba(255,255,255,0.2); border: none; color: white; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 14px;">⏪ 10s</button>
                     <button class="blogger-control-btn" data-seek="10" style="background: rgba(255,255,255,0.2); border: none; color: white; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 14px;">10s ⏩</button>
                 </div>
                 <span style="color: white; font-size: 14px;">🎬 ${title.substring(0, 50)}</span>
-                <button id="blogger-fs-btn" style="background: rgba(255,255,255,0.2); border: none; color: white; padding: 8px 12px; border-radius: 4px; cursor: pointer; font-size: 16px;">⛶</button>
+                <button id="blogger-fs-btn" style="pointer-events: auto; background: rgba(255,255,255,0.2); border: none; color: white; padding: 8px 12px; border-radius: 4px; cursor: pointer; font-size: 16px;">⛶</button>
             </div>
         </div>
     `;
@@ -299,7 +300,7 @@ function playBloggerVideo(url, title, info = '', itemId = null, category = null,
         if (item && episodeIndex + 1 < epList.length) {
             const nextBtn = document.createElement('button');
             nextBtn.innerHTML = 'PRÓXIMO ▶';
-            nextBtn.style.cssText = 'background:#e50914;color:white;border:none;padding:8px 16px;border-radius:4px;font-size:14px;font-weight:bold;cursor:pointer;white-space:nowrap;opacity:0.8;transition:0.2s;margin-left:15px;';
+            nextBtn.style.cssText = 'pointer-events:auto;background:#e50914;color:white;border:none;padding:8px 16px;border-radius:4px;font-size:14px;font-weight:bold;cursor:pointer;white-space:nowrap;opacity:0.8;transition:0.2s;margin-left:15px;';
             nextBtn.onmouseover = () => nextBtn.style.background = '#f40612';
             nextBtn.onmouseout = () => nextBtn.style.background = '#e50914';
             nextBtn.onclick = () => {
@@ -357,7 +358,7 @@ function playBloggerVideo(url, title, info = '', itemId = null, category = null,
         poster: ''
     });
     
-    console.log('🎬 Blogger Video iniciado:', title);
+    console.log('🎬 Blogger Video iniciado:', title, '\n   URL:', url);
 }
 
 // ==========================================
