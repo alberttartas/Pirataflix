@@ -1601,6 +1601,79 @@
       ]
     },
     {
+      "id": "corrida_dos_bichos",
+      "title": "Corrida Dos Bichos",
+      "poster": "https://image.tmdb.org/t/p/w500/2bzIygGnua4tlLo7qTyMSUsME3d.jpg",
+      "episodes": [
+        {
+          "title": "Corrida dos Bichos",
+          "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storageflix/F/corrida-dos-bichos.mp4",
+          "episode": 1
+        }
+      ],
+      "type": "movie",
+      "local_poster": "/Pirataflix/assets/Capas/default.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/2bzIygGnua4tlLo7qTyMSUsME3d.jpg",
+        "https://image.tmdb.org/t/p/w500/mwmfEqWXZG6HmAUuN5SjO8s7UNV.jpg",
+        "https://image.tmdb.org/t/p/w500/90xa5LafyIxZUn2WXNyh4HvlGay.jpg",
+        "https://image.tmdb.org/t/p/w500/79K4To98sM0xKmKfMCDnMuwtXq6.jpg",
+        "https://image.tmdb.org/t/p/w500/yQCrVMZZX9EsGxxoR6CXDtTO8rm.jpg",
+        "https://image.tmdb.org/t/p/w500/jNeNYogJvkUne5LTwjupk9aR2ZA.jpg"
+      ],
+      "backdrop": "https://image.tmdb.org/t/p/w1280/1WWukZCoavYEofNVRHJqE4t1urW.jpg",
+      "overview": "Em um Rio de Janeiro distópico, o jogo do bicho evoluiu para uma corrida mortal onde os competidores usam seus entes queridos como garantia, que só são resgatados pelos vencedores. O jovem idealista Mano é forçado a entrar nessa disputa de vida ou morte quando sua irmã se torna uma dessas garantias. Para salvá-la, ele deve confrontar seus princípios, formar alianças improváveis e lutar não apenas para vencer, mas para destruir o jogo opressor de uma vez por todas.",
+      "year": "2026",
+      "genres": [
+        "Ação",
+        "Ficção Científica",
+        "Suspense"
+      ],
+      "rating": 7.0,
+      "cast": [
+        {
+          "name": "Matheus Abreu",
+          "character": "Mano",
+          "profile": "https://image.tmdb.org/t/p/w185/puXvuXPGn0xAZhvbszAU7lFS6AA.jpg"
+        },
+        {
+          "name": "Rodrigo Santoro",
+          "character": "Abu",
+          "profile": "https://image.tmdb.org/t/p/w185/d3MaF9SPHDn2PMYHuqdnO0Csik6.jpg"
+        },
+        {
+          "name": "Isis Valverde",
+          "character": "Nadine",
+          "profile": "https://image.tmdb.org/t/p/w185/3QYulTU0dLFvp0zetmaBcXS4RK7.jpg"
+        },
+        {
+          "name": "Thainá Duarte",
+          "character": "Dalva",
+          "profile": "https://image.tmdb.org/t/p/w185/jAieEyQUn5rPE6xaCmntaSGk52K.jpg"
+        },
+        {
+          "name": "Bruno Gagliasso",
+          "character": "Leon",
+          "profile": "https://image.tmdb.org/t/p/w185/6TDn2PK9mF2uUKI64rcvq42Yf5R.jpg"
+        },
+        {
+          "name": "Seu Jorge",
+          "character": "Baco",
+          "profile": "https://image.tmdb.org/t/p/w185/p8VUk0ZSzfAF9uWjWg2jEVpPtTy.jpg"
+        },
+        {
+          "name": "Silvero Pereira",
+          "character": "Sinatra",
+          "profile": "https://image.tmdb.org/t/p/w185/oqfM8pMF1UmDfW0BTfxzW1BiEIm.jpg"
+        },
+        {
+          "name": "João Guilherme Ávila",
+          "character": "Jonas",
+          "profile": "https://image.tmdb.org/t/p/w185/nqdbtum0AgOflNV4JTZsWem89ZB.jpg"
+        }
+      ]
+    },
+    {
       "id": "homem_com_h",
       "title": "Homem Com H",
       "poster": "https://image.tmdb.org/t/p/w500/sOed9XD0TS9d0XRSnTiw5tpXIIO.jpg",
@@ -1743,6 +1816,53 @@
           "name": "Laura Alves",
           "character": "Laurinha",
           "profile": "https://image.tmdb.org/t/p/w185/4R8qqriEJbGlNQxr1jDpNW68QTl.jpg"
+        }
+      ]
+    },
+    {
+      "id": "receita_secreta",
+      "title": "Receita Secreta",
+      "poster": "https://image.tmdb.org/t/p/w500/5Y6CJxB17AnsWRz1j5qDEj0IXwa.jpg",
+      "episodes": [
+        {
+          "title": "Receita Secreta",
+          "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storageflix/F/receita-secreta.mp4",
+          "episode": 1
+        }
+      ],
+      "type": "movie",
+      "local_poster": "/Pirataflix/assets/Capas/default.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/5Y6CJxB17AnsWRz1j5qDEj0IXwa.jpg",
+        "https://image.tmdb.org/t/p/w500/jdCHY1Bwo38tBaJiKKeml922HNi.jpg"
+      ],
+      "backdrop": "https://image.tmdb.org/t/p/w1280/iSO6c2Kf8QbLQKdL1Zt7Hq5ThTU.jpg",
+      "year": "2024",
+      "genres": [
+        "Documentário",
+        "Ação",
+        "Comédia"
+      ],
+      "cast": [
+        {
+          "name": "Raul Menezes",
+          "character": "Caio",
+          "profile": "https://image.tmdb.org/t/p/w185/qjw1AxVj58HeXDjFOFAYqThUZPW.jpg"
+        },
+        {
+          "name": "Josiane Menezes",
+          "character": "Tiracyr",
+          "profile": "https://image.tmdb.org/t/p/w185/3iwhWb5yayvIDMiswZlDlFF9SWd.jpg"
+        },
+        {
+          "name": "Josiane Menezes",
+          "character": "Tiracyra",
+          "profile": "https://image.tmdb.org/t/p/w185/3iwhWb5yayvIDMiswZlDlFF9SWd.jpg"
+        },
+        {
+          "name": "Jeysla Romão",
+          "character": "Voz do Computador",
+          "profile": ""
         }
       ]
     },
