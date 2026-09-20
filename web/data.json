@@ -570,7 +570,7 @@
         {
           "name": "Rose Byrne",
           "character": "Moira MacTaggert",
-          "profile": "https://image.tmdb.org/t/p/w185/4Vd7w19asuBfUGgz0NIuQI5wxIA.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/wR8YZlrewVW2FixRBrJcxaXU3R1.jpg"
         },
         {
           "name": "Evan Peters",
@@ -1629,7 +1629,7 @@
         "Música",
         "História"
       ],
-      "rating": 8.1,
+      "rating": 8.0,
       "cast": [
         {
           "name": "Jesuíta Barbosa",
@@ -33232,8 +33232,8 @@
               "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-151.mp4",
               "episode": 151,
               "air_date": "2026-09-18",
-              "overview": "Teresa se preocupa com a decisão de José de ir para Batanga sozinho. Chinua descobre que Binta e Pascoal são amantes. Graça acredita que Ritinha seja filha de Belmira com Diógenes. Januário se aproxima de Ana Maria, e Vitalino gosta. Salma pensa em acompanhar Omar ao hospital para visitar Vera/Niara, mas a presença de Fuad a impede. Tonho chega ao hospital, e Omar se irrita. Pascoal castiga Dumi por tentar se comunicar com Kênia. Chinua e Akin se desesperam com as atitudes de Binta. Sebastião intercepta o telegrama de Chinua para Alika, e Virgínia comemora. Jendal chega a Portugal.",
-              "still": "",
+              "overview": "Todos rezam pela recuperação de Niara. Mirinho vai ao hospital para prestar apoio a Lúcia/Alika, e Tonho se incomoda. Virgínia passa mal ao saber que Mirinho foi novamente atrás de Alika. Onildo anuncia que Niara precisará de uma transfusão de sangue. Aproveitando a ausência de Jendal, Binta ordena que Kênia seja levada para trabalhar na mina, como castigo por sua traição ao rei.",
+              "still": "https://image.tmdb.org/t/p/w400/azTO7irN9b0xHL8XqgvdNdzITE0.jpg",
               "guest_stars": [],
               "locked": false
             },
@@ -33245,38 +33245,40 @@
               "overview": "José garante a Teresa que voltará para o Brasil. Marta conversa com Virgínia sobre seu casamento com Mirinho. Onildo garante a Alika que acompanhará a recuperação de Niara. Tonho sofre com a impossibilidade de seu amor por Alika. Campbell nega ajuda a Kênia. Virgínia conta para Graça que Ritinha é filha de Diógenes. Akin diz a Ladisa que precisam encontrar uma forma de resgatar Dumi. Graça distribui os convites para o casamento de Mirinho e Virgínia. José parte para Batanga.",
               "still": "",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-09-19T21:00:00"
+              "locked": false
             },
             {
               "title": "A Nobreza do Amor Ep 153",
               "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-153.mp4",
               "episode": 153,
-              "air_date": "",
+              "air_date": "2026-09-21",
               "overview": "",
               "still": "",
               "guest_stars": [],
-              "locked": false
+              "locked": true,
+              "release_iso": "2026-09-21T21:00:00"
             },
             {
               "title": "A Nobreza do Amor Ep 154",
               "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-154.mp4",
               "episode": 154,
-              "air_date": "",
+              "air_date": "2026-09-22",
               "overview": "",
               "still": "",
               "guest_stars": [],
-              "locked": false
+              "locked": true,
+              "release_iso": "2026-09-22T21:00:00"
             },
             {
               "title": "A Nobreza do Amor Ep 155",
               "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-155.mp4",
               "episode": 155,
-              "air_date": "",
+              "air_date": "2026-09-23",
               "overview": "",
               "still": "",
               "guest_stars": [],
-              "locked": false
+              "locked": true,
+              "release_iso": "2026-09-23T21:00:00"
             },
             {
               "title": "A Nobreza do Amor Ep 156",
@@ -35143,8 +35145,8 @@
           "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-151.mp4",
           "episode": 151,
           "air_date": "2026-09-18",
-          "overview": "Teresa se preocupa com a decisão de José de ir para Batanga sozinho. Chinua descobre que Binta e Pascoal são amantes. Graça acredita que Ritinha seja filha de Belmira com Diógenes. Januário se aproxima de Ana Maria, e Vitalino gosta. Salma pensa em acompanhar Omar ao hospital para visitar Vera/Niara, mas a presença de Fuad a impede. Tonho chega ao hospital, e Omar se irrita. Pascoal castiga Dumi por tentar se comunicar com Kênia. Chinua e Akin se desesperam com as atitudes de Binta. Sebastião intercepta o telegrama de Chinua para Alika, e Virgínia comemora. Jendal chega a Portugal.",
-          "still": "",
+          "overview": "Todos rezam pela recuperação de Niara. Mirinho vai ao hospital para prestar apoio a Lúcia/Alika, e Tonho se incomoda. Virgínia passa mal ao saber que Mirinho foi novamente atrás de Alika. Onildo anuncia que Niara precisará de uma transfusão de sangue. Aproveitando a ausência de Jendal, Binta ordena que Kênia seja levada para trabalhar na mina, como castigo por sua traição ao rei.",
+          "still": "https://image.tmdb.org/t/p/w400/azTO7irN9b0xHL8XqgvdNdzITE0.jpg",
           "guest_stars": [],
           "locked": false
         },
@@ -35156,38 +35158,40 @@
           "overview": "José garante a Teresa que voltará para o Brasil. Marta conversa com Virgínia sobre seu casamento com Mirinho. Onildo garante a Alika que acompanhará a recuperação de Niara. Tonho sofre com a impossibilidade de seu amor por Alika. Campbell nega ajuda a Kênia. Virgínia conta para Graça que Ritinha é filha de Diógenes. Akin diz a Ladisa que precisam encontrar uma forma de resgatar Dumi. Graça distribui os convites para o casamento de Mirinho e Virgínia. José parte para Batanga.",
           "still": "",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-09-19T21:00:00"
+          "locked": false
         },
         {
           "title": "A Nobreza do Amor Ep 153",
           "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-153.mp4",
           "episode": 153,
-          "air_date": "",
+          "air_date": "2026-09-21",
           "overview": "",
           "still": "",
           "guest_stars": [],
-          "locked": false
+          "locked": true,
+          "release_iso": "2026-09-21T21:00:00"
         },
         {
           "title": "A Nobreza do Amor Ep 154",
           "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-154.mp4",
           "episode": 154,
-          "air_date": "",
+          "air_date": "2026-09-22",
           "overview": "",
           "still": "",
           "guest_stars": [],
-          "locked": false
+          "locked": true,
+          "release_iso": "2026-09-22T21:00:00"
         },
         {
           "title": "A Nobreza do Amor Ep 155",
           "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-155.mp4",
           "episode": 155,
-          "air_date": "",
+          "air_date": "2026-09-23",
           "overview": "",
           "still": "",
           "guest_stars": [],
-          "locked": false
+          "locked": true,
+          "release_iso": "2026-09-23T21:00:00"
         },
         {
           "title": "A Nobreza do Amor Ep 156",
@@ -69966,7 +69970,7 @@
         "https://image.tmdb.org/t/p/w500/gJI77i79KnRuc9mGPKADPZWAE8O.jpg",
         "https://image.tmdb.org/t/p/w500/uStT6g4khexdKPyaiosp0fj3zEz.jpg"
       ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/2rmK7mnchw9Xr3XdiTFSxTTLXqv.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/6fRwRD7GdCfg6owzmCT3VgQtowl.jpg",
       "overview": "Houve um homem que conquistou tudo aquilo que o mundo tinha a oferecer, o lendário Rei dos Piratas, Gold Roger. Capturado e condenado à execução pelo Governo Mundial, suas últimas palavras lançaram legiões aos mares. \"Meu tesouro? Se quiserem, podem pegá-lo. Procurem-no! Ele contém tudo que este mundo pode oferecer!\". Foi a revelação do maior tesouro, o One Piece, cobiçado por homens de todo o mundo, sonhando com fama e riqueza imensuráveis... Assim começou a Grande Era dos Piratas!",
       "year": "1999",
       "rating": 8.7,
@@ -72284,7 +72288,7 @@
         "https://image.tmdb.org/t/p/w500/5ppmZN3AbBsWKesTBGSStYJR4R1.jpg",
         "https://image.tmdb.org/t/p/w500/yDRskxx7kXoB9ImdXi05Db5EG3L.jpg"
       ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/hmrNfrUl3FFaymDj6Iw5oKQjIs2.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/bauKfP3CX5JPAXpmveOlPG1pngC.jpg",
       "overview": "Korra, uma jovem rebelde de 17 anos, deixa a tradição de lado para se tornar um Avatar e manter a Cidade da República livre das forças do mal dos mundos físico e espiritual.",
       "year": "2012",
       "genres": [
