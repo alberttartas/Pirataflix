@@ -602,6 +602,109 @@
     playVideo(url, canal.title || 'Canal ' + (idx + 1), 'tv_' + idx, 'tv', 0);
   }
 
+  // ─── EMBED (Blogger via iframe) ───────────────────────────────────────────
+  // URLs blogger.com/video.g são páginas de player, não arquivos de vídeo:
+  // não tocam em <video src>. Aqui elas abrem num iframe, com a barra de
+  // controles (Controlar vídeo / Próximo / Fechar) fora do iframe.
+
+  var embedActive = false;
+
+  function isBloggerUrl(url) {
+    return !!url && url.indexOf('blogger.com/video.g') !== -1;
+  }
+
+  function injectEmbedStyles() {
+    if (document.getElementById('embed-styles')) return;
+    var css =
+      '#embed-frame{width:100%;height:100%;border:0;background:#000;display:block;}' +
+      '#btn-embed-focus{display:none;}' +
+      '#player-wrap.embed #btn-embed-focus{display:inline-block;}' +
+      '#player-wrap.embed #player-video-container{height:-webkit-calc(100% - 130px);height:calc(100% - 130px);}' +
+      '#player-wrap.embed #player-controls{opacity:1;background:#000;padding:14px 30px 16px;}' +
+      '#player-wrap.embed #btn-play,#player-wrap.embed #btn-back,#player-wrap.embed #btn-fwd,' +
+      '#player-wrap.embed #btn-fs,#player-wrap.embed #progress-wrap,#player-wrap.embed #time-label{display:none;}';
+    var st = document.createElement('style');
+    st.id = 'embed-styles';
+    st.type = 'text/css';
+    st.appendChild(document.createTextNode(css));
+    document.head.appendChild(st);
+  }
+
+  function ensureEmbedButton() {
+    var b = document.getElementById('btn-embed-focus');
+    if (b) return b;
+    b = document.createElement('button');
+    b.id = 'btn-embed-focus';
+    b.innerHTML = '🎮 Controlar vídeo';
+    var bar = document.getElementById('player-bar');
+    bar.insertBefore(b, bar.firstChild);
+    b.onclick = focusEmbed;
+    return b;
+  }
+
+  function focusEmbed() {
+    var f = document.getElementById('embed-frame');
+    if (!f) return;
+    try { f.focus(); } catch (e) {}
+    try { f.contentWindow.focus(); } catch (e2) {}
+    showOsd('🎮 Vídeo ativo — VOLTAR para sair');
+  }
+
+  function setEmbedMode(on, url) {
+    var wrap  = document.getElementById('player-wrap');
+    var box   = document.getElementById('player-video-container');
+    var video = document.getElementById('player');
+    var frame = document.getElementById('embed-frame');
+    embedActive = on;
+
+    if (on) {
+      injectEmbedStyles();
+      ensureEmbedButton();
+      wrap.className = 'embed';
+      video.style.display = 'none';
+      if (!frame) {
+        frame = document.createElement('iframe');
+        frame.id = 'embed-frame';
+        frame.setAttribute('allow', 'autoplay; encrypted-media; fullscreen');
+        frame.setAttribute('allowfullscreen', '');
+        frame.setAttribute('scrolling', 'no');
+        frame.setAttribute('frameborder', '0');
+        box.appendChild(frame);
+      }
+      frame.src = url;
+      document.getElementById('player-controls').className = 'visible';
+    } else {
+      wrap.className = '';
+      if (frame) {
+        frame.src = 'about:blank';
+        if (frame.parentNode) frame.parentNode.removeChild(frame);
+      }
+      video.style.display = 'block';
+    }
+  }
+
+  function setupNextButton(itemId, cat, epIdx) {
+    var item  = null;
+    var items = vodData[cat] || [];
+    for (var ii = 0; ii < items.length; ii++) {
+      if (items[ii].id === itemId || items[ii].title === itemId) { item = items[ii]; break; }
+    }
+    var epList  = item ? getEpList(item) : [];
+    var nextBtn = document.getElementById('btn-next-ep');
+    if (nextBtn) {
+      if (item && epIdx + 1 < epList.length) {
+        nextBtn.style.display = 'inline-block';
+        nextBtn.onclick = function () {
+          var next = epList[epIdx + 1];
+          closePlayer();
+          playVideo(next.url, item.title + ' - ' + (next.title || 'Ep ' + (epIdx + 2)), itemId, cat, epIdx + 1);
+        };
+      } else {
+        nextBtn.style.display = 'none';
+      }
+    }
+  }
+
   function playVideo(url, title, itemId, cat, epIdx) {
     playerUrl    = url;
     playerTitle  = title;
@@ -619,6 +722,19 @@
     destroyHls();
 
     wrap.style.display = 'block';
+
+    // Blogger: abre em iframe (não toca em <video>)
+    if (isBloggerUrl(url)) {
+      setEmbedMode(true, url);
+      setupNextButton(itemId, cat, playerEpIdx);
+      showControls();
+      setTimeout(function () {
+        var b   = document.getElementById('btn-embed-focus');
+        var els = getFocusables();
+        if (b) { currentFocusIndex = els.indexOf(b); b.focus(); }
+      }, 200);
+      return;
+    }
 
     // Verificar se é HLS
     var isHls = url.indexOf('.m3u8') !== -1 || url.indexOf('m3u8') !== -1;
@@ -674,25 +790,7 @@
     }, 5000);
 
     // Próximo episódio
-    var item    = null;
-    var items   = vodData[cat] || [];
-    for (var ii = 0; ii < items.length; ii++) {
-      if (items[ii].id === itemId || items[ii].title === itemId) { item = items[ii]; break; }
-    }
-    var epList  = item ? getEpList(item) : [];
-    var nextBtn = document.getElementById('btn-next-ep');
-    if (nextBtn) {
-      if (item && epIdx + 1 < epList.length) {
-        nextBtn.style.display = 'inline-block';
-        nextBtn.onclick = function () {
-          var next = epList[epIdx + 1];
-          closePlayer();
-          playVideo(next.url, item.title + ' - ' + (next.title || 'Ep ' + (epIdx + 2)), itemId, cat, epIdx + 1);
-        };
-      } else {
-        nextBtn.style.display = 'none';
-      }
-    }
+    setupNextButton(itemId, cat, epIdx);
   }
 
   function destroyHls() {
@@ -707,6 +805,7 @@
       video.load();
     }
     if (progressInterval) { clearInterval(progressInterval); progressInterval = null; }
+    if (embedActive) setEmbedMode(false);
   }
 
   function closePlayer() {
@@ -847,10 +946,15 @@
       }
     }, { passive: true });
 
+    window.addEventListener('tizenhwkey', function (e) {
+      if (embedActive && e.keyName === 'back') closePlayer();
+    });
+
     // Teclado (D-pad Tizen + PC)
     document.addEventListener('keydown', function (e) {
       if (wrap.style.display === 'none') return;
       var key = e.keyCode || e.which;
+      if (embedActive) return;   // no embed, VOLTAR e setas são tratados pelo bindDpad
 
       switch (key) {
         case 32:  // Space
@@ -1104,6 +1208,16 @@
                 '.canal-item'
             )
         );
+    }
+
+    if (player && player.style.display !== 'none' && embedActive) {
+        var embedIds = ['btn-embed-focus', 'btn-next-ep', 'btn-close-player'];
+        var embedEls = [];
+        for (var ei = 0; ei < embedIds.length; ei++) {
+            var eEl = document.getElementById(embedIds[ei]);
+            if (eEl && eEl.style.display !== 'none') embedEls.push(eEl);
+        }
+        return embedEls;
     }
 
     if (player && player.style.display !== 'none') {
