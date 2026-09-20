@@ -446,9 +446,7 @@ html, body {
   gap: 18px;
   overflow-x: auto;
   overflow-y: hidden;
-  padding: 15px 10px 25px;
-  -webkit-transition: scroll-behavior 0s;
-  scroll-behavior: smooth;
+  padding: 30px 24px 40px;
   max-height: none;
 }
 
@@ -597,7 +595,8 @@ html, body {
   flex: 1;
 }
 
-/* Foco visível para controle remoto (Tizen não tem :hover) */
+/* Foco visível para controle remoto (Tizen não tem :hover)
+   Usa outline (não border) para não deslocar o layout ao focar. */
 .ep-item:focus,
 .canal-item:focus,
 .card:focus,
@@ -605,11 +604,19 @@ html, body {
 .season-header:focus,
 .modal-play-btn:focus,
 .modal-close-btn:focus,
+#search-input:focus,
 button:focus {
-  outline: none;
-  border: 3px solid #e50914;
+  outline: 4px solid #ffffff;
+  outline-offset: 2px;
   z-index: 20;
 }
+/* #player-bar button tem especificidade maior que button:focus */
+#player-bar button:focus {
+  outline: 4px solid #ffffff;
+  outline-offset: 2px;
+  background: rgba(255,255,255,0.3);
+}
+#player:focus { outline: none; }
 
 /* ── PLAYER ── */
 #player-wrap {
@@ -771,3 +778,48 @@ button:focus {
   #search-input { width: 150px; }
   #search-input:focus { width: 180px; }
 }
+
+
+/* ── EXTRAS v2 ── */
+
+/* Lista vertical de canais no modal de TV */
+.ep-list.canal-list {
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  gap: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-height: 50vh;
+  padding: 12px 24px;
+}
+
+/* Episódio "continuar daqui" */
+.ep-item.ep-resume {
+  border-color: rgba(229,9,20,0.6);
+  background: #2a1414;
+}
+.ep-resume-tag {
+  color: #ff8a8a;
+  font-weight: 600;
+}
+
+/* Aviso rápido (ex.: "Pressione VOLTAR novamente para sair") */
+#toast {
+  position: fixed;
+  left: 50%;
+  bottom: 60px;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.9);
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 16px 32px;
+  border-radius: 40px;
+  border: 1px solid rgba(255,255,255,0.2);
+  z-index: 3000;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: opacity 0.25s;
+  transition: opacity 0.25s;
+}
+#toast.show { opacity: 1; }

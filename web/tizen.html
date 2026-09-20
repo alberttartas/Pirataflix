@@ -14,12 +14,12 @@
   <header id="header">
     <div class="logo">PIRATAFLIX</div>
     <nav id="nav">
-      <a class="nav-link active" data-cat="filmes">🎬 Filmes</a>
-      <a class="nav-link" data-cat="series">📺 Séries</a>
-      <a class="nav-link" data-cat="novelas">💖 Novelas</a>
-      <a class="nav-link" data-cat="animes">👻 Animes</a>
-      <a class="nav-link" data-cat="infantil">🧸 Infantil</a>
-      <a class="nav-link" data-cat="tv">📡 TV Ao Vivo</a>
+      <a tabindex="0" class="nav-link active" data-cat="filmes">🎬 Filmes</a>
+      <a tabindex="0" class="nav-link" data-cat="series">📺 Séries</a>
+      <a tabindex="0" class="nav-link" data-cat="novelas">💖 Novelas</a>
+      <a tabindex="0" class="nav-link" data-cat="animes">👻 Animes</a>
+      <a tabindex="0" class="nav-link" data-cat="infantil">🧸 Infantil</a>
+      <a tabindex="0" class="nav-link" data-cat="tv">📡 TV Ao Vivo</a>
     </nav>
     <div id="search-wrap">
       <input type="text" id="search-input" placeholder="Buscar..." autocomplete="off">
@@ -45,7 +45,7 @@
   <!-- PLAYER DE VÍDEO -->
   <div id="player-wrap" style="display:none">
     <div id="player-video-container">
-      <video id="player" autoplay playsinline style="display:block; width:100%; height:100%;"></video>
+      <video id="player" tabindex="-1" autoplay playsinline style="display:block; width:100%; height:100%;"></video>
     </div>
     <div id="player-controls">
       <div id="player-title"></div>
@@ -63,6 +63,9 @@
       </div>
     </div>
   </div>
+
+  <!-- AVISO RÁPIDO (toast) -->
+  <div id="toast"></div>
 
   <!-- HLS.JS -->
   <script src="https://cdn.jsdelivr.net/npm/hls.js@1.4.12/dist/hls.min.js"></script>
