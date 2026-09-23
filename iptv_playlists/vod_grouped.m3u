@@ -39,7 +39,7 @@ https://cdn-s01.mywallpaper-4k-image.net/stream/a/akira-dublado/01.mp4/index.m3u
 #EXTINF:-1 group-title="🎬 Filmes" tvg-id="ENTERRANDO_OS_MORTOS" tvg-logo="https://image.tmdb.org/t/p/w500/x6H4DtBRIfwTcOIK64R8pSXNpvN.jpg",Enterrando Os Mortos
 https://23rzv4udpdbv8t6.cdn-novflix.com/storageflix/F/enterrando-os-mortos.mp4
 
-#EXTINF:-1 group-title="🎬 Filmes" tvg-id="AINDA_ESTOU_AQUI" tvg-logo="https://image.tmdb.org/t/p/w500/zNAw7jK8bwCK56rIW676pdgkwhd.jpg",Ainda Estou Aqui
+#EXTINF:-1 group-title="🎬 Filmes" tvg-id="AINDA_ESTOU_AQUI" tvg-logo="https://image.tmdb.org/t/p/w500/1l7agaAY6JIcJLKMP2RCgHriGP6.jpg",Ainda Estou Aqui
 https://cdn-novflix.com/storagePSN/FILMES/AINDAESTOUAQUI.mp4
 
 #EXTINF:-1 group-title="🎬 Filmes" tvg-id="EXTERMINADOR_DO_FUTURO_DESTINO_SOMBRIO" tvg-logo="https://image.tmdb.org/t/p/w500/3HsG5V6ZpKYgfwbFqXEYONbqtTt.jpg",Exterminador Do Futuro Destino Sombrio
@@ -7850,6 +7850,15 @@ https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-160.mp4
 
 #EXTINF:-1 group-title="📖 Novelas" tvg-id="A_NOBREZA_DO_AMOR_T01" tvg-logo="https://image.tmdb.org/t/p/w500/eKWeDBBVlFTeBjCJKr9Dc7A1OGz.jpg",Cap 161 - A Nobreza do Amor Ep 161
 https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-161.mp4
+
+#EXTINF:-1 group-title="📖 Novelas" tvg-id="A_NOBREZA_DO_AMOR_T01" tvg-logo="https://image.tmdb.org/t/p/w500/eKWeDBBVlFTeBjCJKr9Dc7A1OGz.jpg",Cap 162
+
+
+#EXTINF:-1 group-title="📖 Novelas" tvg-id="A_NOBREZA_DO_AMOR_T01" tvg-logo="https://image.tmdb.org/t/p/w500/eKWeDBBVlFTeBjCJKr9Dc7A1OGz.jpg",Cap 163
+
+
+#EXTINF:-1 group-title="📖 Novelas" tvg-id="A_NOBREZA_DO_AMOR_T01" tvg-logo="https://image.tmdb.org/t/p/w500/eKWeDBBVlFTeBjCJKr9Dc7A1OGz.jpg",Cap 164
+
 
 #EXTINF:-1 group-title="📖 Novelas" tvg-id="CHOCOLATE_COM_PIMENTA_T01" tvg-logo="https://alberttartas.github.io/Pirataflix/assets/Capas/chocolate_com_pimenta.jpg",Cap 01 - chocolate com pimenta Episodio 001
 https://23rzv4udpdbv8t6.cdn-novflix.com/storage5/CCP/CCP-001.mp4
