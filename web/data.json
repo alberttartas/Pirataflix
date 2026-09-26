@@ -1125,7 +1125,7 @@
     {
       "id": "resident_evil_1",
       "title": "Resident Evil 1",
-      "poster": "https://image.tmdb.org/t/p/w500/oxZX9s92Xr5f7mnFCGyEsB5mCOb.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/aC9RinOuPR6DEgwAZZd9IzUA6Qa.jpg",
       "episodes": [
         {
           "title": "Resident Evil: O Hóspede Maldito",
@@ -1136,62 +1136,63 @@
       "type": "movie",
       "local_poster": "/Pirataflix/assets/Capas/default.jpg",
       "posters": [
-        "https://image.tmdb.org/t/p/w500/1UKNef590A0ZaMnxsscIcWuK1Em.jpg",
-        "https://image.tmdb.org/t/p/w500/uoXZOT9dGDtrZNgOSOOKOXlV4XT.jpg",
-        "https://image.tmdb.org/t/p/w500/oxZX9s92Xr5f7mnFCGyEsB5mCOb.jpg",
-        "https://image.tmdb.org/t/p/w500/jKso3TUFnPpRFNLnDrgTUK0R9MX.jpg",
-        "https://image.tmdb.org/t/p/w500/1EmUTW2D9Z3bmlDz5PUAK9sFFNk.jpg",
-        "https://image.tmdb.org/t/p/w500/9vJX0Q9LSoOlTio8cTAm2ms0sWz.jpg"
+        "https://image.tmdb.org/t/p/w500/aC9RinOuPR6DEgwAZZd9IzUA6Qa.jpg",
+        "https://image.tmdb.org/t/p/w500/1x5OaFOo38JAwR5yXxeuvQg3VWH.jpg",
+        "https://image.tmdb.org/t/p/w500/jxBoxz8dKZ8CB1C3lgDqFxzLNQB.jpg",
+        "https://image.tmdb.org/t/p/w500/1WzPySYjKtHJQAcnb5E2l7Lw12Q.jpg",
+        "https://image.tmdb.org/t/p/w500/pOLzp30jgfqg71iWOzpixq4WSkt.jpg",
+        "https://image.tmdb.org/t/p/w500/3wSIagfHnR9vRAPyNjCfGzfgbXK.jpg",
+        "https://image.tmdb.org/t/p/w500/iyaJ1uZIogd3BWkgMVplmG2Cw6V.jpg"
       ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/l5KvxFVOru3Qyf3dl2asNw5g1MD.jpg",
-      "overview": "Uma equipe de comando militar composta por civis deve lutar contra mortos-vivos carnívoros, cães mutantes e defesas mortíferas de um super computador, antes que um vírus solto consuma a humanidade, nesta adaptação do sucesso da série de vídeo-games!",
-      "year": "2002",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/3JgfNUCoN6pyXlO7wZOJ4PgQgW3.jpg",
+      "overview": "O mortal Vírus-T foi erradicado. Sete anos depois, um passageiro chega aos EUA com os mesmos sintomas deste vírus e zumbis tomam o aeroporto. Surgem dúvidas sobre a erradicação do vírus e o governo manda seus melhores agentes investigarem.",
+      "year": "2008",
       "genres": [
+        "Animação",
         "Terror",
-        "Ação",
-        "Ficção Científica"
+        "Ação"
       ],
-      "rating": 6.7,
+      "rating": 6.8,
       "cast": [
         {
-          "name": "Milla Jovovich",
-          "character": "Alice",
-          "profile": "https://image.tmdb.org/t/p/w185/usWnHCzbADijULREZYSJ0qfM00y.jpg"
+          "name": "Paul Mercier",
+          "character": "Leon S. Kennedy (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/1GcIA6oQ3aaBG8HSfBcCRf6R5DW.jpg"
         },
         {
-          "name": "Michelle Rodriguez",
-          "character": "Rain",
-          "profile": "https://image.tmdb.org/t/p/w185/wVcbrae4eRqGMFZz8Eh52Dl1biP.jpg"
+          "name": "Alyson Court",
+          "character": "Claire Redfield (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/kPeTYEV6vyyAJEsUlomVpiLcd6v.jpg"
         },
         {
-          "name": "Eric Mabius",
-          "character": "Matt",
-          "profile": "https://image.tmdb.org/t/p/w185/gfTyV38S5BzV9pZnIducUgo68hK.jpg"
+          "name": "Laura Bailey",
+          "character": "Angela Miller (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/xrq33v9N78hhmApcfkoYx0TAw1A.jpg"
         },
         {
-          "name": "James Purefoy",
-          "character": "Spence",
-          "profile": "https://image.tmdb.org/t/p/w185/nCNyifrD9wOao27A1nT5n4Soxt1.jpg"
+          "name": "Roger Craig Smith",
+          "character": "Curtis Miller (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/6oE356GbRHAf91Llw7LDpvsAf5L.jpg"
         },
         {
-          "name": "Martin Crewes",
-          "character": "Kaplan",
-          "profile": "https://image.tmdb.org/t/p/w185/gar5CPEMP5efGF5h36iyqSDvHsB.jpg"
+          "name": "Crispin Freeman",
+          "character": "Frederic Downing (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/oqqNzJK7F9ZO6Kft4BwncT6K8hz.jpg"
         },
         {
-          "name": "Colin Salmon",
-          "character": "One",
-          "profile": "https://image.tmdb.org/t/p/w185/mLlAU6Zl2MIL5znp5UHdX3sVTN7.jpg"
+          "name": "Michael Sorich",
+          "character": "Senator Ron Davis (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/fiuJUfRiESALcUXW7BHsOJ12yfQ.jpg"
         },
         {
-          "name": "Pasquale Aleardi",
-          "character": "J.D.",
-          "profile": "https://image.tmdb.org/t/p/w185/zY9iu1ObHecBwRmZscIHbhDxiJw.jpg"
+          "name": "Salli Saffioti",
+          "character": "Ingrid Hunnigan (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/awF13TyorW4Rp5rq10p5XL0Po3m.jpg"
         },
         {
-          "name": "Heike Makatsch",
-          "character": "Lisa",
-          "profile": "https://image.tmdb.org/t/p/w185/plwQwvsMG18F3eiD0rWN1Vpw75u.jpg"
+          "name": "Michelle Ruff",
+          "character": "Rani Chawla (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/eX300Qn6TYaYaXdH7x6OmClZqJf.jpg"
         }
       ]
     },
@@ -1449,7 +1450,7 @@
         {
           "name": "Neve Campbell",
           "character": "Sidney Evans",
-          "profile": "https://image.tmdb.org/t/p/w185/xBXiDZJTxGwmDH7Mx9DhSW88ejO.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/zQzNg6Kiufj2VCltprI6jilNtl3.jpg"
         },
         {
           "name": "Courteney Cox",
@@ -1674,7 +1675,7 @@
         {
           "name": "Jessica Henwick",
           "character": "Aimee",
-          "profile": "https://image.tmdb.org/t/p/w185/rfUrgDyHWHlrfvdxiVg8Vooudnd.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/hRrEqDIWlov1FvYRmBN2vLaAxyl.jpg"
         },
         {
           "name": "Michael Rooker",
@@ -21787,7 +21788,7 @@
         {
           "name": "Ágatha Moreira",
           "character": "Giovanna Lovatelli Ticiano (Kika)",
-          "profile": "https://image.tmdb.org/t/p/w185/pHzmciToXz6rJyXhuQVHBWij531.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/kIinh6hAAddDGkS67odJbyg5FTp.jpg"
         },
         {
           "name": "Gabriel Leone",
@@ -25708,8 +25709,7 @@
               "overview": "Tonho afirma a Alika que Niara irá se recuperar. Casemiro se sente mal, e Graça fica apreensiva. Ana Maria percebe que Januário pode estar interessado nela. Campbell alerta Binta sobre as consequências de encerrar o contrato de Batanga com a Inglaterra. Akin e Ladisa fazem um acordo com Gamba para proteger Dumi.\n\nAurelinda afirma que gostaria de que Ritinha fosse sua irmã. Onildo revela que Niara apresentou uma melhora. Pascoal agride Dumi, e Kênia se desespera. Casemiro pede que Tonho cuide de seu engenho e de Ana Maria, e o rapaz desconfia. Salma se declara a Omar. Diante de Mirinho e Ana Maria, Casemiro passa mal e não resiste.",
               "still": "",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-09-25T21:00:00"
+              "locked": false
             },
             {
               "title": "A Nobreza do Amor Ep 158",
@@ -27656,8 +27656,7 @@
           "overview": "Tonho afirma a Alika que Niara irá se recuperar. Casemiro se sente mal, e Graça fica apreensiva. Ana Maria percebe que Januário pode estar interessado nela. Campbell alerta Binta sobre as consequências de encerrar o contrato de Batanga com a Inglaterra. Akin e Ladisa fazem um acordo com Gamba para proteger Dumi.\n\nAurelinda afirma que gostaria de que Ritinha fosse sua irmã. Onildo revela que Niara apresentou uma melhora. Pascoal agride Dumi, e Kênia se desespera. Casemiro pede que Tonho cuide de seu engenho e de Ana Maria, e o rapaz desconfia. Salma se declara a Omar. Diante de Mirinho e Ana Maria, Casemiro passa mal e não resiste.",
           "still": "",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-09-25T21:00:00"
+          "locked": false
         },
         {
           "title": "A Nobreza do Amor Ep 158",
@@ -37567,7 +37566,7 @@
         {
           "name": "Ágatha Moreira",
           "character": "Giovanna (Kika)",
-          "profile": "https://image.tmdb.org/t/p/w185/pHzmciToXz6rJyXhuQVHBWij531.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/kIinh6hAAddDGkS67odJbyg5FTp.jpg"
         },
         {
           "name": "Rômulo Estrela",
