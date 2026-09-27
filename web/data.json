@@ -243,7 +243,7 @@
         "Terror",
         "Suspense"
       ],
-      "rating": 6.2,
+      "rating": 6.1,
       "cast": [
         {
           "name": "Daisy Ridley",
@@ -647,7 +647,7 @@
     {
       "id": "ainda_estou_aqui",
       "title": "Ainda Estou Aqui",
-      "poster": "https://image.tmdb.org/t/p/w500/1l7agaAY6JIcJLKMP2RCgHriGP6.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/zNAw7jK8bwCK56rIW676pdgkwhd.jpg",
       "episodes": [
         {
           "title": "Ainda Estou Aqui",
@@ -658,12 +658,12 @@
       "type": "movie",
       "local_poster": "/Pirataflix/assets/Capas/ainda_estou_aqui.jpg",
       "posters": [
-        "https://image.tmdb.org/t/p/w500/1l7agaAY6JIcJLKMP2RCgHriGP6.jpg",
         "https://image.tmdb.org/t/p/w500/gZnsMbhCvhzAQlKaVpeFRHYjGyb.jpg",
         "https://image.tmdb.org/t/p/w500/quSUoX9zBrK7abP20fRf4d5YlXA.jpg",
         "https://image.tmdb.org/t/p/w500/zNAw7jK8bwCK56rIW676pdgkwhd.jpg",
         "https://image.tmdb.org/t/p/w500/qNLMPY3KLrYgTX2QZ5iEwwOqyRz.jpg",
-        "https://image.tmdb.org/t/p/w500/yY0HDAGfu79cpOLQBgR3kgGZ7HS.jpg"
+        "https://image.tmdb.org/t/p/w500/yY0HDAGfu79cpOLQBgR3kgGZ7HS.jpg",
+        "https://image.tmdb.org/t/p/w500/5ORplJWEc3mQJuashJUq36LCBa0.jpg"
       ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/j9uruwRe9qM8RnP758dF7ISB8Bj.jpg",
       "overview": "No início da década de 1970, o Brasil enfrenta o endurecimento da ditadura militar. No Rio de Janeiro, a família Paiva – Rubens, Eunice e seus cinco filhos – vive à beira da praia em uma casa de portas abertas para os amigos. Um dia, Rubens Paiva é levado por militares à paisana e desaparece.",
@@ -2275,7 +2275,7 @@
     {
       "id": "todo_mundo_odeia_o_chris",
       "title": "Todo Mundo Odeia O Chris",
-      "poster": "https://image.tmdb.org/t/p/w500/fwX4VbOg3WFwqkGIUk0rfefMqkv.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/j7KcbOjhNIWOQqHGtL0P90nlfHB.jpg",
       "seasons": [
         {
           "season": 1,
@@ -2628,11 +2628,11 @@
       "local_poster": "/Pirataflix/assets/Capas/todo_mundo_odeia_o_chris.jpg",
       "posters": [
         "https://image.tmdb.org/t/p/w500/zX0xZnyReJxtGAqDOS3WcsgpOgx.jpg",
-        "https://image.tmdb.org/t/p/w500/fwX4VbOg3WFwqkGIUk0rfefMqkv.jpg",
         "https://image.tmdb.org/t/p/w500/4BYXh0cY3AyyUB05CTLVJO5FjCM.jpg",
         "https://image.tmdb.org/t/p/w500/j7KcbOjhNIWOQqHGtL0P90nlfHB.jpg",
         "https://image.tmdb.org/t/p/w500/3FjakKDEuaO8FpR1qJctV6njqYy.jpg",
-        "https://image.tmdb.org/t/p/w500/nYfvhUtbqMGtd5iV9sj2fdEFN5p.jpg"
+        "https://image.tmdb.org/t/p/w500/nYfvhUtbqMGtd5iV9sj2fdEFN5p.jpg",
+        "https://image.tmdb.org/t/p/w500/5rqCyqJWi7LqbuCJyRCNaZtKcHc.jpg"
       ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/qji729gwCW88RpIIWidlaLTul3V.jpg",
       "overview": "Para Chris, fazer 13 anos não tem nada de maravilhoso. Ele é o único negro da turma do ensino médio, onde tem uma educação medíocre. É amigo de Greg, e é frequentemente abusado por Joey Caruso. Ambos os pais trabalham e ele cuida de seus dois irmãos. Parece trágico, mas é hilário.",
@@ -25719,8 +25719,7 @@
               "overview": "Graça se desespera com a morte de Casemiro, e todos ficam consternados. Alika revela a Tonho que Casemiro sofreu um mal súbito, e o rapaz fica transtornado. Omar confessa a Salma que gostou de saber de seu interesse por ele. Binta revela a Jawari seus planos para Batanga na ausência de Jendal.\n\nGamba se apresenta a Dumi e Kênia como aliado da rebelião. Todos comparecem ao velório de Casemiro. Tonho propõe a Mirinho que eles voltem a ser amigos em homenagem a Casemiro. A saúde de Niara se fortalece, e Alika comemora. Virgínia teme que Mirinho decida ficar no engenho. Mirinho descobre que Casemiro deixou suas terras para Tonho.",
               "still": "",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-09-26T21:00:00"
+              "locked": false
             },
             {
               "title": "A Nobreza do Amor Ep 159",
@@ -27666,8 +27665,7 @@
           "overview": "Graça se desespera com a morte de Casemiro, e todos ficam consternados. Alika revela a Tonho que Casemiro sofreu um mal súbito, e o rapaz fica transtornado. Omar confessa a Salma que gostou de saber de seu interesse por ele. Binta revela a Jawari seus planos para Batanga na ausência de Jendal.\n\nGamba se apresenta a Dumi e Kênia como aliado da rebelião. Todos comparecem ao velório de Casemiro. Tonho propõe a Mirinho que eles voltem a ser amigos em homenagem a Casemiro. A saúde de Niara se fortalece, e Alika comemora. Virgínia teme que Mirinho decida ficar no engenho. Mirinho descobre que Casemiro deixou suas terras para Tonho.",
           "still": "",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-09-26T21:00:00"
+          "locked": false
         },
         {
           "title": "A Nobreza do Amor Ep 159",
@@ -27763,7 +27761,7 @@
         {
           "name": "Lázaro Ramos",
           "character": "Jendal Trabelsi, Duque de Batanga",
-          "profile": "https://image.tmdb.org/t/p/w185/dgipo7seoTxVpacvFteG1In3Vv.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/zjcDyzCqbWMAQCeiLRsGhzAghE.jpg"
         },
         {
           "name": "Nicolas Prattes",
@@ -68446,7 +68444,7 @@
         {
           "name": "Marina Inoue",
           "character": "Armin Arlert (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/nQ7a3krkbea6ukw9KGvvTpMma96.jpg"
+          "profile": ""
         },
         {
           "name": "Hiro Shimono",
@@ -68476,7 +68474,7 @@
         {
           "name": "Yui Ishikawa",
           "character": "Mikasa Ackerman (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/2y1y1W4q8UIR0Vbs4NNvc7722XT.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/zptGIN1iklKJL1xrfHKOpxR2qJ9.jpg"
         },
         {
           "name": "Yoshimasa Hosoya",
@@ -70804,7 +70802,7 @@
       "backdrop": "https://image.tmdb.org/t/p/w1280/nTDL4UmMLDBCeMtYh8F1LZtgmLV.jpg",
       "overview": "Quando criaturas estranhas atacam, Keiji as enfrenta cara a cara com seu grito de guerra: Kokekokko!",
       "year": "2026",
-      "rating": 8.8,
+      "rating": 8.7,
       "cast": [
         {
           "name": "Kenta Miyake",
