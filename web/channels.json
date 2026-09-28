@@ -22950,5 +22950,20 @@
         "title": "AO VIVO"
       }
     ]
+  },
+  {
+    "id": "RedeGlobo.br@SD",
+    "type": "tv",
+    "title": "Rede Globo (1080p)",
+    "tvg_id": "RedeGlobo.br@SD",
+    "tvg_logo": "https://i.imgur.com/O02TF2r.png",
+    "group": "📺 Geral",
+    "url": "https://cdn-sp2.satlabscloud.com.br/RBS_HD/index.m3u8?token=Mw3YKkujzIi9hYQJ6kAQjQvly2VdBNuGPjHOq",
+    "episodes": [
+      {
+        "url": "https://cdn-sp2.satlabscloud.com.br/RBS_HD/index.m3u8?token=Mw3YKkujzIi9hYQJ6kAQjQvly2VdBNuGPjHOq",
+        "title": "AO VIVO"
+      }
+    ]
   }
 ]
