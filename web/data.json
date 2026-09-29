@@ -403,7 +403,7 @@
         {
           "name": "Jennifer Lawrence",
           "character": "Raven / Mystique",
-          "profile": "https://image.tmdb.org/t/p/w185/k6CsASaySnS3ag0Y2Ns2vqPahVn.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/mDKMsjOMytyBiy7MHNZTa7gp7wj.jpg"
         },
         {
           "name": "Nicholas Hoult",
@@ -25726,11 +25726,10 @@
               "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-159.mp4",
               "episode": 159,
               "air_date": "2026-09-28",
-              "overview": "Mirinho afirma a Graça e Ana Maria que ele tocará os negócios de Casemiro. Ana Maria não gosta da atitude de Mirinho e diz a Graça que a vontade de Casemiro deveria ser respeitada. Tonho se preocupa com o destino do engenho. José escreve para Teresa a caminho de Batanga. Binta e Jawari pressionam Campbell por um novo acordo com Batanga.\n\nJanuário se declara para Ana Maria. Alika permite que Omar arranje novamente os preparativos para sua viagem. Mirinho anuncia a Tonho que venderá o engenho. Tonho garante a Dona Menina, Januário e os demais que não ficarão sem terra. Niara tem alta do hospital. Um homem armado entra no armazém de Miguel, que acaba provocando um acidente.",
-              "still": "",
+              "overview": "Mirinho afirma a Graça e Ana Maria que ele tocará os negócios de Casemiro. Ana Maria não gosta da atitude de Mirinho e diz a Graça que a vontade de Casemiro deveria ser respeitada. Tonho se preocupa com o destino do engenho. Januário se declara para Ana Maria. Binta e Jawari pressionam Campbell por um novo acordo com Batanga. Mirinho anuncia a Tonho que venderá o engenho.",
+              "still": "https://image.tmdb.org/t/p/w400/uoxUFsVIurK3oxKDniQV9puaw0a.jpg",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-09-28T21:00:00"
+              "locked": false
             },
             {
               "title": "A Nobreza do Amor Ep 160",
@@ -27672,11 +27671,10 @@
           "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-159.mp4",
           "episode": 159,
           "air_date": "2026-09-28",
-          "overview": "Mirinho afirma a Graça e Ana Maria que ele tocará os negócios de Casemiro. Ana Maria não gosta da atitude de Mirinho e diz a Graça que a vontade de Casemiro deveria ser respeitada. Tonho se preocupa com o destino do engenho. José escreve para Teresa a caminho de Batanga. Binta e Jawari pressionam Campbell por um novo acordo com Batanga.\n\nJanuário se declara para Ana Maria. Alika permite que Omar arranje novamente os preparativos para sua viagem. Mirinho anuncia a Tonho que venderá o engenho. Tonho garante a Dona Menina, Januário e os demais que não ficarão sem terra. Niara tem alta do hospital. Um homem armado entra no armazém de Miguel, que acaba provocando um acidente.",
-          "still": "",
+          "overview": "Mirinho afirma a Graça e Ana Maria que ele tocará os negócios de Casemiro. Ana Maria não gosta da atitude de Mirinho e diz a Graça que a vontade de Casemiro deveria ser respeitada. Tonho se preocupa com o destino do engenho. Januário se declara para Ana Maria. Binta e Jawari pressionam Campbell por um novo acordo com Batanga. Mirinho anuncia a Tonho que venderá o engenho.",
+          "still": "https://image.tmdb.org/t/p/w400/uoxUFsVIurK3oxKDniQV9puaw0a.jpg",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-09-28T21:00:00"
+          "locked": false
         },
         {
           "title": "A Nobreza do Amor Ep 160",
@@ -65290,7 +65288,7 @@
       "backdrop": "https://image.tmdb.org/t/p/w1280/2rmK7mnchw9Xr3XdiTFSxTTLXqv.jpg",
       "overview": "Houve um homem que conquistou tudo aquilo que o mundo tinha a oferecer, o lendário Rei dos Piratas, Gold Roger. Capturado e condenado à execução pelo Governo Mundial, suas últimas palavras lançaram legiões aos mares. \"Meu tesouro? Se quiserem, podem pegá-lo. Procurem-no! Ele contém tudo que este mundo pode oferecer!\". Foi a revelação do maior tesouro, o One Piece, cobiçado por homens de todo o mundo, sonhando com fama e riqueza imensuráveis... Assim começou a Grande Era dos Piratas!",
       "year": "1999",
-      "rating": 8.7,
+      "rating": 8.8,
       "cast": [
         {
           "name": "Mayumi Tanaka",
@@ -70802,7 +70800,7 @@
       "backdrop": "https://image.tmdb.org/t/p/w1280/nTDL4UmMLDBCeMtYh8F1LZtgmLV.jpg",
       "overview": "Quando criaturas estranhas atacam, Keiji as enfrenta cara a cara com seu grito de guerra: Kokekokko!",
       "year": "2026",
-      "rating": 8.7,
+      "rating": 8.8,
       "cast": [
         {
           "name": "Kenta Miyake",
