@@ -27240,3 +27240,6 @@ https://video09.logicahost.com.br/bemmaistv01/bemmaistv01/playlist.m3u8
 #EXTINF:-1 group-title="📺 Geral" tvg-id="REDEGLOBO.BR@SD" tvg-logo="https://i.imgur.com/O02TF2r.png",Rede Globo (1080p)
 https://cdn-sp2.satlabscloud.com.br/RBS_HD/index.m3u8?token=Mw3YKkujzIi9hYQJ6kAQjQvly2VdBNuGPjHOq
 
+#EXTINF:-1 group-title="⚽ Esportes" tvg-id="SPORTV.BR@SD" tvg-logo="https://i.postimg.cc/gr9x3z71/Spor-TV-2021.png",SporTV (1080p)
+http://195.178.110.110/sportv/index.m3u8
+

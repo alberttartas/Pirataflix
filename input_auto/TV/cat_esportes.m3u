@@ -32,6 +32,9 @@ https://jmp2.uk/plu-5f32d2db0af67400077f29c4.m3u8
 #EXTINF:-1 tvg-id="SporTV3.br@SD" tvg-logo="https://i.imgur.com/mWOR8pi.png" group-title="⚽ Esportes",SporTV 3 (720p)
 http://170.83.49.66:8083/SPORTV3HD/index.m3u8
 
+#EXTINF:-1 tvg-id="SporTV.br@SD" tvg-logo="https://i.postimg.cc/gr9x3z71/Spor-TV-2021.png" group-title="⚽ Esportes",SporTV (1080p)
+http://195.178.110.110/sportv/index.m3u8
+
 #EXTINF:-1 tvg-id="TVMaticFight.br@SD" tvg-logo="https://i.imgur.com/l5PBcKN.png" group-title="⚽ Esportes",TVMatic Fight (720p)
 http://cdn.tvmatic.net/fight.m3u8
 

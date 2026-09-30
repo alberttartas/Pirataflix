@@ -520,8 +520,8 @@
       "posters": [
         "https://image.tmdb.org/t/p/w500/cMYCDADoLKLbB83g4WnJegaZimC.jpg",
         "https://image.tmdb.org/t/p/w500/7EadOwHmyQgOnlghRiWBygNtnjl.jpg",
-        "https://image.tmdb.org/t/p/w500/kifrm5sCZNMa1GsSAANg040Hay5.jpg",
         "https://image.tmdb.org/t/p/w500/pdtzEreKvKAlqa2YEBaGwiA45V8.jpg",
+        "https://image.tmdb.org/t/p/w500/kifrm5sCZNMa1GsSAANg040Hay5.jpg",
         "https://image.tmdb.org/t/p/w500/9RLmX3ATWzDRgXAa3PTrmBt4OU2.jpg",
         "https://image.tmdb.org/t/p/w500/jHWmNr7m544fJ8eItsfNk8fs2Ed.jpg"
       ],
@@ -889,8 +889,8 @@
       "year": "2021",
       "genres": [
         "Animação",
-        "Documentário",
-        "Ficção Científica"
+        "Ficção Científica",
+        "Comédia"
       ],
       "rating": 7.9,
       "cast": [
@@ -2228,7 +2228,7 @@
       "genres": [
         "Drama"
       ],
-      "rating": 8.4,
+      "rating": 8.3,
       "cast": [
         {
           "name": "Lucas Agrícola",
@@ -3539,8 +3539,8 @@
       "posters": [
         "https://image.tmdb.org/t/p/w500/blWCPEqDGLBuLB9u89CxP9ORQP4.jpg",
         "https://image.tmdb.org/t/p/w500/aesLt9fsKSA6KCgGxA60VVxjtLk.jpg",
-        "https://image.tmdb.org/t/p/w500/lXl3ZbY5TksOdt6eYgdyg6vsnFW.jpg",
         "https://image.tmdb.org/t/p/w500/rVX05xRKS5JhEYQFObCi4lAnZT4.jpg",
+        "https://image.tmdb.org/t/p/w500/lXl3ZbY5TksOdt6eYgdyg6vsnFW.jpg",
         "https://image.tmdb.org/t/p/w500/mik4odDfAXQrabV4VA4X4IDtBXF.jpg",
         "https://image.tmdb.org/t/p/w500/yEtSBgugED8XyhqjcKgF6j2zDMf.jpg"
       ],
@@ -14421,7 +14421,7 @@
       "backdrop": "https://image.tmdb.org/t/p/w1280/51gsll0qNMwqIU4fjwAHDx5MFTG.jpg",
       "overview": "História cheia de mistérios que mescla realidade e fantasia, no mundo sombrio do vampiro Bóris com elementos sobrenaturais, drama e humor.",
       "year": "2002",
-      "rating": 6.4,
+      "rating": 6.5,
       "cast": [
         {
           "name": "Tarcísio Meira",
@@ -25739,8 +25739,7 @@
               "overview": "Miguel se desespera ao perceber que tirou a vida de um homem. Fortunato abre uma investigação, e Salma teme por seu pai. Miguel é detido, e Omar, Lúcia/Alika e Tonho apoiam Salma e sua família. Malungo visita Alika e Niara e avisa que retornará para seu lar. Ana Maria confessa que teme perder a companhia de Caetana.\n\nVirgínia e Mirinho se mudam temporariamente para o engenho. Alika tem um pesadelo com Jendal. Halim anuncia que Fuad não se casará mais com Salma. José se aproxima de Batanga. Jendal chega ao Brasil.",
               "still": "",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-09-29T21:00:00"
+              "locked": false
             },
             {
               "title": "A Nobreza do Amor Ep 161",
@@ -27684,8 +27683,7 @@
           "overview": "Miguel se desespera ao perceber que tirou a vida de um homem. Fortunato abre uma investigação, e Salma teme por seu pai. Miguel é detido, e Omar, Lúcia/Alika e Tonho apoiam Salma e sua família. Malungo visita Alika e Niara e avisa que retornará para seu lar. Ana Maria confessa que teme perder a companhia de Caetana.\n\nVirgínia e Mirinho se mudam temporariamente para o engenho. Alika tem um pesadelo com Jendal. Halim anuncia que Fuad não se casará mais com Salma. José se aproxima de Batanga. Jendal chega ao Brasil.",
           "still": "",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-09-29T21:00:00"
+          "locked": false
         },
         {
           "title": "A Nobreza do Amor Ep 161",
@@ -27739,7 +27737,8 @@
         "https://image.tmdb.org/t/p/w500/eKWeDBBVlFTeBjCJKr9Dc7A1OGz.jpg",
         "https://image.tmdb.org/t/p/w500/fdrirlMBVi3rtZ2CQyE9R18vuLB.jpg",
         "https://image.tmdb.org/t/p/w500/gOmm9L3i8HZhwYdclLXXU8h7mdH.jpg",
-        "https://image.tmdb.org/t/p/w500/b3KiRxktFzck2eS9WjatyYLmLRB.jpg"
+        "https://image.tmdb.org/t/p/w500/b3KiRxktFzck2eS9WjatyYLmLRB.jpg",
+        "https://image.tmdb.org/t/p/w500/4Ti3IUaiPSIrIky8eshvkNP1hDb.jpg"
       ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/wJybYZUCFj1xUQOjXLyxfVFNKlb.jpg",
       "overview": "Ambientada nos anos 20, uma princesa africana deposta por uma convulsão política em seu reino foge para o interior de Pernambuco, no Brasil, onde vive um romance proibido com um trabalhador rural.",
@@ -44031,7 +44030,7 @@
       "backdrop": "https://image.tmdb.org/t/p/w1280/bsnzAWs9MITfYgsQ8jp1SQ3AyHI.jpg",
       "overview": "Lígia, Gerluce e Joélly — três mulheres de diferentes gerações da mesma família — cujas vidas são marcadas por um ponto em comum: todas enfrentaram uma gravidez na adolescência e foram abandonadas por seus respectivos companheiros.",
       "year": "2025",
-      "rating": 7.8,
+      "rating": 7.9,
       "cast": [
         {
           "name": "Sophie Charlotte",
@@ -68442,7 +68441,7 @@
         {
           "name": "Marina Inoue",
           "character": "Armin Arlert (voice)",
-          "profile": ""
+          "profile": "https://image.tmdb.org/t/p/w185/f7PuEx1h2g4FLgMzk9wCrWuS9Eu.jpg"
         },
         {
           "name": "Hiro Shimono",
@@ -108517,6 +108516,21 @@
       "episodes": [
         {
           "url": "https://cdn-sp2.satlabscloud.com.br/RBS_HD/index.m3u8?token=Mw3YKkujzIi9hYQJ6kAQjQvly2VdBNuGPjHOq",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "SporTV.br@SD",
+      "type": "tv",
+      "title": "SporTV (1080p)",
+      "tvg_id": "SporTV.br@SD",
+      "tvg_logo": "https://i.postimg.cc/gr9x3z71/Spor-TV-2021.png",
+      "group": "⚽ Esportes",
+      "url": "http://195.178.110.110/sportv/index.m3u8",
+      "episodes": [
+        {
+          "url": "http://195.178.110.110/sportv/index.m3u8",
           "title": "AO VIVO"
         }
       ]

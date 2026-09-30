@@ -22965,5 +22965,20 @@
         "title": "AO VIVO"
       }
     ]
+  },
+  {
+    "id": "SporTV.br@SD",
+    "type": "tv",
+    "title": "SporTV (1080p)",
+    "tvg_id": "SporTV.br@SD",
+    "tvg_logo": "https://i.postimg.cc/gr9x3z71/Spor-TV-2021.png",
+    "group": "⚽ Esportes",
+    "url": "http://195.178.110.110/sportv/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://195.178.110.110/sportv/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
   }
 ]
