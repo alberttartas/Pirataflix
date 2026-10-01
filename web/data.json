@@ -113,7 +113,7 @@
         {
           "name": "Arnold Schwarzenegger",
           "character": "T-800 / Carl",
-          "profile": "https://image.tmdb.org/t/p/w185/dgCABuZp2HBehCT84O4WBp7KIoe.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/4jM3vsHIEQVeNFifiTAUDVAmiUo.jpg"
         },
         {
           "name": "Mackenzie Davis",
@@ -403,7 +403,7 @@
         {
           "name": "Jennifer Lawrence",
           "character": "Raven / Mystique",
-          "profile": "https://image.tmdb.org/t/p/w185/mDKMsjOMytyBiy7MHNZTa7gp7wj.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/6WTY6HjXMGxnHilJRVC3eLnu43F.jpg"
         },
         {
           "name": "Nicholas Hoult",
@@ -3138,7 +3138,7 @@
         "Novela",
         "Drama"
       ],
-      "rating": 7.9,
+      "rating": 8.1,
       "cast": [
         {
           "name": "Letícia Colin",
@@ -25736,8 +25736,8 @@
               "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-160.mp4",
               "episode": 160,
               "air_date": "2026-09-29",
-              "overview": "Miguel se desespera ao perceber que tirou a vida de um homem. Fortunato abre uma investigação, e Salma teme por seu pai. Miguel é detido, e Omar, Lúcia/Alika e Tonho apoiam Salma e sua família. Malungo visita Alika e Niara e avisa que retornará para seu lar. Ana Maria confessa que teme perder a companhia de Caetana.\n\nVirgínia e Mirinho se mudam temporariamente para o engenho. Alika tem um pesadelo com Jendal. Halim anuncia que Fuad não se casará mais com Salma. José se aproxima de Batanga. Jendal chega ao Brasil.",
-              "still": "",
+              "overview": "Mirinho anuncia a Tonho que venderá o engenho. Tonho garante a Dona Menina, Januário e os demais que não ficarão sem terra. Niara tem alta do hospital. Um homem armado entra no armazém de Miguel, que acaba provocando um acidente. Miguel se desespera ao perceber que tirou a vida de um homem. Miguel é detido. Malungo visita Alika e Niara e avisa que retornará para seu lar.",
+              "still": "https://image.tmdb.org/t/p/w400/eC5EnV4JpaglFYUmO0I7XK5cxtc.jpg",
               "guest_stars": [],
               "locked": false
             },
@@ -25749,8 +25749,7 @@
               "overview": "Jendal chega a Recife. Alika tem um pesadelo com Jendal. Fátima se desespera por Fuad ter recusado Salma como esposa. Após destratos de Graça e Virgínia, Mundica decide deixar o engenho. Miguel pede perdão a Salma, que garante ao pai que ele não deve se preocupar com a rejeição de Fuad a seu casamento. Alika insinua a Omar que Salma está livre para viver um novo amor. Omar se declara para Salma. Jendal encontra Malungo no hotel. Alika e Tonho confessam sua paixão. Sebastião nega um emprego para Mundica na prefeitura, e Alika/Lúcia ajuda a moça. José chega a Batanga e encontra Chinua. Jendal atira Malungo de um penhasco.",
               "still": "",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-09-30T21:00:00"
+              "locked": false
             },
             {
               "title": "Capítulo 162",
@@ -25784,6 +25783,325 @@
               "guest_stars": [],
               "locked": true,
               "release_iso": "2026-10-03T21:00:00"
+            },
+            {
+              "title": "Capítulo 165",
+              "url": "",
+              "episode": 165,
+              "air_date": "2026-10-05",
+              "overview": "",
+              "still": "",
+              "guest_stars": [],
+              "locked": true,
+              "release_iso": "2026-10-05T21:00:00"
+            },
+            {
+              "title": "Capítulo 166",
+              "url": "",
+              "episode": 166,
+              "air_date": "2026-10-06",
+              "overview": "",
+              "still": "",
+              "guest_stars": [],
+              "locked": true,
+              "release_iso": "2026-10-06T21:00:00"
+            },
+            {
+              "title": "Capítulo 167",
+              "url": "",
+              "episode": 167,
+              "air_date": "2026-10-07",
+              "overview": "",
+              "still": "",
+              "guest_stars": [],
+              "locked": true,
+              "release_iso": "2026-10-07T21:00:00"
+            },
+            {
+              "title": "Capítulo 168",
+              "url": "",
+              "episode": 168,
+              "air_date": "2026-10-08",
+              "overview": "",
+              "still": "",
+              "guest_stars": [],
+              "locked": true,
+              "release_iso": "2026-10-08T21:00:00"
+            },
+            {
+              "title": "Capítulo 169",
+              "url": "",
+              "episode": 169,
+              "air_date": "2026-10-09",
+              "overview": "",
+              "still": "",
+              "guest_stars": [],
+              "locked": true,
+              "release_iso": "2026-10-09T21:00:00"
+            },
+            {
+              "title": "Capítulo 170",
+              "url": "",
+              "episode": 170,
+              "air_date": "2026-10-10",
+              "overview": "",
+              "still": "",
+              "guest_stars": [],
+              "locked": true,
+              "release_iso": "2026-10-10T21:00:00"
+            },
+            {
+              "title": "Capítulo 171",
+              "url": "",
+              "episode": 171,
+              "air_date": "2026-10-12",
+              "overview": "",
+              "still": "",
+              "guest_stars": [],
+              "locked": true,
+              "release_iso": "2026-10-12T21:00:00"
+            },
+            {
+              "title": "Capítulo 172",
+              "url": "",
+              "episode": 172,
+              "air_date": "2026-10-13",
+              "overview": "",
+              "still": "",
+              "guest_stars": [],
+              "locked": true,
+              "release_iso": "2026-10-13T21:00:00"
+            },
+            {
+              "title": "Capítulo 173",
+              "url": "",
+              "episode": 173,
+              "air_date": "2026-10-14",
+              "overview": "",
+              "still": "",
+              "guest_stars": [],
+              "locked": true,
+              "release_iso": "2026-10-14T21:00:00"
+            },
+            {
+              "title": "Capítulo 174",
+              "url": "",
+              "episode": 174,
+              "air_date": "2026-10-15",
+              "overview": "",
+              "still": "",
+              "guest_stars": [],
+              "locked": true,
+              "release_iso": "2026-10-15T21:00:00"
+            },
+            {
+              "title": "Capítulo 175",
+              "url": "",
+              "episode": 175,
+              "air_date": "2026-10-16",
+              "overview": "",
+              "still": "",
+              "guest_stars": [],
+              "locked": true,
+              "release_iso": "2026-10-16T21:00:00"
+            },
+            {
+              "title": "Capítulo 176",
+              "url": "",
+              "episode": 176,
+              "air_date": "2026-10-17",
+              "overview": "",
+              "still": "",
+              "guest_stars": [],
+              "locked": true,
+              "release_iso": "2026-10-17T21:00:00"
+            },
+            {
+              "title": "Capítulo 177",
+              "url": "",
+              "episode": 177,
+              "air_date": "2026-10-19",
+              "overview": "",
+              "still": "",
+              "guest_stars": [],
+              "locked": true,
+              "release_iso": "2026-10-19T21:00:00"
+            },
+            {
+              "title": "Capítulo 178",
+              "url": "",
+              "episode": 178,
+              "air_date": "2026-10-20",
+              "overview": "",
+              "still": "",
+              "guest_stars": [],
+              "locked": true,
+              "release_iso": "2026-10-20T21:00:00"
+            },
+            {
+              "title": "Capítulo 179",
+              "url": "",
+              "episode": 179,
+              "air_date": "2026-10-21",
+              "overview": "",
+              "still": "",
+              "guest_stars": [],
+              "locked": true,
+              "release_iso": "2026-10-21T21:00:00"
+            },
+            {
+              "title": "Capítulo 180",
+              "url": "",
+              "episode": 180,
+              "air_date": "2026-10-22",
+              "overview": "",
+              "still": "",
+              "guest_stars": [],
+              "locked": true,
+              "release_iso": "2026-10-22T21:00:00"
+            },
+            {
+              "title": "Capítulo 181",
+              "url": "",
+              "episode": 181,
+              "air_date": "2026-10-23",
+              "overview": "",
+              "still": "",
+              "guest_stars": [],
+              "locked": true,
+              "release_iso": "2026-10-23T21:00:00"
+            },
+            {
+              "title": "Capítulo 182",
+              "url": "",
+              "episode": 182,
+              "air_date": "2026-10-24",
+              "overview": "",
+              "still": "",
+              "guest_stars": [],
+              "locked": true,
+              "release_iso": "2026-10-24T21:00:00"
+            },
+            {
+              "title": "Capítulo 183",
+              "url": "",
+              "episode": 183,
+              "air_date": "2026-10-26",
+              "overview": "",
+              "still": "",
+              "guest_stars": [],
+              "locked": true,
+              "release_iso": "2026-10-26T21:00:00"
+            },
+            {
+              "title": "Capítulo 184",
+              "url": "",
+              "episode": 184,
+              "air_date": "2026-10-27",
+              "overview": "",
+              "still": "",
+              "guest_stars": [],
+              "locked": true,
+              "release_iso": "2026-10-27T21:00:00"
+            },
+            {
+              "title": "Capítulo 185",
+              "url": "",
+              "episode": 185,
+              "air_date": "2026-10-28",
+              "overview": "",
+              "still": "",
+              "guest_stars": [],
+              "locked": true,
+              "release_iso": "2026-10-28T21:00:00"
+            },
+            {
+              "title": "Capítulo 186",
+              "url": "",
+              "episode": 186,
+              "air_date": "2026-10-29",
+              "overview": "",
+              "still": "",
+              "guest_stars": [],
+              "locked": true,
+              "release_iso": "2026-10-29T21:00:00"
+            },
+            {
+              "title": "Capítulo 187",
+              "url": "",
+              "episode": 187,
+              "air_date": "2026-10-30",
+              "overview": "",
+              "still": "",
+              "guest_stars": [],
+              "locked": true,
+              "release_iso": "2026-10-30T21:00:00"
+            },
+            {
+              "title": "Capítulo 188",
+              "url": "",
+              "episode": 188,
+              "air_date": "2026-10-31",
+              "overview": "",
+              "still": "",
+              "guest_stars": [],
+              "locked": true,
+              "release_iso": "2026-10-31T21:00:00"
+            },
+            {
+              "title": "Capítulo 189",
+              "url": "",
+              "episode": 189,
+              "air_date": "2026-11-02",
+              "overview": "",
+              "still": "",
+              "guest_stars": [],
+              "locked": true,
+              "release_iso": "2026-11-02T21:00:00"
+            },
+            {
+              "title": "Capítulo 190",
+              "url": "",
+              "episode": 190,
+              "air_date": "2026-11-03",
+              "overview": "",
+              "still": "",
+              "guest_stars": [],
+              "locked": true,
+              "release_iso": "2026-11-03T21:00:00"
+            },
+            {
+              "title": "Capítulo 191",
+              "url": "",
+              "episode": 191,
+              "air_date": "2026-11-04",
+              "overview": "",
+              "still": "",
+              "guest_stars": [],
+              "locked": true,
+              "release_iso": "2026-11-04T21:00:00"
+            },
+            {
+              "title": "Capítulo 192",
+              "url": "",
+              "episode": 192,
+              "air_date": "2026-11-05",
+              "overview": "",
+              "still": "",
+              "guest_stars": [],
+              "locked": true,
+              "release_iso": "2026-11-05T21:00:00"
+            },
+            {
+              "title": "Capítulo 193",
+              "url": "",
+              "episode": 193,
+              "air_date": "2026-11-06",
+              "overview": "",
+              "still": "",
+              "guest_stars": [],
+              "locked": true,
+              "release_iso": "2026-11-06T21:00:00"
             }
           ]
         }
@@ -27680,8 +27998,8 @@
           "url": "https://23rzv4udpdbv8t6.cdn-novflix.com/storage1/NOBREZA/NOBREZA-160.mp4",
           "episode": 160,
           "air_date": "2026-09-29",
-          "overview": "Miguel se desespera ao perceber que tirou a vida de um homem. Fortunato abre uma investigação, e Salma teme por seu pai. Miguel é detido, e Omar, Lúcia/Alika e Tonho apoiam Salma e sua família. Malungo visita Alika e Niara e avisa que retornará para seu lar. Ana Maria confessa que teme perder a companhia de Caetana.\n\nVirgínia e Mirinho se mudam temporariamente para o engenho. Alika tem um pesadelo com Jendal. Halim anuncia que Fuad não se casará mais com Salma. José se aproxima de Batanga. Jendal chega ao Brasil.",
-          "still": "",
+          "overview": "Mirinho anuncia a Tonho que venderá o engenho. Tonho garante a Dona Menina, Januário e os demais que não ficarão sem terra. Niara tem alta do hospital. Um homem armado entra no armazém de Miguel, que acaba provocando um acidente. Miguel se desespera ao perceber que tirou a vida de um homem. Miguel é detido. Malungo visita Alika e Niara e avisa que retornará para seu lar.",
+          "still": "https://image.tmdb.org/t/p/w400/eC5EnV4JpaglFYUmO0I7XK5cxtc.jpg",
           "guest_stars": [],
           "locked": false
         },
@@ -27693,8 +28011,7 @@
           "overview": "Jendal chega a Recife. Alika tem um pesadelo com Jendal. Fátima se desespera por Fuad ter recusado Salma como esposa. Após destratos de Graça e Virgínia, Mundica decide deixar o engenho. Miguel pede perdão a Salma, que garante ao pai que ele não deve se preocupar com a rejeição de Fuad a seu casamento. Alika insinua a Omar que Salma está livre para viver um novo amor. Omar se declara para Salma. Jendal encontra Malungo no hotel. Alika e Tonho confessam sua paixão. Sebastião nega um emprego para Mundica na prefeitura, e Alika/Lúcia ajuda a moça. José chega a Batanga e encontra Chinua. Jendal atira Malungo de um penhasco.",
           "still": "",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-09-30T21:00:00"
+          "locked": false
         },
         {
           "title": "Capítulo 162",
@@ -27728,6 +28045,325 @@
           "guest_stars": [],
           "locked": true,
           "release_iso": "2026-10-03T21:00:00"
+        },
+        {
+          "title": "Capítulo 165",
+          "url": "",
+          "episode": 165,
+          "air_date": "2026-10-05",
+          "overview": "",
+          "still": "",
+          "guest_stars": [],
+          "locked": true,
+          "release_iso": "2026-10-05T21:00:00"
+        },
+        {
+          "title": "Capítulo 166",
+          "url": "",
+          "episode": 166,
+          "air_date": "2026-10-06",
+          "overview": "",
+          "still": "",
+          "guest_stars": [],
+          "locked": true,
+          "release_iso": "2026-10-06T21:00:00"
+        },
+        {
+          "title": "Capítulo 167",
+          "url": "",
+          "episode": 167,
+          "air_date": "2026-10-07",
+          "overview": "",
+          "still": "",
+          "guest_stars": [],
+          "locked": true,
+          "release_iso": "2026-10-07T21:00:00"
+        },
+        {
+          "title": "Capítulo 168",
+          "url": "",
+          "episode": 168,
+          "air_date": "2026-10-08",
+          "overview": "",
+          "still": "",
+          "guest_stars": [],
+          "locked": true,
+          "release_iso": "2026-10-08T21:00:00"
+        },
+        {
+          "title": "Capítulo 169",
+          "url": "",
+          "episode": 169,
+          "air_date": "2026-10-09",
+          "overview": "",
+          "still": "",
+          "guest_stars": [],
+          "locked": true,
+          "release_iso": "2026-10-09T21:00:00"
+        },
+        {
+          "title": "Capítulo 170",
+          "url": "",
+          "episode": 170,
+          "air_date": "2026-10-10",
+          "overview": "",
+          "still": "",
+          "guest_stars": [],
+          "locked": true,
+          "release_iso": "2026-10-10T21:00:00"
+        },
+        {
+          "title": "Capítulo 171",
+          "url": "",
+          "episode": 171,
+          "air_date": "2026-10-12",
+          "overview": "",
+          "still": "",
+          "guest_stars": [],
+          "locked": true,
+          "release_iso": "2026-10-12T21:00:00"
+        },
+        {
+          "title": "Capítulo 172",
+          "url": "",
+          "episode": 172,
+          "air_date": "2026-10-13",
+          "overview": "",
+          "still": "",
+          "guest_stars": [],
+          "locked": true,
+          "release_iso": "2026-10-13T21:00:00"
+        },
+        {
+          "title": "Capítulo 173",
+          "url": "",
+          "episode": 173,
+          "air_date": "2026-10-14",
+          "overview": "",
+          "still": "",
+          "guest_stars": [],
+          "locked": true,
+          "release_iso": "2026-10-14T21:00:00"
+        },
+        {
+          "title": "Capítulo 174",
+          "url": "",
+          "episode": 174,
+          "air_date": "2026-10-15",
+          "overview": "",
+          "still": "",
+          "guest_stars": [],
+          "locked": true,
+          "release_iso": "2026-10-15T21:00:00"
+        },
+        {
+          "title": "Capítulo 175",
+          "url": "",
+          "episode": 175,
+          "air_date": "2026-10-16",
+          "overview": "",
+          "still": "",
+          "guest_stars": [],
+          "locked": true,
+          "release_iso": "2026-10-16T21:00:00"
+        },
+        {
+          "title": "Capítulo 176",
+          "url": "",
+          "episode": 176,
+          "air_date": "2026-10-17",
+          "overview": "",
+          "still": "",
+          "guest_stars": [],
+          "locked": true,
+          "release_iso": "2026-10-17T21:00:00"
+        },
+        {
+          "title": "Capítulo 177",
+          "url": "",
+          "episode": 177,
+          "air_date": "2026-10-19",
+          "overview": "",
+          "still": "",
+          "guest_stars": [],
+          "locked": true,
+          "release_iso": "2026-10-19T21:00:00"
+        },
+        {
+          "title": "Capítulo 178",
+          "url": "",
+          "episode": 178,
+          "air_date": "2026-10-20",
+          "overview": "",
+          "still": "",
+          "guest_stars": [],
+          "locked": true,
+          "release_iso": "2026-10-20T21:00:00"
+        },
+        {
+          "title": "Capítulo 179",
+          "url": "",
+          "episode": 179,
+          "air_date": "2026-10-21",
+          "overview": "",
+          "still": "",
+          "guest_stars": [],
+          "locked": true,
+          "release_iso": "2026-10-21T21:00:00"
+        },
+        {
+          "title": "Capítulo 180",
+          "url": "",
+          "episode": 180,
+          "air_date": "2026-10-22",
+          "overview": "",
+          "still": "",
+          "guest_stars": [],
+          "locked": true,
+          "release_iso": "2026-10-22T21:00:00"
+        },
+        {
+          "title": "Capítulo 181",
+          "url": "",
+          "episode": 181,
+          "air_date": "2026-10-23",
+          "overview": "",
+          "still": "",
+          "guest_stars": [],
+          "locked": true,
+          "release_iso": "2026-10-23T21:00:00"
+        },
+        {
+          "title": "Capítulo 182",
+          "url": "",
+          "episode": 182,
+          "air_date": "2026-10-24",
+          "overview": "",
+          "still": "",
+          "guest_stars": [],
+          "locked": true,
+          "release_iso": "2026-10-24T21:00:00"
+        },
+        {
+          "title": "Capítulo 183",
+          "url": "",
+          "episode": 183,
+          "air_date": "2026-10-26",
+          "overview": "",
+          "still": "",
+          "guest_stars": [],
+          "locked": true,
+          "release_iso": "2026-10-26T21:00:00"
+        },
+        {
+          "title": "Capítulo 184",
+          "url": "",
+          "episode": 184,
+          "air_date": "2026-10-27",
+          "overview": "",
+          "still": "",
+          "guest_stars": [],
+          "locked": true,
+          "release_iso": "2026-10-27T21:00:00"
+        },
+        {
+          "title": "Capítulo 185",
+          "url": "",
+          "episode": 185,
+          "air_date": "2026-10-28",
+          "overview": "",
+          "still": "",
+          "guest_stars": [],
+          "locked": true,
+          "release_iso": "2026-10-28T21:00:00"
+        },
+        {
+          "title": "Capítulo 186",
+          "url": "",
+          "episode": 186,
+          "air_date": "2026-10-29",
+          "overview": "",
+          "still": "",
+          "guest_stars": [],
+          "locked": true,
+          "release_iso": "2026-10-29T21:00:00"
+        },
+        {
+          "title": "Capítulo 187",
+          "url": "",
+          "episode": 187,
+          "air_date": "2026-10-30",
+          "overview": "",
+          "still": "",
+          "guest_stars": [],
+          "locked": true,
+          "release_iso": "2026-10-30T21:00:00"
+        },
+        {
+          "title": "Capítulo 188",
+          "url": "",
+          "episode": 188,
+          "air_date": "2026-10-31",
+          "overview": "",
+          "still": "",
+          "guest_stars": [],
+          "locked": true,
+          "release_iso": "2026-10-31T21:00:00"
+        },
+        {
+          "title": "Capítulo 189",
+          "url": "",
+          "episode": 189,
+          "air_date": "2026-11-02",
+          "overview": "",
+          "still": "",
+          "guest_stars": [],
+          "locked": true,
+          "release_iso": "2026-11-02T21:00:00"
+        },
+        {
+          "title": "Capítulo 190",
+          "url": "",
+          "episode": 190,
+          "air_date": "2026-11-03",
+          "overview": "",
+          "still": "",
+          "guest_stars": [],
+          "locked": true,
+          "release_iso": "2026-11-03T21:00:00"
+        },
+        {
+          "title": "Capítulo 191",
+          "url": "",
+          "episode": 191,
+          "air_date": "2026-11-04",
+          "overview": "",
+          "still": "",
+          "guest_stars": [],
+          "locked": true,
+          "release_iso": "2026-11-04T21:00:00"
+        },
+        {
+          "title": "Capítulo 192",
+          "url": "",
+          "episode": 192,
+          "air_date": "2026-11-05",
+          "overview": "",
+          "still": "",
+          "guest_stars": [],
+          "locked": true,
+          "release_iso": "2026-11-05T21:00:00"
+        },
+        {
+          "title": "Capítulo 193",
+          "url": "",
+          "episode": 193,
+          "air_date": "2026-11-06",
+          "overview": "",
+          "still": "",
+          "guest_stars": [],
+          "locked": true,
+          "release_iso": "2026-11-06T21:00:00"
         }
       ],
       "type": "series",
@@ -72990,14 +73626,14 @@
       "category": "animes",
       "local_poster": "/Pirataflix/assets/Capas/os_simpsons.jpg",
       "posters": [
-        "https://image.tmdb.org/t/p/w500/uWpG7GqfKGQqX4YMAo3nv5OrglV.jpg",
+        "https://image.tmdb.org/t/p/w500/tf0CUEynk6GfmrlHIQKQ5mfFP5P.jpg",
         "https://image.tmdb.org/t/p/w500/1jGPgDDcmg3Xgs3WO8sfYfbnFoA.jpg",
         "https://image.tmdb.org/t/p/w500/5NW6rUmsJSxtcdL3FgF6vq9Aanr.jpg",
         "https://image.tmdb.org/t/p/w500/k5UALlcA0EnviaCUn2wMjOWYiOO.jpg",
         "https://image.tmdb.org/t/p/w500/Afkw5tbK1rDJ8HJ12u7ADxhTJXv.jpg",
         "https://image.tmdb.org/t/p/w500/sWcihbznFj7y07zQrcUATRt6GWi.jpg"
       ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/jIArNHIekrCSVgdMbKPAXpPY03Y.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/qcSHGC5BfoqBoP99PzDIERYG5Qm.jpg",
       "overview": "Uma animação sobre uma típica família dos Estados Unidos. Homer é o pai de família nada saudável ou inteligente, que adora beber cerveja. Marge é a esposa e mãe de família dedicada. Bart é o filho de 10 anos, que não leva a escola a sério e tem orgulho disso. Lisa é a garota de 8 anos, um gênio não apreciado. E Maggie é a bebê que não larga a chupeta.",
       "year": "1989",
       "genres": [
@@ -73475,7 +74111,7 @@
         "https://image.tmdb.org/t/p/w500/mJVUZpPR4BdZzLWyP51h8pOU1RO.jpg",
         "https://image.tmdb.org/t/p/w500/dG6H80X9zF3nA7NiOAs3gmxO6mc.jpg"
       ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/qpin8cASXEVtwhzNsprHYFiOAGk.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/j2GvamiUMRpPjmNQSSht0Q7Z7e9.jpg",
       "overview": "Sofrimento, arrependimento, vergonha: os sentimentos negativos dos humanos tornam-se Maldições, causando terríveis acidentes que podem levar até mesmo à morte. E pra piorar, Maldições só podem ser exorcizadas por outras Maldições. Certo dia, para salvar amigos que estavam sendo atacados por Maldições, Yuji Itadori engole o dedo do Ryomen-Sukuna, absorvendo sua Maldição. Ele então decide se matricular no Colégio Técnico de Feitiçaria de Tóquio, uma organização que combate as Maldições... e assim começa a heróica lenda do garoto que tornou-se uma Maldição para exorcizar uma Maldição.",
       "year": "2020",
       "rating": 8.6
