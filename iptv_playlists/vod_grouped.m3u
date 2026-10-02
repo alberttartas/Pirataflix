@@ -27330,3 +27330,9 @@ https://cdn-sp2.satlabscloud.com.br/RBS_HD/index.m3u8?token=Mw3YKkujzIi9hYQJ6kAQ
 #EXTINF:-1 group-title="⚽ Esportes" tvg-id="SPORTV.BR@SD" tvg-logo="https://i.postimg.cc/gr9x3z71/Spor-TV-2021.png",SporTV (1080p)
 http://195.178.110.110/sportv/index.m3u8
 
+#EXTINF:-1 group-title="🎵 Música" tvg-id="MCMPOP.FR@SD" tvg-logo="https://i.imgur.com/j31lBL7.png",MCM Pop (576p)
+http://193.254.245.162/MCM/index.m3u8
+
+#EXTINF:-1 group-title="🎬 Filmes" tvg-id="TELECINEACTION.BR@SD" tvg-logo="https://i.imgur.com/BHYWG0h.png",Telecine Action (1080p)
+http://46.151.196.223:14326/
+

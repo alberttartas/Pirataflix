@@ -22980,5 +22980,35 @@
         "title": "AO VIVO"
       }
     ]
+  },
+  {
+    "id": "MCMPop.fr@SD",
+    "type": "tv",
+    "title": "MCM Pop (576p)",
+    "tvg_id": "MCMPop.fr@SD",
+    "tvg_logo": "https://i.imgur.com/j31lBL7.png",
+    "group": "🎵 Música",
+    "url": "http://193.254.245.162/MCM/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://193.254.245.162/MCM/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "TelecineAction.br@SD",
+    "type": "tv",
+    "title": "Telecine Action (1080p)",
+    "tvg_id": "TelecineAction.br@SD",
+    "tvg_logo": "https://i.imgur.com/BHYWG0h.png",
+    "group": "🎬 Filmes",
+    "url": "http://46.151.196.223:14326/",
+    "episodes": [
+      {
+        "url": "http://46.151.196.223:14326/",
+        "title": "AO VIVO"
+      }
+    ]
   }
 ]
