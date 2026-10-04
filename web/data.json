@@ -939,7 +939,7 @@
     {
       "id": "lilo_stitch_live_action",
       "title": "Lilo & Stitch Live Action",
-      "poster": "https://image.tmdb.org/t/p/w500/m58Oxr3OZZbP2kTX2tj8TiAMLSv.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/bLQN6DUNYN4NVzSY3Q53JwBRlgV.jpg",
       "episodes": [
         {
           "title": "Lilo & Stitch – Lilo & Stitch Live Action",
@@ -950,7 +950,7 @@
       "type": "movie",
       "local_poster": "/Pirataflix/assets/Capas/Lilo & Stitch Live Action.jpg",
       "posters": [
-        "https://image.tmdb.org/t/p/w500/m58Oxr3OZZbP2kTX2tj8TiAMLSv.jpg",
+        "https://image.tmdb.org/t/p/w500/bLQN6DUNYN4NVzSY3Q53JwBRlgV.jpg",
         "https://image.tmdb.org/t/p/w500/ckQzKpQJO4ZQDCN5evdpKcfm7Ys.jpg",
         "https://image.tmdb.org/t/p/w500/bTnWeKXYU3Fal6rc8Bm4lBcEHSV.jpg",
         "https://image.tmdb.org/t/p/w500/AhqNxQNvMXDJkCLEaZP7VCXoK2C.jpg",
@@ -25756,7 +25756,7 @@
               "url": "",
               "episode": 162,
               "air_date": "2026-10-01",
-              "overview": "Alika/Lúcia e Teresa contratam Mundica para trabalhar no ateliê. Chinua confessa a José que teme as atitudes de Jendal. Niara/Vera se despede de Ana Maria e das crianças da escola. Omar se oferece para arcar com os custos do advogado e libertar Miguel da prisão. Binta propõe um acordo a Campbell, e exige o apoio de Pascoal. José tem um sonho com Cayman. Alika repreende a insistência de Mirinho.",
+              "overview": "Jendal planeja sua ida a Barro Preto. Alika/Lúcia e Teresa contratam Mundica para trabalhar no ateliê. Chinua confessa a José que teme as atitudes de Jendal. Niara/Vera se despede de Ana Maria e das crianças da escola. Omar se oferece para arcar com os custos do advogado e libertar Miguel da prisão. Binta propõe um acordo a Campbell, e exige o apoio de Pascoal. José tem um sonho com Cayman.",
               "still": "https://image.tmdb.org/t/p/w400/8vvZwWMD7Fe0iFo8DQoTHwFC9Dv.jpg",
               "guest_stars": [],
               "locked": false,
@@ -25767,8 +25767,8 @@
               "url": "",
               "episode": 163,
               "air_date": "2026-10-02",
-              "overview": "Jendal avisa a Virgínia que espera ser bem recebido. Tonho e Alika se amam. Chinua apresenta José/Zambi a Akin e Ladisa. Marta revela a Diógenes que Mirinho é apaixonado por Alika/Lúcia. Mirinho diz a Graça e Virgínia que intenciona se mudar com as duas para São Paulo. Viriato confronta Claudina sobre os falsos milagres de Veneranda. Chinua implora para que Campbell o ajude a falar com Kênia. Chinua conta a Kênia que José/Zambi libertará a princesa e Dumi com a ajuda de Omar. Sebastião entrega a Virgínia o telegrama que anuncia a chegada de Jendal.",
-              "still": "",
+              "overview": "Tonho e Alika se amam. Chinua apresenta José/Zambi a Akin e Ladisa. Marta revela a Diógenes que Mirinho é apaixonado por Alika/Lúcia. Mirinho diz a Graça e Virgínia que intenciona se mudar com as duas para São Paulo. Viriato confronta Claudina sobre os falsos milagres de Veneranda. Chinua implora para que Campbell o ajude a falar com Kênia. Chinua conta a Kênia que José/Zambi libertará a princesa.",
+              "still": "https://image.tmdb.org/t/p/w400/wsEBv1eb5enK1ruuwfXS4ww2ClF.jpg",
               "guest_stars": [],
               "locked": false,
               "release_iso": "2026-10-02T21:00:00"
@@ -25778,10 +25778,10 @@
               "url": "",
               "episode": 164,
               "air_date": "2026-10-03",
-              "overview": "Virgínia exige que Sebastião a acompanhe na recepção a Jendal. Teresa teme a separação de José, e Niara e Alika a confortam. Nilo e Januário se preocupam com o retorno insuficiente da colheita nas terras de Tonho. Omar confirma que os minérios encontrados nas terras de Tonho são valiosos, e propõe sociedade ao ex-rival. Omar comunica a Fátima sua intenção de namorar Salma. Tonho revela a Alika sobre a descoberta em suas terras e seus planos para o futuro dos dois. Gamba confidencia a Dumi sobre o retorno de José/Zambi. José se encontra com a rainha Menemi. Fátima contraria Miguel e autoriza o namoro de Salma e Omar. Virgínia se prepara para receber Jendal.",
-              "still": "",
+              "overview": "Virgínia exige que Sebastião a acompanhe na recepção a Jendal. Teresa teme a separação de José, e Niara e Alika a confortam. Nilo e Januário se preocupam com o retorno insuficiente da colheita nas terras de Tonho. Omar confirma que os minérios encontrados nas terras de Tonho são valiosos, e propõe sociedade ao ex-rival. Fátima contraria Miguel e autoriza o namoro de Salma e Omar.",
+              "still": "https://image.tmdb.org/t/p/w400/wtRZwh0RTTenybs9bNF1KVbWEja.jpg",
               "guest_stars": [],
-              "locked": true,
+              "locked": false,
               "release_iso": "2026-10-03T21:00:00"
             },
             {
@@ -28018,7 +28018,7 @@
           "url": "",
           "episode": 162,
           "air_date": "2026-10-01",
-          "overview": "Alika/Lúcia e Teresa contratam Mundica para trabalhar no ateliê. Chinua confessa a José que teme as atitudes de Jendal. Niara/Vera se despede de Ana Maria e das crianças da escola. Omar se oferece para arcar com os custos do advogado e libertar Miguel da prisão. Binta propõe um acordo a Campbell, e exige o apoio de Pascoal. José tem um sonho com Cayman. Alika repreende a insistência de Mirinho.",
+          "overview": "Jendal planeja sua ida a Barro Preto. Alika/Lúcia e Teresa contratam Mundica para trabalhar no ateliê. Chinua confessa a José que teme as atitudes de Jendal. Niara/Vera se despede de Ana Maria e das crianças da escola. Omar se oferece para arcar com os custos do advogado e libertar Miguel da prisão. Binta propõe um acordo a Campbell, e exige o apoio de Pascoal. José tem um sonho com Cayman.",
           "still": "https://image.tmdb.org/t/p/w400/8vvZwWMD7Fe0iFo8DQoTHwFC9Dv.jpg",
           "guest_stars": [],
           "locked": false,
@@ -28029,8 +28029,8 @@
           "url": "",
           "episode": 163,
           "air_date": "2026-10-02",
-          "overview": "Jendal avisa a Virgínia que espera ser bem recebido. Tonho e Alika se amam. Chinua apresenta José/Zambi a Akin e Ladisa. Marta revela a Diógenes que Mirinho é apaixonado por Alika/Lúcia. Mirinho diz a Graça e Virgínia que intenciona se mudar com as duas para São Paulo. Viriato confronta Claudina sobre os falsos milagres de Veneranda. Chinua implora para que Campbell o ajude a falar com Kênia. Chinua conta a Kênia que José/Zambi libertará a princesa e Dumi com a ajuda de Omar. Sebastião entrega a Virgínia o telegrama que anuncia a chegada de Jendal.",
-          "still": "",
+          "overview": "Tonho e Alika se amam. Chinua apresenta José/Zambi a Akin e Ladisa. Marta revela a Diógenes que Mirinho é apaixonado por Alika/Lúcia. Mirinho diz a Graça e Virgínia que intenciona se mudar com as duas para São Paulo. Viriato confronta Claudina sobre os falsos milagres de Veneranda. Chinua implora para que Campbell o ajude a falar com Kênia. Chinua conta a Kênia que José/Zambi libertará a princesa.",
+          "still": "https://image.tmdb.org/t/p/w400/wsEBv1eb5enK1ruuwfXS4ww2ClF.jpg",
           "guest_stars": [],
           "locked": false,
           "release_iso": "2026-10-02T21:00:00"
@@ -28040,10 +28040,10 @@
           "url": "",
           "episode": 164,
           "air_date": "2026-10-03",
-          "overview": "Virgínia exige que Sebastião a acompanhe na recepção a Jendal. Teresa teme a separação de José, e Niara e Alika a confortam. Nilo e Januário se preocupam com o retorno insuficiente da colheita nas terras de Tonho. Omar confirma que os minérios encontrados nas terras de Tonho são valiosos, e propõe sociedade ao ex-rival. Omar comunica a Fátima sua intenção de namorar Salma. Tonho revela a Alika sobre a descoberta em suas terras e seus planos para o futuro dos dois. Gamba confidencia a Dumi sobre o retorno de José/Zambi. José se encontra com a rainha Menemi. Fátima contraria Miguel e autoriza o namoro de Salma e Omar. Virgínia se prepara para receber Jendal.",
-          "still": "",
+          "overview": "Virgínia exige que Sebastião a acompanhe na recepção a Jendal. Teresa teme a separação de José, e Niara e Alika a confortam. Nilo e Januário se preocupam com o retorno insuficiente da colheita nas terras de Tonho. Omar confirma que os minérios encontrados nas terras de Tonho são valiosos, e propõe sociedade ao ex-rival. Fátima contraria Miguel e autoriza o namoro de Salma e Omar.",
+          "still": "https://image.tmdb.org/t/p/w400/wtRZwh0RTTenybs9bNF1KVbWEja.jpg",
           "guest_stars": [],
-          "locked": true,
+          "locked": false,
           "release_iso": "2026-10-03T21:00:00"
         },
         {
@@ -109197,6 +109197,21 @@
       "episodes": [
         {
           "url": "http://46.151.196.223:14326/",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "MCMPop.fr@SD",
+      "type": "tv",
+      "title": "MCM Pop (580p)",
+      "tvg_id": "MCMPop.fr@SD",
+      "tvg_logo": "https://i.imgur.com/j31lBL7.png",
+      "group": "🎵 Música",
+      "url": "http://188.115.15.121:8000/play/a014",
+      "episodes": [
+        {
+          "url": "http://188.115.15.121:8000/play/a014",
           "title": "AO VIVO"
         }
       ]
