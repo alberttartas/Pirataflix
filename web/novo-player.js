@@ -64,7 +64,8 @@ window.ContinueWatching = {
 
     save(videoData) {
         if (!videoData.videoId || !videoData.itemId) return;
-        if (videoData.currentTime < 10) return;
+        // marker = vídeo em iframe (Blogger): guarda só o episódio, sem minuto
+        if (!videoData.marker && videoData.currentTime < 10) return;
         const all = this.getAll();
         all[videoData.videoId] = {
             ...videoData,
@@ -119,15 +120,15 @@ window.destroyModernPlayer = function() {
         iframe.src = 'about:blank';
         iframe.remove();
     });
-    
+
     // 2. Remover controles do Blogger
     const bloggerControls = document.getElementById('blogger-controls');
     if (bloggerControls) bloggerControls.remove();
-    
+
     // 3. Remover wrapper do Blogger
     const bloggerWrapper = document.getElementById('blogger-player-wrapper');
     if (bloggerWrapper) bloggerWrapper.remove();
-    
+
     // 4. Parar vídeo normal
     const video = document.getElementById('current-video');
     if (video) {
@@ -139,29 +140,29 @@ window.destroyModernPlayer = function() {
         video.removeAttribute('src');
         video.load();
     }
-    
+
     // 5. Limpar intervalos
-    if (window.__playerInterval) { 
-        clearInterval(window.__playerInterval); 
-        window.__playerInterval = null; 
+    if (window.__playerInterval) {
+        clearInterval(window.__playerInterval);
+        window.__playerInterval = null;
     }
-    
+
     // 6. Remover handler de teclado
-    if (window.__keyboardHandler) { 
-        document.removeEventListener('keydown', window.__keyboardHandler); 
-        window.__keyboardHandler = null; 
+    if (window.__keyboardHandler) {
+        document.removeEventListener('keydown', window.__keyboardHandler);
+        window.__keyboardHandler = null;
     }
-    
+
     // 7. Limpar timeout dos controles
-    if (window.controlsTimeout) { 
-        clearTimeout(window.controlsTimeout); 
-        window.controlsTimeout = null; 
+    if (window.controlsTimeout) {
+        clearTimeout(window.controlsTimeout);
+        window.controlsTimeout = null;
     }
-    
+
     // 8. Remover controles customizados
     const controls = document.getElementById('custom-controls');
     if (controls) controls.remove();
-    
+
     // 9. Limpar container do player (mas não o innerHTML para não quebrar referências)
     const container = document.getElementById('modern-player-container');
     if (container) {
@@ -170,7 +171,7 @@ window.destroyModernPlayer = function() {
             container.removeChild(container.firstChild);
         }
     }
-    
+
     console.log('✅ Player destruído completamente');
 };
 
@@ -181,34 +182,38 @@ window.destroyModernPlayer = function() {
 function playBloggerVideo(url, title, info = '', itemId = null, category = null, episodeIndex = 0) {
     // Fechar player anterior completamente
     window.destroyModernPlayer();
-    
+
     const modal = document.getElementById('modernPlayerModal');
     const closeBtn = document.getElementById('closeModernPlayerFix');
     const titleEl = document.getElementById('modern-player-title');
     const infoEl = document.getElementById('modern-player-info');
-    
+
     if (!modal) {
         window.open(url, '_blank');
         return;
     }
-    
+
     if (titleEl) titleEl.textContent = title;
     if (infoEl) infoEl.textContent = info;
     modal.style.display = 'flex';
-    
+
     const container = document.getElementById('modern-player-container');
     if (!container) return;
-    
+
     // Garantir que o container está limpo
     while (container.firstChild) {
         container.removeChild(container.firstChild);
     }
-    
+
     // Criar um ID único para este iframe
     const iframeId = 'blogger-iframe-' + Date.now();
     const videoId = `${itemId}_${episodeIndex}`;
-    
-    // Container com iframe
+
+    // Container com iframe.
+    // A barra #blogger-controls começa invisível E sem capturar cliques
+    // (pointer-events:none, herdado pelos botões) — assim ela não cobre os
+    // controles nativos do Blogger enquanto está escondida.
+    // Sem botões de seek: o embed do Blogger não aceita comandos externos.
     container.innerHTML = `
         <div id="blogger-player-wrapper" style="position: relative; width: 100%; height: 100%; background: #000;">
             <iframe
@@ -216,6 +221,7 @@ function playBloggerVideo(url, title, info = '', itemId = null, category = null,
                 src="${url}"
                 style="width: 100%; height: 100%; border: none;"
                 sandbox="allow-scripts allow-same-origin"
+                allowfullscreen
                 allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
                 referrerpolicy="no-referrer-when-downgrade"
             ></iframe>
@@ -229,58 +235,59 @@ function playBloggerVideo(url, title, info = '', itemId = null, category = null,
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
+                gap: 15px;
                 z-index: 10001;
                 opacity: 0;
                 transition: opacity 0.3s;
                 pointer-events: none;
             ">
-                <div style="display: flex; gap: 15px; pointer-events: auto;">
-                    <button class="blogger-control-btn" data-seek="-10" style="background: rgba(255,255,255,0.2); border: none; color: white; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 14px;">⏪ 10s</button>
-                    <button class="blogger-control-btn" data-seek="10" style="background: rgba(255,255,255,0.2); border: none; color: white; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 14px;">10s ⏩</button>
+                <span style="color: white; font-size: 14px; flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">🎬 ${title.substring(0, 50)}</span>
+                <div id="blogger-actions" style="display: flex; align-items: center; gap: 12px;">
+                    <button id="blogger-fs-btn" style="background: rgba(255,255,255,0.2); border: none; color: white; padding: 8px 12px; border-radius: 4px; cursor: pointer; font-size: 16px;">⛶</button>
                 </div>
-                <span style="color: white; font-size: 14px;">🎬 ${title.substring(0, 50)}</span>
-                <button id="blogger-fs-btn" style="pointer-events: auto; background: rgba(255,255,255,0.2); border: none; color: white; padding: 8px 12px; border-radius: 4px; cursor: pointer; font-size: 16px;">⛶</button>
             </div>
         </div>
     `;
-    
+
     // Referência ao iframe
-    const iframe = document.getElementById(iframeId);
     const controlsDiv = document.getElementById('blogger-controls');
     const wrapper = document.getElementById('blogger-player-wrapper');
-    
-    // Mostrar controles ao mover mouse
-    if (wrapper) {
-        wrapper.addEventListener('mousemove', () => {
-            if (controlsDiv) controlsDiv.style.opacity = '1';
+    const actionsDiv = document.getElementById('blogger-actions');
+
+    // O iframe engole os eventos de mouse, então o wrapper nunca recebe
+    // mousemove sobre o vídeo. Usamos uma zona de ativação fina no rodapé
+    // (mouse/toque) para mostrar a barra, que some sozinha depois de 3s.
+    if (wrapper && controlsDiv) {
+        const hotzone = document.createElement('div');
+        hotzone.style.cssText = 'position:absolute;left:0;right:0;bottom:0;height:24px;z-index:10000;';
+        wrapper.appendChild(hotzone);
+
+        const hideBar = () => {
+            controlsDiv.style.opacity = '0';
+            controlsDiv.style.pointerEvents = 'none';
+        };
+        const showBar = () => {
+            controlsDiv.style.opacity = '1';
+            controlsDiv.style.pointerEvents = 'auto';
             clearTimeout(window.controlsTimeout);
-            window.controlsTimeout = setTimeout(() => {
-                if (controlsDiv && controlsDiv.style) controlsDiv.style.opacity = '0';
-            }, 3000);
+            window.controlsTimeout = setTimeout(hideBar, 3000);
+        };
+
+        hotzone.addEventListener('mouseenter', showBar);
+        hotzone.addEventListener('mousemove', showBar);
+        hotzone.addEventListener('touchstart', showBar, { passive: true });
+        controlsDiv.addEventListener('mousemove', showBar);
+        controlsDiv.addEventListener('mouseleave', () => {
+            clearTimeout(window.controlsTimeout);
+            window.controlsTimeout = setTimeout(hideBar, 1000);
         });
     }
-    
-    // Botões de controle
-    const controlBtns = document.querySelectorAll('.blogger-control-btn');
-    controlBtns.forEach(btn => {
-        btn.onclick = (e) => {
-            e.stopPropagation();
-            const seek = parseInt(btn.dataset.seek);
-            if (iframe && iframe.contentWindow) {
-                iframe.contentWindow.postMessage({
-                    event: 'command',
-                    func: 'seek',
-                    args: seek
-                }, '*');
-            }
-            showMessage(container, seek > 0 ? '⏩ +10s' : '⏪ -10s');
-        };
-    });
-    
+
     // Fullscreen
     const fsBtn = document.getElementById('blogger-fs-btn');
     if (fsBtn) {
-        fsBtn.onclick = () => {
+        fsBtn.onclick = (e) => {
+            e.stopPropagation();
             const playerWrapper = document.getElementById('blogger-player-wrapper');
             if (playerWrapper) {
                 if (document.fullscreenElement) {
@@ -291,19 +298,20 @@ function playBloggerVideo(url, title, info = '', itemId = null, category = null,
             }
         };
     }
-    
+
     // Próximo episódio
     if (itemId && category) {
         const item = window.vodData?.[category]?.find(i => i.id === itemId);
         const epList = item ? getEpisodeList(item) : [];
-        
+
         if (item && episodeIndex + 1 < epList.length) {
             const nextBtn = document.createElement('button');
             nextBtn.innerHTML = 'PRÓXIMO ▶';
-            nextBtn.style.cssText = 'pointer-events:auto;background:#e50914;color:white;border:none;padding:8px 16px;border-radius:4px;font-size:14px;font-weight:bold;cursor:pointer;white-space:nowrap;opacity:0.8;transition:0.2s;margin-left:15px;';
+            nextBtn.style.cssText = 'background:#e50914;color:white;border:none;padding:8px 16px;border-radius:4px;font-size:14px;font-weight:bold;cursor:pointer;white-space:nowrap;opacity:0.9;transition:0.2s;';
             nextBtn.onmouseover = () => nextBtn.style.background = '#f40612';
             nextBtn.onmouseout = () => nextBtn.style.background = '#e50914';
-            nextBtn.onclick = () => {
+            nextBtn.onclick = (e) => {
+                e.stopPropagation();
                 const next = epList[episodeIndex + 1];
                 window.playWithModernPlayer(
                     next.url,
@@ -312,28 +320,28 @@ function playBloggerVideo(url, title, info = '', itemId = null, category = null,
                     itemId, category, episodeIndex + 1
                 );
             };
-            if (controlsDiv) controlsDiv.appendChild(nextBtn);
+            if (actionsDiv) actionsDiv.insertBefore(nextBtn, actionsDiv.firstChild);
         }
     }
-    
+
     // Botão fechar - CORRIGIDO
     if (closeBtn) {
         // Remover eventos anteriores clonando o botão
         const newCloseBtn = closeBtn.cloneNode(true);
         closeBtn.parentNode.replaceChild(newCloseBtn, closeBtn);
-        
+
         newCloseBtn.onclick = function() {
             console.log('Fechando player...');
             window.destroyModernPlayer();
             modal.style.display = 'none';
         };
     }
-    
+
     // Teclado ESC fecha - CORRIGIDO
     if (window.__keyboardHandler) {
         document.removeEventListener('keydown', window.__keyboardHandler);
     }
-    
+
     window.__keyboardHandler = function(e) {
         if (e.key === 'Escape' || e.keyCode === 27) {
             console.log('ESC pressionado, fechando player...');
@@ -342,22 +350,32 @@ function playBloggerVideo(url, title, info = '', itemId = null, category = null,
         }
     };
     document.addEventListener('keydown', window.__keyboardHandler);
-    
-    // Salvar que assistiu (marcar como visto)
-    window.ContinueWatching.save({
-        videoId: videoId,
-        itemId: itemId,
-        category: category,
-        episodeIndex: episodeIndex,
-        title: title,
-        seriesTitle: title?.split(' - ')[0] || title,
-        episode: episodeIndex + 1,
-        currentTime: 0,
-        duration: 1,
-        url: url,
-        poster: ''
-    });
-    
+
+    // Marcador "Continuar assistindo": o iframe não expõe currentTime/duration,
+    // então guardamos só QUAL episódio estava sendo assistido.
+    if (itemId && category) {
+        let posterUrl = '';
+        try {
+            const it = window.vodData?.[category]?.find(i => i.id === itemId);
+            if (it?.poster) posterUrl = it.poster;
+        } catch (e) {}
+
+        window.ContinueWatching.save({
+            videoId: videoId,
+            itemId: itemId,
+            category: category,
+            episodeIndex: episodeIndex,
+            title: title,
+            seriesTitle: title?.split(' - ')[0] || title,
+            episode: episodeIndex + 1,
+            currentTime: 0,
+            duration: 0,
+            marker: true,
+            url: url,
+            poster: posterUrl
+        });
+    }
+
     console.log('🎬 Blogger Video iniciado:', title, '\n   URL:', url);
 }
 
@@ -371,7 +389,7 @@ window.playWithModernPlayer = function(url, title, info = '', itemId = null, cat
         playBloggerVideo(url, title, info, itemId, category, episodeIndex);
         return;
     }
-    
+
     // ==========================================
     // CÓDIGO ORIGINAL PARA MP4/HLS
     // ==========================================
@@ -478,8 +496,8 @@ window.playWithModernPlayer = function(url, title, info = '', itemId = null, cat
         modal.style.display = 'none';
     };
 
-    // Restaurar progresso salvo
-    if (saved?.currentTime > 5) {
+    // Restaurar progresso salvo (ignora marcadores do Blogger)
+    if (saved && !saved.marker && saved.currentTime > 5) {
         let restored = false;
         function doRestore() {
             if (restored || !video.duration || isNaN(video.duration)) return;
@@ -690,18 +708,18 @@ window.resumeFromStorage = function(itemId, category, episodeIndex) {
 document.addEventListener('DOMContentLoaded', function() {
     const closeBtn = document.getElementById('closeModernPlayerFix');
     const modal = document.getElementById('modernPlayerModal');
-    
+
     if (closeBtn && modal) {
         const newCloseBtn = closeBtn.cloneNode(true);
         closeBtn.parentNode.replaceChild(newCloseBtn, closeBtn);
-        
+
         newCloseBtn.onclick = function() {
             console.log('Botão fechar clicado');
             window.destroyModernPlayer();
             if (modal) modal.style.display = 'none';
         };
     }
-    
+
     if (modal) {
         modal.addEventListener('click', function(e) {
             if (e.target === modal) {
