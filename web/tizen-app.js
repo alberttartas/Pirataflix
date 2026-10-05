@@ -1,5 +1,5 @@
 /*
- * PIRATAFLIX — tizen-app.js  (v2 — navegação espacial)
+ * PIRATAFLIX — tizen-app.js  (v2.1 — navegação espacial + correções Blogger/Continuar)
  */
 
 (function () {
@@ -38,6 +38,9 @@
   var BATCH        = 40;    // cards renderizados por lote
   var CW_KEY       = 'pirataflix_progressos';
   var EXIT_WINDOW  = 2500;  // ms para confirmar saída com Voltar
+
+  // IDs dos controles que não funcionam no modo Blogger (iframe)
+  var BLOGGER_HIDDEN_IDS = ['progress-wrap', 'time-label', 'btn-play', 'btn-back', 'btn-fwd'];
 
   // ─── ESTADO ──────────────────────────────────────────────────────────────
 
@@ -242,7 +245,8 @@
       var entry = raw[keys[i]];
       if (!entry || !entry.itemId || !entry.category || entry.category === 'tv') continue;
       var pct = entry.duration ? (entry.currentTime / entry.duration) * 100 : 0;
-      if (pct < 2 || pct > 95) continue;
+      // Marcador (vídeo em iframe do Blogger): só guarda o episódio, sem minuto
+      if (!entry.marker && (pct < 2 || pct > 95)) continue;
       var dk = entry.itemId + '_' + entry.category;
       if (!seen[dk] || (entry.timestamp || 0) > (seen[dk].timestamp || 0)) seen[dk] = entry;
     }
@@ -428,16 +432,18 @@
 
     var item    = findItem(entry.category, entry.itemId);
     var poster  = item ? getPoster(item, entry.category) : DEFAULT_POSTER;
-    var pct     = entry.duration ? Math.round((entry.currentTime / entry.duration) * 100) : 0;
+    var isMarker = !!entry.marker;
+    var pct     = (!isMarker && entry.duration) ? Math.round((entry.currentTime / entry.duration) * 100) : 0;
     var label   = entry.seriesTitle || entry.title || (item ? item.title : 'Sem título');
     var seriesTitle = String(label).split(' - ')[0];
+    var epLabel = 'Ep ' + ((entry.episodeIndex || 0) + 1);
 
     var wrap = document.createElement('div');
     wrap.className = 'cw-thumb-wrap';
     wrap.appendChild(makeImg(poster, DEFAULT_POSTER));
     wrap.insertAdjacentHTML('beforeend',
       '<div class="cw-progress-bar"><div class="cw-progress-fill" style="width:' + pct + '%"></div></div>' +
-      '<div class="cw-time-badge">' + fmt(entry.currentTime || 0) + '</div>' +
+      '<div class="cw-time-badge">' + (isMarker ? epLabel : fmt(entry.currentTime || 0)) + '</div>' +
       '<div class="cw-play-icon">▶</div>');
     card.appendChild(wrap);
 
@@ -445,7 +451,7 @@
     info.className = 'card-info';
     info.innerHTML =
       '<div class="card-title">' + esc(seriesTitle) + '</div>' +
-      '<div class="card-meta">' + pct + '% assistido</div>';
+      '<div class="card-meta">' + (isMarker ? epLabel : (pct + '% assistido')) + '</div>';
     card.appendChild(info);
 
     card.onclick = function () { resumeCw(entry); };
@@ -836,7 +842,7 @@
   function saveProgress() {
     var video = $('player');
     if (!playerUrl || playerEnded || playerCat === 'tv' || !video) return;
-    if (isBloggerMode) return; // Blogger não expõe duration/currentTime via JS
+    if (isBloggerMode) return; // Blogger não expõe duration/currentTime via JS (usa marcador)
     if (!video.duration || !isFinite(video.duration) || video.currentTime < 10) return;
 
     var item = findItem(playerCat, playerItemId);
@@ -855,12 +861,39 @@
     });
   }
 
+  // Marcador do Blogger: guarda só QUAL episódio estava sendo assistido
+  function saveBloggerMarker(url, title, itemId, cat, epIdx) {
+    if (cat === 'tv') return;
+    var item = findItem(cat, itemId);
+    cwSave({
+      videoId:      itemId + '_' + epIdx,
+      itemId:       itemId,
+      category:     cat,
+      episodeIndex: epIdx,
+      title:        title,
+      seriesTitle:  String(title).split(' - ')[0],
+      episode:      epIdx + 1,
+      currentTime:  0,
+      duration:     0,
+      marker:       true,
+      url:          url,
+      poster:       item ? getPoster(item, cat) : ''
+    });
+  }
+
   // Detecta URLs do Blogger (blogger.com/video.g, googlevideo.com), que
   // não podem ser tocadas via <video src="">, pois exigem carregamento
   // como página (iframe/embed), não como recurso de mídia direto — ao
   // tentar direto, o Blogger responde 403.
   function isBloggerUrl(url) {
     return !!url && (url.indexOf('blogger.com/video.g') !== -1 || url.indexOf('googlevideo.com') !== -1);
+  }
+
+  function setBloggerControls(hidden) {
+    for (var i = 0; i < BLOGGER_HIDDEN_IDS.length; i++) {
+      var el = $(BLOGGER_HIDDEN_IDS[i]);
+      if (el) el.style.display = hidden ? 'none' : '';
+    }
   }
 
   // Toca um vídeo do Blogger dentro de um iframe (evita o 403 causado por
@@ -874,6 +907,7 @@
     iframe.id = 'tizen-blogger-iframe';
     iframe.src = url;
     iframe.style.cssText = 'width:100%;height:100%;border:none;background:#000;display:block;';
+    iframe.setAttribute('tabindex', '-1'); // não deixa o iframe roubar o teclado/D-pad
     iframe.setAttribute('allowfullscreen', '');
     iframe.setAttribute('allow', 'autoplay; fullscreen; encrypted-media; picture-in-picture');
     container.appendChild(iframe);
@@ -881,13 +915,14 @@
     bloggerIframe = iframe;
     isBloggerMode = true;
 
-    // Sem timeupdate/duration disponíveis — esconder o que depende disso
-    var progWrap  = $('progress-wrap');
-    var timeLabel = $('time-label');
-    var btnPlay   = $('btn-play');
-    if (progWrap)  progWrap.style.display  = 'none';
-    if (timeLabel) timeLabel.style.display = 'none';
-    if (btnPlay)   btnPlay.style.display   = 'none';
+    // Sem timeupdate/duration/seek/play-pause no embed: esconde o que depende disso
+    setBloggerControls(true);
+
+    // Devolve o foco ao documento para o Voltar/D-pad continuarem chegando
+    setTimeout(function () {
+      try { iframe.blur(); } catch (e) {}
+      try { window.focus(); } catch (e2) {}
+    }, 100);
   }
 
   // Destrói o iframe do Blogger (se existir) e restaura os controles normais
@@ -899,14 +934,9 @@
     }
     isBloggerMode = false;
 
-    var video     = $('player');
-    var progWrap  = $('progress-wrap');
-    var timeLabel = $('time-label');
-    var btnPlay   = $('btn-play');
-    if (video)     video.style.display     = '';
-    if (progWrap)  progWrap.style.display  = '';
-    if (timeLabel) timeLabel.style.display = '';
-    if (btnPlay)   btnPlay.style.display   = '';
+    var video = $('player');
+    if (video) video.style.display = '';
+    setBloggerControls(false);
   }
 
   function playVideo(url, title, itemId, cat, epIdx) {
@@ -928,11 +958,13 @@
 
     destroyHls();
     destroyBloggerIframe();
+    if (progressInterval) { clearInterval(progressInterval); progressInterval = null; }
     wrap.style.display = 'block';
 
     if (isBloggerUrl(url)) {
       // Blogger (video.g) exige iframe — <video src=""> retorna 403
       playBloggerVideo(url);
+      saveBloggerMarker(url, title, itemId, cat, playerEpIdx);
     } else {
       var isHls = url.indexOf('m3u8') !== -1;
 
@@ -956,20 +988,30 @@
         safePlay(video);
       }
 
-      // Restaurar progresso (só VOD, e só quando não é Blogger)
+      // Restaurar progresso (só VOD). Duas tentativas: a Samsung costuma
+      // ignorar o primeiro seek feito em loadedmetadata.
       if (cat !== 'tv') {
         var saved = cwGet(itemId + '_' + epIdx);
-        if (saved && saved.currentTime > 5) {
+        if (saved && !saved.marker && saved.currentTime > 5) {
+          var applied = false;
           var restorer = function () {
-            video.removeEventListener('loadedmetadata', restorer);
-            if (video.duration && saved.currentTime < video.duration - 2) {
+            if (!video.duration || !isFinite(video.duration) ||
+                saved.currentTime >= video.duration - 2) {
+              return;
+            }
+            if (!applied || Math.abs(video.currentTime - saved.currentTime) > 3) {
+              applied = true;
               video.currentTime = saved.currentTime;
               var m = Math.floor(saved.currentTime / 60);
               var s = Math.floor(saved.currentTime % 60);
               showOsd('⏯ Retomando ' + m + ':' + (s < 10 ? '0' + s : s));
+            } else {
+              video.removeEventListener('loadedmetadata', restorer);
+              video.removeEventListener('playing', restorer);
             }
           };
           video.addEventListener('loadedmetadata', restorer);
+          video.addEventListener('playing', restorer);
         }
       }
 
@@ -1037,7 +1079,14 @@
     if (controlsTimer) clearTimeout(controlsTimer);
     controlsTimer = setTimeout(function () {
       var v = $('player');
-      if (v && !v.paused && !playerBarHas(document.activeElement)) ctrl.className = '';
+      // No modo Blogger o <video> está sem src (paused é sempre true),
+      // então o iframe conta como "tocando".
+      var playing = isBloggerMode || (v && !v.paused);
+      if (!playing) return;
+      ctrl.className = '';
+      // Barra escondida = foco fora dela (senão as setas continuariam presas nos botões)
+      var a = document.activeElement;
+      if (playerBarHas(a)) { try { a.blur(); } catch (e) {} }
     }, 3500);
   }
 
@@ -1063,10 +1112,8 @@
 
   function seekBy(sec) {
     if (isBloggerMode) {
-      if (bloggerIframe && bloggerIframe.contentWindow) {
-        bloggerIframe.contentWindow.postMessage({ event: 'command', func: 'seek', args: sec }, '*');
-      }
-      showOsd((sec > 0 ? '⏩ +' : '⏪ -') + Math.abs(sec) + 's');
+      // O embed do Blogger não aceita comandos de seek vindos de fora
+      showOsd('⏱ Avanço indisponível neste vídeo');
       return;
     }
     var video = $('player');
@@ -1103,7 +1150,10 @@
     });
 
     video.addEventListener('play',  function () { btnPlay.innerHTML = '⏸'; });
-    video.addEventListener('pause', function () { btnPlay.innerHTML = '▶'; showControls(); });
+    video.addEventListener('pause', function () {
+      btnPlay.innerHTML = '▶';
+      if (!isBloggerMode) { saveProgress(); showControls(); }
+    });
 
     video.addEventListener('error', function () {
       if (isShown(wrap) && playerUrl && !isBloggerMode) showOsd('⚠ Erro ao reproduzir');
@@ -1150,7 +1200,7 @@
     wrap.addEventListener('touchstart', function (e) { touchX = e.touches[0].clientX; }, true);
     wrap.addEventListener('touchend', function (e) {
       var dx = e.changedTouches[0].clientX - touchX;
-      if (Math.abs(dx) > 60) seekBy(dx > 0 ? -10 : 10);
+      if (Math.abs(dx) > 60 && !isBloggerMode) seekBy(dx > 0 ? -10 : 10);
     }, true);
   }
 
@@ -1288,7 +1338,7 @@
   function initialFocus(scope, list) {
     if (scope === 'main') return activeNavLink() || list[0];
     if (scope === 'modal') return $('modal-play-btn') || list[0];
-    return $('btn-play') || list[0];
+    return list[0]; // player: primeiro botão visível (no Blogger o play fica oculto)
   }
 
   function gap(a1, a2, b1, b2) {
@@ -1603,11 +1653,14 @@
 
       case KEY.DOWN:
         e.preventDefault();
-        if (!inBar) focusEl(isBloggerMode ? $('btn-back') : $('btn-play'));
+        if (!inBar) focusEl(initialFocus('player', getFocusables('player')));
         return;
       case KEY.UP:
         e.preventDefault();
-        if (inBar) video.focus();
+        if (inBar) {
+          try { active.blur(); } catch (e2) {}
+          if (!isBloggerMode) video.focus();
+        }
         return;
     }
   }
