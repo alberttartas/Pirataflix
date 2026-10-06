@@ -148,6 +148,79 @@
       ]
     },
     {
+      "id": "batman_a_queda_do_morcego_parte1",
+      "title": "Batman A Queda Do Morcego Parte1",
+      "poster": "https://image.tmdb.org/t/p/w500/kOeLi6uIhAlWchS7ZkgDwWSavYT.jpg",
+      "episodes": [
+        {
+          "title": "Batman: A Queda do Morcego - Parte 1",
+          "url": "https://s13-s1001604.97bf1.com/hls/hb7EeVzLWcNpXEQbPwazyXdZg9auBW6y/index_1920x1080.m3u8",
+          "episode": 1
+        }
+      ],
+      "type": "movie",
+      "local_poster": "/Pirataflix/assets/Capas/default.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/360qdtu2hLnqMu8SVHMywn420w1.jpg",
+        "https://image.tmdb.org/t/p/w500/xk5RsHiJ12UY21WadVCHwZJCiif.jpg",
+        "https://image.tmdb.org/t/p/w500/2q1BdMFPmMJXStQdS2DNLoKmuB.jpg",
+        "https://image.tmdb.org/t/p/w500/kOeLi6uIhAlWchS7ZkgDwWSavYT.jpg",
+        "https://image.tmdb.org/t/p/w500/uZswZZ3Th2ORyLOAbol9ZLuD8pr.jpg",
+        "https://image.tmdb.org/t/p/w500/pPocHEaeu4GBb0ShxhMR43U11Vi.jpg"
+      ],
+      "backdrop": "https://image.tmdb.org/t/p/w1280/caBIySpwuFi2i7ynvHIlnxJLOdN.jpg",
+      "overview": "O Asilo Arkham foi destruído, e todos os seus detentos foram soltos em Gotham City. Enquanto corre contra o tempo para capturar alguns de seus maiores inimigos, Batman é levado ao limite de suas capacidades físicas e mentais, rumo a um confronto final contra uma nova ameaça: o homem chamado Bane!",
+      "year": "2026",
+      "genres": [
+        "Animação",
+        "Ação",
+        "Aventura"
+      ],
+      "rating": 9.1,
+      "cast": [
+        {
+          "name": "Anson Mount",
+          "character": "Batman / Bruce Wayne (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/A4YBdwnzJKRcZXfodjT4UalHOK9.jpg"
+        },
+        {
+          "name": "Michael Mando",
+          "character": "Bane (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/gvM2wG66bjEpiirdeQdyG9EzUfv.jpg"
+        },
+        {
+          "name": "Pablo Schreiber",
+          "character": "Jean-Paul Valley / Azrael (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/trKW3kwhwx4UeCNZg43A1x1h4Uv.jpg"
+        },
+        {
+          "name": "Jeff Bennett",
+          "character": "Ventriloquist / Scarface / Vincent (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/6Fq3Q1e0Oz0j2J2fnFSl7fKCHd9.jpg"
+        },
+        {
+          "name": "Luis Bermudez",
+          "character": "Catman / Doctor / Guard (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/cn1yzMsCrUatAqjDEIxTb8h38X9.jpg"
+        },
+        {
+          "name": "Bruce Boxleitner",
+          "character": "Commissioner Jim Gordon (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/1x99F4oJTFAFY2HR4PbQdxiGyMH.jpg"
+        },
+        {
+          "name": "Jessica Camacho",
+          "character": "Renee Montoya (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/rmms55MpLdBWRDX8LLDTctgXUuA.jpg"
+        },
+        {
+          "name": "Anthony Crivello",
+          "character": "Franco Bertinelli / Priest / Prisoner (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/AmeKWIanHlHYEDXpDfySEk95Myo.jpg"
+        }
+      ]
+    },
+    {
       "id": "spy_x_family_codigo_branco",
       "title": "Spy X Family Código: Branco",
       "poster": "https://image.tmdb.org/t/p/w500/thGaW3UXecNJAEdB6rs8sC45JWv.jpg",
