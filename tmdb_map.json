@@ -212,11 +212,11 @@
     "tmdb_id": 299188,
     "type": "tv"
   },
-  "mao-dublado":{
+    "mao_dublado": {
     "tmdb_id": 295999,
-    "type": "tv"
-}
-
+    "type": "tv",
+    "search": "MAO"
+  }
 }
 
 
