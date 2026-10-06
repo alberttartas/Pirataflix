@@ -114,6 +114,12 @@ function isBloggerUrl(url) {
 // 🔥 DESTRUIR PLAYER (CORRIGIDO)
 // ==========================================
 window.destroyModernPlayer = function() {
+    // 0. Listener de "terminou" do iframe do Blogger
+    if (window.__bloggerMsgHandler) {
+        window.removeEventListener('message', window.__bloggerMsgHandler);
+        window.__bloggerMsgHandler = null;
+    }
+
     // 1. Fechar iframe do Blogger (procura por qualquer iframe com ID começando com blogger-iframe)
     const allIframes = document.querySelectorAll('iframe[id^="blogger-iframe"]');
     allIframes.forEach(iframe => {
@@ -218,7 +224,7 @@ function playBloggerVideo(url, title, info = '', itemId = null, category = null,
         <div id="blogger-player-wrapper" style="position: relative; width: 100%; height: 100%; background: #000;">
             <iframe
                 id="${iframeId}"
-                src="${url}"
+                src="${withBloggerAutoplay(url)}"
                 style="width: 100%; height: 100%; border: none;"
                 sandbox="allow-scripts allow-same-origin"
                 allowfullscreen
@@ -299,29 +305,42 @@ function playBloggerVideo(url, title, info = '', itemId = null, category = null,
         };
     }
 
-    // Próximo episódio
+    // Anterior / Próximo episódio + auto-next quando o embed avisar que terminou
     if (itemId && category) {
         const item = window.vodData?.[category]?.find(i => i.id === itemId);
         const epList = item ? getEpisodeList(item) : [];
+        const fsBtnEl = document.getElementById('blogger-fs-btn');
 
-        if (item && episodeIndex + 1 < epList.length) {
-            const nextBtn = document.createElement('button');
-            nextBtn.innerHTML = 'PRÓXIMO ▶';
-            nextBtn.style.cssText = 'background:#e50914;color:white;border:none;padding:8px 16px;border-radius:4px;font-size:14px;font-weight:bold;cursor:pointer;white-space:nowrap;opacity:0.9;transition:0.2s;';
-            nextBtn.onmouseover = () => nextBtn.style.background = '#f40612';
-            nextBtn.onmouseout = () => nextBtn.style.background = '#e50914';
-            nextBtn.onclick = (e) => {
-                e.stopPropagation();
-                const next = epList[episodeIndex + 1];
+        if (item && actionsDiv && isPlayableEp(epList[episodeIndex - 1])) {
+            actionsDiv.insertBefore(
+                makeEpNavButton('◀ ANTERIOR', item, epList, episodeIndex - 1, category, itemId, false), fsBtnEl);
+        }
+        if (item && actionsDiv && isPlayableEp(epList[episodeIndex + 1])) {
+            actionsDiv.insertBefore(
+                makeEpNavButton('PRÓXIMO ▶', item, epList, episodeIndex + 1, category, itemId, true), fsBtnEl);
+        }
+
+        const iframe = document.getElementById(iframeId);
+        let fired = false;
+        window.__bloggerMsgHandler = (ev) => {
+            if (!iframe || ev.source !== iframe.contentWindow) return;
+            console.log('[Blogger msg]', ev.origin, ev.data);
+            if (fired || !isBloggerEnded(ev.data)) return;
+            const next = epList[episodeIndex + 1];
+            if (!item || !isPlayableEp(next)) return;
+            fired = true;
+            showMessage(container, '⏭ Próximo episódio...');
+            setTimeout(() => {
+                if (!document.getElementById(iframeId)) return; // player foi fechado/trocado
                 window.playWithModernPlayer(
                     next.url,
                     `${item.title} - ${next.title || 'Episódio ' + (episodeIndex + 2)}`,
                     `${category} • Ep ${episodeIndex + 2}`,
                     itemId, category, episodeIndex + 1
                 );
-            };
-            if (actionsDiv) actionsDiv.insertBefore(nextBtn, actionsDiv.firstChild);
-        }
+            }, 1500);
+        };
+        window.addEventListener('message', window.__bloggerMsgHandler);
     }
 
     // Botão fechar - CORRIGIDO
@@ -474,7 +493,7 @@ window.playWithModernPlayer = function(url, title, info = '', itemId = null, cat
         const item = window.vodData?.[category]?.find(i => i.id === itemId);
         if (item) {
             let epList = getEpisodeList(item);
-            if (episodeIndex + 1 < epList.length) {
+            if (isPlayableEp(epList[episodeIndex + 1])) {
                 const next = epList[episodeIndex + 1];
                 setTimeout(() => {
                     window.playWithModernPlayer(
@@ -527,6 +546,50 @@ function getEpisodeList(item) {
         return item.seasons.reduce((acc, s) => acc.concat(s.episodes || []), []);
     }
     return [];
+}
+
+function isPlayableEp(ep) { return !!ep && !!ep.url && !ep.locked; }
+
+// Pede autoplay ao embed do Blogger (parâmetro extra; ignorado se não suportado)
+function withBloggerAutoplay(url) {
+    if (!url || url.indexOf('blogger.com/video.g') === -1 || /[?&]autoplay=/.test(url)) return url;
+    return url + (url.indexOf('?') === -1 ? '?' : '&') + 'autoplay=1';
+}
+
+// Tenta reconhecer uma mensagem de "vídeo terminou" vinda do iframe.
+// O formato real do Blogger não é documentado: veja o console ([Blogger msg]).
+function isBloggerEnded(d) {
+    try {
+        if (typeof d === 'string') {
+            try { d = JSON.parse(d); } catch (e) { return /ended/i.test(d); }
+        }
+        if (!d || typeof d !== 'object') return false;
+        if (d.event === 'ended' || d.type === 'ended' || d.state === 'ended' || d.event === 'video-ended') return true;
+        if (d.event === 'onStateChange' && (d.info === 0 || d.data === 0)) return true;
+        if (d.info && d.info.playerState === 0) return true;
+    } catch (e2) {}
+    return false;
+}
+
+function makeEpNavButton(label, item, epList, targetIdx, category, itemId, primary) {
+    const bg = primary ? '#e50914' : 'rgba(255,255,255,0.2)';
+    const bgHover = primary ? '#f40612' : 'rgba(255,255,255,0.3)';
+    const btn = document.createElement('button');
+    btn.innerHTML = label;
+    btn.style.cssText = `background:${bg};color:white;border:none;padding:8px 16px;border-radius:4px;font-size:14px;font-weight:bold;cursor:pointer;white-space:nowrap;opacity:0.9;transition:0.2s;`;
+    btn.onmouseover = () => btn.style.background = bgHover;
+    btn.onmouseout  = () => btn.style.background = bg;
+    btn.onclick = (e) => {
+        e.stopPropagation();
+        const t = epList[targetIdx];
+        window.playWithModernPlayer(
+            t.url,
+            `${item.title} - ${t.title || 'Episódio ' + (targetIdx + 1)}`,
+            `${category} • Ep ${targetIdx + 1}`,
+            itemId, category, targetIdx
+        );
+    };
+    return btn;
 }
 
 function showMessage(container, text) {
@@ -626,22 +689,13 @@ function addControls(container, video, itemId, category, episodeIndex, title, in
 
     bar.append(playBtn, backBtn, fwdBtn, progressWrap, timeLabel, fsBtn);
 
-    if (item && episodeIndex + 1 < epList.length) {
-        const nextBtn = document.createElement('button');
+    if (item && isPlayableEp(epList[episodeIndex - 1])) {
+        bar.appendChild(makeEpNavButton('◀ ANTERIOR', item, epList, episodeIndex - 1, category, itemId, false));
+    }
+    if (item && isPlayableEp(epList[episodeIndex + 1])) {
+        const nextBtn = makeEpNavButton('PRÓXIMO ▶', item, epList, episodeIndex + 1, category, itemId, true);
         nextBtn.id = 'nextEpisodeBtn';
-        nextBtn.innerHTML = 'PRÓXIMO ▶';
-        nextBtn.style.cssText = 'background:#e50914;color:white;border:none;padding:8px 16px;border-radius:4px;font-size:14px;font-weight:bold;cursor:pointer;white-space:nowrap;opacity:0.7;transition:0.2s;';
-        nextBtn.onmouseover = () => nextBtn.style.background = '#f40612';
-        nextBtn.onmouseout  = () => nextBtn.style.background = '#e50914';
-        nextBtn.onclick = () => {
-            const next = epList[episodeIndex + 1];
-            window.playWithModernPlayer(
-                next.url,
-                `${item.title} - ${next.title || 'Episódio ' + (episodeIndex + 2)}`,
-                `${category} • Ep ${episodeIndex + 2}`,
-                itemId, category, episodeIndex + 1
-            );
-        };
+        nextBtn.style.opacity = '0.7';
         bar.appendChild(nextBtn);
     }
 
