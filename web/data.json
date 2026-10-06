@@ -57774,7 +57774,7 @@
     {
       "id": "mao_dublado",
       "title": "Mao Dublado",
-      "poster": "/Pirataflix/assets/Capas/default.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/kdti4Dm7XPV0Os2Jjzd188AWTQ3.jpg",
       "seasons": [
         {
           "season": 1,
@@ -57915,7 +57915,57 @@
         }
       ],
       "type": "series",
-      "category": "animes"
+      "category": "animes",
+      "local_poster": "/Pirataflix/assets/Capas/default.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/kdti4Dm7XPV0Os2Jjzd188AWTQ3.jpg"
+      ],
+      "backdrop": "https://image.tmdb.org/t/p/w1280/c72O2edMsD5QrbEGijBURiZIxk8.jpg",
+      "overview": "Mao, um místico amaldiçoado há 900 anos, conhece Nanoka, uma garota do futuro marcada por uma tragédia. Transportados a um passado sobrenatural, os dois unem forças para enfrentar poderes sombrios e desvendar os mistérios que ligam suas vidas.",
+      "year": "2026",
+      "rating": 8.9,
+      "cast": [
+        {
+          "name": "Yuki Kaji",
+          "character": "Mao (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/8wKdPV11IwowfwoqGqMMNt9hmp6.jpg"
+        },
+        {
+          "name": "Natsumi Kawaida",
+          "character": "Nanoka Kiba (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/bdsKRWdB14DAAZzJnRjquWbqNYR.jpg"
+        },
+        {
+          "name": "Hiro Shimono",
+          "character": "Hyakka (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/yrSDcgFefHtWkFmLnTrcw2t0MV.jpg"
+        },
+        {
+          "name": "Toshiyuki Toyonaga",
+          "character": "Kamon (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/duhxGjWjgo6WagvGgKu529ztz7u.jpg"
+        },
+        {
+          "name": "寺澤百花",
+          "character": "",
+          "profile": "https://image.tmdb.org/t/p/w185/lLS7b6k1653tiVwbi6pq9JXzMBW.jpg"
+        },
+        {
+          "name": "Kazuyuki Okitsu",
+          "character": "",
+          "profile": "https://image.tmdb.org/t/p/w185/vgyaK5dAxhvzAi6LJM3ZyaJd4mJ.jpg"
+        },
+        {
+          "name": "くまいもとこ",
+          "character": "",
+          "profile": "https://image.tmdb.org/t/p/w185/tFbdGP9nflvfJYNNIKHUejnpifm.jpg"
+        },
+        {
+          "name": "Yoko Hikasa",
+          "character": "",
+          "profile": "https://image.tmdb.org/t/p/w185/mP3bj0s1gqJ6tCKFLhu4b1CkJj7.jpg"
+        }
+      ]
     },
     {
       "id": "one_piece",
