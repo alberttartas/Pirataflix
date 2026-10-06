@@ -71499,7 +71499,7 @@
     {
       "id": "mushoku_tensei_dublado",
       "title": "Mushoku Tensei Dublado",
-      "poster": "/Pirataflix/assets/Capas/default.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/tn2mxPYSSUPHgfcAe5SCga1DO0i.jpg",
       "seasons": [
         {
           "season": 1,
@@ -71600,7 +71600,48 @@
         }
       ],
       "type": "series",
-      "category": "animes"
+      "category": "animes",
+      "local_poster": "/Pirataflix/assets/Capas/default.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/tn2mxPYSSUPHgfcAe5SCga1DO0i.jpg",
+        "https://image.tmdb.org/t/p/w500/6jKuJGfFir8svTfXecPfV6uwBii.jpg",
+        "https://image.tmdb.org/t/p/w500/gLKOYIMyKlUHW0SVdskhgf9C0yy.jpg",
+        "https://image.tmdb.org/t/p/w500/1mFnzilCyj9Coa9jbN8vFYLEZdW.jpg",
+        "https://image.tmdb.org/t/p/w500/fHXI3fJN0ZOVw2OmLmY2t9VgV83.jpg",
+        "https://image.tmdb.org/t/p/w500/lDS7WuWrq6i1XC1AaKlf9qvJBVi.jpg",
+        "https://image.tmdb.org/t/p/w500/4502U4n9cfgw33v0xTQMZhTDS6p.jpg"
+      ],
+      "backdrop": "https://image.tmdb.org/t/p/w1280/j9fRIimor0AMFJR9kjZubXcABzZ.jpg",
+      "overview": "Quando um fracassado de 34 anos é atropelado por um ônibus, sua história não acaba. Reencarnado em um novo mundo como criança, Rudy aproveitará cada oportunidade para viver a vida que sempre quis. Com novos amigos, habilidades mágicas e coragem para fazer tudo o que sempre sonhou, ele embarca em uma aventura épica – com toda a sua experiência do passado intacta!",
+      "year": "2021",
+      "rating": 8.4,
+      "cast": [
+        {
+          "name": "Yumi Uchiyama",
+          "character": "Rudeus Greyrat (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/JvavoF3YOLCf4LHfl4XvYobANE.jpg"
+        },
+        {
+          "name": "Tomokazu Sugita",
+          "character": "Rudeus Greyrat's Former Self (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/cv5zuPZySNsHXu24pjKLYCRzJ2J.jpg"
+        },
+        {
+          "name": "Ai Kakuma",
+          "character": "Eris Boreas Greyrat (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/o3tQSeeJAeafJNvQs2IKvpKY7av.jpg"
+        },
+        {
+          "name": "Ai Kayano",
+          "character": "Sylphiette (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/l8ywp387rfdAS7mOExe3cEZnsk0.jpg"
+        },
+        {
+          "name": "Konomi Kohara",
+          "character": "Roxy Migurdia (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/3wjTzpJpBiTkLexdMmo9a3wfgRT.jpg"
+        }
+      ]
     },
     {
       "id": "dandandan",
