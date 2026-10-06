@@ -864,6 +864,41 @@
       ]
     },
     {
+      "id": "eles_nao_usam_black_tie",
+      "title": "Eles-nao-usam-black-tie",
+      "poster": "/Pirataflix/assets/Capas/default.jpg",
+      "episodes": [
+        {
+          "title": "eles-nao-usam-black-tie",
+          "url": "https://cdnst86.tokyvideo.com/videos/771/771075/mp4/ec21f076c456be676a41762480e27db07051feaf4c4248c61edee88fb1d56eb3.mp4?secure=Aw2qZ9LigsPR_5Vq3EzC7Q%3D%3D%2C1791414552",
+          "episode": 1
+        }
+      ],
+      "type": "movie",
+      "overview": "Em São Paulo, o jovem operário Tião se preocupa com o futuro de sua família ao descobrir a gravidez de sua namorada Maria. Ao mesmo tempo, eclode um movimento grevista que divide a categoria metalúrgica. Preocupado e temendo perder o emprego, Tião fura a greve, entrando em conflito com o pai, Otávio, um velho militante sindical.",
+      "year": "2018",
+      "genres": [
+        "Drama"
+      ],
+      "cast": [
+        {
+          "name": "Giovanni Sousa",
+          "character": "Tião",
+          "profile": ""
+        },
+        {
+          "name": "Stephanie Leite",
+          "character": "Maria",
+          "profile": ""
+        },
+        {
+          "name": "Maciel Pedroso",
+          "character": "Otávio",
+          "profile": ""
+        }
+      ]
+    },
+    {
       "id": "resident_evil_2",
       "title": "Resident Evil 2",
       "poster": "https://image.tmdb.org/t/p/w500/r8q9pCcpzclyg2NjOt7DRbHRvG9.jpg",
