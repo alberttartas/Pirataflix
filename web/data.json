@@ -1427,7 +1427,7 @@
         {
           "name": "Millie Bobby Brown",
           "character": "Madison Russell",
-          "profile": "https://image.tmdb.org/t/p/w185/kHO7hdNEVuTnQ0OjjrxP1RcAa0e.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/8qasWpPYwiBgPw5Sn54YzN7q5uI.jpg"
         },
         {
           "name": "Ken Watanabe",
@@ -5729,7 +5729,7 @@
     {
       "id": "bridgerton",
       "title": "Bridgerton",
-      "poster": "https://image.tmdb.org/t/p/w500/eSrfwxnmMffTEI8gHTDde0iWuGB.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/k54GKSjE0vXACHN2qkCGXvaafn5.jpg",
       "seasons": [
         {
           "season": 1,
@@ -5896,7 +5896,7 @@
       "category": "series",
       "local_poster": "/Pirataflix/assets/Capas/Bridgerton.jpg",
       "posters": [
-        "https://image.tmdb.org/t/p/w500/eSrfwxnmMffTEI8gHTDde0iWuGB.jpg",
+        "https://image.tmdb.org/t/p/w500/k54GKSjE0vXACHN2qkCGXvaafn5.jpg",
         "https://image.tmdb.org/t/p/w500/uXTg565ahu9RwonCX1V2Hex1NU6.jpg",
         "https://image.tmdb.org/t/p/w500/zCEm0xrRMa5fLCQ9d0nvcw6tvcr.jpg",
         "https://image.tmdb.org/t/p/w500/dxRdS7dSbSDv0YLdkjbxzIAZHoq.jpg",
@@ -17606,7 +17606,7 @@
           "profile": "https://image.tmdb.org/t/p/w185/j2GjxnTQcACuy9T7T1cCPA5gieY.jpg"
         },
         {
-          "name": "Igor Fernández",
+          "name": "Igor Fernandez",
           "character": "Sombra",
           "profile": "https://image.tmdb.org/t/p/w185/fJKsjwHpAQ1kow7imPl1aAjUQFY.jpg"
         }
@@ -25989,11 +25989,10 @@
               "url": "https://noveflixplay.com/api/video-proxy/NOBREZA-165",
               "episode": 165,
               "air_date": "2026-10-05",
-              "overview": "",
-              "still": "",
+              "overview": "Tem início a festa de Cosme e Damião em Barro Preto. Ana Maria felicita Mundica por seu trabalho no ateliê. Fuad se aproxima de Belmira. Miguel lamenta sua prisão, e Adônis o conforta. Januário se declara para Ana Maria, e os dois se beijam. Viriato provoca Bartô sobre suas armações em relação a Veneranda. Dona Menina tem um mau pressentimento. Virgínia se impressiona com a imponência de Jendal.",
+              "still": "https://image.tmdb.org/t/p/w400/nahA7xM5uqXNgEfLbd2tj023NNN.jpg",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-10-05T21:00:00"
+              "locked": false
             },
             {
               "title": "Episódio 166",
@@ -28248,11 +28247,10 @@
           "url": "https://noveflixplay.com/api/video-proxy/NOBREZA-165",
           "episode": 165,
           "air_date": "2026-10-05",
-          "overview": "",
-          "still": "",
+          "overview": "Tem início a festa de Cosme e Damião em Barro Preto. Ana Maria felicita Mundica por seu trabalho no ateliê. Fuad se aproxima de Belmira. Miguel lamenta sua prisão, e Adônis o conforta. Januário se declara para Ana Maria, e os dois se beijam. Viriato provoca Bartô sobre suas armações em relação a Veneranda. Dona Menina tem um mau pressentimento. Virgínia se impressiona com a imponência de Jendal.",
+          "still": "https://image.tmdb.org/t/p/w400/nahA7xM5uqXNgEfLbd2tj023NNN.jpg",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-10-05T21:00:00"
+          "locked": false
         },
         {
           "title": "Episódio 166",
@@ -109782,6 +109780,66 @@
       "episodes": [
         {
           "url": "http://188.115.15.121:8000/play/a014",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "FishTV.br@SD",
+      "type": "tv",
+      "title": "Fish TV (1080p)",
+      "tvg_id": "FishTV.br@SD",
+      "tvg_logo": "https://www.fishtv.com/public/site/images/logos/fishtv.svg",
+      "group": "🌿 Natureza",
+      "url": "http://190.128.214.97:64333/play/a006/index.m3u8",
+      "episodes": [
+        {
+          "url": "http://190.128.214.97:64333/play/a006/index.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "GloboNews.br@SD",
+      "type": "tv",
+      "title": "GloboNews (1080p)",
+      "tvg_id": "GloboNews.br@SD",
+      "tvg_logo": "https://i.imgur.com/3yZyaCm.png",
+      "group": "📰 Notícias",
+      "url": "http://79.127.238.228:14093",
+      "episodes": [
+        {
+          "url": "http://79.127.238.228:14093",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "SporTV2.br@SD",
+      "type": "tv",
+      "title": "SporTV 2 (1080p)",
+      "tvg_id": "SporTV2.br@SD",
+      "tvg_logo": "https://i.imgur.com/pBiUnb2.png",
+      "group": "⚽ Esportes",
+      "url": "http://195.178.110.110/sportv2/index.m3u8",
+      "episodes": [
+        {
+          "url": "http://195.178.110.110/sportv2/index.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "SporTV3.br@SD",
+      "type": "tv",
+      "title": "SporTV 3 (1080p)",
+      "tvg_id": "SporTV3.br@SD",
+      "tvg_logo": "https://i.imgur.com/mWOR8pi.png",
+      "group": "⚽ Esportes",
+      "url": "http://195.178.110.110/sportv3/index.m3u8",
+      "episodes": [
+        {
+          "url": "http://195.178.110.110/sportv3/index.m3u8",
           "title": "AO VIVO"
         }
       ]
