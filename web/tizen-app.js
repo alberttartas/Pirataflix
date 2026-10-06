@@ -1,5 +1,5 @@
 /*
- * PIRATAFLIX — tizen-app.js  (v2.1 — navegação espacial + correções Blogger/Continuar)
+ * PIRATAFLIX — tizen-app.js  (v2.2 — Anterior/Próximo, autoplay Blogger, setas no carrossel)
  */
 
 (function () {
@@ -67,6 +67,7 @@
   // não podem ser tocados via <video src="">, precisam de iframe (embed)
   var bloggerIframe = null;
   var isBloggerMode = false;
+  var bloggerMsgHandler = null;
 
   // Foco / saída
   var focusReturn = null;   // { el, key } — de onde o modal/player foi aberto
@@ -260,6 +261,7 @@
   // ─── INIT ────────────────────────────────────────────────────────────────
 
   function init() {
+    injectStyles();
     registerTizenKeys();
     bindKeys();
     bindFullscreenTriggers();
@@ -286,11 +288,30 @@
         bindNav();
         bindSearch();
         bindModal();
+        ensurePrevButton();
         bindPlayer();
 
         focusEl(activeNavLink());
       });
     });
+  }
+
+  // CSS extra (setas do carrossel) injetado aqui para não depender de editar o tizen.css
+  function injectStyles() {
+    var css = [
+      '.ep-carousel{position:relative}',
+      '.ep-arrow{position:absolute;top:50%;margin-top:-24px;width:48px;height:48px;border-radius:50%;border:none;',
+      'background:rgba(0,0,0,.75);color:#fff;font-size:32px;line-height:46px;text-align:center;padding:0;',
+      'cursor:pointer;z-index:6;outline:none;-webkit-transition:background .2s;transition:background .2s}',
+      '.ep-arrow:hover{background:#e50914}',
+      '.ep-arrow-left{left:-6px}',
+      '.ep-arrow-right{right:-6px}',
+      '.ep-arrow-off{display:none}'
+    ].join('\n');
+    var st = document.createElement('style');
+    st.id = 'pf-extra-style';
+    st.appendChild(document.createTextNode(css));
+    document.head.appendChild(st);
   }
 
   // Só existe quando empacotado como app Tizen (no navegador da TV é ignorado)
@@ -556,11 +577,11 @@
       html += renderSeasons(item, cat, resumeIdx);
     } else if (item.episodes && item.episodes.length) {
       html += '<div class="modal-section-title">Episódios</div>';
-      html += '<div class="ep-list" id="ep-list-main">';
+      var innerMain = '';
       for (var ei = 0; ei < item.episodes.length; ei++) {
-        html += renderEpItem(item.episodes[ei], item.episodes[ei].episode || (ei + 1), ei, itemId, cat, resumeIdx);
+        innerMain += renderEpItem(item.episodes[ei], item.episodes[ei].episode || (ei + 1), ei, itemId, cat, resumeIdx);
       }
-      html += '</div>';
+      html += carouselHtml('ep-main', innerMain, 'block');
     }
 
     body.innerHTML = html;
@@ -575,6 +596,7 @@
     };
 
     bindEpClicks(body, itemId, cat, item.title);
+    bindCarousels(body);
 
     setTimeout(function () {
       // Deixa o episódio "atual" visível no carrossel
@@ -583,6 +605,7 @@
         var list = cur.parentNode;
         list.scrollLeft += cur.getBoundingClientRect().left - list.getBoundingClientRect().left - 24;
       }
+      updateAllCarousels(body);
       focusEl($('modal-play-btn'));
     }, 60);
   }
@@ -696,11 +719,11 @@
           '<span class="season-chevron">' + (isOpen ? '▲' : '▼') + '</span>' +
         '</div>';
 
-      html += '<div class="ep-list" id="' + colId + '" style="display:' + (isOpen ? 'flex' : 'none') + '">';
+      var innerEps = '';
       for (var ei = 0; ei < eps.length; ei++) {
-        html += renderEpItem(eps[ei], eps[ei].episode || (ei + 1), offset + ei, itemId, cat, resumeIdx);
+        innerEps += renderEpItem(eps[ei], eps[ei].episode || (ei + 1), offset + ei, itemId, cat, resumeIdx);
       }
-      html += '</div>';
+      html += carouselHtml(colId, innerEps, isOpen ? 'block' : 'none');
       offset += eps.length;
     }
 
@@ -762,8 +785,9 @@
           var chevron = h.querySelector('.season-chevron');
           if (!panel) return;
           var open = panel.style.display !== 'none';
-          panel.style.display = open ? 'none' : 'flex';
+          panel.style.display = open ? 'none' : 'block';
           if (chevron) chevron.textContent = open ? '▼' : '▲';
+          if (!open) updateCarousel(panel);
           ensureVisible(h);
         };
       })(headers[si]);
@@ -771,6 +795,53 @@
   }
 
   // ─── PLAY ────────────────────────────────────────────────────────────────
+
+  // Carrossel de episódios com setas laterais (uso com cursor/ponteiro).
+  // As setas têm tabindex -1: o D-pad continua navegando só pelos episódios.
+  function carouselHtml(id, inner, display) {
+    return '<div class="ep-carousel" id="' + id + '" style="display:' + display + '">' +
+      '<button class="ep-arrow ep-arrow-left" tabindex="-1" aria-label="Anteriores">&#8249;</button>' +
+      '<div class="ep-list" id="' + id + '-list">' + inner + '</div>' +
+      '<button class="ep-arrow ep-arrow-right" tabindex="-1" aria-label="Próximos">&#8250;</button>' +
+    '</div>';
+  }
+
+  function updateCarousel(wrapper) {
+    var list = wrapper && wrapper.querySelector('.ep-list');
+    if (list && list._updateArrows) list._updateArrows();
+  }
+
+  function updateAllCarousels(root) {
+    var all = root.querySelectorAll('.ep-carousel');
+    for (var i = 0; i < all.length; i++) updateCarousel(all[i]);
+  }
+
+  function bindCarousels(root) {
+    var wraps = root.querySelectorAll('.ep-carousel');
+    for (var i = 0; i < wraps.length; i++) {
+      (function (wrap) {
+        var list  = wrap.querySelector('.ep-list');
+        var left  = wrap.querySelector('.ep-arrow-left');
+        var right = wrap.querySelector('.ep-arrow-right');
+
+        function update() {
+          if (!list.clientWidth) return; // temporada recolhida
+          var max = list.scrollWidth - list.clientWidth;
+          left.className  = 'ep-arrow ep-arrow-left'  + (list.scrollLeft <= 2 ? ' ep-arrow-off' : '');
+          right.className = 'ep-arrow ep-arrow-right' + (list.scrollLeft >= max - 2 ? ' ep-arrow-off' : '');
+        }
+        function step(dir) { list.scrollLeft += dir * Math.max(200, list.clientWidth * 0.8); }
+
+        list._updateArrows = update;
+        // não deixa o clique roubar o foco do D-pad
+        left.onmousedown = right.onmousedown = function (e) { e.preventDefault(); };
+        left.onclick  = function (e) { e.stopPropagation(); step(-1); };
+        right.onclick = function (e) { e.stopPropagation(); step(1); };
+        list.addEventListener('scroll', update);
+        setTimeout(update, 100);
+      })(wraps[i]);
+    }
+  }
 
   function firstPlayableIndex(epList, from) {
     for (var i = from; i < epList.length; i++) if (isPlayable(epList[i])) return i;
@@ -839,6 +910,32 @@
     };
   }
 
+  // Episódio anterior reproduzível (ou null)
+  function previousEpisode() {
+    if (playerCat === 'tv' || playerEpIdx < 1) return null;
+    var item = findItem(playerCat, playerItemId);
+    if (!item) return null;
+    var epList = getEpList(item);
+    var prev   = epList[playerEpIdx - 1];
+    if (!isPlayable(prev)) return null;
+    return {
+      url:   prev.url,
+      title: item.title + ' - ' + (prev.title || 'Ep ' + playerEpIdx)
+    };
+  }
+
+  // Cria o botão "Anterior" ao lado do "Próximo" (sem precisar editar o tizen.html)
+  function ensurePrevButton() {
+    if ($('btn-prev-ep')) return;
+    var next = $('btn-next-ep');
+    if (!next || !next.parentNode) return;
+    var prev = document.createElement('button');
+    prev.id = 'btn-prev-ep';
+    prev.style.display = 'none';
+    prev.innerHTML = '◀ ANTERIOR';
+    next.parentNode.insertBefore(prev, next);
+  }
+
   function saveProgress() {
     var video = $('player');
     if (!playerUrl || playerEnded || playerCat === 'tv' || !video) return;
@@ -889,6 +986,27 @@
     return !!url && (url.indexOf('blogger.com/video.g') !== -1 || url.indexOf('googlevideo.com') !== -1);
   }
 
+  // Pede autoplay ao embed do Blogger (parâmetro extra; ignorado se não suportado)
+  function withBloggerAutoplay(url) {
+    if (!url || url.indexOf('blogger.com/video.g') === -1 || /[?&]autoplay=/.test(url)) return url;
+    return url + (url.indexOf('?') === -1 ? '?' : '&') + 'autoplay=1';
+  }
+
+  // Tenta reconhecer uma mensagem de "vídeo terminou" vinda do iframe.
+  // O formato real do Blogger não é documentado: veja o console ([Blogger msg]).
+  function isBloggerEnded(d) {
+    try {
+      if (typeof d === 'string') {
+        try { d = JSON.parse(d); } catch (e0) { return /ended/i.test(d); }
+      }
+      if (!d || typeof d !== 'object') return false;
+      if (d.event === 'ended' || d.type === 'ended' || d.state === 'ended' || d.event === 'video-ended') return true;
+      if (d.event === 'onStateChange' && (d.info === 0 || d.data === 0)) return true;
+      if (d.info && d.info.playerState === 0) return true;
+    } catch (e1) {}
+    return false;
+  }
+
   function setBloggerControls(hidden) {
     for (var i = 0; i < BLOGGER_HIDDEN_IDS.length; i++) {
       var el = $(BLOGGER_HIDDEN_IDS[i]);
@@ -905,7 +1023,7 @@
 
     var iframe = document.createElement('iframe');
     iframe.id = 'tizen-blogger-iframe';
-    iframe.src = url;
+    iframe.src = withBloggerAutoplay(url);
     iframe.style.cssText = 'width:100%;height:100%;border:none;background:#000;display:block;';
     iframe.setAttribute('tabindex', '-1'); // não deixa o iframe roubar o teclado/D-pad
     iframe.setAttribute('allowfullscreen', '');
@@ -914,6 +1032,24 @@
 
     bloggerIframe = iframe;
     isBloggerMode = true;
+
+    // Auto-next: se o embed avisar que terminou, passa para o próximo episódio
+    var token = playerUrl;
+    var fired = false;
+    bloggerMsgHandler = function (ev) {
+      if (!bloggerIframe || ev.source !== bloggerIframe.contentWindow) return;
+      try { console.log('[Blogger msg]', ev.origin, ev.data); } catch (e0) {}
+      if (fired || !isBloggerEnded(ev.data) || playerUrl !== token) return;
+      if (!nextEpisode()) return;
+      fired = true;
+      showOsd('⏭ Próximo episódio...');
+      setTimeout(function () {
+        if (playerUrl !== token) return;
+        var nxt = nextEpisode();
+        if (nxt) playVideo(nxt.url, nxt.title, playerItemId, playerCat, playerEpIdx + 1);
+      }, 1500);
+    };
+    window.addEventListener('message', bloggerMsgHandler);
 
     // Sem timeupdate/duration/seek/play-pause no embed: esconde o que depende disso
     setBloggerControls(true);
@@ -927,6 +1063,10 @@
 
   // Destrói o iframe do Blogger (se existir) e restaura os controles normais
   function destroyBloggerIframe() {
+    if (bloggerMsgHandler) {
+      window.removeEventListener('message', bloggerMsgHandler);
+      bloggerMsgHandler = null;
+    }
     if (bloggerIframe) {
       bloggerIframe.src = 'about:blank';
       if (bloggerIframe.parentNode) bloggerIframe.parentNode.removeChild(bloggerIframe);
@@ -1029,6 +1169,21 @@
     } else {
       nextBtn.style.display = 'none';
       nextBtn.onclick = null;
+    }
+
+    // Botão "Anterior"
+    var prevBtn = $('btn-prev-ep');
+    if (prevBtn) {
+      var prv = previousEpisode();
+      if (prv) {
+        prevBtn.style.display = 'inline-block';
+        prevBtn.onclick = function () {
+          playVideo(prv.url, prv.title, playerItemId, playerCat, playerEpIdx - 1);
+        };
+      } else {
+        prevBtn.style.display = 'none';
+        prevBtn.onclick = null;
+      }
     }
 
     // Progresso periódico (sem efeito no modo Blogger — ver saveProgress)
@@ -1316,7 +1471,7 @@
   var SELECTORS = {
     main:   '.nav-link, #search-input, .card',
     modal:  '.modal-close-btn, .modal-play-btn, .season-header, .ep-item:not(.locked), .canal-item',
-    player: '#btn-play, #btn-back, #btn-fwd, #btn-fs, #btn-next-ep, #btn-close-player'
+    player: '#btn-play, #btn-back, #btn-fwd, #btn-fs, #btn-prev-ep, #btn-next-ep, #btn-close-player'
   };
 
   function getScope() {
