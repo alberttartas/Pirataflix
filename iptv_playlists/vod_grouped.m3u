@@ -27360,3 +27360,6 @@ http://195.178.110.110/sportv2/index.m3u8
 #EXTINF:-1 group-title="⚽ Esportes" tvg-id="SPORTV3.BR@SD" tvg-logo="https://i.imgur.com/mWOR8pi.png",SporTV 3 (1080p)
 http://195.178.110.110/sportv3/index.m3u8
 
+#EXTINF:-1 group-title="📺 Geral" tvg-id="SBTNACIONAL.BR@SD" tvg-logo="https://i.imgur.com/tc1ALuu.png",SBT Nacional (1080p)
+https://cdn.live.br1.jmvstream.com/w/LVW-10801/LVW10801_Xvg4R0u57n/chunklist.m3u8
+

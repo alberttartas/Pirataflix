@@ -23085,5 +23085,20 @@
         "title": "AO VIVO"
       }
     ]
+  },
+  {
+    "id": "SBTNacional.br@SD",
+    "type": "tv",
+    "title": "SBT Nacional (1080p)",
+    "tvg_id": "SBTNacional.br@SD",
+    "tvg_logo": "https://i.imgur.com/tc1ALuu.png",
+    "group": "📺 Geral",
+    "url": "https://cdn.live.br1.jmvstream.com/w/LVW-10801/LVW10801_Xvg4R0u57n/chunklist.m3u8",
+    "episodes": [
+      {
+        "url": "https://cdn.live.br1.jmvstream.com/w/LVW-10801/LVW10801_Xvg4R0u57n/chunklist.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
   }
 ]
