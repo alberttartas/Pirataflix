@@ -310,7 +310,7 @@
         "https://image.tmdb.org/t/p/w500/lH6LQcUhkVOK6ekvXzthQAogUnR.jpg",
         "https://image.tmdb.org/t/p/w500/23ReR54BPzRRhsAi243VaHn6wqk.jpg"
       ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/eSvYccJm5ejJXFtJTqM2dIqrhK7.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/subj7knTn4DeS6KS7qI66EQKe9i.jpg",
       "overview": "É um novo dia para Peter Parker. Combatendo o crime em tempo integral como Homem-Aranha em um mundo que não se lembra mais dele e lidando com a pressão de ver seus antigos amigos seguirem em frente sem sua presença, Peter passa por uma mudança que talvez nem ele tenha o poder de controlar. Mas essa transformação também pode ser a única coisa capaz de deter uma surpreendente nova ameaça à cidade e às pessoas que ele ama: um poderoso vilão que ninguém sequer consegue enxergar.",
       "year": "2026",
       "genres": [
@@ -318,7 +318,7 @@
         "Ação",
         "Aventura"
       ],
-      "rating": 8.2,
+      "rating": 8.3,
       "cast": [
         {
           "name": "Tom Holland",
@@ -328,7 +328,7 @@
         {
           "name": "Sadie Sink",
           "character": "Jean Grey",
-          "profile": "https://image.tmdb.org/t/p/w185/92FddzBfK50XOUbtwjqHPraoGHy.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/fV0KHJcK3fYX2acMorDUf1Uv9mY.jpg"
         },
         {
           "name": "Tramell Tillman",
@@ -338,7 +338,7 @@
         {
           "name": "Zendaya",
           "character": "MJ",
-          "profile": "https://image.tmdb.org/t/p/w185/1qup8tSt95HLbcy2c2xrx4iJNxv.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/qGkBlyn1AwQpuFnRARMRwj0iHZp.jpg"
         },
         {
           "name": "Jacob Batalon",
@@ -1307,7 +1307,7 @@
     {
       "id": "resident_evil_1",
       "title": "Resident Evil 1",
-      "poster": "https://image.tmdb.org/t/p/w500/aC9RinOuPR6DEgwAZZd9IzUA6Qa.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/oxZX9s92Xr5f7mnFCGyEsB5mCOb.jpg",
       "episodes": [
         {
           "title": "Resident Evil: O Hóspede Maldito",
@@ -1318,63 +1318,62 @@
       "type": "movie",
       "local_poster": "/Pirataflix/assets/Capas/default.jpg",
       "posters": [
-        "https://image.tmdb.org/t/p/w500/aC9RinOuPR6DEgwAZZd9IzUA6Qa.jpg",
-        "https://image.tmdb.org/t/p/w500/1x5OaFOo38JAwR5yXxeuvQg3VWH.jpg",
-        "https://image.tmdb.org/t/p/w500/jxBoxz8dKZ8CB1C3lgDqFxzLNQB.jpg",
-        "https://image.tmdb.org/t/p/w500/1WzPySYjKtHJQAcnb5E2l7Lw12Q.jpg",
-        "https://image.tmdb.org/t/p/w500/pOLzp30jgfqg71iWOzpixq4WSkt.jpg",
-        "https://image.tmdb.org/t/p/w500/3wSIagfHnR9vRAPyNjCfGzfgbXK.jpg",
-        "https://image.tmdb.org/t/p/w500/iyaJ1uZIogd3BWkgMVplmG2Cw6V.jpg"
+        "https://image.tmdb.org/t/p/w500/1UKNef590A0ZaMnxsscIcWuK1Em.jpg",
+        "https://image.tmdb.org/t/p/w500/uoXZOT9dGDtrZNgOSOOKOXlV4XT.jpg",
+        "https://image.tmdb.org/t/p/w500/oxZX9s92Xr5f7mnFCGyEsB5mCOb.jpg",
+        "https://image.tmdb.org/t/p/w500/jKso3TUFnPpRFNLnDrgTUK0R9MX.jpg",
+        "https://image.tmdb.org/t/p/w500/1EmUTW2D9Z3bmlDz5PUAK9sFFNk.jpg",
+        "https://image.tmdb.org/t/p/w500/9vJX0Q9LSoOlTio8cTAm2ms0sWz.jpg"
       ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/3JgfNUCoN6pyXlO7wZOJ4PgQgW3.jpg",
-      "overview": "O mortal Vírus-T foi erradicado. Sete anos depois, um passageiro chega aos EUA com os mesmos sintomas deste vírus e zumbis tomam o aeroporto. Surgem dúvidas sobre a erradicação do vírus e o governo manda seus melhores agentes investigarem.",
-      "year": "2008",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/8J7J7CBmapmcMaxsn9KMiaHzOU2.jpg",
+      "overview": "Uma equipe de comando militar composta por civis deve lutar contra mortos-vivos carnívoros, cães mutantes e defesas mortíferas de um super computador, antes que um vírus solto consuma a humanidade, nesta adaptação do sucesso da série de vídeo-games!",
+      "year": "2002",
       "genres": [
-        "Animação",
         "Terror",
-        "Ação"
+        "Ação",
+        "Ficção Científica"
       ],
-      "rating": 6.8,
+      "rating": 6.7,
       "cast": [
         {
-          "name": "Paul Mercier",
-          "character": "Leon S. Kennedy (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/1GcIA6oQ3aaBG8HSfBcCRf6R5DW.jpg"
+          "name": "Milla Jovovich",
+          "character": "Alice",
+          "profile": "https://image.tmdb.org/t/p/w185/usWnHCzbADijULREZYSJ0qfM00y.jpg"
         },
         {
-          "name": "Alyson Court",
-          "character": "Claire Redfield (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/kPeTYEV6vyyAJEsUlomVpiLcd6v.jpg"
+          "name": "Michelle Rodriguez",
+          "character": "Rain",
+          "profile": "https://image.tmdb.org/t/p/w185/wVcbrae4eRqGMFZz8Eh52Dl1biP.jpg"
         },
         {
-          "name": "Laura Bailey",
-          "character": "Angela Miller (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/xrq33v9N78hhmApcfkoYx0TAw1A.jpg"
+          "name": "Eric Mabius",
+          "character": "Matt",
+          "profile": "https://image.tmdb.org/t/p/w185/gfTyV38S5BzV9pZnIducUgo68hK.jpg"
         },
         {
-          "name": "Roger Craig Smith",
-          "character": "Curtis Miller (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/6oE356GbRHAf91Llw7LDpvsAf5L.jpg"
+          "name": "James Purefoy",
+          "character": "Spence",
+          "profile": "https://image.tmdb.org/t/p/w185/nCNyifrD9wOao27A1nT5n4Soxt1.jpg"
         },
         {
-          "name": "Crispin Freeman",
-          "character": "Frederic Downing (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/oqqNzJK7F9ZO6Kft4BwncT6K8hz.jpg"
+          "name": "Martin Crewes",
+          "character": "Kaplan",
+          "profile": "https://image.tmdb.org/t/p/w185/gar5CPEMP5efGF5h36iyqSDvHsB.jpg"
         },
         {
-          "name": "Michael Sorich",
-          "character": "Senator Ron Davis (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/fiuJUfRiESALcUXW7BHsOJ12yfQ.jpg"
+          "name": "Colin Salmon",
+          "character": "One",
+          "profile": "https://image.tmdb.org/t/p/w185/mLlAU6Zl2MIL5znp5UHdX3sVTN7.jpg"
         },
         {
-          "name": "Salli Saffioti",
-          "character": "Ingrid Hunnigan (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/awF13TyorW4Rp5rq10p5XL0Po3m.jpg"
+          "name": "Pasquale Aleardi",
+          "character": "J.D.",
+          "profile": "https://image.tmdb.org/t/p/w185/zY9iu1ObHecBwRmZscIHbhDxiJw.jpg"
         },
         {
-          "name": "Michelle Ruff",
-          "character": "Rani Chawla (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/eX300Qn6TYaYaXdH7x6OmClZqJf.jpg"
+          "name": "Heike Makatsch",
+          "character": "Lisa",
+          "profile": "https://image.tmdb.org/t/p/w185/plwQwvsMG18F3eiD0rWN1Vpw75u.jpg"
         }
       ]
     },
@@ -1740,7 +1739,7 @@
         {
           "name": "Charles Dance",
           "character": "Alan Jonah",
-          "profile": "https://image.tmdb.org/t/p/w185/28ElvRC5ftOSzZBFM0cn4XrwH36.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/pKiXMCLf0uHQNwQPCjSNrjsUiJO.jpg"
         }
       ]
     },
@@ -3887,7 +3886,7 @@
         {
           "name": "Genija Rykova",
           "character": "Vera Koleeva",
-          "profile": "https://image.tmdb.org/t/p/w185/qgYyIe0bMhn6TgI1RB8wMMZ2rt5.jpg"
+          "profile": ""
         },
         {
           "name": "Henry Hübchen",
@@ -25978,8 +25977,8 @@
               "url": "https://noveflixplay.com/api/video-proxy/NOBREZA-166",
               "episode": 166,
               "air_date": "2026-10-06",
-              "overview": "",
-              "still": "",
+              "overview": "Jendal anuncia, na frente de todos, que Alika é sua esposa legítima. Alika e Niara fogem de Jendal, com a ajuda de Tonho. Teresa agride Virgínia, e Onildo a apoia. Todos comentam sobre as verdadeiras identidades de Alika e Niara. Omar, Tonho, Alika e Niara chegam a um esconderijo seguro. Jendal se revolta com a fuga da princesa. Mirinho repreende a atitude de Virgínia contra Alika.",
+              "still": "https://image.tmdb.org/t/p/w400/As8ELyAygBWZpqfT7ECzIfi1QDx.jpg",
               "guest_stars": [],
               "locked": false
             },
@@ -25988,11 +25987,10 @@
               "url": "https://noveflixplay.com/api/video-proxy/NOBREZA-167",
               "episode": 167,
               "air_date": "2026-10-07",
-              "overview": "",
-              "still": "",
+              "overview": "Mirinho se coloca à disposição de Jendal. Diógenes repreende Virgínia por ter denunciado Alika e Niara a Jendal. Marta se solidariza com Teresa e Onildo. Tonho sugere que Alika e Niara retornem para Batanga enquanto Jendal está no Brasil. Fortunato, Adônis, Jendal e Mirinho fazem uma varredura pelas terras do engenho atrás de Tonho, Alika, Niara e Omar.",
+              "still": "https://image.tmdb.org/t/p/w400/flE6lATL20QYP3rqYtqjLxRk86y.jpg",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-10-07T21:00:00"
+              "locked": false
             },
             {
               "title": "Episódio 168",
@@ -28235,8 +28233,8 @@
           "url": "https://noveflixplay.com/api/video-proxy/NOBREZA-166",
           "episode": 166,
           "air_date": "2026-10-06",
-          "overview": "",
-          "still": "",
+          "overview": "Jendal anuncia, na frente de todos, que Alika é sua esposa legítima. Alika e Niara fogem de Jendal, com a ajuda de Tonho. Teresa agride Virgínia, e Onildo a apoia. Todos comentam sobre as verdadeiras identidades de Alika e Niara. Omar, Tonho, Alika e Niara chegam a um esconderijo seguro. Jendal se revolta com a fuga da princesa. Mirinho repreende a atitude de Virgínia contra Alika.",
+          "still": "https://image.tmdb.org/t/p/w400/As8ELyAygBWZpqfT7ECzIfi1QDx.jpg",
           "guest_stars": [],
           "locked": false
         },
@@ -28245,11 +28243,10 @@
           "url": "https://noveflixplay.com/api/video-proxy/NOBREZA-167",
           "episode": 167,
           "air_date": "2026-10-07",
-          "overview": "",
-          "still": "",
+          "overview": "Mirinho se coloca à disposição de Jendal. Diógenes repreende Virgínia por ter denunciado Alika e Niara a Jendal. Marta se solidariza com Teresa e Onildo. Tonho sugere que Alika e Niara retornem para Batanga enquanto Jendal está no Brasil. Fortunato, Adônis, Jendal e Mirinho fazem uma varredura pelas terras do engenho atrás de Tonho, Alika, Niara e Omar.",
+          "still": "https://image.tmdb.org/t/p/w400/flE6lATL20QYP3rqYtqjLxRk86y.jpg",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-10-07T21:00:00"
+          "locked": false
         },
         {
           "title": "Episódio 168",
@@ -109550,6 +109547,21 @@
       "episodes": [
         {
           "url": "https://cdn.live.br1.jmvstream.com/w/LVW-10801/LVW10801_Xvg4R0u57n/chunklist.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "TVGuarapari.br@SD",
+      "type": "tv",
+      "title": "like Gecko) Chrome/154.0.0.0 Safari/537.36\" group-title=\"General\",TV Guarapari (720p)",
+      "tvg_id": "TVGuarapari.br@SD",
+      "tvg_logo": "https://i.imgur.com/eDNzwK0.png",
+      "group": "📺 Geral",
+      "url": "https://video.welltecnologia.com.br/tvguarapari/tvguarapari/playlist.m3u8",
+      "episodes": [
+        {
+          "url": "https://video.welltecnologia.com.br/tvguarapari/tvguarapari/playlist.m3u8",
           "title": "AO VIVO"
         }
       ]

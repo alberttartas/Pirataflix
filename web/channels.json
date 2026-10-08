@@ -23100,5 +23100,20 @@
         "title": "AO VIVO"
       }
     ]
+  },
+  {
+    "id": "TVGuarapari.br@SD",
+    "type": "tv",
+    "title": "like Gecko) Chrome/154.0.0.0 Safari/537.36\" group-title=\"General\",TV Guarapari (720p)",
+    "tvg_id": "TVGuarapari.br@SD",
+    "tvg_logo": "https://i.imgur.com/eDNzwK0.png",
+    "group": "📺 Geral",
+    "url": "https://video.welltecnologia.com.br/tvguarapari/tvguarapari/playlist.m3u8",
+    "episodes": [
+      {
+        "url": "https://video.welltecnologia.com.br/tvguarapari/tvguarapari/playlist.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
   }
 ]
