@@ -118,7 +118,7 @@
         {
           "name": "Mackenzie Davis",
           "character": "Grace",
-          "profile": "https://image.tmdb.org/t/p/w185/CEpYCoD6erYRYekmFHuQAULLD5.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/ekQbEIKh26jbz17P0wwLbo6uNs9.jpg"
         },
         {
           "name": "Natalia Reyes",
@@ -323,7 +323,7 @@
         {
           "name": "Tom Holland",
           "character": "Peter Parker / Spider-Man",
-          "profile": "https://image.tmdb.org/t/p/w185/xKBAaPIa1c7tzZD3Y0MhBLv4hPE.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/adwEBb2sCSzqwnpVgNEG7irl1Ne.jpg"
         },
         {
           "name": "Sadie Sink",
@@ -25997,11 +25997,10 @@
               "url": "https://noveflixplay.com/api/video-proxy/NOBREZA-168",
               "episode": 168,
               "air_date": "2026-10-08",
-              "overview": "",
-              "still": "",
+              "overview": "Fortunato monta guarda nas saídas de Barro Preto, e Tonho aconselha Alika e os demais a adiarem a fuga. Onildo afirma a Sebastião que não é mais seu amigo. Jendal interroga Teresa sobre José/Zambi, e pressiona Caetana para descobrir o paradeiro de Tonho. Tonho propõe um caminho alternativo para deixar Barro Preto, e Omar e Alika aceitam. Mirinho rompe com Virgínia.",
+              "still": "https://image.tmdb.org/t/p/w400/fKy4T74CmHDg8PACalYWcf4X0rV.jpg",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-10-08T21:00:00"
+              "locked": false
             },
             {
               "title": "Episódio 169",
@@ -28253,11 +28252,10 @@
           "url": "https://noveflixplay.com/api/video-proxy/NOBREZA-168",
           "episode": 168,
           "air_date": "2026-10-08",
-          "overview": "",
-          "still": "",
+          "overview": "Fortunato monta guarda nas saídas de Barro Preto, e Tonho aconselha Alika e os demais a adiarem a fuga. Onildo afirma a Sebastião que não é mais seu amigo. Jendal interroga Teresa sobre José/Zambi, e pressiona Caetana para descobrir o paradeiro de Tonho. Tonho propõe um caminho alternativo para deixar Barro Preto, e Omar e Alika aceitam. Mirinho rompe com Virgínia.",
+          "still": "https://image.tmdb.org/t/p/w400/fKy4T74CmHDg8PACalYWcf4X0rV.jpg",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-10-08T21:00:00"
+          "locked": false
         },
         {
           "title": "Episódio 169",
@@ -109562,6 +109560,66 @@
       "episodes": [
         {
           "url": "https://video.welltecnologia.com.br/tvguarapari/tvguarapari/playlist.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "CartoonNetworkLatinAmerica.us@Brazil",
+      "type": "tv",
+      "title": "Cartoon Network Latin America Brazil (720p) [Geo-blocked]",
+      "tvg_id": "CartoonNetworkLatinAmerica.us@Brazil",
+      "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png",
+      "group": "🎨 Animação",
+      "url": "http://15.204.246.24:8080/CartoonNetworkHD/index.m3u8",
+      "episodes": [
+        {
+          "url": "http://15.204.246.24:8080/CartoonNetworkHD/index.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "DiscoveryKidsLatinAmerica.us@Brazil",
+      "type": "tv",
+      "title": "Discovery Kids Latin America Brazil (720p) [Geo-blocked]",
+      "tvg_id": "DiscoveryKidsLatinAmerica.us@Brazil",
+      "tvg_logo": "",
+      "group": "🧸 Infantil",
+      "url": "http://15.204.246.24:8080/DiscoveryKidsHD/index.m3u8",
+      "episodes": [
+        {
+          "url": "http://15.204.246.24:8080/DiscoveryKidsHD/index.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "DiscoveryWorld.us@Brazil",
+      "type": "tv",
+      "title": "Discovery World Brazil (720p) [Geo-blocked]",
+      "tvg_id": "DiscoveryWorld.us@Brazil",
+      "tvg_logo": "https://i.imgur.com/yNFmUkE.png",
+      "group": "🎭 Entretenimento",
+      "url": "http://15.204.246.24:8080/DiscoveryWorldHD/index.m3u8",
+      "episodes": [
+        {
+          "url": "http://15.204.246.24:8080/DiscoveryWorldHD/index.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "TNTLatinAmerica.us@Brazil",
+      "type": "tv",
+      "title": "TNT Latin America Brazil (720p) [Geo-blocked]",
+      "tvg_id": "TNTLatinAmerica.us@Brazil",
+      "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/TNT_Logo_2016.svg/960px-TNT_Logo_2016.svg.png",
+      "group": "📺 Geral",
+      "url": "http://15.204.246.24:8080/TNTHD/index.m3u8",
+      "episodes": [
+        {
+          "url": "http://15.204.246.24:8080/TNTHD/index.m3u8",
           "title": "AO VIVO"
         }
       ]

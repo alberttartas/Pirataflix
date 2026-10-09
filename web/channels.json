@@ -23115,5 +23115,65 @@
         "title": "AO VIVO"
       }
     ]
+  },
+  {
+    "id": "CartoonNetworkLatinAmerica.us@Brazil",
+    "type": "tv",
+    "title": "Cartoon Network Latin America Brazil (720p) [Geo-blocked]",
+    "tvg_id": "CartoonNetworkLatinAmerica.us@Brazil",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png",
+    "group": "🎨 Animação",
+    "url": "http://15.204.246.24:8080/CartoonNetworkHD/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://15.204.246.24:8080/CartoonNetworkHD/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "DiscoveryKidsLatinAmerica.us@Brazil",
+    "type": "tv",
+    "title": "Discovery Kids Latin America Brazil (720p) [Geo-blocked]",
+    "tvg_id": "DiscoveryKidsLatinAmerica.us@Brazil",
+    "tvg_logo": "",
+    "group": "🧸 Infantil",
+    "url": "http://15.204.246.24:8080/DiscoveryKidsHD/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://15.204.246.24:8080/DiscoveryKidsHD/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "DiscoveryWorld.us@Brazil",
+    "type": "tv",
+    "title": "Discovery World Brazil (720p) [Geo-blocked]",
+    "tvg_id": "DiscoveryWorld.us@Brazil",
+    "tvg_logo": "https://i.imgur.com/yNFmUkE.png",
+    "group": "🎭 Entretenimento",
+    "url": "http://15.204.246.24:8080/DiscoveryWorldHD/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://15.204.246.24:8080/DiscoveryWorldHD/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "TNTLatinAmerica.us@Brazil",
+    "type": "tv",
+    "title": "TNT Latin America Brazil (720p) [Geo-blocked]",
+    "tvg_id": "TNTLatinAmerica.us@Brazil",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/TNT_Logo_2016.svg/960px-TNT_Logo_2016.svg.png",
+    "group": "📺 Geral",
+    "url": "http://15.204.246.24:8080/TNTHD/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://15.204.246.24:8080/TNTHD/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
   }
 ]

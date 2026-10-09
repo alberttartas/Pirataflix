@@ -27366,3 +27366,15 @@ https://cdn.live.br1.jmvstream.com/w/LVW-10801/LVW10801_Xvg4R0u57n/chunklist.m3u
 #EXTINF:-1 group-title="📺 Geral" tvg-id="TVGUARAPARI.BR@SD" tvg-logo="https://i.imgur.com/eDNzwK0.png",like Gecko) Chrome/154.0.0.0 Safari/537.36" group-title="General",TV Guarapari (720p)
 https://video.welltecnologia.com.br/tvguarapari/tvguarapari/playlist.m3u8
 
+#EXTINF:-1 group-title="🎨 Animação" tvg-id="CARTOONNETWORKLATINAMERICA.US@BRAZIL" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png",Cartoon Network Latin America Brazil (720p) [Geo-blocked]
+http://15.204.246.24:8080/CartoonNetworkHD/index.m3u8
+
+#EXTINF:-1 group-title="🧸 Infantil" tvg-id="DISCOVERYKIDSLATINAMERICA.US@BRAZIL" tvg-logo="",Discovery Kids Latin America Brazil (720p) [Geo-blocked]
+http://15.204.246.24:8080/DiscoveryKidsHD/index.m3u8
+
+#EXTINF:-1 group-title="🎭 Entretenimento" tvg-id="DISCOVERYWORLD.US@BRAZIL" tvg-logo="https://i.imgur.com/yNFmUkE.png",Discovery World Brazil (720p) [Geo-blocked]
+http://15.204.246.24:8080/DiscoveryWorldHD/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="TNTLATINAMERICA.US@BRAZIL" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/TNT_Logo_2016.svg/960px-TNT_Logo_2016.svg.png",TNT Latin America Brazil (720p) [Geo-blocked]
+http://15.204.246.24:8080/TNTHD/index.m3u8
+
