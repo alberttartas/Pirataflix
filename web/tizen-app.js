@@ -1,6 +1,6 @@
 /*
  * PIRATAFLIX — tizen-app.js
- * v2.4 — Enter/Play sempre chegam ao vídeo (direto ou iframe Blogger)
+ * v2.4 
  */
 
 (function () {
@@ -290,9 +290,7 @@
       '.ep-arrow:hover{background:#e50914}',
       '.ep-arrow-left{left:-6px}',
       '.ep-arrow-right{right:-6px}',
-      '.ep-arrow-off{display:none}',
-      '#pf-blogger-overlay{position:absolute;top:0;left:0;width:100%;height:100%;',
-      'background:transparent;z-index:5;outline:none;cursor:pointer}'
+      '.ep-arrow-off{display:none}'
     ].join('\n');
     var st = document.createElement('style');
     st.id = 'pf-extra-style';
@@ -1014,9 +1012,13 @@
   function togglePlay() {
     var video = $('player');
     if (isBloggerMode) {
-      iframeCommand('togglePlay');
-      iframeCommand('playVideo'); // alguns players só têm playVideo
-      iframeClickCenter();
+      // O iframe é cross-origin: postMessage/click sintético não conseguem
+      // acionar com segurança o botão Play interno. Entrega o foco ao player
+      // para que o usuário use o controle ▶ nativo do Blogger.
+      if (bloggerIframe) {
+        try { bloggerIframe.focus(); } catch (e) {}
+      }
+      showOsd('▶ Use o controle do próprio vídeo');
       return;
     }
     if (!video) return;
@@ -1035,7 +1037,8 @@
     iframe.id = 'tizen-blogger-iframe';
     iframe.src = withBloggerAutoplay(url);
     iframe.style.cssText = 'width:100%;height:100%;border:none;background:#000;display:block;';
-    iframe.setAttribute('tabindex', '-1');
+    // Permite foco/interação com os controles nativos do player Blogger.
+    iframe.setAttribute('tabindex', '0');
     iframe.setAttribute('allowfullscreen', '');
     iframe.setAttribute('allow', 'autoplay; fullscreen; encrypted-media; picture-in-picture');
     if (isEmbedPage(url)) {
@@ -1043,15 +1046,10 @@
     }
     container.appendChild(iframe);
 
-    // Overlay transparente: recebe o foco e as teclas do D-pad.
-    var overlay = document.createElement('div');
-    overlay.id = 'pf-blogger-overlay';
-    overlay.setAttribute('tabindex', '0');
-    overlay.onclick = function () { togglePlay(); };
-    container.appendChild(overlay);
-
+    // Não colocar overlay sobre o iframe: isso bloqueia o clique no botão
+    // ▶ nativo do Blogger. O iframe precisa receber o clique/controle remoto.
     bloggerIframe  = iframe;
-    bloggerOverlay = overlay;
+    bloggerOverlay = null;
     isBloggerMode  = true;
 
     var token = playerUrl;
@@ -1075,10 +1073,8 @@
     // btn-play FICA visível: chama togglePlay(), que fala com o iframe.
     setBloggerControls(true);
 
-    // Foco no overlay: as teclas do D-pad caem em onPlayerKey.
-    setTimeout(function () {
-      try { overlay.focus(); } catch (e) {}
-    }, 150);
+    // Não forçar foco em uma camada transparente; ela impediria o uso
+    // dos controles nativos do vídeo. O iframe permanece interativo.
   }
 
   function destroyBloggerIframe() {
