@@ -1,6 +1,6 @@
 /*
  * PIRATAFLIX — tizen-app.js
- * v2.4 
+ * v2.5 — foco do controle remoto no player Blogger
  */
 
 (function () {
@@ -1008,17 +1008,20 @@
     } catch (e) {}
   }
 
-  // Alterna play/pause: no <video> mexe direto; no iframe manda comandos.
+  // Alterna play/pause: no <video> controlamos diretamente. No Blogger,
+  // o OK do controle remoto transfere o foco para o iframe; os próximos
+  // comandos do D-pad/OK passam a ser tratados pelo player incorporado.
+  function focusBloggerPlayer() {
+    if (!bloggerIframe) return;
+    try { bloggerIframe.setAttribute('tabindex', '0'); } catch (e) {}
+    try { bloggerIframe.focus(); } catch (e2) {}
+    showOsd('▶ Foco no vídeo: pressione OK para reproduzir');
+  }
+
   function togglePlay() {
     var video = $('player');
     if (isBloggerMode) {
-      // O iframe é cross-origin: postMessage/click sintético não conseguem
-      // acionar com segurança o botão Play interno. Entrega o foco ao player
-      // para que o usuário use o controle ▶ nativo do Blogger.
-      if (bloggerIframe) {
-        try { bloggerIframe.focus(); } catch (e) {}
-      }
-      showOsd('▶ Use o controle do próprio vídeo');
+      focusBloggerPlayer();
       return;
     }
     if (!video) return;
@@ -1757,12 +1760,12 @@
 
       case KEY.MEDIA_PLAY:
         e.preventDefault();
-        if (isBloggerMode) { iframeCommand('playVideo'); iframeClickCenter(); }
+        if (isBloggerMode) focusBloggerPlayer();
         else if (video) safePlay(video);
         return;
       case KEY.MEDIA_PAUSE:
         e.preventDefault();
-        if (isBloggerMode) { iframeCommand('pauseVideo'); iframeClickCenter(); }
+        if (isBloggerMode) focusBloggerPlayer();
         else if (video) video.pause();
         return;
       case KEY.MEDIA_PLAYPAUSE:
