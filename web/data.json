@@ -3,7 +3,7 @@
     {
       "id": "o_pai_o",
       "title": "O Pai O",
-      "poster": "https://image.tmdb.org/t/p/w500/j724bxlzY6ISyHv2XaIxAgOgYqs.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/9S6TOCqZqkT0vJdZzdQSb0pe0MT.jpg",
       "episodes": [
         {
           "title": "Ó Paí, Ó",
@@ -14,62 +14,53 @@
       "type": "movie",
       "local_poster": "/Pirataflix/assets/Capas/default.jpg",
       "posters": [
-        "https://image.tmdb.org/t/p/w500/j724bxlzY6ISyHv2XaIxAgOgYqs.jpg",
-        "https://image.tmdb.org/t/p/w500/734rkqbjH8NIBYGIse0bAP5u0eC.jpg",
-        "https://image.tmdb.org/t/p/w500/rlxC2Xa6CqMVhh1qtblSf2drZc4.jpg",
-        "https://image.tmdb.org/t/p/w500/alpLRNITM8ZcuxWNPT5jFBYOrlj.jpg",
-        "https://image.tmdb.org/t/p/w500/h6pmmR85KWbGuVzTrrPHAvne8cl.jpg",
-        "https://image.tmdb.org/t/p/w500/p6k1qecHTIMthJa34BwJxDbKxhe.jpg"
+        "https://image.tmdb.org/t/p/w500/9S6TOCqZqkT0vJdZzdQSb0pe0MT.jpg"
       ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/89f7JlGeKDBQy7txuGznXVwHP1Z.jpg",
-      "overview": "Chico é uma figura marcante do Grupo Teatral dos Grandelinhas, que está a ensaiar a peça \"O Pai Tirano\", mas nutre uma paixão delirante por Tatão, que adora cinema e é namoriscada por Artur. No entanto, tudo muda quando um grande mal-entendido faz crer a Tatão que Chico é um rico fidalgo que abandonou o lar por desentendimentos com o pai...",
-      "year": "1941",
+      "overview": "Quatro adolescentes se perdem na mata liderados por um feiticeiro picareta que evoca um espectro maligno visando antever o resultado do jogo do bicho.",
+      "year": "2015",
       "genres": [
-        "Família",
-        "Comédia",
-        "Romance"
+        "Terror"
       ],
-      "rating": 7.9,
       "cast": [
         {
-          "name": "Vasco Santana",
-          "character": "Mestre José Santana",
-          "profile": "https://image.tmdb.org/t/p/w185/7EDhP54dG1TFzV9xzy6zifwzAw7.jpg"
+          "name": "Rosinilma Gudim",
+          "character": "Rosinha",
+          "profile": ""
         },
         {
-          "name": "Francisco Ribeiro",
-          "character": "Francisco Mega",
-          "profile": "https://image.tmdb.org/t/p/w185/ju3bXwCsxVbBK9SMetxcYj09lu4.jpg"
+          "name": "Manoel Clemente",
+          "character": "O Pai da Noite",
+          "profile": ""
         },
         {
-          "name": "Leonor Maia",
-          "character": "Tatão",
-          "profile": "https://image.tmdb.org/t/p/w185/qjsu3tinRIV0bAwcx5rIVp4IOY4.jpg"
+          "name": "Hugo Erio",
+          "character": "Santana",
+          "profile": ""
         },
         {
-          "name": "Graça Maria",
-          "character": "Gracinha",
-          "profile": "https://image.tmdb.org/t/p/w185/n0ZGgoB2AexLx5iyNJ6OftI8Ji0.jpg"
+          "name": "Gustavo Guga",
+          "character": "Augustus",
+          "profile": ""
         },
         {
-          "name": "Arthur Duarte",
-          "character": "Artur de Castro",
-          "profile": "https://image.tmdb.org/t/p/w185/sO1NX6WBzOh949HXAjk1zIvbhEX.jpg"
+          "name": "Jaqueline Silva",
+          "character": "Crisllayne",
+          "profile": ""
         },
         {
-          "name": "Teresa Gomes",
-          "character": "Teresa",
-          "profile": "https://image.tmdb.org/t/p/w185/2r4yqIKl5YxceYVqXxDIRkoO80O.jpg"
+          "name": "Ana Beatriz",
+          "character": "Manicure",
+          "profile": ""
         },
         {
-          "name": "Luíza Durão",
-          "character": "Dona Cândida",
-          "profile": "https://image.tmdb.org/t/p/w185/vlfvk8mqf5pA80mZtOOweMhtjIr.jpg"
+          "name": "Diogo  Araújo",
+          "character": "Garçom",
+          "profile": ""
         },
         {
-          "name": "Laura Alves",
-          "character": "Laurinha",
-          "profile": "https://image.tmdb.org/t/p/w185/4R8qqriEJbGlNQxr1jDpNW68QTl.jpg"
+          "name": "Manoel Clemente",
+          "character": "Garçom",
+          "profile": ""
         }
       ]
     },
@@ -323,7 +314,7 @@
         {
           "name": "Tom Holland",
           "character": "Peter Parker / Spider-Man",
-          "profile": "https://image.tmdb.org/t/p/w185/adwEBb2sCSzqwnpVgNEG7irl1Ne.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/xKBAaPIa1c7tzZD3Y0MhBLv4hPE.jpg"
         },
         {
           "name": "Sadie Sink",
@@ -866,7 +857,7 @@
     {
       "id": "eles_nao_usam_black_tie",
       "title": "Eles-nao-usam-black-tie",
-      "poster": "/Pirataflix/assets/Capas/default.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/r0jXCh59NOJaFKtf9tqglIm3n7N.jpg",
       "episodes": [
         {
           "title": "eles-nao-usam-black-tie",
@@ -875,26 +866,62 @@
         }
       ],
       "type": "movie",
-      "overview": "Em São Paulo, o jovem operário Tião se preocupa com o futuro de sua família ao descobrir a gravidez de sua namorada Maria. Ao mesmo tempo, eclode um movimento grevista que divide a categoria metalúrgica. Preocupado e temendo perder o emprego, Tião fura a greve, entrando em conflito com o pai, Otávio, um velho militante sindical.",
-      "year": "2018",
+      "local_poster": "/Pirataflix/assets/Capas/default.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/r0jXCh59NOJaFKtf9tqglIm3n7N.jpg",
+        "https://image.tmdb.org/t/p/w500/z45EcE3hthpvGh5jZ7YT7VVJz0K.jpg",
+        "https://image.tmdb.org/t/p/w500/cjyIYc2ZTSqQ7PaBvbAhORhBQya.jpg",
+        "https://image.tmdb.org/t/p/w500/9N1xdxhIrNfv7D82nQm5XeW36Yi.jpg",
+        "https://image.tmdb.org/t/p/w500/mrhpAmBHxeK6HJ5KFPIEVgX4iLm.jpg",
+        "https://image.tmdb.org/t/p/w500/txICAj1sfzqnHBopIZG8Ccgg6ty.jpg"
+      ],
+      "backdrop": "https://image.tmdb.org/t/p/w1280/7qoRAL3ceJ5LH0pZ0KxkqkC0JMW.jpg",
+      "overview": "Em São Paulo, em 1980, o jovem operário Tião e sua namorada Maria decidem casar-se ao saber que a moça está grávida. Ao mesmo tempo, eclode um movimento grevista que divide a categoria metalúrgica. Preocupado com o casamento e temendo perder o emprego, Tião fura a greve, entrando em conflito com o pai, Otávio, um velho militante sindical que passou três anos na cadeia durante o regime militar",
+      "year": "1981",
       "genres": [
         "Drama"
       ],
+      "rating": 8.3,
       "cast": [
         {
-          "name": "Giovanni Sousa",
+          "name": "Carlos Alberto Riccelli",
           "character": "Tião",
-          "profile": ""
+          "profile": "https://image.tmdb.org/t/p/w185/hxlHWhPy4mozylH7c6cNH5YpmQV.jpg"
         },
         {
-          "name": "Stephanie Leite",
+          "name": "Bete Mendes",
           "character": "Maria",
+          "profile": "https://image.tmdb.org/t/p/w185/uzsOXdayHYpu24Ge9RB6NTGMYMf.jpg"
+        },
+        {
+          "name": "Fernanda Montenegro",
+          "character": "Romana",
+          "profile": "https://image.tmdb.org/t/p/w185/bja0rn1BjAnA5Z5VbEvL2apvMT5.jpg"
+        },
+        {
+          "name": "Gianfrancesco Guarnieri",
+          "character": "Otávio",
+          "profile": "https://image.tmdb.org/t/p/w185/X2nQITcGe73kv8BzPZNsrpvsbI.jpg"
+        },
+        {
+          "name": "Anselmo Vasconcelos",
+          "character": "Jesuíno",
+          "profile": "https://image.tmdb.org/t/p/w185/aWVwYqDWqKiB5eHlLx5EId9dkUN.jpg"
+        },
+        {
+          "name": "Cristina Rodrigues",
+          "character": "Tezinha",
           "profile": ""
         },
         {
-          "name": "Maciel Pedroso",
-          "character": "Otávio",
-          "profile": ""
+          "name": "Fernando Peixoto",
+          "character": "Mafra",
+          "profile": "https://image.tmdb.org/t/p/w185/1eXoLfcvBkNF0jJ74s1KzMY3PcH.jpg"
+        },
+        {
+          "name": "Fernando Bezerra",
+          "character": "Assailant",
+          "profile": "https://image.tmdb.org/t/p/w185/ml34gcQwZ3wQkiBfyuFiovwJhPC.jpg"
         }
       ]
     },
@@ -1307,7 +1334,7 @@
     {
       "id": "resident_evil_1",
       "title": "Resident Evil 1",
-      "poster": "https://image.tmdb.org/t/p/w500/oxZX9s92Xr5f7mnFCGyEsB5mCOb.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/aC9RinOuPR6DEgwAZZd9IzUA6Qa.jpg",
       "episodes": [
         {
           "title": "Resident Evil: O Hóspede Maldito",
@@ -1318,62 +1345,63 @@
       "type": "movie",
       "local_poster": "/Pirataflix/assets/Capas/default.jpg",
       "posters": [
-        "https://image.tmdb.org/t/p/w500/1UKNef590A0ZaMnxsscIcWuK1Em.jpg",
-        "https://image.tmdb.org/t/p/w500/uoXZOT9dGDtrZNgOSOOKOXlV4XT.jpg",
-        "https://image.tmdb.org/t/p/w500/oxZX9s92Xr5f7mnFCGyEsB5mCOb.jpg",
-        "https://image.tmdb.org/t/p/w500/jKso3TUFnPpRFNLnDrgTUK0R9MX.jpg",
-        "https://image.tmdb.org/t/p/w500/1EmUTW2D9Z3bmlDz5PUAK9sFFNk.jpg",
-        "https://image.tmdb.org/t/p/w500/9vJX0Q9LSoOlTio8cTAm2ms0sWz.jpg"
+        "https://image.tmdb.org/t/p/w500/aC9RinOuPR6DEgwAZZd9IzUA6Qa.jpg",
+        "https://image.tmdb.org/t/p/w500/1x5OaFOo38JAwR5yXxeuvQg3VWH.jpg",
+        "https://image.tmdb.org/t/p/w500/jxBoxz8dKZ8CB1C3lgDqFxzLNQB.jpg",
+        "https://image.tmdb.org/t/p/w500/1WzPySYjKtHJQAcnb5E2l7Lw12Q.jpg",
+        "https://image.tmdb.org/t/p/w500/pOLzp30jgfqg71iWOzpixq4WSkt.jpg",
+        "https://image.tmdb.org/t/p/w500/3wSIagfHnR9vRAPyNjCfGzfgbXK.jpg",
+        "https://image.tmdb.org/t/p/w500/iyaJ1uZIogd3BWkgMVplmG2Cw6V.jpg"
       ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/8J7J7CBmapmcMaxsn9KMiaHzOU2.jpg",
-      "overview": "Uma equipe de comando militar composta por civis deve lutar contra mortos-vivos carnívoros, cães mutantes e defesas mortíferas de um super computador, antes que um vírus solto consuma a humanidade, nesta adaptação do sucesso da série de vídeo-games!",
-      "year": "2002",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/3JgfNUCoN6pyXlO7wZOJ4PgQgW3.jpg",
+      "overview": "O mortal Vírus-T foi erradicado. Sete anos depois, um passageiro chega aos EUA com os mesmos sintomas deste vírus e zumbis tomam o aeroporto. Surgem dúvidas sobre a erradicação do vírus e o governo manda seus melhores agentes investigarem.",
+      "year": "2008",
       "genres": [
+        "Animação",
         "Terror",
-        "Ação",
-        "Ficção Científica"
+        "Ação"
       ],
-      "rating": 6.7,
+      "rating": 6.8,
       "cast": [
         {
-          "name": "Milla Jovovich",
-          "character": "Alice",
-          "profile": "https://image.tmdb.org/t/p/w185/usWnHCzbADijULREZYSJ0qfM00y.jpg"
+          "name": "Paul Mercier",
+          "character": "Leon S. Kennedy (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/1GcIA6oQ3aaBG8HSfBcCRf6R5DW.jpg"
         },
         {
-          "name": "Michelle Rodriguez",
-          "character": "Rain",
-          "profile": "https://image.tmdb.org/t/p/w185/wVcbrae4eRqGMFZz8Eh52Dl1biP.jpg"
+          "name": "Alyson Court",
+          "character": "Claire Redfield (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/kPeTYEV6vyyAJEsUlomVpiLcd6v.jpg"
         },
         {
-          "name": "Eric Mabius",
-          "character": "Matt",
-          "profile": "https://image.tmdb.org/t/p/w185/gfTyV38S5BzV9pZnIducUgo68hK.jpg"
+          "name": "Laura Bailey",
+          "character": "Angela Miller (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/xrq33v9N78hhmApcfkoYx0TAw1A.jpg"
         },
         {
-          "name": "James Purefoy",
-          "character": "Spence",
-          "profile": "https://image.tmdb.org/t/p/w185/nCNyifrD9wOao27A1nT5n4Soxt1.jpg"
+          "name": "Roger Craig Smith",
+          "character": "Curtis Miller (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/6oE356GbRHAf91Llw7LDpvsAf5L.jpg"
         },
         {
-          "name": "Martin Crewes",
-          "character": "Kaplan",
-          "profile": "https://image.tmdb.org/t/p/w185/gar5CPEMP5efGF5h36iyqSDvHsB.jpg"
+          "name": "Crispin Freeman",
+          "character": "Frederic Downing (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/oqqNzJK7F9ZO6Kft4BwncT6K8hz.jpg"
         },
         {
-          "name": "Colin Salmon",
-          "character": "One",
-          "profile": "https://image.tmdb.org/t/p/w185/mLlAU6Zl2MIL5znp5UHdX3sVTN7.jpg"
+          "name": "Michael Sorich",
+          "character": "Senator Ron Davis (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/fiuJUfRiESALcUXW7BHsOJ12yfQ.jpg"
         },
         {
-          "name": "Pasquale Aleardi",
-          "character": "J.D.",
-          "profile": "https://image.tmdb.org/t/p/w185/zY9iu1ObHecBwRmZscIHbhDxiJw.jpg"
+          "name": "Salli Saffioti",
+          "character": "Ingrid Hunnigan (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/awF13TyorW4Rp5rq10p5XL0Po3m.jpg"
         },
         {
-          "name": "Heike Makatsch",
-          "character": "Lisa",
-          "profile": "https://image.tmdb.org/t/p/w185/plwQwvsMG18F3eiD0rWN1Vpw75u.jpg"
+          "name": "Michelle Ruff",
+          "character": "Rani Chawla (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/eX300Qn6TYaYaXdH7x6OmClZqJf.jpg"
         }
       ]
     },
@@ -2456,7 +2484,7 @@
     {
       "id": "todo_mundo_odeia_o_chris",
       "title": "Todo Mundo Odeia O Chris",
-      "poster": "https://image.tmdb.org/t/p/w500/j7KcbOjhNIWOQqHGtL0P90nlfHB.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/x0m6WL6o02UCrc2lGtTbrrgf4HN.jpg",
       "seasons": [
         {
           "season": 1,
@@ -2809,11 +2837,11 @@
       "local_poster": "/Pirataflix/assets/Capas/todo_mundo_odeia_o_chris.jpg",
       "posters": [
         "https://image.tmdb.org/t/p/w500/zX0xZnyReJxtGAqDOS3WcsgpOgx.jpg",
+        "https://image.tmdb.org/t/p/w500/x0m6WL6o02UCrc2lGtTbrrgf4HN.jpg",
         "https://image.tmdb.org/t/p/w500/4BYXh0cY3AyyUB05CTLVJO5FjCM.jpg",
         "https://image.tmdb.org/t/p/w500/j7KcbOjhNIWOQqHGtL0P90nlfHB.jpg",
         "https://image.tmdb.org/t/p/w500/3FjakKDEuaO8FpR1qJctV6njqYy.jpg",
-        "https://image.tmdb.org/t/p/w500/nYfvhUtbqMGtd5iV9sj2fdEFN5p.jpg",
-        "https://image.tmdb.org/t/p/w500/5rqCyqJWi7LqbuCJyRCNaZtKcHc.jpg"
+        "https://image.tmdb.org/t/p/w500/nYfvhUtbqMGtd5iV9sj2fdEFN5p.jpg"
       ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/qji729gwCW88RpIIWidlaLTul3V.jpg",
       "overview": "Para Chris, fazer 13 anos não tem nada de maravilhoso. Ele é o único negro da turma do ensino médio, onde tem uma educação medíocre. É amigo de Greg, e é frequentemente abusado por Joey Caruso. Ambos os pais trabalham e ele cuida de seus dois irmãos. Parece trágico, mas é hilário.",
@@ -26007,8 +26035,8 @@
               "url": "https://noveflixplay.com/api/video-proxy/NOBREZA-169",
               "episode": 169,
               "air_date": "2026-10-09",
-              "overview": "",
-              "still": "",
+              "overview": "Mirinho tem um surto de raiva e confessa a Virgínia que nunca a amou. Graça aconselha Virgínia a não confrontar Mirinho. Pascoal e Binta descobrem que os rebeldes libertaram Kênia e Dumi. Omar confidencia a Tonho que não fugirá sem atacar Jendal. Binta ordena que toda a população de Batanga integra seu exército, e Chinua alerta Akin, Dumi, Ladisa e Kênia. Omar ameaça Jendal.",
+              "still": "https://image.tmdb.org/t/p/w400/iaoAG73RBSTYQ0wvRGPDbcZQTye.jpg",
               "guest_stars": [],
               "locked": false
             },
@@ -26017,11 +26045,10 @@
               "url": "https://noveflixplay.com/api/video-proxy/NOBREZA-170",
               "episode": 170,
               "air_date": "2026-10-10",
-              "overview": "",
-              "still": "",
+              "overview": "José/Zambi, Dumi e Kênia festejam os ganhos do movimento junto aos rebeldes de Batanga. Jendal acorda após atendimento de Onildo. O médico diz que ele precisa repousar até que a ferida cicatrize. Mirinho explica a Manoel seu plano de salvar Alika de Jendal e fugir com ela. Salma pede notícias de Omar e seus amigos a Ana Maria. Severino diz a Mirinho que descobriu o esconderijo de Alika e Tonho.",
+              "still": "https://image.tmdb.org/t/p/w400/3QyduvPzaadIAeDyYKSlmw38b9v.jpg",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-10-10T21:00:00"
+              "locked": false
             },
             {
               "title": "Episódio 171",
@@ -28261,8 +28288,8 @@
           "url": "https://noveflixplay.com/api/video-proxy/NOBREZA-169",
           "episode": 169,
           "air_date": "2026-10-09",
-          "overview": "",
-          "still": "",
+          "overview": "Mirinho tem um surto de raiva e confessa a Virgínia que nunca a amou. Graça aconselha Virgínia a não confrontar Mirinho. Pascoal e Binta descobrem que os rebeldes libertaram Kênia e Dumi. Omar confidencia a Tonho que não fugirá sem atacar Jendal. Binta ordena que toda a população de Batanga integra seu exército, e Chinua alerta Akin, Dumi, Ladisa e Kênia. Omar ameaça Jendal.",
+          "still": "https://image.tmdb.org/t/p/w400/iaoAG73RBSTYQ0wvRGPDbcZQTye.jpg",
           "guest_stars": [],
           "locked": false
         },
@@ -28271,11 +28298,10 @@
           "url": "https://noveflixplay.com/api/video-proxy/NOBREZA-170",
           "episode": 170,
           "air_date": "2026-10-10",
-          "overview": "",
-          "still": "",
+          "overview": "José/Zambi, Dumi e Kênia festejam os ganhos do movimento junto aos rebeldes de Batanga. Jendal acorda após atendimento de Onildo. O médico diz que ele precisa repousar até que a ferida cicatrize. Mirinho explica a Manoel seu plano de salvar Alika de Jendal e fugir com ela. Salma pede notícias de Omar e seus amigos a Ana Maria. Severino diz a Mirinho que descobriu o esconderijo de Alika e Tonho.",
+          "still": "https://image.tmdb.org/t/p/w400/3QyduvPzaadIAeDyYKSlmw38b9v.jpg",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-10-10T21:00:00"
+          "locked": false
         },
         {
           "title": "Episódio 171",
@@ -56952,7 +56978,7 @@
         "https://image.tmdb.org/t/p/w500/eq68IFhnFPMIjngNn93DWMBKXpt.jpg",
         "https://image.tmdb.org/t/p/w500/qIKNIkxXYIro6JjNIGyqumrVUKL.jpg"
       ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/ol0H2DGp4ifBHA4JDlCpwJWxnY2.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/3ILMlmC30QUnYkY3XEBOyJ82Dqu.jpg",
       "overview": "Por toda a sua vida, Izuku sonhou ser um herói — um objetivo ambicioso para qualquer um, mas especialmente desafiador para um garoto sem superpoderes. Isso mesmo: em um mundo onde 80% da população tem algum tipo de Dom especial, Izuku teve a má sorte de nascer completamente normal. Mas isso não vai impedi-lo de se matricular em uma das academias de herois mais prestigiosas do mundo.",
       "year": "2016",
       "rating": 8.6,
@@ -72487,7 +72513,7 @@
         {
           "name": "Terry Klassen",
           "character": "Cut Man / Ice Man (voice)",
-          "profile": ""
+          "profile": "https://image.tmdb.org/t/p/w185/6JjisDUlJqglxIQFfHwXrsgKtdS.jpg"
         },
         {
           "name": "Garry Chalk",
@@ -85734,7 +85760,7 @@
     {
       "id": "scooby_doo",
       "title": "Scooby Doo",
-      "poster": "https://image.tmdb.org/t/p/w500/f3BcfmJdmPWJ6PrdKIe9GosjAQ1.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/75ZldxGKFQDRHFn2G6FngCvlVzu.jpg",
       "seasons": [
         {
           "season": 1,
@@ -85998,27 +86024,28 @@
       "category": "infantil",
       "local_poster": "/Pirataflix/assets/Capas/scooby_doo.jpg",
       "posters": [
-        "https://image.tmdb.org/t/p/w500/rJksJvJnvrVQL9dMdqy1XwjD5KQ.jpg",
-        "https://image.tmdb.org/t/p/w500/f3BcfmJdmPWJ6PrdKIe9GosjAQ1.jpg",
-        "https://image.tmdb.org/t/p/w500/7XEcajr0EPf3Daaq7PST5flG6ql.jpg",
-        "https://image.tmdb.org/t/p/w500/tIzpePw2nQwSIzjr3ylJuYerhDp.jpg",
-        "https://image.tmdb.org/t/p/w500/ly4dxJy2tctI5t7hgaIXI2y0L92.jpg",
-        "https://image.tmdb.org/t/p/w500/ctVAQWjat6BxNewpU9Xn3NhQn7z.jpg"
+        "https://image.tmdb.org/t/p/w500/75ZldxGKFQDRHFn2G6FngCvlVzu.jpg",
+        "https://image.tmdb.org/t/p/w500/mu8zU2jQfPbGO5bC6RHYrSypxUd.jpg",
+        "https://image.tmdb.org/t/p/w500/nKXpiFFPMY0AEZIvXnz5vIsjXKU.jpg",
+        "https://image.tmdb.org/t/p/w500/wmX7rAqoCTHLedr06rEmxPujb6s.jpg",
+        "https://image.tmdb.org/t/p/w500/z6JoE4yAiHLfzFFN3D7cFI2mNo8.jpg",
+        "https://image.tmdb.org/t/p/w500/iaAOL66ec0jPVsEfDdXBhDkPXMg.jpg",
+        "https://image.tmdb.org/t/p/w500/6uftUCfBeUJKT7z6odUkgyxYh2g.jpg"
       ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/cbX2t9bg9rhpmABQYI5tLbxT3xD.jpg",
-      "overview": "A série apresenta a Mistério S/A após terminar seu último ano do ensino médio. Fazendo planos para gastar a sua última parada de verão como uma equipe, eles decidem viajar na Máquina do Mistério para buscar o prazer e aventura. Ao longo do caminho, no entanto, se deparam com uma enorme quantidade de monstros e estragos, impedindo-os de terminar sua jornada.",
-      "year": "2015",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/2VvLk11UlmdHFPQkDgm4KPSjLrs.jpg",
+      "overview": "Fred Jones Jr., Daphne Blake, Velma Dinkley, Norville \"Salsicha\" Rogers e Scooby-Doo é um time de adolescentes solucionadores de mistérios que vivem na pequena cidade de Baía Cristal, o auto-proclamado \"lugar mais aterrorizado da terra\". A trama longa a história de estranhos desaparecimentos, de aparições de fantasmas e monstros da cidade formam a base para a sua próspera indústria turística e, como tal, os adultos da cidade (o principal deles sendo o pai de \"Fred\" o prefeito) sendo que ele não está feliz que as crianças estão derrubando tudo os acontecimentos sobrenaturais que trazem tanto turismo para a cidade.",
+      "year": "2010",
       "genres": [
-        "Comédia",
         "Animação",
-        "Mistério"
+        "Mistério",
+        "Família"
       ],
-      "rating": 8.0,
+      "rating": 8.2,
       "cast": [
         {
-          "name": "Matthew Lillard",
-          "character": "Shaggy Rogers (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/mIEKAfe0iC41RDXibbTy48LtNOi.jpg"
+          "name": "Frank Welker",
+          "character": "Scooby-Doo / Fred Jones (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/aC37aQtsfZZDZN5y3paDTLJJHCi.jpg"
         },
         {
           "name": "Grey DeLisle",
@@ -86026,21 +86053,21 @@
           "profile": "https://image.tmdb.org/t/p/w185/vrUHaXe1pG56yZkgH7Hs3LGRLTT.jpg"
         },
         {
-          "name": "Kate Micucci",
+          "name": "Mindy Cohn",
           "character": "Velma Dinkley (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/lgmIxZ59bnYflbkWyAfmWi0bUsT.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/AcEAchSYIUiRInwyD8nPwj8ztZa.jpg"
         },
         {
-          "name": "Frank Welker",
-          "character": "Fred Jones / Scooby-Doo (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/aC37aQtsfZZDZN5y3paDTLJJHCi.jpg"
+          "name": "Matthew Lillard",
+          "character": "Shaggy Rogers (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/mIEKAfe0iC41RDXibbTy48LtNOi.jpg"
         }
       ]
     },
     {
       "id": "corrida_maluca",
       "title": "Corrida Maluca",
-      "poster": "https://image.tmdb.org/t/p/w500/npvIKcUvQqDlW6zINy6rA7jAUp2.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/lQ1Qk2rdXLaxDDFVmmxJfLzfZ51.jpg",
       "seasons": [
         {
           "season": 1,
@@ -86394,52 +86421,50 @@
       "category": "infantil",
       "local_poster": "/Pirataflix/assets/Capas/corrida_maluca.jpg",
       "posters": [
-        "https://image.tmdb.org/t/p/w500/npvIKcUvQqDlW6zINy6rA7jAUp2.jpg",
-        "https://image.tmdb.org/t/p/w500/yHeolC3qvELoeq8poh7BsMpBKd9.jpg",
-        "https://image.tmdb.org/t/p/w500/w27k88FDTybx3DoqdiDoQQcXG0c.jpg",
-        "https://image.tmdb.org/t/p/w500/tlzJfOyuTxZNxhvIdPaNyAAvvxh.jpg",
-        "https://image.tmdb.org/t/p/w500/tByRhftDhdleVkxvwir08dlaHBF.jpg",
-        "https://image.tmdb.org/t/p/w500/l7OKpIfeWJMQt1LGBDgIChv5qzi.jpg"
+        "https://image.tmdb.org/t/p/w500/lQ1Qk2rdXLaxDDFVmmxJfLzfZ51.jpg",
+        "https://image.tmdb.org/t/p/w500/rgmUxN8vPB4WvvWKEhEpWs8SR9D.jpg",
+        "https://image.tmdb.org/t/p/w500/3ae3xHw6pB7fTzb4DNSsn6eVAH1.jpg",
+        "https://image.tmdb.org/t/p/w500/l3ZCO62uQIjZHZmAwarQOcRDUyr.jpg"
       ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/wJgLiMIaptq7jfY0tXTYQEcbevw.jpg",
-      "overview": "Liguem seus motores! O eterno vilão Dick Vigarista, seu fiel cupincha Muttley e seu carro, a Máquina do Mal, vão atropelar vocês e todos os outros competidores, velozes e furiosos, para chegar ao final de mais uma corrida maluca. Esteja bem equipado para encarar esta dupla de desleais encrenqueiros, assim como seus rivais: Peter Perfeito em seu Turbo Especial, Luke e o urso Chorão e sua Carroça do Pai Tomás, a Quadrilha de Morte e o seu Chugga-boom e a glamourosa Penélope Charmosa em seu carro cor-de-rosa.",
-      "year": "1968",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/f2PzX6WjS3e9wTizrNBHwBodmvn.jpg",
+      "overview": "Quando os motores dão a partida, as risadas começam nesta série de comédia animada que mostra o retorno dos seus pilotos favoritos e, claro, seus carros malucos.",
+      "year": "2017",
       "genres": [
         "Família",
         "Animação",
         "Comédia"
       ],
-      "rating": 7.3,
+      "rating": 5.5,
       "cast": [
         {
-          "name": "John Stephenson",
-          "character": "Blubber Bear (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/7Tl0KkH3Sw7RMmsvTIv3Alz9vrn.jpg"
+          "name": "Peter Woodward",
+          "character": "Dick Dastardly (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/ex9oL4IfruXTfNCq7MOn1Z87cPK.jpg"
         },
         {
-          "name": "Paul Winchell",
-          "character": "Clyde (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/aZjzqTlzhBpcXogubUP8wcPE4Da.jpg"
+          "name": "Billy West",
+          "character": "Muttley / Tiny (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/iNQtBsgV4wr3z5CEEFhR5U4Yedk.jpg"
         },
         {
-          "name": "Don Messick",
-          "character": "Gravel Slag (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/frB2GkFxLzJkUC1NizEad1OYJQ7.jpg"
+          "name": "Diedrich Bader",
+          "character": "Peter Perfect (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/z7CctykPTuXDfAs7pkAA7vW4b3T.jpg"
         },
         {
-          "name": "Daws Butler",
-          "character": "Big Gruesome (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/qxaOMbICdts0qpUmkYj3OMhDGt8.jpg"
+          "name": "Tom Kenny",
+          "character": "Bella (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/kftXtExrcoTTjyeYmSXJ0Ogr3R7.jpg"
         },
         {
-          "name": "Janet Waldo",
-          "character": "Penelope Pitstop (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/liuY8vTRtKsQeDN7HYZD2oRkE80.jpg"
+          "name": "Jill Talley",
+          "character": "IQ Ickly (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/x0r43qyI9KNEyb5RsF0MckqxgfM.jpg"
         },
         {
-          "name": "Dave Willock",
-          "character": "Narrator (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/q8C2obtce5CET1VZNLKmH5GbUdf.jpg"
+          "name": "Christopher Judge",
+          "character": "Brick Crashman (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/bh3HnGPQuditlNI1yVSCmIzs6xE.jpg"
         }
       ]
     }
@@ -109618,6 +109643,36 @@
       "episodes": [
         {
           "url": "http://15.204.246.24:8080/TNTHD/index.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "CNNBrasil.br@SD",
+      "type": "tv",
+      "title": "CNN Brasil (1080p)",
+      "tvg_id": "CNNBrasil.br@SD",
+      "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/CNN_Brasil.svg/960px-CNN_Brasil.svg.png",
+      "group": "📰 Notícias",
+      "url": "https://d25usgadhphvwi.cloudfront.net/hls/main.m3u8",
+      "episodes": [
+        {
+          "url": "https://d25usgadhphvwi.cloudfront.net/hls/main.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "TLCLatinAmerica.us@Brazil",
+      "type": "tv",
+      "title": "TLC Latin America Brazil (720p)",
+      "tvg_id": "TLCLatinAmerica.us@Brazil",
+      "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/TLC_Logo.svg/960px-TLC_Logo.svg.png",
+      "group": "💅 Lifestyle",
+      "url": "http://79.127.238.228:14433",
+      "episodes": [
+        {
+          "url": "http://79.127.238.228:14433",
           "title": "AO VIVO"
         }
       ]
