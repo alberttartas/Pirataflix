@@ -992,14 +992,27 @@
     return !!url && (/redecanais[^\/]*\/player\d*\//i.test(url) || /\/server\.php/i.test(url));
   }
 
-  // Lê a página do Blogger e devolve o link direto do mp4 (ou null).
+    // Lê a página do Blogger e devolve o link direto do mp4 (ou null).
   // Precisa de <access origin="*"> no config.xml do app Tizen (senão o CORS bloqueia).
+  // O Blogger devolve 403 se faltar Referer/User-Agent de navegador.
   function resolveBlogger(url, cb) {
     if (url.indexOf('googlevideo.com') !== -1) { cb(url); return; }
     var tok = resolveTok;
     var xhr = new XMLHttpRequest();
     xhr.open('GET', url, true);
     xhr.timeout = 10000;
+
+    // Headers que o Blogger exige para não responder 403
+    try {
+      xhr.setRequestHeader('Referer', 'https://www.blogger.com/');
+      xhr.setRequestHeader('User-Agent',
+        'Mozilla/5.0 (SMART-TV; Linux; Tizen 6.0) AppleWebKit/537.36 ' +
+        '(KHTML, like Gecko) SamsungBrowser/3.0 Chrome/76.0.3809.146 TV Safari/537.36');
+      xhr.setRequestHeader('Accept',
+        'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8');
+      xhr.setRequestHeader('Accept-Language', 'pt-BR,pt;q=0.9,en;q=0.8');
+    } catch (eH) {}
+
     xhr.onreadystatechange = function () {
       if (xhr.readyState !== 4 || tok !== resolveTok) return;
       var best = null, bestScore = -1;
