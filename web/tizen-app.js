@@ -1,6 +1,6 @@
 /*
  * PIRATAFLIX — tizen-app.js
- * v2.5 — foco do controle remoto no player Blogger
+ * v2.4 — Enter/Play sempre chegam ao vídeo (direto ou iframe Blogger)
  */
 
 (function () {
@@ -290,7 +290,9 @@
       '.ep-arrow:hover{background:#e50914}',
       '.ep-arrow-left{left:-6px}',
       '.ep-arrow-right{right:-6px}',
-      '.ep-arrow-off{display:none}'
+      '.ep-arrow-off{display:none}',
+      '#pf-blogger-overlay{position:absolute;top:0;left:0;width:100%;height:100%;',
+      'background:transparent;z-index:5;outline:none;cursor:pointer}'
     ].join('\n');
     var st = document.createElement('style');
     st.id = 'pf-extra-style';
@@ -1008,20 +1010,14 @@
     } catch (e) {}
   }
 
-  // Alterna play/pause: no <video> controlamos diretamente. No Blogger,
-  // o OK do controle remoto transfere o foco para o iframe; os próximos
-  // comandos do D-pad/OK passam a ser tratados pelo player incorporado.
-  function focusBloggerPlayer() {
-    if (!bloggerIframe) return;
-    try { bloggerIframe.setAttribute('tabindex', '0'); } catch (e) {}
-    try { bloggerIframe.focus(); } catch (e2) {}
-    showOsd('▶ Foco no vídeo: pressione OK para reproduzir');
-  }
-
+  // Alterna play/pause: no <video> mexe direto; no iframe manda comandos.
   function togglePlay() {
     var video = $('player');
     if (isBloggerMode) {
-      focusBloggerPlayer();
+      // Não é possível acionar o botão interno de um iframe cross-origin
+      // por JavaScript. Apenas transfere o foco para o player incorporado.
+      try { if (bloggerIframe) bloggerIframe.focus(); } catch (e) {}
+      showOsd('Foco no vídeo: tente OK no controle');
       return;
     }
     if (!video) return;
@@ -1040,7 +1036,6 @@
     iframe.id = 'tizen-blogger-iframe';
     iframe.src = withBloggerAutoplay(url);
     iframe.style.cssText = 'width:100%;height:100%;border:none;background:#000;display:block;';
-    // Permite foco/interação com os controles nativos do player Blogger.
     iframe.setAttribute('tabindex', '0');
     iframe.setAttribute('allowfullscreen', '');
     iframe.setAttribute('allow', 'autoplay; fullscreen; encrypted-media; picture-in-picture');
@@ -1049,8 +1044,7 @@
     }
     container.appendChild(iframe);
 
-    // Não colocar overlay sobre o iframe: isso bloqueia o clique no botão
-    // ▶ nativo do Blogger. O iframe precisa receber o clique/controle remoto.
+    // Não colocar camada por cima do iframe: ela bloqueia os controles nativos.
     bloggerIframe  = iframe;
     bloggerOverlay = null;
     isBloggerMode  = true;
@@ -1076,8 +1070,11 @@
     // btn-play FICA visível: chama togglePlay(), que fala com o iframe.
     setBloggerControls(true);
 
-    // Não forçar foco em uma camada transparente; ela impediria o uso
-    // dos controles nativos do vídeo. O iframe permanece interativo.
+    // Entrega o foco ao próprio iframe para permitir interação nativa.
+    setTimeout(function () {
+      try { iframe.focus(); } catch (e) {}
+      showOsd('Use OK no player. Se não responder, este embed não aceita controle remoto.');
+    }, 300);
   }
 
   function destroyBloggerIframe() {
@@ -1109,8 +1106,16 @@
     if (!mode) {
       resolveTok++;
       if (isBloggerUrl(url)) {
-        // Caminho confiável: iframe direto. O XHR ao Blogger costuma dar 403.
-        mode = 'iframe';
+        // Primeiro tenta obter MP4 direto para usar o <video> nativo,
+        // que aceita Enter/OK do controle remoto. Se falhar, usa iframe.
+        showToast('⏳ Carregando vídeo...');
+        var tok = resolveTok;
+        resolveBlogger(url, function (direct) {
+          if (tok !== resolveTok) return;
+          if (direct) playVideo(direct, title, itemId, cat, epIdx, 'direct', url);
+          else playVideo(url, title, itemId, cat, epIdx, 'iframe');
+        });
+        return;
       } else if (isEmbedPage(url)) {
         mode = 'iframe';
       }
@@ -1561,12 +1566,6 @@
     if (!list.length) return;
     var cur = document.activeElement;
 
-    // Se o foco está no overlay do iframe, entra na barra pelo primeiro botão
-    if (scope === 'player' && bloggerOverlay && cur === bloggerOverlay) {
-      var first = initialFocus('player', list);
-      if (first) { focusEl(first); return; }
-    }
-
     if (list.indexOf(cur) < 0) { focusEl(initialFocus(scope, list)); return; }
     var next = findNext(cur, dir, list);
     if (next) focusEl(next);
@@ -1760,12 +1759,12 @@
 
       case KEY.MEDIA_PLAY:
         e.preventDefault();
-        if (isBloggerMode) focusBloggerPlayer();
+        if (isBloggerMode) { iframeCommand('playVideo'); iframeClickCenter(); }
         else if (video) safePlay(video);
         return;
       case KEY.MEDIA_PAUSE:
         e.preventDefault();
-        if (isBloggerMode) focusBloggerPlayer();
+        if (isBloggerMode) { iframeCommand('pauseVideo'); iframeClickCenter(); }
         else if (video) video.pause();
         return;
       case KEY.MEDIA_PLAYPAUSE:
@@ -1783,12 +1782,18 @@
         e.preventDefault(); if (isTv) channelStep(-1); else seekBy(-60); return;
 
       case KEY.ENTER:
-        e.preventDefault();
-        if (inBar) {
-          activate(active);
-        } else {
-          togglePlay();
+        if (isBloggerMode && !inBar) {
+          // First OK enters the iframe. Avoid swallowing Enter when the iframe
+          // already has focus; the embedded page may handle it natively.
+          if (active !== bloggerIframe) {
+            e.preventDefault();
+            try { if (bloggerIframe) bloggerIframe.focus(); } catch (e0) {}
+            showOsd('Player selecionado. Pressione OK novamente');
+          }
+          return;
         }
+        e.preventDefault();
+        if (inBar) activate(active); else togglePlay();
         return;
 
       case KEY.LEFT:
