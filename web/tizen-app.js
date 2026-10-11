@@ -1,5 +1,5 @@
 /*
- * PIRATAFLIX — tizen-app.js  (v2.2 — Anterior/Próximo, autoplay Blogger, setas no carrossel)
+ * PIRATAFLIX — tizen-app.js
  */
 
 (function () {
@@ -39,7 +39,7 @@
   var CW_KEY       = 'pirataflix_progressos';
   var EXIT_WINDOW  = 2500;  // ms para confirmar saída com Voltar
 
-  // IDs dos controles que não funcionam no modo Blogger (iframe)
+  // IDs dos controles que não funcionam no modo iframe
   var BLOGGER_HIDDEN_IDS = ['progress-wrap', 'time-label', 'btn-play', 'btn-back', 'btn-fwd'];
 
   // ─── ESTADO ──────────────────────────────────────────────────────────────
@@ -57,14 +57,16 @@
   var playerCat      = null;
   var playerEpIdx    = 0;
   var playerEnded    = false;
+  var playerMode     = '';   // '' | 'direct' (link extraído do Blogger) | 'iframe'
+  var playerOrig     = '';   // URL original do Blogger (para voltar ao iframe se o direto falhar)
+  var resolveTok     = 0;    // invalida resoluções do Blogger em andamento
   var hlsInstance    = null;
   var controlsTimer  = null;
   var progressInterval = null;
   var seekStreak     = 0;
   var lastSeekAt     = 0;
 
-  // Player Blogger (iframe) — vídeos hospedados em blogger.com/video.g
-  // não podem ser tocados via <video src="">, precisam de iframe (embed)
+  // Player em iframe (Blogger como plano B, ou outros embeds)
   var bloggerIframe = null;
   var isBloggerMode = false;
   var bloggerMsgHandler = null;
@@ -246,7 +248,7 @@
       var entry = raw[keys[i]];
       if (!entry || !entry.itemId || !entry.category || entry.category === 'tv') continue;
       var pct = entry.duration ? (entry.currentTime / entry.duration) * 100 : 0;
-      // Marcador (vídeo em iframe do Blogger): só guarda o episódio, sem minuto
+      // Marcador (vídeo em iframe): só guarda o episódio, sem minuto
       if (!entry.marker && (pct < 2 || pct > 95)) continue;
       var dk = entry.itemId + '_' + entry.category;
       if (!seen[dk] || (entry.timestamp || 0) > (seen[dk].timestamp || 0)) seen[dk] = entry;
@@ -939,7 +941,7 @@
   function saveProgress() {
     var video = $('player');
     if (!playerUrl || playerEnded || playerCat === 'tv' || !video) return;
-    if (isBloggerMode) return; // Blogger não expõe duration/currentTime via JS (usa marcador)
+    if (isBloggerMode) return; // iframe não expõe duration/currentTime via JS (usa marcador)
     if (!video.duration || !isFinite(video.duration) || video.currentTime < 10) return;
 
     var item = findItem(playerCat, playerItemId);
@@ -958,7 +960,7 @@
     });
   }
 
-  // Marcador do Blogger: guarda só QUAL episódio estava sendo assistido
+  // Marcador do iframe: guarda só QUAL episódio estava sendo assistido
   function saveBloggerMarker(url, title, itemId, cat, epIdx) {
     if (cat === 'tv') return;
     var item = findItem(cat, itemId);
@@ -978,12 +980,47 @@
     });
   }
 
-  // Detecta URLs do Blogger (blogger.com/video.g, googlevideo.com), que
-  // não podem ser tocadas via <video src="">, pois exigem carregamento
-  // como página (iframe/embed), não como recurso de mídia direto — ao
-  // tentar direto, o Blogger responde 403.
+  // URL de página do Blogger (blogger.com/video.g) ou link do googlevideo.
+  // A página do video.g não toca em <video src=""> (403) — precisa ser lida
+  // para extrair o link direto, ou aberta em iframe.
   function isBloggerUrl(url) {
     return !!url && (url.indexOf('blogger.com/video.g') !== -1 || url.indexOf('googlevideo.com') !== -1);
+  }
+
+  // Players de terceiros que só funcionam como página (iframe)
+  function isEmbedPage(url) {
+    return !!url && (/redecanais[^\/]*\/player\d*\//i.test(url) || /\/server\.php/i.test(url));
+  }
+
+  // Lê a página do Blogger e devolve o link direto do mp4 (ou null).
+  // Precisa de <access origin="*"> no config.xml do app Tizen (senão o CORS bloqueia).
+  function resolveBlogger(url, cb) {
+    if (url.indexOf('googlevideo.com') !== -1) { cb(url); return; }
+    var tok = resolveTok;
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', url, true);
+    xhr.timeout = 10000;
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState !== 4 || tok !== resolveTok) return;
+      var best = null, bestScore = -1;
+      if (xhr.status === 200) {
+        var txt = xhr.responseText.replace(/\\u0026/g, '&').replace(/\\\//g, '/');
+        var re = /"play_url":"([^"]+)"[^}]*?"format_id":(\d+)/g, m;
+        while ((m = re.exec(txt))) {
+          var f = parseInt(m[2], 10);
+          var score = f === 22 ? 100 : (f === 18 ? 50 : f); // 22 = 720p, 18 = 360p
+          if (score > bestScore) { bestScore = score; best = m[1]; }
+        }
+      }
+      try { console.log('[Blogger resolve]', xhr.status, best ? 'ok' : 'sem link'); } catch (e) {}
+      cb(best);
+    };
+    xhr.onerror = xhr.ontimeout = function () {
+      if (tok !== resolveTok) return;
+      try { console.log('[Blogger resolve] erro de rede/CORS'); } catch (e) {}
+      cb(null);
+    };
+    xhr.send();
   }
 
   // Pede autoplay ao embed do Blogger (parâmetro extra; ignorado se não suportado)
@@ -993,7 +1030,7 @@
   }
 
   // Tenta reconhecer uma mensagem de "vídeo terminou" vinda do iframe.
-  // O formato real do Blogger não é documentado: veja o console ([Blogger msg]).
+  // O formato real do embed não é documentado: veja o console ([Blogger msg]).
   function isBloggerEnded(d) {
     try {
       if (typeof d === 'string') {
@@ -1014,8 +1051,7 @@
     }
   }
 
-  // Toca um vídeo do Blogger dentro de um iframe (evita o 403 causado por
-  // tentar carregar o video.g diretamente como recurso de mídia).
+  // Toca a página em um iframe (plano B do Blogger e players de terceiros)
   function playBloggerVideo(url) {
     var container = $('player-video-container');
     var video     = $('player');
@@ -1028,6 +1064,11 @@
     iframe.setAttribute('tabindex', '-1'); // não deixa o iframe roubar o teclado/D-pad
     iframe.setAttribute('allowfullscreen', '');
     iframe.setAttribute('allow', 'autoplay; fullscreen; encrypted-media; picture-in-picture');
+    // Players de terceiros: sem allow-top-navigation, o script deles não consegue
+    // redirecionar o app inteiro (ex.: anti-DevTools do Redecanais)
+    if (isEmbedPage(url)) {
+      iframe.setAttribute('sandbox', 'allow-scripts allow-same-origin allow-presentation allow-popups allow-forms');
+    }
     container.appendChild(iframe);
 
     bloggerIframe = iframe;
@@ -1061,7 +1102,7 @@
     }, 100);
   }
 
-  // Destrói o iframe do Blogger (se existir) e restaura os controles normais
+  // Destrói o iframe (se existir) e restaura os controles normais
   function destroyBloggerIframe() {
     if (bloggerMsgHandler) {
       window.removeEventListener('message', bloggerMsgHandler);
@@ -1079,8 +1120,27 @@
     setBloggerControls(false);
   }
 
-  function playVideo(url, title, itemId, cat, epIdx) {
+  // mode (interno): 'direct' = url já é o link extraído; 'iframe' = força iframe
+  // orig (interno): URL original do Blogger, usada como plano B se o direto falhar
+  function playVideo(url, title, itemId, cat, epIdx, mode, orig) {
     if (!url) { showToast('Vídeo indisponível'); return; }
+
+    if (!mode) {
+      resolveTok++; // cancela qualquer resolução anterior ainda em andamento
+
+      if (isBloggerUrl(url)) {
+        // 1º tenta extrair o link direto do mp4; se não der, cai no iframe
+        showToast('⏳ Carregando vídeo...');
+        var tok = resolveTok;
+        resolveBlogger(url, function (direct) {
+          if (tok !== resolveTok) return; // usuário trocou de vídeo / fechou
+          if (direct) playVideo(direct, title, itemId, cat, epIdx, 'direct', url);
+          else        playVideo(url,    title, itemId, cat, epIdx, 'iframe');
+        });
+        return;
+      }
+      if (isEmbedPage(url)) mode = 'iframe';
+    }
 
     // Guarda o progresso do vídeo anterior (troca de episódio/canal)
     saveProgress();
@@ -1091,6 +1151,8 @@
     playerCat    = cat;
     playerEpIdx  = epIdx || 0;
     playerEnded  = false;
+    playerMode   = mode || '';
+    playerOrig   = (mode === 'direct') ? (orig || '') : '';
 
     var wrap  = $('player-wrap');
     var video = $('player');
@@ -1101,8 +1163,7 @@
     if (progressInterval) { clearInterval(progressInterval); progressInterval = null; }
     wrap.style.display = 'block';
 
-    if (isBloggerUrl(url)) {
-      // Blogger (video.g) exige iframe — <video src=""> retorna 403
+    if (mode === 'iframe') {
       playBloggerVideo(url);
       saveBloggerMarker(url, title, itemId, cat, playerEpIdx);
     } else {
@@ -1158,7 +1219,7 @@
       video.focus();
     }
 
-    // Botão "Próximo" (funciona tanto para vídeo normal quanto Blogger)
+    // Botão "Próximo" (funciona tanto para vídeo normal quanto iframe)
     var nextBtn = $('btn-next-ep');
     var nxt     = nextEpisode();
     if (nxt) {
@@ -1186,7 +1247,7 @@
       }
     }
 
-    // Progresso periódico (sem efeito no modo Blogger — ver saveProgress)
+    // Progresso periódico (sem efeito no modo iframe — ver saveProgress)
     progressInterval = setInterval(saveProgress, 5000);
 
     seekStreak = 0;
@@ -1209,10 +1270,13 @@
   }
 
   function closePlayer(restore) {
+    resolveTok++; // cancela resolução do Blogger em andamento
     saveProgress();
     destroyHls();
     destroyBloggerIframe();
     playerUrl = '';
+    playerMode = '';
+    playerOrig = '';
     if (controlsTimer) { clearTimeout(controlsTimer); controlsTimer = null; }
     $('player-controls').className = '';
     $('player-wrap').style.display = 'none';
@@ -1234,7 +1298,7 @@
     if (controlsTimer) clearTimeout(controlsTimer);
     controlsTimer = setTimeout(function () {
       var v = $('player');
-      // No modo Blogger o <video> está sem src (paused é sempre true),
+      // No modo iframe o <video> está sem src (paused é sempre true),
       // então o iframe conta como "tocando".
       var playing = isBloggerMode || (v && !v.paused);
       if (!playing) return;
@@ -1267,7 +1331,7 @@
 
   function seekBy(sec) {
     if (isBloggerMode) {
-      // O embed do Blogger não aceita comandos de seek vindos de fora
+      // O embed não aceita comandos de seek vindos de fora
       showOsd('⏱ Avanço indisponível neste vídeo');
       return;
     }
@@ -1311,7 +1375,17 @@
     });
 
     video.addEventListener('error', function () {
-      if (isShown(wrap) && playerUrl && !isBloggerMode) showOsd('⚠ Erro ao reproduzir');
+      if (!isShown(wrap) || !playerUrl || isBloggerMode) return;
+
+      // Link direto do Blogger falhou (expirou / 403): volta para o iframe
+      if (playerMode === 'direct' && playerOrig) {
+        var o = playerOrig;
+        playerOrig = '';
+        showOsd('↻ Tentando player alternativo...');
+        playVideo(o, playerTitle, playerItemId, playerCat, playerEpIdx, 'iframe');
+        return;
+      }
+      showOsd('⚠ Erro ao reproduzir');
     });
 
     video.addEventListener('ended', function () {
@@ -1493,7 +1567,7 @@
   function initialFocus(scope, list) {
     if (scope === 'main') return activeNavLink() || list[0];
     if (scope === 'modal') return $('modal-play-btn') || list[0];
-    return list[0]; // player: primeiro botão visível (no Blogger o play fica oculto)
+    return list[0]; // player: primeiro botão visível (no iframe o play fica oculto)
   }
 
   function gap(a1, a2, b1, b2) {
