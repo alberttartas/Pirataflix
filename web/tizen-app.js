@@ -1043,11 +1043,12 @@
       x.timeout = 15000;
       x.onreadystatechange = function () {
         if (x.readyState !== 4 || x.status === 0) return;
-        var link = null;
-        if (x.status === 200) {
-          try { link = JSON.parse(x.responseText).url || null; } catch (e) {}
-        }
-        finish(link, { via: 'proxy', status: x.status, direct: prevInfo });
+        var link = null, msg = '';
+        try {
+          var j = JSON.parse(x.responseText);
+          if (x.status === 200) link = j.url || null; else msg = j.error || '';
+        } catch (e) {}
+        finish(link, { via: 'proxy', status: x.status, msg: msg, direct: prevInfo });
       };
       x.onerror = x.ontimeout = function () { finish(null, { via: 'proxy', err: 'rede', direct: prevInfo }); };
       x.send();
@@ -1193,7 +1194,12 @@
           } else {
             var why = (info && info.err) ? info.err
                     : ('HTTP ' + (info ? info.status : '?') + (info && info.status === 200 ? (info.hasPlayUrl ? ', formato inesperado' : ', sem play_url') : ''));
-            if (info && info.via === 'proxy' && info.direct) why = 'direto: ' + (info.direct.err || ('HTTP ' + info.direct.status)) + ' | proxy: ' + (info.err || ('HTTP ' + info.status));
+            if (info && info.via === 'proxy') {
+              var pw = info.err ? info.err
+                     : (info.status === 404 && !info.msg) ? 'endpoint /api/blogger não existe no deploy'
+                     : (info.msg || ('HTTP ' + info.status));
+              why = 'direto: ' + (info.direct ? (info.direct.err || ('HTTP ' + info.direct.status)) : '?') + ' | proxy: ' + pw;
+            }
             showToast('⚠ Sem link direto (' + why + ') → player embutido: dê play com o ponteiro', 7000);
             playVideo(url, title, itemId, cat, epIdx, 'iframe');
           }
@@ -1948,7 +1954,15 @@
 
       case KEY.ENTER:
         e.preventDefault();
-        if (inBar) activate(active); else togglePlay();
+        if (inBar) { activate(active); return; }
+        if (isBloggerMode && bloggerIframe) {
+          // Experimental: dá o foco ao iframe; OK/Espaço seguintes vão para o player do Blogger.
+          // O Voltar continua funcionando (evento tizenhwkey).
+          try { bloggerIframe.focus(); } catch (e3) {}
+          showOsd('▶ Foco no player: pressione OK novamente');
+          return;
+        }
+        togglePlay();
         return;
 
       case KEY.LEFT:
