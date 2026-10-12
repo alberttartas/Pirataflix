@@ -1,6 +1,6 @@
 /*
  * PIRATAFLIX — tizen-app.js
- * v2.4 — Enter/Play sempre chegam ao vídeo (direto ou iframe Blogger)
+ * v2.4 — diagnóstico na tela, Voltar via tizenhwkey, toast autônomo
  */
 
 (function () {
@@ -38,10 +38,9 @@
   var CW_KEY       = 'pirataflix_progressos';
   var EXIT_WINDOW  = 2500;
 
-  // No modo iframe escondemos só o que depende de <video> direto.
-  // O botão play/pause FICA visível: ele chama togglePlay(), que reenvia
-  // o comando para dentro do iframe.
-  var BLOGGER_HIDDEN_IDS = ['progress-wrap', 'time-label', 'btn-back', 'btn-fwd'];
+  var BLOGGER_HIDDEN_IDS = ['progress-wrap', 'time-label', 'btn-play', 'btn-back', 'btn-fwd'];
+
+  // ─── ESTADO ──────────────────────────────────────────────────────────────
 
   var vodData      = {};
   var channels     = [];
@@ -127,13 +126,22 @@
     return img;
   }
 
-  function showToast(msg) {
+  // Cria o #toast sozinho se o tizen.html não tiver (z-index acima do player)
+  function showToast(msg, ms) {
     var t = $('toast');
-    if (!t) return;
+    if (!t) {
+      t = document.createElement('div');
+      t.id = 'toast';
+      t.style.cssText = 'position:fixed;left:50%;bottom:60px;-webkit-transform:translateX(-50%);' +
+        'transform:translateX(-50%);background:rgba(0,0,0,.88);color:#fff;padding:14px 28px;' +
+        'border-radius:30px;font-size:22px;z-index:3000;display:none;max-width:80%;text-align:center;';
+      document.body.appendChild(t);
+    }
     t.textContent = msg;
+    t.style.display = 'block';
     t.className = 'show';
     if (toastTimer) clearTimeout(toastTimer);
-    toastTimer = setTimeout(function () { t.className = ''; }, EXIT_WINDOW);
+    toastTimer = setTimeout(function () { t.className = ''; t.style.display = 'none'; }, ms || EXIT_WINDOW);
   }
 
   // ─── DADOS ───────────────────────────────────────────────────────────────
@@ -919,42 +927,53 @@
     return !!url && (/redecanais[^\/]*\/player\d*\//i.test(url) || /\/server\.php/i.test(url));
   }
 
-  // Tenta extrair o link direto. Se falhar, cai no iframe.
-  // (Mantido, mas o caminho mais confiável é o iframe — veja playVideo.)
+  // Lê a página do Blogger e devolve o link direto do mp4 (ou null).
+  // Precisa de <access origin="*"> no config.xml do app Tizen (senão o CORS bloqueia).
+  // O Blogger devolve 403 se faltar Referer/User-Agent de navegador.
   function resolveBlogger(url, cb) {
     if (url.indexOf('googlevideo.com') !== -1) { cb(url); return; }
     var tok = resolveTok;
     var xhr = new XMLHttpRequest();
     xhr.open('GET', url, true);
     xhr.timeout = 10000;
+
     try {
       xhr.setRequestHeader('Referer', 'https://www.blogger.com/');
       xhr.setRequestHeader('User-Agent',
         'Mozilla/5.0 (SMART-TV; Linux; Tizen 6.0) AppleWebKit/537.36 ' +
         '(KHTML, like Gecko) SamsungBrowser/3.0 Chrome/76.0.3809.146 TV Safari/537.36');
-      xhr.setRequestHeader('Accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8');
+      xhr.setRequestHeader('Accept',
+        'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8');
       xhr.setRequestHeader('Accept-Language', 'pt-BR,pt;q=0.9,en;q=0.8');
     } catch (eH) {}
 
     xhr.onreadystatechange = function () {
       if (xhr.readyState !== 4 || tok !== resolveTok) return;
       var best = null, bestScore = -1;
+      var info = { status: xhr.status, hasPlayUrl: false, len: 0 };
       if (xhr.status === 200) {
-        var txt = xhr.responseText.replace(/\\u0026/g, '&').replace(/\\\//g, '/');
+        var txt = xhr.responseText.replace(/\\u0026/g, '&').replace(/\\u003d/g, '=').replace(/&amp;/g, '&').replace(/\\\//g, '/');
+        info.len = txt.length;
+        info.hasPlayUrl = txt.indexOf('play_url') !== -1;
         var re = /"play_url":"([^"]+)"[^}]*?"format_id":(\d+)/g, m;
         while ((m = re.exec(txt))) {
           var f = parseInt(m[2], 10);
-          var score = f === 22 ? 100 : (f === 18 ? 50 : f);
+          var score = f === 22 ? 100 : (f === 18 ? 50 : f); // 22 = 720p, 18 = 360p
           if (score > bestScore) { bestScore = score; best = m[1]; }
         }
+        // Plano B da extração: qualquer link videoplayback do googlevideo na página
+        if (!best) {
+          var m2 = /https?:\/\/[^"'\\\s<>]+googlevideo\.com\/videoplayback[^"'\\\s<>]*/.exec(txt);
+          if (m2) best = m2[0];
+        }
       }
-      try { console.log('[Blogger resolve]', xhr.status, best ? 'ok' : 'sem link'); } catch (e) {}
-      cb(best);
+      try { console.log('[Blogger resolve]', JSON.stringify(info), best ? 'ok' : 'sem link'); } catch (e) {}
+      cb(best, info);
     };
     xhr.onerror = xhr.ontimeout = function () {
       if (tok !== resolveTok) return;
       try { console.log('[Blogger resolve] erro de rede/CORS'); } catch (e) {}
-      cb(null);
+      cb(null, { err: 'rede/CORS' });
     };
     xhr.send();
   }
@@ -985,8 +1004,6 @@
     }
   }
 
-  // ─── CONTROLE DO IFRAME (postMessage + click sintético) ──────────────────
-
   // Tenta falar com o player dentro do iframe. Como o iframe é cross-origin,
   // não dá para ler o DOM dele. Enviamos comandos nos formatos mais comuns
   // (YouTube IFrame API, Vimeo, e players próprios do Blogger) e um click
@@ -1014,10 +1031,9 @@
   function togglePlay() {
     var video = $('player');
     if (isBloggerMode) {
-      // Não é possível acionar o botão interno de um iframe cross-origin
-      // por JavaScript. Apenas transfere o foco para o player incorporado.
-      try { if (bloggerIframe) bloggerIframe.focus(); } catch (e) {}
-      showOsd('Foco no vídeo: tente OK no controle');
+      iframeCommand('togglePlay');
+      iframeCommand('playVideo');
+      iframeClickCenter();
       return;
     }
     if (!video) return;
@@ -1036,7 +1052,7 @@
     iframe.id = 'tizen-blogger-iframe';
     iframe.src = withBloggerAutoplay(url);
     iframe.style.cssText = 'width:100%;height:100%;border:none;background:#000;display:block;';
-    iframe.setAttribute('tabindex', '0');
+    iframe.setAttribute('tabindex', '-1');
     iframe.setAttribute('allowfullscreen', '');
     iframe.setAttribute('allow', 'autoplay; fullscreen; encrypted-media; picture-in-picture');
     if (isEmbedPage(url)) {
@@ -1044,9 +1060,15 @@
     }
     container.appendChild(iframe);
 
-    // Não colocar camada por cima do iframe: ela bloqueia os controles nativos.
+    // Overlay transparente: recebe o foco e as teclas do D-pad.
+    var overlay = document.createElement('div');
+    overlay.id = 'pf-blogger-overlay';
+    overlay.setAttribute('tabindex', '0');
+    overlay.onclick = function () { togglePlay(); };
+    container.appendChild(overlay);
+
     bloggerIframe  = iframe;
-    bloggerOverlay = null;
+    bloggerOverlay = overlay;
     isBloggerMode  = true;
 
     var token = playerUrl;
@@ -1066,15 +1088,11 @@
     };
     window.addEventListener('message', bloggerMsgHandler);
 
-    // Esconde só os controles que dependem de <video> direto.
-    // btn-play FICA visível: chama togglePlay(), que fala com o iframe.
     setBloggerControls(true);
 
-    // Entrega o foco ao próprio iframe para permitir interação nativa.
     setTimeout(function () {
-      try { iframe.focus(); } catch (e) {}
-      showOsd('Use OK no player. Se não responder, este embed não aceita controle remoto.');
-    }, 300);
+      try { overlay.focus(); } catch (e) {}
+    }, 150);
   }
 
   function destroyBloggerIframe() {
@@ -1098,27 +1116,30 @@
     setBloggerControls(false);
   }
 
-  // ─── playVideo ───────────────────────────────────────────────────────────
-
   function playVideo(url, title, itemId, cat, epIdx, mode, orig) {
     if (!url) { showToast('Vídeo indisponível'); return; }
 
     if (!mode) {
       resolveTok++;
+
       if (isBloggerUrl(url)) {
-        // Primeiro tenta obter MP4 direto para usar o <video> nativo,
-        // que aceita Enter/OK do controle remoto. Se falhar, usa iframe.
         showToast('⏳ Carregando vídeo...');
         var tok = resolveTok;
-        resolveBlogger(url, function (direct) {
+        resolveBlogger(url, function (direct, info) {
           if (tok !== resolveTok) return;
-          if (direct) playVideo(direct, title, itemId, cat, epIdx, 'direct', url);
-          else playVideo(url, title, itemId, cat, epIdx, 'iframe');
+          if (direct) {
+            showToast('✅ Link direto encontrado', 2000);
+            playVideo(direct, title, itemId, cat, epIdx, 'direct', url);
+          } else {
+            var why = (info && info.err) ? info.err
+                    : ('HTTP ' + (info ? info.status : '?') + (info && info.status === 200 ? (info.hasPlayUrl ? ', formato inesperado' : ', sem play_url') : ''));
+            showToast('⚠ Sem link direto (' + why + ') → player embutido: dê play com o ponteiro', 7000);
+            playVideo(url, title, itemId, cat, epIdx, 'iframe');
+          }
         });
         return;
-      } else if (isEmbedPage(url)) {
-        mode = 'iframe';
       }
+      if (isEmbedPage(url)) mode = 'iframe';
     }
 
     saveProgress();
@@ -1134,7 +1155,7 @@
 
     var wrap  = $('player-wrap');
     var video = $('player');
-    $('player-title').textContent = title || '';
+    $('player-title').textContent = (title || '') + (mode === 'direct' ? '  [direto]' : (mode === 'iframe' ? '  [embutido]' : ''));
 
     destroyHls();
     destroyBloggerIframe();
@@ -1189,7 +1210,6 @@
       try { video.focus(); } catch (e) {}
     }
 
-    // Botões Próximo/Anterior
     var nextBtn = $('btn-next-ep');
     var nxt     = nextEpisode();
     if (nxt) {
@@ -1566,6 +1586,12 @@
     if (!list.length) return;
     var cur = document.activeElement;
 
+    // Se o foco está no overlay do iframe, entra na barra pelo primeiro botão
+    if (scope === 'player' && bloggerOverlay && cur === bloggerOverlay) {
+      var first = initialFocus('player', list);
+      if (first) { focusEl(first); return; }
+    }
+
     if (list.indexOf(cur) < 0) { focusEl(initialFocus(scope, list)); return; }
     var next = findNext(cur, dir, list);
     if (next) focusEl(next);
@@ -1678,6 +1704,26 @@
     else if (isShown($('modal')))  closeModal(true);
   }
 
+  // Voltar: tratado por keydown (10009) E pelo evento tizenhwkey. Com um iframe
+  // focado, o keydown vai para dentro do iframe e nunca chega aqui; o tizenhwkey
+  // é entregue à janela principal mesmo assim. O carimbo evita tratar duas vezes.
+  var lastBackStamp = 0;
+  function handleBackKey() {
+    var n = Date.now();
+    if (n - lastBackStamp < 400) return;
+    lastBackStamp = n;
+    var scope = getScope();
+    if (scope === 'player') closePlayer(true);
+    else onBack(scope);
+  }
+
+  window.addEventListener('tizenhwkey', function (e) {
+    if (e && (e.keyName === 'back' || e.keyName === 'Back')) {
+      try { e.preventDefault(); } catch (e0) {}
+      handleBackKey();
+    }
+  });
+
   function isTizenApp() {
     try {
       return !!(window.tizen && window.tizen.application && window.tizen.application.getCurrentApplication());
@@ -1742,8 +1788,6 @@
     }
   }
 
-  // Player: Enter/Play/Pause SEMPRE controlam o vídeo/iframe.
-  // ↓ abre a barra de botões; ↑ volta para o vídeo.
   function onPlayerKey(e, key, active) {
     var video = $('player');
     var inBar = playerBarHas(active);
@@ -1752,7 +1796,6 @@
     showControls();
 
     switch (key) {
-      case KEY.BACK:
       case KEY.ESC:
       case KEY.MEDIA_STOP:
         e.preventDefault(); closePlayer(true); return;
@@ -1782,18 +1825,12 @@
         e.preventDefault(); if (isTv) channelStep(-1); else seekBy(-60); return;
 
       case KEY.ENTER:
-        if (isBloggerMode && !inBar) {
-          // First OK enters the iframe. Avoid swallowing Enter when the iframe
-          // already has focus; the embedded page may handle it natively.
-          if (active !== bloggerIframe) {
-            e.preventDefault();
-            try { if (bloggerIframe) bloggerIframe.focus(); } catch (e0) {}
-            showOsd('Player selecionado. Pressione OK novamente');
-          }
-          return;
-        }
         e.preventDefault();
-        if (inBar) activate(active); else togglePlay();
+        if (inBar) {
+          activate(active);
+        } else {
+          togglePlay();
+        }
         return;
 
       case KEY.LEFT:
@@ -1829,7 +1866,9 @@
     var scope  = getScope();
     var active = document.activeElement;
 
+    // No navegador, o Voltar da TV vira history.back() → tratado em onPopState
     if (key === KEY.BACK && !isTizenApp()) return;
+    if (key === KEY.BACK) { e.preventDefault(); handleBackKey(); return; }
 
     if (scope === 'player') { onPlayerKey(e, key, active); return; }
     if (isSearchInput(active)) { onSearchKey(e, key, active); return; }
