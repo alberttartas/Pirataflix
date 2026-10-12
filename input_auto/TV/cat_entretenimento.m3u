@@ -1,4 +1,7 @@
 #EXTM3U
+#EXTINF:-1 tvg-id="PlusMaisUm.br@HD" tvg-logo="https://i.ibb.co/ZRDvqJcf/Logo-Mais-Um-original-sem-fundo.png" group-title="🎭 Entretenimento",+MaisUm (720p)
+https://stream.ichibansys.com:3230/hybrid/play.m3u8
+
 #EXTINF:-1 tvg-id="AELatinAmerica.us@Brazil" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/A%26E_Network_logo.svg/960px-A%26E_Network_logo.svg.png" group-title="🎭 Entretenimento",A&E Latin America Brazil (720p)
 http://170.83.16.50/AeE/index.m3u8
 

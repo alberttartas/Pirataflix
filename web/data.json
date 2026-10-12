@@ -314,7 +314,7 @@
         {
           "name": "Tom Holland",
           "character": "Peter Parker / Spider-Man",
-          "profile": "https://image.tmdb.org/t/p/w185/xKBAaPIa1c7tzZD3Y0MhBLv4hPE.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/adwEBb2sCSzqwnpVgNEG7irl1Ne.jpg"
         },
         {
           "name": "Sadie Sink",
@@ -3560,7 +3560,7 @@
         "https://image.tmdb.org/t/p/w500/mFEft25COCVH16VDgHuhxntArq1.jpg",
         "https://image.tmdb.org/t/p/w500/bbSd2DURmBEDhMvIjTvzcQ2bObl.jpg"
       ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/6GssadQMycGiPGMny8aeCv0h6TW.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/qd0i6q09P4TsBuwGkckWZwMAvFA.jpg",
       "overview": "Adriana é fisioterapeuta de Arthur Brandão. Arthur a pede em casamento para passar para ela sua herança e morre no dia. Adriana é condenada por um crime que não cometeu.",
       "year": "2026",
       "genres": [
@@ -72212,7 +72212,7 @@
     {
       "id": "dragon_ball_super",
       "title": "Dragon Ball Super",
-      "poster": "https://image.tmdb.org/t/p/w500/cQDCIp92rTzTnd8mjb1syLhrAqy.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/w5ai45092PIlV1Vbt7kswry2C03.jpg",
       "seasons": [
         {
           "season": 1,
@@ -73536,26 +73536,26 @@
       "category": "animes",
       "local_poster": "/Pirataflix/assets/Capas/dragon_ball_super.jpg",
       "posters": [
-        "https://image.tmdb.org/t/p/w500/qEUrbXJ2qt4Rg84Btlx4STOhgte.jpg",
-        "https://image.tmdb.org/t/p/w500/8xc6QcxN8ZOCW4lo4IpVNm3VqKt.jpg",
-        "https://image.tmdb.org/t/p/w500/cQDCIp92rTzTnd8mjb1syLhrAqy.jpg",
-        "https://image.tmdb.org/t/p/w500/2wcE9EXEQgJ0d4Y8Zi68OQY3aZx.jpg",
-        "https://image.tmdb.org/t/p/w500/vghCzsR5YTEjmQ6mgIAqz8vWpbE.jpg",
-        "https://image.tmdb.org/t/p/w500/w7McGJsGqDjKu4sq5jl0OI1nrqY.jpg"
+        "https://image.tmdb.org/t/p/w500/AojgldgsOlzZV8ahyOzaiAjJWvV.jpg",
+        "https://image.tmdb.org/t/p/w500/w5ai45092PIlV1Vbt7kswry2C03.jpg",
+        "https://image.tmdb.org/t/p/w500/3brrJ6mSESdGh1uo2YON9tDVXXB.jpg",
+        "https://image.tmdb.org/t/p/w500/nmhpTtwTU9TliNgLOnPvz3LemGP.jpg",
+        "https://image.tmdb.org/t/p/w500/jwWZ0qQeHlhLrdu30uM7uLxnbiP.jpg",
+        "https://image.tmdb.org/t/p/w500/57CiOXaO6OoUF96pBWXJxw19OGs.jpg"
       ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/qA2UwUQbj05aeBMCuC0mHSQ4loE.jpg",
-      "overview": "Seis meses após a derrota de Majin Buu, Goku arranja um novo emprego como... fazendeiro de nabos? Agora que a Terra está em paz, nosso heróis levam vidas mundanas, mas não por muito tempo. Longe dali, Bills, o poderoso Deus da Destruição, recebe uma profecia de que encontrará seu fim nas mãos de um ser ainda mais poderoso, e sua busca pelo Deus dos Saiyajins o traz para a Terra. Será que Goku e seus amigos conseguirão derrotar seu mais poderoso inimigo até então?",
-      "year": "2015",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/8phLVFEXOe02JgFmH9ldn3j4tXW.jpg",
+      "overview": "Quando Beerus, o Deus da Destruição, desperta em busca de um rival à altura, Goku e seus amigos enfrentam uma batalha épica para impedi-lo de destruir a Terra.",
+      "year": "2026",
       "genres": [
         "Animação",
         "Ação & Aventura",
         "Sci-Fi & Fantasia"
       ],
-      "rating": 8.2,
+      "rating": 9.7,
       "cast": [
         {
           "name": "Masako Nozawa",
-          "character": "Son Goku / Goku Black / Son Gohan / Son Goten (voice)",
+          "character": "Son Goku / Son Goten (voice)",
           "profile": "https://image.tmdb.org/t/p/w185/jxbXdejmPoiKnNoQz7Dkb80qC26.jpg"
         },
         {
@@ -73564,34 +73564,19 @@
           "profile": "https://image.tmdb.org/t/p/w185/vZ69WQJfR5D2xow5FkddduRjq6c.jpg"
         },
         {
-          "name": "鶴ひろみ",
-          "character": "Bulma (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/oFU9CCNLUhklLhEuLutM0FyTUbt.jpg"
+          "name": "渡辺菜生子",
+          "character": "Chichi (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/wgX2xT2y21Tv0eKIMSyMXf6CC0U.jpg"
+        },
+        {
+          "name": "Unsho Ishizuka",
+          "character": "Mr. Satan (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/nmj1vTrJc0zvuUYqxSyWXmIGBlP.jpg"
         },
         {
           "name": "Koichi Yamadera",
           "character": "Beerus (voice)",
           "profile": "https://image.tmdb.org/t/p/w185/biov5jENp2XYfehkcdnRvi796Wi.jpg"
-        },
-        {
-          "name": "草尾毅",
-          "character": "Trunks (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/gDiYLUdl9zXXJmhE0bAuB1Jm3FJ.jpg"
-        },
-        {
-          "name": "山田栄子",
-          "character": "Mai (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/uIESaPrL2AxOaYyfmh6krMVe813.jpg"
-        },
-        {
-          "name": "皆口裕子",
-          "character": "Videl / Pan (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/bEv0ho89VNgWkCCmT2GdNjMAuvZ.jpg"
-        },
-        {
-          "name": "渡辺菜生子",
-          "character": "Chichi / Pu'er (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/wgX2xT2y21Tv0eKIMSyMXf6CC0U.jpg"
         }
       ]
     },
@@ -76702,7 +76687,7 @@
         "Ação & Aventura",
         "Sci-Fi & Fantasia"
       ],
-      "rating": 8.9,
+      "rating": 9.0,
       "cast": [
         {
           "name": "Saheli Khan",
@@ -112006,6 +111991,21 @@
       "episodes": [
         {
           "url": "http://79.127.238.228:14433",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "PlusMaisUm.br@HD",
+      "type": "tv",
+      "title": "+MaisUm (720p)",
+      "tvg_id": "PlusMaisUm.br@HD",
+      "tvg_logo": "https://i.ibb.co/ZRDvqJcf/Logo-Mais-Um-original-sem-fundo.png",
+      "group": "🎭 Entretenimento",
+      "url": "https://stream.ichibansys.com:3230/hybrid/play.m3u8",
+      "episodes": [
+        {
+          "url": "https://stream.ichibansys.com:3230/hybrid/play.m3u8",
           "title": "AO VIVO"
         }
       ]

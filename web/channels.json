@@ -23205,5 +23205,20 @@
         "title": "AO VIVO"
       }
     ]
+  },
+  {
+    "id": "PlusMaisUm.br@HD",
+    "type": "tv",
+    "title": "+MaisUm (720p)",
+    "tvg_id": "PlusMaisUm.br@HD",
+    "tvg_logo": "https://i.ibb.co/ZRDvqJcf/Logo-Mais-Um-original-sem-fundo.png",
+    "group": "🎭 Entretenimento",
+    "url": "https://stream.ichibansys.com:3230/hybrid/play.m3u8",
+    "episodes": [
+      {
+        "url": "https://stream.ichibansys.com:3230/hybrid/play.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
   }
 ]
