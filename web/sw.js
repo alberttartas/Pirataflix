@@ -1,4 +1,4 @@
-const CACHE_NAME = 'pirataflix-v2';
+const CACHE_NAME = 'pirataflix-v3';
 const ASSETS = [
   './', './index.html', './filmes.html', './series.html', './novelas.html',
   './animes.html', './infantil.html', './tv.html',
@@ -18,6 +18,8 @@ self.addEventListener('activate', e => {
 });
 self.addEventListener('fetch', e => {
   if (e.request.method !== 'GET') return;
+  // Só cuida do próprio site: vídeos, Blogger, CDNs e APIs de terceiros passam direto
+  if (new URL(e.request.url).origin !== self.location.origin) return;
   e.respondWith(
     fetch(e.request.clone()).then(r => {
       if (r && r.status === 200 && r.type !== 'opaque') {
@@ -25,6 +27,8 @@ self.addEventListener('fetch', e => {
         caches.open(CACHE_NAME).then(c => c.put(e.request, rc));
       }
       return r;
-    }).catch(() => caches.match(e.request))
+    }).catch(() =>
+      caches.match(e.request).then(hit => hit || Response.error())
+    )
   );
 });
