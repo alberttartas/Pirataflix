@@ -1001,41 +1001,77 @@
     return !!url && (/redecanais[^\/]*\/player\d*\//i.test(url) || /\/server\.php/i.test(url));
   }
 
-  // Lê a página do Blogger e devolve o link direto do mp4 (ou null).
-  // Precisa de <access origin="*"> no config.xml do app Tizen (senão o CORS bloqueia).
+  // Endpoint próprio (Vercel) que lê a página do Blogger no servidor. Só é usado
+  // quando a leitura direta é bloqueada por CORS (navegador comum). Atenção: o link
+  // extraído no servidor pode ficar preso ao IP do servidor; se der erro ao tocar,
+  // o app cai sozinho para o iframe.
+  var BLOGGER_PROXY = 'https://pirataflix-seven.vercel.app/api/blogger';
+
+  // Extrai o melhor link de vídeo do HTML da página do Blogger
+  function extractBloggerLink(html) {
+    var txt = html.replace(/\\u0026/g, '&').replace(/\\u003d/g, '=').replace(/&amp;/g, '&').replace(/\\\//g, '/');
+    var best = null, bestScore = -1;
+    var re = /"play_url":"([^"]+)"[^}]*?"format_id":(\d+)/g, m;
+    while ((m = re.exec(txt))) {
+      var f = parseInt(m[2], 10);
+      var score = f === 22 ? 100 : (f === 18 ? 50 : f); // 22 = 720p, 18 = 360p
+      if (score > bestScore) { bestScore = score; best = m[1]; }
+    }
+    if (!best) {
+      var m2 = /https?:\/\/[^"'\\\s<>]+googlevideo\.com\/videoplayback[^"'\\\s<>]*/.exec(txt);
+      if (m2) best = m2[0];
+    }
+    return { url: best, hasPlayUrl: txt.indexOf('play_url') !== -1, len: txt.length };
+  }
+
+  // Devolve o link direto do mp4 (ou null). Ordem: leitura direta (funciona no app
+  // empacotado com <access origin="*">) → endpoint próprio → null (iframe).
   function resolveBlogger(url, cb) {
-    if (url.indexOf('googlevideo.com') !== -1) { cb(url); return; }
-    var tok = resolveTok;
+    if (url.indexOf('googlevideo.com') !== -1) { cb(url, {}); return; }
+    var tok  = resolveTok;
+    var done = false;
+    function finish(link, info) {
+      if (done || tok !== resolveTok) return;
+      done = true;
+      try { console.log('[Blogger resolve]', JSON.stringify(info), link ? 'ok' : 'sem link'); } catch (e) {}
+      cb(link, info);
+    }
+
+    function viaProxy(prevInfo) {
+      var x = new XMLHttpRequest();
+      x.open('GET', BLOGGER_PROXY + '?src=' + encodeURIComponent(url), true);
+      x.timeout = 15000;
+      x.onreadystatechange = function () {
+        if (x.readyState !== 4 || x.status === 0) return;
+        var link = null;
+        if (x.status === 200) {
+          try { link = JSON.parse(x.responseText).url || null; } catch (e) {}
+        }
+        finish(link, { via: 'proxy', status: x.status, direct: prevInfo });
+      };
+      x.onerror = x.ontimeout = function () { finish(null, { via: 'proxy', err: 'rede', direct: prevInfo }); };
+      x.send();
+    }
+
     var xhr = new XMLHttpRequest();
     xhr.open('GET', url, true);
     xhr.timeout = 10000;
     xhr.onreadystatechange = function () {
-      if (xhr.readyState !== 4 || tok !== resolveTok) return;
-      var best = null, bestScore = -1;
-      var info = { status: xhr.status, hasPlayUrl: false, len: 0 };
+      if (xhr.readyState !== 4 || xhr.status === 0) return; // status 0 → onerror/ontimeout
+      var info = { via: 'direto', status: xhr.status, hasPlayUrl: false, len: 0 };
+      var link = null;
       if (xhr.status === 200) {
-        var txt = xhr.responseText.replace(/\\u0026/g, '&').replace(/\\u003d/g, '=').replace(/&amp;/g, '&').replace(/\\\//g, '/');
-        info.len = txt.length;
-        info.hasPlayUrl = txt.indexOf('play_url') !== -1;
-        var re = /"play_url":"([^"]+)"[^}]*?"format_id":(\d+)/g, m;
-        while ((m = re.exec(txt))) {
-          var f = parseInt(m[2], 10);
-          var score = f === 22 ? 100 : (f === 18 ? 50 : f); // 22 = 720p, 18 = 360p
-          if (score > bestScore) { bestScore = score; best = m[1]; }
-        }
-        // Plano B da extração: qualquer link videoplayback do googlevideo na página
-        if (!best) {
-          var m2 = /https?:\/\/[^"'\\\s<>]+googlevideo\.com\/videoplayback[^"'\\\s<>]*/.exec(txt);
-          if (m2) best = m2[0];
-        }
+        var r = extractBloggerLink(xhr.responseText);
+        link = r.url; info.hasPlayUrl = r.hasPlayUrl; info.len = r.len;
       }
-      try { console.log('[Blogger resolve]', JSON.stringify(info), best ? 'ok' : 'sem link'); } catch (e) {}
-      cb(best, info);
+      if (link) finish(link, info); else viaProxy(info);
     };
+    // CORS/rede: tenta o endpoint próprio (uma vez só)
+    var failed = false;
     xhr.onerror = xhr.ontimeout = function () {
-      if (tok !== resolveTok) return;
-      try { console.log('[Blogger resolve] erro de rede/CORS'); } catch (e) {}
-      cb(null, { err: 'rede/CORS' });
+      if (failed || done || tok !== resolveTok) return;
+      failed = true;
+      viaProxy({ via: 'direto', err: 'rede/CORS' });
     };
     xhr.send();
   }
@@ -1157,6 +1193,7 @@
           } else {
             var why = (info && info.err) ? info.err
                     : ('HTTP ' + (info ? info.status : '?') + (info && info.status === 200 ? (info.hasPlayUrl ? ', formato inesperado' : ', sem play_url') : ''));
+            if (info && info.via === 'proxy' && info.direct) why = 'direto: ' + (info.direct.err || ('HTTP ' + info.direct.status)) + ' | proxy: ' + (info.err || ('HTTP ' + info.status));
             showToast('⚠ Sem link direto (' + why + ') → player embutido: dê play com o ponteiro', 7000);
             playVideo(url, title, itemId, cat, epIdx, 'iframe');
           }
