@@ -1,8 +1,5 @@
 /**
  * Pirataflix — Blogger resolver
- * /api/blogger?src=<URL blogger.com/video.g codificada>
- * Lê a página do Blogger NO SERVIDOR (sem CORS) e devolve { url } com o mp4 direto.
- * Só aceita blogger.com/video.g (não é proxy aberto).
  */
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36';
 
@@ -44,9 +41,13 @@ module.exports = async function handler(req, res) {
     const r = await fetch(target.href, { headers: { 'User-Agent': UA, 'Accept-Language': 'pt-BR,pt;q=0.9' }, signal: ctrl.signal });
     clearTimeout(t);
     if (!r.ok) return res.status(502).json({ error: 'blogger HTTP ' + r.status });
-    const out = extract(await r.text());
+    const html = await r.text();
+    const out = extract(html);
     res.setHeader('Cache-Control', 'no-store');
-    if (!out.url) return res.status(404).json({ error: 'sem link na página' });
+    if (!out.url) {
+      // 422 (e não 404) para distinguir de "endpoint não publicado"
+      return res.status(422).json({ error: 'página sem link (formato novo?) len=' + html.length + ' play_url=' + (html.indexOf('play_url') !== -1) });
+    }
     return res.status(200).json(out);
   } catch (e) {
     return res.status(502).json({ error: String(e.message || e) });
