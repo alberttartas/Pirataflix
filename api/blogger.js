@@ -1,5 +1,8 @@
 /**
  * Pirataflix — Blogger resolver
+ * /api/blogger?src=<URL blogger.com/video.g codificada>
+ * Lê a página do Blogger NO SERVIDOR (sem CORS) e devolve { url } com o mp4 direto.
+ * Só aceita blogger.com/video.g (não é proxy aberto).
  */
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36';
 
@@ -42,6 +45,21 @@ module.exports = async function handler(req, res) {
     clearTimeout(t);
     if (!r.ok) return res.status(502).json({ error: 'blogger HTTP ' + r.status });
     const html = await r.text();
+
+    // ?debug=1 → mostra o que o servidor realmente recebeu (para ajustar a extração)
+    if (req.query.debug) {
+      const keys = ['videoplayback', 'googlevideo', 'play_url', 'streams', 'format_id', 'VIDEO_CONFIG',
+                    'video-play', 'contentId', '.mp4', 'consent', 'captcha', 'unavailable', 'indispon', 'error'];
+      const hits = {};
+      for (const k of keys) {
+        const i = html.indexOf(k);
+        if (i !== -1) hits[k] = html.slice(Math.max(0, i - 150), i + 350);
+      }
+      const title = (/<title[^>]*>([^<]*)/i.exec(html) || [])[1] || '';
+      const text = html.replace(/<script[\s\S]*?<\/script>/gi, '[script]').replace(/<style[\s\S]*?<\/style>/gi, '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').slice(0, 500);
+      return res.status(200).json({ status: r.status, finalUrl: r.url, contentType: r.headers.get('content-type'), len: html.length, title, textHead: text, hits });
+    }
+
     const out = extract(html);
     res.setHeader('Cache-Control', 'no-store');
     if (!out.url) {
