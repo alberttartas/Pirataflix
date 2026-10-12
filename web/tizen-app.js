@@ -1001,31 +1001,40 @@
     return !!url && (/redecanais[^\/]*\/player\d*\//i.test(url) || /\/server\.php/i.test(url));
   }
 
-  // Endpoint próprio (Vercel) que lê a página do Blogger no servidor. Só é usado
-  // quando a leitura direta é bloqueada por CORS (navegador comum). Atenção: o link
-  // extraído no servidor pode ficar preso ao IP do servidor; se der erro ao tocar,
-  // o app cai sozinho para o iframe.
-  var BLOGGER_PROXY = 'https://pirataflix-seven.vercel.app/api/blogger';
+  // O link do googlevideo é ASSINADO COM O IP de quem faz a chamada (ip=... no sparams).
+  // Por isso a chamada precisa sair da própria TV: um link gerado no servidor (Vercel)
+  // só tocaria para o IP do servidor. O endpoint /api/blogger fica só para diagnóstico.
+  var USE_SERVER_PROXY = false;
+  var BLOGGER_PROXY    = 'https://pirataflix-seven.vercel.app/api/blogger';
+  var BLOGGER_BL       = 'boq_bloggeruiserver_20261007.02_p0'; // usado se a página não informar
 
-  // Extrai o melhor link de vídeo do HTML da página do Blogger
-  function extractBloggerLink(html) {
-    var txt = html.replace(/\\u0026/g, '&').replace(/\\u003d/g, '=').replace(/&amp;/g, '&').replace(/\\\//g, '/');
-    var best = null, bestScore = -1;
-    var re = /"play_url":"([^"]+)"[^}]*?"format_id":(\d+)/g, m;
-    while ((m = re.exec(txt))) {
-      var f = parseInt(m[2], 10);
-      var score = f === 22 ? 100 : (f === 18 ? 50 : f); // 22 = 720p, 18 = 360p
-      if (score > bestScore) { bestScore = score; best = m[1]; }
-    }
-    if (!best) {
-      var m2 = /https?:\/\/[^"'\\\s<>]+googlevideo\.com\/videoplayback[^"'\\\s<>]*/.exec(txt);
-      if (m2) best = m2[0];
-    }
-    return { url: best, hasPlayUrl: txt.indexOf('play_url') !== -1, len: txt.length };
+  // Desfaz o escape de JSON dentro de JSON (qualquer nível de barras)
+  function unescapeDeep(t) {
+    return t.replace(/\\+u0026/gi, '&').replace(/\\+u003d/gi, '=')
+            .replace(/\\+\//g, '/').replace(/\\+"/g, '"');
   }
 
-  // Devolve o link direto do mp4 (ou null). Ordem: leitura direta (funciona no app
-  // empacotado com <access origin="*">) → endpoint próprio → null (iframe).
+  // Escolhe o melhor link do googlevideo no texto: itag 22 (720p) > 18 (360p) > outros
+  function pickGoogleVideo(txt) {
+    var urls = txt.match(/https?:\/\/[^"'\\\s<>\]]+googlevideo\.com\/videoplayback[^"'\\\s<>\]]*/g) || [];
+    var best = null, bestScore = -1;
+    for (var i = 0; i < urls.length; i++) {
+      var m = /[?&]itag=(\d+)/.exec(urls[i]);
+      var itag = m ? parseInt(m[1], 10) : 0;
+      if (!itag) continue; // ignora o link SABR (sem itag), que não toca em <video>
+      var score = itag === 22 ? 100 : (itag === 18 ? 50 : 10);
+      if (score > bestScore) { bestScore = score; best = urls[i]; }
+    }
+    return best;
+  }
+
+  function bloggerToken(url) {
+    var m = /[?&]token=([^&#]+)/.exec(url);
+    return m ? m[1] : '';
+  }
+
+  // Devolve o link direto do mp4 (ou null), chamando o mesmo RPC (WcwnYd) que o
+  // player do Blogger usa. Em app Tizen empacotado, <access origin="*"> libera o CORS.
   function resolveBlogger(url, cb) {
     if (url.indexOf('googlevideo.com') !== -1) { cb(url, {}); return; }
     var tok  = resolveTok;
@@ -1037,44 +1046,67 @@
       cb(link, info);
     }
 
-    function viaProxy(prevInfo) {
+    var token = bloggerToken(url);
+    if (!token) { finish(null, { via: 'rpc', err: 'sem token na URL' }); return; }
+
+    function viaServer(prev) {
+      if (!USE_SERVER_PROXY) { finish(null, prev); return; }
       var x = new XMLHttpRequest();
       x.open('GET', BLOGGER_PROXY + '?src=' + encodeURIComponent(url), true);
       x.timeout = 15000;
       x.onreadystatechange = function () {
         if (x.readyState !== 4 || x.status === 0) return;
-        var link = null, msg = '';
-        try {
-          var j = JSON.parse(x.responseText);
-          if (x.status === 200) link = j.url || null; else msg = j.error || '';
-        } catch (e) {}
-        finish(link, { via: 'proxy', status: x.status, msg: msg, direct: prevInfo });
+        var link = null;
+        try { if (x.status === 200) link = JSON.parse(x.responseText).url || null; } catch (e) {}
+        finish(link, { via: 'servidor', status: x.status, direto: prev });
       };
-      x.onerror = x.ontimeout = function () { finish(null, { via: 'proxy', err: 'rede', direct: prevInfo }); };
+      x.onerror = x.ontimeout = function () { finish(null, { via: 'servidor', err: 'rede', direto: prev }); };
       x.send();
     }
 
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', url, true);
-    xhr.timeout = 10000;
-    xhr.onreadystatechange = function () {
-      if (xhr.readyState !== 4 || xhr.status === 0) return; // status 0 → onerror/ontimeout
-      var info = { via: 'direto', status: xhr.status, hasPlayUrl: false, len: 0 };
-      var link = null;
-      if (xhr.status === 200) {
-        var r = extractBloggerLink(xhr.responseText);
-        link = r.url; info.hasPlayUrl = r.hasPlayUrl; info.len = r.len;
-      }
-      if (link) finish(link, info); else viaProxy(info);
-    };
-    // CORS/rede: tenta o endpoint próprio (uma vez só)
-    var failed = false;
-    xhr.onerror = xhr.ontimeout = function () {
-      if (failed || done || tok !== resolveTok) return;
-      failed = true;
-      viaProxy({ via: 'direto', err: 'rede/CORS' });
-    };
-    xhr.send();
+    function callRpc(bl, sid) {
+      var qs = 'rpcids=WcwnYd&source-path=' + encodeURIComponent('/video.g') +
+               (sid ? '&f.sid=' + encodeURIComponent(sid) : '') +
+               '&bl=' + encodeURIComponent(bl || BLOGGER_BL) +
+               '&hl=pt-BR&_reqid=' + (10000 + Math.floor(Math.random() * 89999)) + '&rt=c';
+      var body = 'f.req=' + encodeURIComponent(JSON.stringify(
+                   [[['WcwnYd', JSON.stringify([token, '', 0]), null, 'generic']]])) + '&';
+
+      var x = new XMLHttpRequest();
+      x.open('POST', 'https://www.blogger.com/_/BloggerVideoPlayerUi/data/batchexecute?' + qs, true);
+      x.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded;charset=UTF-8');
+      x.timeout = 12000;
+      x.onreadystatechange = function () {
+        if (x.readyState !== 4 || x.status === 0) return; // 0 → onerror/ontimeout
+        var link = null;
+        if (x.status === 200) link = pickGoogleVideo(unescapeDeep(x.responseText));
+        var info = { via: 'rpc', status: x.status, len: (x.responseText || '').length, bl: !!bl };
+        if (link) finish(link, info); else viaServer(info);
+      };
+      var failed = false;
+      x.onerror = x.ontimeout = function () {
+        if (failed || done) return;
+        failed = true;
+        viaServer({ via: 'rpc', err: 'rede/CORS' });
+      };
+      x.send(body);
+    }
+
+    // 1) a página traz a versão atual (bl) e o f.sid; se não der, usa o padrão
+    var g = new XMLHttpRequest();
+    g.open('GET', url, true);
+    g.timeout = 8000;
+    var started = false;
+    function go(html) {
+      if (started) return;
+      started = true;
+      var bl  = (/"cfb2h":"([^"]+)"/.exec(html || '') || [])[1] || '';
+      var sid = (/"FdrFJe":"([^"]+)"/.exec(html || '') || [])[1] || '';
+      callRpc(bl, sid);
+    }
+    g.onreadystatechange = function () { if (g.readyState === 4 && g.status !== 0) go(g.status === 200 ? g.responseText : ''); };
+    g.onerror = g.ontimeout = function () { go(''); };
+    g.send();
   }
 
   // Pede autoplay ao embed do Blogger (parâmetro extra; ignorado se não suportado)
@@ -1192,14 +1224,9 @@
             showToast('✅ Link direto encontrado', 2000);
             playVideo(direct, title, itemId, cat, epIdx, 'direct', url);
           } else {
-            var why = (info && info.err) ? info.err
-                    : ('HTTP ' + (info ? info.status : '?') + (info && info.status === 200 ? (info.hasPlayUrl ? ', formato inesperado' : ', sem play_url') : ''));
-            if (info && info.via === 'proxy') {
-              var pw = info.err ? info.err
-                     : (info.status === 404 && !info.msg) ? 'endpoint /api/blogger não existe no deploy'
-                     : (info.msg || ('HTTP ' + info.status));
-              why = 'direto: ' + (info.direct ? (info.direct.err || ('HTTP ' + info.direct.status)) : '?') + ' | proxy: ' + pw;
-            }
+            var why = !info ? '?' : (info.err ? info.err
+                    : ('HTTP ' + info.status + (info.len ? ', ' + info.len + ' bytes sem link' : '')));
+            if (info && info.direto) why = (info.direto.err || ('HTTP ' + info.direto.status)) + ' | servidor: ' + (info.err || ('HTTP ' + info.status));
             showToast('⚠ Sem link direto (' + why + ') → player embutido: dê play com o ponteiro', 7000);
             playVideo(url, title, itemId, cat, epIdx, 'iframe');
           }
