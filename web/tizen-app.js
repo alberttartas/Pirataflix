@@ -1,10 +1,11 @@
 /*
- * PIRATAFLIX — tizen-app.js
- * v2.4 — diagnóstico na tela, Voltar via tizenhwkey, toast autônomo
+ * PIRATAFLIX — tizen-app.js  (v2.4 — diagnóstico na tela, Voltar via tizenhwkey, toast autônomo)
  */
 
 (function () {
   'use strict';
+
+  // ─── CONFIG ──────────────────────────────────────────────────────────────
 
   var RAW_BASE       = 'https://raw.githubusercontent.com/alberttartas/Pirataflix/main';
   var DEFAULT_POSTER = RAW_BASE + '/assets/Capas/default.jpg';
@@ -34,10 +35,11 @@
     'MediaRewind', 'MediaFastForward', 'ChannelUp', 'ChannelDown'
   ];
 
-  var BATCH        = 40;
+  var BATCH        = 40;    // cards renderizados por lote
   var CW_KEY       = 'pirataflix_progressos';
-  var EXIT_WINDOW  = 2500;
+  var EXIT_WINDOW  = 2500;  // ms para confirmar saída com Voltar
 
+  // IDs dos controles que não funcionam no modo iframe
   var BLOGGER_HIDDEN_IDS = ['progress-wrap', 'time-label', 'btn-play', 'btn-back', 'btn-fwd'];
 
   // ─── ESTADO ──────────────────────────────────────────────────────────────
@@ -48,33 +50,35 @@
   var searchActive = false;
   var searchTimer  = null;
 
+  // Player
   var playerUrl      = '';
   var playerTitle    = '';
   var playerItemId   = null;
   var playerCat      = null;
   var playerEpIdx    = 0;
   var playerEnded    = false;
-  var playerMode     = '';
-  var playerOrig     = '';
-  var resolveTok     = 0;
+  var playerMode     = '';   // '' | 'direct' (link extraído do Blogger) | 'iframe'
+  var playerOrig     = '';   // URL original do Blogger (para voltar ao iframe se o direto falhar)
+  var resolveTok     = 0;    // invalida resoluções do Blogger em andamento
   var hlsInstance    = null;
   var controlsTimer  = null;
   var progressInterval = null;
   var seekStreak     = 0;
   var lastSeekAt     = 0;
 
+  // Player em iframe (Blogger como plano B, ou outros embeds)
   var bloggerIframe = null;
-  var bloggerOverlay = null;
   var isBloggerMode = false;
   var bloggerMsgHandler = null;
 
-  var focusReturn = null;
+  // Foco / saída
+  var focusReturn = null;   // { el, key } — de onde o modal/player foi aberto
   var lastBackAt  = 0;
   var toastTimer  = null;
   var scrollTimer = null;
   var fsRequested = false;
-  var layerPushed = false;
-  var ignorePop   = 0;
+  var layerPushed = false;  // há uma entrada no histórico para modal/player (Voltar do navegador)
+  var ignorePop   = 0;      // popstate causado por nós mesmos
 
   // ─── UTILITÁRIOS ─────────────────────────────────────────────────────────
 
@@ -82,11 +86,21 @@
 
   function esc(s) {
     return String(s || '')
-      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
-      .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+  }
+
+  function toArray(list) {
+    var arr = [];
+    for (var i = 0; i < list.length; i++) arr.push(list[i]);
+    return arr;
   }
 
   function isShown(el) { return !!el && el.style.display !== 'none'; }
+
   function isVisible(el) { return el.offsetWidth > 0 && el.offsetHeight > 0; }
 
   function fmt(s) {
@@ -109,8 +123,11 @@
     xhr.onreadystatechange = function () {
       if (xhr.readyState !== 4) return;
       if (xhr.status === 200) {
-        try { callback(null, JSON.parse(xhr.responseText)); }
-        catch (e) { callback(e, null); }
+        try {
+          callback(null, JSON.parse(xhr.responseText));
+        } catch (e) {
+          callback(e, null);
+        }
       } else {
         callback(new Error('HTTP ' + xhr.status), null);
       }
@@ -180,7 +197,7 @@
 
   function isPlayable(ep) { return !!ep && !!ep.url && !ep.locked; }
 
-  // ─── CONTINUE WATCHING ───────────────────────────────────────────────────
+  // ─── CONTINUE WATCHING (formato compatível com o site) ───────────────────
 
   function cwAll() {
     try {
@@ -240,6 +257,7 @@
       var entry = raw[keys[i]];
       if (!entry || !entry.itemId || !entry.category || entry.category === 'tv') continue;
       var pct = entry.duration ? (entry.currentTime / entry.duration) * 100 : 0;
+      // Marcador (vídeo em iframe): só guarda o episódio, sem minuto
       if (!entry.marker && (pct < 2 || pct > 95)) continue;
       var dk = entry.itemId + '_' + entry.category;
       if (!seen[dk] || (entry.timestamp || 0) > (seen[dk].timestamp || 0)) seen[dk] = entry;
@@ -289,6 +307,7 @@
     });
   }
 
+  // CSS extra (setas do carrossel) injetado aqui para não depender de editar o tizen.css
   function injectStyles() {
     var css = [
       '.ep-carousel{position:relative}',
@@ -298,9 +317,7 @@
       '.ep-arrow:hover{background:#e50914}',
       '.ep-arrow-left{left:-6px}',
       '.ep-arrow-right{right:-6px}',
-      '.ep-arrow-off{display:none}',
-      '#pf-blogger-overlay{position:absolute;top:0;left:0;width:100%;height:100%;',
-      'background:transparent;z-index:5;outline:none;cursor:pointer}'
+      '.ep-arrow-off{display:none}'
     ].join('\n');
     var st = document.createElement('style');
     st.id = 'pf-extra-style';
@@ -308,6 +325,7 @@
     document.head.appendChild(st);
   }
 
+  // Só existe quando empacotado como app Tizen (no navegador da TV é ignorado)
   function registerTizenKeys() {
     try {
       if (window.tizen && window.tizen.tvinputdevice) {
@@ -338,6 +356,7 @@
     parent.appendChild(title);
   }
 
+  // Linha de cards renderizada em lotes (BATCH por vez)
   function makeRow(items, fn) {
     var row = document.createElement('div');
     row.className = 'cards-row';
@@ -379,10 +398,16 @@
     var noRes = $('no-results');
     noRes.style.display = 'none';
 
-    if (cat === 'tv') { renderTvGrid(catBox, channels); return; }
+    if (cat === 'tv') {
+      renderTvGrid(catBox, channels);
+      return;
+    }
 
     var items = vodData[cat] || [];
-    if (!items.length) { noRes.style.display = 'block'; return; }
+    if (!items.length) {
+      noRes.style.display = 'block';
+      return;
+    }
 
     addSectionTitle(catBox, CAT_LABELS[cat] || cat);
     catBox.appendChild(makeRow(items, function (it) { return makeCard(it, cat); }));
@@ -390,15 +415,20 @@
 
   function renderTvGrid(container, chs) {
     var noRes = $('no-results');
-    if (!chs.length) { noRes.style.display = 'block'; return; }
+    if (!chs.length) {
+      noRes.style.display = 'block';
+      return;
+    }
     noRes.style.display = 'none';
 
-    var groups = {}, groupOrder = [];
+    var groups = {};
+    var groupOrder = [];
     for (var i = 0; i < chs.length; i++) {
       var g = chs[i].group || 'TV';
       if (!groups[g]) { groups[g] = []; groupOrder.push(g); }
       groups[g].push(chs[i]);
     }
+
     for (var gi = 0; gi < groupOrder.length; gi++) {
       addSectionTitle(container, groupOrder[gi]);
       container.appendChild(makeRow(groups[groupOrder[gi]], makeTvCard));
@@ -411,13 +441,16 @@
     container.innerHTML = '';
     var list = cwGetList();
     if (!list.length) return;
+
     addSectionTitle(container, '▶ Continuar Assistindo');
+
     var row = document.createElement('div');
     row.className = 'cards-row';
     for (var i = 0; i < list.length; i++) row.appendChild(makeCwCard(list[i]));
     container.appendChild(row);
   }
 
+  // Atualiza só a fileira (sem mexer no resto do catálogo)
   function refreshContinueWatching() {
     var box = $('cw-section');
     if (box && !searchActive) renderContinueWatching(box);
@@ -459,13 +492,16 @@
 
   function resumeCw(entry) {
     rememberFocus();
+
     var item = findItem(entry.category, entry.itemId);
     if (!item) { playVideo(entry.url, entry.title, entry.itemId, entry.category, 0); return; }
+
     var epList = getEpList(item);
     var idx    = entry.episodeIndex || 0;
     var ep     = epList[idx];
     var url    = ep ? ep.url : (item.url || entry.url);
     var title  = ep ? (item.title + ' - ' + (ep.title || 'Ep ' + (idx + 1))) : item.title;
+
     playVideo(url, title, entry.itemId, entry.category, idx);
   }
 
@@ -488,6 +524,7 @@
         (item.rating ? '<span class="card-rating">⭐ ' + esc(item.rating) + '</span>' : '') +
       '</div>';
     card.appendChild(info);
+
     card.onclick = function () { openModal(cat, item.id || item.title); };
     return card;
   }
@@ -497,13 +534,16 @@
     card.className = 'card card-tv';
     card.setAttribute('tabindex', '0');
     card.setAttribute('data-key', 't:' + canal._idx);
+
     card.appendChild(makeImg(getPoster(canal, 'tv'), TV_POSTER));
+
     var info = document.createElement('div');
     info.className = 'card-info';
     info.innerHTML =
       '<div class="card-title">' + esc(canal.title || canal.name || 'Canal') + '</div>' +
       '<div class="card-meta"><span class="live-dot">●</span> AO VIVO</div>';
     card.appendChild(info);
+
     card.onclick = function () { openTvModal(canal._idx); };
     return card;
   }
@@ -517,6 +557,7 @@
   function openModal(cat, itemId) {
     var item = findItem(cat, itemId);
     if (!item) return;
+
     if (!isShown($('modal'))) rememberFocus();
 
     var modal = $('modal');
@@ -536,7 +577,9 @@
     if (item.year)   html += '<span class="badge">📅 ' + esc(item.year) + '</span>';
     if (item.rating) html += '<span class="badge badge-rating">⭐ ' + esc(item.rating) + '</span>';
     html += '</div>';
+
     if (item.overview) html += '<p class="modal-overview">' + esc(item.overview) + '</p>';
+
     html += '<button class="modal-play-btn" id="modal-play-btn">' +
               (resumeIdx >= 0 ? '▶ Continuar (Ep ' + (resumeIdx + 1) + ')' : '▶ Assistir') +
             '</button>';
@@ -567,6 +610,7 @@
     bindCarousels(body);
 
     setTimeout(function () {
+      // Deixa o episódio "atual" visível no carrossel
       var cur = body.querySelector('.ep-resume');
       if (cur && isVisible(cur)) {
         var list = cur.parentNode;
@@ -580,10 +624,12 @@
   function openTvModal(idx) {
     var canal = channels[idx];
     if (!canal) return;
+
     if (!isShown($('modal'))) rememberFocus();
 
     var modal = $('modal');
     var body  = $('modal-body');
+
     setBackdrop(getPoster(canal, 'tv'));
 
     var html = '';
@@ -620,7 +666,9 @@
     syncHistory();
 
     $('modal-play-btn').onclick = function () {
-      closeModal(false); playTvChannel(idx); syncHistory();
+      closeModal(false);
+      playTvChannel(idx);
+      syncHistory();
     };
 
     var canalItems = body.querySelectorAll('.canal-item');
@@ -641,6 +689,8 @@
     }, 60);
   }
 
+  // restore=false: o modal fecha porque um vídeo vai abrir (o foco de retorno
+  // continua guardado para quando o player fechar)
   function closeModal(restore) {
     $('modal').style.display = 'none';
     if (restore !== false) { syncHistory(); restoreFocusReturn(); }
@@ -652,6 +702,7 @@
     var seasons = item.seasons.slice().sort(function (a, b) { return a.season - b.season; });
     var itemId  = item.id || item.title;
 
+    // Abre a temporada do episódio "atual"; senão, a última
     var openIdx = seasons.length - 1;
     if (resumeIdx >= 0) {
       var acc = 0;
@@ -662,7 +713,7 @@
       }
     }
 
-    var html = '<div>';
+    var html   = '<div>';
     var offset = 0;
 
     for (var si = 0; si < seasons.length; si++) {
@@ -686,6 +737,7 @@
       html += carouselHtml(colId, innerEps, isOpen ? 'block' : 'none');
       offset += eps.length;
     }
+
     html += '</div>';
     return html;
   }
@@ -701,10 +753,13 @@
         '<div class="ep-info">' +
           '<div class="ep-title">' + esc(title) + '</div>' +
           (airdate ? '<div class="ep-date">📅 ' + esc(airdate) + '</div>' : '<div class="ep-date">Em breve</div>') +
-        '</div><span>🔒</span></div>';
+        '</div>' +
+        '<span>🔒</span>' +
+      '</div>';
     }
 
     var isResume = globalIdx === resumeIdx;
+
     return '<div class="ep-item' + (isResume ? ' ep-resume' : '') + '" tabindex="0" data-ep-url="' + esc(ep.url) +
       '" data-ep-title="' + esc(title) + '" data-ep-idx="' + globalIdx +
       '" data-item-id="' + esc(itemId) + '" data-cat="' + cat + '">' +
@@ -713,7 +768,9 @@
         '<div class="ep-title">' + esc(title) + '</div>' +
         (isResume ? '<div class="ep-date ep-resume-tag">▶ Continuar daqui</div>'
                   : (airdate ? '<div class="ep-date">' + esc(airdate) + '</div>' : '')) +
-      '</div><span class="ep-play">▶</span></div>';
+      '</div>' +
+      '<span class="ep-play">▶</span>' +
+    '</div>';
   }
 
   function bindEpClicks(container, itemId, cat, itemTitle) {
@@ -748,8 +805,10 @@
     }
   }
 
-  // ─── CARROSSEL ───────────────────────────────────────────────────────────
+  // ─── PLAY ────────────────────────────────────────────────────────────────
 
+  // Carrossel de episódios com setas laterais (uso com cursor/ponteiro).
+  // As setas têm tabindex -1: o D-pad continua navegando só pelos episódios.
   function carouselHtml(id, inner, display) {
     return '<div class="ep-carousel" id="' + id + '" style="display:' + display + '">' +
       '<button class="ep-arrow ep-arrow-left" tabindex="-1" aria-label="Anteriores">&#8249;</button>' +
@@ -777,7 +836,7 @@
         var right = wrap.querySelector('.ep-arrow-right');
 
         function update() {
-          if (!list.clientWidth) return;
+          if (!list.clientWidth) return; // temporada recolhida
           var max = list.scrollWidth - list.clientWidth;
           left.className  = 'ep-arrow ep-arrow-left'  + (list.scrollLeft <= 2 ? ' ep-arrow-off' : '');
           right.className = 'ep-arrow ep-arrow-right' + (list.scrollLeft >= max - 2 ? ' ep-arrow-off' : '');
@@ -785,6 +844,7 @@
         function step(dir) { list.scrollLeft += dir * Math.max(200, list.clientWidth * 0.8); }
 
         list._updateArrows = update;
+        // não deixa o clique roubar o foco do D-pad
         left.onmousedown = right.onmousedown = function (e) { e.preventDefault(); };
         left.onclick  = function (e) { e.stopPropagation(); step(-1); };
         right.onclick = function (e) { e.stopPropagation(); step(1); };
@@ -794,14 +854,13 @@
     }
   }
 
-  // ─── PLAY ────────────────────────────────────────────────────────────────
-
   function firstPlayableIndex(epList, from) {
     for (var i = from; i < epList.length; i++) if (isPlayable(epList[i])) return i;
     for (var j = 0; j < from && j < epList.length; j++) if (isPlayable(epList[j])) return j;
     return -1;
   }
 
+  // "Assistir": retoma do progresso salvo (igual à versão web)
   function playFirstEpisode(cat, itemId) {
     var item = findItem(cat, itemId);
     if (!item) return;
@@ -818,6 +877,7 @@
       if (idx >= epList.length) idx = 0;
       idx = firstPlayableIndex(epList, idx);
       if (idx < 0) { showToast('Nenhum episódio disponível ainda'); return; }
+
       var ep = epList[idx];
       playVideo(ep.url, item.title + ' - ' + (ep.title || 'Ep ' + (idx + 1)), itemId, cat, idx);
     } else if (item.url) {
@@ -847,6 +907,7 @@
     } catch (e) {}
   }
 
+  // Próximo episódio reproduzível (ou null)
   function nextEpisode() {
     if (playerCat === 'tv') return null;
     var item = findItem(playerCat, playerItemId);
@@ -854,9 +915,13 @@
     var epList = getEpList(item);
     var next   = epList[playerEpIdx + 1];
     if (!isPlayable(next)) return null;
-    return { url: next.url, title: item.title + ' - ' + (next.title || 'Ep ' + (playerEpIdx + 2)) };
+    return {
+      url:   next.url,
+      title: item.title + ' - ' + (next.title || 'Ep ' + (playerEpIdx + 2))
+    };
   }
 
+  // Episódio anterior reproduzível (ou null)
   function previousEpisode() {
     if (playerCat === 'tv' || playerEpIdx < 1) return null;
     var item = findItem(playerCat, playerItemId);
@@ -864,9 +929,13 @@
     var epList = getEpList(item);
     var prev   = epList[playerEpIdx - 1];
     if (!isPlayable(prev)) return null;
-    return { url: prev.url, title: item.title + ' - ' + (prev.title || 'Ep ' + playerEpIdx) };
+    return {
+      url:   prev.url,
+      title: item.title + ' - ' + (prev.title || 'Ep ' + playerEpIdx)
+    };
   }
 
+  // Cria o botão "Anterior" ao lado do "Próximo" (sem precisar editar o tizen.html)
   function ensurePrevButton() {
     if ($('btn-prev-ep')) return;
     var next = $('btn-next-ep');
@@ -881,7 +950,7 @@
   function saveProgress() {
     var video = $('player');
     if (!playerUrl || playerEnded || playerCat === 'tv' || !video) return;
-    if (isBloggerMode) return;
+    if (isBloggerMode) return; // iframe não expõe duration/currentTime via JS (usa marcador)
     if (!video.duration || !isFinite(video.duration) || video.currentTime < 10) return;
 
     var item = findItem(playerCat, playerItemId);
@@ -900,6 +969,7 @@
     });
   }
 
+  // Marcador do iframe: guarda só QUAL episódio estava sendo assistido
   function saveBloggerMarker(url, title, itemId, cat, epIdx) {
     if (cat === 'tv') return;
     var item = findItem(cat, itemId);
@@ -919,34 +989,26 @@
     });
   }
 
+  // URL de página do Blogger (blogger.com/video.g) ou link do googlevideo.
+  // A página do video.g não toca em <video src=""> (403) — precisa ser lida
+  // para extrair o link direto, ou aberta em iframe.
   function isBloggerUrl(url) {
     return !!url && (url.indexOf('blogger.com/video.g') !== -1 || url.indexOf('googlevideo.com') !== -1);
   }
 
+  // Players de terceiros que só funcionam como página (iframe)
   function isEmbedPage(url) {
     return !!url && (/redecanais[^\/]*\/player\d*\//i.test(url) || /\/server\.php/i.test(url));
   }
 
   // Lê a página do Blogger e devolve o link direto do mp4 (ou null).
   // Precisa de <access origin="*"> no config.xml do app Tizen (senão o CORS bloqueia).
-  // O Blogger devolve 403 se faltar Referer/User-Agent de navegador.
   function resolveBlogger(url, cb) {
     if (url.indexOf('googlevideo.com') !== -1) { cb(url); return; }
     var tok = resolveTok;
     var xhr = new XMLHttpRequest();
     xhr.open('GET', url, true);
     xhr.timeout = 10000;
-
-    try {
-      xhr.setRequestHeader('Referer', 'https://www.blogger.com/');
-      xhr.setRequestHeader('User-Agent',
-        'Mozilla/5.0 (SMART-TV; Linux; Tizen 6.0) AppleWebKit/537.36 ' +
-        '(KHTML, like Gecko) SamsungBrowser/3.0 Chrome/76.0.3809.146 TV Safari/537.36');
-      xhr.setRequestHeader('Accept',
-        'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8');
-      xhr.setRequestHeader('Accept-Language', 'pt-BR,pt;q=0.9,en;q=0.8');
-    } catch (eH) {}
-
     xhr.onreadystatechange = function () {
       if (xhr.readyState !== 4 || tok !== resolveTok) return;
       var best = null, bestScore = -1;
@@ -978,12 +1040,14 @@
     xhr.send();
   }
 
+  // Pede autoplay ao embed do Blogger (parâmetro extra; ignorado se não suportado)
   function withBloggerAutoplay(url) {
-    if (!url || url.indexOf('blogger.com/video.g') === -1) return url;
-    if (/[?&]autoplay=/.test(url)) return url;
+    if (!url || url.indexOf('blogger.com/video.g') === -1 || /[?&]autoplay=/.test(url)) return url;
     return url + (url.indexOf('?') === -1 ? '?' : '&') + 'autoplay=1';
   }
 
+  // Tenta reconhecer uma mensagem de "vídeo terminou" vinda do iframe.
+  // O formato real do embed não é documentado: veja o console ([Blogger msg]).
   function isBloggerEnded(d) {
     try {
       if (typeof d === 'string') {
@@ -1004,45 +1068,7 @@
     }
   }
 
-  // Tenta falar com o player dentro do iframe. Como o iframe é cross-origin,
-  // não dá para ler o DOM dele. Enviamos comandos nos formatos mais comuns
-  // (YouTube IFrame API, Vimeo, e players próprios do Blogger) e um click
-  // sintético no centro — alguns players só respondem ao click.
-  function iframeCommand(cmd) {
-    if (!bloggerIframe) return;
-    var msg = { event: 'command', func: cmd, args: [] };
-    try { bloggerIframe.contentWindow.postMessage(msg, '*'); } catch (e) {}
-    try { bloggerIframe.contentWindow.postMessage(JSON.stringify(msg), '*'); } catch (e2) {}
-    try { bloggerIframe.contentWindow.postMessage({ method: cmd }, '*'); } catch (e3) {}
-  }
-
-  function iframeClickCenter() {
-    if (!bloggerIframe) return;
-    try {
-      var r = bloggerIframe.getBoundingClientRect();
-      var x = r.left + r.width / 2;
-      var y = r.top + r.height / 2;
-      var ev = new MouseEvent('click', { bubbles: true, cancelable: true, clientX: x, clientY: y });
-      bloggerIframe.dispatchEvent(ev);
-    } catch (e) {}
-  }
-
-  // Alterna play/pause: no <video> mexe direto; no iframe manda comandos.
-  function togglePlay() {
-    var video = $('player');
-    if (isBloggerMode) {
-      iframeCommand('togglePlay');
-      iframeCommand('playVideo');
-      iframeClickCenter();
-      return;
-    }
-    if (!video) return;
-    if (video.paused) safePlay(video); else video.pause();
-  }
-
-  // Toca a página em iframe. Cria um overlay transparente por cima que
-  // captura Enter/Play/Pause do D-pad — sem isso, as teclas vão para o
-  // <body> e o iframe cross-origin não recebe nada.
+  // Toca a página em um iframe (plano B do Blogger e players de terceiros)
   function playBloggerVideo(url) {
     var container = $('player-video-container');
     var video     = $('player');
@@ -1052,25 +1078,20 @@
     iframe.id = 'tizen-blogger-iframe';
     iframe.src = withBloggerAutoplay(url);
     iframe.style.cssText = 'width:100%;height:100%;border:none;background:#000;display:block;';
-    iframe.setAttribute('tabindex', '-1');
+    iframe.setAttribute('tabindex', '-1'); // não deixa o iframe roubar o teclado/D-pad
     iframe.setAttribute('allowfullscreen', '');
     iframe.setAttribute('allow', 'autoplay; fullscreen; encrypted-media; picture-in-picture');
+    // Players de terceiros: sem allow-top-navigation, o script deles não consegue
+    // redirecionar o app inteiro (ex.: anti-DevTools do Redecanais)
     if (isEmbedPage(url)) {
       iframe.setAttribute('sandbox', 'allow-scripts allow-same-origin allow-presentation allow-popups allow-forms');
     }
     container.appendChild(iframe);
 
-    // Overlay transparente: recebe o foco e as teclas do D-pad.
-    var overlay = document.createElement('div');
-    overlay.id = 'pf-blogger-overlay';
-    overlay.setAttribute('tabindex', '0');
-    overlay.onclick = function () { togglePlay(); };
-    container.appendChild(overlay);
+    bloggerIframe = iframe;
+    isBloggerMode = true;
 
-    bloggerIframe  = iframe;
-    bloggerOverlay = overlay;
-    isBloggerMode  = true;
-
+    // Auto-next: se o embed avisar que terminou, passa para o próximo episódio
     var token = playerUrl;
     var fired = false;
     bloggerMsgHandler = function (ev) {
@@ -1088,26 +1109,26 @@
     };
     window.addEventListener('message', bloggerMsgHandler);
 
+    // Sem timeupdate/duration/seek/play-pause no embed: esconde o que depende disso
     setBloggerControls(true);
 
+    // Devolve o foco ao documento para o Voltar/D-pad continuarem chegando
     setTimeout(function () {
-      try { overlay.focus(); } catch (e) {}
-    }, 150);
+      try { iframe.blur(); } catch (e) {}
+      try { window.focus(); } catch (e2) {}
+    }, 100);
   }
 
+  // Destrói o iframe (se existir) e restaura os controles normais
   function destroyBloggerIframe() {
     if (bloggerMsgHandler) {
       window.removeEventListener('message', bloggerMsgHandler);
       bloggerMsgHandler = null;
     }
     if (bloggerIframe) {
-      try { bloggerIframe.src = 'about:blank'; } catch (e) {}
+      bloggerIframe.src = 'about:blank';
       if (bloggerIframe.parentNode) bloggerIframe.parentNode.removeChild(bloggerIframe);
       bloggerIframe = null;
-    }
-    if (bloggerOverlay) {
-      if (bloggerOverlay.parentNode) bloggerOverlay.parentNode.removeChild(bloggerOverlay);
-      bloggerOverlay = null;
     }
     isBloggerMode = false;
 
@@ -1116,17 +1137,20 @@
     setBloggerControls(false);
   }
 
+  // mode (interno): 'direct' = url já é o link extraído; 'iframe' = força iframe
+  // orig (interno): URL original do Blogger, usada como plano B se o direto falhar
   function playVideo(url, title, itemId, cat, epIdx, mode, orig) {
     if (!url) { showToast('Vídeo indisponível'); return; }
 
     if (!mode) {
-      resolveTok++;
+      resolveTok++; // cancela qualquer resolução anterior ainda em andamento
 
       if (isBloggerUrl(url)) {
+        // 1º tenta extrair o link direto do mp4; se não der, cai no iframe
         showToast('⏳ Carregando vídeo...');
         var tok = resolveTok;
         resolveBlogger(url, function (direct, info) {
-          if (tok !== resolveTok) return;
+          if (tok !== resolveTok) return; // usuário trocou de vídeo / fechou
           if (direct) {
             showToast('✅ Link direto encontrado', 2000);
             playVideo(direct, title, itemId, cat, epIdx, 'direct', url);
@@ -1142,6 +1166,7 @@
       if (isEmbedPage(url)) mode = 'iframe';
     }
 
+    // Guarda o progresso do vídeo anterior (troca de episódio/canal)
     saveProgress();
 
     playerUrl    = url;
@@ -1175,22 +1200,30 @@
         hlsInstance.on(Hls.Events.MANIFEST_PARSED, function () { safePlay(video); });
         hlsInstance.on(Hls.Events.ERROR, function (ev, data) {
           if (!data || !data.fatal) return;
-          if (data.type === Hls.ErrorTypes.NETWORK_ERROR) hlsInstance.startLoad();
-          else if (data.type === Hls.ErrorTypes.MEDIA_ERROR) hlsInstance.recoverMediaError();
-          else showOsd('⚠ Erro ao reproduzir');
+          if (data.type === Hls.ErrorTypes.NETWORK_ERROR) {
+            hlsInstance.startLoad();
+          } else if (data.type === Hls.ErrorTypes.MEDIA_ERROR) {
+            hlsInstance.recoverMediaError();
+          } else {
+            showOsd('⚠ Erro ao reproduzir');
+          }
         });
       } else {
         video.src = url;
         safePlay(video);
       }
 
+      // Restaurar progresso (só VOD). Duas tentativas: a Samsung costuma
+      // ignorar o primeiro seek feito em loadedmetadata.
       if (cat !== 'tv') {
         var saved = cwGet(itemId + '_' + epIdx);
         if (saved && !saved.marker && saved.currentTime > 5) {
           var applied = false;
           var restorer = function () {
             if (!video.duration || !isFinite(video.duration) ||
-                saved.currentTime >= video.duration - 2) return;
+                saved.currentTime >= video.duration - 2) {
+              return;
+            }
             if (!applied || Math.abs(video.currentTime - saved.currentTime) > 3) {
               applied = true;
               video.currentTime = saved.currentTime;
@@ -1207,9 +1240,10 @@
         }
       }
 
-      try { video.focus(); } catch (e) {}
+      video.focus();
     }
 
+    // Botão "Próximo" (funciona tanto para vídeo normal quanto iframe)
     var nextBtn = $('btn-next-ep');
     var nxt     = nextEpisode();
     if (nxt) {
@@ -1222,6 +1256,7 @@
       nextBtn.onclick = null;
     }
 
+    // Botão "Anterior"
     var prevBtn = $('btn-prev-ep');
     if (prevBtn) {
       var prv = previousEpisode();
@@ -1236,6 +1271,7 @@
       }
     }
 
+    // Progresso periódico (sem efeito no modo iframe — ver saveProgress)
     progressInterval = setInterval(saveProgress, 5000);
 
     seekStreak = 0;
@@ -1250,15 +1286,15 @@
     }
     var video = $('player');
     if (video) {
-      try { video.pause(); } catch (e) {}
+      video.pause();
       video.removeAttribute('src');
-      try { video.load(); } catch (e2) {}
+      video.load();
     }
     if (progressInterval) { clearInterval(progressInterval); progressInterval = null; }
   }
 
   function closePlayer(restore) {
-    resolveTok++;
+    resolveTok++; // cancela resolução do Blogger em andamento
     saveProgress();
     destroyHls();
     destroyBloggerIframe();
@@ -1268,6 +1304,7 @@
     if (controlsTimer) { clearTimeout(controlsTimer); controlsTimer = null; }
     $('player-controls').className = '';
     $('player-wrap').style.display = 'none';
+
     refreshContinueWatching();
     if (restore !== false) { syncHistory(); restoreFocusReturn(); }
   }
@@ -1281,14 +1318,16 @@
 
   function showControls() {
     var ctrl = $('player-controls');
-    if (!ctrl) return;
     ctrl.className = 'visible';
     if (controlsTimer) clearTimeout(controlsTimer);
     controlsTimer = setTimeout(function () {
       var v = $('player');
+      // No modo iframe o <video> está sem src (paused é sempre true),
+      // então o iframe conta como "tocando".
       var playing = isBloggerMode || (v && !v.paused);
       if (!playing) return;
       ctrl.className = '';
+      // Barra escondida = foco fora dela (senão as setas continuariam presas nos botões)
       var a = document.activeElement;
       if (playerBarHas(a)) { try { a.blur(); } catch (e) {} }
     }, 3500);
@@ -1308,14 +1347,25 @@
     }, 1200);
   }
 
-  function seekBy(sec) {
-    if (isBloggerMode) { showOsd('⏱ Avanço indisponível neste vídeo'); return; }
+  function togglePlay() {
+    if (isBloggerMode) return; // sem controle de play/pause via JS no embed
     var video = $('player');
-    if (!video || !video.duration || !isFinite(video.duration)) { showOsd('📡 Ao vivo'); return; }
+    if (video.paused) safePlay(video); else video.pause();
+  }
+
+  function seekBy(sec) {
+    if (isBloggerMode) {
+      // O embed não aceita comandos de seek vindos de fora
+      showOsd('⏱ Avanço indisponível neste vídeo');
+      return;
+    }
+    var video = $('player');
+    if (!video.duration || !isFinite(video.duration)) { showOsd('📡 Ao vivo'); return; }
     video.currentTime = Math.max(0, Math.min(video.duration - 1, video.currentTime + sec));
     showOsd((sec > 0 ? '⏩ +' : '⏪ -') + Math.abs(sec) + 's');
   }
 
+  // Seek progressivo: 10s → 30s → 60s se o botão for repetido rápido
   function seekAccel(sign) {
     var now = Date.now();
     seekStreak = (now - lastSeekAt < 700) ? seekStreak + 1 : 0;
@@ -1332,26 +1382,26 @@
     var timeLabel = $('time-label');
     var btnPlay   = $('btn-play');
 
-    if (!video || !wrap) return;
-
     video.addEventListener('timeupdate', function () {
       if (!video.duration || !isFinite(video.duration)) {
-        if (timeLabel) timeLabel.textContent = (playerCat === 'tv') ? '🔴 AO VIVO' : '0:00 / 0:00';
-        if (progFill)  progFill.style.width = (playerCat === 'tv') ? '100%' : '0%';
+        timeLabel.textContent = (playerCat === 'tv') ? '🔴 AO VIVO' : '0:00 / 0:00';
+        progFill.style.width = (playerCat === 'tv') ? '100%' : '0%';
         return;
       }
-      if (progFill)  progFill.style.width = ((video.currentTime / video.duration) * 100) + '%';
-      if (timeLabel) timeLabel.textContent = fmt(video.currentTime) + ' / ' + fmt(video.duration);
+      progFill.style.width = ((video.currentTime / video.duration) * 100) + '%';
+      timeLabel.textContent = fmt(video.currentTime) + ' / ' + fmt(video.duration);
     });
 
-    video.addEventListener('play',  function () { if (btnPlay) btnPlay.innerHTML = '⏸'; });
+    video.addEventListener('play',  function () { btnPlay.innerHTML = '⏸'; });
     video.addEventListener('pause', function () {
-      if (btnPlay) btnPlay.innerHTML = '▶';
+      btnPlay.innerHTML = '▶';
       if (!isBloggerMode) { saveProgress(); showControls(); }
     });
 
     video.addEventListener('error', function () {
       if (!isShown(wrap) || !playerUrl || isBloggerMode) return;
+
+      // Link direto do Blogger falhou (expirou / 403): volta para o iframe
       if (playerMode === 'direct' && playerOrig) {
         var o = playerOrig;
         playerOrig = '';
@@ -1367,17 +1417,20 @@
       cwRemove(playerItemId + '_' + playerEpIdx);
       playerEnded = true;
       var nxt = nextEpisode();
-      if (nxt) { playVideo(nxt.url, nxt.title, playerItemId, playerCat, playerEpIdx + 1); return; }
+      if (nxt) {
+        playVideo(nxt.url, nxt.title, playerItemId, playerCat, playerEpIdx + 1);
+        return;
+      }
       closePlayer(true);
     });
 
-    if (btnPlay)  btnPlay.onclick = togglePlay;
-    var b = $('btn-back'); if (b) b.onclick = function () { seekBy(-10); };
-    var f = $('btn-fwd');  if (f) f.onclick = function () { seekBy(10); };
-    var c = $('btn-close-player'); if (c) c.onclick = function () { closePlayer(true); };
+    // Botões (mouse / ponteiro do controle)
+    btnPlay.onclick = togglePlay;
+    $('btn-back').onclick = function () { seekBy(-10); };
+    $('btn-fwd').onclick  = function () { seekBy(10); };
+    $('btn-close-player').onclick = function () { closePlayer(true); };
 
-    var fs = $('btn-fs');
-    if (fs) fs.onclick = function () {
+    $('btn-fs').onclick = function () {
       if (document.fullscreenElement || document.webkitFullscreenElement) {
         (document.exitFullscreen || document.webkitExitFullscreen).call(document);
       } else {
@@ -1385,7 +1438,7 @@
       }
     };
 
-    if (progWrap) progWrap.onclick = function (e) {
+    progWrap.onclick = function (e) {
       if (isBloggerMode) return;
       var rect = progWrap.getBoundingClientRect();
       var pct  = (e.clientX - rect.left) / rect.width;
@@ -1409,6 +1462,8 @@
   function bindSearch() {
     var input = $('search-input');
     if (!input) return;
+    // 'input' (e não 'keyup'): as setas usadas para sair do campo não
+    // disparam nova busca nem recriam os cards.
     input.addEventListener('input', function () {
       if (searchTimer) clearTimeout(searchTimer);
       var q = input.value;
@@ -1443,7 +1498,10 @@
     catalog.innerHTML = '';
     noRes.style.display = 'none';
 
-    if (!results.length) { noRes.style.display = 'block'; return; }
+    if (!results.length) {
+      noRes.style.display = 'block';
+      return;
+    }
 
     addSectionTitle(catalog, results.length + ' resultado(s) para "' + query + '"');
     catalog.appendChild(makeRow(results, function (r) {
@@ -1461,7 +1519,7 @@
           $('search-input').value = '';
           renderCatalog(link.getAttribute('data-cat'));
           window.scrollTo(0, 0);
-          link.focus();
+          link.focus(); // o foco fica no link; ↓ leva ao primeiro card
         };
       })(links[i]);
     }
@@ -1469,11 +1527,11 @@
 
   function bindModal() {
     var modal = $('modal');
-    var mc = $('modal-close'); if (mc) mc.onclick = function () { closeModal(true); };
-    if (modal) modal.onclick = function (e) { if (e.target === modal) closeModal(true); };
+    $('modal-close').onclick = function () { closeModal(true); };
+    modal.onclick = function (e) { if (e.target === modal) closeModal(true); };
   }
 
-  // ─── FOCO ────────────────────────────────────────────────────────────────
+  // ─── FOCO: RETORNO ───────────────────────────────────────────────────────
 
   function rememberFocus() {
     var a = document.activeElement;
@@ -1492,6 +1550,7 @@
           target = fr.el;
         } else if (fr.key) {
           target = document.querySelector('[data-key="' + fr.key + '"]');
+          // card de "Continuar" que sumiu → cai no card do catálogo
           if (!target && fr.key.indexOf('w:') === 0) {
             target = document.querySelector('[data-key="c:' + fr.key.slice(2) + '"]');
           }
@@ -1505,6 +1564,8 @@
     }, 50);
   }
 
+  // ─── FOCO: NAVEGAÇÃO ESPACIAL ────────────────────────────────────────────
+
   var SELECTORS = {
     main:   '.nav-link, #search-input, .card',
     modal:  '.modal-close-btn, .modal-play-btn, .season-header, .ep-item:not(.locked), .canal-item',
@@ -1517,9 +1578,10 @@
     return 'main';
   }
 
+  // Só entra na navegação o que está realmente visível (temporadas
+  // recolhidas e botões ocultos ficam de fora)
   function getFocusables(scope) {
     var root = scope === 'player' ? $('player-wrap') : (scope === 'modal' ? $('modal') : document);
-    if (!root) return [];
     var all  = root.querySelectorAll(SELECTORS[scope]);
     var out  = [];
     for (var i = 0; i < all.length; i++) if (isVisible(all[i])) out.push(all[i]);
@@ -1529,7 +1591,7 @@
   function initialFocus(scope, list) {
     if (scope === 'main') return activeNavLink() || list[0];
     if (scope === 'modal') return $('modal-play-btn') || list[0];
-    return list[0];
+    return list[0]; // player: primeiro botão visível (no iframe o play fica oculto)
   }
 
   function gap(a1, a2, b1, b2) {
@@ -1542,7 +1604,8 @@
     var r  = cur.getBoundingClientRect();
     var cx = (r.left + r.right) / 2;
     var cy = (r.top + r.bottom) / 2;
-    var best = null, bestScore = Infinity;
+    var best = null;
+    var bestScore = Infinity;
 
     for (var i = 0; i < list.length; i++) {
       var el = list[i];
@@ -1584,15 +1647,10 @@
     var scope = getScope();
     var list  = getFocusables(scope);
     if (!list.length) return;
+
     var cur = document.activeElement;
-
-    // Se o foco está no overlay do iframe, entra na barra pelo primeiro botão
-    if (scope === 'player' && bloggerOverlay && cur === bloggerOverlay) {
-      var first = initialFocus('player', list);
-      if (first) { focusEl(first); return; }
-    }
-
     if (list.indexOf(cur) < 0) { focusEl(initialFocus(scope, list)); return; }
+
     var next = findNext(cur, dir, list);
     if (next) focusEl(next);
   }
@@ -1603,9 +1661,12 @@
     ensureVisible(el);
   }
 
+  // Rola os contêineres (carrossel de episódios, lista de canais, modal e
+  // janela) para o elemento focado ficar visível e fora do header fixo.
   function ensureVisible(el) {
     var PAD = 24;
     var parent = el.parentNode;
+
     while (parent && parent !== document.body && parent !== document.documentElement) {
       if (parent.nodeType === 1) {
         var cs   = window.getComputedStyle(parent);
@@ -1626,8 +1687,15 @@
       }
       parent = parent.parentNode;
     }
+
+    // Janela principal (só na tela inicial; modal e player têm rolagem própria)
     if (getScope() !== 'main') return;
-    if (el.classList.contains('nav-link') || el.id === 'search-input') { window.scrollTo(0, 0); return; }
+
+    if (el.classList.contains('nav-link') || el.id === 'search-input') {
+      window.scrollTo(0, 0);
+      return;
+    }
+
     var header = $('header');
     var top    = (header ? header.offsetHeight : 0) + PAD;
     var bottom = window.innerHeight - PAD;
@@ -1636,6 +1704,7 @@
     else if (rect.bottom > bottom) window.scrollBy(0, rect.bottom - bottom);
   }
 
+  // Pula N itens na mesma lista de episódios/canais (CH+ / CH−)
   function jumpInList(active, delta) {
     if (!active || !active.parentNode) return false;
     var list = active.parentNode;
@@ -1654,6 +1723,7 @@
     return true;
   }
 
+  // Lote seguinte quando o foco chega perto do fim da fileira
   function bindFocusTracking() {
     document.addEventListener('focus', function (e) {
       var t = e.target;
@@ -1667,6 +1737,7 @@
     }, true);
   }
 
+  // Também carrega mais quando a rolagem (mouse/ponteiro) chega perto do fim
   function bindScrollLoader() {
     window.addEventListener('scroll', function () {
       if (scrollTimer) return;
@@ -1684,7 +1755,10 @@
     });
   }
 
-  // ─── HISTÓRICO ───────────────────────────────────────────────────────────
+  // ─── HISTÓRICO (Voltar do navegador) ─────────────────────────────────────
+  // No navegador da TV o Voltar faz history.back() e sairia do site.
+  // Enquanto houver modal ou player aberto, mantemos UMA entrada extra no
+  // histórico; o Voltar consome essa entrada e fecha a camada de cima.
 
   function syncHistory() {
     var need = isShown($('modal')) || isShown($('player-wrap'));
@@ -1699,9 +1773,9 @@
 
   function onPopState() {
     if (ignorePop > 0) { ignorePop--; return; }
-    layerPushed = false;
-    if (isShown($('player-wrap'))) closePlayer(true);
-    else if (isShown($('modal')))  closeModal(true);
+    layerPushed = false;                      // a entrada já foi consumida
+    if (isShown($('player-wrap')))      closePlayer(true);
+    else if (isShown($('modal')))       closeModal(true);
   }
 
   // Voltar: tratado por keydown (10009) E pelo evento tizenhwkey. Com um iframe
@@ -1730,7 +1804,7 @@
     } catch (e) { return false; }
   }
 
-  // ─── TECLADO ─────────────────────────────────────────────────────────────
+  // ─── TECLADO (handler único) ─────────────────────────────────────────────
 
   function activate(el) {
     if (el && el !== document.body && el !== document.documentElement && typeof el.click === 'function') {
@@ -1740,8 +1814,10 @@
 
   function isSearchInput(el) { return !!el && el.id === 'search-input'; }
 
+  // Retorna true se o Voltar foi tratado aqui; false = deixa o navegador agir
   function onBack(scope) {
     if (scope === 'modal') { closeModal(true); return true; }
+
     var input = $('search-input');
     if (searchActive || (input && input.value)) {
       input.value = '';
@@ -1774,20 +1850,35 @@
     switch (key) {
       case KEY.BACK:
       case KEY.ESC:
-        e.preventDefault(); input.blur(); focusEl(activeNavLink()); break;
+        e.preventDefault();
+        input.blur();
+        focusEl(activeNavLink());
+        break;
       case KEY.DOWN:
-        e.preventDefault(); moveFocus('down'); break;
+        e.preventDefault();
+        moveFocus('down');
+        break;
       case KEY.UP:
-        e.preventDefault(); break;
+        e.preventDefault();
+        break;
       case KEY.LEFT:
-        if (input.selectionStart === 0 && input.selectionEnd === 0) { e.preventDefault(); moveFocus('left'); }
+        if (input.selectionStart === 0 && input.selectionEnd === 0) {
+          e.preventDefault();
+          moveFocus('left');
+        }
         break;
       case KEY.RIGHT:
-        if (input.selectionStart === input.value.length) { e.preventDefault(); moveFocus('right'); }
+        if (input.selectionStart === input.value.length) {
+          e.preventDefault();
+          moveFocus('right');
+        }
         break;
+      // Enter: deixa o comportamento padrão (abre o teclado na TV)
     }
   }
 
+  // No player: setas não movem foco — fazem seek / troca de canal.
+  // ↓ abre a barra de controles; ↑ volta para o vídeo.
   function onPlayerKey(e, key, active) {
     var video = $('player');
     var inBar = playerBarHas(active);
@@ -1801,15 +1892,9 @@
         e.preventDefault(); closePlayer(true); return;
 
       case KEY.MEDIA_PLAY:
-        e.preventDefault();
-        if (isBloggerMode) { iframeCommand('playVideo'); iframeClickCenter(); }
-        else if (video) safePlay(video);
-        return;
+        e.preventDefault(); if (!isBloggerMode) safePlay(video); return;
       case KEY.MEDIA_PAUSE:
-        e.preventDefault();
-        if (isBloggerMode) { iframeCommand('pauseVideo'); iframeClickCenter(); }
-        else if (video) video.pause();
-        return;
+        e.preventDefault(); if (!isBloggerMode) video.pause(); return;
       case KEY.MEDIA_PLAYPAUSE:
       case KEY.SPACE:
         e.preventDefault(); togglePlay(); return;
@@ -1826,11 +1911,7 @@
 
       case KEY.ENTER:
         e.preventDefault();
-        if (inBar) {
-          activate(active);
-        } else {
-          togglePlay();
-        }
+        if (inBar) activate(active); else togglePlay();
         return;
 
       case KEY.LEFT:
@@ -1844,18 +1925,13 @@
 
       case KEY.DOWN:
         e.preventDefault();
-        if (!inBar) {
-          var list = getFocusables('player');
-          var first = initialFocus('player', list);
-          if (first) focusEl(first);
-        }
+        if (!inBar) focusEl(initialFocus('player', getFocusables('player')));
         return;
       case KEY.UP:
         e.preventDefault();
         if (inBar) {
           try { active.blur(); } catch (e2) {}
-          if (isBloggerMode && bloggerOverlay) { try { bloggerOverlay.focus(); } catch (e3) {} }
-          else if (video) { try { video.focus(); } catch (e4) {} }
+          if (!isBloggerMode) video.focus();
         }
         return;
     }
@@ -1881,7 +1957,7 @@
 
       case KEY.ENTER:
         if (active && active !== document.body && active !== document.documentElement) {
-          e.preventDefault();
+          e.preventDefault(); // evita o clique nativo → Enter dispara uma vez só
           activate(active);
         }
         break;
@@ -1902,9 +1978,12 @@
     }
   }
 
-  function bindKeys() { document.addEventListener('keydown', onKeyDown); }
+  function bindKeys() {
+    document.addEventListener('keydown', onKeyDown);
+  }
 
   // ─── FULLSCREEN AUTOMÁTICO ───────────────────────────────────────────────
+  // Tizen exige gesto do usuário; tenta na primeira interação.
 
   function requestAppFullscreen() {
     if (fsRequested) return;
