@@ -23,6 +23,52 @@ function extract(html) {
   return { url: best, format: fmt };
 }
 
+
+// A página do video.g é um app JS: o link NÃO vem no HTML, vem de uma chamada
+// batchexecute (rpc "WcwnYd") feita pelo próprio player. Repetimos essa chamada.
+function unescapeDeep(t) {
+  // \+ = qualquer nível de escape (JSON dentro de JSON)
+  return t.replace(/\\+u0026/gi, '&').replace(/\\+u003d/gi, '=').replace(/\\+\//g, '/').replace(/\\+"/g, '"');
+}
+
+function pickGoogleVideo(txt) {
+  const urls = txt.match(/https?:\/\/[^"'\\\s<>\]]+googlevideo\.com\/videoplayback[^"'\\\s<>\]]*/g) || [];
+  if (!urls.length) return null;
+  const itag = u => { const m = /[?&]itag=(\d+)/.exec(u); return m ? parseInt(m[1], 10) : 0; };
+  urls.sort((a, b) => (itag(b) === 22 ? 100 : itag(b) === 18 ? 50 : 0) - (itag(a) === 22 ? 100 : itag(a) === 18 ? 50 : 0));
+  return { url: urls[0], format: itag(urls[0]) || null };
+}
+
+async function rpcResolve(token, html, setCookies, wantRaw) {
+  const bl  = (/"cfb2h":"([^"]+)"/.exec(html) || [])[1] || '';
+  const sid = (/"FdrFJe":"([^"]+)"/.exec(html) || [])[1] || '';
+  const cookie = (setCookies || []).map(c => c.split(';')[0]).join('; ');
+  const q = new URLSearchParams({ rpcids: 'WcwnYd', 'source-path': '/video.g', hl: 'pt-BR', rt: 'c' });
+  if (bl)  q.set('bl', bl);
+  if (sid) q.set('f.sid', sid);
+  const body = 'f.req=' + encodeURIComponent(JSON.stringify([[['WcwnYd', JSON.stringify([token, '', 0]), null, 'generic']]])) + '&';
+
+  const ctrl = new AbortController();
+  const t = setTimeout(() => ctrl.abort(), 9000);
+  const r = await fetch('https://www.blogger.com/_/BloggerVideoPlayerUi/data/batchexecute?' + q.toString(), {
+    method: 'POST',
+    headers: {
+      'User-Agent': UA,
+      'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
+      'Origin': 'https://www.blogger.com',
+      'Referer': 'https://www.blogger.com/video.g?token=' + token,
+      ...(cookie ? { Cookie: cookie } : {})
+    },
+    body,
+    signal: ctrl.signal
+  });
+  clearTimeout(t);
+  const raw = await r.text();
+  if (wantRaw) return { status: r.status, bl, sid, rawHead: raw.slice(0, 1800) };
+  const txt = unescapeDeep(raw);
+  return pickGoogleVideo(txt) || extract(txt);
+}
+
 module.exports = async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS');
@@ -60,7 +106,19 @@ module.exports = async function handler(req, res) {
       return res.status(200).json({ status: r.status, finalUrl: r.url, contentType: r.headers.get('content-type'), len: html.length, title, textHead: text, hits });
     }
 
-    const out = extract(html);
+    let out = extract(html);
+    const token = target.searchParams.get('token') || '';
+    const cookies = (r.headers.getSetCookie ? r.headers.getSetCookie() : []);
+
+    // ?debug=2 → resposta crua da chamada batchexecute
+    if (req.query.debug === '2') {
+      try { return res.status(200).json(await rpcResolve(token, html, cookies, true)); }
+      catch (e) { return res.status(200).json({ rpcError: String(e.message || e) }); }
+    }
+
+    if (!out.url && token) {
+      try { out = (await rpcResolve(token, html, cookies, false)) || out; } catch (e) {}
+    }
     res.setHeader('Cache-Control', 'no-store');
     if (!out.url) {
       // 422 (e não 404) para distinguir de "endpoint não publicado"
