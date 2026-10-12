@@ -40,7 +40,7 @@ function pickGoogleVideo(txt) {
 }
 
 async function rpcResolve(token, html, setCookies, wantRaw) {
-  const bl  = (/"cfb2h":"([^"]+)"/.exec(html) || [])[1] || '';
+  const bl  = (/"cfb2h":"([^"]+)"/.exec(html) || [])[1] || 'boq_bloggeruiserver_20261007.02_p0';
   const sid = (/"FdrFJe":"([^"]+)"/.exec(html) || [])[1] || '';
   const cookie = (setCookies || []).map(c => c.split(';')[0]).join('; ');
   const q = new URLSearchParams({ rpcids: 'WcwnYd', 'source-path': '/video.g', hl: 'pt-BR', rt: 'c' });
