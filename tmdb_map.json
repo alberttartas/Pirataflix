@@ -221,6 +221,11 @@
     "tmdb_id": 94664,
     "type": "tv",
     "search": "Mushoku Tensei"
+  },
+    "eden": {
+    "tmdb_id": 92584,
+    "type": "tv",
+    "search": "Eden"
   }
 }
 
