@@ -3,7 +3,7 @@
     {
       "id": "o_pai_o",
       "title": "O Pai O",
-      "poster": "/Pirataflix/assets/Capas/default.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/BFVGUEQxhORXLRsclpzvGsIIFY.jpg",
       "episodes": [
         {
           "title": "Ó Paí, Ó",
@@ -11,7 +11,62 @@
           "episode": 1
         }
       ],
-      "type": "movie"
+      "type": "movie",
+      "local_poster": "/Pirataflix/assets/Capas/default.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/BFVGUEQxhORXLRsclpzvGsIIFY.jpg",
+        "https://image.tmdb.org/t/p/w500/5xmBBt6NvPs4sbQWxqd0UrGVcn8.jpg",
+        "https://image.tmdb.org/t/p/w500/eS5G6BCbUBU77Ueo07HllIBBc53.jpg",
+        "https://image.tmdb.org/t/p/w500/nNRVdN1lU5Wb8oLo9H8FD4K9Gim.jpg",
+        "https://image.tmdb.org/t/p/w500/y7tc5EGljASzbUCRYfvmY7lIwpY.jpg",
+        "https://image.tmdb.org/t/p/w500/4kEYYPRCRhATAsxP8Klxxla7rsg.jpg"
+      ],
+      "backdrop": "https://image.tmdb.org/t/p/w1280/aQtgaQ4nOIKaPtbyqLLQs94DRvZ.jpg",
+      "overview": "Acompanhe a vida dos moradores de um animado cortiço do Pelourinho, o coração de Salvador, no ultimo dia de Carnaval. Entre a falta de dinheiro e o desejo de se divertir, tipos curiosos sobrevivem à custa de muita criatividade, ironia, sensualidade e música.",
+      "year": "2007",
+      "rating": 6.9,
+      "cast": [
+        {
+          "name": "Lázaro Ramos",
+          "character": "Roque",
+          "profile": "https://image.tmdb.org/t/p/w185/jf9CJgtmHjsiczNUiQGM6znAYl.jpg"
+        },
+        {
+          "name": "Dira Paes",
+          "character": "Psilene",
+          "profile": "https://image.tmdb.org/t/p/w185/xMUb1GNsUaGazcPm0KhmYfRbMwU.jpg"
+        },
+        {
+          "name": "Wagner Moura",
+          "character": "Boca",
+          "profile": "https://image.tmdb.org/t/p/w185/53IbAed4t1dOWxY3iygbRYZBBnm.jpg"
+        },
+        {
+          "name": "Stênio Garcia",
+          "character": "Seu Jerônimo",
+          "profile": "https://image.tmdb.org/t/p/w185/fj1fooapMjiazUCQ4ZdpBAI0Y0O.jpg"
+        },
+        {
+          "name": "Luciana Souza",
+          "character": "Dona Joana",
+          "profile": "https://image.tmdb.org/t/p/w185/gMKwzwLpHnVSRpRLRotlLqgo9wx.jpg"
+        },
+        {
+          "name": "Emanuelle Araújo",
+          "character": "Rosa",
+          "profile": "https://image.tmdb.org/t/p/w185/zDZAJalGztJZYYO91YdJX326IOY.jpg"
+        },
+        {
+          "name": "Érico Brás",
+          "character": "Reginaldo",
+          "profile": "https://image.tmdb.org/t/p/w185/mrwFTOOD6mKZAeD88emAYlQQe3O.jpg"
+        },
+        {
+          "name": "Tânia Toko",
+          "character": "Neuzão da Rocha",
+          "profile": ""
+        }
+      ]
     },
     {
       "id": "exterminador_do_futuro_destino_sombrio",
@@ -305,7 +360,7 @@
     {
       "id": "besouro",
       "title": "Besouro",
-      "poster": "/Pirataflix/assets/Capas/default.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/Gx36iu3gOhNFx2nxzEv1ffncmx.jpg",
       "episodes": [
         {
           "title": "Besouro (2009)",
@@ -313,7 +368,60 @@
           "episode": 2009
         }
       ],
-      "type": "movie"
+      "type": "movie",
+      "local_poster": "/Pirataflix/assets/Capas/default.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/Gx36iu3gOhNFx2nxzEv1ffncmx.jpg",
+        "https://image.tmdb.org/t/p/w500/qebAp2Nfhcgp4xajWG5CO9bpAO.jpg",
+        "https://image.tmdb.org/t/p/w500/t1wGYCTafm1LmzSL0vPKNAOXnkz.jpg",
+        "https://image.tmdb.org/t/p/w500/pJQYfKijhP35VGq3Ja49D1nlwzJ.jpg"
+      ],
+      "backdrop": "https://image.tmdb.org/t/p/w1280/vBxyAfGXC5k05vMSJwwMTfW6iU6.jpg",
+      "overview": "Besouro foi o maior capoeirista de todos os tempos. Um menino que - ao se identificar com o inseto que ao voar desafia as leis da física - desafia ele mesmo as leis do preconceito e da opressão. Passado no Recôncavo dos anos 20, Besouro é um filme de aventura, paixão, misticismo e coragem. Uma história imortalizada por gerações, que chega aos cinemas com ação e poesia no cenário deslumbrante do Recôncavo Baiano.",
+      "year": "2009",
+      "rating": 6.0,
+      "cast": [
+        {
+          "name": "Aílton Carmo",
+          "character": "Besouro",
+          "profile": "https://image.tmdb.org/t/p/w185/xdT7G4Q9doKp5h05Yk6qYefoi7S.jpg"
+        },
+        {
+          "name": "Jéssica Barbosa",
+          "character": "Dinorá / Iansã",
+          "profile": "https://image.tmdb.org/t/p/w185/vlqBSFloDcgssNsTEZeQh3F5LZj.jpg"
+        },
+        {
+          "name": "Anderson Santos de Jesus",
+          "character": "Quero-Quero",
+          "profile": ""
+        },
+        {
+          "name": "Flávio Rocha",
+          "character": "Coronel Venâncio",
+          "profile": "https://image.tmdb.org/t/p/w185/tpqQuJvEQEBJIg7Qgxd4yuYoL2U.jpg"
+        },
+        {
+          "name": "Irandhir Santos",
+          "character": "Noca de Antonia",
+          "profile": "https://image.tmdb.org/t/p/w185/lJyjnnfEXBwKp6npXyCd1nSrnRI.jpg"
+        },
+        {
+          "name": "Servílio de Holanda",
+          "character": "Genival",
+          "profile": ""
+        },
+        {
+          "name": "Leno Sacramento",
+          "character": "Chico Canoa",
+          "profile": "https://image.tmdb.org/t/p/w185/sSN7Ln341NyqtyDxbaZc9EgLqgr.jpg"
+        },
+        {
+          "name": "Nilton Souza Junior",
+          "character": "Cobra Criada",
+          "profile": "https://image.tmdb.org/t/p/w185/rX248cjyl7R8VX8f9179GaBr2yb.jpg"
+        }
+      ]
     },
     {
       "id": "o_fim_da_rua",
