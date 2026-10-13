@@ -354,6 +354,80 @@
       ]
     },
     {
+      "id": "besouro",
+      "title": "Besouro",
+      "poster": "https://image.tmdb.org/t/p/w500/y5sdkgO4IJMTnkjh9PG7kREPWrP.jpg",
+      "episodes": [
+        {
+          "title": "Besouro (2009)",
+          "url": "https://kairou.space/api/proxy?url=http%3A%2F%2Freidosvods.shop%2Fmovie%2F301136513%2F609770557%2F9557191.mp4",
+          "episode": 2009
+        }
+      ],
+      "type": "movie",
+      "local_poster": "/Pirataflix/assets/Capas/default.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/y5sdkgO4IJMTnkjh9PG7kREPWrP.jpg",
+        "https://image.tmdb.org/t/p/w500/mXLOHHc1Zeuwsl4xYKjKh2280oL.jpg",
+        "https://image.tmdb.org/t/p/w500/vNfL4DYnonltukBrrgMmw94zMYL.jpg",
+        "https://image.tmdb.org/t/p/w500/lZ2sOCMCcGaPppaXj0Wiv0S7A08.jpg",
+        "https://image.tmdb.org/t/p/w500/rBy9lo6qOIId6UuDS720SUHK6xg.jpg",
+        "https://image.tmdb.org/t/p/w500/iyev5udSI2NecJHpl3EstYeQBJ7.jpg",
+        "https://image.tmdb.org/t/p/w500/9sYNRlGP73ma8mJfaRhtmIAP9uj.jpg"
+      ],
+      "backdrop": "https://image.tmdb.org/t/p/w1280/bVyFGnX8kt0XtJXdx2F1HyOkIic.jpg",
+      "overview": "Jaime Reyes, um adolescente de origem mexicana que encontra um artefato alienígena que lhe dá um exoesqueleto mecanizado e poderes, tornando-o no Besouro Azul.",
+      "year": "2023",
+      "genres": [
+        "Ação",
+        "Ficção Científica",
+        "Aventura"
+      ],
+      "rating": 6.6,
+      "cast": [
+        {
+          "name": "Xolo Maridueña",
+          "character": "Jaime Reyes / Blue Beetle",
+          "profile": "https://image.tmdb.org/t/p/w185/tJMI7BpjlhHSMpzSz9e1XxygnKd.jpg"
+        },
+        {
+          "name": "Bruna Marquezine",
+          "character": "Jenny Kord",
+          "profile": "https://image.tmdb.org/t/p/w185/mGDhenXwsFRaaz1PjbJjDkn2snc.jpg"
+        },
+        {
+          "name": "Susan Sarandon",
+          "character": "Victoria Kord",
+          "profile": "https://image.tmdb.org/t/p/w185/jR6l2EfvvGA8qCzZ7MB5FT9ZLkq.jpg"
+        },
+        {
+          "name": "Raoul Max Trujillo",
+          "character": "Carapax",
+          "profile": "https://image.tmdb.org/t/p/w185/dIfHIt1pgnYW9oCksc0DdoY5Mt5.jpg"
+        },
+        {
+          "name": "Belissa Escobedo",
+          "character": "Milagros Reyes",
+          "profile": "https://image.tmdb.org/t/p/w185/584tOsPVFbzq7GJxET5diOGZ8p0.jpg"
+        },
+        {
+          "name": "Damián Alcázar",
+          "character": "Alberto Reyes",
+          "profile": "https://image.tmdb.org/t/p/w185/6IAlrZ2yXubmmVaRsF7fdaP3N7C.jpg"
+        },
+        {
+          "name": "Elpidia Carrillo",
+          "character": "Rocío Reyes",
+          "profile": "https://image.tmdb.org/t/p/w185/u8ZEUAUdVjUE8DTddv81rE1Qer7.jpg"
+        },
+        {
+          "name": "George López",
+          "character": "Rudy Reyes",
+          "profile": "https://image.tmdb.org/t/p/w185/jeUUeE3ipY9edqdOSNI9v5maAbi.jpg"
+        }
+      ]
+    },
+    {
       "id": "o_fim_da_rua",
       "title": "O Fim Da Rua",
       "poster": "https://image.tmdb.org/t/p/w500/aqEPRht1pZR653rmU7eHyk8wSNP.jpg",
@@ -1062,7 +1136,7 @@
         {
           "name": "Jared Harris",
           "character": "Dr. Ashford",
-          "profile": "https://image.tmdb.org/t/p/w185/jAyPWkmge3BqXtgxIG9MfXBzOGj.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/r9nIq0jPz1oBm4WwtlZhqlsX8p0.jpg"
         },
         {
           "name": "Mike Epps",
@@ -73990,7 +74064,7 @@
         "Ação & Aventura",
         "Sci-Fi & Fantasia"
       ],
-      "rating": 8.9,
+      "rating": 8.8,
       "cast": [
         {
           "name": "Saheli Khan",
