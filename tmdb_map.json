@@ -228,14 +228,16 @@
     "search": "Eden"
    },
     "besouro": {
-    "tmdb_id": 23854,
-    "type": "tv",
-    "search": "besouro"
-},
-    "o_pai_o": {
-    "tmdb_id": 37817,
-    "type": "tv",
-    "search": "o pai o"
+    "tmdb_id": 12345,
+    "type": "movie",
+    "title": "Besouro",
+    "year": 2009
+  },
+  "o_pai_o": {
+    "tmdb_id": 67890,
+    "type": "movie",
+    "title": "O Pai O",
+    "year": 2007
   }
 }
 
