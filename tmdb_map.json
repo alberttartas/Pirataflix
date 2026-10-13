@@ -226,6 +226,16 @@
     "tmdb_id": 92584,
     "type": "tv",
     "search": "Eden"
+   },
+    "besouro": {
+    "tmdb_id": 23854,
+    "type": "tv",
+    "search": "besouro"
+},
+    "o_pai_o": {
+    "tmdb_id": 37817,
+    "type": "tv",
+    "search": "o pai o"
   }
 }
 
