@@ -309,7 +309,7 @@
         "Ação",
         "Aventura"
       ],
-      "rating": 8.4,
+      "rating": 8.5,
       "cast": [
         {
           "name": "Tom Holland",
@@ -26275,11 +26275,10 @@
               "url": "https://noveflixplay.com/api/video-proxy/NOBREZA-171",
               "episode": 171,
               "air_date": "2026-10-12",
-              "overview": "",
-              "still": "",
+              "overview": "Mirinho paga a Severino, que promete o levar até Alika. Omar se reconcilia com Alika, e Januário entrega cavalos, provisões e recados para a fuga. Jendal expulsa Bartô e Dôra do quarto, irritado com a visita e as histórias sobre Santa Veneranda. Virgínia acredita ter reconquistado Mirinho sem perceber que ele continua obcecado por Alika. Binta ameaça Pascoal com a execução.",
+              "still": "https://image.tmdb.org/t/p/w400/n6uv4cmt2d6zIQJhRLNtgSJkVmF.jpg",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-10-12T21:00:00"
+              "locked": false
             },
             {
               "title": "Episódio 172",
@@ -28528,11 +28527,10 @@
           "url": "https://noveflixplay.com/api/video-proxy/NOBREZA-171",
           "episode": 171,
           "air_date": "2026-10-12",
-          "overview": "",
-          "still": "",
+          "overview": "Mirinho paga a Severino, que promete o levar até Alika. Omar se reconcilia com Alika, e Januário entrega cavalos, provisões e recados para a fuga. Jendal expulsa Bartô e Dôra do quarto, irritado com a visita e as histórias sobre Santa Veneranda. Virgínia acredita ter reconquistado Mirinho sem perceber que ele continua obcecado por Alika. Binta ameaça Pascoal com a execução.",
+          "still": "https://image.tmdb.org/t/p/w400/n6uv4cmt2d6zIQJhRLNtgSJkVmF.jpg",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-10-12T21:00:00"
+          "locked": false
         },
         {
           "title": "Episódio 172",
