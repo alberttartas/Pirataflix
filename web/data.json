@@ -3,7 +3,7 @@
     {
       "id": "o_pai_o",
       "title": "O Pai O",
-      "poster": "https://image.tmdb.org/t/p/w500/9S6TOCqZqkT0vJdZzdQSb0pe0MT.jpg",
+      "poster": "/Pirataflix/assets/Capas/default.jpg",
       "episodes": [
         {
           "title": "Ó Paí, Ó",
@@ -11,58 +11,7 @@
           "episode": 1
         }
       ],
-      "type": "movie",
-      "local_poster": "/Pirataflix/assets/Capas/default.jpg",
-      "posters": [
-        "https://image.tmdb.org/t/p/w500/9S6TOCqZqkT0vJdZzdQSb0pe0MT.jpg"
-      ],
-      "overview": "Quatro adolescentes se perdem na mata liderados por um feiticeiro picareta que evoca um espectro maligno visando antever o resultado do jogo do bicho.",
-      "year": "2015",
-      "genres": [
-        "Terror"
-      ],
-      "cast": [
-        {
-          "name": "Rosinilma Gudim",
-          "character": "Rosinha",
-          "profile": ""
-        },
-        {
-          "name": "Manoel Clemente",
-          "character": "O Pai da Noite",
-          "profile": ""
-        },
-        {
-          "name": "Hugo Erio",
-          "character": "Santana",
-          "profile": ""
-        },
-        {
-          "name": "Gustavo Guga",
-          "character": "Augustus",
-          "profile": ""
-        },
-        {
-          "name": "Jaqueline Silva",
-          "character": "Crisllayne",
-          "profile": ""
-        },
-        {
-          "name": "Ana Beatriz",
-          "character": "Manicure",
-          "profile": ""
-        },
-        {
-          "name": "Diogo  Araújo",
-          "character": "Garçom",
-          "profile": ""
-        },
-        {
-          "name": "Manoel Clemente",
-          "character": "Garçom",
-          "profile": ""
-        }
-      ]
+      "type": "movie"
     },
     {
       "id": "exterminador_do_futuro_destino_sombrio",
@@ -356,7 +305,7 @@
     {
       "id": "besouro",
       "title": "Besouro",
-      "poster": "https://image.tmdb.org/t/p/w500/y5sdkgO4IJMTnkjh9PG7kREPWrP.jpg",
+      "poster": "/Pirataflix/assets/Capas/default.jpg",
       "episodes": [
         {
           "title": "Besouro (2009)",
@@ -364,68 +313,7 @@
           "episode": 2009
         }
       ],
-      "type": "movie",
-      "local_poster": "/Pirataflix/assets/Capas/default.jpg",
-      "posters": [
-        "https://image.tmdb.org/t/p/w500/y5sdkgO4IJMTnkjh9PG7kREPWrP.jpg",
-        "https://image.tmdb.org/t/p/w500/mXLOHHc1Zeuwsl4xYKjKh2280oL.jpg",
-        "https://image.tmdb.org/t/p/w500/vNfL4DYnonltukBrrgMmw94zMYL.jpg",
-        "https://image.tmdb.org/t/p/w500/lZ2sOCMCcGaPppaXj0Wiv0S7A08.jpg",
-        "https://image.tmdb.org/t/p/w500/rBy9lo6qOIId6UuDS720SUHK6xg.jpg",
-        "https://image.tmdb.org/t/p/w500/iyev5udSI2NecJHpl3EstYeQBJ7.jpg",
-        "https://image.tmdb.org/t/p/w500/9sYNRlGP73ma8mJfaRhtmIAP9uj.jpg"
-      ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/bVyFGnX8kt0XtJXdx2F1HyOkIic.jpg",
-      "overview": "Jaime Reyes, um adolescente de origem mexicana que encontra um artefato alienígena que lhe dá um exoesqueleto mecanizado e poderes, tornando-o no Besouro Azul.",
-      "year": "2023",
-      "genres": [
-        "Ação",
-        "Ficção Científica",
-        "Aventura"
-      ],
-      "rating": 6.6,
-      "cast": [
-        {
-          "name": "Xolo Maridueña",
-          "character": "Jaime Reyes / Blue Beetle",
-          "profile": "https://image.tmdb.org/t/p/w185/tJMI7BpjlhHSMpzSz9e1XxygnKd.jpg"
-        },
-        {
-          "name": "Bruna Marquezine",
-          "character": "Jenny Kord",
-          "profile": "https://image.tmdb.org/t/p/w185/mGDhenXwsFRaaz1PjbJjDkn2snc.jpg"
-        },
-        {
-          "name": "Susan Sarandon",
-          "character": "Victoria Kord",
-          "profile": "https://image.tmdb.org/t/p/w185/jR6l2EfvvGA8qCzZ7MB5FT9ZLkq.jpg"
-        },
-        {
-          "name": "Raoul Max Trujillo",
-          "character": "Carapax",
-          "profile": "https://image.tmdb.org/t/p/w185/dIfHIt1pgnYW9oCksc0DdoY5Mt5.jpg"
-        },
-        {
-          "name": "Belissa Escobedo",
-          "character": "Milagros Reyes",
-          "profile": "https://image.tmdb.org/t/p/w185/584tOsPVFbzq7GJxET5diOGZ8p0.jpg"
-        },
-        {
-          "name": "Damián Alcázar",
-          "character": "Alberto Reyes",
-          "profile": "https://image.tmdb.org/t/p/w185/6IAlrZ2yXubmmVaRsF7fdaP3N7C.jpg"
-        },
-        {
-          "name": "Elpidia Carrillo",
-          "character": "Rocío Reyes",
-          "profile": "https://image.tmdb.org/t/p/w185/u8ZEUAUdVjUE8DTddv81rE1Qer7.jpg"
-        },
-        {
-          "name": "George López",
-          "character": "Rudy Reyes",
-          "profile": "https://image.tmdb.org/t/p/w185/jeUUeE3ipY9edqdOSNI9v5maAbi.jpg"
-        }
-      ]
+      "type": "movie"
     },
     {
       "id": "o_fim_da_rua",
