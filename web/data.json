@@ -305,7 +305,7 @@
         "https://image.tmdb.org/t/p/w500/lH6LQcUhkVOK6ekvXzthQAogUnR.jpg",
         "https://image.tmdb.org/t/p/w500/23ReR54BPzRRhsAi243VaHn6wqk.jpg"
       ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/subj7knTn4DeS6KS7qI66EQKe9i.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/4tjxYg2AbOzzG9G1YuiT2NzYhlH.jpg",
       "overview": "É um novo dia para Peter Parker. Combatendo o crime em tempo integral como Homem-Aranha em um mundo que não se lembra mais dele e lidando com a pressão de ver seus antigos amigos seguirem em frente sem sua presença, Peter passa por uma mudança que talvez nem ele tenha o poder de controlar. Mas essa transformação também pode ser a única coisa capaz de deter uma surpreendente nova ameaça à cidade e às pessoas que ele ama: um poderoso vilão que ninguém sequer consegue enxergar.",
       "year": "2026",
       "genres": [
@@ -328,7 +328,7 @@
         {
           "name": "Tramell Tillman",
           "character": "William 'Bill' Metzger",
-          "profile": "https://image.tmdb.org/t/p/w185/bEA15zMnkcXlRroYjKrFUWiiK7y.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/2Uxa2M5HIoEuBb6gVOnNAuyn5wN.jpg"
         },
         {
           "name": "Zendaya",
@@ -1983,7 +1983,7 @@
         {
           "name": "Charles Dance",
           "character": "Alan Jonah",
-          "profile": "https://image.tmdb.org/t/p/w185/pKiXMCLf0uHQNwQPCjSNrjsUiJO.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/28ElvRC5ftOSzZBFM0cn4XrwH36.jpg"
         }
       ]
     },
@@ -2774,7 +2774,7 @@
     {
       "id": "todo_mundo_odeia_o_chris",
       "title": "Todo Mundo Odeia O Chris",
-      "poster": "https://image.tmdb.org/t/p/w500/x0m6WL6o02UCrc2lGtTbrrgf4HN.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/j7KcbOjhNIWOQqHGtL0P90nlfHB.jpg",
       "seasons": [
         {
           "season": 1,
@@ -3127,11 +3127,11 @@
       "local_poster": "/Pirataflix/assets/Capas/todo_mundo_odeia_o_chris.jpg",
       "posters": [
         "https://image.tmdb.org/t/p/w500/zX0xZnyReJxtGAqDOS3WcsgpOgx.jpg",
-        "https://image.tmdb.org/t/p/w500/x0m6WL6o02UCrc2lGtTbrrgf4HN.jpg",
-        "https://image.tmdb.org/t/p/w500/4BYXh0cY3AyyUB05CTLVJO5FjCM.jpg",
         "https://image.tmdb.org/t/p/w500/j7KcbOjhNIWOQqHGtL0P90nlfHB.jpg",
+        "https://image.tmdb.org/t/p/w500/4BYXh0cY3AyyUB05CTLVJO5FjCM.jpg",
         "https://image.tmdb.org/t/p/w500/3FjakKDEuaO8FpR1qJctV6njqYy.jpg",
-        "https://image.tmdb.org/t/p/w500/nYfvhUtbqMGtd5iV9sj2fdEFN5p.jpg"
+        "https://image.tmdb.org/t/p/w500/nYfvhUtbqMGtd5iV9sj2fdEFN5p.jpg",
+        "https://image.tmdb.org/t/p/w500/5rqCyqJWi7LqbuCJyRCNaZtKcHc.jpg"
       ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/qji729gwCW88RpIIWidlaLTul3V.jpg",
       "overview": "Para Chris, fazer 13 anos não tem nada de maravilhoso. Ele é o único negro da turma do ensino médio, onde tem uma educação medíocre. É amigo de Greg, e é frequentemente abusado por Joey Caruso. Ambos os pais trabalham e ele cuida de seus dois irmãos. Parece trágico, mas é hilário.",
@@ -26347,7 +26347,13 @@
               "air_date": "2026-10-12",
               "overview": "Mirinho paga a Severino, que promete o levar até Alika. Omar se reconcilia com Alika, e Januário entrega cavalos, provisões e recados para a fuga. Jendal expulsa Bartô e Dôra do quarto, irritado com a visita e as histórias sobre Santa Veneranda. Virgínia acredita ter reconquistado Mirinho sem perceber que ele continua obcecado por Alika. Binta ameaça Pascoal com a execução.",
               "still": "https://image.tmdb.org/t/p/w400/n6uv4cmt2d6zIQJhRLNtgSJkVmF.jpg",
-              "guest_stars": [],
+              "guest_stars": [
+                {
+                  "name": "Raimundo Moura",
+                  "character": "Delegado Umburana",
+                  "photo": "https://image.tmdb.org/t/p/w185/wVXafr9kNlr5eUU7MqCNVXDnQ6T.jpg"
+                }
+              ],
               "locked": false
             },
             {
@@ -26358,8 +26364,7 @@
               "overview": "",
               "still": "",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-10-13T21:00:00"
+              "locked": false
             },
             {
               "title": "Episódio 173",
@@ -28599,7 +28604,13 @@
           "air_date": "2026-10-12",
           "overview": "Mirinho paga a Severino, que promete o levar até Alika. Omar se reconcilia com Alika, e Januário entrega cavalos, provisões e recados para a fuga. Jendal expulsa Bartô e Dôra do quarto, irritado com a visita e as histórias sobre Santa Veneranda. Virgínia acredita ter reconquistado Mirinho sem perceber que ele continua obcecado por Alika. Binta ameaça Pascoal com a execução.",
           "still": "https://image.tmdb.org/t/p/w400/n6uv4cmt2d6zIQJhRLNtgSJkVmF.jpg",
-          "guest_stars": [],
+          "guest_stars": [
+            {
+              "name": "Raimundo Moura",
+              "character": "Delegado Umburana",
+              "photo": "https://image.tmdb.org/t/p/w185/wVXafr9kNlr5eUU7MqCNVXDnQ6T.jpg"
+            }
+          ],
           "locked": false
         },
         {
@@ -28610,8 +28621,7 @@
           "overview": "",
           "still": "",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-10-13T21:00:00"
+          "locked": false
         },
         {
           "title": "Episódio 173",
@@ -84941,7 +84951,7 @@
         "Comédia",
         "Kids"
       ],
-      "rating": 7.6,
+      "rating": 7.5,
       "cast": [
         {
           "name": "Arnold Stang",
