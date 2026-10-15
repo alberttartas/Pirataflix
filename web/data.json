@@ -328,7 +328,7 @@
         {
           "name": "Tramell Tillman",
           "character": "William 'Bill' Metzger",
-          "profile": "https://image.tmdb.org/t/p/w185/2Uxa2M5HIoEuBb6gVOnNAuyn5wN.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/bGb9u59fTIweCAdF0btl5cGqo26.jpg"
         },
         {
           "name": "Zendaya",
@@ -457,7 +457,7 @@
         {
           "name": "Anne Hathaway",
           "character": "Denise Platt",
-          "profile": "https://image.tmdb.org/t/p/w185/nbccV2pMoyLTCeg5DQip24Eq0Jp.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/tSWLbkhGrHJVoGopoOHkL1mM2Az.jpg"
         },
         {
           "name": "Ewan McGregor",
@@ -26361,8 +26361,8 @@
               "url": "https://noveflixplay.com/api/video-proxy/NOBREZA-172",
               "episode": 172,
               "air_date": "2026-10-13",
-              "overview": "",
-              "still": "",
+              "overview": "Tonho deduz que Mirinho sequestrou Alika, e Niara se desespera. Virgínia desconfia do comportamento de Mirinho. Tonho confronta Mirinho, mas foge quando Virgínia chega. Jendal ordena que seus seguranças vão atrás de Tonho. Virgínia diz a Jendal que sabe como o rei de Batanga pode localizar Alika. Tonho pede ajuda a Dona Menina para encontrar sua amada. Alika se desespera em seu cativeiro.",
+              "still": "https://image.tmdb.org/t/p/w400/gFYUDgVdLAy91KYys5HEd2AQx1m.jpg",
               "guest_stars": [],
               "locked": false
             },
@@ -26374,8 +26374,7 @@
               "overview": "",
               "still": "",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-10-14T21:00:00"
+              "locked": false
             },
             {
               "title": "Episódio 174",
@@ -28618,8 +28617,8 @@
           "url": "https://noveflixplay.com/api/video-proxy/NOBREZA-172",
           "episode": 172,
           "air_date": "2026-10-13",
-          "overview": "",
-          "still": "",
+          "overview": "Tonho deduz que Mirinho sequestrou Alika, e Niara se desespera. Virgínia desconfia do comportamento de Mirinho. Tonho confronta Mirinho, mas foge quando Virgínia chega. Jendal ordena que seus seguranças vão atrás de Tonho. Virgínia diz a Jendal que sabe como o rei de Batanga pode localizar Alika. Tonho pede ajuda a Dona Menina para encontrar sua amada. Alika se desespera em seu cativeiro.",
+          "still": "https://image.tmdb.org/t/p/w400/gFYUDgVdLAy91KYys5HEd2AQx1m.jpg",
           "guest_stars": [],
           "locked": false
         },
@@ -28631,8 +28630,7 @@
           "overview": "",
           "still": "",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-10-14T21:00:00"
+          "locked": false
         },
         {
           "title": "Episódio 174",
@@ -58420,7 +58418,7 @@
       "backdrop": "https://image.tmdb.org/t/p/w1280/c72O2edMsD5QrbEGijBURiZIxk8.jpg",
       "overview": "Mao, um místico amaldiçoado há 900 anos, conhece Nanoka, uma garota do futuro marcada por uma tragédia. Transportados a um passado sobrenatural, os dois unem forças para enfrentar poderes sombrios e desvendar os mistérios que ligam suas vidas.",
       "year": "2026",
-      "rating": 8.9,
+      "rating": 8.8,
       "cast": [
         {
           "name": "Yuki Kaji",
@@ -74070,7 +74068,7 @@
         "Ação & Aventura",
         "Sci-Fi & Fantasia"
       ],
-      "rating": 8.8,
+      "rating": 8.9,
       "cast": [
         {
           "name": "Saheli Khan",
@@ -109389,6 +109387,21 @@
       "episodes": [
         {
           "url": "https://stream.ichibansys.com:3230/hybrid/play.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "RetroCartoon.br@SD",
+      "type": "tv",
+      "title": "Retro Cartoon (720p)",
+      "tvg_id": "RetroCartoon.br@SD",
+      "tvg_logo": "https://i.imgur.com/hIlEfhl.png",
+      "group": "🎞️ Clássicos",
+      "url": "https://stmv1.video.brstream.com.br/retrotv/retrotv/chunklist_w1069200121.m3u8",
+      "episodes": [
+        {
+          "url": "https://stmv1.video.brstream.com.br/retrotv/retrotv/chunklist_w1069200121.m3u8",
           "title": "AO VIVO"
         }
       ]

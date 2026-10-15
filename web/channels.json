@@ -23220,5 +23220,20 @@
         "title": "AO VIVO"
       }
     ]
+  },
+  {
+    "id": "RetroCartoon.br@SD",
+    "type": "tv",
+    "title": "Retro Cartoon (720p)",
+    "tvg_id": "RetroCartoon.br@SD",
+    "tvg_logo": "https://i.imgur.com/hIlEfhl.png",
+    "group": "🎞️ Clássicos",
+    "url": "https://stmv1.video.brstream.com.br/retrotv/retrotv/chunklist_w1069200121.m3u8",
+    "episodes": [
+      {
+        "url": "https://stmv1.video.brstream.com.br/retrotv/retrotv/chunklist_w1069200121.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
   }
 ]
