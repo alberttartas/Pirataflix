@@ -299,11 +299,11 @@
       "posters": [
         "https://image.tmdb.org/t/p/w500/x0nvYzQpyJc5pdT9lMnkMuYAg0O.jpg",
         "https://image.tmdb.org/t/p/w500/bjiS5ipwxb9JFy3XRRN4OAilSeX.jpg",
+        "https://image.tmdb.org/t/p/w500/wXYR5bgEg42incUEIpS64iKVlzn.jpg",
         "https://image.tmdb.org/t/p/w500/ghF1JYv7P5BgWHYfq9dqhqqNfz8.jpg",
         "https://image.tmdb.org/t/p/w500/dswjf9LMu2DAffcvTBzqYK3pu10.jpg",
         "https://image.tmdb.org/t/p/w500/yxOxOBxspl3NgC676W62G02g1cR.jpg",
-        "https://image.tmdb.org/t/p/w500/lH6LQcUhkVOK6ekvXzthQAogUnR.jpg",
-        "https://image.tmdb.org/t/p/w500/23ReR54BPzRRhsAi243VaHn6wqk.jpg"
+        "https://image.tmdb.org/t/p/w500/lH6LQcUhkVOK6ekvXzthQAogUnR.jpg"
       ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/4tjxYg2AbOzzG9G1YuiT2NzYhlH.jpg",
       "overview": "É um novo dia para Peter Parker. Combatendo o crime em tempo integral como Homem-Aranha em um mundo que não se lembra mais dele e lidando com a pressão de ver seus antigos amigos seguirem em frente sem sua presença, Peter passa por uma mudança que talvez nem ele tenha o poder de controlar. Mas essa transformação também pode ser a única coisa capaz de deter uma surpreendente nova ameaça à cidade e às pessoas que ele ama: um poderoso vilão que ninguém sequer consegue enxergar.",
@@ -353,7 +353,7 @@
         {
           "name": "Florence Pugh",
           "character": "Yelena Belova / Black Widow",
-          "profile": "https://image.tmdb.org/t/p/w185/2URrZb95t3kY6pLroKny3Enmabp.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/1QfiLnofJFlOJOLCWaxyDpIN03v.jpg"
         }
       ]
     },
@@ -457,7 +457,7 @@
         {
           "name": "Anne Hathaway",
           "character": "Denise Platt",
-          "profile": "https://image.tmdb.org/t/p/w185/tSWLbkhGrHJVoGopoOHkL1mM2Az.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/uZoIcKYtjxrk5ItlJyUtKcGDZkH.jpg"
         },
         {
           "name": "Ewan McGregor",
@@ -26371,8 +26371,8 @@
               "url": "https://noveflixplay.com/api/video-proxy/NOBREZA-173",
               "episode": 173,
               "air_date": "2026-10-14",
-              "overview": "",
-              "still": "",
+              "overview": "Mirinho afirma a Alika que cuidará de Niara, enquanto Jendal apreende Tonho e Omar. Fortunato prende Omar e Tonho ao lado de Miguel. Rendida por Jendal, Alika avisa a Caetana sobre a prisão de Tonho. Jendal chega com Alika ao engenho, e ordena que a princesa seja mantida presa em um quarto. Virgínia comemora o sequestro de Alika. Onildo cuida de Niara e anuncia que a rainha ficará bem.",
+              "still": "https://image.tmdb.org/t/p/w400/bI0cYIUB6jgSBUZweb4nUFIDXD0.jpg",
               "guest_stars": [],
               "locked": false
             },
@@ -26384,8 +26384,7 @@
               "overview": "",
               "still": "",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-10-15T21:00:00"
+              "locked": false
             },
             {
               "title": "Episódio 175",
@@ -28627,8 +28626,8 @@
           "url": "https://noveflixplay.com/api/video-proxy/NOBREZA-173",
           "episode": 173,
           "air_date": "2026-10-14",
-          "overview": "",
-          "still": "",
+          "overview": "Mirinho afirma a Alika que cuidará de Niara, enquanto Jendal apreende Tonho e Omar. Fortunato prende Omar e Tonho ao lado de Miguel. Rendida por Jendal, Alika avisa a Caetana sobre a prisão de Tonho. Jendal chega com Alika ao engenho, e ordena que a princesa seja mantida presa em um quarto. Virgínia comemora o sequestro de Alika. Onildo cuida de Niara e anuncia que a rainha ficará bem.",
+          "still": "https://image.tmdb.org/t/p/w400/bI0cYIUB6jgSBUZweb4nUFIDXD0.jpg",
           "guest_stars": [],
           "locked": false
         },
@@ -28640,8 +28639,7 @@
           "overview": "",
           "still": "",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-10-15T21:00:00"
+          "locked": false
         },
         {
           "title": "Episódio 175",
