@@ -457,7 +457,7 @@
         {
           "name": "Anne Hathaway",
           "character": "Denise Platt",
-          "profile": "https://image.tmdb.org/t/p/w185/uZoIcKYtjxrk5ItlJyUtKcGDZkH.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/s6tflSD20MGz04ZR2R1lZvhmC4Y.jpg"
         },
         {
           "name": "Ewan McGregor",
@@ -26394,8 +26394,7 @@
               "overview": "",
               "still": "",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-10-16T21:00:00"
+              "locked": false
             },
             {
               "title": "Episódio 176",
@@ -28649,8 +28648,7 @@
           "overview": "",
           "still": "",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-10-16T21:00:00"
+          "locked": false
         },
         {
           "title": "Episódio 176",
@@ -72398,11 +72396,11 @@
       "local_poster": "/Pirataflix/assets/Capas/dragon_ball_super.jpg",
       "posters": [
         "https://image.tmdb.org/t/p/w500/AojgldgsOlzZV8ahyOzaiAjJWvV.jpg",
+        "https://image.tmdb.org/t/p/w500/w9sUCvGRtLeHzP9NylTWYP06rvg.jpg",
         "https://image.tmdb.org/t/p/w500/w5ai45092PIlV1Vbt7kswry2C03.jpg",
         "https://image.tmdb.org/t/p/w500/3brrJ6mSESdGh1uo2YON9tDVXXB.jpg",
         "https://image.tmdb.org/t/p/w500/nmhpTtwTU9TliNgLOnPvz3LemGP.jpg",
-        "https://image.tmdb.org/t/p/w500/jwWZ0qQeHlhLrdu30uM7uLxnbiP.jpg",
-        "https://image.tmdb.org/t/p/w500/57CiOXaO6OoUF96pBWXJxw19OGs.jpg"
+        "https://image.tmdb.org/t/p/w500/jwWZ0qQeHlhLrdu30uM7uLxnbiP.jpg"
       ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/8phLVFEXOe02JgFmH9ldn3j4tXW.jpg",
       "overview": "Quando Beerus, o Deus da Destruição, desperta em busca de um rival à altura, Goku e seus amigos enfrentam uma batalha épica para impedi-lo de destruir a Terra.",
@@ -78060,12 +78058,12 @@
       "category": "animes",
       "local_poster": "/Pirataflix/assets/Capas/default.jpg",
       "posters": [
-        "https://image.tmdb.org/t/p/w500/9kraV68AzbRktgbmvOt63iAGgZX.jpg",
         "https://image.tmdb.org/t/p/w500/l8qbsNAr1CZK2tZ60l5lrJdT5mW.jpg",
         "https://image.tmdb.org/t/p/w500/u62d0BPqsdv2TUDifcMmoePbHPL.jpg",
         "https://image.tmdb.org/t/p/w500/FQ0io6KAPkmzVE4VGLhmdOMwTe.jpg",
         "https://image.tmdb.org/t/p/w500/9dZCAQTPHwgszqtqJVMt4eQ9YqK.jpg",
-        "https://image.tmdb.org/t/p/w500/vYNar1VtdNyQXXUt16uPbIT6wzr.jpg"
+        "https://image.tmdb.org/t/p/w500/vYNar1VtdNyQXXUt16uPbIT6wzr.jpg",
+        "https://image.tmdb.org/t/p/w500/lrWh0pKLjPKfNkuUhQV1bhbruEP.jpg"
       ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/t2KFGH07Al4XuIZLHRlF1Hj9IJB.jpg",
       "overview": "Após um cataclismo global, uma jovem descobre ser o novo Avatar - agora rotulada como a Destruidora, não uma salvadora. Caçada por humanos e espíritos, ela e sua gêmea há muito perdida precisam descobrir suas origens e salvar a humanidade do colapso.",
@@ -78075,7 +78073,7 @@
         "Ação & Aventura",
         "Sci-Fi & Fantasia"
       ],
-      "rating": 8.9,
+      "rating": 9.1,
       "cast": [
         {
           "name": "Saheli Khan",
