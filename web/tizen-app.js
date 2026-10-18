@@ -1008,6 +1008,29 @@
   var BLOGGER_PROXY    = 'https://pirataflix-seven.vercel.app/api/blogger';
   var BLOGGER_BL       = 'boq_bloggeruiserver_20261007.02_p0'; // usado se a página não informar
 
+  // Alguns servidores de MP4 recusam requisições com Referer de outro site
+  // (o player original deles envia sem Referer). Para esses hosts, desliga o Referer
+  // enquanto o vídeo toca; a política volta ao normal ao fechar o player.
+  var NO_REFERRER_HOSTS = ['vdkix.com'];
+
+  function needsNoReferrer(url) {
+    for (var i = 0; i < NO_REFERRER_HOSTS.length; i++) {
+      if (url.indexOf(NO_REFERRER_HOSTS[i]) !== -1) return true;
+    }
+    return false;
+  }
+
+  function setReferrerPolicy(policy) {
+    var m = document.querySelector('meta[name="referrer"]');
+    if (!policy) { if (m && m.parentNode) m.parentNode.removeChild(m); return; }
+    if (!m) {
+      m = document.createElement('meta');
+      m.setAttribute('name', 'referrer');
+      document.head.appendChild(m);
+    }
+    m.setAttribute('content', policy);
+  }
+
   // Desfaz o escape de JSON dentro de JSON (qualquer nível de barras)
   function unescapeDeep(t) {
     return t.replace(/\\+u0026/gi, '&').replace(/\\+u003d/gi, '=')
@@ -1042,6 +1065,8 @@
     function finish(link, info) {
       if (done || tok !== resolveTok) return;
       done = true;
+      // ambiente: de onde o app está rodando (decide se o CORS é liberado)
+      try { info.env = location.protocol + '//' + (location.host || 'local') + (window.tizen ? ' tizen' : ' web'); } catch (e0) {}
       try { console.log('[Blogger resolve]', JSON.stringify(info), link ? 'ok' : 'sem link'); } catch (e) {}
       cb(link, info);
     }
@@ -1084,11 +1109,8 @@
         if (link) finish(link, info); else viaServer(info);
       };
       var failed = false;
-      x.onerror = x.ontimeout = function () {
-        if (failed || done) return;
-        failed = true;
-        viaServer({ via: 'rpc', err: 'rede/CORS' });
-      };
+      x.onerror   = function () { if (failed || done) return; failed = true; viaServer({ via: 'rpc', err: 'rede/CORS' }); };
+      x.ontimeout = function () { if (failed || done) return; failed = true; viaServer({ via: 'rpc', err: 'timeout' }); };
       x.send(body);
     }
 
@@ -1227,7 +1249,8 @@
             var why = !info ? '?' : (info.err ? info.err
                     : ('HTTP ' + info.status + (info.len ? ', ' + info.len + ' bytes sem link' : '')));
             if (info && info.direto) why = (info.direto.err || ('HTTP ' + info.direto.status)) + ' | servidor: ' + (info.err || ('HTTP ' + info.status));
-            showToast('⚠ Sem link direto (' + why + ') → player embutido: dê play com o ponteiro', 7000);
+            if (info && info.env) why += ' [' + info.env + ']';
+            showToast('⚠ Sem link direto (' + why + ') → player embutido: dê play com o ponteiro', 9000);
             playVideo(url, title, itemId, cat, epIdx, 'iframe');
           }
         });
@@ -1256,6 +1279,7 @@
     destroyBloggerIframe();
     if (progressInterval) { clearInterval(progressInterval); progressInterval = null; }
     wrap.style.display = 'block';
+    setReferrerPolicy(needsNoReferrer(url) ? 'no-referrer' : '');
 
     if (mode === 'iframe') {
       playBloggerVideo(url);
@@ -1371,6 +1395,7 @@
     playerUrl = '';
     playerMode = '';
     playerOrig = '';
+    setReferrerPolicy('');
     if (controlsTimer) { clearTimeout(controlsTimer); controlsTimer = null; }
     $('player-controls').className = '';
     $('player-wrap').style.display = 'none';
@@ -1479,7 +1504,7 @@
         playVideo(o, playerTitle, playerItemId, playerCat, playerEpIdx, 'iframe');
         return;
       }
-      showOsd('⚠ Erro ao reproduzir');
+      showOsd('⚠ Erro ao reproduzir' + (video.error ? ' (código ' + video.error.code + ')' : ''));
     });
 
     video.addEventListener('ended', function () {
