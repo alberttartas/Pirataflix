@@ -305,7 +305,7 @@
         "https://image.tmdb.org/t/p/w500/yxOxOBxspl3NgC676W62G02g1cR.jpg",
         "https://image.tmdb.org/t/p/w500/lH6LQcUhkVOK6ekvXzthQAogUnR.jpg"
       ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/4tjxYg2AbOzzG9G1YuiT2NzYhlH.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/subj7knTn4DeS6KS7qI66EQKe9i.jpg",
       "overview": "É um novo dia para Peter Parker. Combatendo o crime em tempo integral como Homem-Aranha em um mundo que não se lembra mais dele e lidando com a pressão de ver seus antigos amigos seguirem em frente sem sua presença, Peter passa por uma mudança que talvez nem ele tenha o poder de controlar. Mas essa transformação também pode ser a única coisa capaz de deter uma surpreendente nova ameaça à cidade e às pessoas que ele ama: um poderoso vilão que ninguém sequer consegue enxergar.",
       "year": "2026",
       "genres": [
@@ -1936,7 +1936,7 @@
         "https://image.tmdb.org/t/p/w500/3DkVy2jqFe3xyYZK5XclS066IhH.jpg",
         "https://image.tmdb.org/t/p/w500/paDe5Mw0nhsAkcCMsNmMdvJqkNk.jpg"
       ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/uovH5k4BAEPqXqxgwVrTtqH169g.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/mzRJpkWPjXdXak0WCc8ZxVH4hug.jpg",
       "overview": "Membros da agência Monarch enfrentam monstros gigantescos, incluindo o poderoso Godzilla, que entra em choque com Mothra, Rodan e seu maior inimigo, King Ghidorah, o monstro de três cabeças. Essas antigas superespécies disputam a supremacia, deixando a própria existência da humanidade em risco.",
       "year": "2019",
       "genres": [
@@ -2198,7 +2198,7 @@
         {
           "name": "Spencer Locke",
           "character": "K-Mart",
-          "profile": "https://image.tmdb.org/t/p/w185/2mHfjqDY8e3ZISkFmi1qjrMs7uN.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/f23ZrcfmI6TbgSDd9StMydp64xa.jpg"
         },
         {
           "name": "Matthew Marsden",
@@ -2251,7 +2251,7 @@
         {
           "name": "Hermila Guedes",
           "character": "Beíta",
-          "profile": "https://image.tmdb.org/t/p/w185/dJJh7sekL9dl77tviU5yEVXa1qo.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/tRhIem0QaMXLNuEjKLPVqoUNVso.jpg"
         },
         {
           "name": "Davi Malizia",
@@ -26391,8 +26391,8 @@
               "url": "https://noveflixplay.com/api/video-proxy/NOBREZA-175",
               "episode": 175,
               "air_date": "2026-10-16",
-              "overview": "",
-              "still": "",
+              "overview": "Mundica se emociona com os elogios de Teresa. Omar pede que Miguel aceite seu amor por Salma. Mirinho culpa Virgínia pelo afastamento de Alika. Dona Menina visita Alika. Caetana dá o amuleto de Shaka para Tonho. Viriato se revolta ao ver Jendal levando Alika. Fortunato é obrigado a libertar Tonho e Omar. Jendal parte de Barro Preto com Alika, sem saber que é perseguido por Tonho e Omar.",
+              "still": "https://image.tmdb.org/t/p/w400/ySiV2sZnwR8JHm9g9r2oMeNY4hi.jpg",
               "guest_stars": [],
               "locked": false
             },
@@ -26401,11 +26401,10 @@
               "url": "https://noveflixplay.com/api/video-proxy/NOBREZA-176",
               "episode": 176,
               "air_date": "2026-10-17",
-              "overview": "",
-              "still": "",
+              "overview": "Todos responsabilizam Sebastião pela tragédia de Alika. Onildo denuncia Jendal às autoridades no Recife. Tonho anuncia que viajará para Batanga atrás de Alika. O delegado avisa que não pode impedir a partida de Jendal e Alika do Brasil. Marta e Diógenes rompem com Virgínia. Rainha Menemi recebe Kênia no reino de Zinga. Niara surpreende ao anunciar que irá a Batanga com Tonho e Omar.",
+              "still": "https://image.tmdb.org/t/p/w400/r0JGZi3OOp2r34KLAbekL4DdECi.jpg",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-10-17T21:00:00"
+              "locked": false
             },
             {
               "title": "Episódio 177",
@@ -28645,8 +28644,8 @@
           "url": "https://noveflixplay.com/api/video-proxy/NOBREZA-175",
           "episode": 175,
           "air_date": "2026-10-16",
-          "overview": "",
-          "still": "",
+          "overview": "Mundica se emociona com os elogios de Teresa. Omar pede que Miguel aceite seu amor por Salma. Mirinho culpa Virgínia pelo afastamento de Alika. Dona Menina visita Alika. Caetana dá o amuleto de Shaka para Tonho. Viriato se revolta ao ver Jendal levando Alika. Fortunato é obrigado a libertar Tonho e Omar. Jendal parte de Barro Preto com Alika, sem saber que é perseguido por Tonho e Omar.",
+          "still": "https://image.tmdb.org/t/p/w400/ySiV2sZnwR8JHm9g9r2oMeNY4hi.jpg",
           "guest_stars": [],
           "locked": false
         },
@@ -28655,11 +28654,10 @@
           "url": "https://noveflixplay.com/api/video-proxy/NOBREZA-176",
           "episode": 176,
           "air_date": "2026-10-17",
-          "overview": "",
-          "still": "",
+          "overview": "Todos responsabilizam Sebastião pela tragédia de Alika. Onildo denuncia Jendal às autoridades no Recife. Tonho anuncia que viajará para Batanga atrás de Alika. O delegado avisa que não pode impedir a partida de Jendal e Alika do Brasil. Marta e Diógenes rompem com Virgínia. Rainha Menemi recebe Kênia no reino de Zinga. Niara surpreende ao anunciar que irá a Batanga com Tonho e Omar.",
+          "still": "https://image.tmdb.org/t/p/w400/r0JGZi3OOp2r34KLAbekL4DdECi.jpg",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-10-17T21:00:00"
+          "locked": false
         },
         {
           "title": "Episódio 177",
@@ -72399,8 +72397,8 @@
         "https://image.tmdb.org/t/p/w500/w9sUCvGRtLeHzP9NylTWYP06rvg.jpg",
         "https://image.tmdb.org/t/p/w500/w5ai45092PIlV1Vbt7kswry2C03.jpg",
         "https://image.tmdb.org/t/p/w500/3brrJ6mSESdGh1uo2YON9tDVXXB.jpg",
-        "https://image.tmdb.org/t/p/w500/nmhpTtwTU9TliNgLOnPvz3LemGP.jpg",
-        "https://image.tmdb.org/t/p/w500/jwWZ0qQeHlhLrdu30uM7uLxnbiP.jpg"
+        "https://image.tmdb.org/t/p/w500/mHJ6ux8E7EosJRs7K02LksIee9N.jpg",
+        "https://image.tmdb.org/t/p/w500/nmhpTtwTU9TliNgLOnPvz3LemGP.jpg"
       ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/8phLVFEXOe02JgFmH9ldn3j4tXW.jpg",
       "overview": "Quando Beerus, o Deus da Destruição, desperta em busca de um rival à altura, Goku e seus amigos enfrentam uma batalha épica para impedi-lo de destruir a Terra.",
@@ -72410,7 +72408,7 @@
         "Ação & Aventura",
         "Sci-Fi & Fantasia"
       ],
-      "rating": 9.8,
+      "rating": 9.7,
       "cast": [
         {
           "name": "Masako Nozawa",
@@ -78073,7 +78071,7 @@
         "Ação & Aventura",
         "Sci-Fi & Fantasia"
       ],
-      "rating": 9.1,
+      "rating": 9.2,
       "cast": [
         {
           "name": "Saheli Khan",
@@ -114003,6 +114001,36 @@
       "episodes": [
         {
           "url": "https://stmv1.video.brstream.com.br/retrotv/retrotv/chunklist_w1069200121.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "CanalRural.br@SD",
+      "type": "tv",
+      "title": "Canal Rural (720p)",
+      "tvg_id": "CanalRural.br@SD",
+      "tvg_logo": "https://i.imgur.com/w9R9IIX.png",
+      "group": "🌿 Natureza",
+      "url": "http://170.83.49.66:8083/CANALRURALHD/index.m3u8",
+      "episodes": [
+        {
+          "url": "http://170.83.49.66:8083/CANALRURALHD/index.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "CartoonNetworkLatinAmerica.us@Brazil",
+      "type": "tv",
+      "title": "Cartoon Network Latin America Brazil (720p)",
+      "tvg_id": "CartoonNetworkLatinAmerica.us@Brazil",
+      "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png",
+      "group": "🎨 Animação",
+      "url": "http://45.162.64.114/CARTOON_NETWORK/index.m3u8",
+      "episodes": [
+        {
+          "url": "http://45.162.64.114/CARTOON_NETWORK/index.m3u8",
           "title": "AO VIVO"
         }
       ]

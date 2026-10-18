@@ -5,8 +5,8 @@ http://45.162.230.234:1935/agrobrasiltv/agrobrasiltv/playlist.m3u8
 #EXTINF:-1 tvg-id="CanaldoCriador.br@SD" tvg-logo="https://i.imgur.com/k29So6X.png" group-title="🌿 Natureza",Canal do Criador (1080p)
 https://607d2a1a47b1f.streamlock.net/crur/smil:canaldocriador.smil/playlist.m3u8
 
-#EXTINF:-1 tvg-id="CanalRural.br@SD" tvg-logo="https://i.imgur.com/w9R9IIX.png" group-title="🌿 Natureza",Canal Rural (1080p)
-https://607d2a1a47b1f.streamlock.net/crur/smil:canalrural.smil/playlist.m3u8
+#EXTINF:-1 tvg-id="CanalRural.br@SD" tvg-logo="https://i.imgur.com/w9R9IIX.png" group-title="🌿 Natureza",Canal Rural (720p)
+http://170.83.49.66:8083/CANALRURALHD/index.m3u8
 
 #EXTINF:-1 tvg-id="FishTV.br@SD" tvg-logo="https://www.fishtv.com/public/site/images/logos/fishtv.svg" group-title="🌿 Natureza",Fish TV (1080p)
 http://190.128.214.97:64333/play/a006/index.m3u8

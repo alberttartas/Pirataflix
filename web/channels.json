@@ -23235,5 +23235,35 @@
         "title": "AO VIVO"
       }
     ]
+  },
+  {
+    "id": "CanalRural.br@SD",
+    "type": "tv",
+    "title": "Canal Rural (720p)",
+    "tvg_id": "CanalRural.br@SD",
+    "tvg_logo": "https://i.imgur.com/w9R9IIX.png",
+    "group": "🌿 Natureza",
+    "url": "http://170.83.49.66:8083/CANALRURALHD/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://170.83.49.66:8083/CANALRURALHD/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "CartoonNetworkLatinAmerica.us@Brazil",
+    "type": "tv",
+    "title": "Cartoon Network Latin America Brazil (720p)",
+    "tvg_id": "CartoonNetworkLatinAmerica.us@Brazil",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png",
+    "group": "🎨 Animação",
+    "url": "http://45.162.64.114/CARTOON_NETWORK/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://45.162.64.114/CARTOON_NETWORK/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
   }
 ]
