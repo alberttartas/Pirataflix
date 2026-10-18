@@ -3637,49 +3637,7 @@
         "Novela",
         "Drama"
       ],
-      "rating": 8.1,
-      "cast": [
-        {
-          "name": "Letícia Colin",
-          "character": "Adriana de Morais Brandão",
-          "profile": "https://image.tmdb.org/t/p/w185/wZPBMQmSyOSmbD39D9AzJ9O1WLg.jpg"
-        },
-        {
-          "name": "Chay Suede",
-          "character": "Pedro Figueira Santana",
-          "profile": "https://image.tmdb.org/t/p/w185/txVt6TP2zffG3BfqUIcUF48cQ8u.jpg"
-        },
-        {
-          "name": "Isabel Teixeira",
-          "character": "Pilar Brandão da Costa",
-          "profile": "https://image.tmdb.org/t/p/w185/5sqQGwyi42cf2LxbqE5o1UcT9zD.jpg"
-        },
-        {
-          "name": "Tony Ramos",
-          "character": "Otoniel Pereira de Morais",
-          "profile": "https://image.tmdb.org/t/p/w185/fnGbw0GjQzm2RZ5AIEtKo3dLWkW.jpg"
-        },
-        {
-          "name": "Flávia Alessandra",
-          "character": "Fábia Goés Brandão",
-          "profile": "https://image.tmdb.org/t/p/w185/nteX5A1rQ5qdeXrEEVLzW4ueQMT.jpg"
-        },
-        {
-          "name": "Nathalia Dill",
-          "character": "Francesca Conti",
-          "profile": "https://image.tmdb.org/t/p/w185/2x9pizTq6Qn1cEzAmA53e5bQAss.jpg"
-        },
-        {
-          "name": "Tatá Werneck",
-          "character": "Brigitte Brandão Varella",
-          "profile": "https://image.tmdb.org/t/p/w185/nf3dZtRw2E6SSv14YXea65tE9YN.jpg"
-        },
-        {
-          "name": "Mariana Ximenes",
-          "character": "Eudora Martin Santana (Dora)",
-          "profile": "https://image.tmdb.org/t/p/w185/hkcn4GD1A0S2i19EP26N2ni4CTH.jpg"
-        }
-      ]
+      "rating": 8.1
     },
     {
       "id": "dinossauros",
@@ -68767,2208 +68725,1338 @@
           "season": 1,
           "episodes": [
             {
-              "title": "Naruto Classico Episódio 01",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/01.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 01",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/01.mp4/index.m3u8",
               "episode": 1
             },
             {
-              "title": "Naruto Classico Episódio 02",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/02.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 02",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/02.mp4/index.m3u8",
               "episode": 2
             },
             {
-              "title": "Naruto Classico Episódio 03",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/03.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 03",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/03.mp4/index.m3u8",
               "episode": 3
             },
             {
-              "title": "Naruto Classico Episódio 04",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/04.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 04",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/04.mp4/index.m3u8",
               "episode": 4
             },
             {
-              "title": "Naruto Classico Episódio 05",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/05.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 05",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/05.mp4/index.m3u8",
               "episode": 5
             },
             {
-              "title": "Naruto Classico Episódio 06",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/06.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 06",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/06.mp4/index.m3u8",
               "episode": 6
             },
             {
-              "title": "Naruto Classico Episódio 07",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/07.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 07",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/07.mp4/index.m3u8",
               "episode": 7
             },
             {
-              "title": "Naruto Classico Episódio 08",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/08.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 08",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/08.mp4/index.m3u8",
               "episode": 8
             },
             {
-              "title": "Naruto Classico Episódio 09",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/09.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 09",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/09.mp4/index.m3u8",
               "episode": 9
             },
             {
-              "title": "Naruto Classico Episódio 10",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/10.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 10",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/10.mp4/index.m3u8",
               "episode": 10
             },
             {
-              "title": "Naruto Classico Episódio 11",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/11.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 11",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/11.mp4/index.m3u8",
               "episode": 11
             },
             {
-              "title": "Naruto Classico Episódio 12",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/12.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 12",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/12.mp4/index.m3u8",
               "episode": 12
             },
             {
-              "title": "Naruto Classico Episódio 13",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/13.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 13",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/13.mp4/index.m3u8",
               "episode": 13
             },
             {
-              "title": "Naruto Classico Episódio 14",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/14.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 14",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/14.mp4/index.m3u8",
               "episode": 14
             },
             {
-              "title": "Naruto Classico Episódio 15",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/15.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 15",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/15.mp4/index.m3u8",
               "episode": 15
             },
             {
-              "title": "Naruto Classico Episódio 16",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/16.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 16",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/16.mp4/index.m3u8",
               "episode": 16
             },
             {
-              "title": "Naruto Classico Episódio 17",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/17.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 17",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/17.mp4/index.m3u8",
               "episode": 17
             },
             {
-              "title": "Naruto Classico Episódio 18",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/18.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 18",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/18.mp4/index.m3u8",
               "episode": 18
             },
             {
-              "title": "Naruto Classico Episódio 19",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/19.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 19",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/19.mp4/index.m3u8",
               "episode": 19
             },
             {
-              "title": "Naruto Classico Episódio 20",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/20.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 20",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/20.mp4/index.m3u8",
               "episode": 20
             },
             {
-              "title": "Naruto Classico Episódio 21",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/21.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 21",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/21.mp4/index.m3u8",
               "episode": 21
             },
             {
-              "title": "Naruto Classico Episódio 22",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/22.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 22",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/22.mp4/index.m3u8",
               "episode": 22
             },
             {
-              "title": "Naruto Classico Episódio 23",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/23.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 23",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/23.mp4/index.m3u8",
               "episode": 23
             },
             {
-              "title": "Naruto Classico Episódio 24",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/24.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 24",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/24.mp4/index.m3u8",
               "episode": 24
             },
             {
-              "title": "Naruto Classico Episódio 25",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/25.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 25",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/25.mp4/index.m3u8",
               "episode": 25
             },
             {
-              "title": "Naruto Classico Episódio 26",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/26.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 26",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/26.mp4/index.m3u8",
               "episode": 26
             },
             {
-              "title": "Naruto Classico Episódio 27",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/27.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 27",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/27.mp4/index.m3u8",
               "episode": 27
             },
             {
-              "title": "Naruto Classico Episódio 28",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/28.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 28",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/28.mp4/index.m3u8",
               "episode": 28
             },
             {
-              "title": "Naruto Classico Episódio 29",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/29.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 29",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/29.mp4/index.m3u8",
               "episode": 29
             },
             {
-              "title": "Naruto Classico Episódio 30",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/30.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 30",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/30.mp4/index.m3u8",
               "episode": 30
             },
             {
-              "title": "Naruto Classico Episódio 31",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/31.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 31",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/31.mp4/index.m3u8",
               "episode": 31
             },
             {
-              "title": "Naruto Classico Episódio 32",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/32.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 32",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/32.mp4/index.m3u8",
               "episode": 32
             },
             {
-              "title": "Naruto Classico Episódio 33",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/33.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 33",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/33.mp4/index.m3u8",
               "episode": 33
             },
             {
-              "title": "Naruto Classico Episódio 34",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/34.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 34",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/34.mp4/index.m3u8",
               "episode": 34
             },
             {
-              "title": "Naruto Classico Episódio 35",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/35.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 35",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/35.mp4/index.m3u8",
               "episode": 35
             },
             {
-              "title": "Naruto Classico Episódio 36",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/36.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 36",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/36.mp4/index.m3u8",
               "episode": 36
             },
             {
-              "title": "Naruto Classico Episódio 37",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/37.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 37",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/37.mp4/index.m3u8",
               "episode": 37
             },
             {
-              "title": "Naruto Classico Episódio 38",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/38.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 38",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/38.mp4/index.m3u8",
               "episode": 38
             },
             {
-              "title": "Naruto Classico Episódio 39",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/39.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 39",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/39.mp4/index.m3u8",
               "episode": 39
             },
             {
-              "title": "Naruto Classico Episódio 40",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/40.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 40",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/40.mp4/index.m3u8",
               "episode": 40
             },
             {
-              "title": "Naruto Classico Episódio 41",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/41.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 41",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/41.mp4/index.m3u8",
               "episode": 41
             },
             {
-              "title": "Naruto Classico Episódio 42",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/42.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 42",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/42.mp4/index.m3u8",
               "episode": 42
             },
             {
-              "title": "Naruto Classico Episódio 43",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/43.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 43",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/43.mp4/index.m3u8",
               "episode": 43
             },
             {
-              "title": "Naruto Classico Episódio 44",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/44.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 44",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/44.mp4/index.m3u8",
               "episode": 44
             },
             {
-              "title": "Naruto Classico Episódio 45",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/45.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 45",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/45.mp4/index.m3u8",
               "episode": 45
             },
             {
-              "title": "Naruto Classico Episódio 46",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/46.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 46",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/46.mp4/index.m3u8",
               "episode": 46
             },
             {
-              "title": "Naruto Classico Episódio 47",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/47.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 47",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/47.mp4/index.m3u8",
               "episode": 47
             },
             {
-              "title": "Naruto Classico Episódio 48",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/48.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 48",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/48.mp4/index.m3u8",
               "episode": 48
             },
             {
-              "title": "Naruto Classico Episódio 49",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/49.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 49",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/49.mp4/index.m3u8",
               "episode": 49
             },
             {
-              "title": "Naruto Classico Episódio 50",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/50.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 50",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/50.mp4/index.m3u8",
               "episode": 50
             },
             {
-              "title": "Naruto Classico Episódio 51",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/51.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 51",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/51.mp4/index.m3u8",
               "episode": 51
             },
             {
-              "title": "Naruto Classico Episódio 52",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/52.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 52",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/52.mp4/index.m3u8",
               "episode": 52
             },
             {
-              "title": "Naruto Classico Episódio 53",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/53.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 53",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/53.mp4/index.m3u8",
               "episode": 53
             },
             {
-              "title": "Naruto Classico Episódio 54",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/54.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 54",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/54.mp4/index.m3u8",
               "episode": 54
             },
             {
-              "title": "Naruto Classico Episódio 55",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/55.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 55",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/55.mp4/index.m3u8",
               "episode": 55
             },
             {
-              "title": "Naruto Classico Episódio 56",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/56.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 56",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/56.mp4/index.m3u8",
               "episode": 56
             },
             {
-              "title": "Naruto Classico Episódio 57",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/57.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 57",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/57.mp4/index.m3u8",
               "episode": 57
             },
             {
-              "title": "Naruto Classico Episódio 58",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/58.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 58",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/58.mp4/index.m3u8",
               "episode": 58
             },
             {
-              "title": "Naruto Classico Episódio 59",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/59.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 59",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/59.mp4/index.m3u8",
               "episode": 59
             },
             {
-              "title": "Naruto Classico Episódio 60",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/60.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 60",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/60.mp4/index.m3u8",
               "episode": 60
             },
             {
-              "title": "Naruto Classico Episódio 61",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/61.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 61",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/61.mp4/index.m3u8",
               "episode": 61
             },
             {
-              "title": "Naruto Classico Episódio 62",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/62.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 62",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/62.mp4/index.m3u8",
               "episode": 62
             },
             {
-              "title": "Naruto Classico Episódio 63",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/63.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 63",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/63.mp4/index.m3u8",
               "episode": 63
             },
             {
-              "title": "Naruto Classico Episódio 64",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/64.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 64",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/64.mp4/index.m3u8",
               "episode": 64
             },
             {
-              "title": "Naruto Classico Episódio 65",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/65.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 65",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/65.mp4/index.m3u8",
               "episode": 65
             },
             {
-              "title": "Naruto Classico Episódio 66",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/66.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 66",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/66.mp4/index.m3u8",
               "episode": 66
             },
             {
-              "title": "Naruto Classico Episódio 67",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/67.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 67",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/67.mp4/index.m3u8",
               "episode": 67
             },
             {
-              "title": "Naruto Classico Episódio 68",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/68.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 68",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/68.mp4/index.m3u8",
               "episode": 68
             },
             {
-              "title": "Naruto Classico Episódio 69",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/69.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 69",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/69.mp4/index.m3u8",
               "episode": 69
             },
             {
-              "title": "Naruto Classico Episódio 70",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/70.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 70",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/70.mp4/index.m3u8",
               "episode": 70
             },
             {
-              "title": "Naruto Classico Episódio 71",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/71.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 71",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/71.mp4/index.m3u8",
               "episode": 71
             },
             {
-              "title": "Naruto Classico Episódio 72",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/72.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 72",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/72.mp4/index.m3u8",
               "episode": 72
             },
             {
-              "title": "Naruto Classico Episódio 73",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/73.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 73",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/73.mp4/index.m3u8",
               "episode": 73
             },
             {
-              "title": "Naruto Classico Episódio 74",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/74.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 74",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/74.mp4/index.m3u8",
               "episode": 74
             },
             {
-              "title": "Naruto Classico Episódio 75",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/75.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 75",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/75.mp4/index.m3u8",
               "episode": 75
             },
             {
-              "title": "Naruto Classico Episódio 76",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/76.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 76",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/76.mp4/index.m3u8",
               "episode": 76
             },
             {
-              "title": "Naruto Classico Episódio 77",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/77.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 77",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/77.mp4/index.m3u8",
               "episode": 77
             },
             {
-              "title": "Naruto Classico Episódio 78",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/78.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 78",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/78.mp4/index.m3u8",
               "episode": 78
             },
             {
-              "title": "Naruto Classico Episódio 79",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/79.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 79",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/79.mp4/index.m3u8",
               "episode": 79
             },
             {
-              "title": "Naruto Classico Episódio 80",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/80.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 80",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/80.mp4/index.m3u8",
               "episode": 80
             },
             {
-              "title": "Naruto Classico Episódio 81",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/81.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 81",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/81.mp4/index.m3u8",
               "episode": 81
             },
             {
-              "title": "Naruto Classico Episódio 82",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/82.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 82",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/82.mp4/index.m3u8",
               "episode": 82
             },
             {
-              "title": "Naruto Classico Episódio 83",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/83.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 83",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/83.mp4/index.m3u8",
               "episode": 83
             },
             {
-              "title": "Naruto Classico Episódio 84",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/84.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 84",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/84.mp4/index.m3u8",
               "episode": 84
             },
             {
-              "title": "Naruto Classico Episódio 85",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/85.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 85",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/85.mp4/index.m3u8",
               "episode": 85
             },
             {
-              "title": "Naruto Classico Episódio 86",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/86.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 86",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/86.mp4/index.m3u8",
               "episode": 86
             },
             {
-              "title": "Naruto Classico Episódio 87",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/87.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 87",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/87.mp4/index.m3u8",
               "episode": 87
             },
             {
-              "title": "Naruto Classico Episódio 88",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/88.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 88",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/88.mp4/index.m3u8",
               "episode": 88
             },
             {
-              "title": "Naruto Classico Episódio 89",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/89.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 89",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/89.mp4/index.m3u8",
               "episode": 89
             },
             {
-              "title": "Naruto Classico Episódio 90",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/90.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 90",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/90.mp4/index.m3u8",
               "episode": 90
             },
             {
-              "title": "Naruto Classico Episódio 91",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/91.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 91",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/91.mp4/index.m3u8",
               "episode": 91
             },
             {
-              "title": "Naruto Classico Episódio 92",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/92.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 92",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/92.mp4/index.m3u8",
               "episode": 92
             },
             {
-              "title": "Naruto Classico Episódio 93",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/93.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 93",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/93.mp4/index.m3u8",
               "episode": 93
             },
             {
-              "title": "Naruto Classico Episódio 94",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/94.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 94",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/94.mp4/index.m3u8",
               "episode": 94
             },
             {
-              "title": "Naruto Classico Episódio 95",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/95.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 95",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/95.mp4/index.m3u8",
               "episode": 95
             },
             {
-              "title": "Naruto Classico Episódio 96",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/96.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 96",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/96.mp4/index.m3u8",
               "episode": 96
             },
             {
-              "title": "Naruto Classico Episódio 97",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/97.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 97",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/97.mp4/index.m3u8",
               "episode": 97
             },
             {
-              "title": "Naruto Classico Episódio 98",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/98.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 98",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/98.mp4/index.m3u8",
               "episode": 98
             },
             {
-              "title": "Naruto Classico Episódio 99",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/99.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 99",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/99.mp4/index.m3u8",
               "episode": 99
             },
             {
-              "title": "Naruto Classico Episódio 100",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/100.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 100",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/100.mp4/index.m3u8",
               "episode": 100
             },
             {
-              "title": "Naruto Classico Episódio 101",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/101.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 101",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/101.mp4/index.m3u8",
               "episode": 101
             },
             {
-              "title": "Naruto Classico Episódio 102",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/102.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 102",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/102.mp4/index.m3u8",
               "episode": 102
             },
             {
-              "title": "Naruto Classico Episódio 103",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/103.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 103",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/103.mp4/index.m3u8",
               "episode": 103
             },
             {
-              "title": "Naruto Classico Episódio 104",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/104.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 104",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/104.mp4/index.m3u8",
               "episode": 104
             },
             {
-              "title": "Naruto Classico Episódio 105",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/105.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 105",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/105.mp4/index.m3u8",
               "episode": 105
             },
             {
-              "title": "Naruto Classico Episódio 106",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/106.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 106",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/106.mp4/index.m3u8",
               "episode": 106
             },
             {
-              "title": "Naruto Classico Episódio 107",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/107.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 107",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/107.mp4/index.m3u8",
               "episode": 107
             },
             {
-              "title": "Naruto Classico Episódio 108",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/108.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 108",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/108.mp4/index.m3u8",
               "episode": 108
             },
             {
-              "title": "Naruto Classico Episódio 109",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/109.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 109",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/109.mp4/index.m3u8",
               "episode": 109
             },
             {
-              "title": "Naruto Classico Episódio 110",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/110.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 110",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/110.mp4/index.m3u8",
               "episode": 110
             },
             {
-              "title": "Naruto Classico Episódio 111",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/111.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 111",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/111.mp4/index.m3u8",
               "episode": 111
             },
             {
-              "title": "Naruto Classico Episódio 112",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/112.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 112",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/112.mp4/index.m3u8",
               "episode": 112
             },
             {
-              "title": "Naruto Classico Episódio 113",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/113.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 113",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/113.mp4/index.m3u8",
               "episode": 113
             },
             {
-              "title": "Naruto Classico Episódio 114",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/114.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 114",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/114.mp4/index.m3u8",
               "episode": 114
             },
             {
-              "title": "Naruto Classico Episódio 115",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/115.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 115",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/115.mp4/index.m3u8",
               "episode": 115
             },
             {
-              "title": "Naruto Classico Episódio 116",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/116.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 116",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/116.mp4/index.m3u8",
               "episode": 116
             },
             {
-              "title": "Naruto Classico Episódio 117",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/117.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 117",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/117.mp4/index.m3u8",
               "episode": 117
             },
             {
-              "title": "Naruto Classico Episódio 118",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/118.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 118",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/118.mp4/index.m3u8",
               "episode": 118
             },
             {
-              "title": "Naruto Classico Episódio 119",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/119.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 119",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/119.mp4/index.m3u8",
               "episode": 119
             },
             {
-              "title": "Naruto Classico Episódio 120",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/120.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 120",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/120.mp4/index.m3u8",
               "episode": 120
             },
             {
-              "title": "Naruto Classico Episódio 121",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/121.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 121",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/121.mp4/index.m3u8",
               "episode": 121
             },
             {
-              "title": "Naruto Classico Episódio 122",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/122.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 122",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/122.mp4/index.m3u8",
               "episode": 122
             },
             {
-              "title": "Naruto Classico Episódio 123",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/123.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 123",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/123.mp4/index.m3u8",
               "episode": 123
             },
             {
-              "title": "Naruto Classico Episódio 124",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/124.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 124",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/124.mp4/index.m3u8",
               "episode": 124
             },
             {
-              "title": "Naruto Classico Episódio 125",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/125.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 125",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/125.mp4/index.m3u8",
               "episode": 125
             },
             {
-              "title": "Naruto Classico Episódio 126",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/126.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 126",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/126.mp4/index.m3u8",
               "episode": 126
             },
             {
-              "title": "Naruto Classico Episódio 127",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/127.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 127",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/127.mp4/index.m3u8",
               "episode": 127
             },
             {
-              "title": "Naruto Classico Episódio 128",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/128.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 128",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/128.mp4/index.m3u8",
               "episode": 128
             },
             {
-              "title": "Naruto Classico Episódio 129",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/129.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 129",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/129.mp4/index.m3u8",
               "episode": 129
             },
             {
-              "title": "Naruto Classico Episódio 130",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/130.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 130",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/130.mp4/index.m3u8",
               "episode": 130
             },
             {
-              "title": "Naruto Classico Episódio 131",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/131.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 131",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/131.mp4/index.m3u8",
               "episode": 131
             },
             {
-              "title": "Naruto Classico Episódio 132",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/132.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 132",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/132.mp4/index.m3u8",
               "episode": 132
             },
             {
-              "title": "Naruto Classico Episódio 133",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/133.mp4/index.m3u8",
+              "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 133",
+              "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/133.mp4/index.m3u8",
               "episode": 133
-            },
-            {
-              "title": "Naruto Classico Episódio 134",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/134.mp4/index.m3u8",
-              "episode": 134
-            },
-            {
-              "title": "Naruto Classico Episódio 135",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/135.mp4/index.m3u8",
-              "episode": 135
-            },
-            {
-              "title": "Naruto Classico Episódio 136",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/136.mp4/index.m3u8",
-              "episode": 136
-            },
-            {
-              "title": "Naruto Classico Episódio 137",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/137.mp4/index.m3u8",
-              "episode": 137
-            },
-            {
-              "title": "Naruto Classico Episódio 138",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/138.mp4/index.m3u8",
-              "episode": 138
-            },
-            {
-              "title": "Naruto Classico Episódio 139",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/139.mp4/index.m3u8",
-              "episode": 139
-            },
-            {
-              "title": "Naruto Classico Episódio 140",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/140.mp4/index.m3u8",
-              "episode": 140
-            },
-            {
-              "title": "Naruto Classico Episódio 141",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/141.mp4/index.m3u8",
-              "episode": 141
-            },
-            {
-              "title": "Naruto Classico Episódio 142",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/142.mp4/index.m3u8",
-              "episode": 142
-            },
-            {
-              "title": "Naruto Classico Episódio 143",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/143.mp4/index.m3u8",
-              "episode": 143
-            },
-            {
-              "title": "Naruto Classico Episódio 144",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/144.mp4/index.m3u8",
-              "episode": 144
-            },
-            {
-              "title": "Naruto Classico Episódio 145",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/145.mp4/index.m3u8",
-              "episode": 145
-            },
-            {
-              "title": "Naruto Classico Episódio 146",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/146.mp4/index.m3u8",
-              "episode": 146
-            },
-            {
-              "title": "Naruto Classico Episódio 147",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/147.mp4/index.m3u8",
-              "episode": 147
-            },
-            {
-              "title": "Naruto Classico Episódio 148",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/148.mp4/index.m3u8",
-              "episode": 148
-            },
-            {
-              "title": "Naruto Classico Episódio 149",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/149.mp4/index.m3u8",
-              "episode": 149
-            },
-            {
-              "title": "Naruto Classico Episódio 150",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/150.mp4/index.m3u8",
-              "episode": 150
-            },
-            {
-              "title": "Naruto Classico Episódio 151",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/151.mp4/index.m3u8",
-              "episode": 151
-            },
-            {
-              "title": "Naruto Classico Episódio 152",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/152.mp4/index.m3u8",
-              "episode": 152
-            },
-            {
-              "title": "Naruto Classico Episódio 153",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/153.mp4/index.m3u8",
-              "episode": 153
-            },
-            {
-              "title": "Naruto Classico Episódio 154",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/154.mp4/index.m3u8",
-              "episode": 154
-            },
-            {
-              "title": "Naruto Classico Episódio 155",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/155.mp4/index.m3u8",
-              "episode": 155
-            },
-            {
-              "title": "Naruto Classico Episódio 156",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/156.mp4/index.m3u8",
-              "episode": 156
-            },
-            {
-              "title": "Naruto Classico Episódio 157",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/157.mp4/index.m3u8",
-              "episode": 157
-            },
-            {
-              "title": "Naruto Classico Episódio 158",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/158.mp4/index.m3u8",
-              "episode": 158
-            },
-            {
-              "title": "Naruto Classico Episódio 159",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/159.mp4/index.m3u8",
-              "episode": 159
-            },
-            {
-              "title": "Naruto Classico Episódio 160",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/160.mp4/index.m3u8",
-              "episode": 160
-            },
-            {
-              "title": "Naruto Classico Episódio 161",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/161.mp4/index.m3u8",
-              "episode": 161
-            },
-            {
-              "title": "Naruto Classico Episódio 162",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/162.mp4/index.m3u8",
-              "episode": 162
-            },
-            {
-              "title": "Naruto Classico Episódio 163",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/163.mp4/index.m3u8",
-              "episode": 163
-            },
-            {
-              "title": "Naruto Classico Episódio 164",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/164.mp4/index.m3u8",
-              "episode": 164
-            },
-            {
-              "title": "Naruto Classico Episódio 165",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/165.mp4/index.m3u8",
-              "episode": 165
-            },
-            {
-              "title": "Naruto Classico Episódio 166",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/166.mp4/index.m3u8",
-              "episode": 166
-            },
-            {
-              "title": "Naruto Classico Episódio 167",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/167.mp4/index.m3u8",
-              "episode": 167
-            },
-            {
-              "title": "Naruto Classico Episódio 168",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/168.mp4/index.m3u8",
-              "episode": 168
-            },
-            {
-              "title": "Naruto Classico Episódio 169",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/169.mp4/index.m3u8",
-              "episode": 169
-            },
-            {
-              "title": "Naruto Classico Episódio 170",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/170.mp4/index.m3u8",
-              "episode": 170
-            },
-            {
-              "title": "Naruto Classico Episódio 171",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/171.mp4/index.m3u8",
-              "episode": 171
-            },
-            {
-              "title": "Naruto Classico Episódio 172",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/172.mp4/index.m3u8",
-              "episode": 172
-            },
-            {
-              "title": "Naruto Classico Episódio 173",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/173.mp4/index.m3u8",
-              "episode": 173
-            },
-            {
-              "title": "Naruto Classico Episódio 174",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/174.mp4/index.m3u8",
-              "episode": 174
-            },
-            {
-              "title": "Naruto Classico Episódio 175",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/175.mp4/index.m3u8",
-              "episode": 175
-            },
-            {
-              "title": "Naruto Classico Episódio 176",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/176.mp4/index.m3u8",
-              "episode": 176
-            },
-            {
-              "title": "Naruto Classico Episódio 177",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/177.mp4/index.m3u8",
-              "episode": 177
-            },
-            {
-              "title": "Naruto Classico Episódio 178",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/178.mp4/index.m3u8",
-              "episode": 178
-            },
-            {
-              "title": "Naruto Classico Episódio 179",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/179.mp4/index.m3u8",
-              "episode": 179
-            },
-            {
-              "title": "Naruto Classico Episódio 180",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/180.mp4/index.m3u8",
-              "episode": 180
-            },
-            {
-              "title": "Naruto Classico Episódio 181",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/181.mp4/index.m3u8",
-              "episode": 181
-            },
-            {
-              "title": "Naruto Classico Episódio 182",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/182.mp4/index.m3u8",
-              "episode": 182
-            },
-            {
-              "title": "Naruto Classico Episódio 183",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/183.mp4/index.m3u8",
-              "episode": 183
-            },
-            {
-              "title": "Naruto Classico Episódio 184",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/184.mp4/index.m3u8",
-              "episode": 184
-            },
-            {
-              "title": "Naruto Classico Episódio 185",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/185.mp4/index.m3u8",
-              "episode": 185
-            },
-            {
-              "title": "Naruto Classico Episódio 186",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/186.mp4/index.m3u8",
-              "episode": 186
-            },
-            {
-              "title": "Naruto Classico Episódio 187",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/187.mp4/index.m3u8",
-              "episode": 187
-            },
-            {
-              "title": "Naruto Classico Episódio 188",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/188.mp4/index.m3u8",
-              "episode": 188
-            },
-            {
-              "title": "Naruto Classico Episódio 189",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/189.mp4/index.m3u8",
-              "episode": 189
-            },
-            {
-              "title": "Naruto Classico Episódio 190",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/190.mp4/index.m3u8",
-              "episode": 190
-            },
-            {
-              "title": "Naruto Classico Episódio 191",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/191.mp4/index.m3u8",
-              "episode": 191
-            },
-            {
-              "title": "Naruto Classico Episódio 192",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/192.mp4/index.m3u8",
-              "episode": 192
-            },
-            {
-              "title": "Naruto Classico Episódio 193",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/193.mp4/index.m3u8",
-              "episode": 193
-            },
-            {
-              "title": "Naruto Classico Episódio 194",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/194.mp4/index.m3u8",
-              "episode": 194
-            },
-            {
-              "title": "Naruto Classico Episódio 195",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/195.mp4/index.m3u8",
-              "episode": 195
-            },
-            {
-              "title": "Naruto Classico Episódio 196",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/196.mp4/index.m3u8",
-              "episode": 196
-            },
-            {
-              "title": "Naruto Classico Episódio 197",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/197.mp4/index.m3u8",
-              "episode": 197
-            },
-            {
-              "title": "Naruto Classico Episódio 198",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/198.mp4/index.m3u8",
-              "episode": 198
-            },
-            {
-              "title": "Naruto Classico Episódio 199",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/199.mp4/index.m3u8",
-              "episode": 199
-            },
-            {
-              "title": "Naruto Classico Episódio 200",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/200.mp4/index.m3u8",
-              "episode": 200
-            },
-            {
-              "title": "Naruto Classico Episódio 201",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/201.mp4/index.m3u8",
-              "episode": 201
-            },
-            {
-              "title": "Naruto Classico Episódio 202",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/202.mp4/index.m3u8",
-              "episode": 202
-            },
-            {
-              "title": "Naruto Classico Episódio 203",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/203.mp4/index.m3u8",
-              "episode": 203
-            },
-            {
-              "title": "Naruto Classico Episódio 204",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/204.mp4/index.m3u8",
-              "episode": 204
-            },
-            {
-              "title": "Naruto Classico Episódio 205",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/205.mp4/index.m3u8",
-              "episode": 205
-            },
-            {
-              "title": "Naruto Classico Episódio 206",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/206.mp4/index.m3u8",
-              "episode": 206
-            },
-            {
-              "title": "Naruto Classico Episódio 207",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/207.mp4/index.m3u8",
-              "episode": 207
-            },
-            {
-              "title": "Naruto Classico Episódio 208",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/208.mp4/index.m3u8",
-              "episode": 208
-            },
-            {
-              "title": "Naruto Classico Episódio 209",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/209.mp4/index.m3u8",
-              "episode": 209
-            },
-            {
-              "title": "Naruto Classico Episódio 210",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/210.mp4/index.m3u8",
-              "episode": 210
-            },
-            {
-              "title": "Naruto Classico Episódio 211",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/211.mp4/index.m3u8",
-              "episode": 211
-            },
-            {
-              "title": "Naruto Classico Episódio 212",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/212.mp4/index.m3u8",
-              "episode": 212
-            },
-            {
-              "title": "Naruto Classico Episódio 213",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/213.mp4/index.m3u8",
-              "episode": 213
-            },
-            {
-              "title": "Naruto Classico Episódio 214",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/214.mp4/index.m3u8",
-              "episode": 214
-            },
-            {
-              "title": "Naruto Classico Episódio 215",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/215.mp4/index.m3u8",
-              "episode": 215
-            },
-            {
-              "title": "Naruto Classico Episódio 216",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/216.mp4/index.m3u8",
-              "episode": 216
-            },
-            {
-              "title": "Naruto Classico Episódio 217",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/217.mp4/index.m3u8",
-              "episode": 217
-            },
-            {
-              "title": "Naruto Classico Episódio 218",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/218.mp4/index.m3u8",
-              "episode": 218
-            },
-            {
-              "title": "Naruto Classico Episódio 219",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/219.mp4/index.m3u8",
-              "episode": 219
-            },
-            {
-              "title": "Naruto Classico Episódio 220",
-              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/220.mp4/index.m3u8",
-              "episode": 220
             }
           ]
         }
       ],
       "episodes": [
         {
-          "title": "Naruto Classico Episódio 01",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/01.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 01",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/01.mp4/index.m3u8",
           "episode": 1
         },
         {
-          "title": "Naruto Classico Episódio 02",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/02.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 02",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/02.mp4/index.m3u8",
           "episode": 2
         },
         {
-          "title": "Naruto Classico Episódio 03",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/03.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 03",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/03.mp4/index.m3u8",
           "episode": 3
         },
         {
-          "title": "Naruto Classico Episódio 04",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/04.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 04",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/04.mp4/index.m3u8",
           "episode": 4
         },
         {
-          "title": "Naruto Classico Episódio 05",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/05.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 05",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/05.mp4/index.m3u8",
           "episode": 5
         },
         {
-          "title": "Naruto Classico Episódio 06",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/06.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 06",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/06.mp4/index.m3u8",
           "episode": 6
         },
         {
-          "title": "Naruto Classico Episódio 07",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/07.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 07",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/07.mp4/index.m3u8",
           "episode": 7
         },
         {
-          "title": "Naruto Classico Episódio 08",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/08.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 08",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/08.mp4/index.m3u8",
           "episode": 8
         },
         {
-          "title": "Naruto Classico Episódio 09",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/09.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 09",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/09.mp4/index.m3u8",
           "episode": 9
         },
         {
-          "title": "Naruto Classico Episódio 10",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/10.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 10",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/10.mp4/index.m3u8",
           "episode": 10
         },
         {
-          "title": "Naruto Classico Episódio 11",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/11.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 11",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/11.mp4/index.m3u8",
           "episode": 11
         },
         {
-          "title": "Naruto Classico Episódio 12",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/12.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 12",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/12.mp4/index.m3u8",
           "episode": 12
         },
         {
-          "title": "Naruto Classico Episódio 13",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/13.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 13",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/13.mp4/index.m3u8",
           "episode": 13
         },
         {
-          "title": "Naruto Classico Episódio 14",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/14.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 14",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/14.mp4/index.m3u8",
           "episode": 14
         },
         {
-          "title": "Naruto Classico Episódio 15",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/15.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 15",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/15.mp4/index.m3u8",
           "episode": 15
         },
         {
-          "title": "Naruto Classico Episódio 16",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/16.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 16",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/16.mp4/index.m3u8",
           "episode": 16
         },
         {
-          "title": "Naruto Classico Episódio 17",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/17.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 17",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/17.mp4/index.m3u8",
           "episode": 17
         },
         {
-          "title": "Naruto Classico Episódio 18",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/18.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 18",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/18.mp4/index.m3u8",
           "episode": 18
         },
         {
-          "title": "Naruto Classico Episódio 19",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/19.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 19",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/19.mp4/index.m3u8",
           "episode": 19
         },
         {
-          "title": "Naruto Classico Episódio 20",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/20.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 20",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/20.mp4/index.m3u8",
           "episode": 20
         },
         {
-          "title": "Naruto Classico Episódio 21",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/21.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 21",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/21.mp4/index.m3u8",
           "episode": 21
         },
         {
-          "title": "Naruto Classico Episódio 22",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/22.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 22",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/22.mp4/index.m3u8",
           "episode": 22
         },
         {
-          "title": "Naruto Classico Episódio 23",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/23.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 23",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/23.mp4/index.m3u8",
           "episode": 23
         },
         {
-          "title": "Naruto Classico Episódio 24",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/24.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 24",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/24.mp4/index.m3u8",
           "episode": 24
         },
         {
-          "title": "Naruto Classico Episódio 25",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/25.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 25",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/25.mp4/index.m3u8",
           "episode": 25
         },
         {
-          "title": "Naruto Classico Episódio 26",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/26.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 26",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/26.mp4/index.m3u8",
           "episode": 26
         },
         {
-          "title": "Naruto Classico Episódio 27",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/27.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 27",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/27.mp4/index.m3u8",
           "episode": 27
         },
         {
-          "title": "Naruto Classico Episódio 28",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/28.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 28",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/28.mp4/index.m3u8",
           "episode": 28
         },
         {
-          "title": "Naruto Classico Episódio 29",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/29.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 29",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/29.mp4/index.m3u8",
           "episode": 29
         },
         {
-          "title": "Naruto Classico Episódio 30",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/30.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 30",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/30.mp4/index.m3u8",
           "episode": 30
         },
         {
-          "title": "Naruto Classico Episódio 31",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/31.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 31",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/31.mp4/index.m3u8",
           "episode": 31
         },
         {
-          "title": "Naruto Classico Episódio 32",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/32.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 32",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/32.mp4/index.m3u8",
           "episode": 32
         },
         {
-          "title": "Naruto Classico Episódio 33",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/33.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 33",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/33.mp4/index.m3u8",
           "episode": 33
         },
         {
-          "title": "Naruto Classico Episódio 34",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/34.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 34",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/34.mp4/index.m3u8",
           "episode": 34
         },
         {
-          "title": "Naruto Classico Episódio 35",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/35.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 35",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/35.mp4/index.m3u8",
           "episode": 35
         },
         {
-          "title": "Naruto Classico Episódio 36",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/36.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 36",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/36.mp4/index.m3u8",
           "episode": 36
         },
         {
-          "title": "Naruto Classico Episódio 37",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/37.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 37",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/37.mp4/index.m3u8",
           "episode": 37
         },
         {
-          "title": "Naruto Classico Episódio 38",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/38.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 38",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/38.mp4/index.m3u8",
           "episode": 38
         },
         {
-          "title": "Naruto Classico Episódio 39",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/39.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 39",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/39.mp4/index.m3u8",
           "episode": 39
         },
         {
-          "title": "Naruto Classico Episódio 40",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/40.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 40",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/40.mp4/index.m3u8",
           "episode": 40
         },
         {
-          "title": "Naruto Classico Episódio 41",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/41.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 41",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/41.mp4/index.m3u8",
           "episode": 41
         },
         {
-          "title": "Naruto Classico Episódio 42",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/42.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 42",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/42.mp4/index.m3u8",
           "episode": 42
         },
         {
-          "title": "Naruto Classico Episódio 43",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/43.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 43",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/43.mp4/index.m3u8",
           "episode": 43
         },
         {
-          "title": "Naruto Classico Episódio 44",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/44.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 44",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/44.mp4/index.m3u8",
           "episode": 44
         },
         {
-          "title": "Naruto Classico Episódio 45",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/45.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 45",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/45.mp4/index.m3u8",
           "episode": 45
         },
         {
-          "title": "Naruto Classico Episódio 46",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/46.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 46",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/46.mp4/index.m3u8",
           "episode": 46
         },
         {
-          "title": "Naruto Classico Episódio 47",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/47.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 47",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/47.mp4/index.m3u8",
           "episode": 47
         },
         {
-          "title": "Naruto Classico Episódio 48",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/48.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 48",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/48.mp4/index.m3u8",
           "episode": 48
         },
         {
-          "title": "Naruto Classico Episódio 49",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/49.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 49",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/49.mp4/index.m3u8",
           "episode": 49
         },
         {
-          "title": "Naruto Classico Episódio 50",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/50.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 50",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/50.mp4/index.m3u8",
           "episode": 50
         },
         {
-          "title": "Naruto Classico Episódio 51",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/51.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 51",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/51.mp4/index.m3u8",
           "episode": 51
         },
         {
-          "title": "Naruto Classico Episódio 52",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/52.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 52",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/52.mp4/index.m3u8",
           "episode": 52
         },
         {
-          "title": "Naruto Classico Episódio 53",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/53.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 53",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/53.mp4/index.m3u8",
           "episode": 53
         },
         {
-          "title": "Naruto Classico Episódio 54",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/54.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 54",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/54.mp4/index.m3u8",
           "episode": 54
         },
         {
-          "title": "Naruto Classico Episódio 55",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/55.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 55",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/55.mp4/index.m3u8",
           "episode": 55
         },
         {
-          "title": "Naruto Classico Episódio 56",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/56.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 56",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/56.mp4/index.m3u8",
           "episode": 56
         },
         {
-          "title": "Naruto Classico Episódio 57",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/57.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 57",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/57.mp4/index.m3u8",
           "episode": 57
         },
         {
-          "title": "Naruto Classico Episódio 58",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/58.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 58",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/58.mp4/index.m3u8",
           "episode": 58
         },
         {
-          "title": "Naruto Classico Episódio 59",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/59.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 59",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/59.mp4/index.m3u8",
           "episode": 59
         },
         {
-          "title": "Naruto Classico Episódio 60",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/60.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 60",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/60.mp4/index.m3u8",
           "episode": 60
         },
         {
-          "title": "Naruto Classico Episódio 61",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/61.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 61",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/61.mp4/index.m3u8",
           "episode": 61
         },
         {
-          "title": "Naruto Classico Episódio 62",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/62.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 62",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/62.mp4/index.m3u8",
           "episode": 62
         },
         {
-          "title": "Naruto Classico Episódio 63",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/63.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 63",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/63.mp4/index.m3u8",
           "episode": 63
         },
         {
-          "title": "Naruto Classico Episódio 64",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/64.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 64",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/64.mp4/index.m3u8",
           "episode": 64
         },
         {
-          "title": "Naruto Classico Episódio 65",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/65.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 65",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/65.mp4/index.m3u8",
           "episode": 65
         },
         {
-          "title": "Naruto Classico Episódio 66",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/66.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 66",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/66.mp4/index.m3u8",
           "episode": 66
         },
         {
-          "title": "Naruto Classico Episódio 67",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/67.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 67",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/67.mp4/index.m3u8",
           "episode": 67
         },
         {
-          "title": "Naruto Classico Episódio 68",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/68.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 68",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/68.mp4/index.m3u8",
           "episode": 68
         },
         {
-          "title": "Naruto Classico Episódio 69",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/69.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 69",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/69.mp4/index.m3u8",
           "episode": 69
         },
         {
-          "title": "Naruto Classico Episódio 70",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/70.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 70",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/70.mp4/index.m3u8",
           "episode": 70
         },
         {
-          "title": "Naruto Classico Episódio 71",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/71.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 71",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/71.mp4/index.m3u8",
           "episode": 71
         },
         {
-          "title": "Naruto Classico Episódio 72",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/72.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 72",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/72.mp4/index.m3u8",
           "episode": 72
         },
         {
-          "title": "Naruto Classico Episódio 73",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/73.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 73",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/73.mp4/index.m3u8",
           "episode": 73
         },
         {
-          "title": "Naruto Classico Episódio 74",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/74.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 74",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/74.mp4/index.m3u8",
           "episode": 74
         },
         {
-          "title": "Naruto Classico Episódio 75",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/75.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 75",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/75.mp4/index.m3u8",
           "episode": 75
         },
         {
-          "title": "Naruto Classico Episódio 76",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/76.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 76",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/76.mp4/index.m3u8",
           "episode": 76
         },
         {
-          "title": "Naruto Classico Episódio 77",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/77.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 77",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/77.mp4/index.m3u8",
           "episode": 77
         },
         {
-          "title": "Naruto Classico Episódio 78",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/78.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 78",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/78.mp4/index.m3u8",
           "episode": 78
         },
         {
-          "title": "Naruto Classico Episódio 79",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/79.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 79",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/79.mp4/index.m3u8",
           "episode": 79
         },
         {
-          "title": "Naruto Classico Episódio 80",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/80.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 80",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/80.mp4/index.m3u8",
           "episode": 80
         },
         {
-          "title": "Naruto Classico Episódio 81",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/81.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 81",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/81.mp4/index.m3u8",
           "episode": 81
         },
         {
-          "title": "Naruto Classico Episódio 82",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/82.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 82",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/82.mp4/index.m3u8",
           "episode": 82
         },
         {
-          "title": "Naruto Classico Episódio 83",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/83.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 83",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/83.mp4/index.m3u8",
           "episode": 83
         },
         {
-          "title": "Naruto Classico Episódio 84",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/84.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 84",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/84.mp4/index.m3u8",
           "episode": 84
         },
         {
-          "title": "Naruto Classico Episódio 85",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/85.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 85",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/85.mp4/index.m3u8",
           "episode": 85
         },
         {
-          "title": "Naruto Classico Episódio 86",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/86.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 86",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/86.mp4/index.m3u8",
           "episode": 86
         },
         {
-          "title": "Naruto Classico Episódio 87",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/87.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 87",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/87.mp4/index.m3u8",
           "episode": 87
         },
         {
-          "title": "Naruto Classico Episódio 88",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/88.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 88",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/88.mp4/index.m3u8",
           "episode": 88
         },
         {
-          "title": "Naruto Classico Episódio 89",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/89.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 89",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/89.mp4/index.m3u8",
           "episode": 89
         },
         {
-          "title": "Naruto Classico Episódio 90",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/90.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 90",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/90.mp4/index.m3u8",
           "episode": 90
         },
         {
-          "title": "Naruto Classico Episódio 91",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/91.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 91",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/91.mp4/index.m3u8",
           "episode": 91
         },
         {
-          "title": "Naruto Classico Episódio 92",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/92.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 92",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/92.mp4/index.m3u8",
           "episode": 92
         },
         {
-          "title": "Naruto Classico Episódio 93",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/93.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 93",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/93.mp4/index.m3u8",
           "episode": 93
         },
         {
-          "title": "Naruto Classico Episódio 94",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/94.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 94",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/94.mp4/index.m3u8",
           "episode": 94
         },
         {
-          "title": "Naruto Classico Episódio 95",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/95.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 95",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/95.mp4/index.m3u8",
           "episode": 95
         },
         {
-          "title": "Naruto Classico Episódio 96",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/96.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 96",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/96.mp4/index.m3u8",
           "episode": 96
         },
         {
-          "title": "Naruto Classico Episódio 97",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/97.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 97",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/97.mp4/index.m3u8",
           "episode": 97
         },
         {
-          "title": "Naruto Classico Episódio 98",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/98.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 98",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/98.mp4/index.m3u8",
           "episode": 98
         },
         {
-          "title": "Naruto Classico Episódio 99",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/99.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 99",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/99.mp4/index.m3u8",
           "episode": 99
         },
         {
-          "title": "Naruto Classico Episódio 100",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/100.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 100",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/100.mp4/index.m3u8",
           "episode": 100
         },
         {
-          "title": "Naruto Classico Episódio 101",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/101.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 101",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/101.mp4/index.m3u8",
           "episode": 101
         },
         {
-          "title": "Naruto Classico Episódio 102",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/102.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 102",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/102.mp4/index.m3u8",
           "episode": 102
         },
         {
-          "title": "Naruto Classico Episódio 103",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/103.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 103",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/103.mp4/index.m3u8",
           "episode": 103
         },
         {
-          "title": "Naruto Classico Episódio 104",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/104.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 104",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/104.mp4/index.m3u8",
           "episode": 104
         },
         {
-          "title": "Naruto Classico Episódio 105",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/105.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 105",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/105.mp4/index.m3u8",
           "episode": 105
         },
         {
-          "title": "Naruto Classico Episódio 106",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/106.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 106",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/106.mp4/index.m3u8",
           "episode": 106
         },
         {
-          "title": "Naruto Classico Episódio 107",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/107.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 107",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/107.mp4/index.m3u8",
           "episode": 107
         },
         {
-          "title": "Naruto Classico Episódio 108",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/108.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 108",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/108.mp4/index.m3u8",
           "episode": 108
         },
         {
-          "title": "Naruto Classico Episódio 109",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/109.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 109",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/109.mp4/index.m3u8",
           "episode": 109
         },
         {
-          "title": "Naruto Classico Episódio 110",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/110.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 110",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/110.mp4/index.m3u8",
           "episode": 110
         },
         {
-          "title": "Naruto Classico Episódio 111",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/111.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 111",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/111.mp4/index.m3u8",
           "episode": 111
         },
         {
-          "title": "Naruto Classico Episódio 112",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/112.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 112",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/112.mp4/index.m3u8",
           "episode": 112
         },
         {
-          "title": "Naruto Classico Episódio 113",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/113.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 113",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/113.mp4/index.m3u8",
           "episode": 113
         },
         {
-          "title": "Naruto Classico Episódio 114",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/114.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 114",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/114.mp4/index.m3u8",
           "episode": 114
         },
         {
-          "title": "Naruto Classico Episódio 115",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/115.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 115",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/115.mp4/index.m3u8",
           "episode": 115
         },
         {
-          "title": "Naruto Classico Episódio 116",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/116.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 116",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/116.mp4/index.m3u8",
           "episode": 116
         },
         {
-          "title": "Naruto Classico Episódio 117",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/117.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 117",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/117.mp4/index.m3u8",
           "episode": 117
         },
         {
-          "title": "Naruto Classico Episódio 118",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/118.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 118",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/118.mp4/index.m3u8",
           "episode": 118
         },
         {
-          "title": "Naruto Classico Episódio 119",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/119.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 119",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/119.mp4/index.m3u8",
           "episode": 119
         },
         {
-          "title": "Naruto Classico Episódio 120",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/120.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 120",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/120.mp4/index.m3u8",
           "episode": 120
         },
         {
-          "title": "Naruto Classico Episódio 121",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/121.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 121",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/121.mp4/index.m3u8",
           "episode": 121
         },
         {
-          "title": "Naruto Classico Episódio 122",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/122.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 122",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/122.mp4/index.m3u8",
           "episode": 122
         },
         {
-          "title": "Naruto Classico Episódio 123",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/123.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 123",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/123.mp4/index.m3u8",
           "episode": 123
         },
         {
-          "title": "Naruto Classico Episódio 124",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/124.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 124",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/124.mp4/index.m3u8",
           "episode": 124
         },
         {
-          "title": "Naruto Classico Episódio 125",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/125.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 125",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/125.mp4/index.m3u8",
           "episode": 125
         },
         {
-          "title": "Naruto Classico Episódio 126",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/126.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 126",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/126.mp4/index.m3u8",
           "episode": 126
         },
         {
-          "title": "Naruto Classico Episódio 127",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/127.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 127",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/127.mp4/index.m3u8",
           "episode": 127
         },
         {
-          "title": "Naruto Classico Episódio 128",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/128.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 128",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/128.mp4/index.m3u8",
           "episode": 128
         },
         {
-          "title": "Naruto Classico Episódio 129",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/129.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 129",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/129.mp4/index.m3u8",
           "episode": 129
         },
         {
-          "title": "Naruto Classico Episódio 130",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/130.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 130",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/130.mp4/index.m3u8",
           "episode": 130
         },
         {
-          "title": "Naruto Classico Episódio 131",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/131.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 131",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/131.mp4/index.m3u8",
           "episode": 131
         },
         {
-          "title": "Naruto Classico Episódio 132",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/132.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 132",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/132.mp4/index.m3u8",
           "episode": 132
         },
         {
-          "title": "Naruto Classico Episódio 133",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/133.mp4/index.m3u8",
+          "title": "Naruto Classico Hd Remastered - Temporada 1 Ep 133",
+          "url": "https://cdn-sv01.maximaimg.online/stream/n/naruto-classico-hd-remastered/133.mp4/index.m3u8",
           "episode": 133
-        },
-        {
-          "title": "Naruto Classico Episódio 134",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/134.mp4/index.m3u8",
-          "episode": 134
-        },
-        {
-          "title": "Naruto Classico Episódio 135",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/135.mp4/index.m3u8",
-          "episode": 135
-        },
-        {
-          "title": "Naruto Classico Episódio 136",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/136.mp4/index.m3u8",
-          "episode": 136
-        },
-        {
-          "title": "Naruto Classico Episódio 137",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/137.mp4/index.m3u8",
-          "episode": 137
-        },
-        {
-          "title": "Naruto Classico Episódio 138",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/138.mp4/index.m3u8",
-          "episode": 138
-        },
-        {
-          "title": "Naruto Classico Episódio 139",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/139.mp4/index.m3u8",
-          "episode": 139
-        },
-        {
-          "title": "Naruto Classico Episódio 140",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/140.mp4/index.m3u8",
-          "episode": 140
-        },
-        {
-          "title": "Naruto Classico Episódio 141",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/141.mp4/index.m3u8",
-          "episode": 141
-        },
-        {
-          "title": "Naruto Classico Episódio 142",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/142.mp4/index.m3u8",
-          "episode": 142
-        },
-        {
-          "title": "Naruto Classico Episódio 143",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/143.mp4/index.m3u8",
-          "episode": 143
-        },
-        {
-          "title": "Naruto Classico Episódio 144",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/144.mp4/index.m3u8",
-          "episode": 144
-        },
-        {
-          "title": "Naruto Classico Episódio 145",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/145.mp4/index.m3u8",
-          "episode": 145
-        },
-        {
-          "title": "Naruto Classico Episódio 146",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/146.mp4/index.m3u8",
-          "episode": 146
-        },
-        {
-          "title": "Naruto Classico Episódio 147",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/147.mp4/index.m3u8",
-          "episode": 147
-        },
-        {
-          "title": "Naruto Classico Episódio 148",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/148.mp4/index.m3u8",
-          "episode": 148
-        },
-        {
-          "title": "Naruto Classico Episódio 149",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/149.mp4/index.m3u8",
-          "episode": 149
-        },
-        {
-          "title": "Naruto Classico Episódio 150",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/150.mp4/index.m3u8",
-          "episode": 150
-        },
-        {
-          "title": "Naruto Classico Episódio 151",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/151.mp4/index.m3u8",
-          "episode": 151
-        },
-        {
-          "title": "Naruto Classico Episódio 152",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/152.mp4/index.m3u8",
-          "episode": 152
-        },
-        {
-          "title": "Naruto Classico Episódio 153",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/153.mp4/index.m3u8",
-          "episode": 153
-        },
-        {
-          "title": "Naruto Classico Episódio 154",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/154.mp4/index.m3u8",
-          "episode": 154
-        },
-        {
-          "title": "Naruto Classico Episódio 155",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/155.mp4/index.m3u8",
-          "episode": 155
-        },
-        {
-          "title": "Naruto Classico Episódio 156",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/156.mp4/index.m3u8",
-          "episode": 156
-        },
-        {
-          "title": "Naruto Classico Episódio 157",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/157.mp4/index.m3u8",
-          "episode": 157
-        },
-        {
-          "title": "Naruto Classico Episódio 158",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/158.mp4/index.m3u8",
-          "episode": 158
-        },
-        {
-          "title": "Naruto Classico Episódio 159",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/159.mp4/index.m3u8",
-          "episode": 159
-        },
-        {
-          "title": "Naruto Classico Episódio 160",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/160.mp4/index.m3u8",
-          "episode": 160
-        },
-        {
-          "title": "Naruto Classico Episódio 161",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/161.mp4/index.m3u8",
-          "episode": 161
-        },
-        {
-          "title": "Naruto Classico Episódio 162",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/162.mp4/index.m3u8",
-          "episode": 162
-        },
-        {
-          "title": "Naruto Classico Episódio 163",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/163.mp4/index.m3u8",
-          "episode": 163
-        },
-        {
-          "title": "Naruto Classico Episódio 164",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/164.mp4/index.m3u8",
-          "episode": 164
-        },
-        {
-          "title": "Naruto Classico Episódio 165",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/165.mp4/index.m3u8",
-          "episode": 165
-        },
-        {
-          "title": "Naruto Classico Episódio 166",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/166.mp4/index.m3u8",
-          "episode": 166
-        },
-        {
-          "title": "Naruto Classico Episódio 167",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/167.mp4/index.m3u8",
-          "episode": 167
-        },
-        {
-          "title": "Naruto Classico Episódio 168",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/168.mp4/index.m3u8",
-          "episode": 168
-        },
-        {
-          "title": "Naruto Classico Episódio 169",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/169.mp4/index.m3u8",
-          "episode": 169
-        },
-        {
-          "title": "Naruto Classico Episódio 170",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/170.mp4/index.m3u8",
-          "episode": 170
-        },
-        {
-          "title": "Naruto Classico Episódio 171",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/171.mp4/index.m3u8",
-          "episode": 171
-        },
-        {
-          "title": "Naruto Classico Episódio 172",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/172.mp4/index.m3u8",
-          "episode": 172
-        },
-        {
-          "title": "Naruto Classico Episódio 173",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/173.mp4/index.m3u8",
-          "episode": 173
-        },
-        {
-          "title": "Naruto Classico Episódio 174",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/174.mp4/index.m3u8",
-          "episode": 174
-        },
-        {
-          "title": "Naruto Classico Episódio 175",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/175.mp4/index.m3u8",
-          "episode": 175
-        },
-        {
-          "title": "Naruto Classico Episódio 176",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/176.mp4/index.m3u8",
-          "episode": 176
-        },
-        {
-          "title": "Naruto Classico Episódio 177",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/177.mp4/index.m3u8",
-          "episode": 177
-        },
-        {
-          "title": "Naruto Classico Episódio 178",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/178.mp4/index.m3u8",
-          "episode": 178
-        },
-        {
-          "title": "Naruto Classico Episódio 179",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/179.mp4/index.m3u8",
-          "episode": 179
-        },
-        {
-          "title": "Naruto Classico Episódio 180",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/180.mp4/index.m3u8",
-          "episode": 180
-        },
-        {
-          "title": "Naruto Classico Episódio 181",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/181.mp4/index.m3u8",
-          "episode": 181
-        },
-        {
-          "title": "Naruto Classico Episódio 182",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/182.mp4/index.m3u8",
-          "episode": 182
-        },
-        {
-          "title": "Naruto Classico Episódio 183",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/183.mp4/index.m3u8",
-          "episode": 183
-        },
-        {
-          "title": "Naruto Classico Episódio 184",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/184.mp4/index.m3u8",
-          "episode": 184
-        },
-        {
-          "title": "Naruto Classico Episódio 185",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/185.mp4/index.m3u8",
-          "episode": 185
-        },
-        {
-          "title": "Naruto Classico Episódio 186",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/186.mp4/index.m3u8",
-          "episode": 186
-        },
-        {
-          "title": "Naruto Classico Episódio 187",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/187.mp4/index.m3u8",
-          "episode": 187
-        },
-        {
-          "title": "Naruto Classico Episódio 188",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/188.mp4/index.m3u8",
-          "episode": 188
-        },
-        {
-          "title": "Naruto Classico Episódio 189",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/189.mp4/index.m3u8",
-          "episode": 189
-        },
-        {
-          "title": "Naruto Classico Episódio 190",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/190.mp4/index.m3u8",
-          "episode": 190
-        },
-        {
-          "title": "Naruto Classico Episódio 191",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/191.mp4/index.m3u8",
-          "episode": 191
-        },
-        {
-          "title": "Naruto Classico Episódio 192",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/192.mp4/index.m3u8",
-          "episode": 192
-        },
-        {
-          "title": "Naruto Classico Episódio 193",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/193.mp4/index.m3u8",
-          "episode": 193
-        },
-        {
-          "title": "Naruto Classico Episódio 194",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/194.mp4/index.m3u8",
-          "episode": 194
-        },
-        {
-          "title": "Naruto Classico Episódio 195",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/195.mp4/index.m3u8",
-          "episode": 195
-        },
-        {
-          "title": "Naruto Classico Episódio 196",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/196.mp4/index.m3u8",
-          "episode": 196
-        },
-        {
-          "title": "Naruto Classico Episódio 197",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/197.mp4/index.m3u8",
-          "episode": 197
-        },
-        {
-          "title": "Naruto Classico Episódio 198",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/198.mp4/index.m3u8",
-          "episode": 198
-        },
-        {
-          "title": "Naruto Classico Episódio 199",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/199.mp4/index.m3u8",
-          "episode": 199
-        },
-        {
-          "title": "Naruto Classico Episódio 200",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/200.mp4/index.m3u8",
-          "episode": 200
-        },
-        {
-          "title": "Naruto Classico Episódio 201",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/201.mp4/index.m3u8",
-          "episode": 201
-        },
-        {
-          "title": "Naruto Classico Episódio 202",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/202.mp4/index.m3u8",
-          "episode": 202
-        },
-        {
-          "title": "Naruto Classico Episódio 203",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/203.mp4/index.m3u8",
-          "episode": 203
-        },
-        {
-          "title": "Naruto Classico Episódio 204",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/204.mp4/index.m3u8",
-          "episode": 204
-        },
-        {
-          "title": "Naruto Classico Episódio 205",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/205.mp4/index.m3u8",
-          "episode": 205
-        },
-        {
-          "title": "Naruto Classico Episódio 206",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/206.mp4/index.m3u8",
-          "episode": 206
-        },
-        {
-          "title": "Naruto Classico Episódio 207",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/207.mp4/index.m3u8",
-          "episode": 207
-        },
-        {
-          "title": "Naruto Classico Episódio 208",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/208.mp4/index.m3u8",
-          "episode": 208
-        },
-        {
-          "title": "Naruto Classico Episódio 209",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/209.mp4/index.m3u8",
-          "episode": 209
-        },
-        {
-          "title": "Naruto Classico Episódio 210",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/210.mp4/index.m3u8",
-          "episode": 210
-        },
-        {
-          "title": "Naruto Classico Episódio 211",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/211.mp4/index.m3u8",
-          "episode": 211
-        },
-        {
-          "title": "Naruto Classico Episódio 212",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/212.mp4/index.m3u8",
-          "episode": 212
-        },
-        {
-          "title": "Naruto Classico Episódio 213",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/213.mp4/index.m3u8",
-          "episode": 213
-        },
-        {
-          "title": "Naruto Classico Episódio 214",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/214.mp4/index.m3u8",
-          "episode": 214
-        },
-        {
-          "title": "Naruto Classico Episódio 215",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/215.mp4/index.m3u8",
-          "episode": 215
-        },
-        {
-          "title": "Naruto Classico Episódio 216",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/216.mp4/index.m3u8",
-          "episode": 216
-        },
-        {
-          "title": "Naruto Classico Episódio 217",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/217.mp4/index.m3u8",
-          "episode": 217
-        },
-        {
-          "title": "Naruto Classico Episódio 218",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/218.mp4/index.m3u8",
-          "episode": 218
-        },
-        {
-          "title": "Naruto Classico Episódio 219",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/219.mp4/index.m3u8",
-          "episode": 219
-        },
-        {
-          "title": "Naruto Classico Episódio 220",
-          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/n/naruto-classico-dublado/220.mp4/index.m3u8",
-          "episode": 220
         }
       ],
       "type": "series",
