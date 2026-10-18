@@ -3637,7 +3637,49 @@
         "Novela",
         "Drama"
       ],
-      "rating": 8.1
+      "rating": 8.1,
+      "cast": [
+        {
+          "name": "Letícia Colin",
+          "character": "Adriana de Morais Brandão",
+          "profile": "https://image.tmdb.org/t/p/w185/wZPBMQmSyOSmbD39D9AzJ9O1WLg.jpg"
+        },
+        {
+          "name": "Chay Suede",
+          "character": "Pedro Figueira Santana",
+          "profile": "https://image.tmdb.org/t/p/w185/txVt6TP2zffG3BfqUIcUF48cQ8u.jpg"
+        },
+        {
+          "name": "Isabel Teixeira",
+          "character": "Pilar Brandão da Costa",
+          "profile": "https://image.tmdb.org/t/p/w185/5sqQGwyi42cf2LxbqE5o1UcT9zD.jpg"
+        },
+        {
+          "name": "Tony Ramos",
+          "character": "Otoniel Pereira de Morais",
+          "profile": "https://image.tmdb.org/t/p/w185/fnGbw0GjQzm2RZ5AIEtKo3dLWkW.jpg"
+        },
+        {
+          "name": "Flávia Alessandra",
+          "character": "Fábia Goés Brandão",
+          "profile": "https://image.tmdb.org/t/p/w185/nteX5A1rQ5qdeXrEEVLzW4ueQMT.jpg"
+        },
+        {
+          "name": "Nathalia Dill",
+          "character": "Francesca Conti",
+          "profile": "https://image.tmdb.org/t/p/w185/2x9pizTq6Qn1cEzAmA53e5bQAss.jpg"
+        },
+        {
+          "name": "Tatá Werneck",
+          "character": "Brigitte Brandão Varella",
+          "profile": "https://image.tmdb.org/t/p/w185/nf3dZtRw2E6SSv14YXea65tE9YN.jpg"
+        },
+        {
+          "name": "Mariana Ximenes",
+          "character": "Eudora Martin Santana (Dora)",
+          "profile": "https://image.tmdb.org/t/p/w185/hkcn4GD1A0S2i19EP26N2ni4CTH.jpg"
+        }
+      ]
     },
     {
       "id": "dinossauros",
@@ -73454,6 +73496,508 @@
           "name": "Garry Chalk",
           "character": "Guts Man (voice)",
           "profile": "https://image.tmdb.org/t/p/w185/jESGnBSP0OjFxJejN1OPsjXA9sJ.jpg"
+        }
+      ]
+    },
+    {
+      "id": "beastars",
+      "title": "Beastars",
+      "poster": "https://image.tmdb.org/t/p/w500/jJHykaBex66D01wlfPx0tcyEQ8E.jpg",
+      "seasons": [
+        {
+          "season": 1,
+          "episodes": [
+            {
+              "title": "Beastars (Dublado) - Temporada 1 Ep 01",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-dublado/01.mp4/index.m3u8",
+              "episode": 1
+            },
+            {
+              "title": "Beastars (Dublado) - Temporada 1 Ep 02",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-dublado/02.mp4/index.m3u8",
+              "episode": 2
+            },
+            {
+              "title": "Beastars (Dublado) - Temporada 1 Ep 03",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-dublado/03.mp4/index.m3u8",
+              "episode": 3
+            },
+            {
+              "title": "Beastars (Dublado) - Temporada 1 Ep 04",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-dublado/04.mp4/index.m3u8",
+              "episode": 4
+            },
+            {
+              "title": "Beastars (Dublado) - Temporada 1 Ep 05",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-dublado/05.mp4/index.m3u8",
+              "episode": 5
+            },
+            {
+              "title": "Beastars (Dublado) - Temporada 1 Ep 06",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-dublado/06.mp4/index.m3u8",
+              "episode": 6
+            },
+            {
+              "title": "Beastars (Dublado) - Temporada 1 Ep 07",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-dublado/07.mp4/index.m3u8",
+              "episode": 7
+            },
+            {
+              "title": "Beastars (Dublado) - Temporada 1 Ep 08",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-dublado/08.mp4/index.m3u8",
+              "episode": 8
+            },
+            {
+              "title": "Beastars (Dublado) - Temporada 1 Ep 09",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-dublado/09.mp4/index.m3u8",
+              "episode": 9
+            },
+            {
+              "title": "Beastars (Dublado) - Temporada 1 Ep 10",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-dublado/10.mp4/index.m3u8",
+              "episode": 10
+            },
+            {
+              "title": "Beastars (Dublado) - Temporada 1 Ep 11",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-dublado/11.mp4/index.m3u8",
+              "episode": 11
+            },
+            {
+              "title": "Beastars (Dublado) - Temporada 1 Ep 12",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-dublado/12.mp4/index.m3u8",
+              "episode": 12
+            },
+            {
+              "title": "Beastars (Dublado) - Temporada 2 Ep 01",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-2nd-season-dublado/01.mp4/index.m3u8",
+              "episode": 1
+            },
+            {
+              "title": "Beastars (Dublado) - Temporada 2 Ep 02",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-2nd-season-dublado/02.mp4/index.m3u8",
+              "episode": 2
+            },
+            {
+              "title": "Beastars (Dublado) - Temporada 2 Ep 03",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-2nd-season-dublado/03.mp4/index.m3u8",
+              "episode": 3
+            },
+            {
+              "title": "Beastars (Dublado) - Temporada 2 Ep 04",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-2nd-season-dublado/04.mp4/index.m3u8",
+              "episode": 4
+            },
+            {
+              "title": "Beastars (Dublado) - Temporada 2 Ep 05",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-2nd-season-dublado/05.mp4/index.m3u8",
+              "episode": 5
+            },
+            {
+              "title": "Beastars (Dublado) - Temporada 2 Ep 06",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-2nd-season-dublado/06.mp4/index.m3u8",
+              "episode": 6
+            },
+            {
+              "title": "Beastars (Dublado) - Temporada 2 Ep 07",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-2nd-season-dublado/07.mp4/index.m3u8",
+              "episode": 7
+            },
+            {
+              "title": "Beastars (Dublado) - Temporada 2 Ep 08",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-2nd-season-dublado/08.mp4/index.m3u8",
+              "episode": 8
+            },
+            {
+              "title": "Beastars (Dublado) - Temporada 2 Ep 09",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-2nd-season-dublado/09.mp4/index.m3u8",
+              "episode": 9
+            },
+            {
+              "title": "Beastars (Dublado) - Temporada 2 Ep 10",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-2nd-season-dublado/10.mp4/index.m3u8",
+              "episode": 10
+            },
+            {
+              "title": "Beastars (Dublado) - Temporada 2 Ep 11",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-2nd-season-dublado/11.mp4/index.m3u8",
+              "episode": 11
+            },
+            {
+              "title": "Beastars (Dublado) - Temporada 2 Ep 12",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-2nd-season-dublado/12.mp4/index.m3u8",
+              "episode": 12
+            },
+            {
+              "title": "Beastars (Dublado) - Final Season Ep 01",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-final-season-dublado/01.mp4/index.m3u8",
+              "episode": 1
+            },
+            {
+              "title": "Beastars (Dublado) - Final Season Ep 03",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-final-season-dublado/03.mp4/index.m3u8",
+              "episode": 3
+            },
+            {
+              "title": "Beastars (Dublado) - Final Season Ep 04",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-final-season-dublado/04.mp4/index.m3u8",
+              "episode": 4
+            },
+            {
+              "title": "Beastars (Dublado) - Final Season Ep 05",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-final-season-dublado/05.mp4/index.m3u8",
+              "episode": 5
+            },
+            {
+              "title": "Beastars (Dublado) - Final Season Ep 06",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-final-season-dublado/06.mp4/index.m3u8",
+              "episode": 6
+            },
+            {
+              "title": "Beastars (Dublado) - Final Season Ep 07",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-final-season-dublado/07.mp4/index.m3u8",
+              "episode": 7
+            },
+            {
+              "title": "Beastars (Dublado) - Final Season Ep 08",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-final-season-dublado/08.mp4/index.m3u8",
+              "episode": 8
+            },
+            {
+              "title": "Beastars (Dublado) - Final Season Ep 09",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-final-season-dublado/09.mp4/index.m3u8",
+              "episode": 9
+            },
+            {
+              "title": "Beastars (Dublado) - Final Season Ep 10",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-final-season-dublado/10.mp4/index.m3u8",
+              "episode": 10
+            },
+            {
+              "title": "Beastars (Dublado) - Final Season Part 2 Ep 01",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-final-season-part-2-dublado/01.mp4/index.m3u8",
+              "episode": 1
+            },
+            {
+              "title": "Beastars (Dublado) - Final Season Part 2 Ep 02",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-final-season-part-2-dublado/02.mp4/index.m3u8",
+              "episode": 2
+            },
+            {
+              "title": "Beastars (Dublado) - Final Season Part 2 Ep 03",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-final-season-part-2-dublado/03.mp4/index.m3u8",
+              "episode": 3
+            },
+            {
+              "title": "Beastars (Dublado) - Final Season Part 2 Ep 04",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-final-season-part-2-dublado/04.mp4/index.m3u8",
+              "episode": 4
+            },
+            {
+              "title": "Beastars (Dublado) - Final Season Part 2 Ep 05",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-final-season-part-2-dublado/05.mp4/index.m3u8",
+              "episode": 5
+            },
+            {
+              "title": "Beastars (Dublado) - Final Season Part 2 Ep 06",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-final-season-part-2-dublado/06.mp4/index.m3u8",
+              "episode": 6
+            },
+            {
+              "title": "Beastars (Dublado) - Final Season Part 2 Ep 07",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-final-season-part-2-dublado/07.mp4/index.m3u8",
+              "episode": 7
+            },
+            {
+              "title": "Beastars (Dublado) - Final Season Part 2 Ep 08",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-final-season-part-2-dublado/08.mp4/index.m3u8",
+              "episode": 8
+            },
+            {
+              "title": "Beastars (Dublado) - Final Season Part 2 Ep 09",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-final-season-part-2-dublado/09.mp4/index.m3u8",
+              "episode": 9
+            },
+            {
+              "title": "Beastars (Dublado) - Final Season Part 2 Ep 10",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-final-season-part-2-dublado/10.mp4/index.m3u8",
+              "episode": 10
+            },
+            {
+              "title": "Beastars (Dublado) - Final Season Part 2 Ep 11",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-final-season-part-2-dublado/11.mp4/index.m3u8",
+              "episode": 11
+            },
+            {
+              "title": "Beastars (Dublado) - Final Season Part 2 Ep 12",
+              "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-final-season-part-2-dublado/12.mp4/index.m3u8",
+              "episode": 12
+            }
+          ]
+        }
+      ],
+      "episodes": [
+        {
+          "title": "Beastars (Dublado) - Temporada 1 Ep 01",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-dublado/01.mp4/index.m3u8",
+          "episode": 1
+        },
+        {
+          "title": "Beastars (Dublado) - Temporada 1 Ep 02",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-dublado/02.mp4/index.m3u8",
+          "episode": 2
+        },
+        {
+          "title": "Beastars (Dublado) - Temporada 1 Ep 03",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-dublado/03.mp4/index.m3u8",
+          "episode": 3
+        },
+        {
+          "title": "Beastars (Dublado) - Temporada 1 Ep 04",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-dublado/04.mp4/index.m3u8",
+          "episode": 4
+        },
+        {
+          "title": "Beastars (Dublado) - Temporada 1 Ep 05",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-dublado/05.mp4/index.m3u8",
+          "episode": 5
+        },
+        {
+          "title": "Beastars (Dublado) - Temporada 1 Ep 06",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-dublado/06.mp4/index.m3u8",
+          "episode": 6
+        },
+        {
+          "title": "Beastars (Dublado) - Temporada 1 Ep 07",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-dublado/07.mp4/index.m3u8",
+          "episode": 7
+        },
+        {
+          "title": "Beastars (Dublado) - Temporada 1 Ep 08",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-dublado/08.mp4/index.m3u8",
+          "episode": 8
+        },
+        {
+          "title": "Beastars (Dublado) - Temporada 1 Ep 09",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-dublado/09.mp4/index.m3u8",
+          "episode": 9
+        },
+        {
+          "title": "Beastars (Dublado) - Temporada 1 Ep 10",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-dublado/10.mp4/index.m3u8",
+          "episode": 10
+        },
+        {
+          "title": "Beastars (Dublado) - Temporada 1 Ep 11",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-dublado/11.mp4/index.m3u8",
+          "episode": 11
+        },
+        {
+          "title": "Beastars (Dublado) - Temporada 1 Ep 12",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-dublado/12.mp4/index.m3u8",
+          "episode": 12
+        },
+        {
+          "title": "Beastars (Dublado) - Temporada 2 Ep 01",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-2nd-season-dublado/01.mp4/index.m3u8",
+          "episode": 1
+        },
+        {
+          "title": "Beastars (Dublado) - Temporada 2 Ep 02",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-2nd-season-dublado/02.mp4/index.m3u8",
+          "episode": 2
+        },
+        {
+          "title": "Beastars (Dublado) - Temporada 2 Ep 03",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-2nd-season-dublado/03.mp4/index.m3u8",
+          "episode": 3
+        },
+        {
+          "title": "Beastars (Dublado) - Temporada 2 Ep 04",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-2nd-season-dublado/04.mp4/index.m3u8",
+          "episode": 4
+        },
+        {
+          "title": "Beastars (Dublado) - Temporada 2 Ep 05",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-2nd-season-dublado/05.mp4/index.m3u8",
+          "episode": 5
+        },
+        {
+          "title": "Beastars (Dublado) - Temporada 2 Ep 06",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-2nd-season-dublado/06.mp4/index.m3u8",
+          "episode": 6
+        },
+        {
+          "title": "Beastars (Dublado) - Temporada 2 Ep 07",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-2nd-season-dublado/07.mp4/index.m3u8",
+          "episode": 7
+        },
+        {
+          "title": "Beastars (Dublado) - Temporada 2 Ep 08",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-2nd-season-dublado/08.mp4/index.m3u8",
+          "episode": 8
+        },
+        {
+          "title": "Beastars (Dublado) - Temporada 2 Ep 09",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-2nd-season-dublado/09.mp4/index.m3u8",
+          "episode": 9
+        },
+        {
+          "title": "Beastars (Dublado) - Temporada 2 Ep 10",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-2nd-season-dublado/10.mp4/index.m3u8",
+          "episode": 10
+        },
+        {
+          "title": "Beastars (Dublado) - Temporada 2 Ep 11",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-2nd-season-dublado/11.mp4/index.m3u8",
+          "episode": 11
+        },
+        {
+          "title": "Beastars (Dublado) - Temporada 2 Ep 12",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-2nd-season-dublado/12.mp4/index.m3u8",
+          "episode": 12
+        },
+        {
+          "title": "Beastars (Dublado) - Final Season Ep 01",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-final-season-dublado/01.mp4/index.m3u8",
+          "episode": 1
+        },
+        {
+          "title": "Beastars (Dublado) - Final Season Ep 03",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-final-season-dublado/03.mp4/index.m3u8",
+          "episode": 3
+        },
+        {
+          "title": "Beastars (Dublado) - Final Season Ep 04",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-final-season-dublado/04.mp4/index.m3u8",
+          "episode": 4
+        },
+        {
+          "title": "Beastars (Dublado) - Final Season Ep 05",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-final-season-dublado/05.mp4/index.m3u8",
+          "episode": 5
+        },
+        {
+          "title": "Beastars (Dublado) - Final Season Ep 06",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-final-season-dublado/06.mp4/index.m3u8",
+          "episode": 6
+        },
+        {
+          "title": "Beastars (Dublado) - Final Season Ep 07",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-final-season-dublado/07.mp4/index.m3u8",
+          "episode": 7
+        },
+        {
+          "title": "Beastars (Dublado) - Final Season Ep 08",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-final-season-dublado/08.mp4/index.m3u8",
+          "episode": 8
+        },
+        {
+          "title": "Beastars (Dublado) - Final Season Ep 09",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-final-season-dublado/09.mp4/index.m3u8",
+          "episode": 9
+        },
+        {
+          "title": "Beastars (Dublado) - Final Season Ep 10",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-final-season-dublado/10.mp4/index.m3u8",
+          "episode": 10
+        },
+        {
+          "title": "Beastars (Dublado) - Final Season Part 2 Ep 01",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-final-season-part-2-dublado/01.mp4/index.m3u8",
+          "episode": 1
+        },
+        {
+          "title": "Beastars (Dublado) - Final Season Part 2 Ep 02",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-final-season-part-2-dublado/02.mp4/index.m3u8",
+          "episode": 2
+        },
+        {
+          "title": "Beastars (Dublado) - Final Season Part 2 Ep 03",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-final-season-part-2-dublado/03.mp4/index.m3u8",
+          "episode": 3
+        },
+        {
+          "title": "Beastars (Dublado) - Final Season Part 2 Ep 04",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-final-season-part-2-dublado/04.mp4/index.m3u8",
+          "episode": 4
+        },
+        {
+          "title": "Beastars (Dublado) - Final Season Part 2 Ep 05",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-final-season-part-2-dublado/05.mp4/index.m3u8",
+          "episode": 5
+        },
+        {
+          "title": "Beastars (Dublado) - Final Season Part 2 Ep 06",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-final-season-part-2-dublado/06.mp4/index.m3u8",
+          "episode": 6
+        },
+        {
+          "title": "Beastars (Dublado) - Final Season Part 2 Ep 07",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-final-season-part-2-dublado/07.mp4/index.m3u8",
+          "episode": 7
+        },
+        {
+          "title": "Beastars (Dublado) - Final Season Part 2 Ep 08",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-final-season-part-2-dublado/08.mp4/index.m3u8",
+          "episode": 8
+        },
+        {
+          "title": "Beastars (Dublado) - Final Season Part 2 Ep 09",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-final-season-part-2-dublado/09.mp4/index.m3u8",
+          "episode": 9
+        },
+        {
+          "title": "Beastars (Dublado) - Final Season Part 2 Ep 10",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-final-season-part-2-dublado/10.mp4/index.m3u8",
+          "episode": 10
+        },
+        {
+          "title": "Beastars (Dublado) - Final Season Part 2 Ep 11",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-final-season-part-2-dublado/11.mp4/index.m3u8",
+          "episode": 11
+        },
+        {
+          "title": "Beastars (Dublado) - Final Season Part 2 Ep 12",
+          "url": "https://cdn-s01.mywallpaper-4k-image.net/stream/sv/b/beastars-final-season-part-2-dublado/12.mp4/index.m3u8",
+          "episode": 12
+        }
+      ],
+      "type": "series",
+      "category": "animes",
+      "local_poster": "/Pirataflix/assets/Capas/default.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/jJHykaBex66D01wlfPx0tcyEQ8E.jpg",
+        "https://image.tmdb.org/t/p/w500/inYw1W3LQcw4OVwZPjwnhTIiIy0.jpg",
+        "https://image.tmdb.org/t/p/w500/vBc6kP2QWQm2udx15Xrq5qfhkeW.jpg",
+        "https://image.tmdb.org/t/p/w500/Ac60Pi9UsVirPE8vt2lrVckR2tr.jpg",
+        "https://image.tmdb.org/t/p/w500/h8qO3Leca3XqfwKjgXTxDfPG32g.jpg",
+        "https://image.tmdb.org/t/p/w500/gPEfB1WSZnTdqzd87Hp2M9IaJ5J.jpg",
+        "https://image.tmdb.org/t/p/w500/zKEFedE4KEUWdfPvjVC9G1VyEoK.jpg"
+      ],
+      "backdrop": "https://image.tmdb.org/t/p/w1280/oU6akWOEEvdoaaK9Sdpzowmi2gR.jpg",
+      "overview": "Em um mundo onde convivem animais de todo tipo, um lobo manso começa a descobrir seus instintos predatórios justamente quando acontece um assassinato na escola.",
+      "year": "2019",
+      "genres": [
+        "Animação",
+        "Drama",
+        "Mistério"
+      ],
+      "rating": 8.4,
+      "cast": [
+        {
+          "name": "Chikahiro Kobayashi",
+          "character": "Legoshi (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/dD0xdWLQubyRKAnI3rWpeV35XxD.jpg"
+        },
+        {
+          "name": "Sayaka Senbongi",
+          "character": "Haru (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/yLRKX9DPDGgTRKBQRFTUh3pvbU0.jpg"
+        },
+        {
+          "name": "Yuki Ono",
+          "character": "Louis (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/oEx13CbNLsHzURdYafkFJYXDjfm.jpg"
         }
       ]
     },
