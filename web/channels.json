@@ -23265,5 +23265,20 @@
         "title": "AO VIVO"
       }
     ]
+  },
+  {
+    "id": "Futura.br@SD",
+    "type": "tv",
+    "title": "Futura (720p)",
+    "tvg_id": "Futura.br@SD",
+    "tvg_logo": "https://i.ibb.co/Pz6Nqk7w/logo-futura-vazado.png",
+    "group": "📚 Educação",
+    "url": "http://170.83.49.66:8083/FUTURAHD/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://170.83.49.66:8083/FUTURAHD/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
   }
 ]
