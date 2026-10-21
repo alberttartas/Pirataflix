@@ -3,7 +3,7 @@
     {
       "id": "godzilla",
       "title": "Godzilla",
-      "poster": "https://image.tmdb.org/t/p/w500/9dyFXQwmFHI1gMn2JEczgKD1hwO.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/ebVZ8n64rtHsSItTei4EgTKzPVu.jpg",
       "episodes": [
         {
           "title": "Godzilla 2014",
@@ -14,62 +14,62 @@
       "type": "movie",
       "local_poster": "/Pirataflix/assets/Capas/default.jpg",
       "posters": [
-        "https://image.tmdb.org/t/p/w500/tphkjmQq8WebuVwNXelmjLUXuPJ.jpg",
-        "https://image.tmdb.org/t/p/w500/z0CpCYiaUikJrcftPnb0jYCYmoo.jpg",
-        "https://image.tmdb.org/t/p/w500/9dyFXQwmFHI1gMn2JEczgKD1hwO.jpg",
-        "https://image.tmdb.org/t/p/w500/9uybkXhMyH1QqGvoMvnLKqgu9go.jpg",
-        "https://image.tmdb.org/t/p/w500/lGzgwbA3XxE6S249aApHLlWufei.jpg",
-        "https://image.tmdb.org/t/p/w500/jVlWSeqbEQbKWxc9PzK7fUADdNO.jpg"
+        "https://image.tmdb.org/t/p/w500/ebVZ8n64rtHsSItTei4EgTKzPVu.jpg",
+        "https://image.tmdb.org/t/p/w500/hSmIJluOJmTWvJs4d7kHRxjc8s8.jpg",
+        "https://image.tmdb.org/t/p/w500/dQ1VgCHcXSYiIt21pM5yf9stKir.jpg",
+        "https://image.tmdb.org/t/p/w500/s59EYn6n2Ay79grWvyaumihIaLo.jpg",
+        "https://image.tmdb.org/t/p/w500/jBXzAD2Krv3OmiH0757WiPe75fs.jpg",
+        "https://image.tmdb.org/t/p/w500/e8gIGHtOPlMbdzMhCUnpOud1CPv.jpg",
+        "https://image.tmdb.org/t/p/w500/4wmJNb6GFXsK67gCdHG1ItwJmkU.jpg"
       ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/6CLNOzMXO9bvapDD8gsdwkJU4wN.jpg",
-      "overview": "Joe Brody criou o filho sozinho após a morte da esposa em um acidente na usina nuclear em que ambos trabalhavam, no Japão. Ele nunca aceitou a catástrofe e quinze anos depois continua remoendo o acontecido, tentando encontrar alguma explicação. Ford Brody, agora adulto, é soldado do exército americano e precisa lutar desesperadamente para salvar a população mundial e em especial sua família do gigantesco, inabalável e incrivelmente assustador monstro Godzilla.",
-      "year": "2014",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/oqrYIDH4tvfEzPe1yqT4jzmAWHQ.jpg",
+      "overview": "A guerra reduziu o Japão a zero, e o Godzilla mergulhou-o no negativo. Passaram-se dois anos desde então, e o país tem enfrentado lutas agonizantes para alcançar a recuperação e, finalmente, voltar à vida normal. No momento em que a humanidade conseguiu se agarrar a uma paz conquistada com dificuldade, surge uma nova ameaça, esmagando a esperança num instante.",
+      "year": "2026",
       "genres": [
-        "Ação",
-        "Drama",
-        "Ficção Científica"
+        "Ficção Científica",
+        "Terror",
+        "Ação"
       ],
-      "rating": 6.4,
       "cast": [
         {
-          "name": "Aaron Taylor-Johnson",
-          "character": "Ford Brody",
-          "profile": "https://image.tmdb.org/t/p/w185/pFtHhih2XEaFaD3qOFyQW6q83br.jpg"
+          "name": "Ryunosuke Kamiki",
+          "character": "Koichi Shikishima",
+          "profile": "https://image.tmdb.org/t/p/w185/ut7ewXjdgUmgkhJ1EtbOo9tbc7s.jpg"
         },
         {
-          "name": "Elizabeth Olsen",
-          "character": "Elle Brody",
-          "profile": "https://image.tmdb.org/t/p/w185/vXz0E5lQKZS1RnlmcHSGbdR0CzG.jpg"
+          "name": "Minami Hamabe",
+          "character": "Noriko Oishi",
+          "profile": "https://image.tmdb.org/t/p/w185/eQN8N2chINckvQDiNqzDXI0v9vN.jpg"
         },
         {
-          "name": "Juliette Binoche",
-          "character": "Sandra Brody",
-          "profile": "https://image.tmdb.org/t/p/w185/htdZZIroEyJaeHQAUTqokNfkPgl.jpg"
+          "name": "Yuki Yamada",
+          "character": "Shiro Mizushima",
+          "profile": "https://image.tmdb.org/t/p/w185/1oRe8UYddBYzyqAjlSwMTIFgg4K.jpg"
         },
         {
-          "name": "Bryan Cranston",
-          "character": "Joe Brody",
-          "profile": "https://image.tmdb.org/t/p/w185/7Jahy5LZX2Fo8fGJltMreAI49hC.jpg"
+          "name": "Kuranosuke Sasaki",
+          "character": "Seiji Akitsu",
+          "profile": "https://image.tmdb.org/t/p/w185/lPDKfLKIKDCBdqig3uhYnPjwY5h.jpg"
         },
         {
-          "name": "Ken Watanabe",
-          "character": "Dr. Ishiro Serizawa",
-          "profile": "https://image.tmdb.org/t/p/w185/psAXOYp9SBOXvg6AXzARDedNQ9P.jpg"
+          "name": "國村隼",
+          "character": "",
+          "profile": "https://image.tmdb.org/t/p/w185/zC0GbuXQGPur7i8AkdPUWedmDKz.jpg"
         },
         {
-          "name": "Sally Hawkins",
-          "character": "Dr. Vivienne Graham",
-          "profile": "https://image.tmdb.org/t/p/w185/1dtDq82dM2YQ17lBL4ZKPJo5LKw.jpg"
+          "name": "Miou Tanaka",
+          "character": "Captain Tatsuo Hotta",
+          "profile": "https://image.tmdb.org/t/p/w185/4dXKZqcF1K6n6yVAGVVRlsc1RU0.jpg"
         },
         {
-          "name": "Al Sapienza",
-          "character": "Huddleston",
-          "profile": "https://image.tmdb.org/t/p/w185/tqgr67aRg1OuuRhQFd8I3JduSRD.jpg"
+          "name": "Sakura Ando",
+          "character": "Sumiko Ota",
+          "profile": "https://image.tmdb.org/t/p/w185/k2R2ryEFEuUe2f3Dsd5yH8aRdqV.jpg"
         },
         {
-          "name": "David Strathairn",
-          "character": "Admiral William Stenz",
-          "profile": "https://image.tmdb.org/t/p/w185/w5YM2cGefPnkoyIXCi2UrCQW53r.jpg"
+          "name": "長澤まさみ",
+          "character": "Aoyama",
+          "profile": "https://image.tmdb.org/t/p/w185/yvHhfDOral1DeyBRSzpxsoHz60t.jpg"
         }
       ]
     },
@@ -1750,11 +1750,11 @@
       "posters": [
         "https://image.tmdb.org/t/p/w500/x0nvYzQpyJc5pdT9lMnkMuYAg0O.jpg",
         "https://image.tmdb.org/t/p/w500/bjiS5ipwxb9JFy3XRRN4OAilSeX.jpg",
+        "https://image.tmdb.org/t/p/w500/tF1CrnAUIlDhFWjXpzb0rhQ9pLb.jpg",
         "https://image.tmdb.org/t/p/w500/ghF1JYv7P5BgWHYfq9dqhqqNfz8.jpg",
-        "https://image.tmdb.org/t/p/w500/dswjf9LMu2DAffcvTBzqYK3pu10.jpg",
         "https://image.tmdb.org/t/p/w500/yxOxOBxspl3NgC676W62G02g1cR.jpg",
-        "https://image.tmdb.org/t/p/w500/lH6LQcUhkVOK6ekvXzthQAogUnR.jpg",
-        "https://image.tmdb.org/t/p/w500/23ReR54BPzRRhsAi243VaHn6wqk.jpg"
+        "https://image.tmdb.org/t/p/w500/dswjf9LMu2DAffcvTBzqYK3pu10.jpg",
+        "https://image.tmdb.org/t/p/w500/lH6LQcUhkVOK6ekvXzthQAogUnR.jpg"
       ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/r08LxMJCbf1SiJIWeyH9aJmdqwC.jpg",
       "overview": "É um novo dia para Peter Parker. Combatendo o crime em tempo integral como Homem-Aranha em um mundo que não se lembra mais dele e lidando com a pressão de ver seus antigos amigos seguirem em frente sem sua presença, Peter passa por uma mudança que talvez nem ele tenha o poder de controlar. Mas essa transformação também pode ser a única coisa capaz de deter uma surpreendente nova ameaça à cidade e às pessoas que ele ama: um poderoso vilão que ninguém sequer consegue enxergar.",
@@ -21405,11 +21405,10 @@
               "url": "https://img.vdkix.com:9001/?3320261020",
               "episode": 178,
               "air_date": "2026-10-20",
-              "overview": "",
+              "overview": "Jendal promete se vingar de Alika. Binta orienta Pascoal a capturar Dumi e Kênia antes que Jendal chegue a Batanga. Zenóbio diz a Januário que Tonho pode ser dono de uma grande fortuna. Severino revela a Mirinho sobre a riqueza das terras de Tonho. Rosa comenta com Nilo sua desconfiança sobre Severino. Mirinho abre uma conta no banco em nome de Virgínia, e Manoel suspeita.",
               "still": "",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-10-20T21:00:00"
+              "locked": false
             },
             {
               "title": "Capítulo 179 - 21/10/2026",
@@ -23657,11 +23656,10 @@
           "url": "https://img.vdkix.com:9001/?3320261020",
           "episode": 178,
           "air_date": "2026-10-20",
-          "overview": "",
+          "overview": "Jendal promete se vingar de Alika. Binta orienta Pascoal a capturar Dumi e Kênia antes que Jendal chegue a Batanga. Zenóbio diz a Januário que Tonho pode ser dono de uma grande fortuna. Severino revela a Mirinho sobre a riqueza das terras de Tonho. Rosa comenta com Nilo sua desconfiança sobre Severino. Mirinho abre uma conta no banco em nome de Virgínia, e Manoel suspeita.",
           "still": "",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-10-20T21:00:00"
+          "locked": false
         },
         {
           "title": "Capítulo 179 - 21/10/2026",
@@ -88892,7 +88890,7 @@
       "cast": [
         {
           "name": "Tom Kenny",
-          "character": "SpongeBob SquarePants / Gary the Snail (voice)",
+          "character": "SpongeBob SquarePants / Gary the Snail / French Narrator (voice) / Patchy The Pirate",
           "profile": "https://image.tmdb.org/t/p/w185/kftXtExrcoTTjyeYmSXJ0Ogr3R7.jpg"
         },
         {
