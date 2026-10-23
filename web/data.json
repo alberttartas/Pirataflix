@@ -440,11 +440,11 @@
         "https://image.tmdb.org/t/p/w500/2Tj4AVTeqXb2Q0jAu8zVlOdpGAT.jpg",
         "https://image.tmdb.org/t/p/w500/oikBFaTAX1TK1petJOAEfPy538X.jpg",
         "https://image.tmdb.org/t/p/w500/aqEPRht1pZR653rmU7eHyk8wSNP.jpg",
-        "https://image.tmdb.org/t/p/w500/hkPxuAMEqIqo1HCtIi4sqx0GRuP.jpg",
+        "https://image.tmdb.org/t/p/w500/3SifFCwwFzXdU1Ew0nA4Z92Bs15.jpg",
         "https://image.tmdb.org/t/p/w500/fYXqpgPmHMphSF2W30GbTeJVIa5.jpg",
-        "https://image.tmdb.org/t/p/w500/3SifFCwwFzXdU1Ew0nA4Z92Bs15.jpg"
+        "https://image.tmdb.org/t/p/w500/hkPxuAMEqIqo1HCtIi4sqx0GRuP.jpg"
       ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/b9q9VmbXDvJmTziRqkwdEmFdwhr.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/hBwfWpZMnto1w2YT9NgRj6WJi6I.jpg",
       "overview": "Após um misterioso evento cósmico abalar o bairro Oak Street e o transportar dos subúrbios para um lugar desconhecido, a família Platt descobre que sua sobrevivência vai depender da união entre todos para enfrentar um ambiente agora irreconhecível.",
       "year": "2026",
       "genres": [
@@ -26441,11 +26441,10 @@
               "url": "https://img.vdkix.com:9001/?3320261022",
               "episode": 180,
               "air_date": "2026-10-22",
-              "overview": "",
-              "still": "",
+              "overview": "Severino furta as promissórias da casa de Caetana, e Vitalino o vê. Dona Menina repreende Januário por esconder seu amor por Ana Maria. Caetana estranha ao encontrar sua casa revirada. Dumi alerta Menemi e as outras mulheres do perigo que Alika corre nas mãos de Jendal. Tonho, Omar e Niara tentam manter as esperanças de derrotar Jendal. Severino entrega as promissórias para Mirinho.",
+              "still": "https://image.tmdb.org/t/p/w400/2ikzLdzvmsxDhrn5qc8HcWUxdlj.jpg",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-10-22T21:00:00"
+              "locked": false
             },
             {
               "title": "Capítulo 181 - 23/10/2026",
@@ -28691,11 +28690,10 @@
           "url": "https://img.vdkix.com:9001/?3320261022",
           "episode": 180,
           "air_date": "2026-10-22",
-          "overview": "",
-          "still": "",
+          "overview": "Severino furta as promissórias da casa de Caetana, e Vitalino o vê. Dona Menina repreende Januário por esconder seu amor por Ana Maria. Caetana estranha ao encontrar sua casa revirada. Dumi alerta Menemi e as outras mulheres do perigo que Alika corre nas mãos de Jendal. Tonho, Omar e Niara tentam manter as esperanças de derrotar Jendal. Severino entrega as promissórias para Mirinho.",
+          "still": "https://image.tmdb.org/t/p/w400/2ikzLdzvmsxDhrn5qc8HcWUxdlj.jpg",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-10-22T21:00:00"
+          "locked": false
         },
         {
           "title": "Capítulo 181 - 23/10/2026",
@@ -114320,6 +114318,21 @@
       "episodes": [
         {
           "url": "http://170.83.49.66:8083/FUTURAHD/index.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "CazeTV.br@SD",
+      "type": "tv",
+      "title": "CazeTV",
+      "tvg_id": "CazeTV.br@SD",
+      "tvg_logo": "https://upload.wikimedia.org/wikipedia/en/thumb/6/64/Caz%C3%A9TV_logo.svg/1280px-Caz%C3%A9TV_logo.svg.png",
+      "group": "⚽ Esportes",
+      "url": "http://138.204.86.4:8080/CAZE_TV/playlist.m3u8",
+      "episodes": [
+        {
+          "url": "http://138.204.86.4:8080/CAZE_TV/playlist.m3u8",
           "title": "AO VIVO"
         }
       ]

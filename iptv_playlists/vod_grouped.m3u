@@ -28443,3 +28443,6 @@ http://45.162.64.114/CARTOON_NETWORK/index.m3u8
 #EXTINF:-1 group-title="📚 Educação" tvg-id="FUTURA.BR@SD" tvg-logo="https://i.ibb.co/Pz6Nqk7w/logo-futura-vazado.png",Futura (720p)
 http://170.83.49.66:8083/FUTURAHD/index.m3u8
 
+#EXTINF:-1 group-title="⚽ Esportes" tvg-id="CAZETV.BR@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/6/64/Caz%C3%A9TV_logo.svg/1280px-Caz%C3%A9TV_logo.svg.png",CazeTV
+http://138.204.86.4:8080/CAZE_TV/playlist.m3u8
+

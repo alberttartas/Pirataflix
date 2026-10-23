@@ -23280,5 +23280,20 @@
         "title": "AO VIVO"
       }
     ]
+  },
+  {
+    "id": "CazeTV.br@SD",
+    "type": "tv",
+    "title": "CazeTV",
+    "tvg_id": "CazeTV.br@SD",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/en/thumb/6/64/Caz%C3%A9TV_logo.svg/1280px-Caz%C3%A9TV_logo.svg.png",
+    "group": "⚽ Esportes",
+    "url": "http://138.204.86.4:8080/CAZE_TV/playlist.m3u8",
+    "episodes": [
+      {
+        "url": "http://138.204.86.4:8080/CAZE_TV/playlist.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
   }
 ]
