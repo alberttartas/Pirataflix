@@ -444,7 +444,7 @@
         "https://image.tmdb.org/t/p/w500/fYXqpgPmHMphSF2W30GbTeJVIa5.jpg",
         "https://image.tmdb.org/t/p/w500/hkPxuAMEqIqo1HCtIi4sqx0GRuP.jpg"
       ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/hBwfWpZMnto1w2YT9NgRj6WJi6I.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/b9q9VmbXDvJmTziRqkwdEmFdwhr.jpg",
       "overview": "Após um misterioso evento cósmico abalar o bairro Oak Street e o transportar dos subúrbios para um lugar desconhecido, a família Platt descobre que sua sobrevivência vai depender da união entre todos para enfrentar um ambiente agora irreconhecível.",
       "year": "2026",
       "genres": [
@@ -6274,7 +6274,7 @@
       "genres": [
         "Documentário"
       ],
-      "rating": 4.6,
+      "rating": 4.7,
       "cast": [
         {
           "name": "Michael Jackson",
@@ -24287,7 +24287,8 @@
         "https://image.tmdb.org/t/p/w500/7vd7jaZGLBD8rKKLDufctKal84A.jpg",
         "https://image.tmdb.org/t/p/w500/xon9xbgCFOaqORqQ7g00ZnnOvPL.jpg",
         "https://image.tmdb.org/t/p/w500/b3jNa6UeL1oZJpqERuBeAZToI1R.jpg",
-        "https://image.tmdb.org/t/p/w500/hhIoPtOFaA94i4VBftWgFIawqQb.jpg"
+        "https://image.tmdb.org/t/p/w500/hhIoPtOFaA94i4VBftWgFIawqQb.jpg",
+        "https://image.tmdb.org/t/p/w500/jz3ZDhX0XRZogqDUt2i8I5mY9jr.jpg"
       ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/bEKRyT7WN5TjFKv0JTWI2cyNlak.jpg",
       "overview": "Entre lendas e mistérios, um homem sem posses e sozinho no mundo finca seu destino aos pés de um jequitibá. Tendo a natureza como testemunha ele renasce e estabelece um pacto que o acompanhará ao longo de toda a sua trajetória.",
@@ -26464,8 +26465,7 @@
               "overview": "",
               "still": "",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-10-24T21:00:00"
+              "locked": false
             },
             {
               "title": "Capítulo 183 - 26/10/2026",
@@ -28712,8 +28712,7 @@
           "overview": "",
           "still": "",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-10-24T21:00:00"
+          "locked": false
         },
         {
           "title": "Capítulo 183 - 26/10/2026",
@@ -57238,7 +57237,7 @@
       "backdrop": "https://image.tmdb.org/t/p/w1280/c72O2edMsD5QrbEGijBURiZIxk8.jpg",
       "overview": "Mao, um místico amaldiçoado há 900 anos, conhece Nanoka, uma garota do futuro marcada por uma tragédia. Transportados a um passado sobrenatural, os dois unem forças para enfrentar poderes sombrios e desvendar os mistérios que ligam suas vidas.",
       "year": "2026",
-      "rating": 8.7,
+      "rating": 8.8,
       "cast": [
         {
           "name": "Yuki Kaji",
@@ -76916,9 +76915,9 @@
       "category": "animes",
       "local_poster": "/Pirataflix/assets/Capas/os_simpsons.jpg",
       "posters": [
+        "https://image.tmdb.org/t/p/w500/k5UALlcA0EnviaCUn2wMjOWYiOO.jpg",
         "https://image.tmdb.org/t/p/w500/tf0CUEynk6GfmrlHIQKQ5mfFP5P.jpg",
         "https://image.tmdb.org/t/p/w500/5NW6rUmsJSxtcdL3FgF6vq9Aanr.jpg",
-        "https://image.tmdb.org/t/p/w500/k5UALlcA0EnviaCUn2wMjOWYiOO.jpg",
         "https://image.tmdb.org/t/p/w500/Afkw5tbK1rDJ8HJ12u7ADxhTJXv.jpg",
         "https://image.tmdb.org/t/p/w500/sWcihbznFj7y07zQrcUATRt6GWi.jpg",
         "https://image.tmdb.org/t/p/w500/ARIEA8fMTk8HLy8AyLbKyUjsqC.jpg"
@@ -114331,6 +114330,21 @@
       "episodes": [
         {
           "url": "http://138.204.86.4:8080/CAZE_TV/playlist.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "TVGloboBrasilia.br@SD",
+      "type": "tv",
+      "title": "TV Globo Brasilia (1080p)",
+      "tvg_id": "TVGloboBrasilia.br@SD",
+      "tvg_logo": "",
+      "group": "📺 Geral",
+      "url": "http://79.127.238.228:14173/",
+      "episodes": [
+        {
+          "url": "http://79.127.238.228:14173/",
           "title": "AO VIVO"
         }
       ]

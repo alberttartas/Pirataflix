@@ -23295,5 +23295,20 @@
         "title": "AO VIVO"
       }
     ]
+  },
+  {
+    "id": "TVGloboBrasilia.br@SD",
+    "type": "tv",
+    "title": "TV Globo Brasilia (1080p)",
+    "tvg_id": "TVGloboBrasilia.br@SD",
+    "tvg_logo": "",
+    "group": "📺 Geral",
+    "url": "http://79.127.238.228:14173/",
+    "episodes": [
+      {
+        "url": "http://79.127.238.228:14173/",
+        "title": "AO VIVO"
+      }
+    ]
   }
 ]
