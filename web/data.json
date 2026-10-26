@@ -299,11 +299,11 @@
       "posters": [
         "https://image.tmdb.org/t/p/w500/x0nvYzQpyJc5pdT9lMnkMuYAg0O.jpg",
         "https://image.tmdb.org/t/p/w500/bjiS5ipwxb9JFy3XRRN4OAilSeX.jpg",
+        "https://image.tmdb.org/t/p/w500/1brq8q3u1GmS5Sef2FkNwImrHWT.jpg",
         "https://image.tmdb.org/t/p/w500/tF1CrnAUIlDhFWjXpzb0rhQ9pLb.jpg",
+        "https://image.tmdb.org/t/p/w500/wXYR5bgEg42incUEIpS64iKVlzn.jpg",
         "https://image.tmdb.org/t/p/w500/ghF1JYv7P5BgWHYfq9dqhqqNfz8.jpg",
-        "https://image.tmdb.org/t/p/w500/yxOxOBxspl3NgC676W62G02g1cR.jpg",
-        "https://image.tmdb.org/t/p/w500/dswjf9LMu2DAffcvTBzqYK3pu10.jpg",
-        "https://image.tmdb.org/t/p/w500/lH6LQcUhkVOK6ekvXzthQAogUnR.jpg"
+        "https://image.tmdb.org/t/p/w500/yxOxOBxspl3NgC676W62G02g1cR.jpg"
       ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/r08LxMJCbf1SiJIWeyH9aJmdqwC.jpg",
       "overview": "É um novo dia para Peter Parker. Combatendo o crime em tempo integral como Homem-Aranha em um mundo que não se lembra mais dele e lidando com a pressão de ver seus antigos amigos seguirem em frente sem sua presença, Peter passa por uma mudança que talvez nem ele tenha o poder de controlar. Mas essa transformação também pode ser a única coisa capaz de deter uma surpreendente nova ameaça à cidade e às pessoas que ele ama: um poderoso vilão que ninguém sequer consegue enxergar.",
@@ -437,12 +437,12 @@
       "type": "movie",
       "local_poster": "/Pirataflix/assets/Capas/default.jpg",
       "posters": [
+        "https://image.tmdb.org/t/p/w500/7DmtuAK5gYGlMFA45Oxkl1bEpIC.jpg",
         "https://image.tmdb.org/t/p/w500/2Tj4AVTeqXb2Q0jAu8zVlOdpGAT.jpg",
         "https://image.tmdb.org/t/p/w500/oikBFaTAX1TK1petJOAEfPy538X.jpg",
         "https://image.tmdb.org/t/p/w500/aqEPRht1pZR653rmU7eHyk8wSNP.jpg",
         "https://image.tmdb.org/t/p/w500/3SifFCwwFzXdU1Ew0nA4Z92Bs15.jpg",
-        "https://image.tmdb.org/t/p/w500/fYXqpgPmHMphSF2W30GbTeJVIa5.jpg",
-        "https://image.tmdb.org/t/p/w500/hkPxuAMEqIqo1HCtIi4sqx0GRuP.jpg"
+        "https://image.tmdb.org/t/p/w500/fYXqpgPmHMphSF2W30GbTeJVIa5.jpg"
       ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/b9q9VmbXDvJmTziRqkwdEmFdwhr.jpg",
       "overview": "Após um misterioso evento cósmico abalar o bairro Oak Street e o transportar dos subúrbios para um lugar desconhecido, a família Platt descobre que sua sobrevivência vai depender da união entre todos para enfrentar um ambiente agora irreconhecível.",
@@ -457,7 +457,7 @@
         {
           "name": "Anne Hathaway",
           "character": "Denise Platt",
-          "profile": "https://image.tmdb.org/t/p/w185/s6tflSD20MGz04ZR2R1lZvhmC4Y.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/h1hgb3GaRi7ClMJWP2QYzyn2euE.jpg"
         },
         {
           "name": "Ewan McGregor",
@@ -801,10 +801,10 @@
       "posters": [
         "https://image.tmdb.org/t/p/w500/cMYCDADoLKLbB83g4WnJegaZimC.jpg",
         "https://image.tmdb.org/t/p/w500/7EadOwHmyQgOnlghRiWBygNtnjl.jpg",
+        "https://image.tmdb.org/t/p/w500/l7AK5mYLH8PvXs2j00K0QfDxVva.jpg",
         "https://image.tmdb.org/t/p/w500/pdtzEreKvKAlqa2YEBaGwiA45V8.jpg",
         "https://image.tmdb.org/t/p/w500/kifrm5sCZNMa1GsSAANg040Hay5.jpg",
-        "https://image.tmdb.org/t/p/w500/9RLmX3ATWzDRgXAa3PTrmBt4OU2.jpg",
-        "https://image.tmdb.org/t/p/w500/jHWmNr7m544fJ8eItsfNk8fs2Ed.jpg"
+        "https://image.tmdb.org/t/p/w500/9RLmX3ATWzDRgXAa3PTrmBt4OU2.jpg"
       ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/gl0jzn4BupSbL2qMVeqrjKkF9Js.jpg",
       "overview": "Um príncipe infectado por uma doença sabe que irá morrer, a menos que encontre a cura. Sendo a sua última esperança, segue para o leste e, durante o caminho, encontra animais da floresta lutando contra a sua exploração, liderados pela princesa Mononoke.",
@@ -26462,8 +26462,8 @@
               "url": "https://img.vdkix.com:9001/?3320261024",
               "episode": 182,
               "air_date": "2026-10-24",
-              "overview": "",
-              "still": "",
+              "overview": "Aderbal nega a Ana Maria que Casemiro tenha feito um testamento em seu cartório, a fim de chantagear Mirinho. Severino ameaça Mirinho, e Graça se preocupa. Caetana e Ana Maria deduzem que Sebastião tenha escrito o testamento de Casemiro, e o advogado confirma. Ana Maria, Caetana e Graça obrigam Mirinho a devolver as promissórias das terras de Tonho.",
+              "still": "https://image.tmdb.org/t/p/w400/y0ga88AIDpnHbQ6FHyrsP9GQ739.jpg",
               "guest_stars": [],
               "locked": false
             },
@@ -28709,8 +28709,8 @@
           "url": "https://img.vdkix.com:9001/?3320261024",
           "episode": 182,
           "air_date": "2026-10-24",
-          "overview": "",
-          "still": "",
+          "overview": "Aderbal nega a Ana Maria que Casemiro tenha feito um testamento em seu cartório, a fim de chantagear Mirinho. Severino ameaça Mirinho, e Graça se preocupa. Caetana e Ana Maria deduzem que Sebastião tenha escrito o testamento de Casemiro, e o advogado confirma. Ana Maria, Caetana e Graça obrigam Mirinho a devolver as promissórias das terras de Tonho.",
+          "still": "https://image.tmdb.org/t/p/w400/y0ga88AIDpnHbQ6FHyrsP9GQ739.jpg",
           "guest_stars": [],
           "locked": false
         },
@@ -73475,7 +73475,7 @@
         {
           "name": "Terry Klassen",
           "character": "Cut Man / Ice Man (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/rObLeQYzdVGUZpjcBHYriit4k2F.jpg"
+          "profile": ""
         },
         {
           "name": "Garry Chalk",
@@ -76915,9 +76915,9 @@
       "category": "animes",
       "local_poster": "/Pirataflix/assets/Capas/os_simpsons.jpg",
       "posters": [
-        "https://image.tmdb.org/t/p/w500/k5UALlcA0EnviaCUn2wMjOWYiOO.jpg",
         "https://image.tmdb.org/t/p/w500/tf0CUEynk6GfmrlHIQKQ5mfFP5P.jpg",
         "https://image.tmdb.org/t/p/w500/5NW6rUmsJSxtcdL3FgF6vq9Aanr.jpg",
+        "https://image.tmdb.org/t/p/w500/k5UALlcA0EnviaCUn2wMjOWYiOO.jpg",
         "https://image.tmdb.org/t/p/w500/Afkw5tbK1rDJ8HJ12u7ADxhTJXv.jpg",
         "https://image.tmdb.org/t/p/w500/sWcihbznFj7y07zQrcUATRt6GWi.jpg",
         "https://image.tmdb.org/t/p/w500/ARIEA8fMTk8HLy8AyLbKyUjsqC.jpg"
@@ -76959,7 +76959,7 @@
         {
           "name": "Harry Shearer",
           "character": "Ned Flanders / Mr. Burns / Smithers / Principal Skinner / Lenny Leonard (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/wZpovXxQQqP7kxXPy2yj6QMbM55.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/7PnGZGVKJNDTUv3DkbaMEnCseT0.jpg"
         }
       ]
     },
@@ -86132,7 +86132,7 @@
         "Comédia",
         "Kids"
       ],
-      "rating": 7.7,
+      "rating": 7.6,
       "cast": [
         {
           "name": "Sebastián Llapur",
