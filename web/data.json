@@ -457,7 +457,7 @@
         {
           "name": "Anne Hathaway",
           "character": "Denise Platt",
-          "profile": "https://image.tmdb.org/t/p/w185/s6tflSD20MGz04ZR2R1lZvhmC4Y.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/dUnrbrn2FeqfdpGRArPZeWPsS2g.jpg"
         },
         {
           "name": "Ewan McGregor",
@@ -55622,6 +55622,291 @@
       "category": "animes"
     },
     {
+      "id": "jojo_no_kimyou_na_bouken",
+      "title": "Jojo No Kimyou Na Bouken",
+      "poster": "https://image.tmdb.org/t/p/w500/bzjzvmgjdcYVCADoapq98wv2fFn.jpg",
+      "seasons": [
+        {
+          "season": 1,
+          "episodes": [
+            {
+              "title": "Jojo No Kimyou Na Bouken - Temporada 1 Ep 01",
+              "url": "https://cdn-sv01.maximaimg.online/stream/j/jojo-no-kimyou-na-bouken-dublado/01.mp4/index.m3u8",
+              "episode": 1
+            },
+            {
+              "title": "Jojo No Kimyou Na Bouken - Temporada 1 Ep 02",
+              "url": "https://cdn-sv01.maximaimg.online/stream/j/jojo-no-kimyou-na-bouken-dublado/02.mp4/index.m3u8",
+              "episode": 2
+            },
+            {
+              "title": "Jojo No Kimyou Na Bouken - Temporada 1 Ep 03",
+              "url": "https://cdn-sv01.maximaimg.online/stream/j/jojo-no-kimyou-na-bouken-dublado/03.mp4/index.m3u8",
+              "episode": 3
+            },
+            {
+              "title": "Jojo No Kimyou Na Bouken - Temporada 1 Ep 04",
+              "url": "https://cdn-sv01.maximaimg.online/stream/j/jojo-no-kimyou-na-bouken-dublado/04.mp4/index.m3u8",
+              "episode": 4
+            },
+            {
+              "title": "Jojo No Kimyou Na Bouken - Temporada 1 Ep 05",
+              "url": "https://cdn-sv01.maximaimg.online/stream/j/jojo-no-kimyou-na-bouken-dublado/05.mp4/index.m3u8",
+              "episode": 5
+            },
+            {
+              "title": "Jojo No Kimyou Na Bouken - Temporada 1 Ep 06",
+              "url": "https://cdn-sv01.maximaimg.online/stream/j/jojo-no-kimyou-na-bouken-dublado/06.mp4/index.m3u8",
+              "episode": 6
+            },
+            {
+              "title": "Jojo No Kimyou Na Bouken - Temporada 1 Ep 07",
+              "url": "https://cdn-sv01.maximaimg.online/stream/j/jojo-no-kimyou-na-bouken-dublado/07.mp4/index.m3u8",
+              "episode": 7
+            },
+            {
+              "title": "Jojo No Kimyou Na Bouken - Temporada 1 Ep 08",
+              "url": "https://cdn-sv01.maximaimg.online/stream/j/jojo-no-kimyou-na-bouken-dublado/08.mp4/index.m3u8",
+              "episode": 8
+            },
+            {
+              "title": "Jojo No Kimyou Na Bouken - Temporada 1 Ep 09",
+              "url": "https://cdn-sv01.maximaimg.online/stream/j/jojo-no-kimyou-na-bouken-dublado/09.mp4/index.m3u8",
+              "episode": 9
+            },
+            {
+              "title": "Jojo No Kimyou Na Bouken - Temporada 1 Ep 10",
+              "url": "https://cdn-sv01.maximaimg.online/stream/j/jojo-no-kimyou-na-bouken-dublado/10.mp4/index.m3u8",
+              "episode": 10
+            },
+            {
+              "title": "Jojo No Kimyou Na Bouken - Temporada 1 Ep 11",
+              "url": "https://cdn-sv01.maximaimg.online/stream/j/jojo-no-kimyou-na-bouken-dublado/11.mp4/index.m3u8",
+              "episode": 11
+            },
+            {
+              "title": "Jojo No Kimyou Na Bouken - Temporada 1 Ep 12",
+              "url": "https://cdn-sv01.maximaimg.online/stream/j/jojo-no-kimyou-na-bouken-dublado/12.mp4/index.m3u8",
+              "episode": 12
+            },
+            {
+              "title": "Jojo No Kimyou Na Bouken - Temporada 1 Ep 13",
+              "url": "https://cdn-sv01.maximaimg.online/stream/j/jojo-no-kimyou-na-bouken-dublado/13.mp4/index.m3u8",
+              "episode": 13
+            },
+            {
+              "title": "Jojo No Kimyou Na Bouken - Temporada 1 Ep 14",
+              "url": "https://cdn-sv01.maximaimg.online/stream/j/jojo-no-kimyou-na-bouken-dublado/14.mp4/index.m3u8",
+              "episode": 14
+            },
+            {
+              "title": "Jojo No Kimyou Na Bouken - Temporada 1 Ep 15",
+              "url": "https://cdn-sv01.maximaimg.online/stream/j/jojo-no-kimyou-na-bouken-dublado/15.mp4/index.m3u8",
+              "episode": 15
+            },
+            {
+              "title": "Jojo No Kimyou Na Bouken - Temporada 1 Ep 16",
+              "url": "https://cdn-sv01.maximaimg.online/stream/j/jojo-no-kimyou-na-bouken-dublado/16.mp4/index.m3u8",
+              "episode": 16
+            },
+            {
+              "title": "Jojo No Kimyou Na Bouken - Temporada 1 Ep 17",
+              "url": "https://cdn-sv01.maximaimg.online/stream/j/jojo-no-kimyou-na-bouken-dublado/17.mp4/index.m3u8",
+              "episode": 17
+            },
+            {
+              "title": "Jojo No Kimyou Na Bouken - Temporada 1 Ep 18",
+              "url": "https://cdn-sv01.maximaimg.online/stream/j/jojo-no-kimyou-na-bouken-dublado/18.mp4/index.m3u8",
+              "episode": 18
+            },
+            {
+              "title": "Jojo No Kimyou Na Bouken - Temporada 1 Ep 19",
+              "url": "https://cdn-sv01.maximaimg.online/stream/j/jojo-no-kimyou-na-bouken-dublado/19.mp4/index.m3u8",
+              "episode": 19
+            },
+            {
+              "title": "Jojo No Kimyou Na Bouken - Temporada 1 Ep 20",
+              "url": "https://cdn-sv01.maximaimg.online/stream/j/jojo-no-kimyou-na-bouken-dublado/20.mp4/index.m3u8",
+              "episode": 20
+            },
+            {
+              "title": "Jojo No Kimyou Na Bouken - Temporada 1 Ep 21",
+              "url": "https://cdn-sv01.maximaimg.online/stream/j/jojo-no-kimyou-na-bouken-dublado/21.mp4/index.m3u8",
+              "episode": 21
+            },
+            {
+              "title": "Jojo No Kimyou Na Bouken - Temporada 1 Ep 22",
+              "url": "https://cdn-sv01.maximaimg.online/stream/j/jojo-no-kimyou-na-bouken-dublado/22.mp4/index.m3u8",
+              "episode": 22
+            },
+            {
+              "title": "Jojo No Kimyou Na Bouken - Temporada 1 Ep 23",
+              "url": "https://cdn-sv01.maximaimg.online/stream/j/jojo-no-kimyou-na-bouken-dublado/23.mp4/index.m3u8",
+              "episode": 23
+            },
+            {
+              "title": "Jojo No Kimyou Na Bouken - Temporada 1 Ep 24",
+              "url": "https://cdn-sv01.maximaimg.online/stream/j/jojo-no-kimyou-na-bouken-dublado/24.mp4/index.m3u8",
+              "episode": 24
+            },
+            {
+              "title": "Jojo No Kimyou Na Bouken - Temporada 1 Ep 25",
+              "url": "https://cdn-sv01.maximaimg.online/stream/j/jojo-no-kimyou-na-bouken-dublado/25.mp4/index.m3u8",
+              "episode": 25
+            },
+            {
+              "title": "Jojo No Kimyou Na Bouken - Temporada 1 Ep 26",
+              "url": "https://cdn-sv01.maximaimg.online/stream/j/jojo-no-kimyou-na-bouken-dublado/26.mp4/index.m3u8",
+              "episode": 26
+            }
+          ]
+        }
+      ],
+      "episodes": [
+        {
+          "title": "Jojo No Kimyou Na Bouken - Temporada 1 Ep 01",
+          "url": "https://cdn-sv01.maximaimg.online/stream/j/jojo-no-kimyou-na-bouken-dublado/01.mp4/index.m3u8",
+          "episode": 1
+        },
+        {
+          "title": "Jojo No Kimyou Na Bouken - Temporada 1 Ep 02",
+          "url": "https://cdn-sv01.maximaimg.online/stream/j/jojo-no-kimyou-na-bouken-dublado/02.mp4/index.m3u8",
+          "episode": 2
+        },
+        {
+          "title": "Jojo No Kimyou Na Bouken - Temporada 1 Ep 03",
+          "url": "https://cdn-sv01.maximaimg.online/stream/j/jojo-no-kimyou-na-bouken-dublado/03.mp4/index.m3u8",
+          "episode": 3
+        },
+        {
+          "title": "Jojo No Kimyou Na Bouken - Temporada 1 Ep 04",
+          "url": "https://cdn-sv01.maximaimg.online/stream/j/jojo-no-kimyou-na-bouken-dublado/04.mp4/index.m3u8",
+          "episode": 4
+        },
+        {
+          "title": "Jojo No Kimyou Na Bouken - Temporada 1 Ep 05",
+          "url": "https://cdn-sv01.maximaimg.online/stream/j/jojo-no-kimyou-na-bouken-dublado/05.mp4/index.m3u8",
+          "episode": 5
+        },
+        {
+          "title": "Jojo No Kimyou Na Bouken - Temporada 1 Ep 06",
+          "url": "https://cdn-sv01.maximaimg.online/stream/j/jojo-no-kimyou-na-bouken-dublado/06.mp4/index.m3u8",
+          "episode": 6
+        },
+        {
+          "title": "Jojo No Kimyou Na Bouken - Temporada 1 Ep 07",
+          "url": "https://cdn-sv01.maximaimg.online/stream/j/jojo-no-kimyou-na-bouken-dublado/07.mp4/index.m3u8",
+          "episode": 7
+        },
+        {
+          "title": "Jojo No Kimyou Na Bouken - Temporada 1 Ep 08",
+          "url": "https://cdn-sv01.maximaimg.online/stream/j/jojo-no-kimyou-na-bouken-dublado/08.mp4/index.m3u8",
+          "episode": 8
+        },
+        {
+          "title": "Jojo No Kimyou Na Bouken - Temporada 1 Ep 09",
+          "url": "https://cdn-sv01.maximaimg.online/stream/j/jojo-no-kimyou-na-bouken-dublado/09.mp4/index.m3u8",
+          "episode": 9
+        },
+        {
+          "title": "Jojo No Kimyou Na Bouken - Temporada 1 Ep 10",
+          "url": "https://cdn-sv01.maximaimg.online/stream/j/jojo-no-kimyou-na-bouken-dublado/10.mp4/index.m3u8",
+          "episode": 10
+        },
+        {
+          "title": "Jojo No Kimyou Na Bouken - Temporada 1 Ep 11",
+          "url": "https://cdn-sv01.maximaimg.online/stream/j/jojo-no-kimyou-na-bouken-dublado/11.mp4/index.m3u8",
+          "episode": 11
+        },
+        {
+          "title": "Jojo No Kimyou Na Bouken - Temporada 1 Ep 12",
+          "url": "https://cdn-sv01.maximaimg.online/stream/j/jojo-no-kimyou-na-bouken-dublado/12.mp4/index.m3u8",
+          "episode": 12
+        },
+        {
+          "title": "Jojo No Kimyou Na Bouken - Temporada 1 Ep 13",
+          "url": "https://cdn-sv01.maximaimg.online/stream/j/jojo-no-kimyou-na-bouken-dublado/13.mp4/index.m3u8",
+          "episode": 13
+        },
+        {
+          "title": "Jojo No Kimyou Na Bouken - Temporada 1 Ep 14",
+          "url": "https://cdn-sv01.maximaimg.online/stream/j/jojo-no-kimyou-na-bouken-dublado/14.mp4/index.m3u8",
+          "episode": 14
+        },
+        {
+          "title": "Jojo No Kimyou Na Bouken - Temporada 1 Ep 15",
+          "url": "https://cdn-sv01.maximaimg.online/stream/j/jojo-no-kimyou-na-bouken-dublado/15.mp4/index.m3u8",
+          "episode": 15
+        },
+        {
+          "title": "Jojo No Kimyou Na Bouken - Temporada 1 Ep 16",
+          "url": "https://cdn-sv01.maximaimg.online/stream/j/jojo-no-kimyou-na-bouken-dublado/16.mp4/index.m3u8",
+          "episode": 16
+        },
+        {
+          "title": "Jojo No Kimyou Na Bouken - Temporada 1 Ep 17",
+          "url": "https://cdn-sv01.maximaimg.online/stream/j/jojo-no-kimyou-na-bouken-dublado/17.mp4/index.m3u8",
+          "episode": 17
+        },
+        {
+          "title": "Jojo No Kimyou Na Bouken - Temporada 1 Ep 18",
+          "url": "https://cdn-sv01.maximaimg.online/stream/j/jojo-no-kimyou-na-bouken-dublado/18.mp4/index.m3u8",
+          "episode": 18
+        },
+        {
+          "title": "Jojo No Kimyou Na Bouken - Temporada 1 Ep 19",
+          "url": "https://cdn-sv01.maximaimg.online/stream/j/jojo-no-kimyou-na-bouken-dublado/19.mp4/index.m3u8",
+          "episode": 19
+        },
+        {
+          "title": "Jojo No Kimyou Na Bouken - Temporada 1 Ep 20",
+          "url": "https://cdn-sv01.maximaimg.online/stream/j/jojo-no-kimyou-na-bouken-dublado/20.mp4/index.m3u8",
+          "episode": 20
+        },
+        {
+          "title": "Jojo No Kimyou Na Bouken - Temporada 1 Ep 21",
+          "url": "https://cdn-sv01.maximaimg.online/stream/j/jojo-no-kimyou-na-bouken-dublado/21.mp4/index.m3u8",
+          "episode": 21
+        },
+        {
+          "title": "Jojo No Kimyou Na Bouken - Temporada 1 Ep 22",
+          "url": "https://cdn-sv01.maximaimg.online/stream/j/jojo-no-kimyou-na-bouken-dublado/22.mp4/index.m3u8",
+          "episode": 22
+        },
+        {
+          "title": "Jojo No Kimyou Na Bouken - Temporada 1 Ep 23",
+          "url": "https://cdn-sv01.maximaimg.online/stream/j/jojo-no-kimyou-na-bouken-dublado/23.mp4/index.m3u8",
+          "episode": 23
+        },
+        {
+          "title": "Jojo No Kimyou Na Bouken - Temporada 1 Ep 24",
+          "url": "https://cdn-sv01.maximaimg.online/stream/j/jojo-no-kimyou-na-bouken-dublado/24.mp4/index.m3u8",
+          "episode": 24
+        },
+        {
+          "title": "Jojo No Kimyou Na Bouken - Temporada 1 Ep 25",
+          "url": "https://cdn-sv01.maximaimg.online/stream/j/jojo-no-kimyou-na-bouken-dublado/25.mp4/index.m3u8",
+          "episode": 25
+        },
+        {
+          "title": "Jojo No Kimyou Na Bouken - Temporada 1 Ep 26",
+          "url": "https://cdn-sv01.maximaimg.online/stream/j/jojo-no-kimyou-na-bouken-dublado/26.mp4/index.m3u8",
+          "episode": 26
+        }
+      ],
+      "type": "series",
+      "category": "animes",
+      "local_poster": "/Pirataflix/assets/Capas/default.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/bzjzvmgjdcYVCADoapq98wv2fFn.jpg",
+        "https://image.tmdb.org/t/p/w500/zcGXkYU0seXJVUaMNA3LhKjGKsW.jpg",
+        "https://image.tmdb.org/t/p/w500/mkM5VjWJguYmy0ft1WrJaJScbUz.jpg",
+        "https://image.tmdb.org/t/p/w500/A3g0t18n4jamztcGxxRRalpk6Ou.jpg"
+      ],
+      "backdrop": "https://image.tmdb.org/t/p/w1280/zKzjkDwGkY5v8OGlf2KkYt5fc87.jpg",
+      "year": "2011"
+    },
+    {
       "id": "shuumatsu_no_valkyrie",
       "title": "Shuumatsu No Valkyrie",
       "poster": "https://image.tmdb.org/t/p/w500/m28Ey0LYoeqzx7mdJ25NVUqRueB.jpg",
@@ -71606,7 +71891,7 @@
         "Ação & Aventura",
         "Sci-Fi & Fantasia"
       ],
-      "rating": 9.6,
+      "rating": 9.7,
       "cast": [
         {
           "name": "Masako Nozawa",
