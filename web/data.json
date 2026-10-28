@@ -1862,7 +1862,7 @@
         "https://image.tmdb.org/t/p/w500/x50pCSNnPeYnxHRZk00f2YcvGEB.jpg",
         "https://image.tmdb.org/t/p/w500/9K8MoWTLlyVj3AVPylSowMBUn70.jpg"
       ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/3eUyLEF5M0ky3h6KJsWiWzaakB8.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/hz7TdCrpLLt2Dz7S3PS2HG9rpAO.jpg",
       "overview": "Quando um novo Ghostface surge na pacata cidade onde Sidney Prescott reconstruiu sua vida, seus medos mais sombrios se tornam reais enquanto sua filha se torna o próximo alvo do assassino. Determinada a proteger sua família, Sidney terá que enfrentar os horrores do seu passado para acabar com o massacre de uma vez por todas.",
       "year": "2026",
       "genres": [
@@ -17981,7 +17981,7 @@
         {
           "name": "Mel Maia",
           "character": "Mirna",
-          "profile": "https://image.tmdb.org/t/p/w185/irVmiratr18o0PIbAXSrSVKdut8.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/cvbWK16gNUCCclHneWPpA63zeLZ.jpg"
         },
         {
           "name": "Giullia Buscacio",
@@ -26485,8 +26485,7 @@
               "overview": "",
               "still": "",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-10-27T21:00:00"
+              "locked": false
             },
             {
               "title": "Capítulo 185 - 28/10/2026",
@@ -28731,8 +28730,7 @@
           "overview": "",
           "still": "",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-10-27T21:00:00"
+          "locked": false
         },
         {
           "title": "Capítulo 185 - 28/10/2026",
@@ -114628,6 +114626,21 @@
       "episodes": [
         {
           "url": "http://79.127.238.228:14173/",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "DiscoveryChannelLatinAmerica.us@Brazil",
+      "type": "tv",
+      "title": "Discovery Channel Latin America Brazil (720p)",
+      "tvg_id": "DiscoveryChannelLatinAmerica.us@Brazil",
+      "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/2019_Discovery_logo.svg/960px-2019_Discovery_logo.svg.png",
+      "group": "🎭 Entretenimento",
+      "url": "http://45.162.64.114/DISCOVERY_CHANNEL/index.m3u8",
+      "episodes": [
+        {
+          "url": "http://45.162.64.114/DISCOVERY_CHANNEL/index.m3u8",
           "title": "AO VIVO"
         }
       ]

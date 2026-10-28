@@ -23310,5 +23310,20 @@
         "title": "AO VIVO"
       }
     ]
+  },
+  {
+    "id": "DiscoveryChannelLatinAmerica.us@Brazil",
+    "type": "tv",
+    "title": "Discovery Channel Latin America Brazil (720p)",
+    "tvg_id": "DiscoveryChannelLatinAmerica.us@Brazil",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/2019_Discovery_logo.svg/960px-2019_Discovery_logo.svg.png",
+    "group": "🎭 Entretenimento",
+    "url": "http://45.162.64.114/DISCOVERY_CHANNEL/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://45.162.64.114/DISCOVERY_CHANNEL/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
   }
 ]
