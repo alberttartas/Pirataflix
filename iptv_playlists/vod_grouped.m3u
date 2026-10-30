@@ -27,6 +27,9 @@ https://kairou.space/api/proxy?url=http%3A%2F%2Freidosvods.shop%2Fmovie%2F301136
 #EXTINF:-1 group-title="🎬 Filmes" tvg-id="AKIRA" tvg-logo="https://image.tmdb.org/t/p/w500/tbwwTQ3EqSdotbQ3ZcIl6vKBv7q.jpg",Akira
 https://cdn-s01.mywallpaper-4k-image.net/stream/a/akira-dublado/01.mp4/index.m3u8
 
+#EXTINF:-1 group-title="🎬 Filmes" tvg-id="BORUTO_NARUTO_THE_MOVIE" tvg-logo="https://image.tmdb.org/t/p/w500/dDQKCkJk19ewY6a4PbzMNNcztAi.jpg",Boruto: Naruto The Movie
+https://cdn-sv01.maximaimg.online/stream/n/naruto-shippuden-filmes-dublado/08.mp4/index.m3u8
+
 #EXTINF:-1 group-title="🎬 Filmes" tvg-id="RESIDENT_EVIL_4" tvg-logo="https://image.tmdb.org/t/p/w500/A1aTnlmt0VSfnFXzL3JqHl8l68V.jpg",Resident Evil 4
 https://23rzv4udpdbv8t6.cdn-novflix.com/storageflix/F/resident-evil-4-recomeco.mp4
 
