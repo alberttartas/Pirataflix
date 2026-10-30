@@ -312,9 +312,9 @@
         "https://image.tmdb.org/t/p/w500/4D5k1Cs9hA0REwXN6w5Lxxlhba5.jpg",
         "https://image.tmdb.org/t/p/w500/uwVijuXsIxpkROlGHe8VHKLsIaF.jpg",
         "https://image.tmdb.org/t/p/w500/to5PIWJXXOmatYepPRTLGWENLJf.jpg",
+        "https://image.tmdb.org/t/p/w500/sfQtVlIHljToOwYjhe21KPGzZWK.jpg",
         "https://image.tmdb.org/t/p/w500/gczwK3ebCcuEp0jlFqD0EUXUUyI.jpg",
-        "https://image.tmdb.org/t/p/w500/4qr9cjN9iiC8TF0Uhpp2Qaib72O.jpg",
-        "https://image.tmdb.org/t/p/w500/sfQtVlIHljToOwYjhe21KPGzZWK.jpg"
+        "https://image.tmdb.org/t/p/w500/4qr9cjN9iiC8TF0Uhpp2Qaib72O.jpg"
       ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/qjTqY5coNiz6sVtPng40IzltsoN.jpg",
       "overview": "O trabalho de Buzz, Woody, Jessie e do resto da gangue fica exponencialmente mais difícil quando eles enfrentam uma nova ameaça à diversão: a tecnologia.",
@@ -1454,14 +1454,14 @@
           "profile": "https://image.tmdb.org/t/p/w185/zQzNg6Kiufj2VCltprI6jilNtl3.jpg"
         },
         {
-          "name": "Courteney Cox",
-          "character": "Gale Weathers",
-          "profile": "https://image.tmdb.org/t/p/w185/cSOORhCRPJiwKghozXVXrOBi3Tp.jpg"
-        },
-        {
           "name": "Isabel May",
           "character": "Tatum Evans",
           "profile": "https://image.tmdb.org/t/p/w185/RJ4djIbfvUHXCCgniiAi0ebhED.jpg"
+        },
+        {
+          "name": "Courteney Cox",
+          "character": "Gale Weathers",
+          "profile": "https://image.tmdb.org/t/p/w185/cSOORhCRPJiwKghozXVXrOBi3Tp.jpg"
         },
         {
           "name": "Jasmin Savoy Brown",
@@ -1951,7 +1951,7 @@
         "Ficção Científica",
         "Suspense"
       ],
-      "rating": 6.9,
+      "rating": 7.0,
       "cast": [
         {
           "name": "Matheus Abreu",
@@ -35708,11 +35708,10 @@
               "url": "https://img.vdkix.com:9001/?3320261029",
               "episode": 186,
               "air_date": "2026-10-29",
-              "overview": "",
-              "still": "",
+              "overview": "Jendal sugere poupar a vida de Alika e seu filho, caso a princesa aceite ser sua esposa. Oruka afirma a Chinua que um novo tempo acontecerá em Batanga, e pede que o conselheiro guarde um pacote até o fim da guerra. Sebastião prova a Viriato que se arrependeu de suas tramoias e oferece construir uma casa paroquial com o dinheiro recebido de Jendal. Jendal jura vingança contra Binta.",
+              "still": "https://image.tmdb.org/t/p/w400/5I2Ivf8WyvOZO8ukIK8PecbL6R0.jpg",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-10-29T21:00:00"
+              "locked": false
             },
             {
               "title": "Capítulo 187 - 30/10/2026",
@@ -37952,11 +37951,10 @@
           "url": "https://img.vdkix.com:9001/?3320261029",
           "episode": 186,
           "air_date": "2026-10-29",
-          "overview": "",
-          "still": "",
+          "overview": "Jendal sugere poupar a vida de Alika e seu filho, caso a princesa aceite ser sua esposa. Oruka afirma a Chinua que um novo tempo acontecerá em Batanga, e pede que o conselheiro guarde um pacote até o fim da guerra. Sebastião prova a Viriato que se arrependeu de suas tramoias e oferece construir uma casa paroquial com o dinheiro recebido de Jendal. Jendal jura vingança contra Binta.",
+          "still": "https://image.tmdb.org/t/p/w400/5I2Ivf8WyvOZO8ukIK8PecbL6R0.jpg",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-10-29T21:00:00"
+          "locked": false
         },
         {
           "title": "Capítulo 187 - 30/10/2026",
@@ -55761,7 +55759,7 @@
         "https://image.tmdb.org/t/p/w500/gJI77i79KnRuc9mGPKADPZWAE8O.jpg",
         "https://image.tmdb.org/t/p/w500/uStT6g4khexdKPyaiosp0fj3zEz.jpg"
       ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/v38qp4bySLTXYu3MF8r5GD51FN3.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/2rmK7mnchw9Xr3XdiTFSxTTLXqv.jpg",
       "overview": "Houve um homem que conquistou tudo aquilo que o mundo tinha a oferecer, o lendário Rei dos Piratas, Gold Roger. Capturado e condenado à execução pelo Governo Mundial, suas últimas palavras lançaram legiões aos mares. \"Meu tesouro? Se quiserem, podem pegá-lo. Procurem-no! Ele contém tudo que este mundo pode oferecer!\". Foi a revelação do maior tesouro, o One Piece, cobiçado por homens de todo o mundo, sonhando com fama e riqueza imensuráveis... Assim começou a Grande Era dos Piratas!",
       "year": "1999",
       "rating": 8.8,
@@ -75935,7 +75933,7 @@
         "Ação & Aventura",
         "Sci-Fi & Fantasia"
       ],
-      "rating": 9.1,
+      "rating": 9.0,
       "cast": [
         {
           "name": "Saheli Khan",
@@ -114639,6 +114637,21 @@
       "episodes": [
         {
           "url": "http://45.162.64.114/DISCOVERY_CHANNEL/index.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "1001Noites.br@SD",
+      "type": "tv",
+      "title": "1001 Noites (480p)",
+      "tvg_id": "1001Noites.br@SD",
+      "tvg_logo": "https://i.imgur.com/dWA9y2J.png",
+      "group": "🛍️ Shopping",
+      "url": "https://cpbr.appflux.com.br:2000/hls/1001noites/1001noites.m3u8",
+      "episodes": [
+        {
+          "url": "https://cpbr.appflux.com.br:2000/hls/1001noites/1001noites.m3u8",
           "title": "AO VIVO"
         }
       ]

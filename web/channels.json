@@ -23325,5 +23325,20 @@
         "title": "AO VIVO"
       }
     ]
+  },
+  {
+    "id": "1001Noites.br@SD",
+    "type": "tv",
+    "title": "1001 Noites (480p)",
+    "tvg_id": "1001Noites.br@SD",
+    "tvg_logo": "https://i.imgur.com/dWA9y2J.png",
+    "group": "🛍️ Shopping",
+    "url": "https://cpbr.appflux.com.br:2000/hls/1001noites/1001noites.m3u8",
+    "episodes": [
+      {
+        "url": "https://cpbr.appflux.com.br:2000/hls/1001noites/1001noites.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
   }
 ]
