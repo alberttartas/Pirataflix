@@ -224,7 +224,7 @@
     {
       "id": "godzilla",
       "title": "Godzilla",
-      "poster": "https://image.tmdb.org/t/p/w500/bVrETVeb80fg7KOZF3I0cQUI2no.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/9dyFXQwmFHI1gMn2JEczgKD1hwO.jpg",
       "episodes": [
         {
           "title": "Godzilla 2014",
@@ -235,62 +235,62 @@
       "type": "movie",
       "local_poster": "/Pirataflix/assets/Capas/default.jpg",
       "posters": [
-        "https://image.tmdb.org/t/p/w500/xJVl1I95StraYAwaNbBkVoWE2qA.jpg",
-        "https://image.tmdb.org/t/p/w500/tqQ9Nt5C1Z5PRDPxYXQ4qwy5v5V.jpg",
-        "https://image.tmdb.org/t/p/w500/1wki1OaDA35RarysOPet25a8hVQ.jpg",
-        "https://image.tmdb.org/t/p/w500/bVrETVeb80fg7KOZF3I0cQUI2no.jpg",
-        "https://image.tmdb.org/t/p/w500/rlXKy0pGR0h34xVpcu1XJdTDCdb.jpg",
-        "https://image.tmdb.org/t/p/w500/1lp7tqcrpIokuLn0bDYO2ZxGtnN.jpg"
+        "https://image.tmdb.org/t/p/w500/tphkjmQq8WebuVwNXelmjLUXuPJ.jpg",
+        "https://image.tmdb.org/t/p/w500/z0CpCYiaUikJrcftPnb0jYCYmoo.jpg",
+        "https://image.tmdb.org/t/p/w500/9dyFXQwmFHI1gMn2JEczgKD1hwO.jpg",
+        "https://image.tmdb.org/t/p/w500/9uybkXhMyH1QqGvoMvnLKqgu9go.jpg",
+        "https://image.tmdb.org/t/p/w500/lGzgwbA3XxE6S249aApHLlWufei.jpg",
+        "https://image.tmdb.org/t/p/w500/jVlWSeqbEQbKWxc9PzK7fUADdNO.jpg"
       ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/vjzhl4sQg4GUcZZrV64OQNVdmZe.jpg",
-      "overview": "Uma enorme criatura, produto de uma explosão nuclear, dirige-se à ilha de Manhattan, provocando uma destruição profunda e assombrosa. Um cientista, um repórter de TV e um corretor de seguros francês unem suas forças com o exército dos Estados Unidos para desvendar o mistério que está por trás da impressionante criatura.",
-      "year": "1998",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/6CLNOzMXO9bvapDD8gsdwkJU4wN.jpg",
+      "overview": "Joe Brody criou o filho sozinho após a morte da esposa em um acidente na usina nuclear em que ambos trabalhavam, no Japão. Ele nunca aceitou a catástrofe e quinze anos depois continua remoendo o acontecido, tentando encontrar alguma explicação. Ford Brody, agora adulto, é soldado do exército americano e precisa lutar desesperadamente para salvar a população mundial e em especial sua família do gigantesco, inabalável e incrivelmente assustador monstro Godzilla.",
+      "year": "2014",
       "genres": [
-        "Ficção Científica",
         "Ação",
-        "Suspense"
+        "Drama",
+        "Ficção Científica"
       ],
-      "rating": 5.7,
+      "rating": 6.4,
       "cast": [
         {
-          "name": "Matthew Broderick",
-          "character": "Dr. Niko Tatopoulos",
-          "profile": "https://image.tmdb.org/t/p/w185/papqFgpyroZJEqd7WvuNGN8ti2k.jpg"
+          "name": "Aaron Taylor-Johnson",
+          "character": "Ford Brody",
+          "profile": "https://image.tmdb.org/t/p/w185/pFtHhih2XEaFaD3qOFyQW6q83br.jpg"
         },
         {
-          "name": "Jean Reno",
-          "character": "Philippe Roaché",
-          "profile": "https://image.tmdb.org/t/p/w185/mw0EZJYz3kiFq9fNxsML773gotF.jpg"
+          "name": "Elizabeth Olsen",
+          "character": "Elle Brody",
+          "profile": "https://image.tmdb.org/t/p/w185/vXz0E5lQKZS1RnlmcHSGbdR0CzG.jpg"
         },
         {
-          "name": "Maria Pitillo",
-          "character": "Audrey Timmonds",
-          "profile": "https://image.tmdb.org/t/p/w185/e2RqURksoCGa9fBqqMtOuY7pDk5.jpg"
+          "name": "Juliette Binoche",
+          "character": "Sandra Brody",
+          "profile": "https://image.tmdb.org/t/p/w185/htdZZIroEyJaeHQAUTqokNfkPgl.jpg"
         },
         {
-          "name": "Hank Azaria",
-          "character": "Victor 'Animal' Palotti",
-          "profile": "https://image.tmdb.org/t/p/w185/yFDw4b0jucuFWNnGcBPfpYUtn16.jpg"
+          "name": "Bryan Cranston",
+          "character": "Joe Brody",
+          "profile": "https://image.tmdb.org/t/p/w185/7Jahy5LZX2Fo8fGJltMreAI49hC.jpg"
         },
         {
-          "name": "Kevin Dunn",
-          "character": "Colonel Hicks",
-          "profile": "https://image.tmdb.org/t/p/w185/7dqLQjMNCQnuxQJQwQ5Ozz16LBq.jpg"
+          "name": "Ken Watanabe",
+          "character": "Dr. Ishiro Serizawa",
+          "profile": "https://image.tmdb.org/t/p/w185/psAXOYp9SBOXvg6AXzARDedNQ9P.jpg"
         },
         {
-          "name": "Michael Lerner",
-          "character": "Mayor Ebert",
-          "profile": "https://image.tmdb.org/t/p/w185/1jRm6TRS5atQrA1VQSef7GoL13g.jpg"
+          "name": "Sally Hawkins",
+          "character": "Dr. Vivienne Graham",
+          "profile": "https://image.tmdb.org/t/p/w185/1dtDq82dM2YQ17lBL4ZKPJo5LKw.jpg"
         },
         {
-          "name": "Harry Shearer",
-          "character": "Charles Caiman",
-          "profile": "https://image.tmdb.org/t/p/w185/7PnGZGVKJNDTUv3DkbaMEnCseT0.jpg"
+          "name": "Al Sapienza",
+          "character": "Huddleston",
+          "profile": "https://image.tmdb.org/t/p/w185/tqgr67aRg1OuuRhQFd8I3JduSRD.jpg"
         },
         {
-          "name": "Arabella Field",
-          "character": "Lucy Palotti",
-          "profile": "https://image.tmdb.org/t/p/w185/mKWXvd31RH0MNZqIiXBBHPyrtkF.jpg"
+          "name": "David Strathairn",
+          "character": "Admiral William Stenz",
+          "profile": "https://image.tmdb.org/t/p/w185/w5YM2cGefPnkoyIXCi2UrCQW53r.jpg"
         }
       ]
     },
@@ -841,7 +841,7 @@
         {
           "name": "Millie Bobby Brown",
           "character": "Madison Russell",
-          "profile": "https://image.tmdb.org/t/p/w185/8qasWpPYwiBgPw5Sn54YzN7q5uI.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/k9KGzGDVhXKfOGpoN62MNuXL28q.jpg"
         },
         {
           "name": "Ken Watanabe",
@@ -63797,6 +63797,162 @@
           "name": "Koichi Yamadera",
           "character": "Beerus (voice)",
           "profile": "https://image.tmdb.org/t/p/w185/biov5jENp2XYfehkcdnRvi796Wi.jpg"
+        }
+      ]
+    },
+    {
+      "id": "cyberpunk_edgerunners",
+      "title": "Cyberpunk: Edgerunners",
+      "poster": "https://image.tmdb.org/t/p/w500/nWvAY8yHE873adMws83XqBPf7W2.jpg",
+      "seasons": [
+        {
+          "season": 1,
+          "episodes": [
+            {
+              "title": "Cyberpunk Edgerunners (Dublado) - Temporada 1 Ep 01",
+              "url": "https://cdn-sv01.maximaimg.online/stream/c/cyberpunk-edgerunners-dublado/01.mp4/index.m3u8",
+              "episode": 1
+            },
+            {
+              "title": "Cyberpunk Edgerunners (Dublado) - Temporada 1 Ep 02",
+              "url": "https://cdn-sv01.maximaimg.online/stream/c/cyberpunk-edgerunners-dublado/02.mp4/index.m3u8",
+              "episode": 2
+            },
+            {
+              "title": "Cyberpunk Edgerunners (Dublado) - Temporada 1 Ep 03",
+              "url": "https://cdn-sv01.maximaimg.online/stream/c/cyberpunk-edgerunners-dublado/03.mp4/index.m3u8",
+              "episode": 3
+            },
+            {
+              "title": "Cyberpunk Edgerunners (Dublado) - Temporada 1 Ep 04",
+              "url": "https://cdn-sv01.maximaimg.online/stream/c/cyberpunk-edgerunners-dublado/04.mp4/index.m3u8",
+              "episode": 4
+            },
+            {
+              "title": "Cyberpunk Edgerunners (Dublado) - Temporada 1 Ep 05",
+              "url": "https://cdn-sv01.maximaimg.online/stream/c/cyberpunk-edgerunners-dublado/05.mp4/index.m3u8",
+              "episode": 5
+            },
+            {
+              "title": "Cyberpunk Edgerunners (Dublado) - Temporada 1 Ep 06",
+              "url": "https://cdn-sv01.maximaimg.online/stream/c/cyberpunk-edgerunners-dublado/06.mp4/index.m3u8",
+              "episode": 6
+            },
+            {
+              "title": "Cyberpunk Edgerunners (Dublado) - Temporada 1 Ep 07",
+              "url": "https://cdn-sv01.maximaimg.online/stream/c/cyberpunk-edgerunners-dublado/07.mp4/index.m3u8",
+              "episode": 7
+            },
+            {
+              "title": "Cyberpunk Edgerunners (Dublado) - Temporada 1 Ep 08",
+              "url": "https://cdn-sv01.maximaimg.online/stream/c/cyberpunk-edgerunners-dublado/08.mp4/index.m3u8",
+              "episode": 8
+            },
+            {
+              "title": "Cyberpunk Edgerunners (Dublado) - Temporada 1 Ep 09",
+              "url": "https://cdn-sv01.maximaimg.online/stream/c/cyberpunk-edgerunners-dublado/09.mp4/index.m3u8",
+              "episode": 9
+            },
+            {
+              "title": "Cyberpunk Edgerunners (Dublado) - Temporada 1 Ep 10",
+              "url": "https://cdn-sv01.maximaimg.online/stream/c/cyberpunk-edgerunners-dublado/10.mp4/index.m3u8",
+              "episode": 10
+            }
+          ]
+        }
+      ],
+      "episodes": [
+        {
+          "title": "Cyberpunk Edgerunners (Dublado) - Temporada 1 Ep 01",
+          "url": "https://cdn-sv01.maximaimg.online/stream/c/cyberpunk-edgerunners-dublado/01.mp4/index.m3u8",
+          "episode": 1
+        },
+        {
+          "title": "Cyberpunk Edgerunners (Dublado) - Temporada 1 Ep 02",
+          "url": "https://cdn-sv01.maximaimg.online/stream/c/cyberpunk-edgerunners-dublado/02.mp4/index.m3u8",
+          "episode": 2
+        },
+        {
+          "title": "Cyberpunk Edgerunners (Dublado) - Temporada 1 Ep 03",
+          "url": "https://cdn-sv01.maximaimg.online/stream/c/cyberpunk-edgerunners-dublado/03.mp4/index.m3u8",
+          "episode": 3
+        },
+        {
+          "title": "Cyberpunk Edgerunners (Dublado) - Temporada 1 Ep 04",
+          "url": "https://cdn-sv01.maximaimg.online/stream/c/cyberpunk-edgerunners-dublado/04.mp4/index.m3u8",
+          "episode": 4
+        },
+        {
+          "title": "Cyberpunk Edgerunners (Dublado) - Temporada 1 Ep 05",
+          "url": "https://cdn-sv01.maximaimg.online/stream/c/cyberpunk-edgerunners-dublado/05.mp4/index.m3u8",
+          "episode": 5
+        },
+        {
+          "title": "Cyberpunk Edgerunners (Dublado) - Temporada 1 Ep 06",
+          "url": "https://cdn-sv01.maximaimg.online/stream/c/cyberpunk-edgerunners-dublado/06.mp4/index.m3u8",
+          "episode": 6
+        },
+        {
+          "title": "Cyberpunk Edgerunners (Dublado) - Temporada 1 Ep 07",
+          "url": "https://cdn-sv01.maximaimg.online/stream/c/cyberpunk-edgerunners-dublado/07.mp4/index.m3u8",
+          "episode": 7
+        },
+        {
+          "title": "Cyberpunk Edgerunners (Dublado) - Temporada 1 Ep 08",
+          "url": "https://cdn-sv01.maximaimg.online/stream/c/cyberpunk-edgerunners-dublado/08.mp4/index.m3u8",
+          "episode": 8
+        },
+        {
+          "title": "Cyberpunk Edgerunners (Dublado) - Temporada 1 Ep 09",
+          "url": "https://cdn-sv01.maximaimg.online/stream/c/cyberpunk-edgerunners-dublado/09.mp4/index.m3u8",
+          "episode": 9
+        },
+        {
+          "title": "Cyberpunk Edgerunners (Dublado) - Temporada 1 Ep 10",
+          "url": "https://cdn-sv01.maximaimg.online/stream/c/cyberpunk-edgerunners-dublado/10.mp4/index.m3u8",
+          "episode": 10
+        }
+      ],
+      "type": "series",
+      "category": "animes",
+      "local_poster": "/Pirataflix/assets/Capas/default.jpg",
+      "posters": [
+        "https://image.tmdb.org/t/p/w500/v3JuB15WybKmxDeT1hWdK3j6eSJ.jpg",
+        "https://image.tmdb.org/t/p/w500/7jSWOc6jWSw5hZ78HB8Hw3pJxuk.jpg",
+        "https://image.tmdb.org/t/p/w500/lqcDVZ8pyk08AVftMBildDR3QUK.jpg",
+        "https://image.tmdb.org/t/p/w500/4CgMd3q8vy4bodVqS2Mp9epORmU.jpg",
+        "https://image.tmdb.org/t/p/w500/nWvAY8yHE873adMws83XqBPf7W2.jpg",
+        "https://image.tmdb.org/t/p/w500/3YsB5Xi2QRanuGTY1tPIr8ZePC7.jpg"
+      ],
+      "backdrop": "https://image.tmdb.org/t/p/w1280/4NmCfWHzytiKM3riCMcbVYBJhlB.jpg",
+      "overview": "Para sobreviver em uma realidade distópica na qual a corrupção e os implantes cibernéticos controlam tudo, um jovem talentoso e impulsivo decide se tornar um mercenário.",
+      "year": "2022",
+      "genres": [
+        "Animação",
+        "Ação & Aventura",
+        "Sci-Fi & Fantasia"
+      ],
+      "rating": 8.5,
+      "cast": [
+        {
+          "name": "Koki Uchiyama",
+          "character": "D (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/sllSm3iZZWVLTBrDZQRtWrZUfEj.jpg"
+        },
+        {
+          "name": "寺澤百花",
+          "character": "Roman (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/lLS7b6k1653tiVwbi6pq9JXzMBW.jpg"
+        },
+        {
+          "name": "Akari Kito",
+          "character": "Talia (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/AoRQOZRC0yINB0WeKnM569rV1wF.jpg"
+        },
+        {
+          "name": "Kentaro Tone",
+          "character": "Weak (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/9IZ9SpSV0P4bJBN8ALll7IYMLG2.jpg"
         }
       ]
     },
