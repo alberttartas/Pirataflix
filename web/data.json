@@ -2083,12 +2083,12 @@
       "type": "movie",
       "local_poster": "/Pirataflix/assets/Capas/default.jpg",
       "posters": [
+        "https://image.tmdb.org/t/p/w500/r9j1FEYGGMkZAM47jFeVf4yTlVV.jpg",
+        "https://image.tmdb.org/t/p/w500/zbGj94aRjrHrvNFKbTKad0eSiGq.jpg",
         "https://image.tmdb.org/t/p/w500/yzNQSLlZb7NAkA4C5uADfNDJ7hm.jpg",
         "https://image.tmdb.org/t/p/w500/r8q9pCcpzclyg2NjOt7DRbHRvG9.jpg",
-        "https://image.tmdb.org/t/p/w500/dLwriEr0m917mqIbPMmwqdNBKqv.jpg",
         "https://image.tmdb.org/t/p/w500/jjM1xrlQqTYOsLcVQlEOM2V84jC.jpg",
-        "https://image.tmdb.org/t/p/w500/rmeGaEq74Fx5fO2coJ7NAqvwThw.jpg",
-        "https://image.tmdb.org/t/p/w500/zbGj94aRjrHrvNFKbTKad0eSiGq.jpg"
+        "https://image.tmdb.org/t/p/w500/4u0ufVg484IAchKM6AswEoseGMQ.jpg"
       ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/5PJP3NaiH9ZJRzrEHLeqSY5rNxb.jpg",
       "overview": "Depois de escapar com grande dificuldade dos horrores das instalações subterrâneas da Hive, Alice é empurrada de volta para a guerra feroz entre os vivos e os não-mortos. Enquanto a cidade está isolada sob quarentena, Alice se junta a uma pequena equipe de soldados de elite comandada por Valentine e Carlos que tem a missão de resgatar a filha desaparecida do Dr. Ashford, o criador do vírus T-mutante. Será uma emocionante corrida contra o tempo, enquanto o grupo enfrenta hordas de zumbis sedentos de sangue, sanguessugas escondidas, cães mutantes e os mais sinistros inimigos.",
@@ -35792,11 +35792,10 @@
               "url": "https://img.vdkix.com:9001/?3320261030",
               "episode": 187,
               "air_date": "2026-10-30",
-              "overview": "",
-              "still": "",
+              "overview": "Alika aceita se casar com Jendal para proteger o filho que espera. Pascoal informa a Jendal que Binta conseguiu fugir de Batanga com ajuda ligada aos ingleses. Jendal confronta Campbell e descobre que o britânico firmou acordos com a ex-rainha. Marta e Dôra se surpreendem ao ver uma foto de Maria Helena ao lado do pianista Murilo em uma revista. Fortunato decide ir atrás da ex-esposa.",
+              "still": "https://image.tmdb.org/t/p/w400/kwSD1FqQPuKIKozPK56MahefgNJ.jpg",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-10-30T21:00:00"
+              "locked": false
             },
             {
               "title": "Capítulo 188 - 31/10/2026",
@@ -38035,11 +38034,10 @@
           "url": "https://img.vdkix.com:9001/?3320261030",
           "episode": 187,
           "air_date": "2026-10-30",
-          "overview": "",
-          "still": "",
+          "overview": "Alika aceita se casar com Jendal para proteger o filho que espera. Pascoal informa a Jendal que Binta conseguiu fugir de Batanga com ajuda ligada aos ingleses. Jendal confronta Campbell e descobre que o britânico firmou acordos com a ex-rainha. Marta e Dôra se surpreendem ao ver uma foto de Maria Helena ao lado do pianista Murilo em uma revista. Fortunato decide ir atrás da ex-esposa.",
+          "still": "https://image.tmdb.org/t/p/w400/kwSD1FqQPuKIKozPK56MahefgNJ.jpg",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-10-30T21:00:00"
+          "locked": false
         },
         {
           "title": "Capítulo 188 - 31/10/2026",
@@ -63993,12 +63991,12 @@
       "posters": [
         "https://image.tmdb.org/t/p/w500/v3JuB15WybKmxDeT1hWdK3j6eSJ.jpg",
         "https://image.tmdb.org/t/p/w500/7jSWOc6jWSw5hZ78HB8Hw3pJxuk.jpg",
+        "https://image.tmdb.org/t/p/w500/7VZtCT047XiKBnWjp7HxD2LQsa.jpg",
         "https://image.tmdb.org/t/p/w500/lqcDVZ8pyk08AVftMBildDR3QUK.jpg",
         "https://image.tmdb.org/t/p/w500/4CgMd3q8vy4bodVqS2Mp9epORmU.jpg",
-        "https://image.tmdb.org/t/p/w500/nWvAY8yHE873adMws83XqBPf7W2.jpg",
-        "https://image.tmdb.org/t/p/w500/3YsB5Xi2QRanuGTY1tPIr8ZePC7.jpg"
+        "https://image.tmdb.org/t/p/w500/nWvAY8yHE873adMws83XqBPf7W2.jpg"
       ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/4NmCfWHzytiKM3riCMcbVYBJhlB.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/w0lU7U89Fm4K8BQD4hJQpQthxu9.jpg",
       "overview": "Para sobreviver em uma realidade distópica na qual a corrupção e os implantes cibernéticos controlam tudo, um jovem talentoso e impulsivo decide se tornar um mercenário.",
       "year": "2022",
       "genres": [
@@ -73825,7 +73823,7 @@
         "Ação & Aventura",
         "Sci-Fi & Fantasia"
       ],
-      "rating": 8.3,
+      "rating": 8.2,
       "cast": [
         {
           "name": "Kensho Ono",
