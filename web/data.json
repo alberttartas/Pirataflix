@@ -35802,11 +35802,10 @@
               "url": "https://img.vdkix.com:9001/?3320261031",
               "episode": 188,
               "air_date": "2026-10-31",
-              "overview": "",
-              "still": "",
+              "overview": "Jendal garante a Menemi que Alika será apresentada ao povo de Batanga como sua nova rainha. Chinua explica a Menemi que Alika aceitou se casar Jendal para salvar a vida de seu filho com Tonho. Niara, José/Zambi, Omar e Tonho assistem ao pronunciamento de Jendal, que apresenta ao povo a rainha Alika. Jendal localiza Niara, Omar e Tonho entre a população, e ordena que Pascoal e Nuru os prendam.",
+              "still": "https://image.tmdb.org/t/p/w400/5REUHHUlxRhS2Vnf6OSdO1ZwfgS.jpg",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-10-31T21:00:00"
+              "locked": false
             },
             {
               "title": "Capítulo 189 - 02/11/2026",
@@ -38044,11 +38043,10 @@
           "url": "https://img.vdkix.com:9001/?3320261031",
           "episode": 188,
           "air_date": "2026-10-31",
-          "overview": "",
-          "still": "",
+          "overview": "Jendal garante a Menemi que Alika será apresentada ao povo de Batanga como sua nova rainha. Chinua explica a Menemi que Alika aceitou se casar Jendal para salvar a vida de seu filho com Tonho. Niara, José/Zambi, Omar e Tonho assistem ao pronunciamento de Jendal, que apresenta ao povo a rainha Alika. Jendal localiza Niara, Omar e Tonho entre a população, e ordena que Pascoal e Nuru os prendam.",
+          "still": "https://image.tmdb.org/t/p/w400/5REUHHUlxRhS2Vnf6OSdO1ZwfgS.jpg",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-10-31T21:00:00"
+          "locked": false
         },
         {
           "title": "Capítulo 189 - 02/11/2026",
@@ -60055,8 +60053,8 @@
       "year": "2023",
       "genres": [
         "Animação",
-        "Drama",
-        "Mistério"
+        "Mistério",
+        "Drama"
       ],
       "rating": 8.7,
       "cast": [
@@ -73823,7 +73821,7 @@
         "Ação & Aventura",
         "Sci-Fi & Fantasia"
       ],
-      "rating": 8.2,
+      "rating": 8.3,
       "cast": [
         {
           "name": "Kensho Ono",
