@@ -113,7 +113,7 @@
         {
           "name": "Jessica Henwick",
           "character": "Aimee",
-          "profile": "https://image.tmdb.org/t/p/w185/hRrEqDIWlov1FvYRmBN2vLaAxyl.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/ayMJbMeg68uJyirPKmcAtHYML8r.jpg"
         },
         {
           "name": "Michael Rooker",
@@ -837,7 +837,7 @@
         {
           "name": "Sadie Sink",
           "character": "Jean Grey",
-          "profile": "https://image.tmdb.org/t/p/w185/92FddzBfK50XOUbtwjqHPraoGHy.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/ivvCh7VtfXflXhv9ie2gtnp4U2i.jpg"
         },
         {
           "name": "Tramell Tillman",
@@ -2333,7 +2333,7 @@
         {
           "name": "Hermila Guedes",
           "character": "Beíta",
-          "profile": "https://image.tmdb.org/t/p/w185/tRhIem0QaMXLNuEjKLPVqoUNVso.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/pM8A9uJVmGvitA1WB92eCKjEYyv.jpg"
         },
         {
           "name": "Davi Malizia",
@@ -31710,7 +31710,7 @@
       "rating": 7.2,
       "cast": [
         {
-          "name": "Nanda Costa",
+          "name": "Nanda Costta",
           "character": "Morena Santos Ribeiro",
           "profile": "https://image.tmdb.org/t/p/w185/xnygyp5PFtqoqU4PBzsnLZoSA1y.jpg"
         },
@@ -31740,7 +31740,7 @@
           "profile": "https://image.tmdb.org/t/p/w185/6VVwyjgprN4Ta5L6dyfWv9YOi7g.jpg"
         },
         {
-          "name": "Cléo Pires",
+          "name": "Cleo Pires",
           "character": "Bianca Faber",
           "profile": "https://image.tmdb.org/t/p/w185/sLWs0GweYO1pawT9Acplgc3HmwE.jpg"
         },
@@ -50602,7 +50602,7 @@
     {
       "id": "os_simpsons",
       "title": "Os Simpsons",
-      "poster": "https://image.tmdb.org/t/p/w500/ARIEA8fMTk8HLy8AyLbKyUjsqC.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/9n4dv0aGRb8Ma15H7jbWsY7Eg0N.jpg",
       "seasons": [
         {
           "season": 1,
@@ -50826,12 +50826,13 @@
       "category": "animes",
       "local_poster": "/Pirataflix/assets/Capas/os_simpsons.jpg",
       "posters": [
+        "https://image.tmdb.org/t/p/w500/9n4dv0aGRb8Ma15H7jbWsY7Eg0N.jpg",
         "https://image.tmdb.org/t/p/w500/tf0CUEynk6GfmrlHIQKQ5mfFP5P.jpg",
+        "https://image.tmdb.org/t/p/w500/1jGPgDDcmg3Xgs3WO8sfYfbnFoA.jpg",
         "https://image.tmdb.org/t/p/w500/5NW6rUmsJSxtcdL3FgF6vq9Aanr.jpg",
         "https://image.tmdb.org/t/p/w500/k5UALlcA0EnviaCUn2wMjOWYiOO.jpg",
         "https://image.tmdb.org/t/p/w500/Afkw5tbK1rDJ8HJ12u7ADxhTJXv.jpg",
-        "https://image.tmdb.org/t/p/w500/sWcihbznFj7y07zQrcUATRt6GWi.jpg",
-        "https://image.tmdb.org/t/p/w500/ARIEA8fMTk8HLy8AyLbKyUjsqC.jpg"
+        "https://image.tmdb.org/t/p/w500/sWcihbznFj7y07zQrcUATRt6GWi.jpg"
       ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/jIArNHIekrCSVgdMbKPAXpPY03Y.jpg",
       "overview": "Uma animação sobre uma típica família dos Estados Unidos. Homer é o pai de família nada saudável ou inteligente, que adora beber cerveja. Marge é a esposa e mãe de família dedicada. Bart é o filho de 10 anos, que não leva a escola a sério e tem orgulho disso. Lisa é a garota de 8 anos, um gênio não apreciado. E Maggie é a bebê que não larga a chupeta.",
@@ -63841,7 +63842,7 @@
         "Ação & Aventura",
         "Sci-Fi & Fantasia"
       ],
-      "rating": 9.7,
+      "rating": 9.6,
       "cast": [
         {
           "name": "Masako Nozawa",
@@ -63994,7 +63995,7 @@
         "https://image.tmdb.org/t/p/w500/4CgMd3q8vy4bodVqS2Mp9epORmU.jpg",
         "https://image.tmdb.org/t/p/w500/nWvAY8yHE873adMws83XqBPf7W2.jpg"
       ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/w0lU7U89Fm4K8BQD4hJQpQthxu9.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/bknKZO7DWVYKeByuJMnGI46PFZg.jpg",
       "overview": "Para sobreviver em uma realidade distópica na qual a corrupção e os implantes cibernéticos controlam tudo, um jovem talentoso e impulsivo decide se tornar um mercenário.",
       "year": "2022",
       "genres": [
@@ -73821,7 +73822,7 @@
         "Ação & Aventura",
         "Sci-Fi & Fantasia"
       ],
-      "rating": 8.3,
+      "rating": 8.2,
       "cast": [
         {
           "name": "Kensho Ono",
@@ -89286,7 +89287,7 @@
         "Comédia",
         "Kids"
       ],
-      "rating": 7.5,
+      "rating": 7.6,
       "cast": [
         {
           "name": "Arnold Stang",
