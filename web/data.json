@@ -2469,7 +2469,7 @@
         {
           "name": "Jaeden Martell",
           "character": "Alton Meyer",
-          "profile": "https://image.tmdb.org/t/p/w185/oR7ZJsOHMNFzM1HeugV4a4qCMSF.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/29lQhfMR4nLUJROKq76x93NXPw1.jpg"
         },
         {
           "name": "Joel Edgerton",
@@ -35812,11 +35812,10 @@
               "url": "https://img.vdkix.com:9001/?3320261102",
               "episode": 189,
               "air_date": "2026-11-02",
-              "overview": "",
-              "still": "",
+              "overview": "Menemi apresenta a estratégia militar para a ofensiva contra Batanga. Jendal pede apoio inglês para invadir Zinga e eliminar os rebeldes. Fuad pede Belmira em namoro a Viriato. Ritinha acredita que todos esqueceram seu aniversário. Os ingleses se recusam a entrar na guerra ao lado de Jendal. Menemi e José/Zambi iniciam o movimento para libertar Alika de Jendal.",
+              "still": "https://image.tmdb.org/t/p/w400/8Tt78NsDVpNOPCHK7OUdMbO5qMl.jpg",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-11-02T21:00:00"
+              "locked": false
             },
             {
               "title": "Capítulo 190 - 03/11/2026",
@@ -38053,11 +38052,10 @@
           "url": "https://img.vdkix.com:9001/?3320261102",
           "episode": 189,
           "air_date": "2026-11-02",
-          "overview": "",
-          "still": "",
+          "overview": "Menemi apresenta a estratégia militar para a ofensiva contra Batanga. Jendal pede apoio inglês para invadir Zinga e eliminar os rebeldes. Fuad pede Belmira em namoro a Viriato. Ritinha acredita que todos esqueceram seu aniversário. Os ingleses se recusam a entrar na guerra ao lado de Jendal. Menemi e José/Zambi iniciam o movimento para libertar Alika de Jendal.",
+          "still": "https://image.tmdb.org/t/p/w400/8Tt78NsDVpNOPCHK7OUdMbO5qMl.jpg",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-11-02T21:00:00"
+          "locked": false
         },
         {
           "title": "Capítulo 190 - 03/11/2026",
@@ -50602,7 +50600,7 @@
     {
       "id": "os_simpsons",
       "title": "Os Simpsons",
-      "poster": "https://image.tmdb.org/t/p/w500/9n4dv0aGRb8Ma15H7jbWsY7Eg0N.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/1jGPgDDcmg3Xgs3WO8sfYfbnFoA.jpg",
       "seasons": [
         {
           "season": 1,
@@ -50826,7 +50824,6 @@
       "category": "animes",
       "local_poster": "/Pirataflix/assets/Capas/os_simpsons.jpg",
       "posters": [
-        "https://image.tmdb.org/t/p/w500/9n4dv0aGRb8Ma15H7jbWsY7Eg0N.jpg",
         "https://image.tmdb.org/t/p/w500/tf0CUEynk6GfmrlHIQKQ5mfFP5P.jpg",
         "https://image.tmdb.org/t/p/w500/1jGPgDDcmg3Xgs3WO8sfYfbnFoA.jpg",
         "https://image.tmdb.org/t/p/w500/5NW6rUmsJSxtcdL3FgF6vq9Aanr.jpg",
@@ -63835,7 +63832,7 @@
         "https://image.tmdb.org/t/p/w500/nmhpTtwTU9TliNgLOnPvz3LemGP.jpg"
       ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/8phLVFEXOe02JgFmH9ldn3j4tXW.jpg",
-      "overview": "Quando Beerus, o Deus da Destruição, desperta em busca de um rival à altura, Goku e seus amigos enfrentam uma batalha épica para impedi-lo de destruir a Terra.",
+      "overview": "Anos após a feroz batalha contra Majin Boo, a Terra recupera uma breve paz. Simultaneamente, Beerus, o Deus da Destruição, desperta de seu longo sono. Cientes de seu poder avassalador para destruir planetas, Sr. Kaioh e Kaiohshin observam seu retorno com grande temor.",
       "year": "2026",
       "genres": [
         "Animação",
@@ -65919,7 +65916,7 @@
         "https://image.tmdb.org/t/p/w500/mJVUZpPR4BdZzLWyP51h8pOU1RO.jpg",
         "https://image.tmdb.org/t/p/w500/dG6H80X9zF3nA7NiOAs3gmxO6mc.jpg"
       ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/qpin8cASXEVtwhzNsprHYFiOAGk.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/j2GvamiUMRpPjmNQSSht0Q7Z7e9.jpg",
       "overview": "Sofrimento, arrependimento, vergonha: os sentimentos negativos dos humanos tornam-se Maldições, causando terríveis acidentes que podem levar até mesmo à morte. E pra piorar, Maldições só podem ser exorcizadas por outras Maldições. Certo dia, para salvar amigos que estavam sendo atacados por Maldições, Yuji Itadori engole o dedo do Ryomen-Sukuna, absorvendo sua Maldição. Ele então decide se matricular no Colégio Técnico de Feitiçaria de Tóquio, uma organização que combate as Maldições... e assim começa a heróica lenda do garoto que tornou-se uma Maldição para exorcizar uma Maldição.",
       "year": "2020",
       "rating": 8.6
@@ -74061,33 +74058,38 @@
       "cast": [
         {
           "name": "Atsumi Tanezaki",
-          "character": "Frieren (voice)",
+          "character": "프리렌 (voice)",
           "profile": "https://image.tmdb.org/t/p/w185/6tM8GU7QvrdUCvR4kxqVUZivtvO.jpg"
         },
         {
           "name": "Kana Ichinose",
-          "character": "Fern (voice)",
+          "character": "페른 (voice)",
           "profile": "https://image.tmdb.org/t/p/w185/hBJx5tpLA2vkXqfkPZosGjW4e8C.jpg"
         },
         {
           "name": "Chiaki Kobayashi",
-          "character": "Stark (voice)",
+          "character": "슈타르크 (voice)",
           "profile": "https://image.tmdb.org/t/p/w185/o0XZFXc50z28ICUpvfZ1QcTL2Yt.jpg"
         },
         {
           "name": "Nobuhiko Okamoto",
-          "character": "Himmel (voice)",
+          "character": "힘멜 (voice)",
           "profile": "https://image.tmdb.org/t/p/w185/7s1K2yQVF5iIWILaOfG7QrMZkXA.jpg"
         },
         {
           "name": "Hiroki Touchi",
-          "character": "Heiter (voice)",
+          "character": "하이터 (voice)",
           "profile": "https://image.tmdb.org/t/p/w185/bU2vogWmnTWiQEwUADWlnBqAPhJ.jpg"
         },
         {
           "name": "Yoji Ueda",
-          "character": "Eisen (voice)",
+          "character": "아이젠 (voice)",
           "profile": "https://image.tmdb.org/t/p/w185/fHvIfE0Q7ab0DFlkNVFcXvTKX9y.jpg"
+        },
+        {
+          "name": "Yuichi Nakamura",
+          "character": "자인 (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/wb8behVKjBHX9XXrEydvNINCYwH.jpg"
         }
       ]
     },
