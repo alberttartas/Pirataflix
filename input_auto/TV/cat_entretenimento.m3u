@@ -3,10 +3,10 @@
 https://stream.ichibansys.com:3230/hybrid/play.m3u8
 
 #EXTINF:-1 tvg-id="AELatinAmerica.us@Brazil" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/A%26E_Network_logo.svg/960px-A%26E_Network_logo.svg.png" group-title="🎭 Entretenimento",A&E Latin America Brazil (720p)
-http://170.83.16.50/AeE/index.m3u8
+http://79.127.238.228:14551
 
 #EXTINF:-1 tvg-id="AdultSwimLatinAmerica.us@Brazil" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Adult_Swim_2003_logo.svg/960px-Adult_Swim_2003_logo.svg.png" group-title="🎭 Entretenimento",Adult Swim Latin America Brazil (720p)
-http://168.197.104.22/ADULT_SWIM/index.m3u8
+http://45.162.64.114/ADULT_SWIM/index.m3u8
 
 #EXTINF:-1 tvg-id="BETPlutoTV.us@BR" tvg-logo="https://images.pluto.tv/channels/5ff768b6a4c8b80008498610/colorLogoPNG_1756804608228.png" group-title="🎭 Entretenimento",BET Pluto TV BR
 https://jmp2.uk/plu-5ff768b6a4c8b80008498610.m3u8

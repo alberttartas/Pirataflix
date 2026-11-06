@@ -28569,3 +28569,21 @@ https://cpbr.appflux.com.br:2000/hls/1001noites/1001noites.m3u8
 #EXTINF:-1 group-title="🎵 Música" tvg-id="MCMTOP.FR@SD" tvg-logo="https://i.imgur.com/EVtWQLd.png",MCM Top (France)
 http://185.228.163.146:8000/play/a00g/index.m3u8
 
+#EXTINF:-1 group-title="🎭 Entretenimento" tvg-id="AELATINAMERICA.US@BRAZIL" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/A%26E_Network_logo.svg/960px-A%26E_Network_logo.svg.png",A&E Latin America Brazil (720p)
+http://79.127.238.228:14551
+
+#EXTINF:-1 group-title="🎭 Entretenimento" tvg-id="ADULTSWIMLATINAMERICA.US@BRAZIL" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Adult_Swim_2003_logo.svg/960px-Adult_Swim_2003_logo.svg.png",Adult Swim Latin America Brazil (720p)
+http://45.162.64.114/ADULT_SWIM/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="GLOBOPLAYNOVELAS.BR@SD" tvg-logo="https://i.ibb.co/m5TBCDL2/Globoplay-Novelas-1.png",Globoplay Novelas (1080p)
+http://79.127.238.228:14455
+
+#EXTINF:-1 group-title="✝️ Religioso" tvg-id="REDEVIDA.BR@SD" tvg-logo="https://i.imgur.com/mP1qfp2.png",Rede Vida (720p)
+http://46.151.196.223:14244
+
+#EXTINF:-1 group-title="🎬 Filmes" tvg-id="TELECINEACTION.BR@SD" tvg-logo="https://i.imgur.com/BHYWG0h.png",Telecine Action (1080p)
+http://46.151.196.223:14326
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="TVGLOBOBRASILIA.BR@SD" tvg-logo="",TV Globo Brasilia (1080p)
+http://79.127.238.228:14173
+

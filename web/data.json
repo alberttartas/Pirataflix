@@ -35842,11 +35842,10 @@
               "url": "https://img.vdkix.com:9001/?3320261105",
               "episode": 192,
               "air_date": "2026-11-05",
-              "overview": "",
-              "still": "",
+              "overview": "Clodomiro avisa a Mirinho que desistiu de comprar o engenho. José desperta, descobre que a bala atingiu sua coluna e se abala ao perceber que não consegue movimentar as pernas. Sebastião é levado preso para Biri-Biri. Mirinho engana Diógenes, retira do cofre o dinheiro que Virgínia ganhou. Salma e Omar se casam em uma cerimônia no armazém dos Curi. Começa a cerimônia de casamento de Alika e Tonho.",
+              "still": "https://image.tmdb.org/t/p/w400/skMu0XrODhErDjLaoSfkXOZAy0n.jpg",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-11-05T21:00:00"
+              "locked": false
             },
             {
               "title": "Capítulo 193 - 06/11/2026",
@@ -38080,11 +38079,10 @@
           "url": "https://img.vdkix.com:9001/?3320261105",
           "episode": 192,
           "air_date": "2026-11-05",
-          "overview": "",
-          "still": "",
+          "overview": "Clodomiro avisa a Mirinho que desistiu de comprar o engenho. José desperta, descobre que a bala atingiu sua coluna e se abala ao perceber que não consegue movimentar as pernas. Sebastião é levado preso para Biri-Biri. Mirinho engana Diógenes, retira do cofre o dinheiro que Virgínia ganhou. Salma e Omar se casam em uma cerimônia no armazém dos Curi. Começa a cerimônia de casamento de Alika e Tonho.",
+          "still": "https://image.tmdb.org/t/p/w400/skMu0XrODhErDjLaoSfkXOZAy0n.jpg",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-11-05T21:00:00"
+          "locked": false
         },
         {
           "title": "Capítulo 193 - 06/11/2026",
@@ -62275,7 +62273,7 @@
         "https://image.tmdb.org/t/p/w500/lDS7WuWrq6i1XC1AaKlf9qvJBVi.jpg",
         "https://image.tmdb.org/t/p/w500/4502U4n9cfgw33v0xTQMZhTDS6p.jpg"
       ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/j9fRIimor0AMFJR9kjZubXcABzZ.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/pfgndj46RLPVJRWkUSCJBgLJ93w.jpg",
       "overview": "Quando um fracassado de 34 anos é atropelado por um ônibus, sua história não acaba. Reencarnado em um novo mundo como criança, Rudy aproveitará cada oportunidade para viver a vida que sempre quis. Com novos amigos, habilidades mágicas e coragem para fazer tudo o que sempre sonhou, ele embarca em uma aventura épica – com toda a sua experiência do passado intacta!",
       "year": "2021",
       "genres": [
@@ -63835,7 +63833,7 @@
         "Ação & Aventura",
         "Sci-Fi & Fantasia"
       ],
-      "rating": 9.7,
+      "rating": 9.6,
       "cast": [
         {
           "name": "Masako Nozawa",
@@ -114891,6 +114889,96 @@
       "episodes": [
         {
           "url": "http://185.228.163.146:8000/play/a00g/index.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "AELatinAmerica.us@Brazil",
+      "type": "tv",
+      "title": "A&E Latin America Brazil (720p)",
+      "tvg_id": "AELatinAmerica.us@Brazil",
+      "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/A%26E_Network_logo.svg/960px-A%26E_Network_logo.svg.png",
+      "group": "🎭 Entretenimento",
+      "url": "http://79.127.238.228:14551",
+      "episodes": [
+        {
+          "url": "http://79.127.238.228:14551",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "AdultSwimLatinAmerica.us@Brazil",
+      "type": "tv",
+      "title": "Adult Swim Latin America Brazil (720p)",
+      "tvg_id": "AdultSwimLatinAmerica.us@Brazil",
+      "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Adult_Swim_2003_logo.svg/960px-Adult_Swim_2003_logo.svg.png",
+      "group": "🎭 Entretenimento",
+      "url": "http://45.162.64.114/ADULT_SWIM/index.m3u8",
+      "episodes": [
+        {
+          "url": "http://45.162.64.114/ADULT_SWIM/index.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "GloboplayNovelas.br@SD",
+      "type": "tv",
+      "title": "Globoplay Novelas (1080p)",
+      "tvg_id": "GloboplayNovelas.br@SD",
+      "tvg_logo": "https://i.ibb.co/m5TBCDL2/Globoplay-Novelas-1.png",
+      "group": "📺 Geral",
+      "url": "http://79.127.238.228:14455",
+      "episodes": [
+        {
+          "url": "http://79.127.238.228:14455",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "RedeVida.br@SD",
+      "type": "tv",
+      "title": "Rede Vida (720p)",
+      "tvg_id": "RedeVida.br@SD",
+      "tvg_logo": "https://i.imgur.com/mP1qfp2.png",
+      "group": "✝️ Religioso",
+      "url": "http://46.151.196.223:14244",
+      "episodes": [
+        {
+          "url": "http://46.151.196.223:14244",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "TelecineAction.br@SD",
+      "type": "tv",
+      "title": "Telecine Action (1080p)",
+      "tvg_id": "TelecineAction.br@SD",
+      "tvg_logo": "https://i.imgur.com/BHYWG0h.png",
+      "group": "🎬 Filmes",
+      "url": "http://46.151.196.223:14326",
+      "episodes": [
+        {
+          "url": "http://46.151.196.223:14326",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "TVGloboBrasilia.br@SD",
+      "type": "tv",
+      "title": "TV Globo Brasilia (1080p)",
+      "tvg_id": "TVGloboBrasilia.br@SD",
+      "tvg_logo": "",
+      "group": "📺 Geral",
+      "url": "http://79.127.238.228:14173",
+      "episodes": [
+        {
+          "url": "http://79.127.238.228:14173",
           "title": "AO VIVO"
         }
       ]

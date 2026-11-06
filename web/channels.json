@@ -23355,5 +23355,95 @@
         "title": "AO VIVO"
       }
     ]
+  },
+  {
+    "id": "AELatinAmerica.us@Brazil",
+    "type": "tv",
+    "title": "A&E Latin America Brazil (720p)",
+    "tvg_id": "AELatinAmerica.us@Brazil",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/A%26E_Network_logo.svg/960px-A%26E_Network_logo.svg.png",
+    "group": "🎭 Entretenimento",
+    "url": "http://79.127.238.228:14551",
+    "episodes": [
+      {
+        "url": "http://79.127.238.228:14551",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "AdultSwimLatinAmerica.us@Brazil",
+    "type": "tv",
+    "title": "Adult Swim Latin America Brazil (720p)",
+    "tvg_id": "AdultSwimLatinAmerica.us@Brazil",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Adult_Swim_2003_logo.svg/960px-Adult_Swim_2003_logo.svg.png",
+    "group": "🎭 Entretenimento",
+    "url": "http://45.162.64.114/ADULT_SWIM/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://45.162.64.114/ADULT_SWIM/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "GloboplayNovelas.br@SD",
+    "type": "tv",
+    "title": "Globoplay Novelas (1080p)",
+    "tvg_id": "GloboplayNovelas.br@SD",
+    "tvg_logo": "https://i.ibb.co/m5TBCDL2/Globoplay-Novelas-1.png",
+    "group": "📺 Geral",
+    "url": "http://79.127.238.228:14455",
+    "episodes": [
+      {
+        "url": "http://79.127.238.228:14455",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "RedeVida.br@SD",
+    "type": "tv",
+    "title": "Rede Vida (720p)",
+    "tvg_id": "RedeVida.br@SD",
+    "tvg_logo": "https://i.imgur.com/mP1qfp2.png",
+    "group": "✝️ Religioso",
+    "url": "http://46.151.196.223:14244",
+    "episodes": [
+      {
+        "url": "http://46.151.196.223:14244",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "TelecineAction.br@SD",
+    "type": "tv",
+    "title": "Telecine Action (1080p)",
+    "tvg_id": "TelecineAction.br@SD",
+    "tvg_logo": "https://i.imgur.com/BHYWG0h.png",
+    "group": "🎬 Filmes",
+    "url": "http://46.151.196.223:14326",
+    "episodes": [
+      {
+        "url": "http://46.151.196.223:14326",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "TVGloboBrasilia.br@SD",
+    "type": "tv",
+    "title": "TV Globo Brasilia (1080p)",
+    "tvg_id": "TVGloboBrasilia.br@SD",
+    "tvg_logo": "",
+    "group": "📺 Geral",
+    "url": "http://79.127.238.228:14173",
+    "episodes": [
+      {
+        "url": "http://79.127.238.228:14173",
+        "title": "AO VIVO"
+      }
+    ]
   }
 ]
