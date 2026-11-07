@@ -819,7 +819,7 @@
         "https://image.tmdb.org/t/p/w500/ghF1JYv7P5BgWHYfq9dqhqqNfz8.jpg",
         "https://image.tmdb.org/t/p/w500/yxOxOBxspl3NgC676W62G02g1cR.jpg"
       ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/dzeCorl61ZdxbzfnciUkrc8JSZj.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/subj7knTn4DeS6KS7qI66EQKe9i.jpg",
       "overview": "É um novo dia para Peter Parker. Combatendo o crime em tempo integral como Homem-Aranha em um mundo que não se lembra mais dele e lidando com a pressão de ver seus antigos amigos seguirem em frente sem sua presença, Peter passa por uma mudança que talvez nem ele tenha o poder de controlar. Mas essa transformação também pode ser a única coisa capaz de deter uma surpreendente nova ameaça à cidade e às pessoas que ele ama: um poderoso vilão que ninguém sequer consegue enxergar.",
       "year": "2026",
       "genres": [
@@ -915,7 +915,7 @@
         {
           "name": "Millie Bobby Brown",
           "character": "Madison Russell",
-          "profile": "https://image.tmdb.org/t/p/w185/k9KGzGDVhXKfOGpoN62MNuXL28q.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/kHO7hdNEVuTnQ0OjjrxP1RcAa0e.jpg"
         },
         {
           "name": "Ken Watanabe",
@@ -35852,11 +35852,10 @@
               "url": "https://img.vdkix.com:9001/?3320261106",
               "episode": 193,
               "air_date": "2026-11-06",
-              "overview": "",
-              "still": "",
+              "overview": "Último Capítulo: Jendal toma uma decisão drástica após fuga. Mirinho fica na mira de um revólver. Família real de Batanga volta a Barro Preto. Luz elétrica chega a Barro Preto. Virgínia reflete sobre escolhas que fez na vida. Tonho celebra vitória do povo. Virgínia ouve verdades de Alika. Família real se despede de Barro Preto.",
+              "still": "https://image.tmdb.org/t/p/w400/i36ryQVKsItm6Cn2eWk7qsLsefZ.jpg",
               "guest_stars": [],
-              "locked": true,
-              "release_iso": "2026-11-06T21:00:00"
+              "locked": false
             }
           ]
         }
@@ -38089,11 +38088,10 @@
           "url": "https://img.vdkix.com:9001/?3320261106",
           "episode": 193,
           "air_date": "2026-11-06",
-          "overview": "",
-          "still": "",
+          "overview": "Último Capítulo: Jendal toma uma decisão drástica após fuga. Mirinho fica na mira de um revólver. Família real de Batanga volta a Barro Preto. Luz elétrica chega a Barro Preto. Virgínia reflete sobre escolhas que fez na vida. Tonho celebra vitória do povo. Virgínia ouve verdades de Alika. Família real se despede de Barro Preto.",
+          "still": "https://image.tmdb.org/t/p/w400/i36ryQVKsItm6Cn2eWk7qsLsefZ.jpg",
           "guest_stars": [],
-          "locked": true,
-          "release_iso": "2026-11-06T21:00:00"
+          "locked": false
         }
       ],
       "type": "series",
@@ -38105,7 +38103,7 @@
         "https://image.tmdb.org/t/p/w500/gOmm9L3i8HZhwYdclLXXU8h7mdH.jpg",
         "https://image.tmdb.org/t/p/w500/b3KiRxktFzck2eS9WjatyYLmLRB.jpg",
         "https://image.tmdb.org/t/p/w500/4Ti3IUaiPSIrIky8eshvkNP1hDb.jpg",
-        "https://image.tmdb.org/t/p/w500/2WkTJKudes9WH49zfIUzXdGIj7m.jpg"
+        "https://image.tmdb.org/t/p/w500/7tyxb5bBLa5RqmjJiWqkLQt8sAo.jpg"
       ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/wJybYZUCFj1xUQOjXLyxfVFNKlb.jpg",
       "overview": "Ambientada nos anos 20, uma princesa africana deposta por uma convulsão política em seu reino foge para o interior de Pernambuco, no Brasil, onde vive um romance proibido com um trabalhador rural.",
@@ -82306,8 +82304,8 @@
         "https://image.tmdb.org/t/p/w500/zDuKxQkG8EemvLdBn43ChdM0MJL.jpg",
         "https://image.tmdb.org/t/p/w500/amvtZgiTty0GHIgD56gpouBWrcy.jpg",
         "https://image.tmdb.org/t/p/w500/rIQdb0hAna692SeEbGnw4EfRcO0.jpg",
-        "https://image.tmdb.org/t/p/w500/oA6lj3R7ctfIW64lEle8rx3XH5d.jpg",
-        "https://image.tmdb.org/t/p/w500/eTTsOyXm49jixiQJ93L97CCvVBk.jpg"
+        "https://image.tmdb.org/t/p/w500/eTTsOyXm49jixiQJ93L97CCvVBk.jpg",
+        "https://image.tmdb.org/t/p/w500/xFUl1CVkOYAqG3zLhLD3Dw1wZM1.jpg"
       ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/f3f5OzzYd8m3zN47DAjKs0sbx00.jpg",
       "overview": "Uma esponja-do-mar chamada Bob Esponja Calça Quadrada mora com seu caracol de estimação na Fenda do Biquíni, no fundo do oceano. Bob trabalha no Siri Cascudo e, nas horas vagas, vive arrumando confusões com seu melhor amigo, a estrela-do-mar Patrick.",
@@ -114979,6 +114977,21 @@
       "episodes": [
         {
           "url": "http://79.127.238.228:14173",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "MCMPop.fr@SD",
+      "type": "tv",
+      "title": "MCM Pop",
+      "tvg_id": "MCMPop.fr@SD",
+      "tvg_logo": "https://i.imgur.com/j31lBL7.png",
+      "group": "🎵 Música",
+      "url": "http://176.65.153.78:8201/play/a070/index.m3u8",
+      "episodes": [
+        {
+          "url": "http://176.65.153.78:8201/play/a070/index.m3u8",
           "title": "AO VIVO"
         }
       ]

@@ -23445,5 +23445,20 @@
         "title": "AO VIVO"
       }
     ]
+  },
+  {
+    "id": "MCMPop.fr@SD",
+    "type": "tv",
+    "title": "MCM Pop",
+    "tvg_id": "MCMPop.fr@SD",
+    "tvg_logo": "https://i.imgur.com/j31lBL7.png",
+    "group": "🎵 Música",
+    "url": "http://176.65.153.78:8201/play/a070/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://176.65.153.78:8201/play/a070/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
   }
 ]
