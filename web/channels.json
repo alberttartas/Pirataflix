@@ -23460,5 +23460,65 @@
         "title": "AO VIVO"
       }
     ]
+  },
+  {
+    "id": "TelecineCult.br@SD",
+    "type": "tv",
+    "title": "like Gecko) Chrome/156.0.0.0 Safari/537.36\" group-title=\"Movies\",Telecine Cult",
+    "tvg_id": "TelecineCult.br@SD",
+    "tvg_logo": "https://i.imgur.com/6GuHXnr.png",
+    "group": "🎬 Filmes",
+    "url": "http://45.185.15.154:9080/stream/64/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://45.185.15.154:9080/stream/64/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "TelecineFun.br@SD",
+    "type": "tv",
+    "title": "like Gecko) Chrome/156.0.0.0 Safari/537.36\" group-title=\"Movies\",Telecine Fun",
+    "tvg_id": "TelecineFun.br@SD",
+    "tvg_logo": "https://i.imgur.com/MO2Ynki.png",
+    "group": "🎬 Filmes",
+    "url": "http://45.185.15.154:9080/stream/63/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://45.185.15.154:9080/stream/63/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "TelecinePremium.br@SD",
+    "type": "tv",
+    "title": "like Gecko) Chrome/156.0.0.0 Safari/537.36\" group-title=\"Movies\",Telecine Premium",
+    "tvg_id": "TelecinePremium.br@SD",
+    "tvg_logo": "https://i.imgur.com/uVFgIr8.png",
+    "group": "🎬 Filmes",
+    "url": "http://45.185.15.154:9080/stream/28/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://45.185.15.154:9080/stream/28/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
+  },
+  {
+    "id": "TelecineTouch.br@SD",
+    "type": "tv",
+    "title": "like Gecko) Chrome/156.0.0.0 Safari/537.36\" group-title=\"Movies\",Telecine Touch",
+    "tvg_id": "TelecineTouch.br@SD",
+    "tvg_logo": "https://i.imgur.com/Nky0hRo.png",
+    "group": "🎬 Filmes",
+    "url": "http://45.185.15.154:9080/stream/29/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://45.185.15.154:9080/stream/29/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
   }
 ]
