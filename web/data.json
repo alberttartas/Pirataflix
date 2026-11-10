@@ -886,7 +886,7 @@
       "genres": [
         "Drama"
       ],
-      "rating": 8.3,
+      "rating": 8.2,
       "cast": [
         {
           "name": "Carlos Alberto Riccelli",
@@ -1829,7 +1829,7 @@
         {
           "name": "Ken Watanabe",
           "character": "Dr. Ishiro Serizawa",
-          "profile": "https://image.tmdb.org/t/p/w185/psAXOYp9SBOXvg6AXzARDedNQ9P.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/AqK1DSCibb8VuMO6t5qH1LVMIYG.jpg"
         },
         {
           "name": "Sally Hawkins",
@@ -2044,7 +2044,7 @@
         {
           "name": "Ken Watanabe",
           "character": "Dr. Ishiro Serizawa",
-          "profile": "https://image.tmdb.org/t/p/w185/psAXOYp9SBOXvg6AXzARDedNQ9P.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/AqK1DSCibb8VuMO6t5qH1LVMIYG.jpg"
         },
         {
           "name": "Ziyi Zhang",
@@ -4909,7 +4909,7 @@
       "backdrop": "https://image.tmdb.org/t/p/w1280/qDq3dG4ElRohih5fUGNQRLHuBaC.jpg",
       "overview": "Quando o passado bate à porta de um casal de ex-espiões, o maior desafio não são as perseguições, os tiroteios e as brigas... é contar a verdade um ao outro.",
       "year": "2026",
-      "rating": 7.0,
+      "rating": 6.9,
       "cast": [
         {
           "name": "Felix Kramer",
@@ -48258,7 +48258,13 @@
               "air_date": "2026-11-03",
               "overview": "Nuru avisa a Jendal que os rebeldes furaram o bloqueio dos soldados batanguis e estão a caminho do palácio. Chinua revela a Alika que a batalha por Batanga começou. Dona Menina prevê a guerra em Batanga e conforta Caetana, que sofre por Tonho. Jendal e José/Zambi comandam seus exércitos. Ladisa é ferida no combate, e Akin se desespera. Omar fere Jendal. Chinua e Oruka reconhecem Tonho.",
               "still": "https://image.tmdb.org/t/p/w400/wjVYe9qTjyC2QvSVAwDZum4YJTj.jpg",
-              "guest_stars": [],
+              "guest_stars": [
+                {
+                  "name": "Taís Araújo",
+                  "character": "Menemi, Rainha de Zinga",
+                  "photo": "https://image.tmdb.org/t/p/w185/jy2bViOZjvDfMv7jfPeuWAFWDyt.jpg"
+                }
+              ],
               "locked": false
             },
             {
@@ -48278,7 +48284,13 @@
               "air_date": "2026-11-05",
               "overview": "Clodomiro avisa a Mirinho que desistiu de comprar o engenho. José desperta, descobre que a bala atingiu sua coluna e se abala ao perceber que não consegue movimentar as pernas. Sebastião é levado preso para Biri-Biri. Mirinho engana Diógenes, retira do cofre o dinheiro que Virgínia ganhou. Salma e Omar se casam em uma cerimônia no armazém dos Curi. Começa a cerimônia de casamento de Alika e Tonho.",
               "still": "https://image.tmdb.org/t/p/w400/skMu0XrODhErDjLaoSfkXOZAy0n.jpg",
-              "guest_stars": [],
+              "guest_stars": [
+                {
+                  "name": "Taís Araújo",
+                  "character": "Menemi, Rainha de Zinga",
+                  "photo": "https://image.tmdb.org/t/p/w185/jy2bViOZjvDfMv7jfPeuWAFWDyt.jpg"
+                }
+              ],
               "locked": false
             },
             {
@@ -48288,7 +48300,13 @@
               "air_date": "2026-11-06",
               "overview": "Último Capítulo: Jendal toma uma decisão drástica após fuga. Mirinho fica na mira de um revólver. Família real de Batanga volta a Barro Preto. Luz elétrica chega a Barro Preto. Virgínia reflete sobre escolhas que fez na vida. Tonho celebra vitória do povo. Virgínia ouve verdades de Alika. Família real se despede de Barro Preto.",
               "still": "https://image.tmdb.org/t/p/w400/i36ryQVKsItm6Cn2eWk7qsLsefZ.jpg",
-              "guest_stars": [],
+              "guest_stars": [
+                {
+                  "name": "Taís Araújo",
+                  "character": "Menemi, Rainha de Zinga",
+                  "photo": "https://image.tmdb.org/t/p/w185/jy2bViOZjvDfMv7jfPeuWAFWDyt.jpg"
+                }
+              ],
               "locked": false
             }
           ]
@@ -50494,7 +50512,13 @@
           "air_date": "2026-11-03",
           "overview": "Nuru avisa a Jendal que os rebeldes furaram o bloqueio dos soldados batanguis e estão a caminho do palácio. Chinua revela a Alika que a batalha por Batanga começou. Dona Menina prevê a guerra em Batanga e conforta Caetana, que sofre por Tonho. Jendal e José/Zambi comandam seus exércitos. Ladisa é ferida no combate, e Akin se desespera. Omar fere Jendal. Chinua e Oruka reconhecem Tonho.",
           "still": "https://image.tmdb.org/t/p/w400/wjVYe9qTjyC2QvSVAwDZum4YJTj.jpg",
-          "guest_stars": [],
+          "guest_stars": [
+            {
+              "name": "Taís Araújo",
+              "character": "Menemi, Rainha de Zinga",
+              "photo": "https://image.tmdb.org/t/p/w185/jy2bViOZjvDfMv7jfPeuWAFWDyt.jpg"
+            }
+          ],
           "locked": false
         },
         {
@@ -50514,7 +50538,13 @@
           "air_date": "2026-11-05",
           "overview": "Clodomiro avisa a Mirinho que desistiu de comprar o engenho. José desperta, descobre que a bala atingiu sua coluna e se abala ao perceber que não consegue movimentar as pernas. Sebastião é levado preso para Biri-Biri. Mirinho engana Diógenes, retira do cofre o dinheiro que Virgínia ganhou. Salma e Omar se casam em uma cerimônia no armazém dos Curi. Começa a cerimônia de casamento de Alika e Tonho.",
           "still": "https://image.tmdb.org/t/p/w400/skMu0XrODhErDjLaoSfkXOZAy0n.jpg",
-          "guest_stars": [],
+          "guest_stars": [
+            {
+              "name": "Taís Araújo",
+              "character": "Menemi, Rainha de Zinga",
+              "photo": "https://image.tmdb.org/t/p/w185/jy2bViOZjvDfMv7jfPeuWAFWDyt.jpg"
+            }
+          ],
           "locked": false
         },
         {
@@ -50524,7 +50554,13 @@
           "air_date": "2026-11-06",
           "overview": "Último Capítulo: Jendal toma uma decisão drástica após fuga. Mirinho fica na mira de um revólver. Família real de Batanga volta a Barro Preto. Luz elétrica chega a Barro Preto. Virgínia reflete sobre escolhas que fez na vida. Tonho celebra vitória do povo. Virgínia ouve verdades de Alika. Família real se despede de Barro Preto.",
           "still": "https://image.tmdb.org/t/p/w400/i36ryQVKsItm6Cn2eWk7qsLsefZ.jpg",
-          "guest_stars": [],
+          "guest_stars": [
+            {
+              "name": "Taís Araújo",
+              "character": "Menemi, Rainha de Zinga",
+              "photo": "https://image.tmdb.org/t/p/w185/jy2bViOZjvDfMv7jfPeuWAFWDyt.jpg"
+            }
+          ],
           "locked": false
         }
       ],
@@ -66357,8 +66393,8 @@
         "https://image.tmdb.org/t/p/w500/1jGPgDDcmg3Xgs3WO8sfYfbnFoA.jpg",
         "https://image.tmdb.org/t/p/w500/5NW6rUmsJSxtcdL3FgF6vq9Aanr.jpg",
         "https://image.tmdb.org/t/p/w500/k5UALlcA0EnviaCUn2wMjOWYiOO.jpg",
-        "https://image.tmdb.org/t/p/w500/Afkw5tbK1rDJ8HJ12u7ADxhTJXv.jpg",
-        "https://image.tmdb.org/t/p/w500/sWcihbznFj7y07zQrcUATRt6GWi.jpg"
+        "https://image.tmdb.org/t/p/w500/sWcihbznFj7y07zQrcUATRt6GWi.jpg",
+        "https://image.tmdb.org/t/p/w500/9n4dv0aGRb8Ma15H7jbWsY7Eg0N.jpg"
       ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/jIArNHIekrCSVgdMbKPAXpPY03Y.jpg",
       "overview": "Uma animação sobre uma típica família dos Estados Unidos. Homer é o pai de família nada saudável ou inteligente, que adora beber cerveja. Marge é a esposa e mãe de família dedicada. Bart é o filho de 10 anos, que não leva a escola a sério e tem orgulho disso. Lisa é a garota de 8 anos, um gênio não apreciado. E Maggie é a bebê que não larga a chupeta.",
@@ -71887,9 +71923,9 @@
         "https://image.tmdb.org/t/p/w500/vIE1llfr1lcmzlsV4xn8vhgtlQN.jpg",
         "https://image.tmdb.org/t/p/w500/83po91QTmpuQIsMOFvh5uGa8oHY.jpg",
         "https://image.tmdb.org/t/p/w500/nEdHDUhaC80lIFh1WWvi1KYtcfL.jpg",
-        "https://image.tmdb.org/t/p/w500/i4t9z7QDNPJjg59vJunCHdh0mj2.jpg",
-        "https://image.tmdb.org/t/p/w500/x9tqZfZLzu6T6q7wuySI8k7Qytf.jpg",
-        "https://image.tmdb.org/t/p/w500/e00Wytzi2eezxrNUIW1NHYkbwAu.jpg"
+        "https://image.tmdb.org/t/p/w500/e00Wytzi2eezxrNUIW1NHYkbwAu.jpg",
+        "https://image.tmdb.org/t/p/w500/yZHDcislW37kwploZ6EFi80ytHG.jpg",
+        "https://image.tmdb.org/t/p/w500/1xFmN7Svkve5cBDwd0TLVMXPXiz.jpg"
       ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/qc30hdrxHQgN5wiopU4bkRZow5L.jpg",
       "overview": "Yuru, um jovem caçador de uma vila isolada nas montanhas, vive tranquilamente ao lado de sua irmã gêmea, Asa. Tudo muda quando o rugido de um dragão rompe os céus e abala seu mundo. Segredos ocultos vêm à tona, revelando mistérios, forças sobrenaturais e um destino inesperado.",
@@ -79424,7 +79460,7 @@
         "https://image.tmdb.org/t/p/w500/nmhpTtwTU9TliNgLOnPvz3LemGP.jpg"
       ],
       "backdrop": "https://image.tmdb.org/t/p/w1280/8phLVFEXOe02JgFmH9ldn3j4tXW.jpg",
-      "overview": "Anos após a feroz batalha contra Majin Boo, a Terra recupera uma breve paz. Simultaneamente, Beerus, o Deus da Destruição, desperta de seu longo sono. Cientes de seu poder avassalador para destruir planetas, Sr. Kaioh e Kaiohshin observam seu retorno com grande temor.",
+      "overview": "Anos após a feroz batalha contra Majin Boo, a Terra recupera uma breve paz. Simultaneamente, Bills, o Deus da Destruição, desperta de seu longo sono. Cientes de seu poder avassalador para destruir planetas, Sr. Kaioh e Kaiohshin observam seu retorno com grande temor.",
       "year": "2026",
       "genres": [
         "Animação",
