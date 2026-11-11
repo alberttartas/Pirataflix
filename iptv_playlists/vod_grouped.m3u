@@ -78,7 +78,7 @@ https://vod3.cf.dmcdn.net/sec2(blut8bv28wqADpZFN7q8w3GijtuaC8y79DpoCqOffLBzT0DZh
 #EXTINF:-1 group-title="🎬 Filmes" tvg-id="AKIRA" tvg-logo="https://image.tmdb.org/t/p/w500/tbwwTQ3EqSdotbQ3ZcIl6vKBv7q.jpg",Akira
 https://cdn-s01.mywallpaper-4k-image.net/stream/a/akira-dublado/01.mp4/index.m3u8
 
-#EXTINF:-1 group-title="🎬 Filmes" tvg-id="GODZILLA" tvg-logo="https://image.tmdb.org/t/p/w500/9dyFXQwmFHI1gMn2JEczgKD1hwO.jpg",Godzilla
+#EXTINF:-1 group-title="🎬 Filmes" tvg-id="GODZILLA" tvg-logo="https://image.tmdb.org/t/p/w500/ebVZ8n64rtHsSItTei4EgTKzPVu.jpg",Godzilla
 https://23rzv4udpdbv8t6.cdn-novflix.com/storageflix/F/godzilla.mp4
 
 #EXTINF:-1 group-title="🎬 Filmes" tvg-id="X_MEN_APOCALIPSE" tvg-logo="https://image.tmdb.org/t/p/w500/czKpsvSmpzMoOuuJXGjBHMoH1qq.jpg",X-men Apocalipse
@@ -28601,4 +28601,88 @@ http://45.185.15.154:9080/stream/28/index.m3u8
 
 #EXTINF:-1 group-title="🎬 Filmes" tvg-id="TELECINETOUCH.BR@SD" tvg-logo="https://i.imgur.com/Nky0hRo.png",like Gecko) Chrome/156.0.0.0 Safari/537.36" group-title="Movies",Telecine Touch
 http://45.185.15.154:9080/stream/29/index.m3u8
+
+#EXTINF:-1 group-title="📚 Educação" tvg-id="AGROCANAL.BR@SD" tvg-logo="https://i.imgur.com/5XyopHf.png",AgroCanal (720p)
+http://170.83.49.66:8083/AGROCANALHD/index.m3u8
+
+#EXTINF:-1 group-title="📰 Notícias" tvg-id="AGROMAIS.BR@SD" tvg-logo="https://i.imgur.com/sFcOZeo.png",AgroMais (720p)
+http://45.177.114.115/agromais/index.m3u8
+
+#EXTINF:-1 group-title="🎨 Cultura" tvg-id="ARTE1.BR@SD" tvg-logo="https://i.imgur.com/Ivnk7A6.png",Arte 1 (720p)
+http://45.177.114.115/ARTE1/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="CANALDOBOI.BR@SD" tvg-logo="https://i.imgur.com/pVM5MhS.png",Canal do Boi (720p)
+http://170.83.16.50/CANAL_DO_BOI/index.m3u8
+
+#EXTINF:-1 group-title="📚 Educação" tvg-id="CANALEDUCACAO.BR@SD" tvg-logo="https://i.imgur.com/OOB7nrS.png",Canal Educacao (720p)
+http://45.177.114.115/CANAL_EDUCACAO/index.m3u8
+
+#EXTINF:-1 group-title="📚 Educação" tvg-id="CANALFUTURA.BR@SD" tvg-logo="https://i.imgur.com/LgynEBC.png",Canal Futura (720p)
+http://170.83.16.50/FUTURA/index.m3u8
+
+#EXTINF:-1 group-title="🧸 Infantil" tvg-id="DUMDUM.BR@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/c/c0/DumDum_logo.svg",DumDum (720p)
+http://186.219.52.187/zoomoo/index.m3u8
+
+#EXTINF:-1 group-title="🎵 Música" tvg-id="MUSICBOXBRAZIL.BR@SD" tvg-logo="https://i.imgur.com/CDPCF2X.png",Music Box Brazil (720p)
+http://170.83.49.66:8083/MUSICBOXBRASILHD/index.m3u8
+
+#EXTINF:-1 group-title="✝️ Religioso" tvg-id="NOVOTEMPO.BR@SD" tvg-logo="",Novo Tempo (720p)
+http://186.219.52.187/novo_tempo/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="PLAYTV.BR@SD" tvg-logo="https://i.imgur.com/Ikrj3lk.png",Play TV (Brazil) (720p)
+http://45.177.114.115/PLAY_TV/index.m3u8
+
+#EXTINF:-1 group-title="📰 Notícias" tvg-id="RECORDNEWS.BR@SD" tvg-logo="https://i.imgur.com/HZDRG0K.png",Record News (720p)
+http://45.177.114.115/RECORD_NEWS/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="REDECNTRIODEJANEIRO.BR@SD" tvg-logo="https://i.imgur.com/jcasAmw.png",Rede CNT Rio de Janeiro (720p)
+http://170.83.49.66:8083/REDECNTHD/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="REDEFAMILIA.BR@SD" tvg-logo="https://i.imgur.com/7KVFCrQ.png",Rede Familia (720p)
+http://186.219.52.187/rede_familia/index.m3u8
+
+#EXTINF:-1 group-title="✝️ Religioso" tvg-id="REDESECULO21.BR@SD" tvg-logo="",Rede Seculo 21 (720p)
+http://186.219.52.187/seculo21/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="REDETV.BR@SD" tvg-logo="https://i.imgur.com/ZJgD38F.png",Rede TV! SD (720p)
+http://170.83.16.50/REDE_TV/index.m3u8
+
+#EXTINF:-1 group-title="🎬 Filmes" tvg-id="SONYMOVIES.BR@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Sony_Movies_Logo.svg/500px-Sony_Movies_Logo.svg.png",Sony Movies (Brazil) (720p)
+http://45.177.114.115/SONY_MOVIES/index.m3u8
+
+#EXTINF:-1 group-title="🌿 Natureza" tvg-id="TERRAVIVA.BR@SD" tvg-logo="https://i.imgur.com/wnYsE3O.png",Terra Viva (720p)
+http://45.177.114.115/TERRAVIVA/index.m3u8
+
+#EXTINF:-1 group-title="✈️ Viagem" tvg-id="TRAVELBOXBRAZIL.BR@SD" tvg-logo="https://i.imgur.com/3tBJERH.png",Travel Box Brazil (720p)
+http://170.83.49.66:8083/TRAVELBOXHD/index.m3u8
+
+#EXTINF:-1 group-title="✝️ Religioso" tvg-id="TVAPARECIDA.BR@SD" tvg-logo="https://i.imgur.com/kxrja0X.png",TV Aparecida (720p)
+http://45.177.114.115/TV_APARECIDA_HD/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="TVBRASIL.BR@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/TvBrasil2023.png/960px-TvBrasil2023.png",TV Brasil (720p)
+http://45.177.114.115/TV_BRASIL/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="TVCANCAONOVA.BR@SD" tvg-logo="https://i.imgur.com/OaM9hkH.png",TV Cancao Nova (720p)
+http://170.83.16.50/CANCAO_NOVA/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="TVCULTURA.BR@SD" tvg-logo="https://i.ibb.co/nm0jXMM/cultura-3x.png",TV Cultura (720p)
+http://45.177.114.115/TV_CULTURA/index.m3u8
+
+#EXTINF:-1 group-title="✝️ Religioso" tvg-id="TVEVANGELIZAR.BR@SD" tvg-logo="https://i.imgur.com/IrYR7Kp.png",TV Evangelizar (720p)
+http://170.83.16.50/TV_EVANGELIZAR/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="TVGAZETA.BR@SD" tvg-logo="https://i.imgur.com/0sksWse.png",TV Gazeta (720p)
+http://186.219.52.187/gazeta/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="TVJUSTICA.BR@SD" tvg-logo="https://i.imgur.com/rOQKiMO.png",TV Justica (720p)
+http://170.83.16.50/TV_JUSTICA/index.m3u8
+
+#EXTINF:-1 group-title="✝️ Religioso" tvg-id="TVPAIETERNO.BR@SD" tvg-logo="https://i.imgur.com/iuoXchN.png",TV Pai Eterno (720p)
+http://186.219.52.187/pai_eterno/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="TVSENADO.BR@SD" tvg-logo="https://i.imgur.com/duy6waL.png",TV Senado (Brazil) (720p)
+http://170.83.16.50/TV_SENADO/index.m3u8
+
+#EXTINF:-1 group-title="📺 Geral" tvg-id="WOOHOO.BR@SD" tvg-logo="https://i.imgur.com/me622pa.png",WooHoo (720p)
+http://170.83.16.50/WOOHOO/index.m3u8
 

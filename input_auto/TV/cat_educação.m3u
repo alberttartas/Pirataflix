@@ -1,15 +1,15 @@
 #EXTM3U
 #EXTINF:-1 tvg-id="AgroCanal.br@SD" tvg-logo="https://i.imgur.com/5XyopHf.png" group-title="📚 Educação",AgroCanal (720p)
-http://45.162.64.114/AGRO_CANAL/index.m3u8
+http://170.83.49.66:8083/AGROCANALHD/index.m3u8
 
 #EXTINF:-1 tvg-id="CanalEducacao.br@SD" tvg-logo="https://i.imgur.com/OOB7nrS.png" group-title="📚 Educação",Canal Educacao (720p)
-http://45.162.64.114/CANAL_EDUCACAO/index.m3u8
+http://45.177.114.115/CANAL_EDUCACAO/index.m3u8
 
 #EXTINF:-1 tvg-id="CanalFDR.br@SD" tvg-logo="https://i.imgur.com/7SE4CkE.png" group-title="📚 Educação",Canal FDR (1080p)
 https://v-us-01.wisestream.io/memfs/e4ade538-7924-4359-81ef-b9d4dd229e91.m3u8
 
 #EXTINF:-1 tvg-id="CanalFutura.br@SD" tvg-logo="https://i.imgur.com/LgynEBC.png" group-title="📚 Educação",Canal Futura (720p)
-http://45.162.64.114/FUTURA/index.m3u8
+http://170.83.16.50/FUTURA/index.m3u8
 
 #EXTINF:-1 tvg-id="CanalSaude.br@SD" tvg-logo="https://i.imgur.com/ht4tUOc.png" group-title="📚 Educação",Canal Saude
 https://eitv7.cdn.broadpeak.io/account351-i1495/event/canalsaude/format720p.m3u8

@@ -27,7 +27,7 @@ https://cdn.jmvstream.com/w/LVW-9375/LVW9375_6i0wPBCHYc/playlist.m3u8
 https://cdn-tiva-stream01-msolutionbrasil-com-br.smartbit.co/hls/canal25/live.m3u8
 
 #EXTINF:-1 tvg-id="CanaldoBoi.br@SD" tvg-logo="https://i.imgur.com/pVM5MhS.png" group-title="📺 Geral",Canal do Boi (720p)
-http://45.162.64.114/CANAL_DO_BOI/index.m3u8
+http://170.83.16.50/CANAL_DO_BOI/index.m3u8
 
 #EXTINF:-1 tvg-id="CanalLibras.br@SD" tvg-logo="https://i.imgur.com/LnWWKzP.png" group-title="📺 Geral",Canal Libras (720p)
 https://canallibras-stream.ebc.com.br/mux_video_ts/index-1.m3u8
@@ -102,7 +102,7 @@ http://wz3.dnip.com.br:1935/novaeratv/novaeratv.sdp/live.m3u8
 https://6836041ea1117.streamlock.net/tvodia/tvodia/playlist.m3u8
 
 #EXTINF:-1 tvg-id="PlayTV.br@SD" tvg-logo="https://i.imgur.com/Ikrj3lk.png" group-title="📺 Geral",Play TV (Brazil) (720p)
-http://45.162.64.114/PLAY_TV/index.m3u8
+http://45.177.114.115/PLAY_TV/index.m3u8
 
 #EXTINF:-1 tvg-id="PlutoTVHistoria.us@BR" tvg-logo="https://images.pluto.tv/channels/5f1ef1a8cec6be00072a7ac9/colorLogoPNG_1754405659295.png" group-title="📺 Geral",Pluto TV Historia (United States)
 https://jmp2.uk/plu-5f1ef1a8cec6be00072a7ac9.m3u8
@@ -147,13 +147,13 @@ https://playplusspo-lh.akamaihd.net/i/pp_sp@350176/index_720_av-p.m3u8
 https://redebrasil.nuvemplay.live/hls/stream.m3u8
 
 #EXTINF:-1 tvg-id="RedeCNTRiodeJaneiro.br@SD" tvg-logo="https://i.imgur.com/jcasAmw.png" group-title="📺 Geral",Rede CNT Rio de Janeiro (720p)
-http://45.162.64.114/CNT/index.m3u8
+http://170.83.49.66:8083/REDECNTHD/index.m3u8
 
 #EXTINF:-1 tvg-id="RedeCNTSalvador.br@SD" tvg-logo="https://i.imgur.com/jcasAmw.png" group-title="📺 Geral",Rede CNT Salvador (576i)
 http://168.205.87.198:8555/live/1368/123456/150.m3u8
 
 #EXTINF:-1 tvg-id="RedeFamilia.br@SD" tvg-logo="https://i.imgur.com/7KVFCrQ.png" group-title="📺 Geral",Rede Familia (720p)
-http://168.197.104.22/REDE_FAMILIA/index.m3u8
+http://186.219.52.187/rede_familia/index.m3u8
 
 #EXTINF:-1 tvg-id="RedeGlobo.br@SD" tvg-logo="https://i.imgur.com/O02TF2r.png" group-title="📺 Geral",Rede Globo (1080p)
 https://cdn-sp2.satlabscloud.com.br/RBS_HD/index.m3u8?token=Mw3YKkujzIi9hYQJ6kAQjQvly2VdBNuGPjHOq
@@ -171,7 +171,7 @@ http://tv02.logicahost.com.br:1935/rederc/rederc/live.m3u8
 https://video01.logicahost.com.br/websptv/websptv/playlist.m3u8
 
 #EXTINF:-1 tvg-id="RedeTV.br@SD" tvg-logo="https://i.imgur.com/ZJgD38F.png" group-title="📺 Geral",Rede TV! SD (720p)
-http://45.162.64.114/REDE_TV/index.m3u8
+http://170.83.16.50/REDE_TV/index.m3u8
 
 #EXTINF:-1 tvg-id="RedeTVMais.br@SD" tvg-logo="https://i.ibb.co/F0Tm2WP/2103f4c07b851d64b4c96955765a9a95.png" group-title="📺 Geral",Rede TV! Mais (720p)
 https://cdn.live.br1.jmvstream.com/webtv/AVJ-15235/playlist/playlist.m3u8
@@ -246,7 +246,7 @@ http://hls1.sua.tv/live/globotvbahiafhdbr2/s.m3u8
 https://59f2354c05961.streamlock.net:1443/tvdigitalbirigui/_definst_/tvdigitalbirigui/playlist.m3u8
 
 #EXTINF:-1 tvg-id="TVBrasil.br@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/TvBrasil2023.png/960px-TvBrasil2023.png" group-title="📺 Geral",TV Brasil (720p)
-http://45.162.64.114/TV_BRASIL/index.m3u8
+http://45.177.114.115/TV_BRASIL/index.m3u8
 
 #EXTINF:-1 tvg-id="TVBrasilOeste.br@SD" tvg-logo="https://i.imgur.com/noqGfuy.png" group-title="📺 Geral",TV Brasil Oeste (720p)
 https://5ad482a77183d.streamlock.net/operacaotbomt.com/operacaotbomt.com/playlist.m3u8
@@ -255,7 +255,7 @@ https://5ad482a77183d.streamlock.net/operacaotbomt.com/operacaotbomt.com/playlis
 https://porbrics.mediacdn.ru/cdn/brics/portuguese/playlist.m3u8
 
 #EXTINF:-1 tvg-id="TVCancaoNova.br@SD" tvg-logo="https://i.imgur.com/OaM9hkH.png" group-title="📺 Geral",TV Cancao Nova (720p)
-http://45.162.64.114/CANCAO_NOVA/index.m3u8
+http://170.83.16.50/CANCAO_NOVA/index.m3u8
 
 #EXTINF:-1 tvg-id="TVCarioca.br@SD" tvg-logo="https://i.imgur.com/mVWydMw.png" group-title="📺 Geral",TV Carioca (720p)
 https://cdn-tiva-video03-logicahost-com-br.smartbit.co/cariocainternacional1/cariocainternacional1/playlist.m3u8
@@ -273,7 +273,7 @@ https://5c483b9d1019c.streamlock.net/8186/8186/playlist.m3u8
 https://5b7f3c45ab7c2.streamlock.net/8008/smil:8008.smil/playlist.m3u8?DVR=
 
 #EXTINF:-1 tvg-id="TVCultura.br@SD" tvg-logo="https://i.ibb.co/nm0jXMM/cultura-3x.png" group-title="📺 Geral",TV Cultura (720p)
-http://45.162.64.114/TV_CULTURA/index.m3u8
+http://45.177.114.115/TV_CULTURA/index.m3u8
 
 #EXTINF:-1 tvg-id="TVDestak.br@SD" tvg-logo="https://i.imgur.com/YoCVrav.png" group-title="📺 Geral",TV Destak (360p)
 http://tv02.logicahost.com.br:1935/pascoal/pascoal/live.m3u8
@@ -297,7 +297,7 @@ https://tvfronteira.brasilstream.com.br/hls/tvfronteira/index.m3u8
 https://tv02.zas.media:1936/tvfuturo/tvfuturo/playlist.m3u8
 
 #EXTINF:-1 tvg-id="TVGazeta.br@SD" tvg-logo="https://i.imgur.com/0sksWse.png" group-title="📺 Geral",TV Gazeta (720p)
-http://45.162.64.114/TV_GAZETA/index.m3u8
+http://186.219.52.187/gazeta/index.m3u8
 
 #EXTINF:-1 tvg-id="TVGazin.br@SD" tvg-logo="https://tvgazin.com.br/wp-content/uploads/2024/03/logo.png" group-title="📺 Geral",TV Gazin (720p)
 https://cdn-tiva-video09-logicahost-com-br.smartbit.co/tvgazin/tvgazin/playlist.m3u8
@@ -321,7 +321,7 @@ https://video.welltecnologia.com.br/tvguarapari/tvguarapari/playlist.m3u8
 https://v8.ciclano.io:1443/tvinterlagos/_definst_/tvinterlagos/playlist.m3u8
 
 #EXTINF:-1 tvg-id="TVJustica.br@SD" tvg-logo="https://i.imgur.com/rOQKiMO.png" group-title="📺 Geral",TV Justica (720p)
-http://45.162.64.114/TV_JUSTICA/index.m3u8
+http://170.83.16.50/TV_JUSTICA/index.m3u8
 
 #EXTINF:-1 tvg-id="TVLiberdade.br@SD" tvg-logo="https://i.imgur.com/W6bHHqE.png" group-title="📺 Geral",TV Liberdade (720p) [Not 24/7]
 https://srv1.paineldevideo.com/liberdaderadioetv/liberdaderadioetv/playlist.m3u8
@@ -363,7 +363,7 @@ http://45.177.114.115/TV_RA_TIM_BUM/index.m3u8
 https://stmv1.voxtvhd.com.br/9030/9030/playlist.m3u8
 
 #EXTINF:-1 tvg-id="TVSenado.br@SD" tvg-logo="https://i.imgur.com/duy6waL.png" group-title="📺 Geral",TV Senado (Brazil) (720p)
-http://45.162.64.114/TV_SENADO/index.m3u8
+http://170.83.16.50/TV_SENADO/index.m3u8
 
 #EXTINF:-1 tvg-id="TVSolComunidade.br@SD" tvg-logo="https://i.imgur.com/5cGnb4r.png" group-title="📺 Geral",TV Sol Comunidade (480p) [Not 24/7]
 http://streaming03.zas.media:1935/tvsol/tvsol/playlist.m3u8
@@ -411,5 +411,5 @@ http://cdn.tvmatic.net/tiktok.m3u8
 https://cdn.jmvstream.com/w/LVW-8410/LVW8410_uiZOVm6vz1/playlist.m3u8
 
 #EXTINF:-1 tvg-id="WooHoo.br@SD" tvg-logo="https://i.imgur.com/me622pa.png" group-title="📺 Geral",WooHoo (720p)
-http://45.162.64.114/WOOHOO/index.m3u8
+http://170.83.16.50/WOOHOO/index.m3u8
 

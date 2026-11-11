@@ -15,7 +15,7 @@ https://stmv1.srvif.com/gospelcartoon/gospelcartoon/playlist.m3u8
 https://stmv1.srvif.com/gospelf/gospelf/playlist.m3u8
 
 #EXTINF:-1 tvg-id="NovoTempo.br@SD" tvg-logo="" group-title="✝️ Religioso",Novo Tempo (720p)
-http://45.162.64.114/NOVO_TEMPO/index.m3u8
+http://186.219.52.187/novo_tempo/index.m3u8
 
 #EXTINF:-1 tvg-id="PlenitudeTV.br@SD" tvg-logo="" group-title="✝️ Religioso",Plenitude TV
 https://strv.painelvox.top/plenitude/plenitude/playlist.m3u8
@@ -24,7 +24,7 @@ https://strv.painelvox.top/plenitude/plenitude/playlist.m3u8
 https://cdn.live.br1.jmvstream.com/w/LVW-8719/LVW8719_AcLVAxWy5J/playlist.m3u8
 
 #EXTINF:-1 tvg-id="RedeSeculo21.br@SD" tvg-logo="" group-title="✝️ Religioso",Rede Seculo 21 (720p)
-http://45.162.64.114/REDE_SECULO_21/index.m3u8
+http://186.219.52.187/seculo21/index.m3u8
 
 #EXTINF:-1 tvg-id="RedeVida.br@SD" tvg-logo="https://i.imgur.com/mP1qfp2.png" group-title="✝️ Religioso",Rede Vida (720p)
 http://46.151.196.223:14244
@@ -33,10 +33,10 @@ http://46.151.196.223:14244
 https://acesso.ecast.site:3648/live/ritlive.m3u8
 
 #EXTINF:-1 tvg-id="TVAparecida.br@SD" tvg-logo="https://i.imgur.com/kxrja0X.png" group-title="✝️ Religioso",TV Aparecida (720p)
-http://45.162.64.114/TV_APARECIDA/index.m3u8
+http://45.177.114.115/TV_APARECIDA_HD/index.m3u8
 
 #EXTINF:-1 tvg-id="TVEvangelizar.br@SD" tvg-logo="https://i.imgur.com/IrYR7Kp.png" group-title="✝️ Religioso",TV Evangelizar (720p)
-http://45.162.64.114/EVANGELIZAR/index.m3u8
+http://170.83.16.50/TV_EVANGELIZAR/index.m3u8
 
 #EXTINF:-1 tvg-id="TVGideoes.br@SD" tvg-logo="https://i.imgur.com/dDomKND.png" group-title="✝️ Religioso",TV Gideoes (1080p) [Not 24/7]
 https://streaming01.zas.media/gideoes/programacao/playlist.m3u8
@@ -48,7 +48,7 @@ https://w1.manasat.com/tvmana-brasil/smil:tvmana-brasil.smil/playlist.m3u8
 https://video01.logicahost.com.br/tvpadrecicero/tvpadrecicero/playlist.m3u8
 
 #EXTINF:-1 tvg-id="TVPaiEterno.br@SD" tvg-logo="https://i.imgur.com/iuoXchN.png" group-title="✝️ Religioso",TV Pai Eterno (720p)
-http://45.162.64.114/TV_PAI_ETERNO/index.m3u8
+http://186.219.52.187/pai_eterno/index.m3u8
 
 #EXTINF:-1 tvg-id="TVTerceiroAnjo.br@SD" tvg-logo="https://i.imgur.com/PExKWNv.png" group-title="✝️ Religioso",TV Terceiro Anjo (360p)
 https://streamer1.streamhost.org/salive/GMI3anjoh/playlist.m3u8
