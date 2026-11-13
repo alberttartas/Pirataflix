@@ -1517,7 +1517,7 @@
         {
           "name": "Dylan O'Brien",
           "character": "Joel",
-          "profile": "https://image.tmdb.org/t/p/w185/xN3GdvIlqsR838gDoblhPH0numP.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/jr08zI0cwDA1kW2iSeeRzwMwRvO.jpg"
         },
         {
           "name": "Jessica Henwick",
@@ -2254,7 +2254,7 @@
         {
           "name": "Sadie Sink",
           "character": "Jean Grey",
-          "profile": "https://image.tmdb.org/t/p/w185/m9OyHAyOx56Pm3JruEBqh4p9XeX.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/92FddzBfK50XOUbtwjqHPraoGHy.jpg"
         },
         {
           "name": "Tramell Tillman",
@@ -2534,7 +2534,7 @@
         "Mistério",
         "Suspense"
       ],
-      "rating": 7.1,
+      "rating": 7.0,
       "cast": [
         {
           "name": "Anne Hathaway",
@@ -8352,7 +8352,7 @@
         {
           "name": "Ana Lúcia Torre",
           "character": "Hilda Brito",
-          "profile": "https://image.tmdb.org/t/p/w185/29RIRV7mIm8twX748UMKzqfg8o1.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/zGz4YlA9DOuRxDCFkeDjaW4dHVT.jpg"
         },
         {
           "name": "Ágatha Moreira",
@@ -65771,7 +65771,7 @@
         "https://image.tmdb.org/t/p/w500/mJVUZpPR4BdZzLWyP51h8pOU1RO.jpg",
         "https://image.tmdb.org/t/p/w500/dG6H80X9zF3nA7NiOAs3gmxO6mc.jpg"
       ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/3US5UXJSStOVozc6EwhGSMDguol.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/flgn0jXbg8GIe2qaWfd70A0uzfp.jpg",
       "overview": "Sofrimento, arrependimento, vergonha: os sentimentos negativos dos humanos tornam-se Maldições, causando terríveis acidentes que podem levar até mesmo à morte. E pra piorar, Maldições só podem ser exorcizadas por outras Maldições. Certo dia, para salvar amigos que estavam sendo atacados por Maldições, Yuji Itadori engole o dedo do Ryomen-Sukuna, absorvendo sua Maldição. Ele então decide se matricular no Colégio Técnico de Feitiçaria de Tóquio, uma organização que combate as Maldições... e assim começa a heróica lenda do garoto que tornou-se uma Maldição para exorcizar uma Maldição.",
       "year": "2020",
       "rating": 8.6
@@ -70755,14 +70755,29 @@
           "profile": "https://image.tmdb.org/t/p/w185/fzjIkotjUHHs3wgftM9tqdsG8ph.jpg"
         },
         {
+          "name": "Kenta Miyake",
+          "character": "Steven Steel (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/7YL8vM2KYzPMeQqTpHWmNj6s1AP.jpg"
+        },
+        {
+          "name": "Tomokazu Sugita",
+          "character": "Funny Valentine (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/cv5zuPZySNsHXu24pjKLYCRzJ2J.jpg"
+        },
+        {
           "name": "Rie Takahashi",
           "character": "Lucy Steel (voice)",
           "profile": "https://image.tmdb.org/t/p/w185/aeB7z0cBTASdjKOjQriBAO6hYq4.jpg"
         },
         {
-          "name": "Kenta Miyake",
-          "character": "Steven Steel (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/7YL8vM2KYzPMeQqTpHWmNj6s1AP.jpg"
+          "name": "Tomoaki Maeno",
+          "character": "Mountain Tim (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/w3lEuXSbEyzzNyO3YnxsF6wm2N5.jpg"
+        },
+        {
+          "name": "Masaaki Mizunaka",
+          "character": "Sand Man (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/cHb2pr4juxk8A3VTuDxgPWHM6WF.jpg"
         }
       ]
     },
