@@ -900,12 +900,34 @@
     playTvChannel((cur + delta + channels.length) % channels.length);
   }
 
-  function safePlay(video) {
-    try {
-      var p = video.play();
-      if (p && typeof p.catch === 'function') p.catch(function () {});
-    } catch (e) {}
+  
+function safePlay(video) {
+  if (!video) return;
+
+  try {
+    var result = video.play();
+
+    if (result && typeof result.then === 'function') {
+      result.catch(function (error) {
+        console.warn('[Tizen Player] Falha na reprodução:', error);
+
+        if (error && error.name === 'NotAllowedError') {
+          showOsd('▶ Pressione OK para iniciar o vídeo');
+
+          try {
+            video.focus();
+          } catch (e) {}
+        } else {
+          showOsd('⚠ Não foi possível iniciar o vídeo');
+        }
+      });
+    }
+  } catch (error) {
+    console.warn('[Tizen Player] Erro:', error);
+    showOsd('⚠ Erro ao iniciar reprodução');
   }
+}
+
 
   // Próximo episódio reproduzível (ou null)
   function nextEpisode() {
