@@ -2236,7 +2236,7 @@
         "https://image.tmdb.org/t/p/w500/ghF1JYv7P5BgWHYfq9dqhqqNfz8.jpg",
         "https://image.tmdb.org/t/p/w500/yxOxOBxspl3NgC676W62G02g1cR.jpg"
       ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/subj7knTn4DeS6KS7qI66EQKe9i.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/4tjxYg2AbOzzG9G1YuiT2NzYhlH.jpg",
       "overview": "É um novo dia para Peter Parker. Combatendo o crime em tempo integral como Homem-Aranha em um mundo que não se lembra mais dele e lidando com a pressão de ver seus antigos amigos seguirem em frente sem sua presença, Peter passa por uma mudança que talvez nem ele tenha o poder de controlar. Mas essa transformação também pode ser a única coisa capaz de deter uma surpreendente nova ameaça à cidade e às pessoas que ele ama: um poderoso vilão que ninguém sequer consegue enxergar.",
       "year": "2026",
       "genres": [
@@ -2249,7 +2249,7 @@
         {
           "name": "Tom Holland",
           "character": "Peter Parker / Spider-Man",
-          "profile": "https://image.tmdb.org/t/p/w185/xKBAaPIa1c7tzZD3Y0MhBLv4hPE.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/tH8bNDcjiS399DlcnC5oubxNh23.jpg"
         },
         {
           "name": "Sadie Sink",
@@ -2284,7 +2284,7 @@
         {
           "name": "Florence Pugh",
           "character": "Yelena Belova / Black Widow",
-          "profile": "https://image.tmdb.org/t/p/w185/1QfiLnofJFlOJOLCWaxyDpIN03v.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/nyRW28rq1PJhygm25D4gJKFfPjc.jpg"
         }
       ]
     },
@@ -2539,7 +2539,7 @@
         {
           "name": "Anne Hathaway",
           "character": "Denise Platt",
-          "profile": "https://image.tmdb.org/t/p/w185/s6tflSD20MGz04ZR2R1lZvhmC4Y.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/dUnrbrn2FeqfdpGRArPZeWPsS2g.jpg"
         },
         {
           "name": "Ewan McGregor",
@@ -5308,7 +5308,7 @@
         {
           "name": "Mackenyu",
           "character": "Roronoa Zoro",
-          "profile": "https://image.tmdb.org/t/p/w185/4L3HRO6FGpCT20AnEgkr9OoamJK.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/y4FTSASxsO1F61p3hFIPMCeprut.jpg"
         },
         {
           "name": "Jacob Gibson",
@@ -59464,7 +59464,7 @@
       "backdrop": "https://image.tmdb.org/t/p/w1280/c72O2edMsD5QrbEGijBURiZIxk8.jpg",
       "overview": "Mao, um místico amaldiçoado há 900 anos, conhece Nanoka, uma garota do futuro marcada por uma tragédia. Transportados a um passado sobrenatural, os dois unem forças para enfrentar poderes sombrios e desvendar os mistérios que ligam suas vidas.",
       "year": "2026",
-      "rating": 8.6,
+      "rating": 8.5,
       "cast": [
         {
           "name": "Yuki Kaji",
@@ -66991,7 +66991,7 @@
     {
       "id": "boku_no_hero_academia",
       "title": "Boku No Hero Academia",
-      "poster": "https://image.tmdb.org/t/p/w500/cfESQ8y8oNAeLuRbs7NkW7Qjwhy.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/3INu3n1sUa9K3O5OTPrqvJOetbd.jpg",
       "seasons": [
         {
           "season": 1,
@@ -68695,28 +68695,37 @@
       "category": "animes",
       "local_poster": "/Pirataflix/assets/Capas/boku_no_hero_academia_dublado.jpg",
       "posters": [
-        "https://image.tmdb.org/t/p/w500/cfESQ8y8oNAeLuRbs7NkW7Qjwhy.jpg",
-        "https://image.tmdb.org/t/p/w500/phuYuzqWW9ru8EA3HVjE9W2Rr3M.jpg",
-        "https://image.tmdb.org/t/p/w500/sSELYoag7grJVTnEFWfTvWXCjGT.jpg",
-        "https://image.tmdb.org/t/p/w500/2OyMvEr1vetWGMYCJZc2lFTJZhL.jpg",
-        "https://image.tmdb.org/t/p/w500/wlz8Pqr23JQUGYA8DSZ8byV0rce.jpg",
-        "https://image.tmdb.org/t/p/w500/eq68IFhnFPMIjngNn93DWMBKXpt.jpg",
-        "https://image.tmdb.org/t/p/w500/qIKNIkxXYIro6JjNIGyqumrVUKL.jpg"
+        "https://image.tmdb.org/t/p/w500/t3FjASWwvkNWdhzTk0yMApzcbXw.jpg",
+        "https://image.tmdb.org/t/p/w500/iv0cXt6uJGlTryWZNQMGyum4Pme.jpg",
+        "https://image.tmdb.org/t/p/w500/3INu3n1sUa9K3O5OTPrqvJOetbd.jpg",
+        "https://image.tmdb.org/t/p/w500/94YELK3KZt8WKGAZFDCJAb5vhk7.jpg",
+        "https://image.tmdb.org/t/p/w500/AuW6bjQIGVLBfZy7V5kiL86QXYt.jpg",
+        "https://image.tmdb.org/t/p/w500/5To7gr0PmuAvo31YLwb3EQpMlVy.jpg"
       ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/3ILMlmC30QUnYkY3XEBOyJ82Dqu.jpg",
-      "overview": "Por toda a sua vida, Izuku sonhou ser um herói — um objetivo ambicioso para qualquer um, mas especialmente desafiador para um garoto sem superpoderes. Isso mesmo: em um mundo onde 80% da população tem algum tipo de Dom especial, Izuku teve a má sorte de nascer completamente normal. Mas isso não vai impedi-lo de se matricular em uma das academias de herois mais prestigiosas do mundo.",
-      "year": "2016",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/baZ0pGbBGjCBhIqsFyOSTpJyUnQ.jpg",
+      "overview": "Koichi Haimawari é um universitário sem graça que sonhava em ser um super-herói, mas já desistiu disso. Embora 80% da população mundial possua poderes sobre-humanos chamados Individualidades, poucos conseguem se tornar super-heróis e proteger as pessoas. Tudo muda quando Koichi e Pop☆Step são salvos pelo justiceiro Knuckleduster e acabam sendo recrutados para se tornarem justiceiros também!",
+      "year": "2025",
       "genres": [
-        "Ação & Aventura",
         "Animação",
-        "Sci-Fi & Fantasia"
+        "Ação & Aventura",
+        "Drama"
       ],
-      "rating": 8.6,
+      "rating": 7.7,
       "cast": [
         {
-          "name": "Daiki Yamashita",
-          "character": "Izuku Midoriya (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/rQNdJdZewk7VGP16ZNbpfJ9ZeMd.jpg"
+          "name": "Shuichiro Umeda",
+          "character": "Koichi Haimawari (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/dCr870q8ojD6qpD1hmS1sdvh2pe.jpg"
+        },
+        {
+          "name": "Ikumi Hasegawa",
+          "character": "Pop☆Step (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/aHLid4WeTafrtfqDRAZSw5K7dTj.jpg"
+        },
+        {
+          "name": "Yasuhiro Mamiya",
+          "character": "Knuckleduster (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/pvnOU0RZuMKeISDTBEU7uSt3Xkn.jpg"
         }
       ]
     },
