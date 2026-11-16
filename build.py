@@ -583,7 +583,7 @@ def build_vod_with_direct_capas():
     print(f"📍 Acesse: http://localhost:8000/web/")
 
 
-TMDB_API_KEY = '6862f118a59693b921840e5bbbdabb74'
+TMDB_API_KEY = os.environ.get('TMDB_API_KEY', '').strip()
 TMDB_BASE    = 'https://api.themoviedb.org/3'
 TMDB_IMG     = 'https://image.tmdb.org/t/p/w500'
 
@@ -730,6 +730,10 @@ def fetch_tmdb_metadata(title, media_type='movie'):
 
 def enrich_with_tmdb(output):
     """Enriquece filmes e séries com metadados do TMDB."""
+    if not TMDB_API_KEY:
+        print("⚠️  TMDB_API_KEY não configurada; pulando enriquecimento de metadados.")
+        return
+
     import time
     CATEGORY_TYPE = {
         'filmes': 'movie', 'series': 'tv', 'novelas': 'tv',
