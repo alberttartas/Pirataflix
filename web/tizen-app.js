@@ -65,6 +65,7 @@
   var progressInterval = null;
   var seekStreak     = 0;
   var lastSeekAt     = 0;
+  var nativeStartTimer = null;
 
   // Player em iframe (Blogger como plano B, ou outros embeds)
   var bloggerIframe = null;
@@ -1075,7 +1076,14 @@ function safePlay(video) {
 
   function bloggerToken(url) {
     var m = /[?&]token=([^&#]+)/.exec(url);
-    return m ? m[1] : '';
+    if (!m) return '';
+    // O token pode chegar percent-encoded no catálogo; o RPC espera o valor decodificado.
+    try { return decodeURIComponent(m[1].replace(/\\+/g, '%20')); }
+    catch (e) { return m[1]; }
+  }
+
+  function clearNativeStartTimer() {
+    if (nativeStartTimer) { clearTimeout(nativeStartTimer); nativeStartTimer = null; }
   }
 
   // Devolve o link direto do mp4 (ou null), chamando o mesmo RPC (WcwnYd) que o
@@ -1254,6 +1262,7 @@ function safePlay(video) {
   // orig (interno): URL original do Blogger, usada como plano B se o direto falhar
   function playVideo(url, title, itemId, cat, epIdx, mode, orig) {
     if (!url) { showToast('Vídeo indisponível'); return; }
+    clearNativeStartTimer();
 
     if (!mode) {
       resolveTok++; // cancela qualquer resolução anterior ainda em andamento
@@ -1326,7 +1335,25 @@ function safePlay(video) {
         });
       } else {
         video.src = url;
+        // load() força o WebKit/Tizen a iniciar uma nova seleção de fonte após trocar de vídeo.
+        try { video.load(); } catch (loadError) {}
         safePlay(video);
+
+        // GoogleVideo pode ficar pendente sem disparar 'error' (ex.: URL assinada/IP inválido).
+        // Não deixar a TV presa no player nativo indefinidamente: após 18s sem metadata,
+        // usar o Blogger original como último fallback. Se começar a tocar, 'playing' cancela.
+        if (mode === 'direct' && playerOrig) {
+          var fallbackUrl = playerOrig;
+          var attemptUrl = url;
+          nativeStartTimer = setTimeout(function () {
+            nativeStartTimer = null;
+            if (playerMode !== 'direct' || isBloggerMode || playerUrl !== attemptUrl || !playerOrig) return;
+            if (video.readyState >= 1) return; // metadata chegou: não confundir autoplay bloqueado com falha de rede
+            playerOrig = '';
+            showOsd('↻ Link direto demorou. Abrindo alternativa...');
+            playVideo(fallbackUrl, playerTitle, playerItemId, playerCat, playerEpIdx, 'iframe');
+          }, 18000);
+        }
       }
 
       // Restaurar progresso (só VOD). Duas tentativas: a Samsung costuma
@@ -1396,6 +1423,7 @@ function safePlay(video) {
   }
 
   function destroyHls() {
+    clearNativeStartTimer();
     if (hlsInstance) {
       hlsInstance.destroy();
       hlsInstance = null;
@@ -1410,6 +1438,7 @@ function safePlay(video) {
   }
 
   function closePlayer(restore) {
+    clearNativeStartTimer();
     resolveTok++; // cancela resolução do Blogger em andamento
     saveProgress();
     destroyHls();
@@ -1511,7 +1540,12 @@ function safePlay(video) {
 
     video.addEventListener('play',  function () { btnPlay.innerHTML = '⏸'; });
     video.addEventListener('playing', function () {
-      if (playerMode === 'direct') showOsd('▶ Reprodução iniciada');
+      clearNativeStartTimer();
+      if (playerMode === 'direct') {
+        // A partir daqui o link direto já provou que toca; não voltar ao iframe por erro tardio.
+        playerOrig = '';
+        showOsd('▶ Reprodução iniciada');
+      }
     });
     video.addEventListener('pause', function () {
       btnPlay.innerHTML = '▶';
@@ -1520,6 +1554,7 @@ function safePlay(video) {
 
     video.addEventListener('error', function () {
       if (!isShown(wrap) || !playerUrl || isBloggerMode) return;
+      clearNativeStartTimer();
 
       // Link direto do Blogger falhou (expirou / 403): volta para o iframe
       if (playerMode === 'direct' && playerOrig) {
