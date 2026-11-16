@@ -76,7 +76,10 @@ module.exports = async function handler(req, res) {
 
   let target;
   try {
-    target = new URL(decodeURIComponent(req.query.src || ''));
+    // Vercel já entrega req.query decodificado; não aplicar decodeURIComponent novamente.
+    const src = req.query && req.query.src;
+    if (typeof src !== 'string' || src.length > 8192) throw new Error('src inválido');
+    target = new URL(src);
   } catch { return res.status(400).json({ error: 'src inválido' }); }
 
   const okHost = target.protocol === 'https:' && /^(www\.)?blogger\.com$/.test(target.hostname);
@@ -87,11 +90,30 @@ module.exports = async function handler(req, res) {
   try {
     const ctrl = new AbortController();
     const t = setTimeout(() => ctrl.abort(), 9000);
-    const r = await fetch(target.href, { headers: { 'User-Agent': UA, 'Accept-Language': 'pt-BR,pt;q=0.9' }, signal: ctrl.signal });
-    clearTimeout(t);
+    let r;
+    try {
+      // Não seguir redirects para hosts externos: evita transformar o resolver em SSRF.
+      r = await fetch(target.href, {
+        redirect: 'manual',
+        headers: { 'User-Agent': UA, 'Accept-Language': 'pt-BR,pt;q=0.9' },
+        signal: ctrl.signal
+      });
+    } finally { clearTimeout(t); }
+    if (r.status >= 300 && r.status < 400) {
+      return res.status(502).json({ error: 'redirecionamento do Blogger não permitido' });
+    }
     if (!r.ok) return res.status(502).json({ error: 'blogger HTTP ' + r.status });
+    const contentType = r.headers.get('content-type') || '';
+    if (contentType && contentType.indexOf('text/html') === -1) {
+      return res.status(502).json({ error: 'resposta do Blogger não é HTML' });
+    }
     const html = await r.text();
+    if (html.length > 2000000) return res.status(502).json({ error: 'resposta do Blogger muito grande' });
 
+    // Diagnósticos públicos foram desativados: HTML/RPC podem conter tokens e URLs assinadas.
+    if (req.query.debug) return res.status(404).json({ error: 'diagnóstico desativado' });
+
+    /*
     // ?debug=1 → mostra o que o servidor realmente recebeu (para ajustar a extração)
     if (req.query.debug) {
       const keys = ['videoplayback', 'googlevideo', 'play_url', 'streams', 'format_id', 'VIDEO_CONFIG',
@@ -105,15 +127,15 @@ module.exports = async function handler(req, res) {
       const text = html.replace(/<script[\s\S]*?<\/script>/gi, '[script]').replace(/<style[\s\S]*?<\/style>/gi, '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').slice(0, 500);
       return res.status(200).json({ status: r.status, finalUrl: r.url, contentType: r.headers.get('content-type'), len: html.length, title, textHead: text, hits });
     }
+    */
 
     let out = extract(html);
     const token = target.searchParams.get('token') || '';
     const cookies = (r.headers.getSetCookie ? r.headers.getSetCookie() : []);
 
-    // ?debug=2 → resposta crua da chamada batchexecute
+    // ?debug=2 → resposta crua da chamada batchexecute (desativado para não expor URLs assinadas).
     if (req.query.debug === '2') {
-      try { return res.status(200).json(await rpcResolve(token, html, cookies, true)); }
-      catch (e) { return res.status(200).json({ rpcError: String(e.message || e) }); }
+      return res.status(404).json({ error: 'diagnóstico desativado' });
     }
 
     if (!out.url && token) {
