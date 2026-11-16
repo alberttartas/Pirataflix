@@ -1023,10 +1023,10 @@ function safePlay(video) {
     return !!url && (/redecanais[^\/]*\/player\d*\//i.test(url) || /\/server\.php/i.test(url));
   }
 
-  // O link do googlevideo é ASSINADO COM O IP de quem faz a chamada (ip=... no sparams).
-  // Por isso a chamada precisa sair da própria TV: um link gerado no servidor (Vercel)
-  // só tocaria para o IP do servidor. O endpoint /api/blogger fica só para diagnóstico.
-  var USE_SERVER_PROXY = false;
+  // Primeiro tenta resolver na própria TV. Se CORS/rede falhar, consulta o backend.
+  // URLs googlevideo podem ser vinculadas ao IP do servidor e serão validadas pelo player;
+  // se a reprodução direta falhar, o evento de erro retorna ao iframe original.
+  var USE_SERVER_PROXY = true;
   var BLOGGER_PROXY    = 'https://pirataflix-seven.vercel.app/api/blogger';
   var BLOGGER_BL       = 'boq_bloggeruiserver_20261007.02_p0'; // usado se a página não informar
 
@@ -1265,14 +1265,14 @@ function safePlay(video) {
         resolveBlogger(url, function (direct, info) {
           if (tok !== resolveTok) return; // usuário trocou de vídeo / fechou
           if (direct) {
-            showToast('✅ Link direto encontrado', 2000);
+            showToast('Abrindo no player nativo...', 2000);
             playVideo(direct, title, itemId, cat, epIdx, 'direct', url);
           } else {
             var why = !info ? '?' : (info.err ? info.err
                     : ('HTTP ' + info.status + (info.len ? ', ' + info.len + ' bytes sem link' : '')));
             if (info && info.direto) why = (info.direto.err || ('HTTP ' + info.direto.status)) + ' | servidor: ' + (info.err || ('HTTP ' + info.status));
             if (info && info.env) why += ' [' + info.env + ']';
-            showToast('⚠ Sem link direto (' + why + ') → player embutido: dê play com o ponteiro', 9000);
+            showToast('Não foi possível extrair o vídeo (' + why + '). Abrindo player alternativo...', 7000);
             playVideo(url, title, itemId, cat, epIdx, 'iframe');
           }
         });
@@ -1510,6 +1510,9 @@ function safePlay(video) {
     });
 
     video.addEventListener('play',  function () { btnPlay.innerHTML = '⏸'; });
+    video.addEventListener('playing', function () {
+      if (playerMode === 'direct') showOsd('▶ Reprodução iniciada');
+    });
     video.addEventListener('pause', function () {
       btnPlay.innerHTML = '▶';
       if (!isBloggerMode) { saveProgress(); showControls(); }
