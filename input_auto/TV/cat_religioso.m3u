@@ -17,7 +17,7 @@ https://stmv1.srvif.com/gospelf/gospelf/playlist.m3u8
 #EXTINF:-1 tvg-id="NovoTempo.br@SD" tvg-logo="" group-title="✝️ Religioso",Novo Tempo (720p)
 http://186.219.52.187/novo_tempo/index.m3u8
 
-#EXTINF:-1 tvg-id="PlenitudeTV.br@SD" tvg-logo="" group-title="✝️ Religioso",Plenitude TV
+#EXTINF:-1 tvg-id="PlenitudeTV.br@SD" tvg-logo="" group-title="✝️ Religioso",Plenitude TV (1080p)
 https://strv.painelvox.top/plenitude/plenitude/playlist.m3u8
 
 #EXTINF:-1 tvg-id="RedeGospel.br@SD" tvg-logo="https://i.imgur.com/mttSwgO.png" group-title="✝️ Religioso",Rede Gospel (1080p)
