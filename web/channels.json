@@ -23940,5 +23940,20 @@
         "title": "AO VIVO"
       }
     ]
+  },
+  {
+    "id": "TELE6.bo@SD",
+    "type": "tv",
+    "title": "TELE 6 (1080p)",
+    "tvg_id": "TELE6.bo@SD",
+    "tvg_logo": "https://i.imgur.com/p7tt72X.png",
+    "group": "📺 Geral",
+    "url": "https://183.giatvcdn.com/ssh101/ssh101/tele6/playlist.m3u8",
+    "episodes": [
+      {
+        "url": "https://183.giatvcdn.com/ssh101/ssh101/tele6/playlist.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
   }
 ]

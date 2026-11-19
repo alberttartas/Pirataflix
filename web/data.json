@@ -1893,7 +1893,7 @@
         {
           "name": "Jennifer Lawrence",
           "character": "Raven / Mystique",
-          "profile": "https://image.tmdb.org/t/p/w185/k6CsASaySnS3ag0Y2Ns2vqPahVn.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/6WTY6HjXMGxnHilJRVC3eLnu43F.jpg"
         },
         {
           "name": "Nicholas Hoult",
@@ -2539,7 +2539,7 @@
         {
           "name": "Anne Hathaway",
           "character": "Denise Platt",
-          "profile": "https://image.tmdb.org/t/p/w185/s6tflSD20MGz04ZR2R1lZvhmC4Y.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/rv7smEIVNl7TO9JI835dXS1Yo57.jpg"
         },
         {
           "name": "Ewan McGregor",
@@ -4678,7 +4678,7 @@
       "backdrop": "https://image.tmdb.org/t/p/w1280/djAGltv1bVw625yYku4CyA42gq0.jpg",
       "overview": "No limite do desespero, cinco amigas decidem que a única saída é formar uma gangue, conseguir armas e começar a assaltar bancos.",
       "year": "2026",
-      "rating": 6.1,
+      "rating": 6.2,
       "cast": [
         {
           "name": "Rebecca Marder",
@@ -5308,7 +5308,7 @@
         {
           "name": "Mackenyu",
           "character": "Roronoa Zoro",
-          "profile": "https://image.tmdb.org/t/p/w185/3CmXXn9Q1Cb0Masa16BCj9TvPyI.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/y4FTSASxsO1F61p3hFIPMCeprut.jpg"
         },
         {
           "name": "Jacob Gibson",
@@ -115760,6 +115760,21 @@
       "episodes": [
         {
           "url": "http://170.83.16.50/WOOHOO/index.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "TELE6.bo@SD",
+      "type": "tv",
+      "title": "TELE 6 (1080p)",
+      "tvg_id": "TELE6.bo@SD",
+      "tvg_logo": "https://i.imgur.com/p7tt72X.png",
+      "group": "📺 Geral",
+      "url": "https://183.giatvcdn.com/ssh101/ssh101/tele6/playlist.m3u8",
+      "episodes": [
+        {
+          "url": "https://183.giatvcdn.com/ssh101/ssh101/tele6/playlist.m3u8",
           "title": "AO VIVO"
         }
       ]

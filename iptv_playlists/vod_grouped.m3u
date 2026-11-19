@@ -28779,3 +28779,6 @@ http://170.83.16.50/TV_SENADO/index.m3u8
 #EXTINF:-1 group-title="📺 Geral" tvg-id="WOOHOO.BR@SD" tvg-logo="https://i.imgur.com/me622pa.png",WooHoo (720p)
 http://170.83.16.50/WOOHOO/index.m3u8
 
+#EXTINF:-1 group-title="📺 Geral" tvg-id="TELE6.BO@SD" tvg-logo="https://i.imgur.com/p7tt72X.png",TELE 6 (1080p)
+https://183.giatvcdn.com/ssh101/ssh101/tele6/playlist.m3u8
+
