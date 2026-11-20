@@ -23955,5 +23955,20 @@
         "title": "AO VIVO"
       }
     ]
+  },
+  {
+    "id": "Tooncast.us@Brazil",
+    "type": "tv",
+    "title": "Tooncast Brazil (720p)",
+    "tvg_id": "Tooncast.us@Brazil",
+    "tvg_logo": "https://i.imgur.com/3yXRbQy.png",
+    "group": "🎨 Animação",
+    "url": "http://170.83.16.50:80/TOONCAST/index.m3u8",
+    "episodes": [
+      {
+        "url": "http://170.83.16.50:80/TOONCAST/index.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
   }
 ]
