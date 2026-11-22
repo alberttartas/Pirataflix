@@ -27,7 +27,7 @@
       "genres": [
         "Comédia"
       ],
-      "rating": 6.2,
+      "rating": 6.1,
       "cast": [
         {
           "name": "Leandro Hassum",
@@ -261,7 +261,7 @@
         {
           "name": "Millie Bobby Brown",
           "character": "Madison Russell",
-          "profile": "https://image.tmdb.org/t/p/w185/k9KGzGDVhXKfOGpoN62MNuXL28q.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/7dTkMQCAX8Fi4DuNTmyLrbZUUie.jpg"
         },
         {
           "name": "Ken Watanabe",
@@ -329,7 +329,7 @@
         {
           "name": "Elizabeth Olsen",
           "character": "Elle Brody",
-          "profile": "https://image.tmdb.org/t/p/w185/2ADHLwOEstudmIxFzN7LZy8FKjN.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/p5sPJG8pd9kQs1erPc1jHLCjznJ.jpg"
         },
         {
           "name": "Juliette Binoche",
@@ -1446,7 +1446,7 @@
         "https://image.tmdb.org/t/p/w500/ghF1JYv7P5BgWHYfq9dqhqqNfz8.jpg",
         "https://image.tmdb.org/t/p/w500/yxOxOBxspl3NgC676W62G02g1cR.jpg"
       ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/r08LxMJCbf1SiJIWeyH9aJmdqwC.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/subj7knTn4DeS6KS7qI66EQKe9i.jpg",
       "overview": "É um novo dia para Peter Parker. Combatendo o crime em tempo integral como Homem-Aranha em um mundo que não se lembra mais dele e lidando com a pressão de ver seus antigos amigos seguirem em frente sem sua presença, Peter passa por uma mudança que talvez nem ele tenha o poder de controlar. Mas essa transformação também pode ser a única coisa capaz de deter uma surpreendente nova ameaça à cidade e às pessoas que ele ama: um poderoso vilão que ninguém sequer consegue enxergar.",
       "year": "2026",
       "genres": [
@@ -1494,7 +1494,7 @@
         {
           "name": "Florence Pugh",
           "character": "Yelena Belova / Black Widow",
-          "profile": "https://image.tmdb.org/t/p/w185/nyRW28rq1PJhygm25D4gJKFfPjc.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/qqDsryavx9rwSMhDAxW6OC7oNQg.jpg"
         }
       ]
     },
@@ -1617,7 +1617,7 @@
         {
           "name": "Jennifer Lawrence",
           "character": "Raven / Mystique",
-          "profile": "https://image.tmdb.org/t/p/w185/6WTY6HjXMGxnHilJRVC3eLnu43F.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/mDKMsjOMytyBiy7MHNZTa7gp7wj.jpg"
         },
         {
           "name": "Nicholas Hoult",
@@ -4323,7 +4323,7 @@
         "Ação & Aventura",
         "Crime"
       ],
-      "rating": 7.6,
+      "rating": 7.5,
       "cast": [
         {
           "name": "Pedro Alonso",
@@ -63963,11 +63963,6 @@
           "profile": "https://image.tmdb.org/t/p/w185/cOHSa0FBrG3u9P6g8A56sInkvod.jpg"
         },
         {
-          "name": "Mari Yaguchi",
-          "character": "Yoko (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/edjVzlYS9elEzDHJdAunceWhkWR.jpg"
-        },
-        {
           "name": "Akemi Okamura",
           "character": "Nami (voice)",
           "profile": "https://image.tmdb.org/t/p/w185/qEwVfsrA23SCzRZMSlghw2sHctQ.jpg"
@@ -63991,6 +63986,11 @@
           "name": "Yuriko Yamaguchi",
           "character": "Nico Robin (voice)",
           "profile": "https://image.tmdb.org/t/p/w185/14hV8oOMkZddPpvdpVSODRwVPgv.jpg"
+        },
+        {
+          "name": "Kazuki Yao",
+          "character": "Franky (voice)",
+          "profile": "https://image.tmdb.org/t/p/w185/kjETB1FaDaGozGjdq4Hu1UjrQDf.jpg"
         }
       ]
     },
