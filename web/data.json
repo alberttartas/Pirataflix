@@ -329,7 +329,7 @@
         {
           "name": "Elizabeth Olsen",
           "character": "Elle Brody",
-          "profile": "https://image.tmdb.org/t/p/w185/p5sPJG8pd9kQs1erPc1jHLCjznJ.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/kV1PPpUtxRE7lXYvur7DW41LEDn.jpg"
         },
         {
           "name": "Juliette Binoche",
@@ -563,7 +563,7 @@
         {
           "name": "Adam Driver",
           "character": "Agent Sevier",
-          "profile": "https://image.tmdb.org/t/p/w185/fsbGQ1eZFgdsG1XnKlhNSvHsiGo.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/b5w381C8Z33D1iF30KT4k8tJNsk.jpg"
         },
         {
           "name": "David Jensen",
@@ -2307,7 +2307,7 @@
         "https://image.tmdb.org/t/p/w500/oikBFaTAX1TK1petJOAEfPy538X.jpg",
         "https://image.tmdb.org/t/p/w500/aqEPRht1pZR653rmU7eHyk8wSNP.jpg"
       ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/wnR8pwWtoL3TFwP41mLCt91ReCt.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/w9AiymbmQGt3jdtsm78HdfKkChy.jpg",
       "overview": "Após um misterioso evento cósmico abalar o bairro Oak Street e o transportar dos subúrbios para um lugar desconhecido, a família Platt descobre que sua sobrevivência vai depender da união entre todos para enfrentar um ambiente agora irreconhecível.",
       "year": "2026",
       "genres": [
@@ -30501,7 +30501,7 @@
         "https://image.tmdb.org/t/p/w500/j7yfb5Rhxa702h434m8ppR7KlE6.jpg",
         "https://image.tmdb.org/t/p/w500/drFVQFBpWj5Y33zuNDkxGIR6MjJ.jpg"
       ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/60U3KQzCcNKOdk1ADnQO8xYZaXv.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/tQLM0m0sUooG8ssG9YLdbULkCvX.jpg",
       "overview": "Ambientada em Vila da Mata, em 1918, a trama gira em torno da disputa por terras entre dois coronéis e do amor entre Luís Jerônimo e a cabocla Zuca, noiva do destemido Tobias.",
       "year": "2004",
       "rating": 7.2,
@@ -57719,7 +57719,7 @@
         {
           "name": "Masako Nozawa",
           "character": "Son Goku / Son Gohan / Son Goten (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/jxbXdejmPoiKnNoQz7Dkb80qC26.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/tMWG7bwuCMKh3vt9pJJJwdE03mt.jpg"
         },
         {
           "name": "Ryo Horikawa",
@@ -58963,7 +58963,7 @@
         "Comédia",
         "Animação"
       ],
-      "rating": 8.3,
+      "rating": 8.4,
       "cast": [
         {
           "name": "Regina King",
@@ -67799,7 +67799,7 @@
         {
           "name": "Masako Nozawa",
           "character": "Son Goku / Son Goten (voice)",
-          "profile": "https://image.tmdb.org/t/p/w185/jxbXdejmPoiKnNoQz7Dkb80qC26.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/tMWG7bwuCMKh3vt9pJJJwdE03mt.jpg"
         },
         {
           "name": "Ryo Horikawa",
@@ -115790,6 +115790,36 @@
       "episodes": [
         {
           "url": "http://170.83.16.50:80/TOONCAST/index.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "Tooncast.us@Brazil",
+      "type": "tv",
+      "title": "Tooncast Brazil (720p)",
+      "tvg_id": "Tooncast.us@Brazil",
+      "tvg_logo": "https://i.imgur.com/3yXRbQy.png",
+      "group": "🎨 Animação",
+      "url": "http://170.83.16.50/TOONCAST/index.m3u8",
+      "episodes": [
+        {
+          "url": "http://170.83.16.50/TOONCAST/index.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "TVMaanaim.br@SD",
+      "type": "tv",
+      "title": "TV Maanaim (720p) [Not 24/7]",
+      "tvg_id": "TVMaanaim.br@SD",
+      "tvg_logo": "https://i.imgur.com/PZhdHvf.png",
+      "group": "✝️ Religioso",
+      "url": "https://cpbr.appflux.com.br:2000/hls/maranatalive1/maranatalive1.m3u8",
+      "episodes": [
+        {
+          "url": "https://cpbr.appflux.com.br:2000/hls/maranatalive1/maranatalive1.m3u8",
           "title": "AO VIVO"
         }
       ]
