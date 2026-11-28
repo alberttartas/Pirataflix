@@ -24015,5 +24015,20 @@
         "title": "AO VIVO"
       }
     ]
+  },
+  {
+    "id": "CartoonNetworkLatinAmerica.us@Brazil",
+    "type": "tv",
+    "title": "Cartoon Network Latin America Brazil",
+    "tvg_id": "CartoonNetworkLatinAmerica.us@Brazil",
+    "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png",
+    "group": "🎨 Animação",
+    "url": "https://cdn-1.netplaygo.com.br/CARTOON_NETWORK/tracks-v1a1/mono.m3u8",
+    "episodes": [
+      {
+        "url": "https://cdn-1.netplaygo.com.br/CARTOON_NETWORK/tracks-v1a1/mono.m3u8",
+        "title": "AO VIVO"
+      }
+    ]
   }
 ]

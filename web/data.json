@@ -3,7 +3,7 @@
     {
       "id": "a_odisseia",
       "title": "A Odisseia",
-      "poster": "https://image.tmdb.org/t/p/w500/m0ehGErq8GTLK4WZxaq9QLGAR3u.jpg",
+      "poster": "https://image.tmdb.org/t/p/w500/rKg1iPC0xrmyd9cZYvcil8d9I6W.jpg",
       "episodes": [
         {
           "title": "A Odisseia 2026",
@@ -14,7 +14,7 @@
       "type": "movie",
       "local_poster": "/Pirataflix/assets/Capas/default.jpg",
       "posters": [
-        "https://image.tmdb.org/t/p/w500/m0ehGErq8GTLK4WZxaq9QLGAR3u.jpg",
+        "https://image.tmdb.org/t/p/w500/rKg1iPC0xrmyd9cZYvcil8d9I6W.jpg",
         "https://image.tmdb.org/t/p/w500/5rhTDKUhPYvpdQIijFIs5VoWsON.jpg",
         "https://image.tmdb.org/t/p/w500/4zPrODz9yjmGiVpJEdSQztgReGm.jpg",
         "https://image.tmdb.org/t/p/w500/ugEXTmwvFj8oqOui6ZwXjQgSwAp.jpg",
@@ -9494,7 +9494,7 @@
         {
           "name": "Juliana Paes",
           "character": "Guinevere Ataliba dos Santos Fortuna (Gui)",
-          "profile": "https://image.tmdb.org/t/p/w185/eDj36IQIhgONQ2G4uC9cdZYE42s.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/qlZ7gukRdSuqo50Ar3PVXxyw1fh.jpg"
         },
         {
           "name": "Deborah Secco",
@@ -18009,7 +18009,7 @@
         {
           "name": "Juliana Paes",
           "character": "Leila",
-          "profile": "https://image.tmdb.org/t/p/w185/eDj36IQIhgONQ2G4uC9cdZYE42s.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/qlZ7gukRdSuqo50Ar3PVXxyw1fh.jpg"
         },
         {
           "name": "Chico Díaz",
@@ -22374,7 +22374,7 @@
         "Drama",
         "Mistério"
       ],
-      "rating": 8.2,
+      "rating": 8.3,
       "cast": [
         {
           "name": "Camila Queiroz",
@@ -27702,7 +27702,7 @@
         "https://image.tmdb.org/t/p/w500/rkf47HidXAvXDLTrWvZVz6lnrIR.jpg",
         "https://image.tmdb.org/t/p/w500/zfbqdUyARlOdtlz9m4b8QtgHZYF.jpg"
       ],
-      "backdrop": "https://image.tmdb.org/t/p/w1280/83u4gkeTANzjyWe3t8lEZ8EIR7.jpg",
+      "backdrop": "https://image.tmdb.org/t/p/w1280/sweLMCmT63az5gINxLISUsTWrl3.jpg",
       "overview": "Em um conto de fadas moderno, a novela conta a história de Eliza. A vida da vendedora de flores se transforma quando ela conhece Arthur, dono de uma agência de modelos.",
       "year": "2015",
       "rating": 7.8,
@@ -27715,7 +27715,7 @@
         {
           "name": "Juliana Paes",
           "character": "Carolina Castilho",
-          "profile": "https://image.tmdb.org/t/p/w185/eDj36IQIhgONQ2G4uC9cdZYE42s.jpg"
+          "profile": "https://image.tmdb.org/t/p/w185/qlZ7gukRdSuqo50Ar3PVXxyw1fh.jpg"
         },
         {
           "name": "Fábio Assunção",
@@ -83302,6 +83302,21 @@
       "episodes": [
         {
           "url": "https://cdn.live.br1.jmvstream.com/webtv/tvcajui/playlist/playlist.m3u8",
+          "title": "AO VIVO"
+        }
+      ]
+    },
+    {
+      "id": "CartoonNetworkLatinAmerica.us@Brazil",
+      "type": "tv",
+      "title": "Cartoon Network Latin America Brazil",
+      "tvg_id": "CartoonNetworkLatinAmerica.us@Brazil",
+      "tvg_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png",
+      "group": "🎨 Animação",
+      "url": "https://cdn-1.netplaygo.com.br/CARTOON_NETWORK/tracks-v1a1/mono.m3u8",
+      "episodes": [
+        {
+          "url": "https://cdn-1.netplaygo.com.br/CARTOON_NETWORK/tracks-v1a1/mono.m3u8",
           "title": "AO VIVO"
         }
       ]
